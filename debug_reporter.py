@@ -5,8 +5,20 @@ import shutil
 from collections import defaultdict
 from pathlib import Path
 
-# 디버깅 심볼 함수 이름 목록
-DEBUG_FUNC_NAMES = ["print", "debugPrint", "NSLog", "assert", "assertionFailure", "dump"]
+VALID_LAYOUTS = {"auto", "spm", "xcode"}
+LAYOUT = "auto"         # runtime‑configured
+
+# NOTE: If you wrap Swift's debugging output in your own helper functions,
+# add the helper names here so the scanner treats them like built‑ins.
+DEBUG_FUNC_NAMES = [
+    "print",
+    "debugPrint",
+    "NSLog",
+    "assert",
+    "assertionFailure",
+    "dump",
+    "debugTrace"          # ← 사용자 정의 래퍼 함수
+]
 
 # prefix(식별자.)가 붙은 호출은 제외하기 위한 정규식 (부정형 lookbehind)
 PATTERN_MAP = {
@@ -16,9 +28,11 @@ PATTERN_MAP = {
     "assert": re.compile(r'(?<![\w\.])assert\s*\('),
     "assertionFailure": re.compile(r'(?<![\w\.])assertionFailure\s*\('),
     "dump": re.compile(r'(?<![\w\.])dump\s*\('),
+    "debugTrace": re.compile(r'(?<![\w\.])debugTrace\s*\(')
 }
 
 SWIFT_PREFIX_PATTERNS = {name: re.compile(r'\bSwift\.' + name + r'\s*\(') for name in DEBUG_FUNC_NAMES}
+SWIFT_PREFIX_PATTERNS["debugTrace"] = re.compile(r'\bSwift\.debugTrace\s*\(')
 
 THREAD_STACK_RE = re.compile(r'Thread\.callStackSymbols')
 
@@ -30,21 +44,38 @@ def _has_prefix_before(start_idx: int, line: str) -> bool:
         i -= 1
     return i >= 0 and line[i] == '.'
 
+def _detect_layout(project_root: str) -> str:
+    """Auto‑detect project layout: SPM if Package.swift present,
+    Xcode if *.xcodeproj present, else 'spm' as fallback."""
+    if (Path(project_root) / "Package.swift").exists():
+        return "spm"
+    for p in Path(project_root).glob("*.xcodeproj"):
+        if p.is_dir():
+            return "xcode"
+    return "spm"
+
 def _module_name(file_path: str, project_root: str) -> str:
     """
-    Heuristic:
-      ‑ If path contains .../Sources/<TargetName>/...  → return <TargetName>
-      ‑ Else                                        → return 'Default'
-    Works well for SwiftPM layout; for other layouts falls back gracefully.
+    Return a pseudo‑module/target name for the given file path based on LAYOUT.
+    - 'spm'   : Sources/<TargetName>/...
+    - 'xcode' : <TopDir>/<...>/<file>.swift ⇒ <TopDir>
+    - 'auto'  : decide via _detect_layout(project_root)
     """
-    parts = Path(file_path).parts
-    try:
-        idx = parts.index('Sources')
-        if idx + 1 < len(parts):
-            return parts[idx + 1]
-    except ValueError:
-        pass
-    return "Default"
+    layout = LAYOUT
+    if layout == "auto":
+        layout = _detect_layout(project_root)
+
+    parts = Path(file_path).relative_to(project_root).parts
+
+    if layout == "spm":
+        if "Sources" in parts:
+            idx = parts.index("Sources")
+            if idx + 1 < len(parts):
+                return parts[idx + 1]
+        return "Default"
+
+    # xcode heuristic: first path component (e.g., MyApp)
+    return parts[0] if parts else "Default"
 
 MAX_LOOKAHEAD_LINES = 40  # 여러 줄 호출 탐색 시 최대 라인 수 제한
 
@@ -190,7 +221,10 @@ def restore_backups(root_dir: str):
     else:
         print(f"{restored} file(s) restored.")
 
-def generate_debug_report(input_path, output_file, *, apply_removal=False):
+def generate_debug_report(input_path, output_file, *, apply_removal=False, layout="auto"):
+    global LAYOUT
+    LAYOUT = layout if layout in VALID_LAYOUTS else "auto"
+
     """
     입력 경로(.swift 파일 또는 디렉토리)에서 디버깅 심볼을 찾아 리포트 파일을 생성합니다.
     정규식 라인 매칭을 우선 사용하고, 괄호가 닫히지 않은 경우에만 최소 범위로 확장합니다.
@@ -208,6 +242,7 @@ def generate_debug_report(input_path, output_file, *, apply_removal=False):
     # -------------------------------------------------
     module_user_defined: dict[str, set[str]] = defaultdict(set)
     project_root = input_path if os.path.isdir(input_path) else os.path.dirname(input_path)
+    actual_layout = _detect_layout(project_root) if LAYOUT == "auto" else LAYOUT
 
     for p in files_to_scan:
         mod = _module_name(p, project_root)
@@ -219,6 +254,13 @@ def generate_debug_report(input_path, output_file, *, apply_removal=False):
                         module_user_defined[mod].add(m.group(1))
         except Exception:
             continue
+
+    # Aggregate all user‑defined debug symbols across every module.  This lets us
+    # skip calls to a globally re‑defined symbol even when the call site lives in
+    # a different target.
+    global_user_defined: set[str] = set()
+    for s in module_user_defined.values():
+        global_user_defined.update(s)
 
     found_symbols = []
     for full_path in files_to_scan:
@@ -249,6 +291,8 @@ def generate_debug_report(input_path, output_file, *, apply_removal=False):
 
                 current_module = _module_name(full_path, project_root)
                 defined_in_module = module_user_defined.get(current_module, set())
+                # Treat symbols defined anywhere in the project as overrides, too
+                combined_defined = global_user_defined | defined_in_module
 
                 for name, pattern in PATTERN_MAP.items():
                     m = pattern.search(line)
@@ -259,7 +303,7 @@ def generate_debug_report(input_path, output_file, *, apply_removal=False):
                             continue
                         swift_allowed = True
 
-                    if name in defined_in_module and not swift_allowed:
+                    if name in combined_defined and not swift_allowed:
                         continue
                     else:
                         # Not user-defined, so no special treatment needed here
@@ -290,6 +334,8 @@ def generate_debug_report(input_path, output_file, *, apply_removal=False):
 
     # 결과 리포트 파일 작성
     with open(output_file, "w", encoding="utf-8") as out:
+        out.write(f"# Project layout detected: {actual_layout}\n")
+        out.write("# -----------------------------------------\n")
         if found_symbols:
             out.write("\n".join(found_symbols))
         else:
@@ -311,7 +357,12 @@ if __name__ == "__main__":
                         help="Delete detected debug‑symbol lines from source files")
     parser.add_argument("--restore", action="store_true",
                         help="Restore previously removed lines from backup files")
+    parser.add_argument("--layout", choices=["spm", "xcode"],
+                        help="Force project layout (spm | xcode). "
+                             "Omit to let the tool auto‑detect.")
     args = parser.parse_args()
+
+    chosen_layout = args.layout if args.layout else "auto"
 
     if args.remove and args.restore:
         parser.error("Options --remove and --restore are mutually exclusive.")
@@ -320,4 +371,6 @@ if __name__ == "__main__":
         restore_backups(args.path)
         raise SystemExit(0)
 
-    generate_debug_report(args.path, args.output, apply_removal=args.remove)
+    generate_debug_report(args.path, args.output,
+                          apply_removal=args.remove,
+                          layout=chosen_layout)
