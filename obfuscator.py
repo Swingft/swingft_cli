@@ -55,7 +55,7 @@ def obfuscate(input_path, output_path, exclude_json=None):
         os.makedirs(os.path.dirname(output_path) or '.', exist_ok=True)
         with open(output_path, 'w', encoding='utf-8') as outfile:
             outfile.write(code)
-        print(f"난독화 완료: {output_path}")
+        print(f"Complete obfuscation: {output_path}")
     elif os.path.isdir(input_path):
         # input이 디렉토리면 output도 디렉토리여야 함
         for dirpath, _, filenames in os.walk(input_path):
@@ -69,12 +69,12 @@ def obfuscate(input_path, output_path, exclude_json=None):
                         code = infile.read()
                     with open(dst_file, 'w', encoding='utf-8') as outfile:
                         outfile.write(code)
-                    print(f"난독화 완료: {dst_file}")
+                    print(f"Complete obfuscation: {dst_file}")
         # 프로젝트 관련 파일들 저장
         project_files = find_project_files(input_path)
         for src_path in project_files:
             rel_path = os.path.relpath(src_path, input_path)
             save_project_file_as_text(src_path, rel_path, output_path)
-            print(f"프로젝트 정보 파일 저장: {os.path.join(output_path, 'project_info', re.sub(r'[\\/]', '_', rel_path) + '.txt')}")
+            print(f"Save project file information: {os.path.join(output_path, 'project_info', re.sub(r'[\\/]', '_', rel_path) + '.txt')}")
     else:
-        print("에러: 입력 경로가 파일도 디렉토리도 아닙니다.") 
+        print("Error: Input path is neither file nor directory") 
