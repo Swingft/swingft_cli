@@ -12,7 +12,10 @@ import re
 import os
 from pathlib import Path
 
-# last_version.py 가 같은 디렉터리에 있다고 가정
+# last_version.py 가 src 폴더에 있다고 가정
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from last_version import generate_debug_report
 
 # 어떤 파일/디렉터리를 모듈 루트로 볼지 정의

@@ -1,5 +1,5 @@
 """
-json_cmd.py: Generate an example exclusion configuration JSON.
+json_cmd.py: Generate an example exclusion configuration JSON in the swingft_config.json format.
 """
 
 import json
@@ -8,20 +8,13 @@ import sys
 def handle_generate_json(json_path: str) -> None:
     """
     예시 제외목록 JSON 파일을 생성합니다.
-
-    생성되는 JSON 구조 예시:
-        "_comment_path": "Specify the absolute path to your project. The output path is optional.",
-        "project": {
-            "input": "",
-            "output": ""
-        },
-        "options": { ... },
-        "_comment_exclude": "The following section is optional and can be customized as needed.",
-        "exclude": { ... },
-        "_comment_include": "You can explicitly include items to always obfuscate/encrypt, regardless of global settings.",
-        "include": { ... }
     """
     example = {
+        "_comment_path": "Specify the absolute path to your project. The output path is optional.",
+        "project": {
+            "input": "/Users/lanian/Desktop/MySwiftProject",
+            "output": "/Users/lanian/Desktop/MySwiftProject_obf"
+        },
         "options": {
             "Obfuscation_classNames": True,
             "Obfuscation_methodNames": True,
@@ -33,24 +26,33 @@ def handle_generate_json(json_path: str) -> None:
         "_comment_exclude": "The following section is optional and can be customized as needed.",
         "exclude": {
             "obfuscation": [
-                {"name": "AppDelegate", "type": "class", "includeMembers": True},
-                {"name": "ViewController", "type": "class", "includeMembers": False},
-                {"name": "MyImportantClass", "type": "class", "includeMembers": False},
-                {"name": "logError", "type": "function", "includeMembers": False},
-                {"name": "userName", "type": "variable"},
-                {"name": "titleText", "type": "property"}
+                "sampleClass",
+                "sampleFunction",
+                "sampleVariable",
+                "sampleProperty",
+                "sampleProtocol",
+                "sampleStructure",
+                "**Wildcard"
             ],
             "encryption": [
-                "someStrings"
+                "someString",
+                "**Wildcard"
             ]
         },
         "_comment_include": "You can explicitly include items to always obfuscate/encrypt, regardless of global settings.",
         "include": {
             "obfuscation": [
-                {"name": "ForceObfuscateClass", "type": "class", "includeMembers": True},
-                {"name": "forceLog", "type": "function", "includeMembers": False},
-                {"name": "userId", "type": "variable"},
-                {"name": "titleName", "type": "property"}
+                "sampleClass",
+                "sampleFunction",
+                "sampleVariable",
+                "sampleProperty",
+                "sampleProtocol",
+                "sampleStructure",
+                "**Wildcard"
+            ],
+            "encryption": [
+                "someString",
+                "**Wildcard"
             ]
         }
     }
