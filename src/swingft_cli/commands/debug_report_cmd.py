@@ -5,7 +5,11 @@ from swingft_cli.module_debug_runner import find_module_roots
 
 import sys
 
-from swingft_cli.debug_symbols import generate_debug_report, restore_debug_files
+from swingft_cli.debug_symbols import restore_debug_files
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from last_version import generate_debug_report
 
 def handle_debug_report(args):
     """
