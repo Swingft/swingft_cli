@@ -689,10 +689,13 @@ def _param_var_names(params_src: str) -> List[str]:
         else: out.append("arg")
     return out
 
-def build_perfile_runtime(file_id: str, routes: List[str], max_params: int) -> str:
+def build_perfile_runtime(file_id: str, routes: List[str], max_params: int = 10) -> str:
     enum_name = f"OBFF{file_id}"
+    
+    # CFGWrappingUtils를 활용한 간단한 actor 생성
     lines = [
         OBF_BEGIN,
+        "import StringSecurity  // CFGWrappingUtils 사용을 위한 import",
         f"actor {enum_name} {{",
         "  static private var routes: [String: ([Any]) throws -> Any] = [:]",
         "  static private var didInstall = false",
@@ -717,37 +720,97 @@ def build_perfile_runtime(file_id: str, routes: List[str], max_params: int) -> s
         "    ensure()",
         "    guard let fn = routes[key] else { preconditionFailure(\"[OBF] missing key: \\(key)\") }",
         "    _ = try fn(args)",
-        "  }"
+        "  }",
+        ""
     ]
+    
+    # CFGWrappingUtils를 활용한 동적 래퍼 생성 (max_params까지)
     for n in range(max_params + 1):
         t_params = ", ".join([chr(ord('A') + i) for i in range(n)])
-        a_params = ", ".join([f"a{i}" for i in range(n)])
-        guards = [f"      guard let a{i} = args[{i}] as? {chr(ord('A') + i)} else {{ preconditionFailure(\"[OBF] cast at {i}\") }}" for i in range(n)]
-        precondition = "      precondition(args.isEmpty)" if n == 0 else f"      precondition(args.count == {n})"
-        lines.extend([
-            f"  static func wrap{n}<{t_params}{', ' if t_params else ''}R>(_ function: @escaping ({t_params}) -> R) -> ([Any]) throws -> Any {{",
-            "    return { args in",
-            precondition] + guards + [
-            f"      return function({a_params})",
-            "    }",
-            "  }"
-        ])
+        lines.append(f"  static func wrap{n}<{t_params}{', ' if t_params else ''}R>(_ function: @escaping ({t_params}) -> R) -> ([Any]) throws -> Any {{")
+        lines.append(f"    return CFGWrappingUtils.wrap{n}(function)")
+        lines.append("  }")
+    
+    # 인스턴스 메서드용 래퍼들 (max_params까지)
     for n in range(max_params + 1):
         t_params = ", ".join([chr(ord('A') + i) for i in range(n)])
         s_t_params = f"S{', ' + t_params if t_params else ''}"
-        a_params = ", ".join([f"a{i}" for i in range(n)])
-        guards = [f"      guard let a{i} = args[{i+1}] as? {chr(ord('A') + i)} else {{ preconditionFailure(\"[OBF] cast at {i}\") }}" for i in range(n)]
-        lines.extend([
-            f"  static func wrapM{n}<{s_t_params}, R>(_ function: @escaping (S) -> ({t_params}) -> R) -> ([Any]) throws -> Any {{",
-            "    return { args in",
-            f"      precondition(args.count == {n+1})",
-            "      guard let owner = args[0] as? S else { preconditionFailure(\"[OBF] cast self\") }"] + guards + [
-            f"      return function(owner)({a_params})",
-            "    }",
-            "  }"
-        ])
+        lines.append(f"  static func wrapM{n}<{s_t_params}, R>(_ function: @escaping (S) -> ({t_params}) -> R) -> ([Any]) throws -> Any {{")
+        lines.append(f"    return CFGWrappingUtils.wrapM{n}(function)")
+        lines.append("  }")
+    
     lines.extend(["}", OBF_END])
+    
     return "\n".join(lines)
+
+def copy_StringSecurity_folder(source_root: str) -> None:
+    """StringSecurity 폴더를 프로젝트에 복사 (암호화 기능과 동일)"""
+    import shutil
+    import os
+    import subprocess
+    
+    # StringSecurity 폴더 경로 (CFG 디렉토리 기준)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    local_path = os.path.join(script_dir, "..", "String_Encryption", "StringSecurity")
+    
+    if not os.path.exists(local_path):
+        log(f"[CFG] StringSecurity 폴더를 찾을 수 없습니다: {local_path}")
+        return
+    
+    # 프로젝트 루트에서 .xcodeproj 또는 .xcworkspace 찾기
+    target_path = None
+    for dirpath, dirnames, _ in os.walk(source_root):
+        for d in dirnames:
+            if d.endswith(('.xcodeproj', '.xcworkspace')):
+                target_path = os.path.join(dirpath, "StringSecurity")
+                break
+        if target_path:
+            break
+    
+    if not target_path:
+        log(f"[CFG] 프로젝트 파일(.xcodeproj/.xcworkspace)을 찾을 수 없습니다: {source_root}")
+        return
+    
+    # StringSecurity 폴더 복사
+    if not os.path.exists(target_path):
+        try:
+            shutil.copytree(local_path, target_path)
+            log(f"[CFG] StringSecurity 폴더 복사 완료: {target_path}")
+        except Exception as e:
+            log(f"[CFG] StringSecurity 폴더 복사 실패: {e}")
+            return
+    else:
+        log(f"[CFG] StringSecurity 폴더가 이미 존재합니다: {target_path}")
+    
+    # StringSecurity 빌드 (암호화 기능과 동일)
+    try:
+        log(f"[CFG] StringSecurity 빌드 시작: {target_path}")
+        os.chdir(target_path)
+        
+        # 빌드 캐시 확인
+        build_marker_file = ".build/build_path.txt"
+        previous_build_path = ""
+        if os.path.exists(build_marker_file):
+            with open(build_marker_file, "r") as f:
+                previous_build_path = f.read().strip()
+        
+        current_build_path = os.path.abspath(".build")
+        if previous_build_path != current_build_path or previous_build_path == "":
+            log("[CFG] StringSecurity 빌드 실행 중...")
+            subprocess.run(["swift", "package", "clean"], check=True)
+            shutil.rmtree(".build", ignore_errors=True)
+            subprocess.run(["swift", "build"], check=True)
+            with open(build_marker_file, "w") as f:
+                f.write(current_build_path)
+            log("[CFG] StringSecurity 빌드 완료")
+        else:
+            log("[CFG] StringSecurity 빌드 캐시 사용")
+            
+    except Exception as e:
+        log(f"[CFG] StringSecurity 빌드 실패: {e}")
+    finally:
+        # 원래 디렉토리로 복귀
+        os.chdir(script_dir)
 
 def inject_or_replace_block(original_text: str, block_text: str) -> str:
     start = original_text.find(OBF_BEGIN)
@@ -1140,6 +1203,11 @@ def main() -> None:
     ap = build_arg_parser()
     args = ap.parse_args()
     copy_project_tree(args.src, args.dst, overwrite=args.overwrite)
+    
+    # StringSecurity 폴더 복사 (암호화 기능과 동일)
+    log("[CFG] StringSecurity 폴더 복사 중...")
+    copy_StringSecurity_folder(args.dst)
+    
     exceptions = load_exceptions(args.exceptions)
     log(f"loaded {len(exceptions)} exception rules")
 
