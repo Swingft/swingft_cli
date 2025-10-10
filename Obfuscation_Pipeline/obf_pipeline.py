@@ -154,23 +154,15 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
     enc_end = time.time()
     print("encryption: ", enc_end - deadcode_end)
 
-    # 동적 함수 호출
+    # 동적 함수 호출 (인플레이스 실행)
     if not skip_cfg:
-        obf_project_dir_cfg = os.path.join(os.path.dirname(obf_project_dir), "cfg")
-        shutil.copytree(obf_project_dir, obf_project_dir_cfg)
-
         cfg_path = os.path.join(OBFUSCATION_ROOT, "CFG")
         os.chdir(cfg_path)
-        cmd = ["python3", "run_pipeline.py", "--src", obf_project_dir_cfg, "--dst", obf_project_dir, 
+        # src와 dst 모두 obf_project_dir로 동일 설정하여 인플레이스 적용
+        cmd = ["python3", "run_pipeline.py", "--src", obf_project_dir, "--dst", obf_project_dir, 
                "--perfile-inject", "--overwrite", "--debug", "--include-packages", "--no-skip-ui"]
         run_command(cmd)
         os.chdir(original_dir)
-
-        # CFG 작업 완료 후 cfg 폴더 정리
-        if os.path.exists(obf_project_dir_cfg):
-            print(f"CFG 작업용 복사본 정리: {obf_project_dir_cfg}")
-            shutil.rmtree(obf_project_dir_cfg)
-            print("CFG 작업용 복사본 정리 완료")
 
         cfg_end = time.time()
         print("cfg: ", cfg_end - enc_end)
@@ -198,8 +190,11 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
     print("STAGE 3: 정리 및 삭제 (Cleanup)")
     print("=" * 50)
     
-    # AST/output 폴더 정리
-    ast_output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "AST", "output")
+    # 기준 루트(Obfuscation_Pipeline 디렉토리)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # AST/output 폴더 정리 (루트 기준)
+    ast_output_dir = os.path.join(script_dir, "AST", "output")
     print(f"AST/output 폴더 경로: {ast_output_dir}")
     print(f"AST/output 폴더 존재 여부: {os.path.exists(ast_output_dir)}")
     
@@ -216,6 +211,58 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
     # 파일 삭제
     print("임시 파일들을 삭제합니다...")
     remove_files(obf_project_dir, obf_project_dir_cfg)
+
+    # String_Encryption 디렉토리의 JSON 파일들 정리 (루트 기준)
+    se_dir = os.path.join(script_dir, "String_Encryption")
+    se_jsons = [
+        os.path.join(se_dir, "strings.json"),
+        os.path.join(se_dir, "targets_swift_paths.json"),
+    ]
+    for p in se_jsons:
+        try:
+            if os.path.exists(p):
+                os.remove(p)
+                print(f"삭제 완료: {p}")
+        except Exception as e:
+            print(f"삭제 실패: {p} ({e})")
+
+    # 루트(Obfuscation_Pipeline) 레벨 매핑 산출물 정리
+    root_side_artifacts = [
+        os.path.join(script_dir, "mapping_result.json"),
+        os.path.join(script_dir, "mapping_result_s.json"),
+        os.path.join(script_dir, "type_info.json"),
+    ]
+    for p in root_side_artifacts:
+        try:
+            if os.path.exists(p):
+                os.remove(p)
+                print(f"삭제 완료: {p}")
+        except Exception as e:
+            print(f"삭제 실패: {p} ({e})")
+
+    # Mapping/output 디렉토리 정리 (루트 기준)
+    mapping_output_dir = os.path.join(script_dir, "Mapping", "output")
+    if os.path.exists(mapping_output_dir):
+        try:
+            shutil.rmtree(mapping_output_dir)
+            print(f"삭제 완료: {mapping_output_dir}")
+        except Exception as e:
+            print(f"삭제 실패: {mapping_output_dir} ({e})")
+
+    # 혹시 현재 작업 디렉토리(cwd)에 동일 이름의 파일이 있는 경우도 정리 (실행 위치가 달랐던 경우 대응)
+    cwd = os.getcwd()
+    cwd_side_artifacts = [
+        os.path.join(cwd, "mapping_result.json"),
+        os.path.join(cwd, "mapping_result_s.json"),
+        os.path.join(cwd, "type_info.json"),
+    ]
+    for p in cwd_side_artifacts:
+        try:
+            if os.path.exists(p):
+                os.remove(p)
+                print(f"삭제 완료(cwd): {p}")
+        except Exception as e:
+            print(f"삭제 실패(cwd): {p} ({e})")
     
     print("STAGE 3 완료!")
     print("=" * 50)
@@ -278,6 +325,9 @@ def main():
     elif args.stage == 'final':
         print("STAGE 2만 실행합니다... (매핑&난독화)")
         stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, skip_cfg)
+        # Stage 2 이후에도 정리(Stage 3) 실행되도록 추가
+        obf_project_dir_cfg = os.path.join(os.path.dirname(obf_project_dir), "cfg")
+        stage3_cleanup(obf_project_dir, obf_project_dir_cfg)
     elif args.stage == 'full':
         print("전체 파이프라인을 실행합니다...")
         obf_pipeline(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, skip_cfg)

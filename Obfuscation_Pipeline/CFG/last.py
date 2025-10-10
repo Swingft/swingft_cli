@@ -695,7 +695,6 @@ def build_perfile_runtime(file_id: str, routes: List[str], max_params: int = 10)
     # CFGWrappingUtils를 활용한 간단한 actor 생성
     lines = [
         OBF_BEGIN,
-        "import StringSecurity  // CFGWrappingUtils 사용을 위한 import",
         f"actor {enum_name} {{",
         "  static private var routes: [String: ([Any]) throws -> Any] = [:]",
         "  static private var didInstall = false",
@@ -724,21 +723,7 @@ def build_perfile_runtime(file_id: str, routes: List[str], max_params: int = 10)
         ""
     ]
     
-    # CFGWrappingUtils를 활용한 동적 래퍼 생성 (max_params까지)
-    for n in range(max_params + 1):
-        t_params = ", ".join([chr(ord('A') + i) for i in range(n)])
-        lines.append(f"  static func wrap{n}<{t_params}{', ' if t_params else ''}R>(_ function: @escaping ({t_params}) -> R) -> ([Any]) throws -> Any {{")
-        lines.append(f"    return CFGWrappingUtils.wrap{n}(function)")
-        lines.append("  }")
-    
-    # 인스턴스 메서드용 래퍼들 (max_params까지)
-    for n in range(max_params + 1):
-        t_params = ", ".join([chr(ord('A') + i) for i in range(n)])
-        s_t_params = f"S{', ' + t_params if t_params else ''}"
-        lines.append(f"  static func wrapM{n}<{s_t_params}, R>(_ function: @escaping (S) -> ({t_params}) -> R) -> ([Any]) throws -> Any {{")
-        lines.append(f"    return CFGWrappingUtils.wrapM{n}(function)")
-        lines.append("  }")
-    
+    # (static wrapper functions removed)
     lines.extend(["}", OBF_END])
     
     return "\n".join(lines)
@@ -771,7 +756,7 @@ def copy_StringSecurity_folder(source_root: str) -> None:
         log(f"[CFG] 프로젝트 파일(.xcodeproj/.xcworkspace)을 찾을 수 없습니다: {source_root}")
         return
     
-    # StringSecurity 폴더 복사
+    # StringSecurity 폴더 복사 (이미 존재하면 스킵)
     if not os.path.exists(target_path):
         try:
             shutil.copytree(local_path, target_path)
@@ -780,14 +765,12 @@ def copy_StringSecurity_folder(source_root: str) -> None:
             log(f"[CFG] StringSecurity 폴더 복사 실패: {e}")
             return
     else:
-        log(f"[CFG] StringSecurity 폴더가 이미 존재합니다: {target_path}")
+        log(f"[CFG] StringSecurity 폴더가 이미 존재합니다 (암호화 과정에서 복사됨): {target_path}")
+        # 이미 존재하는 경우 빌드만 확인
     
-    # StringSecurity 빌드 (암호화 기능과 동일)
+    # StringSecurity 빌드 (암호화 기능과 동일한 빌드 캐시 방식)
     try:
-        log(f"[CFG] StringSecurity 빌드 시작: {target_path}")
-        os.chdir(target_path)
-        
-        # 빌드 캐시 확인
+        # 빌드 경로 기반 캐시 (암호화와 동일) - 메인 디렉토리에서 확인
         build_marker_file = ".build/build_path.txt"
         previous_build_path = ""
         if os.path.exists(build_marker_file):
@@ -796,10 +779,13 @@ def copy_StringSecurity_folder(source_root: str) -> None:
         
         current_build_path = os.path.abspath(".build")
         if previous_build_path != current_build_path or previous_build_path == "":
+            log(f"[CFG] StringSecurity 빌드 시작: {target_path}")
             log("[CFG] StringSecurity 빌드 실행 중...")
+            os.chdir(target_path)
             subprocess.run(["swift", "package", "clean"], check=True)
             shutil.rmtree(".build", ignore_errors=True)
             subprocess.run(["swift", "build"], check=True)
+            os.chdir(script_dir)
             with open(build_marker_file, "w") as f:
                 f.write(current_build_path)
             log("[CFG] StringSecurity 빌드 완료")
@@ -808,8 +794,6 @@ def copy_StringSecurity_folder(source_root: str) -> None:
             
     except Exception as e:
         log(f"[CFG] StringSecurity 빌드 실패: {e}")
-    finally:
-        # 원래 디렉토리로 복귀
         os.chdir(script_dir)
 
 def inject_or_replace_block(original_text: str, block_text: str) -> str:
@@ -817,6 +801,22 @@ def inject_or_replace_block(original_text: str, block_text: str) -> str:
     end = original_text.find(OBF_END, start + len(OBF_BEGIN)) if start != -1 else -1
     if start != -1 and end != -1:
         return original_text[:start] + block_text + original_text[end + len(OBF_END):]
+    
+    # StringSecurity import 처리
+    if "import StringSecurity" in original_text:
+        # 이미 import가 있으면 맨 위로 이동
+        lines = original_text.split('\n')
+        import_lines = [line for line in lines if "import StringSecurity" in line]
+        other_lines = [line for line in lines if "import StringSecurity" not in line]
+        
+        # 맨 위에 import 배치
+        result_lines = import_lines + [""] + other_lines
+        original_text = '\n'.join(result_lines)
+    else:
+        # import가 없으면 block_text에 추가
+        import_line = "import StringSecurity\n"
+        block_text = import_line + block_text
+    
     return block_text + "\n\n" + original_text
 def _rename_and_add_wrapper(src: str, *, name: str, parent_type: Optional[str], is_static: bool, params_src: str, return_type: Optional[str], route_key: str, file_id: str, modifiers: List[str]) -> Tuple[str, bool]:
     """
@@ -1193,7 +1193,7 @@ def inject_per_file(file_abs: str, file_rel: str, targets: List[Dict], *, debug:
         else:
             sig, wrapper_name = f"({param_types_str}) -> {ret_str}", f"wrap{n}"
             fnref = (f"{parent}.{impl}" if parent and is_static else impl) + f" as {sig}"
-        routes.append(f'_ = OBFF{file_id}.register("{t.get("route_key")}", OBFF{file_id}.{wrapper_name}({fnref}))')
+        routes.append(f'_ = OBFF{file_id}.register("{t.get("route_key")}", CFGWrappingUtils.{wrapper_name}({fnref}))')
     if wrapped_count == 0: return (False, 0)
     final_text = inject_or_replace_block(text, build_perfile_runtime(file_id, routes, max_params))
     if not dry_run: write_text(file_abs, final_text)
@@ -1202,7 +1202,21 @@ def inject_per_file(file_abs: str, file_rel: str, targets: List[Dict], *, debug:
 def main() -> None:
     ap = build_arg_parser()
     args = ap.parse_args()
-    copy_project_tree(args.src, args.dst, overwrite=args.overwrite)
+    # src와 dst가 같으면 인플레이스 모드로 동작: 복사 생략
+    try:
+        src_real = os.path.abspath(args.src)
+        dst_real = os.path.abspath(args.dst)
+        same_target = os.path.samefile(src_real, dst_real)
+    except Exception:
+        src_real = os.path.abspath(args.src)
+        dst_real = os.path.abspath(args.dst)
+        same_target = (src_real == dst_real)
+
+    if same_target:
+        if args.debug:
+            log(f"[CFG] src==dst 인플레이스 실행: {dst_real}")
+    else:
+        copy_project_tree(args.src, args.dst, overwrite=args.overwrite)
     
     # StringSecurity 폴더 복사 (암호화 기능과 동일)
     log("[CFG] StringSecurity 폴더 복사 중...")

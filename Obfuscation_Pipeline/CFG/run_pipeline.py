@@ -71,7 +71,7 @@ def main() -> None:
     args = ap.parse_args()
 
     gen_py = str(ROOT / "generate_exceptions.py")
-    last_py = str(ROOT / "last.py")
+    main_py = str(ROOT / "main.py")
 
     # Determine exceptions file path
     if args.exceptions:
@@ -103,6 +103,7 @@ def main() -> None:
 
 
     # 2) run last.py using the generated exceptions
+    last_py = str(ROOT / "last.py")
     step2 = [
         sys.executable, last_py,
         "--src", args.src,
