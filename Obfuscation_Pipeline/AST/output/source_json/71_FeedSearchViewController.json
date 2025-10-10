@@ -1,0 +1,1022 @@
+[
+  {
+    "A_name" : "FeedSearchViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIViewController<FeedSearchViewModel>"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "searchBar",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 15, Column: 5",
+        "H_initialValue" : "SearchBar()"
+      },
+      {
+        "A_name" : "userList",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 16, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "searchTrigger",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 17, Column: 5",
+        "H_initialValue" : "PassthroughSubject<String, Never>()"
+      },
+      {
+        "A_name" : "feedSearchView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 21, Column: 5",
+        "H_initialValue" : "FeedSearchView()"
+      },
+      {
+        "A_name" : "feedSearchEmptyView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 22, Column: 5",
+        "H_initialValue" : "FeedSearchEmptyView()"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 23, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 29, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FeedSearchViewModel",
+          "ViewControllerFactory"
+        ],
+        "I_parameters" : [
+          "viewModel",
+          "diContainer"
+        ]
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 33, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "viewDidAppear",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 42, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "viewWillAppear",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 48, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 57, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 66, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setDelegate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 77, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "bind",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 85, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "output",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedSearchViewController.swift - Line: 86, Column: 9",
+            "H_initialValue" : "viewModel?.transform()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "updateUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 112, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SearchState"
+        ],
+        "I_parameters" : [
+          "for"
+        ]
+      },
+      {
+        "A_name" : "navigationType",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 132, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> NavigationType?"
+      },
+      {
+        "A_name" : "backButtonTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "override"
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 136, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "searchBar",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 15, Column: 5",
+    "H_initialValue" : "SearchBar()"
+  },
+  {
+    "A_name" : "userList",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 16, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "searchTrigger",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 17, Column: 5",
+    "H_initialValue" : "PassthroughSubject<String, Never>()"
+  },
+  {
+    "A_name" : "feedSearchView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 21, Column: 5",
+    "H_initialValue" : "FeedSearchView()"
+  },
+  {
+    "A_name" : "feedSearchEmptyView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 22, Column: 5",
+    "H_initialValue" : "FeedSearchEmptyView()"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 23, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 29, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FeedSearchViewModel",
+      "ViewControllerFactory"
+    ],
+    "I_parameters" : [
+      "viewModel",
+      "diContainer"
+    ]
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 33, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "viewDidAppear",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 42, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "viewWillAppear",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 48, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 57, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 66, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setDelegate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 77, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "bind",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 85, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "output",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 86, Column: 9",
+        "H_initialValue" : "viewModel?.transform()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 86, Column: 9",
+    "H_initialValue" : "viewModel?.transform()"
+  },
+  {
+    "A_name" : "indexPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 101, Column: 21",
+    "H_initialValue" : "IndexPath(row: index, section: 0)"
+  },
+  {
+    "A_name" : "updateUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 112, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SearchState"
+    ],
+    "I_parameters" : [
+      "for"
+    ]
+  },
+  {
+    "A_name" : "navigationType",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 132, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> NavigationType?"
+  },
+  {
+    "A_name" : "backButtonTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "override"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 136, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "FeedSearchViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UITableViewDataSource"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 151, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 153, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "numberOfRowsInSection"
+        ],
+        "J_returnType" : "-> Int"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 157, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "user",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedSearchViewController.swift - Line: 161, Column: 9",
+            "H_initialValue" : "userList[indexPath.row]"
+          }
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "cellForRowAt"
+        ],
+        "J_returnType" : "-> UITableViewCell"
+      }
+    ]
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 153, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "numberOfRowsInSection"
+    ],
+    "J_returnType" : "-> Int"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 157, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "user",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 161, Column: 9",
+        "H_initialValue" : "userList[indexPath.row]"
+      }
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "cellForRowAt"
+    ],
+    "J_returnType" : "-> UITableViewCell"
+  },
+  {
+    "A_name" : "user",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 161, Column: 9",
+    "H_initialValue" : "userList[indexPath.row]"
+  },
+  {
+    "A_name" : "FeedSearchViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UITableViewDelegate"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 170, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 172, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "didSelectRowAt"
+        ]
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 176, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "heightForRowAt"
+        ],
+        "J_returnType" : "-> CGFloat"
+      }
+    ]
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 172, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "didSelectRowAt"
+    ]
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 176, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "heightForRowAt"
+    ],
+    "J_returnType" : "-> CGFloat"
+  },
+  {
+    "A_name" : "FeedSearchViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UISearchBarDelegate"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 183, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "searchBarSearchButtonClicked",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 184, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UISearchBar"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "searchBarSearchButtonClicked",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 184, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UISearchBar"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "FeedSearchViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "FollowListCellDelegate"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 194, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "profileTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 195, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "user",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedSearchViewController.swift - Line: 197, Column: 9",
+            "H_initialValue" : "userList[indexPath.row]"
+          },
+          {
+            "A_name" : "userFeedVC",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedSearchViewController.swift - Line: 199, Column: 9",
+            "H_initialValue" : "diContainer.makeUserFeedProfileViewController(userId: Int64(user.userId))"
+          }
+        ],
+        "I_parameterType" : [
+          "FollowListCell"
+        ],
+        "I_parameters" : [
+          "cell"
+        ]
+      },
+      {
+        "A_name" : "followButtonTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 204, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "user",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedSearchViewController.swift - Line: 207, Column: 9",
+            "H_initialValue" : "userList[indexPath.row]"
+          }
+        ],
+        "I_parameterType" : [
+          "FollowListCell"
+        ],
+        "I_parameters" : [
+          "cell"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "profileTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 195, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "user",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 197, Column: 9",
+        "H_initialValue" : "userList[indexPath.row]"
+      },
+      {
+        "A_name" : "userFeedVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 199, Column: 9",
+        "H_initialValue" : "diContainer.makeUserFeedProfileViewController(userId: Int64(user.userId))"
+      }
+    ],
+    "I_parameterType" : [
+      "FollowListCell"
+    ],
+    "I_parameters" : [
+      "cell"
+    ]
+  },
+  {
+    "A_name" : "user",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 197, Column: 9",
+    "H_initialValue" : "userList[indexPath.row]"
+  },
+  {
+    "A_name" : "userFeedVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 199, Column: 9",
+    "H_initialValue" : "diContainer.makeUserFeedProfileViewController(userId: Int64(user.userId))"
+  },
+  {
+    "A_name" : "followButtonTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 204, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "user",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedSearchViewController.swift - Line: 207, Column: 9",
+        "H_initialValue" : "userList[indexPath.row]"
+      }
+    ],
+    "I_parameterType" : [
+      "FollowListCell"
+    ],
+    "I_parameters" : [
+      "cell"
+    ]
+  },
+  {
+    "A_name" : "user",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedSearchViewController.swift - Line: 207, Column: 9",
+    "H_initialValue" : "userList[indexPath.row]"
+  }
+]

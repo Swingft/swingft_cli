@@ -1,0 +1,128 @@
+[
+  {
+    "A_name" : "sendValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerNimbleMatchers.swift - Line: 14, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T?",
+      "E?",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "sendError",
+      "complete"
+    ],
+    "J_returnType" : "-> Predicate<SignalProducer<T, E>>"
+  },
+  {
+    "A_name" : "sendValues",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerNimbleMatchers.swift - Line: 18, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[T]",
+      "E?",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "sendError",
+      "complete"
+    ],
+    "J_returnType" : "-> Predicate<SignalProducer<T, E>>"
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerNimbleMatchers.swift - Line: 22, Column: 4",
+    "H_initialValue" : "ExpectationMessage.fail(\"The SignalProducer was not created.\")\n\t\t\t\t.appendedBeNilHint()"
+  },
+  {
+    "A_name" : "sentValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerNimbleMatchers.swift - Line: 27, Column: 3",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "sentError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerNimbleMatchers.swift - Line: 28, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signalCompleted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerNimbleMatchers.swift - Line: 29, Column: 3",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerNimbleMatchers.swift - Line: 45, Column: 4",
+    "H_initialValue" : "ExpectationMessage.expectedCustomValueTo(\n\t\t\t\t\"send values <\\(values)>\",\n\t\t\t\tactual: \"<\\(sentValues)>\"\n\t\t\t)"
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerNimbleMatchers.swift - Line: 53, Column: 4",
+    "H_initialValue" : "ExpectationMessage.expectedCustomValueTo(\n\t\t\t\t\"send error <\\(String(describing: maybeSendError))>\",\n\t\t\t\tactual: \"<\\(String(describing: sentError))>\"\n\t\t\t)"
+  },
+  {
+    "A_name" : "completeMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerNimbleMatchers.swift - Line: 60, Column: 3",
+    "H_initialValue" : "complete ?\n\t\t\t\"complete, but the producer did not complete\" :\n\t\t\t\"not to complete, but the producer completed\""
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerNimbleMatchers.swift - Line: 63, Column: 3",
+    "H_initialValue" : "ExpectationMessage.expectedTo(completeMessage)"
+  }
+]

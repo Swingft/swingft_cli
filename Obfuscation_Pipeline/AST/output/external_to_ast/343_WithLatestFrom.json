@@ -1,0 +1,831 @@
+[
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "withLatestFrom",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 21, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source",
+          "@escaping (Element, Source.Element) throws -> ResultType"
+        ],
+        "I_parameters" : [
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Observable<ResultType>"
+      },
+      {
+        "A_name" : "withLatestFrom",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<Source.Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "withLatestFrom",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 21, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source",
+      "@escaping (Element, Source.Element) throws -> ResultType"
+    ],
+    "I_parameters" : [
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Observable<ResultType>"
+  },
+  {
+    "A_name" : "withLatestFrom",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<Source.Element>"
+  },
+  {
+    "A_name" : "WithLatestFromSink",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sink<Observer>",
+      "ObserverType",
+      "LockOwnerType",
+      "SynchronizedOnType"
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 39, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 48, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 50, Column: 5",
+        "H_initialValue" : "RecursiveLock()"
+      },
+      {
+        "A_name" : "latest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 51, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 53, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 59, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sndSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WithLatestFrom.swift - Line: 60, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "sndO",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WithLatestFrom.swift - Line: 61, Column: 9",
+            "H_initialValue" : "WithLatestFromSecond(parent: self, disposable: sndSubscription)"
+          },
+          {
+            "A_name" : "fstSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WithLatestFrom.swift - Line: 64, Column: 9",
+            "H_initialValue" : "self.parent.first.subscribe(self)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 69, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "synchronized_on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 73, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 48, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 50, Column: 5",
+    "H_initialValue" : "RecursiveLock()"
+  },
+  {
+    "A_name" : "latest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 51, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 53, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 59, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sndSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 60, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "sndO",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 61, Column: 9",
+        "H_initialValue" : "WithLatestFromSecond(parent: self, disposable: sndSubscription)"
+      },
+      {
+        "A_name" : "fstSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 64, Column: 9",
+        "H_initialValue" : "self.parent.first.subscribe(self)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "sndSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 60, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "sndO",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 61, Column: 9",
+    "H_initialValue" : "WithLatestFromSecond(parent: self, disposable: sndSubscription)"
+  },
+  {
+    "A_name" : "fstSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 64, Column: 9",
+    "H_initialValue" : "self.parent.first.subscribe(self)"
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 69, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "synchronized_on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 73, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 78, Column: 17",
+    "H_initialValue" : "try self.parent.resultSelector(value, latest)"
+  },
+  {
+    "A_name" : "WithLatestFromSecond",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ObserverType",
+      "LockOwnerType",
+      "SynchronizedOnType"
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 95, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 104, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "disposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 105, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 107, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 111, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Disposable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "disposable"
+        ]
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 116, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "synchronized_on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 120, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 104, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 105, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 107, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 111, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Disposable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "disposable"
+    ]
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 116, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "synchronized_on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 120, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "WithLatestFrom",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<ResultType>"
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 133, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "first",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 136, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "second",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 137, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "resultSelector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 138, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 140, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<FirstType>",
+          "Observable<SecondType>",
+          "@escaping ResultSelector"
+        ],
+        "I_parameters" : [
+          "first",
+          "second",
+          "resultSelector"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 146, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WithLatestFrom.swift - Line: 147, Column: 9",
+            "H_initialValue" : "WithLatestFromSink(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WithLatestFrom.swift - Line: 148, Column: 9",
+            "H_initialValue" : "sink.run()"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "first",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 136, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "second",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 137, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "resultSelector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 138, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 140, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<FirstType>",
+      "Observable<SecondType>",
+      "@escaping ResultSelector"
+    ],
+    "I_parameters" : [
+      "first",
+      "second",
+      "resultSelector"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 146, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 147, Column: 9",
+        "H_initialValue" : "WithLatestFromSink(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WithLatestFrom.swift - Line: 148, Column: 9",
+        "H_initialValue" : "sink.run()"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 147, Column: 9",
+    "H_initialValue" : "WithLatestFromSink(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WithLatestFrom.swift - Line: 148, Column: 9",
+    "H_initialValue" : "sink.run()"
+  }
+]

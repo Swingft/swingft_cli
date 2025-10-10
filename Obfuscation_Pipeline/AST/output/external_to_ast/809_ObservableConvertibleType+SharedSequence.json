@@ -1,0 +1,226 @@
+[
+  {
+    "A_name" : "ObservableConvertibleType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "asSharedSequence",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 18, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "source",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 19, Column: 9",
+            "H_initialValue" : "self\n            .asObservable()\n            .observe(on:S.scheduler)\n            .catchAndReturn(onErrorJustReturn)"
+          }
+        ],
+        "I_parameterType" : [
+          "S.Type",
+          "Element"
+        ],
+        "I_parameters" : [
+          "sharingStrategy",
+          "onErrorJustReturn"
+        ],
+        "J_returnType" : "-> SharedSequence<S, Element>"
+      },
+      {
+        "A_name" : "asSharedSequence",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 32, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "source",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 33, Column: 9",
+            "H_initialValue" : "self\n            .asObservable()\n            .observe(on:S.scheduler)\n            .catch { _ in\n                onErrorDriveWith.asObservable()\n            }"
+          }
+        ],
+        "I_parameterType" : [
+          "S.Type",
+          "SharedSequence<S, Element>"
+        ],
+        "I_parameters" : [
+          "sharingStrategy",
+          "onErrorDriveWith"
+        ],
+        "J_returnType" : "-> SharedSequence<S, Element>"
+      },
+      {
+        "A_name" : "asSharedSequence",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 48, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "source",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 49, Column: 9",
+            "H_initialValue" : "self\n            .asObservable()\n            .observe(on:S.scheduler)\n            .catch { error in\n                onErrorRecover(error).asObservable()\n            }"
+          }
+        ],
+        "I_parameterType" : [
+          "S.Type",
+          "@escaping (_ error: Swift.Error) -> SharedSequence<S, Element>"
+        ],
+        "I_parameters" : [
+          "sharingStrategy",
+          "onErrorRecover"
+        ],
+        "J_returnType" : "-> SharedSequence<S, Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "asSharedSequence",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 18, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 19, Column: 9",
+        "H_initialValue" : "self\n            .asObservable()\n            .observe(on:S.scheduler)\n            .catchAndReturn(onErrorJustReturn)"
+      }
+    ],
+    "I_parameterType" : [
+      "S.Type",
+      "Element"
+    ],
+    "I_parameters" : [
+      "sharingStrategy",
+      "onErrorJustReturn"
+    ],
+    "J_returnType" : "-> SharedSequence<S, Element>"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 19, Column: 9",
+    "H_initialValue" : "self\n            .asObservable()\n            .observe(on:S.scheduler)\n            .catchAndReturn(onErrorJustReturn)"
+  },
+  {
+    "A_name" : "asSharedSequence",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 32, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 33, Column: 9",
+        "H_initialValue" : "self\n            .asObservable()\n            .observe(on:S.scheduler)\n            .catch { _ in\n                onErrorDriveWith.asObservable()\n            }"
+      }
+    ],
+    "I_parameterType" : [
+      "S.Type",
+      "SharedSequence<S, Element>"
+    ],
+    "I_parameters" : [
+      "sharingStrategy",
+      "onErrorDriveWith"
+    ],
+    "J_returnType" : "-> SharedSequence<S, Element>"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 33, Column: 9",
+    "H_initialValue" : "self\n            .asObservable()\n            .observe(on:S.scheduler)\n            .catch { _ in\n                onErrorDriveWith.asObservable()\n            }"
+  },
+  {
+    "A_name" : "asSharedSequence",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 48, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 49, Column: 9",
+        "H_initialValue" : "self\n            .asObservable()\n            .observe(on:S.scheduler)\n            .catch { error in\n                onErrorRecover(error).asObservable()\n            }"
+      }
+    ],
+    "I_parameterType" : [
+      "S.Type",
+      "@escaping (_ error: Swift.Error) -> SharedSequence<S, Element>"
+    ],
+    "I_parameters" : [
+      "sharingStrategy",
+      "onErrorRecover"
+    ],
+    "J_returnType" : "-> SharedSequence<S, Element>"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 49, Column: 9",
+    "H_initialValue" : "self\n            .asObservable()\n            .observe(on:S.scheduler)\n            .catch { error in\n                onErrorRecover(error).asObservable()\n            }"
+  }
+]

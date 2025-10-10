@@ -1,0 +1,70 @@
+[
+  {
+    "A_name" : "bechmarkTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 16, Column: 1",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "allocation",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 18, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "iterations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 22, Column: 1",
+    "H_initialValue" : "100000"
+  },
+  {
+    "A_name" : "sum",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 26, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "last",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 28, Column: 13",
+    "H_initialValue" : "Observable.combineLatest(\n                Observable<Int>.create { observer in\n                    for _ in 0 ..< 1 {\n                        observer.on(.next(1))\n                    }\n                    return Disposables.create()\n            }, Observable.just(1), Observable.just(1), Observable.just(1)) { x, _, _ ,_ in x }"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 40, Column: 13",
+    "H_initialValue" : "last\n                .subscribe(onNext: { x in\n                    sum += x\n                })"
+  }
+]

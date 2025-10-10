@@ -1,0 +1,32 @@
+[
+  {
+    "A_name" : "rocketIfNeeded",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Package.swift - Line: 5, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "package",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Package.swift - Line: 15, Column: 1",
+    "H_initialValue" : "Package(\n    name: \"Moya\",\n    platforms: [\n        .macOS(.v10_12),\n        .iOS(.v10),\n        .tvOS(.v10),\n        .watchOS(.v3)\n    ],\n    products: [\n        .library(name: \"Moya\", targets: [\"Moya\"]),\n        .library(name: \"CombineMoya\", targets: [\"CombineMoya\"]),\n        .library(name: \"ReactiveMoya\", targets: [\"ReactiveMoya\"]),\n        .library(name: \"RxMoya\", targets: [\"RxMoya\"])\n    ],\n    dependencies: [\n        .package(url: \"https:\/\/github.com\/Alamofire\/Alamofire.git\", .upToNextMajor(from: \"5.0.0\")),\n        .package(url: \"https:\/\/github.com\/ReactiveCocoa\/ReactiveSwift.git\", .upToNextMajor(from: \"6.0.0\")),\n        .package(url: \"https:\/\/github.com\/ReactiveX\/RxSwift.git\", .upToNextMajor(from: \"6.0.0\")),\n\/\/        .package(url: \"https:\/\/github.com\/Quick\/Quick.git\", .upToNextMajor(from: \"4.0.0\")), \/\/ dev\n\/\/        .package(url: \"https:\/\/github.com\/Quick\/Nimble.git\", .upToNextMajor(from: \"9.0.0\")), \/\/ dev\n\/\/        .package(url: \"https:\/\/github.com\/AliSoftware\/OHHTTPStubs.git\", .upToNextMajor(from: \"9.0.0\")) \/\/ dev\n    ] + rocketIfNeeded,\n    targets: [\n        .target(\n            name: \"Moya\",\n            dependencies: [\n                .product(name: \"Alamofire\", package: \"Alamofire\")\n            ],\n            exclude: [\n                \"Supporting Files\/Info.plist\"\n            ]\n        ),\n        .target(\n            name: \"CombineMoya\",\n            dependencies: [\n                \"Moya\"\n            ]\n        ),\n        .target(\n            name: \"ReactiveMoya\",\n            dependencies: [\n                \"Moya\",\n                .product(name: \"ReactiveSwift\", package: \"ReactiveSwift\")\n            ]\n        ),\n        .target(\n            name: \"RxMoya\",\n            dependencies: [\n                \"Moya\",\n                .product(name: \"RxSwift\", package: \"RxSwift\")\n            ]\n        ),\n\/\/        .testTarget( \/\/ dev\n\/\/            name: \"MoyaTests\",  \/\/ dev\n\/\/            dependencies: [ \/\/ dev\n\/\/                \"Moya\", \/\/ dev\n\/\/                \"CombineMoya\", \/\/ dev\n\/\/                \"ReactiveMoya\", \/\/ dev\n\/\/                \"RxMoya\", \/\/ dev\n\/\/                .product(name: \"Quick\", package: \"Quick\"), \/\/ dev\n\/\/                .product(name: \"Nimble\", package: \"Nimble\"), \/\/ dev\n\/\/                .product(name: \"OHHTTPStubsSwift\", package: \"OHHTTPStubs\") \/\/ dev\n\/\/            ] \/\/ dev\n\/\/        ) \/\/ dev\n    ]\n)"
+  },
+  {
+    "A_name" : "config",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Package.swift - Line: 85, Column: 1",
+    "H_initialValue" : "PackageConfiguration([\n    \"rocket\": [\n        \"before\": [\n            \"scripts\/update_changelog.sh\",\n            \"scripts\/update_podspec.sh\"\n        ],\n        \"after\": [\n            \"rake create_release\\\\[\\\"$VERSION\\\"\\\\]\",\n            \"scripts\/update_docs_website.sh\"\n        ]\n    ]\n]).write()"
+  }
+]

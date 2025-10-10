@@ -1,0 +1,4890 @@
+[
+  {
+    "A_name" : "ImageViewExtensionTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 30, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "imageView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 32, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setUp",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override",
+          "class"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "tearDown",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override",
+          "class"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 39, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setUp",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 44, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "tearDown",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 54, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testImageDownloadForImageView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 62, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 63, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 64, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "progressBlockIsCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 67, Column: 9",
+            "H_initialValue" : "false"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testImageDownloadCompletionHandlerRunningOnMainQueue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 92, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 93, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 94, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "customQueue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 97, Column: 9",
+            "H_initialValue" : "DispatchQueue(label: \"com.kingfisher.testQueue\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testImageDownloadWithResourceForImageView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 110, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 111, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 112, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "progressBlockIsCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 115, Column: 9",
+            "H_initialValue" : "false"
+          },
+          {
+            "A_name" : "resource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 117, Column: 9",
+            "H_initialValue" : "KF.ImageResource(downloadURL: url)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testImageDownloadCancelForImageView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 139, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 140, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 141, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "stub",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 142, Column: 9",
+            "H_initialValue" : "delayedStub(url, data: testImageData, length: 123)"
+          },
+          {
+            "A_name" : "task",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 144, Column: 9",
+            "H_initialValue" : "imageView.kf.setImage(\n            with: url,\n            progressBlock: { _, _ in XCTFail() })\n        {\n            result in\n            XCTAssertNotNil(result.error)\n            delay(0.1) { exp.fulfill() }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testImageDownloadCancelPartialTaskBeforeRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 159, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 160, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 161, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "stub",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 162, Column: 9",
+            "H_initialValue" : "delayedStub(url, data: testImageData)"
+          },
+          {
+            "A_name" : "group",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 164, Column: 9",
+            "H_initialValue" : "DispatchGroup()"
+          },
+          {
+            "A_name" : "task1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 167, Column: 9",
+            "H_initialValue" : "KF.url(url)\n            .onFailure { _ in group.leave() }\n            .set(to: imageView)"
+          },
+          {
+            "A_name" : "anotherImageView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 177, Column: 9",
+            "H_initialValue" : "KFCrossPlatformImageView()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testImageDownloadCancelAllTasksAfterRequestStarted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 191, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 192, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 193, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "stub",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 194, Column: 9",
+            "H_initialValue" : "delayedStub(url, data: testImageData)"
+          },
+          {
+            "A_name" : "group",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 196, Column: 9",
+            "H_initialValue" : "DispatchGroup()"
+          },
+          {
+            "A_name" : "task1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 199, Column: 9",
+            "H_initialValue" : "imageView.kf.setImage(with: url) { result in\n            XCTAssertNotNil(result.error)\n            group.leave()\n        }"
+          },
+          {
+            "A_name" : "task2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 205, Column: 9",
+            "H_initialValue" : "imageView.kf.setImage(with: url) { result in\n            XCTAssertNotNil(result.error)\n            group.leave()\n        }"
+          },
+          {
+            "A_name" : "task3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 211, Column: 9",
+            "H_initialValue" : "imageView.kf.setImage(with: url) { result in\n            XCTAssertNotNil(result.error)\n            group.leave()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testImageDownloadMultipleCaches",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 227, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "cache1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 229, Column: 9",
+            "H_initialValue" : "ImageCache(name: \"cache1\")"
+          },
+          {
+            "A_name" : "cache2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 230, Column: 9",
+            "H_initialValue" : "ImageCache(name: \"cache2\")"
+          },
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 236, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 237, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "key",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 240, Column: 9",
+            "H_initialValue" : "url.cacheKey"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testIndicatorViewExisting",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 261, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCustomizeStructIndicatorExisting",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 270, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testActivityIndicatorViewAnimating",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 285, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 288, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 289, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCanUseImageIndicatorViewAnimating",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 307, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "image",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 311, Column: 9",
+            "H_initialValue" : "(imageView.kf.indicator?.view as? KFCrossPlatformImageView)?.image"
+          },
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 315, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 316, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCancelImageTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 333, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 334, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 335, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "stub",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 336, Column: 9",
+            "H_initialValue" : "delayedStub(url, data: testImageData)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDownloadForMultipleURLs",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 350, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 351, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "group",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 356, Column: 9",
+            "H_initialValue" : "DispatchGroup()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSettingNilURL",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 386, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 387, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 388, Column: 9",
+            "H_initialValue" : "nil"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSettingImageWhileKeepingCurrentOne",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 402, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 403, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 404, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSettingImageKeepingRespectingPlaceholder",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 422, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 423, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 426, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMe",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 434, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 435, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 436, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "anotherImage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 440, Column: 9",
+            "H_initialValue" : "KFCrossPlatformImage(data: testImageJEPGData)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSetGIFImageOnlyFirstFrameThenFullFrames",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 451, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 452, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 453, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "progressBlockIsCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 474, Column: 9",
+            "H_initialValue" : "false"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLoadGIFImageWithDifferentOptions",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 503, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 504, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 505, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testIssue665",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 525, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 526, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "group",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 531, Column: 9",
+            "H_initialValue" : "DispatchGroup()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testImageSettingWithPlaceholder",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 547, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 548, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 549, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "emptyImage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 553, Column: 9",
+            "H_initialValue" : "KFCrossPlatformImage()"
+          },
+          {
+            "A_name" : "processBlockCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 554, Column: 9",
+            "H_initialValue" : "false"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testImageSettingWithCustomizePlaceholder",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 573, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 574, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 575, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "view",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 579, Column: 9",
+            "H_initialValue" : "KFCrossPlatformView()"
+          },
+          {
+            "A_name" : "processBlockCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 580, Column: 9",
+            "H_initialValue" : "false"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSettingNonWorkingImageWithCustomizePlaceholderAndFailureImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 601, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 602, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 603, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "view",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 607, Column: 9",
+            "H_initialValue" : "KFCrossPlatformView()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSettingNonWorkingImageWithFailureImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 623, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 624, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 625, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSettingNonWorkingImageWithEmptyFailureImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 646, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 647, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 648, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSettingNonWorkingImageWithoutFailureImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 661, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 662, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 663, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSetSameURLWithDifferentProcessors",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 677, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 678, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 679, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "size1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 683, Column: 9",
+            "H_initialValue" : "CGSize(width: 10, height: 10)"
+          },
+          {
+            "A_name" : "p1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 684, Column: 9",
+            "H_initialValue" : "ResizingImageProcessor(referenceSize: size1)"
+          },
+          {
+            "A_name" : "size2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 686, Column: 9",
+            "H_initialValue" : "CGSize(width: 20, height: 20)"
+          },
+          {
+            "A_name" : "p2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 687, Column: 9",
+            "H_initialValue" : "ResizingImageProcessor(referenceSize: size2)"
+          },
+          {
+            "A_name" : "group",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 689, Column: 9",
+            "H_initialValue" : "DispatchGroup()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMemoryImageCacheExtendingExpirationTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 709, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 710, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 711, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "options",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 714, Column: 9",
+            "H_initialValue" : "[.cacheMemoryOnly, .memoryCacheExpiration(.seconds(1)), .memoryCacheAccessExtendingExpiration(.expirationTime(.seconds(100)))]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMemoryImageCacheNotExtendingExpirationTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 744, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 745, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 746, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "options",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 749, Column: 9",
+            "H_initialValue" : "[.cacheMemoryOnly, .memoryCacheExpiration(.seconds(1)), .memoryCacheAccessExtendingExpiration(.none)]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDiskImageCacheExtendingExpirationTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 777, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 778, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 779, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "options",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 782, Column: 9",
+            "H_initialValue" : "[.memoryCacheExpiration(.expired),\n                                              .diskCacheExpiration(.seconds(2)),\n                                              .diskCacheAccessExtendingExpiration(.expirationTime(.seconds(100)))]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDiskImageCacheNotExtendingExpirationTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 809, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 810, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 811, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "options",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 814, Column: 9",
+            "H_initialValue" : "[.memoryCacheExpiration(.expired),\n                                              .diskCacheExpiration(.seconds(2)),\n                                              .diskCacheAccessExtendingExpiration(.none)]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testImageSettingWithAlternativeSource",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 841, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 842, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 843, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "brokenURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 846, Column: 9",
+            "H_initialValue" : "URL(string: \"brokenurl\")!"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testImageSettingCanCancelAlternativeSource",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 861, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 862, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 863, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "dataStub",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 864, Column: 9",
+            "H_initialValue" : "delayedStub(url, data: testImageData)"
+          },
+          {
+            "A_name" : "brokenURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 866, Column: 9",
+            "H_initialValue" : "testURLs[1]"
+          },
+          {
+            "A_name" : "brokenStub",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 867, Column: 9",
+            "H_initialValue" : "delayedStub(brokenURL, data: Data())"
+          },
+          {
+            "A_name" : "finishCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 869, Column: 9",
+            "H_initialValue" : "false"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLowDataModeSource",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "available",
+          "MainActor"
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 899, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 901, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 903, Column: 9",
+            "H_initialValue" : "testURLs[0]"
+          },
+          {
+            "A_name" : "brokenURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 907, Column: 9",
+            "H_initialValue" : "testURLs[1]"
+          },
+          {
+            "A_name" : "error",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageViewExtensionTests.swift - Line: 908, Column: 9",
+            "H_initialValue" : "URLError(\n            .notConnectedToInternet,\n            userInfo: [NSURLErrorNetworkUnavailableReasonKey: URLError.NetworkUnavailableReason.constrained.rawValue]\n        )"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 32, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setUp",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override",
+      "class"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tearDown",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override",
+      "class"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 39, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setUp",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 44, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tearDown",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 54, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testImageDownloadForImageView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 62, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 63, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 64, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "progressBlockIsCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 67, Column: 9",
+        "H_initialValue" : "false"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 63, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 64, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "progressBlockIsCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 67, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 80, Column: 13",
+    "H_initialValue" : "result.value!"
+  },
+  {
+    "A_name" : "testImageDownloadCompletionHandlerRunningOnMainQueue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 92, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 93, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 94, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "customQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 97, Column: 9",
+        "H_initialValue" : "DispatchQueue(label: \"com.kingfisher.testQueue\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 93, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 94, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "customQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 97, Column: 9",
+    "H_initialValue" : "DispatchQueue(label: \"com.kingfisher.testQueue\")"
+  },
+  {
+    "A_name" : "testImageDownloadWithResourceForImageView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 110, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 111, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 112, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "progressBlockIsCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 115, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "resource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 117, Column: 9",
+        "H_initialValue" : "KF.ImageResource(downloadURL: url)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 111, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 112, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "progressBlockIsCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 115, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "resource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 117, Column: 9",
+    "H_initialValue" : "KF.ImageResource(downloadURL: url)"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 126, Column: 13",
+    "H_initialValue" : "result.value!"
+  },
+  {
+    "A_name" : "testImageDownloadCancelForImageView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 139, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 140, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 141, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "stub",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 142, Column: 9",
+        "H_initialValue" : "delayedStub(url, data: testImageData, length: 123)"
+      },
+      {
+        "A_name" : "task",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 144, Column: 9",
+        "H_initialValue" : "imageView.kf.setImage(\n            with: url,\n            progressBlock: { _, _ in XCTFail() })\n        {\n            result in\n            XCTAssertNotNil(result.error)\n            delay(0.1) { exp.fulfill() }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 140, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 141, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "stub",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 142, Column: 9",
+    "H_initialValue" : "delayedStub(url, data: testImageData, length: 123)"
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 144, Column: 9",
+    "H_initialValue" : "imageView.kf.setImage(\n            with: url,\n            progressBlock: { _, _ in XCTFail() })\n        {\n            result in\n            XCTAssertNotNil(result.error)\n            delay(0.1) { exp.fulfill() }\n        }"
+  },
+  {
+    "A_name" : "testImageDownloadCancelPartialTaskBeforeRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 159, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 160, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 161, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "stub",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 162, Column: 9",
+        "H_initialValue" : "delayedStub(url, data: testImageData)"
+      },
+      {
+        "A_name" : "group",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 164, Column: 9",
+        "H_initialValue" : "DispatchGroup()"
+      },
+      {
+        "A_name" : "task1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 167, Column: 9",
+        "H_initialValue" : "KF.url(url)\n            .onFailure { _ in group.leave() }\n            .set(to: imageView)"
+      },
+      {
+        "A_name" : "anotherImageView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 177, Column: 9",
+        "H_initialValue" : "KFCrossPlatformImageView()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 160, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 161, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "stub",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 162, Column: 9",
+    "H_initialValue" : "delayedStub(url, data: testImageData)"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 164, Column: 9",
+    "H_initialValue" : "DispatchGroup()"
+  },
+  {
+    "A_name" : "task1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 167, Column: 9",
+    "H_initialValue" : "KF.url(url)\n            .onFailure { _ in group.leave() }\n            .set(to: imageView)"
+  },
+  {
+    "A_name" : "anotherImageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 177, Column: 9",
+    "H_initialValue" : "KFCrossPlatformImageView()"
+  },
+  {
+    "A_name" : "testImageDownloadCancelAllTasksAfterRequestStarted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 191, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 192, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 193, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "stub",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 194, Column: 9",
+        "H_initialValue" : "delayedStub(url, data: testImageData)"
+      },
+      {
+        "A_name" : "group",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 196, Column: 9",
+        "H_initialValue" : "DispatchGroup()"
+      },
+      {
+        "A_name" : "task1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 199, Column: 9",
+        "H_initialValue" : "imageView.kf.setImage(with: url) { result in\n            XCTAssertNotNil(result.error)\n            group.leave()\n        }"
+      },
+      {
+        "A_name" : "task2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 205, Column: 9",
+        "H_initialValue" : "imageView.kf.setImage(with: url) { result in\n            XCTAssertNotNil(result.error)\n            group.leave()\n        }"
+      },
+      {
+        "A_name" : "task3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 211, Column: 9",
+        "H_initialValue" : "imageView.kf.setImage(with: url) { result in\n            XCTAssertNotNil(result.error)\n            group.leave()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 192, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 193, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "stub",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 194, Column: 9",
+    "H_initialValue" : "delayedStub(url, data: testImageData)"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 196, Column: 9",
+    "H_initialValue" : "DispatchGroup()"
+  },
+  {
+    "A_name" : "task1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 199, Column: 9",
+    "H_initialValue" : "imageView.kf.setImage(with: url) { result in\n            XCTAssertNotNil(result.error)\n            group.leave()\n        }"
+  },
+  {
+    "A_name" : "task2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 205, Column: 9",
+    "H_initialValue" : "imageView.kf.setImage(with: url) { result in\n            XCTAssertNotNil(result.error)\n            group.leave()\n        }"
+  },
+  {
+    "A_name" : "task3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 211, Column: 9",
+    "H_initialValue" : "imageView.kf.setImage(with: url) { result in\n            XCTAssertNotNil(result.error)\n            group.leave()\n        }"
+  },
+  {
+    "A_name" : "testImageDownloadMultipleCaches",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 227, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "cache1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 229, Column: 9",
+        "H_initialValue" : "ImageCache(name: \"cache1\")"
+      },
+      {
+        "A_name" : "cache2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 230, Column: 9",
+        "H_initialValue" : "ImageCache(name: \"cache2\")"
+      },
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 236, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 237, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "key",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 240, Column: 9",
+        "H_initialValue" : "url.cacheKey"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "cache1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 229, Column: 9",
+    "H_initialValue" : "ImageCache(name: \"cache1\")"
+  },
+  {
+    "A_name" : "cache2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 230, Column: 9",
+    "H_initialValue" : "ImageCache(name: \"cache2\")"
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 236, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 237, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "key",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 240, Column: 9",
+    "H_initialValue" : "url.cacheKey"
+  },
+  {
+    "A_name" : "testIndicatorViewExisting",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 261, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testCustomizeStructIndicatorExisting",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 270, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "StructIndicator",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Indicator"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 271, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "view",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 272, Column: 13",
+        "H_initialValue" : "KFCrossPlatformView()"
+      },
+      {
+        "A_name" : "startAnimatingView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 273, Column: 13",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "stopAnimatingView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 274, Column: 13",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 272, Column: 13",
+    "H_initialValue" : "KFCrossPlatformView()"
+  },
+  {
+    "A_name" : "startAnimatingView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 273, Column: 13",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "stopAnimatingView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 274, Column: 13",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testActivityIndicatorViewAnimating",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 285, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 288, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 289, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 288, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 289, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "indicator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 293, Column: 13",
+    "H_initialValue" : "self.imageView.kf.indicator"
+  },
+  {
+    "A_name" : "indicator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 299, Column: 13",
+    "H_initialValue" : "self.imageView.kf.indicator"
+  },
+  {
+    "A_name" : "testCanUseImageIndicatorViewAnimating",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 307, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "image",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 311, Column: 9",
+        "H_initialValue" : "(imageView.kf.indicator?.view as? KFCrossPlatformImageView)?.image"
+      },
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 315, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 316, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 311, Column: 9",
+    "H_initialValue" : "(imageView.kf.indicator?.view as? KFCrossPlatformImageView)?.image"
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 315, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 316, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "indicator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 320, Column: 13",
+    "H_initialValue" : "self.imageView.kf.indicator"
+  },
+  {
+    "A_name" : "indicator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 326, Column: 13",
+    "H_initialValue" : "self.imageView.kf.indicator"
+  },
+  {
+    "A_name" : "testCancelImageTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 333, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 334, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 335, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "stub",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 336, Column: 9",
+        "H_initialValue" : "delayedStub(url, data: testImageData)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 334, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 335, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "stub",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 336, Column: 9",
+    "H_initialValue" : "delayedStub(url, data: testImageData)"
+  },
+  {
+    "A_name" : "testDownloadForMultipleURLs",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 350, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 351, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "group",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 356, Column: 9",
+        "H_initialValue" : "DispatchGroup()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 351, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 356, Column: 9",
+    "H_initialValue" : "DispatchGroup()"
+  },
+  {
+    "A_name" : "testSettingNilURL",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 386, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 387, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 388, Column: 9",
+        "H_initialValue" : "nil"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 387, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 388, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "testSettingImageWhileKeepingCurrentOne",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 402, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 403, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 404, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 403, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 404, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "testSettingImageKeepingRespectingPlaceholder",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 422, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 423, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 426, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 423, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 426, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "testMe",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 434, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 435, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 436, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "anotherImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 440, Column: 9",
+        "H_initialValue" : "KFCrossPlatformImage(data: testImageJEPGData)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 435, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 436, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "anotherImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 440, Column: 9",
+    "H_initialValue" : "KFCrossPlatformImage(data: testImageJEPGData)"
+  },
+  {
+    "A_name" : "testSetGIFImageOnlyFirstFrameThenFullFrames",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 451, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 452, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 453, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "progressBlockIsCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 474, Column: 9",
+        "H_initialValue" : "false"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 452, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 453, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "loadFullGIFImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 456, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 462, Column: 17",
+    "H_initialValue" : "result.value?.image"
+  },
+  {
+    "A_name" : "progressBlockIsCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 474, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 483, Column: 13",
+    "H_initialValue" : "result.value?.image"
+  },
+  {
+    "A_name" : "memory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 489, Column: 13",
+    "H_initialValue" : "KingfisherManager.shared.cache.memoryStorage.value(forKey: url.cacheKey)"
+  },
+  {
+    "A_name" : "disk",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 492, Column: 13",
+    "H_initialValue" : "try! KingfisherManager.shared.cache.diskStorage.value(forKey: url.cacheKey)"
+  },
+  {
+    "A_name" : "testLoadGIFImageWithDifferentOptions",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 503, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 504, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 505, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 504, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 505, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "fullImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 509, Column: 13",
+    "H_initialValue" : "result.value?.image"
+  },
+  {
+    "A_name" : "firstFrameImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 514, Column: 17",
+    "H_initialValue" : "result.value?.image"
+  },
+  {
+    "A_name" : "testIssue665",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 525, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 526, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "group",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 531, Column: 9",
+        "H_initialValue" : "DispatchGroup()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 526, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 531, Column: 9",
+    "H_initialValue" : "DispatchGroup()"
+  },
+  {
+    "A_name" : "testImageSettingWithPlaceholder",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 547, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 548, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 549, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "emptyImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 553, Column: 9",
+        "H_initialValue" : "KFCrossPlatformImage()"
+      },
+      {
+        "A_name" : "processBlockCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 554, Column: 9",
+        "H_initialValue" : "false"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 548, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 549, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "emptyImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 553, Column: 9",
+    "H_initialValue" : "KFCrossPlatformImage()"
+  },
+  {
+    "A_name" : "processBlockCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 554, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "testImageSettingWithCustomizePlaceholder",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 573, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 574, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 575, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "view",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 579, Column: 9",
+        "H_initialValue" : "KFCrossPlatformView()"
+      },
+      {
+        "A_name" : "processBlockCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 580, Column: 9",
+        "H_initialValue" : "false"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 574, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 575, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 579, Column: 9",
+    "H_initialValue" : "KFCrossPlatformView()"
+  },
+  {
+    "A_name" : "processBlockCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 580, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "testSettingNonWorkingImageWithCustomizePlaceholderAndFailureImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 601, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 602, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 603, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "view",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 607, Column: 9",
+        "H_initialValue" : "KFCrossPlatformView()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 602, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 603, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 607, Column: 9",
+    "H_initialValue" : "KFCrossPlatformView()"
+  },
+  {
+    "A_name" : "testSettingNonWorkingImageWithFailureImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 623, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 624, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 625, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 624, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 625, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "testSettingNonWorkingImageWithEmptyFailureImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 646, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 647, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 648, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 647, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 648, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "testSettingNonWorkingImageWithoutFailureImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 661, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 662, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 663, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 662, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 663, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "testSetSameURLWithDifferentProcessors",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 677, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 678, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 679, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "size1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 683, Column: 9",
+        "H_initialValue" : "CGSize(width: 10, height: 10)"
+      },
+      {
+        "A_name" : "p1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 684, Column: 9",
+        "H_initialValue" : "ResizingImageProcessor(referenceSize: size1)"
+      },
+      {
+        "A_name" : "size2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 686, Column: 9",
+        "H_initialValue" : "CGSize(width: 20, height: 20)"
+      },
+      {
+        "A_name" : "p2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 687, Column: 9",
+        "H_initialValue" : "ResizingImageProcessor(referenceSize: size2)"
+      },
+      {
+        "A_name" : "group",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 689, Column: 9",
+        "H_initialValue" : "DispatchGroup()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 678, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 679, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "size1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 683, Column: 9",
+    "H_initialValue" : "CGSize(width: 10, height: 10)"
+  },
+  {
+    "A_name" : "p1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 684, Column: 9",
+    "H_initialValue" : "ResizingImageProcessor(referenceSize: size1)"
+  },
+  {
+    "A_name" : "size2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 686, Column: 9",
+    "H_initialValue" : "CGSize(width: 20, height: 20)"
+  },
+  {
+    "A_name" : "p2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 687, Column: 9",
+    "H_initialValue" : "ResizingImageProcessor(referenceSize: size2)"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 689, Column: 9",
+    "H_initialValue" : "DispatchGroup()"
+  },
+  {
+    "A_name" : "testMemoryImageCacheExtendingExpirationTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 709, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 710, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 711, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 714, Column: 9",
+        "H_initialValue" : "[.cacheMemoryOnly, .memoryCacheExpiration(.seconds(1)), .memoryCacheAccessExtendingExpiration(.expirationTime(.seconds(100)))]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 710, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 711, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 714, Column: 9",
+    "H_initialValue" : "[.cacheMemoryOnly, .memoryCacheExpiration(.seconds(1)), .memoryCacheAccessExtendingExpiration(.expirationTime(.seconds(100)))]"
+  },
+  {
+    "A_name" : "cacheKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 720, Column: 13",
+    "H_initialValue" : "result.value!.source.cacheKey as NSString"
+  },
+  {
+    "A_name" : "expirationTime1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 721, Column: 13",
+    "H_initialValue" : "ImageCache.default.memoryStorage.storage.object(forKey: cacheKey)?.estimatedExpiration"
+  },
+  {
+    "A_name" : "expirationTime2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 729, Column: 21",
+    "H_initialValue" : "ImageCache.default.memoryStorage.storage.object(forKey: cacheKey)?.estimatedExpiration"
+  },
+  {
+    "A_name" : "testMemoryImageCacheNotExtendingExpirationTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 744, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 745, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 746, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 749, Column: 9",
+        "H_initialValue" : "[.cacheMemoryOnly, .memoryCacheExpiration(.seconds(1)), .memoryCacheAccessExtendingExpiration(.none)]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 745, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 746, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 749, Column: 9",
+    "H_initialValue" : "[.cacheMemoryOnly, .memoryCacheExpiration(.seconds(1)), .memoryCacheAccessExtendingExpiration(.none)]"
+  },
+  {
+    "A_name" : "cacheKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 755, Column: 13",
+    "H_initialValue" : "result.value!.source.cacheKey as NSString"
+  },
+  {
+    "A_name" : "expirationTime1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 756, Column: 13",
+    "H_initialValue" : "ImageCache.default.memoryStorage.storage.object(forKey: cacheKey)?.estimatedExpiration"
+  },
+  {
+    "A_name" : "expirationTime2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 764, Column: 21",
+    "H_initialValue" : "ImageCache.default.memoryStorage.storage.object(forKey: cacheKey)?.estimatedExpiration"
+  },
+  {
+    "A_name" : "testDiskImageCacheExtendingExpirationTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 777, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 778, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 779, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 782, Column: 9",
+        "H_initialValue" : "[.memoryCacheExpiration(.expired),\n                                              .diskCacheExpiration(.seconds(2)),\n                                              .diskCacheAccessExtendingExpiration(.expirationTime(.seconds(100)))]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 778, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 779, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 782, Column: 9",
+    "H_initialValue" : "[.memoryCacheExpiration(.expired),\n                                              .diskCacheExpiration(.seconds(2)),\n                                              .diskCacheAccessExtendingExpiration(.expirationTime(.seconds(100)))]"
+  },
+  {
+    "A_name" : "testDiskImageCacheNotExtendingExpirationTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 809, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 810, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 811, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 814, Column: 9",
+        "H_initialValue" : "[.memoryCacheExpiration(.expired),\n                                              .diskCacheExpiration(.seconds(2)),\n                                              .diskCacheAccessExtendingExpiration(.none)]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 810, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 811, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 814, Column: 9",
+    "H_initialValue" : "[.memoryCacheExpiration(.expired),\n                                              .diskCacheExpiration(.seconds(2)),\n                                              .diskCacheAccessExtendingExpiration(.none)]"
+  },
+  {
+    "A_name" : "testImageSettingWithAlternativeSource",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 841, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 842, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 843, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "brokenURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 846, Column: 9",
+        "H_initialValue" : "URL(string: \"brokenurl\")!"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 842, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 843, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "brokenURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 846, Column: 9",
+    "H_initialValue" : "URL(string: \"brokenurl\")!"
+  },
+  {
+    "A_name" : "testImageSettingCanCancelAlternativeSource",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 861, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 862, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 863, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "dataStub",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 864, Column: 9",
+        "H_initialValue" : "delayedStub(url, data: testImageData)"
+      },
+      {
+        "A_name" : "brokenURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 866, Column: 9",
+        "H_initialValue" : "testURLs[1]"
+      },
+      {
+        "A_name" : "brokenStub",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 867, Column: 9",
+        "H_initialValue" : "delayedStub(brokenURL, data: Data())"
+      },
+      {
+        "A_name" : "finishCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 869, Column: 9",
+        "H_initialValue" : "false"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 862, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 863, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "dataStub",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 864, Column: 9",
+    "H_initialValue" : "delayedStub(url, data: testImageData)"
+  },
+  {
+    "A_name" : "brokenURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 866, Column: 9",
+    "H_initialValue" : "testURLs[1]"
+  },
+  {
+    "A_name" : "brokenStub",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 867, Column: 9",
+    "H_initialValue" : "delayedStub(brokenURL, data: Data())"
+  },
+  {
+    "A_name" : "finishCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 869, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "testLowDataModeSource",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available",
+      "MainActor"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 899, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 901, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 903, Column: 9",
+        "H_initialValue" : "testURLs[0]"
+      },
+      {
+        "A_name" : "brokenURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 907, Column: 9",
+        "H_initialValue" : "testURLs[1]"
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageViewExtensionTests.swift - Line: 908, Column: 9",
+        "H_initialValue" : "URLError(\n            .notConnectedToInternet,\n            userInfo: [NSURLErrorNetworkUnavailableReasonKey: URLError.NetworkUnavailableReason.constrained.rawValue]\n        )"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 901, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 903, Column: 9",
+    "H_initialValue" : "testURLs[0]"
+  },
+  {
+    "A_name" : "brokenURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 907, Column: 9",
+    "H_initialValue" : "testURLs[1]"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 908, Column: 9",
+    "H_initialValue" : "URLError(\n            .notConnectedToInternet,\n            userInfo: [NSURLErrorNetworkUnavailableReasonKey: URLError.NetworkUnavailableReason.constrained.rawValue]\n        )"
+  },
+  {
+    "A_name" : "KFCrossPlatformView",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@retroactive Placeholder"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 926, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "KFCrossPlatformView",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Placeholder"
+    ],
+    "F_location" : "ImageViewExtensionTests.swift - Line: 928, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

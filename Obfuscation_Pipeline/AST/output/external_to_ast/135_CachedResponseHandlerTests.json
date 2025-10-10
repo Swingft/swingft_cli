@@ -1,0 +1,1548 @@
+[
+  {
+    "A_name" : "CachedResponseHandlerTestCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 29, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testThatRequestCachedResponseHandlerCanCacheResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 32, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 35, Column: 9",
+            "H_initialValue" : "session()"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 37, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 38, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should cache response\")"
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 41, Column: 9",
+            "H_initialValue" : "session.request(.default).cacheResponse(using: ResponseCacher.cache).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatRequestCachedResponseHandlerCanNotCacheResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 53, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 56, Column: 9",
+            "H_initialValue" : "session()"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 58, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 59, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should not cache response\")"
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 62, Column: 9",
+            "H_initialValue" : "session.request(.default).cacheResponse(using: ResponseCacher.doNotCache).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatRequestCachedResponseHandlerCanModifyCacheResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 74, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 77, Column: 9",
+            "H_initialValue" : "session()"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 79, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 80, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should cache response\")"
+          },
+          {
+            "A_name" : "cacher",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 83, Column: 9",
+            "H_initialValue" : "ResponseCacher(behavior: .modify { _, response in\n            CachedURLResponse(response: response.response,\n                              data: response.data,\n                              userInfo: [\"key\": \"value\"],\n                              storagePolicy: .allowed)\n        })"
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 90, Column: 9",
+            "H_initialValue" : "session.request(.default).cacheResponse(using: cacher).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatSessionCachedResponseHandlerCanCacheResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 105, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 108, Column: 9",
+            "H_initialValue" : "session(using: ResponseCacher.cache)"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 110, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 111, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should cache response\")"
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 114, Column: 9",
+            "H_initialValue" : "session.request(.default).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatSessionCachedResponseHandlerCanNotCacheResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 126, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 129, Column: 9",
+            "H_initialValue" : "session(using: ResponseCacher.doNotCache)"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 131, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 132, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should not cache response\")"
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 135, Column: 9",
+            "H_initialValue" : "session.request(.default).cacheResponse(using: ResponseCacher.doNotCache).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatSessionCachedResponseHandlerCanModifyCacheResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 147, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "cacher",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 150, Column: 9",
+            "H_initialValue" : "ResponseCacher(behavior: .modify { _, response in\n            CachedURLResponse(response: response.response,\n                              data: response.data,\n                              userInfo: [\"key\": \"value\"],\n                              storagePolicy: .allowed)\n        })"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 157, Column: 9",
+            "H_initialValue" : "session(using: cacher)"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 159, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 160, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should cache response\")"
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 163, Column: 9",
+            "H_initialValue" : "session.request(.default).cacheResponse(using: cacher).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatRequestCachedResponseHandlerIsPrioritizedOverSessionCachedResponseHandler",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 178, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 181, Column: 9",
+            "H_initialValue" : "session(using: ResponseCacher.cache)"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 183, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 184, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should cache response\")"
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 187, Column: 9",
+            "H_initialValue" : "session.request(.default).cacheResponse(using: ResponseCacher.doNotCache).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 201, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "configuration",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 202, Column: 9",
+            "H_initialValue" : "URLSessionConfiguration.af.default"
+          },
+          {
+            "A_name" : "capacity",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 203, Column: 9",
+            "H_initialValue" : "100_000_000"
+          },
+          {
+            "A_name" : "cache",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CachedResponseHandlerTests.swift - Line: 204, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "(any CachedResponseHandler)?"
+        ],
+        "I_parameters" : [
+          "using"
+        ],
+        "J_returnType" : "-> Session"
+      }
+    ]
+  },
+  {
+    "A_name" : "testThatRequestCachedResponseHandlerCanCacheResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 32, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 35, Column: 9",
+        "H_initialValue" : "session()"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 37, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 38, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should cache response\")"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 41, Column: 9",
+        "H_initialValue" : "session.request(.default).cacheResponse(using: ResponseCacher.cache).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 35, Column: 9",
+    "H_initialValue" : "session()"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 37, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 38, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should cache response\")"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 41, Column: 9",
+    "H_initialValue" : "session.request(.default).cacheResponse(using: ResponseCacher.cache).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+  },
+  {
+    "A_name" : "testThatRequestCachedResponseHandlerCanNotCacheResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 53, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 56, Column: 9",
+        "H_initialValue" : "session()"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 58, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 59, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should not cache response\")"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 62, Column: 9",
+        "H_initialValue" : "session.request(.default).cacheResponse(using: ResponseCacher.doNotCache).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 56, Column: 9",
+    "H_initialValue" : "session()"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 58, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 59, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should not cache response\")"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 62, Column: 9",
+    "H_initialValue" : "session.request(.default).cacheResponse(using: ResponseCacher.doNotCache).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+  },
+  {
+    "A_name" : "testThatRequestCachedResponseHandlerCanModifyCacheResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 74, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 77, Column: 9",
+        "H_initialValue" : "session()"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 79, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 80, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should cache response\")"
+      },
+      {
+        "A_name" : "cacher",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 83, Column: 9",
+        "H_initialValue" : "ResponseCacher(behavior: .modify { _, response in\n            CachedURLResponse(response: response.response,\n                              data: response.data,\n                              userInfo: [\"key\": \"value\"],\n                              storagePolicy: .allowed)\n        })"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 90, Column: 9",
+        "H_initialValue" : "session.request(.default).cacheResponse(using: cacher).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 77, Column: 9",
+    "H_initialValue" : "session()"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 79, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 80, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should cache response\")"
+  },
+  {
+    "A_name" : "cacher",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 83, Column: 9",
+    "H_initialValue" : "ResponseCacher(behavior: .modify { _, response in\n            CachedURLResponse(response: response.response,\n                              data: response.data,\n                              userInfo: [\"key\": \"value\"],\n                              storagePolicy: .allowed)\n        })"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 90, Column: 9",
+    "H_initialValue" : "session.request(.default).cacheResponse(using: cacher).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+  },
+  {
+    "A_name" : "testThatSessionCachedResponseHandlerCanCacheResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 105, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 108, Column: 9",
+        "H_initialValue" : "session(using: ResponseCacher.cache)"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 110, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 111, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should cache response\")"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 114, Column: 9",
+        "H_initialValue" : "session.request(.default).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 108, Column: 9",
+    "H_initialValue" : "session(using: ResponseCacher.cache)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 110, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 111, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should cache response\")"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 114, Column: 9",
+    "H_initialValue" : "session.request(.default).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+  },
+  {
+    "A_name" : "testThatSessionCachedResponseHandlerCanNotCacheResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 126, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 129, Column: 9",
+        "H_initialValue" : "session(using: ResponseCacher.doNotCache)"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 131, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 132, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should not cache response\")"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 135, Column: 9",
+        "H_initialValue" : "session.request(.default).cacheResponse(using: ResponseCacher.doNotCache).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 129, Column: 9",
+    "H_initialValue" : "session(using: ResponseCacher.doNotCache)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 131, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 132, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should not cache response\")"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 135, Column: 9",
+    "H_initialValue" : "session.request(.default).cacheResponse(using: ResponseCacher.doNotCache).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+  },
+  {
+    "A_name" : "testThatSessionCachedResponseHandlerCanModifyCacheResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 147, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "cacher",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 150, Column: 9",
+        "H_initialValue" : "ResponseCacher(behavior: .modify { _, response in\n            CachedURLResponse(response: response.response,\n                              data: response.data,\n                              userInfo: [\"key\": \"value\"],\n                              storagePolicy: .allowed)\n        })"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 157, Column: 9",
+        "H_initialValue" : "session(using: cacher)"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 159, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 160, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should cache response\")"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 163, Column: 9",
+        "H_initialValue" : "session.request(.default).cacheResponse(using: cacher).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "cacher",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 150, Column: 9",
+    "H_initialValue" : "ResponseCacher(behavior: .modify { _, response in\n            CachedURLResponse(response: response.response,\n                              data: response.data,\n                              userInfo: [\"key\": \"value\"],\n                              storagePolicy: .allowed)\n        })"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 157, Column: 9",
+    "H_initialValue" : "session(using: cacher)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 159, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 160, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should cache response\")"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 163, Column: 9",
+    "H_initialValue" : "session.request(.default).cacheResponse(using: cacher).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+  },
+  {
+    "A_name" : "testThatRequestCachedResponseHandlerIsPrioritizedOverSessionCachedResponseHandler",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 178, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 181, Column: 9",
+        "H_initialValue" : "session(using: ResponseCacher.cache)"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 183, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 184, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should cache response\")"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 187, Column: 9",
+        "H_initialValue" : "session.request(.default).cacheResponse(using: ResponseCacher.doNotCache).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 181, Column: 9",
+    "H_initialValue" : "session(using: ResponseCacher.cache)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 183, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 184, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should cache response\")"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 187, Column: 9",
+    "H_initialValue" : "session.request(.default).cacheResponse(using: ResponseCacher.doNotCache).response { resp in\n            response = resp\n            expectation.fulfill()\n        }"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 201, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "configuration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 202, Column: 9",
+        "H_initialValue" : "URLSessionConfiguration.af.default"
+      },
+      {
+        "A_name" : "capacity",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 203, Column: 9",
+        "H_initialValue" : "100_000_000"
+      },
+      {
+        "A_name" : "cache",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 204, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "(any CachedResponseHandler)?"
+    ],
+    "I_parameters" : [
+      "using"
+    ],
+    "J_returnType" : "-> Session"
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 202, Column: 9",
+    "H_initialValue" : "URLSessionConfiguration.af.default"
+  },
+  {
+    "A_name" : "capacity",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 203, Column: 9",
+    "H_initialValue" : "100_000_000"
+  },
+  {
+    "A_name" : "cache",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 204, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "directory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 206, Column: 9",
+    "H_initialValue" : "FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)"
+  },
+  {
+    "A_name" : "directory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 209, Column: 9",
+    "H_initialValue" : "(NSTemporaryDirectory() as NSString).appendingPathComponent(UUID().uuidString)"
+  },
+  {
+    "A_name" : "StaticCachedResponseHandlerTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 218, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "takeCachedResponseHandler",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 219, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any CachedResponseHandler"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "testThatCacheResponseCacherCanBeCreatedStaticallyFromProtocol",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 223, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatDoNotCacheResponseCacherCanBeCreatedStaticallyFromProtocol",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 228, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatModifyResponseCacherCanBeCreatedStaticallyFromProtocol",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 233, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "takeCachedResponseHandler",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 219, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any CachedResponseHandler"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "testThatCacheResponseCacherCanBeCreatedStaticallyFromProtocol",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 223, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testThatDoNotCacheResponseCacherCanBeCreatedStaticallyFromProtocol",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 228, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testThatModifyResponseCacherCanBeCreatedStaticallyFromProtocol",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 233, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "Session",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 241, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "cachedResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 242, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> CachedURLResponse?"
+      },
+      {
+        "A_name" : "cachedResponseExists",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CachedResponseHandlerTests.swift - Line: 247, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "cachedResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 242, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> CachedURLResponse?"
+  },
+  {
+    "A_name" : "cachedResponseExists",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CachedResponseHandlerTests.swift - Line: 247, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> Bool"
+  }
+]

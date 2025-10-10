@@ -1,0 +1,406 @@
+[
+  {
+    "A_name" : "WikipediaSearchViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ViewController"
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "searchBar",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "IBOutlet"
+        ],
+        "F_location" : "WikipediaSearchViewController.swift - Line: 14, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "resultsTableView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "IBOutlet"
+        ],
+        "F_location" : "WikipediaSearchViewController.swift - Line: 15, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "emptyView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "IBOutlet"
+        ],
+        "F_location" : "WikipediaSearchViewController.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "awakeFromNib",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "WikipediaSearchViewController.swift - Line: 18, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "WikipediaSearchViewController.swift - Line: 24, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "configureTableDataSource",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaSearchViewController.swift - Line: 35, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "API",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WikipediaSearchViewController.swift - Line: 42, Column: 9",
+            "H_initialValue" : "DefaultWikipediaAPI.sharedAPI"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WikipediaSearchViewController.swift - Line: 44, Column: 9",
+            "H_initialValue" : "searchBar.rx.text.orEmpty\n            .asDriver()\n            .throttle(.milliseconds(300))\n            .distinctUntilChanged()\n            .flatMapLatest { query in\n                API.getSearchResults(query)\n                    .retry(3)\n                    .retryOnBecomesReachable([], reachabilityService: Dependencies.sharedDependencies.reachabilityService)\n                    .startWith([]) \/\/ clears results on new search term\n                    .asDriver(onErrorJustReturn: [])\n            }\n            .map { results in\n                results.map(SearchResultViewModel.init)\n            }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "configureKeyboardDismissesOnScroll",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaSearchViewController.swift - Line: 71, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "searchBar",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WikipediaSearchViewController.swift - Line: 72, Column: 9",
+            "H_initialValue" : "self.searchBar"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "configureNavigateOnRowClick",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaSearchViewController.swift - Line: 84, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "wireframe",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WikipediaSearchViewController.swift - Line: 85, Column: 9",
+            "H_initialValue" : "DefaultWireframe.shared"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "configureActivityIndicatorsShow",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaSearchViewController.swift - Line: 95, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "searchBar",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "IBOutlet"
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 14, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "resultsTableView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "IBOutlet"
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 15, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "emptyView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "IBOutlet"
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "awakeFromNib",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 18, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 24, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "configureTableDataSource",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 35, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "API",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaSearchViewController.swift - Line: 42, Column: 9",
+        "H_initialValue" : "DefaultWikipediaAPI.sharedAPI"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaSearchViewController.swift - Line: 44, Column: 9",
+        "H_initialValue" : "searchBar.rx.text.orEmpty\n            .asDriver()\n            .throttle(.milliseconds(300))\n            .distinctUntilChanged()\n            .flatMapLatest { query in\n                API.getSearchResults(query)\n                    .retry(3)\n                    .retryOnBecomesReachable([], reachabilityService: Dependencies.sharedDependencies.reachabilityService)\n                    .startWith([]) \/\/ clears results on new search term\n                    .asDriver(onErrorJustReturn: [])\n            }\n            .map { results in\n                results.map(SearchResultViewModel.init)\n            }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "API",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 42, Column: 9",
+    "H_initialValue" : "DefaultWikipediaAPI.sharedAPI"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 44, Column: 9",
+    "H_initialValue" : "searchBar.rx.text.orEmpty\n            .asDriver()\n            .throttle(.milliseconds(300))\n            .distinctUntilChanged()\n            .flatMapLatest { query in\n                API.getSearchResults(query)\n                    .retry(3)\n                    .retryOnBecomesReachable([], reachabilityService: Dependencies.sharedDependencies.reachabilityService)\n                    .startWith([]) \/\/ clears results on new search term\n                    .asDriver(onErrorJustReturn: [])\n            }\n            .map { results in\n                results.map(SearchResultViewModel.init)\n            }"
+  },
+  {
+    "A_name" : "configureKeyboardDismissesOnScroll",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 71, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "searchBar",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaSearchViewController.swift - Line: 72, Column: 9",
+        "H_initialValue" : "self.searchBar"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "searchBar",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 72, Column: 9",
+    "H_initialValue" : "self.searchBar"
+  },
+  {
+    "A_name" : "configureNavigateOnRowClick",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 84, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "wireframe",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaSearchViewController.swift - Line: 85, Column: 9",
+        "H_initialValue" : "DefaultWireframe.shared"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "wireframe",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 85, Column: 9",
+    "H_initialValue" : "DefaultWireframe.shared"
+  },
+  {
+    "A_name" : "configureActivityIndicatorsShow",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaSearchViewController.swift - Line: 95, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

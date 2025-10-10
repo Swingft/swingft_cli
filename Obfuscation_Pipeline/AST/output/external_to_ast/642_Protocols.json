@@ -1,0 +1,365 @@
+[
+  {
+    "A_name" : "ValidationResult",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Protocols.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "ok",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Protocols.swift - Line: 13, Column: 10",
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "message"
+        ]
+      },
+      {
+        "A_name" : "empty",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Protocols.swift - Line: 14, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "validating",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Protocols.swift - Line: 15, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "failed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Protocols.swift - Line: 16, Column: 10",
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "message"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "SignupState",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Protocols.swift - Line: 19, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "signedUp",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Protocols.swift - Line: 20, Column: 10",
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "signedUp"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "GitHubAPI",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Protocols.swift - Line: 23, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "usernameAvailable",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Protocols.swift - Line: 24, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<Bool>"
+      },
+      {
+        "A_name" : "signup",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Protocols.swift - Line: 25, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "password"
+        ],
+        "J_returnType" : "-> Observable<Bool>"
+      }
+    ]
+  },
+  {
+    "A_name" : "usernameAvailable",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Protocols.swift - Line: 24, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<Bool>"
+  },
+  {
+    "A_name" : "signup",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Protocols.swift - Line: 25, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "password"
+    ],
+    "J_returnType" : "-> Observable<Bool>"
+  },
+  {
+    "A_name" : "GitHubValidationService",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Protocols.swift - Line: 28, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "validateUsername",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Protocols.swift - Line: 29, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<ValidationResult>"
+      },
+      {
+        "A_name" : "validatePassword",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Protocols.swift - Line: 30, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ValidationResult"
+      },
+      {
+        "A_name" : "validateRepeatedPassword",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Protocols.swift - Line: 31, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "repeatedPassword"
+        ],
+        "J_returnType" : "-> ValidationResult"
+      }
+    ]
+  },
+  {
+    "A_name" : "validateUsername",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Protocols.swift - Line: 29, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<ValidationResult>"
+  },
+  {
+    "A_name" : "validatePassword",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Protocols.swift - Line: 30, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ValidationResult"
+  },
+  {
+    "A_name" : "validateRepeatedPassword",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Protocols.swift - Line: 31, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "repeatedPassword"
+    ],
+    "J_returnType" : "-> ValidationResult"
+  },
+  {
+    "A_name" : "ValidationResult",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Protocols.swift - Line: 34, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isValid",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Protocols.swift - Line: 35, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "isValid",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Protocols.swift - Line: 35, Column: 5",
+    "H_initialValue" : ""
+  }
+]

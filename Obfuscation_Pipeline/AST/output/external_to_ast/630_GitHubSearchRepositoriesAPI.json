@@ -1,0 +1,741 @@
+[
+  {
+    "A_name" : "Repository",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomDebugStringConvertible"
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "name",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 17, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 19, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "URL"
+        ],
+        "I_parameters" : [
+          "name",
+          "url"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "name",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 17, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 19, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "URL"
+    ],
+    "I_parameters" : [
+      "name",
+      "url"
+    ]
+  },
+  {
+    "A_name" : "Repository",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 25, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "debugDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 26, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "debugDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 26, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "GitHubServiceError",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Error"
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 31, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "offline",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 32, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "githubLimitReached",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 33, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "networkError",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 34, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "GitHubSearchRepositoriesAPI",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 39, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "sharedAPI",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 45, Column: 5",
+        "H_initialValue" : "GitHubSearchRepositoriesAPI(reachabilityService: try! DefaultReachabilityService())"
+      },
+      {
+        "A_name" : "_reachabilityService",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 47, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 49, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ReachabilityService"
+        ],
+        "I_parameters" : [
+          "reachabilityService"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "sharedAPI",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 45, Column: 5",
+    "H_initialValue" : "GitHubSearchRepositoriesAPI(reachabilityService: try! DefaultReachabilityService())"
+  },
+  {
+    "A_name" : "_reachabilityService",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 47, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 49, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ReachabilityService"
+    ],
+    "I_parameters" : [
+      "reachabilityService"
+    ]
+  },
+  {
+    "A_name" : "GitHubSearchRepositoriesAPI",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 54, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "loadSearchURL",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 55, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<SearchRepositoriesResponse>"
+      }
+    ]
+  },
+  {
+    "A_name" : "loadSearchURL",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 55, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<SearchRepositoriesResponse>"
+  },
+  {
+    "A_name" : "jsonRoot",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 65, Column: 17",
+    "H_initialValue" : "try GitHubSearchRepositoriesAPI.parseJSON(pair.0, data: pair.1)"
+  },
+  {
+    "A_name" : "repositories",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 71, Column: 17",
+    "H_initialValue" : "try Repository.parse(json)"
+  },
+  {
+    "A_name" : "nextURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 73, Column: 17",
+    "H_initialValue" : "try GitHubSearchRepositoriesAPI.parseNextURL(pair.0)"
+  },
+  {
+    "A_name" : "GitHubSearchRepositoriesAPI",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 83, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parseLinksPattern",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 85, Column: 5",
+        "H_initialValue" : "\"\\\\s*,?\\\\s*<([^\\\\>]*)>\\\\s*;\\\\s*rel=\\\"([^\\\"]*)\\\"\""
+      },
+      {
+        "A_name" : "linksRegex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 86, Column: 5",
+        "H_initialValue" : "try! NSRegularExpression(pattern: parseLinksPattern, options: [.allowCommentsAndWhitespace])"
+      },
+      {
+        "A_name" : "parseLinks",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 88, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "length",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 90, Column: 9",
+            "H_initialValue" : "(links as NSString).length"
+          },
+          {
+            "A_name" : "matches",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 91, Column: 9",
+            "H_initialValue" : "GitHubSearchRepositoriesAPI.linksRegex.matches(in: links, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: length))"
+          },
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 93, Column: 9",
+            "H_initialValue" : "[:]"
+          }
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> [String: String]"
+      },
+      {
+        "A_name" : "parseNextURL",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 113, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "links",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 118, Column: 9",
+            "H_initialValue" : "try GitHubSearchRepositoriesAPI.parseLinks(serializedLinks)"
+          }
+        ],
+        "I_parameterType" : [
+          "HTTPURLResponse"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> URL?"
+      },
+      {
+        "A_name" : "parseJSON",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 131, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "HTTPURLResponse",
+          "Data"
+        ],
+        "I_parameters" : [
+          "_",
+          "data"
+        ],
+        "J_returnType" : "-> AnyObject"
+      }
+    ]
+  },
+  {
+    "A_name" : "parseLinksPattern",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 85, Column: 5",
+    "H_initialValue" : "\"\\\\s*,?\\\\s*<([^\\\\>]*)>\\\\s*;\\\\s*rel=\\\"([^\\\"]*)\\\"\""
+  },
+  {
+    "A_name" : "linksRegex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 86, Column: 5",
+    "H_initialValue" : "try! NSRegularExpression(pattern: parseLinksPattern, options: [.allowCommentsAndWhitespace])"
+  },
+  {
+    "A_name" : "parseLinks",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 88, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "length",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 90, Column: 9",
+        "H_initialValue" : "(links as NSString).length"
+      },
+      {
+        "A_name" : "matches",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 91, Column: 9",
+        "H_initialValue" : "GitHubSearchRepositoriesAPI.linksRegex.matches(in: links, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: length))"
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 93, Column: 9",
+        "H_initialValue" : "[:]"
+      }
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> [String: String]"
+  },
+  {
+    "A_name" : "length",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 90, Column: 9",
+    "H_initialValue" : "(links as NSString).length"
+  },
+  {
+    "A_name" : "matches",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 91, Column: 9",
+    "H_initialValue" : "GitHubSearchRepositoriesAPI.linksRegex.matches(in: links, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: length))"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 93, Column: 9",
+    "H_initialValue" : "[:]"
+  },
+  {
+    "A_name" : "matches",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 96, Column: 13",
+    "H_initialValue" : "(1 ..< m.numberOfRanges).map { rangeIndex -> String in\n                let range = m.range(at: rangeIndex)\n                let startIndex = links.index(links.startIndex, offsetBy: range.location)\n                let endIndex = links.index(links.startIndex, offsetBy: range.location + range.length)\n                return String(links[startIndex ..< endIndex])\n            }"
+  },
+  {
+    "A_name" : "range",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 97, Column: 17",
+    "H_initialValue" : "m.range(at: rangeIndex)"
+  },
+  {
+    "A_name" : "startIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 98, Column: 17",
+    "H_initialValue" : "links.index(links.startIndex, offsetBy: range.location)"
+  },
+  {
+    "A_name" : "endIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 99, Column: 17",
+    "H_initialValue" : "links.index(links.startIndex, offsetBy: range.location + range.length)"
+  },
+  {
+    "A_name" : "parseNextURL",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 113, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "links",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 118, Column: 9",
+        "H_initialValue" : "try GitHubSearchRepositoriesAPI.parseLinks(serializedLinks)"
+      }
+    ],
+    "I_parameterType" : [
+      "HTTPURLResponse"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> URL?"
+  },
+  {
+    "A_name" : "links",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 118, Column: 9",
+    "H_initialValue" : "try GitHubSearchRepositoriesAPI.parseLinks(serializedLinks)"
+  },
+  {
+    "A_name" : "parseJSON",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 131, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "HTTPURLResponse",
+      "Data"
+    ],
+    "I_parameters" : [
+      "_",
+      "data"
+    ],
+    "J_returnType" : "-> AnyObject"
+  },
+  {
+    "A_name" : "Repository",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 141, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parse",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 142, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[String: AnyObject]"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> [Repository]"
+      }
+    ]
+  },
+  {
+    "A_name" : "parse",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "GitHubSearchRepositoriesAPI.swift - Line: 142, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[String: AnyObject]"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> [Repository]"
+  }
+]

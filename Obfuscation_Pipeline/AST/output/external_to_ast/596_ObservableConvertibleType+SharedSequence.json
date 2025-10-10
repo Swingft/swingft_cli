@@ -1,0 +1,403 @@
+[
+  {
+    "A_name" : "ObservableConvertibleSharedSequenceTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "SharedSequenceTest"
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 14, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "ObservableConvertibleSharedSequenceTests",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testAsSharedSequence_onErrorJustReturn",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 17, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "hotObservable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 18, Column: 9",
+            "H_initialValue" : "BackgroundThreadPrimitiveHotObservable<Int>()"
+          },
+          {
+            "A_name" : "sharedSequence",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 19, Column: 9",
+            "H_initialValue" : "hotObservable.asSharedSequence(onErrorJustReturn: -1)"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 21, Column: 9",
+            "H_initialValue" : "subscribeTwiceOnBackgroundSchedulerAndOnlyOneSubscription(sharedSequence) {\n            XCTAssertTrue(hotObservable.subscriptions == [SubscribedToHotObservable])\n\n            hotObservable.on(.next(1))\n            hotObservable.on(.next(2))\n            hotObservable.on(.error(testError))\n\n            XCTAssertTrue(hotObservable.subscriptions == [UnsunscribedFromHotObservable])\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testAsSharedSequence_onErrorDriveWith",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 34, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "hotObservable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 35, Column: 9",
+            "H_initialValue" : "BackgroundThreadPrimitiveHotObservable<Int>()"
+          },
+          {
+            "A_name" : "sharedSequence",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 36, Column: 9",
+            "H_initialValue" : "hotObservable.asSharedSequence(onErrorDriveWith: .just(-2))"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 38, Column: 9",
+            "H_initialValue" : "subscribeTwiceOnBackgroundSchedulerAndOnlyOneSubscription(sharedSequence) {\n            XCTAssertTrue(hotObservable.subscriptions == [SubscribedToHotObservable])\n\n            hotObservable.on(.next(1))\n            hotObservable.on(.next(2))\n            hotObservable.on(.error(testError))\n\n            XCTAssertTrue(hotObservable.subscriptions == [UnsunscribedFromHotObservable])\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testAsSharedSequence_onErrorRecover",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 51, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "hotObservable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 52, Column: 9",
+            "H_initialValue" : "BackgroundThreadPrimitiveHotObservable<Int>()"
+          },
+          {
+            "A_name" : "sharedSequence",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 53, Column: 9",
+            "H_initialValue" : "hotObservable.asSharedSequence(onErrorRecover: { (error) -> Signal<Int> in\n            return .just(-3)\n        })"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 57, Column: 9",
+            "H_initialValue" : "subscribeTwiceOnBackgroundSchedulerAndOnlyOneSubscription(sharedSequence) {\n            XCTAssertTrue(hotObservable.subscriptions == [SubscribedToHotObservable])\n\n            hotObservable.on(.next(1))\n            hotObservable.on(.next(2))\n            hotObservable.on(.error(testError))\n\n            XCTAssertTrue(hotObservable.subscriptions == [UnsunscribedFromHotObservable])\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testAsSharedSequence_onErrorJustReturn",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 17, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "hotObservable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 18, Column: 9",
+        "H_initialValue" : "BackgroundThreadPrimitiveHotObservable<Int>()"
+      },
+      {
+        "A_name" : "sharedSequence",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 19, Column: 9",
+        "H_initialValue" : "hotObservable.asSharedSequence(onErrorJustReturn: -1)"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 21, Column: 9",
+        "H_initialValue" : "subscribeTwiceOnBackgroundSchedulerAndOnlyOneSubscription(sharedSequence) {\n            XCTAssertTrue(hotObservable.subscriptions == [SubscribedToHotObservable])\n\n            hotObservable.on(.next(1))\n            hotObservable.on(.next(2))\n            hotObservable.on(.error(testError))\n\n            XCTAssertTrue(hotObservable.subscriptions == [UnsunscribedFromHotObservable])\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "hotObservable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 18, Column: 9",
+    "H_initialValue" : "BackgroundThreadPrimitiveHotObservable<Int>()"
+  },
+  {
+    "A_name" : "sharedSequence",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 19, Column: 9",
+    "H_initialValue" : "hotObservable.asSharedSequence(onErrorJustReturn: -1)"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 21, Column: 9",
+    "H_initialValue" : "subscribeTwiceOnBackgroundSchedulerAndOnlyOneSubscription(sharedSequence) {\n            XCTAssertTrue(hotObservable.subscriptions == [SubscribedToHotObservable])\n\n            hotObservable.on(.next(1))\n            hotObservable.on(.next(2))\n            hotObservable.on(.error(testError))\n\n            XCTAssertTrue(hotObservable.subscriptions == [UnsunscribedFromHotObservable])\n        }"
+  },
+  {
+    "A_name" : "testAsSharedSequence_onErrorDriveWith",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 34, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "hotObservable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 35, Column: 9",
+        "H_initialValue" : "BackgroundThreadPrimitiveHotObservable<Int>()"
+      },
+      {
+        "A_name" : "sharedSequence",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 36, Column: 9",
+        "H_initialValue" : "hotObservable.asSharedSequence(onErrorDriveWith: .just(-2))"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 38, Column: 9",
+        "H_initialValue" : "subscribeTwiceOnBackgroundSchedulerAndOnlyOneSubscription(sharedSequence) {\n            XCTAssertTrue(hotObservable.subscriptions == [SubscribedToHotObservable])\n\n            hotObservable.on(.next(1))\n            hotObservable.on(.next(2))\n            hotObservable.on(.error(testError))\n\n            XCTAssertTrue(hotObservable.subscriptions == [UnsunscribedFromHotObservable])\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "hotObservable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 35, Column: 9",
+    "H_initialValue" : "BackgroundThreadPrimitiveHotObservable<Int>()"
+  },
+  {
+    "A_name" : "sharedSequence",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 36, Column: 9",
+    "H_initialValue" : "hotObservable.asSharedSequence(onErrorDriveWith: .just(-2))"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 38, Column: 9",
+    "H_initialValue" : "subscribeTwiceOnBackgroundSchedulerAndOnlyOneSubscription(sharedSequence) {\n            XCTAssertTrue(hotObservable.subscriptions == [SubscribedToHotObservable])\n\n            hotObservable.on(.next(1))\n            hotObservable.on(.next(2))\n            hotObservable.on(.error(testError))\n\n            XCTAssertTrue(hotObservable.subscriptions == [UnsunscribedFromHotObservable])\n        }"
+  },
+  {
+    "A_name" : "testAsSharedSequence_onErrorRecover",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 51, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "hotObservable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 52, Column: 9",
+        "H_initialValue" : "BackgroundThreadPrimitiveHotObservable<Int>()"
+      },
+      {
+        "A_name" : "sharedSequence",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 53, Column: 9",
+        "H_initialValue" : "hotObservable.asSharedSequence(onErrorRecover: { (error) -> Signal<Int> in\n            return .just(-3)\n        })"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 57, Column: 9",
+        "H_initialValue" : "subscribeTwiceOnBackgroundSchedulerAndOnlyOneSubscription(sharedSequence) {\n            XCTAssertTrue(hotObservable.subscriptions == [SubscribedToHotObservable])\n\n            hotObservable.on(.next(1))\n            hotObservable.on(.next(2))\n            hotObservable.on(.error(testError))\n\n            XCTAssertTrue(hotObservable.subscriptions == [UnsunscribedFromHotObservable])\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "hotObservable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 52, Column: 9",
+    "H_initialValue" : "BackgroundThreadPrimitiveHotObservable<Int>()"
+  },
+  {
+    "A_name" : "sharedSequence",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 53, Column: 9",
+    "H_initialValue" : "hotObservable.asSharedSequence(onErrorRecover: { (error) -> Signal<Int> in\n            return .just(-3)\n        })"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableConvertibleType+SharedSequence.swift - Line: 57, Column: 9",
+    "H_initialValue" : "subscribeTwiceOnBackgroundSchedulerAndOnlyOneSubscription(sharedSequence) {\n            XCTAssertTrue(hotObservable.subscriptions == [SubscribedToHotObservable])\n\n            hotObservable.on(.next(1))\n            hotObservable.on(.next(2))\n            hotObservable.on(.error(testError))\n\n            XCTAssertTrue(hotObservable.subscriptions == [UnsunscribedFromHotObservable])\n        }"
+  }
+]

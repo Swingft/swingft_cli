@@ -1,0 +1,151 @@
+[
+  {
+    "A_name" : "isFromApple",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "XCTestObservationCenter+QCKSuspendObservation.swift - Line: 8, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "XCTestObservation"
+    ],
+    "I_parameters" : [
+      "observer"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "XCTestObservationCenter",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "XCTestObservationCenter+QCKSuspendObservation.swift - Line: 25, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "qck_suspendObservation",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "XCTestObservationCenter+QCKSuspendObservation.swift - Line: 35, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "suspendedObservers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "XCTestObservationCenter+QCKSuspendObservation.swift - Line: 50, Column: 9",
+            "H_initialValue" : "[XCTestObservation]()"
+          }
+        ],
+        "I_parameterType" : [
+          "() -> T"
+        ],
+        "I_parameters" : [
+          "forBlock"
+        ],
+        "J_returnType" : "-> T"
+      }
+    ]
+  },
+  {
+    "A_name" : "qck_suspendObservation",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "XCTestObservationCenter+QCKSuspendObservation.swift - Line: 35, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "suspendedObservers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "XCTestObservationCenter+QCKSuspendObservation.swift - Line: 50, Column: 9",
+        "H_initialValue" : "[XCTestObservation]()"
+      }
+    ],
+    "I_parameterType" : [
+      "() -> T"
+    ],
+    "I_parameters" : [
+      "forBlock"
+    ],
+    "J_returnType" : "-> T"
+  },
+  {
+    "A_name" : "originalObservers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "XCTestObservationCenter+QCKSuspendObservation.swift - Line: 37, Column: 9",
+    "H_initialValue" : "value(forKey: \"observers\") as? [XCTestObservation] ?? []"
+  },
+  {
+    "A_name" : "originalObservers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "XCTestObservationCenter+QCKSuspendObservation.swift - Line: 39, Column: 9",
+    "H_initialValue" : "{\n            \/\/ https:\/\/github.com\/apple\/swift-corelibs-xctest\/blob\/swift-5.0.1-RELEASE\/Sources\/XCTest\/Public\/XCTestObservationCenter.swift#L20-L22\n            let mirror = Mirror(reflecting: self)\n            let observers = mirror.descendant(\"observers\") as? Set<AnyHashable> ?? []\n            return observers.compactMap { hashable in\n                \/\/ https:\/\/github.com\/apple\/swift-corelibs-xctest\/blob\/swift-5.0.1-RELEASE\/Sources\/XCTest\/Private\/ObjectWrapper.swift#L16-L17\n                let wrapperMirror = Mirror(reflecting: hashable.base)\n                return wrapperMirror.descendant(\"object\") as? XCTestObservation\n            }\n        }()"
+  },
+  {
+    "A_name" : "mirror",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "XCTestObservationCenter+QCKSuspendObservation.swift - Line: 41, Column: 13",
+    "H_initialValue" : "Mirror(reflecting: self)"
+  },
+  {
+    "A_name" : "observers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "XCTestObservationCenter+QCKSuspendObservation.swift - Line: 42, Column: 13",
+    "H_initialValue" : "mirror.descendant(\"observers\") as? Set<AnyHashable> ?? []"
+  },
+  {
+    "A_name" : "wrapperMirror",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "XCTestObservationCenter+QCKSuspendObservation.swift - Line: 45, Column: 17",
+    "H_initialValue" : "Mirror(reflecting: hashable.base)"
+  },
+  {
+    "A_name" : "suspendedObservers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "XCTestObservationCenter+QCKSuspendObservation.swift - Line: 50, Column: 9",
+    "H_initialValue" : "[XCTestObservation]()"
+  }
+]

@@ -1,0 +1,574 @@
+[
+  {
+    "A_name" : "WithUnretainedTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testClass",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 14, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "values",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 15, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "tupleValues",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 17, Column: 5",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "setUp",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 19, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testObjectAttached",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 42, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "testClassId",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithUnretainedTests.swift - Line: 43, Column: 9",
+            "H_initialValue" : "testClass.id"
+          },
+          {
+            "A_name" : "correctValues",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithUnretainedTests.swift - Line: 45, Column: 9",
+            "H_initialValue" : "[\n            .next(410, \"\\(testClassId), 1\"),\n            .next(415, \"\\(testClassId), 2\"),\n            .next(420, \"\\(testClassId), 3\"),\n            .next(425, \"\\(testClassId), 5\"),\n            .next(430, \"\\(testClassId), 8\"),\n            .completed(450)\n        ]"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithUnretainedTests.swift - Line: 54, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            self.values\n                .withUnretained(self.testClass)\n                .map { \"\\($0.id), \\($1)\" }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testObjectDeallocates",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 63, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testObjectDeallocatesSequenceCompletes",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 74, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "testClassId",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithUnretainedTests.swift - Line: 75, Column: 9",
+            "H_initialValue" : "testClass.id"
+          },
+          {
+            "A_name" : "correctValues",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithUnretainedTests.swift - Line: 77, Column: 9",
+            "H_initialValue" : "[\n            .next(410, \"\\(testClassId), 1\"),\n            .next(415, \"\\(testClassId), 2\"),\n            .next(420, \"\\(testClassId), 3\"),\n            .completed(425)\n        ]"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithUnretainedTests.swift - Line: 84, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            self.values\n                .withUnretained(self.testClass)\n                .do(onNext: { _, value in\n                    \/\/ Release the object in the middle of the sequence\n                    \/\/ to confirm it properly terminates the sequence\n                    if value == 3 {\n                        self.testClass = nil\n                    }\n                })\n                .map { \"\\($0.id), \\($1)\" }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testResultsSelector",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 100, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "testClassId",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithUnretainedTests.swift - Line: 101, Column: 9",
+            "H_initialValue" : "testClass.id"
+          },
+          {
+            "A_name" : "correctValues",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithUnretainedTests.swift - Line: 103, Column: 9",
+            "H_initialValue" : "[\n            .next(410, \"\\(testClassId), 1, a\"),\n            .next(415, \"\\(testClassId), 2, b\"),\n            .next(420, \"\\(testClassId), 3, c\"),\n            .next(425, \"\\(testClassId), 5, d\"),\n            .next(430, \"\\(testClassId), 8, e\"),\n            .completed(450)\n        ]"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithUnretainedTests.swift - Line: 112, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            self.tupleValues\n                .withUnretained(self.testClass) { ($0, $1.0, $1.1) }\n                .map { \"\\($0.id), \\($1), \\($2)\" }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testClass",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 14, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 15, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "tupleValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 17, Column: 5",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "setUp",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 19, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testObjectAttached",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 42, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "testClassId",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 43, Column: 9",
+        "H_initialValue" : "testClass.id"
+      },
+      {
+        "A_name" : "correctValues",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 45, Column: 9",
+        "H_initialValue" : "[\n            .next(410, \"\\(testClassId), 1\"),\n            .next(415, \"\\(testClassId), 2\"),\n            .next(420, \"\\(testClassId), 3\"),\n            .next(425, \"\\(testClassId), 5\"),\n            .next(430, \"\\(testClassId), 8\"),\n            .completed(450)\n        ]"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 54, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            self.values\n                .withUnretained(self.testClass)\n                .map { \"\\($0.id), \\($1)\" }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testClassId",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 43, Column: 9",
+    "H_initialValue" : "testClass.id"
+  },
+  {
+    "A_name" : "correctValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 45, Column: 9",
+    "H_initialValue" : "[\n            .next(410, \"\\(testClassId), 1\"),\n            .next(415, \"\\(testClassId), 2\"),\n            .next(420, \"\\(testClassId), 3\"),\n            .next(425, \"\\(testClassId), 5\"),\n            .next(430, \"\\(testClassId), 8\"),\n            .completed(450)\n        ]"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 54, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            self.values\n                .withUnretained(self.testClass)\n                .map { \"\\($0.id), \\($1)\" }\n        }"
+  },
+  {
+    "A_name" : "testObjectDeallocates",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 63, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testObjectDeallocatesSequenceCompletes",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 74, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "testClassId",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 75, Column: 9",
+        "H_initialValue" : "testClass.id"
+      },
+      {
+        "A_name" : "correctValues",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 77, Column: 9",
+        "H_initialValue" : "[\n            .next(410, \"\\(testClassId), 1\"),\n            .next(415, \"\\(testClassId), 2\"),\n            .next(420, \"\\(testClassId), 3\"),\n            .completed(425)\n        ]"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 84, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            self.values\n                .withUnretained(self.testClass)\n                .do(onNext: { _, value in\n                    \/\/ Release the object in the middle of the sequence\n                    \/\/ to confirm it properly terminates the sequence\n                    if value == 3 {\n                        self.testClass = nil\n                    }\n                })\n                .map { \"\\($0.id), \\($1)\" }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testClassId",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 75, Column: 9",
+    "H_initialValue" : "testClass.id"
+  },
+  {
+    "A_name" : "correctValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 77, Column: 9",
+    "H_initialValue" : "[\n            .next(410, \"\\(testClassId), 1\"),\n            .next(415, \"\\(testClassId), 2\"),\n            .next(420, \"\\(testClassId), 3\"),\n            .completed(425)\n        ]"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 84, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            self.values\n                .withUnretained(self.testClass)\n                .do(onNext: { _, value in\n                    \/\/ Release the object in the middle of the sequence\n                    \/\/ to confirm it properly terminates the sequence\n                    if value == 3 {\n                        self.testClass = nil\n                    }\n                })\n                .map { \"\\($0.id), \\($1)\" }\n        }"
+  },
+  {
+    "A_name" : "testResultsSelector",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 100, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "testClassId",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 101, Column: 9",
+        "H_initialValue" : "testClass.id"
+      },
+      {
+        "A_name" : "correctValues",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 103, Column: 9",
+        "H_initialValue" : "[\n            .next(410, \"\\(testClassId), 1, a\"),\n            .next(415, \"\\(testClassId), 2, b\"),\n            .next(420, \"\\(testClassId), 3, c\"),\n            .next(425, \"\\(testClassId), 5, d\"),\n            .next(430, \"\\(testClassId), 8, e\"),\n            .completed(450)\n        ]"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 112, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            self.tupleValues\n                .withUnretained(self.testClass) { ($0, $1.0, $1.1) }\n                .map { \"\\($0.id), \\($1), \\($2)\" }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testClassId",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 101, Column: 9",
+    "H_initialValue" : "testClass.id"
+  },
+  {
+    "A_name" : "correctValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 103, Column: 9",
+    "H_initialValue" : "[\n            .next(410, \"\\(testClassId), 1, a\"),\n            .next(415, \"\\(testClassId), 2, b\"),\n            .next(420, \"\\(testClassId), 3, c\"),\n            .next(425, \"\\(testClassId), 5, d\"),\n            .next(430, \"\\(testClassId), 8, e\"),\n            .completed(450)\n        ]"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 112, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            self.tupleValues\n                .withUnretained(self.testClass) { ($0, $1.0, $1.1) }\n                .map { \"\\($0.id), \\($1), \\($2)\" }\n        }"
+  },
+  {
+    "A_name" : "TestClass",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 122, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "id",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithUnretainedTests.swift - Line: 123, Column: 5",
+        "H_initialValue" : "UUID().uuidString"
+      }
+    ]
+  },
+  {
+    "A_name" : "id",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithUnretainedTests.swift - Line: 123, Column: 5",
+    "H_initialValue" : "UUID().uuidString"
+  }
+]

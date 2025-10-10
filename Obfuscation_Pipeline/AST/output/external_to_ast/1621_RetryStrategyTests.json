@@ -1,0 +1,1446 @@
+[
+  {
+    "A_name" : "RetryStrategyTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 30, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "manager",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 32, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setUp",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override",
+          "class"
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "tearDown",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override",
+          "class"
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 39, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setUpWithError",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 44, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "uuid",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 46, Column: 9",
+            "H_initialValue" : "UUID()"
+          },
+          {
+            "A_name" : "downloader",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 47, Column: 9",
+            "H_initialValue" : "ImageDownloader(name: \"test.manager.\\(uuid.uuidString)\")"
+          },
+          {
+            "A_name" : "cache",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 48, Column: 9",
+            "H_initialValue" : "ImageCache(name: \"test.cache.\\(uuid.uuidString)\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "tearDownWithError",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 54, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testCanCreateRetryStrategy",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 62, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "strategy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 63, Column: 9",
+            "H_initialValue" : "DelayRetryStrategy(maxRetryCount: 10, retryInterval: .seconds(5))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDelayRetryIntervalCalculating",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 69, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "secondInternal",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 70, Column: 9",
+            "H_initialValue" : "DelayRetryStrategy.Interval.seconds(10)"
+          },
+          {
+            "A_name" : "accumulatedInternal",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 73, Column: 9",
+            "H_initialValue" : "DelayRetryStrategy.Interval.accumulated(3)"
+          },
+          {
+            "A_name" : "customInternal",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 79, Column: 9",
+            "H_initialValue" : "DelayRetryStrategy.Interval.custom { TimeInterval($0 * 2) }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testKingfisherManagerCanRetry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 86, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 87, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "brokenURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 89, Column: 9",
+            "H_initialValue" : "URL(string: \"brokenurl\")!"
+          },
+          {
+            "A_name" : "retry",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 92, Column: 9",
+            "H_initialValue" : "StubRetryStrategy()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDelayRetryStrategyExceededCount",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 105, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 106, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "blockCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 107, Column: 9",
+            "H_initialValue" : "ActorArray([])"
+          },
+          {
+            "A_name" : "source",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 109, Column: 9",
+            "H_initialValue" : "Source.network(URL(string: \"url\")!)"
+          },
+          {
+            "A_name" : "retry",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 110, Column: 9",
+            "H_initialValue" : "DelayRetryStrategy(maxRetryCount: 3, retryInterval: .seconds(0))"
+          },
+          {
+            "A_name" : "group",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 112, Column: 9",
+            "H_initialValue" : "DispatchGroup()"
+          },
+          {
+            "A_name" : "context1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 115, Column: 9",
+            "H_initialValue" : "RetryContext(\n            source: source,\n            error: .responseError(reason: .URLSessionError(error: E()))\n        )"
+          },
+          {
+            "A_name" : "context2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 132, Column: 9",
+            "H_initialValue" : "RetryContext(\n            source: source,\n            error: .responseError(reason: .URLSessionError(error: E()))\n        )"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDelayRetryStrategyNotRetryForErrorReason",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 161, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 162, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "blockCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 164, Column: 9",
+            "H_initialValue" : "ActorArray([])"
+          },
+          {
+            "A_name" : "source",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 165, Column: 9",
+            "H_initialValue" : "Source.network(URL(string: \"url\")!)"
+          },
+          {
+            "A_name" : "retry",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 166, Column: 9",
+            "H_initialValue" : "DelayRetryStrategy(maxRetryCount: 3, retryInterval: .seconds(0))"
+          },
+          {
+            "A_name" : "task",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 168, Column: 9",
+            "H_initialValue" : "URLSession.shared.dataTask(with: URL(string: \"url\")!)"
+          },
+          {
+            "A_name" : "group",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 170, Column: 9",
+            "H_initialValue" : "DispatchGroup()"
+          },
+          {
+            "A_name" : "context1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 172, Column: 9",
+            "H_initialValue" : "RetryContext(\n            source: source,\n            error: .requestError(reason: .taskCancelled(task: .init(task: task), token: .init()))\n        )"
+          },
+          {
+            "A_name" : "context2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 188, Column: 9",
+            "H_initialValue" : "RetryContext(\n            source: source,\n            error: .cacheError(reason: .imageNotExisting(key: \"any_key\"))\n        )"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testDelayRetryStrategyDidRetried",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 214, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "exp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 215, Column: 9",
+            "H_initialValue" : "expectation(description: #function)"
+          },
+          {
+            "A_name" : "called",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 216, Column: 9",
+            "H_initialValue" : "ActorBox(false)"
+          },
+          {
+            "A_name" : "source",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 217, Column: 9",
+            "H_initialValue" : "Source.network(URL(string: \"url\")!)"
+          },
+          {
+            "A_name" : "retry",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 218, Column: 9",
+            "H_initialValue" : "DelayRetryStrategy(maxRetryCount: 3, retryInterval: .seconds(0))"
+          },
+          {
+            "A_name" : "context",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategyTests.swift - Line: 219, Column: 9",
+            "H_initialValue" : "RetryContext(\n            source: source,\n            error: .responseError(reason: .URLSessionError(error: E()))\n        )"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "manager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 32, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setUp",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override",
+      "class"
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tearDown",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override",
+      "class"
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 39, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setUpWithError",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 44, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "uuid",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 46, Column: 9",
+        "H_initialValue" : "UUID()"
+      },
+      {
+        "A_name" : "downloader",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 47, Column: 9",
+        "H_initialValue" : "ImageDownloader(name: \"test.manager.\\(uuid.uuidString)\")"
+      },
+      {
+        "A_name" : "cache",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 48, Column: 9",
+        "H_initialValue" : "ImageCache(name: \"test.cache.\\(uuid.uuidString)\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "uuid",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 46, Column: 9",
+    "H_initialValue" : "UUID()"
+  },
+  {
+    "A_name" : "downloader",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 47, Column: 9",
+    "H_initialValue" : "ImageDownloader(name: \"test.manager.\\(uuid.uuidString)\")"
+  },
+  {
+    "A_name" : "cache",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 48, Column: 9",
+    "H_initialValue" : "ImageCache(name: \"test.cache.\\(uuid.uuidString)\")"
+  },
+  {
+    "A_name" : "tearDownWithError",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 54, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testCanCreateRetryStrategy",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 62, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "strategy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 63, Column: 9",
+        "H_initialValue" : "DelayRetryStrategy(maxRetryCount: 10, retryInterval: .seconds(5))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "strategy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 63, Column: 9",
+    "H_initialValue" : "DelayRetryStrategy(maxRetryCount: 10, retryInterval: .seconds(5))"
+  },
+  {
+    "A_name" : "testDelayRetryIntervalCalculating",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 69, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "secondInternal",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 70, Column: 9",
+        "H_initialValue" : "DelayRetryStrategy.Interval.seconds(10)"
+      },
+      {
+        "A_name" : "accumulatedInternal",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 73, Column: 9",
+        "H_initialValue" : "DelayRetryStrategy.Interval.accumulated(3)"
+      },
+      {
+        "A_name" : "customInternal",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 79, Column: 9",
+        "H_initialValue" : "DelayRetryStrategy.Interval.custom { TimeInterval($0 * 2) }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "secondInternal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 70, Column: 9",
+    "H_initialValue" : "DelayRetryStrategy.Interval.seconds(10)"
+  },
+  {
+    "A_name" : "accumulatedInternal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 73, Column: 9",
+    "H_initialValue" : "DelayRetryStrategy.Interval.accumulated(3)"
+  },
+  {
+    "A_name" : "customInternal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 79, Column: 9",
+    "H_initialValue" : "DelayRetryStrategy.Interval.custom { TimeInterval($0 * 2) }"
+  },
+  {
+    "A_name" : "testKingfisherManagerCanRetry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 86, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 87, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "brokenURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 89, Column: 9",
+        "H_initialValue" : "URL(string: \"brokenurl\")!"
+      },
+      {
+        "A_name" : "retry",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 92, Column: 9",
+        "H_initialValue" : "StubRetryStrategy()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 87, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "brokenURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 89, Column: 9",
+    "H_initialValue" : "URL(string: \"brokenurl\")!"
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 92, Column: 9",
+    "H_initialValue" : "StubRetryStrategy()"
+  },
+  {
+    "A_name" : "testDelayRetryStrategyExceededCount",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 105, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 106, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "blockCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 107, Column: 9",
+        "H_initialValue" : "ActorArray([])"
+      },
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 109, Column: 9",
+        "H_initialValue" : "Source.network(URL(string: \"url\")!)"
+      },
+      {
+        "A_name" : "retry",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 110, Column: 9",
+        "H_initialValue" : "DelayRetryStrategy(maxRetryCount: 3, retryInterval: .seconds(0))"
+      },
+      {
+        "A_name" : "group",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 112, Column: 9",
+        "H_initialValue" : "DispatchGroup()"
+      },
+      {
+        "A_name" : "context1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 115, Column: 9",
+        "H_initialValue" : "RetryContext(\n            source: source,\n            error: .responseError(reason: .URLSessionError(error: E()))\n        )"
+      },
+      {
+        "A_name" : "context2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 132, Column: 9",
+        "H_initialValue" : "RetryContext(\n            source: source,\n            error: .responseError(reason: .URLSessionError(error: E()))\n        )"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 106, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "blockCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 107, Column: 9",
+    "H_initialValue" : "ActorArray([])"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 109, Column: 9",
+    "H_initialValue" : "Source.network(URL(string: \"url\")!)"
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 110, Column: 9",
+    "H_initialValue" : "DelayRetryStrategy(maxRetryCount: 3, retryInterval: .seconds(0))"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 112, Column: 9",
+    "H_initialValue" : "DispatchGroup()"
+  },
+  {
+    "A_name" : "context1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 115, Column: 9",
+    "H_initialValue" : "RetryContext(\n            source: source,\n            error: .responseError(reason: .URLSessionError(error: E()))\n        )"
+  },
+  {
+    "A_name" : "context2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 132, Column: 9",
+    "H_initialValue" : "RetryContext(\n            source: source,\n            error: .responseError(reason: .URLSessionError(error: E()))\n        )"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 152, Column: 17",
+    "H_initialValue" : "await blockCalled.value"
+  },
+  {
+    "A_name" : "testDelayRetryStrategyNotRetryForErrorReason",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 161, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 162, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "blockCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 164, Column: 9",
+        "H_initialValue" : "ActorArray([])"
+      },
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 165, Column: 9",
+        "H_initialValue" : "Source.network(URL(string: \"url\")!)"
+      },
+      {
+        "A_name" : "retry",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 166, Column: 9",
+        "H_initialValue" : "DelayRetryStrategy(maxRetryCount: 3, retryInterval: .seconds(0))"
+      },
+      {
+        "A_name" : "task",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 168, Column: 9",
+        "H_initialValue" : "URLSession.shared.dataTask(with: URL(string: \"url\")!)"
+      },
+      {
+        "A_name" : "group",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 170, Column: 9",
+        "H_initialValue" : "DispatchGroup()"
+      },
+      {
+        "A_name" : "context1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 172, Column: 9",
+        "H_initialValue" : "RetryContext(\n            source: source,\n            error: .requestError(reason: .taskCancelled(task: .init(task: task), token: .init()))\n        )"
+      },
+      {
+        "A_name" : "context2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 188, Column: 9",
+        "H_initialValue" : "RetryContext(\n            source: source,\n            error: .cacheError(reason: .imageNotExisting(key: \"any_key\"))\n        )"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 162, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "blockCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 164, Column: 9",
+    "H_initialValue" : "ActorArray([])"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 165, Column: 9",
+    "H_initialValue" : "Source.network(URL(string: \"url\")!)"
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 166, Column: 9",
+    "H_initialValue" : "DelayRetryStrategy(maxRetryCount: 3, retryInterval: .seconds(0))"
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 168, Column: 9",
+    "H_initialValue" : "URLSession.shared.dataTask(with: URL(string: \"url\")!)"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 170, Column: 9",
+    "H_initialValue" : "DispatchGroup()"
+  },
+  {
+    "A_name" : "context1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 172, Column: 9",
+    "H_initialValue" : "RetryContext(\n            source: source,\n            error: .requestError(reason: .taskCancelled(task: .init(task: task), token: .init()))\n        )"
+  },
+  {
+    "A_name" : "context2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 188, Column: 9",
+    "H_initialValue" : "RetryContext(\n            source: source,\n            error: .cacheError(reason: .imageNotExisting(key: \"any_key\"))\n        )"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 205, Column: 17",
+    "H_initialValue" : "await blockCalled.value"
+  },
+  {
+    "A_name" : "testDelayRetryStrategyDidRetried",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 214, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "exp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 215, Column: 9",
+        "H_initialValue" : "expectation(description: #function)"
+      },
+      {
+        "A_name" : "called",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 216, Column: 9",
+        "H_initialValue" : "ActorBox(false)"
+      },
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 217, Column: 9",
+        "H_initialValue" : "Source.network(URL(string: \"url\")!)"
+      },
+      {
+        "A_name" : "retry",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 218, Column: 9",
+        "H_initialValue" : "DelayRetryStrategy(maxRetryCount: 3, retryInterval: .seconds(0))"
+      },
+      {
+        "A_name" : "context",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 219, Column: 9",
+        "H_initialValue" : "RetryContext(\n            source: source,\n            error: .responseError(reason: .URLSessionError(error: E()))\n        )"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "exp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 215, Column: 9",
+    "H_initialValue" : "expectation(description: #function)"
+  },
+  {
+    "A_name" : "called",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 216, Column: 9",
+    "H_initialValue" : "ActorBox(false)"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 217, Column: 9",
+    "H_initialValue" : "Source.network(URL(string: \"url\")!)"
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 218, Column: 9",
+    "H_initialValue" : "DelayRetryStrategy(maxRetryCount: 3, retryInterval: .seconds(0))"
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 219, Column: 9",
+    "H_initialValue" : "RetryContext(\n            source: source,\n            error: .responseError(reason: .URLSessionError(error: E()))\n        )"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 230, Column: 17",
+    "H_initialValue" : "await called.value"
+  },
+  {
+    "A_name" : "E",
+    "B_kind" : "struct",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Error"
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 240, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "StubRetryStrategy",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "RetryStrategy",
+      "@unchecked Sendable"
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 242, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "queue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 244, Column: 5",
+        "H_initialValue" : "DispatchQueue(label: \"com.onevcat.KingfisherTests.StubRetryStrategy\")"
+      },
+      {
+        "A_name" : "_count",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 245, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "count",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 246, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "retry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategyTests.swift - Line: 251, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "RetryContext",
+          "@escaping (RetryDecision) -> Void"
+        ],
+        "I_parameters" : [
+          "context",
+          "retryHandler"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "queue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 244, Column: 5",
+    "H_initialValue" : "DispatchQueue(label: \"com.onevcat.KingfisherTests.StubRetryStrategy\")"
+  },
+  {
+    "A_name" : "_count",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 245, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "count",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 246, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategyTests.swift - Line: 251, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "RetryContext",
+      "@escaping (RetryDecision) -> Void"
+    ],
+    "I_parameters" : [
+      "context",
+      "retryHandler"
+    ]
+  }
+]

@@ -1,0 +1,570 @@
+[
+  {
+    "A_name" : "EditProfileViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIViewController<EditProfileViewModel>"
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "editProfileView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 17, Column: 5",
+        "H_initialValue" : "EditProfileView()"
+      },
+      {
+        "A_name" : "pickerConfig",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 18, Column: 5",
+        "H_initialValue" : "{\n        var config = PHPickerConfiguration()\n        config.selectionLimit = 1\n        config.filter = .images\n        return config\n    }()"
+      },
+      {
+        "A_name" : "withdrawTappedSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 25, Column: 5",
+        "H_initialValue" : "PassthroughSubject<Void, Never>()"
+      },
+      {
+        "A_name" : "viewWillAppear",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 29, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 39, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "navigationType",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 43, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> NavigationType?"
+      },
+      {
+        "A_name" : "bind",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 49, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "output",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "EditProfileViewController.swift - Line: 50, Column: 9",
+            "H_initialValue" : "viewModel.transform(\n            input: .init(withdrawTapped: withdrawTappedSubject.eraseToAnyPublisher())\n        )"
+          }
+        ],
+        "I_parameterType" : [
+          "EditProfileViewModel"
+        ],
+        "I_parameters" : [
+          "viewModel"
+        ]
+      },
+      {
+        "A_name" : "addTarget",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 94, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "profileTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 115, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "withdrawTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 120, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dialog",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "EditProfileViewController.swift - Line: 121, Column: 9",
+            "H_initialValue" : "Dialog()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "presentImagePicker",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 147, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "picker",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "EditProfileViewController.swift - Line: 148, Column: 9",
+            "H_initialValue" : "PHPickerViewController(configuration: pickerConfig)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "editProfileView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 17, Column: 5",
+    "H_initialValue" : "EditProfileView()"
+  },
+  {
+    "A_name" : "pickerConfig",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 18, Column: 5",
+    "H_initialValue" : "{\n        var config = PHPickerConfiguration()\n        config.selectionLimit = 1\n        config.filter = .images\n        return config\n    }()"
+  },
+  {
+    "A_name" : "config",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 19, Column: 9",
+    "H_initialValue" : "PHPickerConfiguration()"
+  },
+  {
+    "A_name" : "withdrawTappedSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 25, Column: 5",
+    "H_initialValue" : "PassthroughSubject<Void, Never>()"
+  },
+  {
+    "A_name" : "viewWillAppear",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 29, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 39, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "navigationType",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 43, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> NavigationType?"
+  },
+  {
+    "A_name" : "bind",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 49, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "output",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 50, Column: 9",
+        "H_initialValue" : "viewModel.transform(\n            input: .init(withdrawTapped: withdrawTappedSubject.eraseToAnyPublisher())\n        )"
+      }
+    ],
+    "I_parameterType" : [
+      "EditProfileViewModel"
+    ],
+    "I_parameters" : [
+      "viewModel"
+    ]
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 50, Column: 9",
+    "H_initialValue" : "viewModel.transform(\n            input: .init(withdrawTapped: withdrawTappedSubject.eraseToAnyPublisher())\n        )"
+  },
+  {
+    "A_name" : "onboardingVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 58, Column: 17",
+    "H_initialValue" : "self.diContainer.makeSplashViewController()"
+  },
+  {
+    "A_name" : "addTarget",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 94, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "defaultImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 100, Column: 13",
+    "H_initialValue" : "UIImage(named: \"img_profile_normal_ios\", in: .module, compatibleWith: nil)"
+  },
+  {
+    "A_name" : "profileTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 115, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "withdrawTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 120, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dialog",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 121, Column: 9",
+        "H_initialValue" : "Dialog()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dialog",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 121, Column: 9",
+    "H_initialValue" : "Dialog()"
+  },
+  {
+    "A_name" : "presentImagePicker",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 147, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "picker",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 148, Column: 9",
+        "H_initialValue" : "PHPickerViewController(configuration: pickerConfig)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "picker",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 148, Column: 9",
+    "H_initialValue" : "PHPickerViewController(configuration: pickerConfig)"
+  },
+  {
+    "A_name" : "EditProfileViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "PHPickerViewControllerDelegate"
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 156, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "picker",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "EditProfileViewController.swift - Line: 157, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "PHPickerViewController",
+          "[PHPickerResult]"
+        ],
+        "I_parameters" : [
+          "_",
+          "didFinishPicking"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "picker",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "EditProfileViewController.swift - Line: 157, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "PHPickerViewController",
+      "[PHPickerResult]"
+    ],
+    "I_parameters" : [
+      "_",
+      "didFinishPicking"
+    ]
+  }
+]

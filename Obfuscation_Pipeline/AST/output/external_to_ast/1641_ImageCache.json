@@ -1,0 +1,3545 @@
+[
+  {
+    "A_name" : "Notification.Name",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 33, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "KingfisherDidCleanDiskCache",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ImageCache.swift - Line: 44, Column: 5",
+        "H_initialValue" : "Notification.Name(\"com.onevcat.Kingfisher.KingfisherDidCleanDiskCache\")"
+      }
+    ]
+  },
+  {
+    "A_name" : "KingfisherDidCleanDiskCache",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ImageCache.swift - Line: 44, Column: 5",
+    "H_initialValue" : "Notification.Name(\"com.onevcat.Kingfisher.KingfisherDidCleanDiskCache\")"
+  },
+  {
+    "A_name" : "KingfisherDiskCacheCleanedHashKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 49, Column: 1",
+    "H_initialValue" : "\"com.onevcat.Kingfisher.cleanedHash\""
+  },
+  {
+    "A_name" : "CacheType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ImageCache.swift - Line: 52, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "none",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 57, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "memory",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 60, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "disk",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 63, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "cached",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 66, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "cached",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 66, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "CacheStoreResult",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ImageCache.swift - Line: 75, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "memoryCacheResult",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 80, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "diskCacheResult",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 86, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "memoryCacheResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 80, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "diskCacheResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 86, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KFCrossPlatformImage",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CacheCostCalculable"
+    ],
+    "F_location" : "ImageCache.swift - Line: 89, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "cacheCost",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 95, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "cacheCost",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 95, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Data",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "DataTransformable"
+    ],
+    "F_location" : "ImageCache.swift - Line: 98, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "toData",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 99, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Data"
+      },
+      {
+        "A_name" : "fromData",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ImageCache.swift - Line: 103, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Data"
+      },
+      {
+        "A_name" : "empty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ImageCache.swift - Line: 107, Column: 5",
+        "H_initialValue" : "Data()"
+      }
+    ]
+  },
+  {
+    "A_name" : "toData",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 99, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "fromData",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ImageCache.swift - Line: 103, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "empty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ImageCache.swift - Line: 107, Column: 5",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "ImageCacheResult",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ImageCache.swift - Line: 112, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "disk",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 115, Column: 10",
+        "I_parameterType" : [
+          "KFCrossPlatformImage"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "memory",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 118, Column: 10",
+        "I_parameterType" : [
+          "KFCrossPlatformImage"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "none",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 121, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "image",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 127, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cacheType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 136, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 127, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cacheType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 136, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ImageCache",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "ImageCache.swift - Line: 154, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "`default`",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ImageCache.swift - Line: 163, Column: 5",
+        "H_initialValue" : "ImageCache(name: \"default\")"
+      },
+      {
+        "A_name" : "memoryStorage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 171, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "diskStorage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 178, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "ioQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 180, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 192, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "ioQueueName",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 198, Column: 9",
+            "H_initialValue" : "\"com.onevcat.Kingfisher.ImageCache.ioQueue.\\(UUID().uuidString)\""
+          }
+        ],
+        "I_parameterType" : [
+          "MemoryStorage.Backend<KFCrossPlatformImage>",
+          "DiskStorage.Backend<Data>"
+        ],
+        "I_parameters" : [
+          "memoryStorage",
+          "diskStorage"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "ImageCache.swift - Line: 233, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "name"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "ImageCache.swift - Line: 255, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "memoryStorage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 265, Column: 9",
+            "H_initialValue" : "ImageCache.createMemoryStorage()"
+          },
+          {
+            "A_name" : "config",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 267, Column: 9",
+            "H_initialValue" : "ImageCache.createConfig(\n            name: name, cacheDirectoryURL: cacheDirectoryURL, diskCachePathClosure: diskCachePathClosure\n        )"
+          },
+          {
+            "A_name" : "diskStorage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 270, Column: 9",
+            "H_initialValue" : "try DiskStorage.Backend<Data>(config: config)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "URL?",
+          "DiskCachePathClosure?"
+        ],
+        "I_parameters" : [
+          "name",
+          "cacheDirectoryURL",
+          "diskCachePathClosure"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "convenience",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "ImageCache.swift - Line: 274, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "memoryStorage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 284, Column: 9",
+            "H_initialValue" : "ImageCache.createMemoryStorage()"
+          },
+          {
+            "A_name" : "config",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 286, Column: 9",
+            "H_initialValue" : "ImageCache.createConfig(\n            name: name, cacheDirectoryURL: cacheDirectoryURL, diskCachePathClosure: diskCachePathClosure\n        )"
+          },
+          {
+            "A_name" : "diskStorage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 289, Column: 9",
+            "H_initialValue" : "DiskStorage.Backend<Data>(noThrowConfig: config, creatingDirectory: true)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "URL?",
+          "DiskCachePathClosure?"
+        ],
+        "I_parameters" : [
+          "noThrowName",
+          "cacheDirectoryURL",
+          "diskCachePathClosure"
+        ]
+      },
+      {
+        "A_name" : "createMemoryStorage",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ImageCache.swift - Line: 293, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "totalMemory",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 294, Column: 9",
+            "H_initialValue" : "ProcessInfo.processInfo.physicalMemory"
+          },
+          {
+            "A_name" : "costLimit",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 295, Column: 9",
+            "H_initialValue" : "totalMemory \/ 4"
+          },
+          {
+            "A_name" : "memoryStorage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 296, Column: 9",
+            "H_initialValue" : "MemoryStorage.Backend<KFCrossPlatformImage>(config:\n            .init(totalCostLimit: (costLimit > Int.max) ? Int.max : Int(costLimit)))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> MemoryStorage.Backend<KFCrossPlatformImage>"
+      },
+      {
+        "A_name" : "createConfig",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ImageCache.swift - Line: 301, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "diskConfig",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 307, Column: 9",
+            "H_initialValue" : "DiskStorage.Config(\n            name: name,\n            sizeLimit: 0,\n            directory: cacheDirectoryURL\n        )"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "URL?",
+          "DiskCachePathClosure?"
+        ],
+        "I_parameters" : [
+          "name",
+          "cacheDirectoryURL",
+          "diskCachePathClosure"
+        ],
+        "J_returnType" : "-> DiskStorage.Config"
+      },
+      {
+        "A_name" : "store",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 338, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "identifier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 347, Column: 9",
+            "H_initialValue" : "options.processor.identifier"
+          },
+          {
+            "A_name" : "callbackQueue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 348, Column: 9",
+            "H_initialValue" : "options.callbackQueue"
+          },
+          {
+            "A_name" : "computedKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 350, Column: 9",
+            "H_initialValue" : "key.computedKey(with: identifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "KFCrossPlatformImage",
+          "Data?",
+          "String",
+          "KingfisherParsedOptionsInfo",
+          "Bool",
+          "(@Sendable (CacheStoreResult) -> Void)?"
+        ],
+        "I_parameters" : [
+          "_",
+          "original",
+          "forKey",
+          "options",
+          "toDisk",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "store",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 411, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "options",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 430, Column: 9",
+            "H_initialValue" : "KingfisherParsedOptionsInfo([\n            .processor(TempProcessor(identifier: identifier)),\n            .cacheSerializer(serializer),\n            .callbackQueue(callbackQueue),\n            .forcedCacheFileExtension(forcedExtension)\n        ])"
+          }
+        ],
+        "I_parameterType" : [
+          "KFCrossPlatformImage",
+          "Data?",
+          "String",
+          "String",
+          "String?",
+          "any CacheSerializer",
+          "Bool",
+          "CallbackQueue",
+          "(@Sendable (CacheStoreResult) -> Void)?"
+        ],
+        "I_parameters" : [
+          "_",
+          "original",
+          "forKey",
+          "processorIdentifier",
+          "forcedExtension",
+          "cacheSerializer",
+          "toDisk",
+          "callbackQueue",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "storeToDisk",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 462, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data",
+          "String",
+          "String",
+          "String?",
+          "StorageExpiration?",
+          "CallbackQueue",
+          "(@Sendable (CacheStoreResult) -> Void)?"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey",
+          "processorIdentifier",
+          "forcedExtension",
+          "expiration",
+          "callbackQueue",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "syncStoreToDisk",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 484, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "computedKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 494, Column: 9",
+            "H_initialValue" : "key.computedKey(with: identifier)"
+          },
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 495, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "Data",
+          "String",
+          "String?",
+          "String",
+          "CallbackQueue",
+          "StorageExpiration?",
+          "Data.WritingOptions",
+          "(@Sendable (CacheStoreResult) -> Void)?"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey",
+          "forcedExtension",
+          "processorIdentifier",
+          "callbackQueue",
+          "expiration",
+          "writeOptions",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "removeImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 540, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "String?",
+          "Bool",
+          "Bool",
+          "CallbackQueue",
+          "(@Sendable () -> Void)?"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "processorIdentifier",
+          "forcedExtension",
+          "fromMemory",
+          "fromDisk",
+          "callbackQueue",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "removeImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 561, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "computedKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 570, Column: 9",
+            "H_initialValue" : "key.computedKey(with: identifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "String?",
+          "Bool",
+          "Bool",
+          "CallbackQueue",
+          "(@Sendable ((any Error)?) -> Void)?"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "processorIdentifier",
+          "forcedExtension",
+          "fromMemory",
+          "fromDisk",
+          "callbackQueue",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "retrieveImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 608, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "KingfisherParsedOptionsInfo",
+          "CallbackQueue",
+          "(@Sendable (Result<ImageCacheResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "options",
+          "callbackQueue",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "retrieveImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 672, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "KingfisherOptionsInfo?",
+          "CallbackQueue",
+          "(@Sendable (Result<ImageCacheResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "options",
+          "callbackQueue",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "retrieveImageInMemoryCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 693, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "computedKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 697, Column: 9",
+            "H_initialValue" : "key.computedKey(with: options.processor.identifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "KingfisherParsedOptionsInfo"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "options"
+        ],
+        "J_returnType" : "-> KFCrossPlatformImage?"
+      },
+      {
+        "A_name" : "retrieveImageInMemoryCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 715, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "KingfisherOptionsInfo?"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "options"
+        ],
+        "J_returnType" : "-> KFCrossPlatformImage?"
+      },
+      {
+        "A_name" : "retrieveImageInDiskCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 722, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "computedKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 728, Column: 9",
+            "H_initialValue" : "key.computedKey(with: options.processor.identifier)"
+          },
+          {
+            "A_name" : "loadingQueue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 729, Column: 9",
+            "H_initialValue" : "options.loadDiskFileSynchronously ? .untouch : .dispatch(ioQueue)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "KingfisherParsedOptionsInfo",
+          "CallbackQueue",
+          "@escaping @Sendable (Result<KFCrossPlatformImage?, KingfisherError>) -> Void"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "options",
+          "callbackQueue",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "retrieveImageInDiskCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 760, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "KingfisherOptionsInfo?",
+          "CallbackQueue",
+          "@escaping @Sendable (Result<KFCrossPlatformImage?, KingfisherError>) -> Void"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "options",
+          "callbackQueue",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "clearCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 780, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(@Sendable () -> Void)?"
+        ],
+        "I_parameters" : [
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "clearMemoryCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "ImageCache.swift - Line: 786, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "clearDiskCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 796, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(@Sendable () -> Void)?"
+        ],
+        "I_parameters" : [
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "cleanExpiredCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 810, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(@Sendable () -> Void)?"
+        ],
+        "I_parameters" : [
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "cleanExpiredMemoryCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 816, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "cleanExpiredDiskCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "ImageCache.swift - Line: 823, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "cleanExpiredDiskCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 833, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(@Sendable () -> Void)?"
+        ],
+        "I_parameters" : [
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "imageCachedType",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 916, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "computedKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 922, Column: 9",
+            "H_initialValue" : "key.computedKey(with: identifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "String?"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "processorIdentifier",
+          "forcedExtension"
+        ],
+        "J_returnType" : "-> CacheType"
+      },
+      {
+        "A_name" : "isCached",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 942, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "String?"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "processorIdentifier",
+          "forcedExtension"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "hash",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 965, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "computedKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 971, Column: 9",
+            "H_initialValue" : "key.computedKey(with: identifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "String?"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "processorIdentifier",
+          "forcedExtension"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "calculateDiskStorageSize",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 980, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (@Sendable (Result<UInt, KingfisherError>) -> Void)"
+        ],
+        "I_parameters" : [
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "cachePath",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1014, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "computedKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 1020, Column: 9",
+            "H_initialValue" : "key.computedKey(with: identifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "String?"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "processorIdentifier",
+          "forcedExtension"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "cacheFileURLIfOnDisk",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1032, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "computedKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageCache.swift - Line: 1038, Column: 9",
+            "H_initialValue" : "key.computedKey(with: identifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "String?"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "processorIdentifier",
+          "forcedExtension"
+        ],
+        "J_returnType" : "-> URL?"
+      },
+      {
+        "A_name" : "store",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1060, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "KFCrossPlatformImage",
+          "Data?",
+          "String",
+          "KingfisherParsedOptionsInfo",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "original",
+          "forKey",
+          "options",
+          "toDisk"
+        ]
+      },
+      {
+        "A_name" : "store",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1091, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "KFCrossPlatformImage",
+          "Data?",
+          "String",
+          "String",
+          "String?",
+          "any CacheSerializer",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "original",
+          "forKey",
+          "processorIdentifier",
+          "forcedExtension",
+          "cacheSerializer",
+          "toDisk"
+        ]
+      },
+      {
+        "A_name" : "storeToDisk",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1115, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data",
+          "String",
+          "String",
+          "String?",
+          "StorageExpiration?"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey",
+          "processorIdentifier",
+          "forcedExtension",
+          "expiration"
+        ]
+      },
+      {
+        "A_name" : "removeImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1147, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "String?",
+          "Bool",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "processorIdentifier",
+          "forcedExtension",
+          "fromMemory",
+          "fromDisk"
+        ]
+      },
+      {
+        "A_name" : "retrieveImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1181, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "KingfisherParsedOptionsInfo"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "options"
+        ],
+        "J_returnType" : "-> ImageCacheResult"
+      },
+      {
+        "A_name" : "retrieveImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1203, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "KingfisherOptionsInfo?"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "options"
+        ],
+        "J_returnType" : "-> ImageCacheResult"
+      },
+      {
+        "A_name" : "retrieveImageInDiskCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1225, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "KingfisherOptionsInfo?"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "options"
+        ],
+        "J_returnType" : "-> KFCrossPlatformImage?"
+      },
+      {
+        "A_name" : "clearCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1239, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "clearDiskCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1248, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "cleanExpiredCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1257, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "cleanExpiredDiskCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1266, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "diskStorageSize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1275, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "`default`",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ImageCache.swift - Line: 163, Column: 5",
+    "H_initialValue" : "ImageCache(name: \"default\")"
+  },
+  {
+    "A_name" : "memoryStorage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 171, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "diskStorage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 178, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ioQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 180, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 192, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "ioQueueName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 198, Column: 9",
+        "H_initialValue" : "\"com.onevcat.Kingfisher.ImageCache.ioQueue.\\(UUID().uuidString)\""
+      }
+    ],
+    "I_parameterType" : [
+      "MemoryStorage.Backend<KFCrossPlatformImage>",
+      "DiskStorage.Backend<Data>"
+    ],
+    "I_parameters" : [
+      "memoryStorage",
+      "diskStorage"
+    ]
+  },
+  {
+    "A_name" : "ioQueueName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 198, Column: 9",
+    "H_initialValue" : "\"com.onevcat.Kingfisher.ImageCache.ioQueue.\\(UUID().uuidString)\""
+  },
+  {
+    "A_name" : "notifications",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 202, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "ImageCache.swift - Line: 233, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "name"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "ImageCache.swift - Line: 255, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "memoryStorage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 265, Column: 9",
+        "H_initialValue" : "ImageCache.createMemoryStorage()"
+      },
+      {
+        "A_name" : "config",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 267, Column: 9",
+        "H_initialValue" : "ImageCache.createConfig(\n            name: name, cacheDirectoryURL: cacheDirectoryURL, diskCachePathClosure: diskCachePathClosure\n        )"
+      },
+      {
+        "A_name" : "diskStorage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 270, Column: 9",
+        "H_initialValue" : "try DiskStorage.Backend<Data>(config: config)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "URL?",
+      "DiskCachePathClosure?"
+    ],
+    "I_parameters" : [
+      "name",
+      "cacheDirectoryURL",
+      "diskCachePathClosure"
+    ]
+  },
+  {
+    "A_name" : "memoryStorage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 265, Column: 9",
+    "H_initialValue" : "ImageCache.createMemoryStorage()"
+  },
+  {
+    "A_name" : "config",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 267, Column: 9",
+    "H_initialValue" : "ImageCache.createConfig(\n            name: name, cacheDirectoryURL: cacheDirectoryURL, diskCachePathClosure: diskCachePathClosure\n        )"
+  },
+  {
+    "A_name" : "diskStorage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 270, Column: 9",
+    "H_initialValue" : "try DiskStorage.Backend<Data>(config: config)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "convenience",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "ImageCache.swift - Line: 274, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "memoryStorage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 284, Column: 9",
+        "H_initialValue" : "ImageCache.createMemoryStorage()"
+      },
+      {
+        "A_name" : "config",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 286, Column: 9",
+        "H_initialValue" : "ImageCache.createConfig(\n            name: name, cacheDirectoryURL: cacheDirectoryURL, diskCachePathClosure: diskCachePathClosure\n        )"
+      },
+      {
+        "A_name" : "diskStorage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 289, Column: 9",
+        "H_initialValue" : "DiskStorage.Backend<Data>(noThrowConfig: config, creatingDirectory: true)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "URL?",
+      "DiskCachePathClosure?"
+    ],
+    "I_parameters" : [
+      "noThrowName",
+      "cacheDirectoryURL",
+      "diskCachePathClosure"
+    ]
+  },
+  {
+    "A_name" : "memoryStorage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 284, Column: 9",
+    "H_initialValue" : "ImageCache.createMemoryStorage()"
+  },
+  {
+    "A_name" : "config",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 286, Column: 9",
+    "H_initialValue" : "ImageCache.createConfig(\n            name: name, cacheDirectoryURL: cacheDirectoryURL, diskCachePathClosure: diskCachePathClosure\n        )"
+  },
+  {
+    "A_name" : "diskStorage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 289, Column: 9",
+    "H_initialValue" : "DiskStorage.Backend<Data>(noThrowConfig: config, creatingDirectory: true)"
+  },
+  {
+    "A_name" : "createMemoryStorage",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ImageCache.swift - Line: 293, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "totalMemory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 294, Column: 9",
+        "H_initialValue" : "ProcessInfo.processInfo.physicalMemory"
+      },
+      {
+        "A_name" : "costLimit",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 295, Column: 9",
+        "H_initialValue" : "totalMemory \/ 4"
+      },
+      {
+        "A_name" : "memoryStorage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 296, Column: 9",
+        "H_initialValue" : "MemoryStorage.Backend<KFCrossPlatformImage>(config:\n            .init(totalCostLimit: (costLimit > Int.max) ? Int.max : Int(costLimit)))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> MemoryStorage.Backend<KFCrossPlatformImage>"
+  },
+  {
+    "A_name" : "totalMemory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 294, Column: 9",
+    "H_initialValue" : "ProcessInfo.processInfo.physicalMemory"
+  },
+  {
+    "A_name" : "costLimit",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 295, Column: 9",
+    "H_initialValue" : "totalMemory \/ 4"
+  },
+  {
+    "A_name" : "memoryStorage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 296, Column: 9",
+    "H_initialValue" : "MemoryStorage.Backend<KFCrossPlatformImage>(config:\n            .init(totalCostLimit: (costLimit > Int.max) ? Int.max : Int(costLimit)))"
+  },
+  {
+    "A_name" : "createConfig",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ImageCache.swift - Line: 301, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "diskConfig",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 307, Column: 9",
+        "H_initialValue" : "DiskStorage.Config(\n            name: name,\n            sizeLimit: 0,\n            directory: cacheDirectoryURL\n        )"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "URL?",
+      "DiskCachePathClosure?"
+    ],
+    "I_parameters" : [
+      "name",
+      "cacheDirectoryURL",
+      "diskCachePathClosure"
+    ],
+    "J_returnType" : "-> DiskStorage.Config"
+  },
+  {
+    "A_name" : "diskConfig",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 307, Column: 9",
+    "H_initialValue" : "DiskStorage.Config(\n            name: name,\n            sizeLimit: 0,\n            directory: cacheDirectoryURL\n        )"
+  },
+  {
+    "A_name" : "store",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 338, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "identifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 347, Column: 9",
+        "H_initialValue" : "options.processor.identifier"
+      },
+      {
+        "A_name" : "callbackQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 348, Column: 9",
+        "H_initialValue" : "options.callbackQueue"
+      },
+      {
+        "A_name" : "computedKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 350, Column: 9",
+        "H_initialValue" : "key.computedKey(with: identifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "KFCrossPlatformImage",
+      "Data?",
+      "String",
+      "KingfisherParsedOptionsInfo",
+      "Bool",
+      "(@Sendable (CacheStoreResult) -> Void)?"
+    ],
+    "I_parameters" : [
+      "_",
+      "original",
+      "forKey",
+      "options",
+      "toDisk",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "identifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 347, Column: 9",
+    "H_initialValue" : "options.processor.identifier"
+  },
+  {
+    "A_name" : "callbackQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 348, Column: 9",
+    "H_initialValue" : "options.callbackQueue"
+  },
+  {
+    "A_name" : "computedKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 350, Column: 9",
+    "H_initialValue" : "key.computedKey(with: identifier)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 356, Column: 17",
+    "H_initialValue" : "CacheStoreResult(memoryCacheResult: .success(()), diskCacheResult: .success(()))"
+  },
+  {
+    "A_name" : "serializer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 363, Column: 13",
+    "H_initialValue" : "options.cacheSerializer"
+  },
+  {
+    "A_name" : "diskError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 377, Column: 17",
+    "H_initialValue" : "KingfisherError.cacheError(\n                    reason: .cannotSerializeImage(image: image, original: original, serializer: serializer))"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 379, Column: 17",
+    "H_initialValue" : "CacheStoreResult(\n                    memoryCacheResult: .success(()),\n                    diskCacheResult: .failure(diskError))"
+  },
+  {
+    "A_name" : "store",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 411, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 430, Column: 9",
+        "H_initialValue" : "KingfisherParsedOptionsInfo([\n            .processor(TempProcessor(identifier: identifier)),\n            .cacheSerializer(serializer),\n            .callbackQueue(callbackQueue),\n            .forcedCacheFileExtension(forcedExtension)\n        ])"
+      }
+    ],
+    "I_parameterType" : [
+      "KFCrossPlatformImage",
+      "Data?",
+      "String",
+      "String",
+      "String?",
+      "any CacheSerializer",
+      "Bool",
+      "CallbackQueue",
+      "(@Sendable (CacheStoreResult) -> Void)?"
+    ],
+    "I_parameters" : [
+      "_",
+      "original",
+      "forKey",
+      "processorIdentifier",
+      "forcedExtension",
+      "cacheSerializer",
+      "toDisk",
+      "callbackQueue",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "TempProcessor",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ImageProcessor"
+    ],
+    "F_location" : "ImageCache.swift - Line: 423, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "identifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 424, Column: 13",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "process",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 425, Column: 13",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ImageProcessItem",
+          "KingfisherParsedOptionsInfo"
+        ],
+        "I_parameters" : [
+          "item",
+          "options"
+        ],
+        "J_returnType" : "-> KFCrossPlatformImage?"
+      }
+    ]
+  },
+  {
+    "A_name" : "identifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 424, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "process",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 425, Column: 13",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ImageProcessItem",
+      "KingfisherParsedOptionsInfo"
+    ],
+    "I_parameters" : [
+      "item",
+      "options"
+    ],
+    "J_returnType" : "-> KFCrossPlatformImage?"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 430, Column: 9",
+    "H_initialValue" : "KingfisherParsedOptionsInfo([\n            .processor(TempProcessor(identifier: identifier)),\n            .cacheSerializer(serializer),\n            .callbackQueue(callbackQueue),\n            .forcedCacheFileExtension(forcedExtension)\n        ])"
+  },
+  {
+    "A_name" : "storeToDisk",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 462, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data",
+      "String",
+      "String",
+      "String?",
+      "StorageExpiration?",
+      "CallbackQueue",
+      "(@Sendable (CacheStoreResult) -> Void)?"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey",
+      "processorIdentifier",
+      "forcedExtension",
+      "expiration",
+      "callbackQueue",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "syncStoreToDisk",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 484, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "computedKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 494, Column: 9",
+        "H_initialValue" : "key.computedKey(with: identifier)"
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 495, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "Data",
+      "String",
+      "String?",
+      "String",
+      "CallbackQueue",
+      "StorageExpiration?",
+      "Data.WritingOptions",
+      "(@Sendable (CacheStoreResult) -> Void)?"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey",
+      "forcedExtension",
+      "processorIdentifier",
+      "callbackQueue",
+      "expiration",
+      "writeOptions",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "computedKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 494, Column: 9",
+    "H_initialValue" : "key.computedKey(with: identifier)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 495, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "diskError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 506, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "removeImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 540, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "String?",
+      "Bool",
+      "Bool",
+      "CallbackQueue",
+      "(@Sendable () -> Void)?"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "processorIdentifier",
+      "forcedExtension",
+      "fromMemory",
+      "fromDisk",
+      "callbackQueue",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "removeImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 561, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "computedKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 570, Column: 9",
+        "H_initialValue" : "key.computedKey(with: identifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "String?",
+      "Bool",
+      "Bool",
+      "CallbackQueue",
+      "(@Sendable ((any Error)?) -> Void)?"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "processorIdentifier",
+      "forcedExtension",
+      "fromMemory",
+      "fromDisk",
+      "callbackQueue",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "computedKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 570, Column: 9",
+    "H_initialValue" : "key.computedKey(with: identifier)"
+  },
+  {
+    "A_name" : "callHandler",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "Sendable"
+    ],
+    "F_location" : "ImageCache.swift - Line: 576, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "retrieveImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 608, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "KingfisherParsedOptionsInfo",
+      "CallbackQueue",
+      "(@Sendable (Result<ImageCacheResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "options",
+      "callbackQueue",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "cacheOptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 639, Column: 21",
+    "H_initialValue" : "options"
+  },
+  {
+    "A_name" : "retrieveImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 672, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "KingfisherOptionsInfo?",
+      "CallbackQueue",
+      "(@Sendable (Result<ImageCacheResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "options",
+      "callbackQueue",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "retrieveImageInMemoryCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 693, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "computedKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 697, Column: 9",
+        "H_initialValue" : "key.computedKey(with: options.processor.identifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "KingfisherParsedOptionsInfo"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "options"
+    ],
+    "J_returnType" : "-> KFCrossPlatformImage?"
+  },
+  {
+    "A_name" : "computedKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 697, Column: 9",
+    "H_initialValue" : "key.computedKey(with: options.processor.identifier)"
+  },
+  {
+    "A_name" : "retrieveImageInMemoryCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 715, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "KingfisherOptionsInfo?"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "options"
+    ],
+    "J_returnType" : "-> KFCrossPlatformImage?"
+  },
+  {
+    "A_name" : "retrieveImageInDiskCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 722, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "computedKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 728, Column: 9",
+        "H_initialValue" : "key.computedKey(with: options.processor.identifier)"
+      },
+      {
+        "A_name" : "loadingQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 729, Column: 9",
+        "H_initialValue" : "options.loadDiskFileSynchronously ? .untouch : .dispatch(ioQueue)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "KingfisherParsedOptionsInfo",
+      "CallbackQueue",
+      "@escaping @Sendable (Result<KFCrossPlatformImage?, KingfisherError>) -> Void"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "options",
+      "callbackQueue",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "computedKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 728, Column: 9",
+    "H_initialValue" : "key.computedKey(with: options.processor.identifier)"
+  },
+  {
+    "A_name" : "loadingQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 729, Column: 9",
+    "H_initialValue" : "options.loadDiskFileSynchronously ? .untouch : .dispatch(ioQueue)"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 732, Column: 17",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "retrieveImageInDiskCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 760, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "KingfisherOptionsInfo?",
+      "CallbackQueue",
+      "@escaping @Sendable (Result<KFCrossPlatformImage?, KingfisherError>) -> Void"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "options",
+      "callbackQueue",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "clearCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 780, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(@Sendable () -> Void)?"
+    ],
+    "I_parameters" : [
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "clearMemoryCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "ImageCache.swift - Line: 786, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "clearDiskCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 796, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(@Sendable () -> Void)?"
+    ],
+    "I_parameters" : [
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "cleanExpiredCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 810, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(@Sendable () -> Void)?"
+    ],
+    "I_parameters" : [
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "cleanExpiredMemoryCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 816, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "cleanExpiredDiskCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "ImageCache.swift - Line: 823, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "cleanExpiredDiskCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 833, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(@Sendable () -> Void)?"
+    ],
+    "I_parameters" : [
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "removed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 836, Column: 17",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "removedExpired",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 837, Column: 17",
+    "H_initialValue" : "try self.diskStorage.removeExpiredValues()"
+  },
+  {
+    "A_name" : "removedSizeExceeded",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 840, Column: 17",
+    "H_initialValue" : "try self.diskStorage.removeSizeExceededValues()"
+  },
+  {
+    "A_name" : "cleanedHashes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 845, Column: 25",
+    "H_initialValue" : "removed.map { $0.lastPathComponent }"
+  },
+  {
+    "A_name" : "backgroundCleanExpiredDiskCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "MainActor",
+      "objc"
+    ],
+    "F_location" : "ImageCache.swift - Line: 867, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "taskActor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 872, Column: 9",
+        "H_initialValue" : "ActorBox<UIBackgroundTaskIdentifier?>(nil)"
+      },
+      {
+        "A_name" : "createdTask",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 874, Column: 9",
+        "H_initialValue" : "sharedApplication.beginBackgroundTask(withName: \"Kingfisher:backgroundCleanExpiredDiskCache\") {\n            Task {\n                guard let bgTask = await taskActor.value, bgTask != .invalid else { return }\n                sharedApplication.endBackgroundTask(bgTask)\n                await taskActor.setValue(.invalid)\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "taskActor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 872, Column: 9",
+    "H_initialValue" : "ActorBox<UIBackgroundTaskIdentifier?>(nil)"
+  },
+  {
+    "A_name" : "createdTask",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 874, Column: 9",
+    "H_initialValue" : "sharedApplication.beginBackgroundTask(withName: \"Kingfisher:backgroundCleanExpiredDiskCache\") {\n            Task {\n                guard let bgTask = await taskActor.value, bgTask != .invalid else { return }\n                sharedApplication.endBackgroundTask(bgTask)\n                await taskActor.setValue(.invalid)\n            }\n        }"
+  },
+  {
+    "A_name" : "imageCachedType",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 916, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "computedKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 922, Column: 9",
+        "H_initialValue" : "key.computedKey(with: identifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "String?"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "processorIdentifier",
+      "forcedExtension"
+    ],
+    "J_returnType" : "-> CacheType"
+  },
+  {
+    "A_name" : "computedKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 922, Column: 9",
+    "H_initialValue" : "key.computedKey(with: identifier)"
+  },
+  {
+    "A_name" : "isCached",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 942, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "String?"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "processorIdentifier",
+      "forcedExtension"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "hash",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 965, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "computedKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 971, Column: 9",
+        "H_initialValue" : "key.computedKey(with: identifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "String?"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "processorIdentifier",
+      "forcedExtension"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "computedKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 971, Column: 9",
+    "H_initialValue" : "key.computedKey(with: identifier)"
+  },
+  {
+    "A_name" : "calculateDiskStorageSize",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 980, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (@Sendable (Result<UInt, KingfisherError>) -> Void)"
+    ],
+    "I_parameters" : [
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "size",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 985, Column: 17",
+    "H_initialValue" : "try self.diskStorage.totalSize()"
+  },
+  {
+    "A_name" : "cachePath",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1014, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "computedKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1020, Column: 9",
+        "H_initialValue" : "key.computedKey(with: identifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "String?"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "processorIdentifier",
+      "forcedExtension"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "computedKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1020, Column: 9",
+    "H_initialValue" : "key.computedKey(with: identifier)"
+  },
+  {
+    "A_name" : "cacheFileURLIfOnDisk",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1032, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "computedKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1038, Column: 9",
+        "H_initialValue" : "key.computedKey(with: identifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "String?"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "processorIdentifier",
+      "forcedExtension"
+    ],
+    "J_returnType" : "-> URL?"
+  },
+  {
+    "A_name" : "computedKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1038, Column: 9",
+    "H_initialValue" : "key.computedKey(with: identifier)"
+  },
+  {
+    "A_name" : "store",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1060, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KFCrossPlatformImage",
+      "Data?",
+      "String",
+      "KingfisherParsedOptionsInfo",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "original",
+      "forKey",
+      "options",
+      "toDisk"
+    ]
+  },
+  {
+    "A_name" : "store",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1091, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KFCrossPlatformImage",
+      "Data?",
+      "String",
+      "String",
+      "String?",
+      "any CacheSerializer",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "original",
+      "forKey",
+      "processorIdentifier",
+      "forcedExtension",
+      "cacheSerializer",
+      "toDisk"
+    ]
+  },
+  {
+    "A_name" : "storeToDisk",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1115, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data",
+      "String",
+      "String",
+      "String?",
+      "StorageExpiration?"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey",
+      "processorIdentifier",
+      "forcedExtension",
+      "expiration"
+    ]
+  },
+  {
+    "A_name" : "removeImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1147, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "String?",
+      "Bool",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "processorIdentifier",
+      "forcedExtension",
+      "fromMemory",
+      "fromDisk"
+    ]
+  },
+  {
+    "A_name" : "retrieveImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1181, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "KingfisherParsedOptionsInfo"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "options"
+    ],
+    "J_returnType" : "-> ImageCacheResult"
+  },
+  {
+    "A_name" : "retrieveImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1203, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "KingfisherOptionsInfo?"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "options"
+    ],
+    "J_returnType" : "-> ImageCacheResult"
+  },
+  {
+    "A_name" : "retrieveImageInDiskCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1225, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "KingfisherOptionsInfo?"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "options"
+    ],
+    "J_returnType" : "-> KFCrossPlatformImage?"
+  },
+  {
+    "A_name" : "clearCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1239, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "clearDiskCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1248, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "cleanExpiredCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1257, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "cleanExpiredDiskCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1266, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "diskStorageSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1275, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "UIApplication",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "KingfisherCompatible"
+    ],
+    "F_location" : "ImageCache.swift - Line: 1290, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "KingfisherWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1291, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "shared",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ImageCache.swift - Line: 1292, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "shared",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ImageCache.swift - Line: 1292, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "selector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1293, Column: 9",
+    "H_initialValue" : "NSSelectorFromString(\"sharedApplication\")"
+  },
+  {
+    "A_name" : "String",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1300, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "computedKey",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageCache.swift - Line: 1301, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "with"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "computedKey",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageCache.swift - Line: 1301, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "with"
+    ],
+    "J_returnType" : "-> String"
+  }
+]

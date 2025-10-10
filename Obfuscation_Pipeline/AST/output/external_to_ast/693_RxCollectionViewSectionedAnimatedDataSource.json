@@ -1,0 +1,259 @@
+[
+  {
+    "A_name" : "RxCollectionViewSectionedAnimatedDataSource",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CollectionViewSectionedDataSource<Section>",
+      "RxCollectionViewDataSourceType"
+    ],
+    "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 21, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "animationConfiguration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 27, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 29, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimationConfiguration",
+          "@escaping ConfigureCell",
+          "@escaping ConfigureSupplementaryView",
+          "@escaping MoveItem",
+          "@escaping CanMoveItemAtIndexPath"
+        ],
+        "I_parameters" : [
+          "animationConfiguration",
+          "configureCell",
+          "configureSupplementaryView",
+          "moveItem",
+          "canMoveItemAtIndexPath"
+        ]
+      },
+      {
+        "A_name" : "dataSet",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 58, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "disposeBag",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 60, Column: 5",
+        "H_initialValue" : "DisposeBag()"
+      },
+      {
+        "A_name" : "partialUpdateEvent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 65, Column: 5",
+        "H_initialValue" : "PublishSubject<(UICollectionView, Event<Element>)>()"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 71, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_",
+          "throttledObservedEvent"
+        ]
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 100, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_",
+          "observedEvent"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "animationConfiguration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 27, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 29, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationConfiguration",
+      "@escaping ConfigureCell",
+      "@escaping ConfigureSupplementaryView",
+      "@escaping MoveItem",
+      "@escaping CanMoveItemAtIndexPath"
+    ],
+    "I_parameters" : [
+      "animationConfiguration",
+      "configureCell",
+      "configureSupplementaryView",
+      "moveItem",
+      "canMoveItemAtIndexPath"
+    ]
+  },
+  {
+    "A_name" : "dataSet",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 58, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "disposeBag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 60, Column: 5",
+    "H_initialValue" : "DisposeBag()"
+  },
+  {
+    "A_name" : "partialUpdateEvent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 65, Column: 5",
+    "H_initialValue" : "PublishSubject<(UICollectionView, Event<Element>)>()"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 71, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_",
+      "throttledObservedEvent"
+    ]
+  },
+  {
+    "A_name" : "oldSections",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 73, Column: 13",
+    "H_initialValue" : "dataSource.sectionModels"
+  },
+  {
+    "A_name" : "differences",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 81, Column: 17",
+    "H_initialValue" : "try Diff.differencesForSectionedView(initialSections: oldSections, finalSections: newSections)"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 100, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_",
+      "observedEvent"
+    ]
+  },
+  {
+    "A_name" : "element",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewSectionedAnimatedDataSource.swift - Line: 111, Column: 17",
+    "H_initialValue" : "(collectionView, observedEvent)"
+  }
+]

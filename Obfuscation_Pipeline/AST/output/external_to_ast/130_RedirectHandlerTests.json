@@ -1,0 +1,1202 @@
+[
+  {
+    "A_name" : "RedirectHandlerTestCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 29, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "redirectEndpoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 32, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "endpoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 33, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "testThatRequestRedirectHandlerCanFollowRedirects",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 37, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 40, Column: 9",
+            "H_initialValue" : "Session()"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 42, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 43, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should redirect to \/get\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatRequestRedirectHandlerCanNotFollowRedirects",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 63, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 66, Column: 9",
+            "H_initialValue" : "Session()"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 68, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 69, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should NOT redirect to \/get\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatRequestRedirectHandlerCanModifyRedirects",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 89, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 92, Column: 9",
+            "H_initialValue" : "Session()"
+          },
+          {
+            "A_name" : "customRedirectEndpoint",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 93, Column: 9",
+            "H_initialValue" : "Endpoint.method(.patch)"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 95, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 96, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should redirect to \/patch\")"
+          },
+          {
+            "A_name" : "redirector",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 99, Column: 9",
+            "H_initialValue" : "Redirector(behavior: .modify { _, _, _ in customRedirectEndpoint.urlRequest })"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatSessionRedirectHandlerCanFollowRedirects",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 120, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 123, Column: 9",
+            "H_initialValue" : "Session(redirectHandler: Redirector.follow)"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 125, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 126, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should redirect to \/get\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatSessionRedirectHandlerCanNotFollowRedirects",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 146, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 149, Column: 9",
+            "H_initialValue" : "Session(redirectHandler: Redirector.doNotFollow)"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 151, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 152, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should NOT redirect to \/get\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatSessionRedirectHandlerCanModifyRedirects",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 172, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "customRedirectEndpoint",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 175, Column: 9",
+            "H_initialValue" : "Endpoint.method(.patch)"
+          },
+          {
+            "A_name" : "redirector",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 177, Column: 9",
+            "H_initialValue" : "Redirector(behavior: .modify { _, _, _ in customRedirectEndpoint.urlRequest })"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 178, Column: 9",
+            "H_initialValue" : "Session(redirectHandler: redirector)"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 180, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 181, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should redirect to \/patch\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatRequestRedirectHandlerIsPrioritizedOverSessionRedirectHandler",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 203, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 206, Column: 9",
+            "H_initialValue" : "Session(redirectHandler: Redirector.doNotFollow)"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 208, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RedirectHandlerTests.swift - Line: 209, Column: 9",
+            "H_initialValue" : "expectation(description: \"Request should redirect to \/get\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "redirectEndpoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 32, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "endpoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 33, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatRequestRedirectHandlerCanFollowRedirects",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 37, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 40, Column: 9",
+        "H_initialValue" : "Session()"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 42, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 43, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should redirect to \/get\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 40, Column: 9",
+    "H_initialValue" : "Session()"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 42, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 43, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should redirect to \/get\")"
+  },
+  {
+    "A_name" : "testThatRequestRedirectHandlerCanNotFollowRedirects",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 63, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 66, Column: 9",
+        "H_initialValue" : "Session()"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 68, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 69, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should NOT redirect to \/get\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 66, Column: 9",
+    "H_initialValue" : "Session()"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 68, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 69, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should NOT redirect to \/get\")"
+  },
+  {
+    "A_name" : "testThatRequestRedirectHandlerCanModifyRedirects",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 89, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 92, Column: 9",
+        "H_initialValue" : "Session()"
+      },
+      {
+        "A_name" : "customRedirectEndpoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 93, Column: 9",
+        "H_initialValue" : "Endpoint.method(.patch)"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 95, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 96, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should redirect to \/patch\")"
+      },
+      {
+        "A_name" : "redirector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 99, Column: 9",
+        "H_initialValue" : "Redirector(behavior: .modify { _, _, _ in customRedirectEndpoint.urlRequest })"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 92, Column: 9",
+    "H_initialValue" : "Session()"
+  },
+  {
+    "A_name" : "customRedirectEndpoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 93, Column: 9",
+    "H_initialValue" : "Endpoint.method(.patch)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 95, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 96, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should redirect to \/patch\")"
+  },
+  {
+    "A_name" : "redirector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 99, Column: 9",
+    "H_initialValue" : "Redirector(behavior: .modify { _, _, _ in customRedirectEndpoint.urlRequest })"
+  },
+  {
+    "A_name" : "testThatSessionRedirectHandlerCanFollowRedirects",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 120, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 123, Column: 9",
+        "H_initialValue" : "Session(redirectHandler: Redirector.follow)"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 125, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 126, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should redirect to \/get\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 123, Column: 9",
+    "H_initialValue" : "Session(redirectHandler: Redirector.follow)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 125, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 126, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should redirect to \/get\")"
+  },
+  {
+    "A_name" : "testThatSessionRedirectHandlerCanNotFollowRedirects",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 146, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 149, Column: 9",
+        "H_initialValue" : "Session(redirectHandler: Redirector.doNotFollow)"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 151, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 152, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should NOT redirect to \/get\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 149, Column: 9",
+    "H_initialValue" : "Session(redirectHandler: Redirector.doNotFollow)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 151, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 152, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should NOT redirect to \/get\")"
+  },
+  {
+    "A_name" : "testThatSessionRedirectHandlerCanModifyRedirects",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 172, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "customRedirectEndpoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 175, Column: 9",
+        "H_initialValue" : "Endpoint.method(.patch)"
+      },
+      {
+        "A_name" : "redirector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 177, Column: 9",
+        "H_initialValue" : "Redirector(behavior: .modify { _, _, _ in customRedirectEndpoint.urlRequest })"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 178, Column: 9",
+        "H_initialValue" : "Session(redirectHandler: redirector)"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 180, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 181, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should redirect to \/patch\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "customRedirectEndpoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 175, Column: 9",
+    "H_initialValue" : "Endpoint.method(.patch)"
+  },
+  {
+    "A_name" : "redirector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 177, Column: 9",
+    "H_initialValue" : "Redirector(behavior: .modify { _, _, _ in customRedirectEndpoint.urlRequest })"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 178, Column: 9",
+    "H_initialValue" : "Session(redirectHandler: redirector)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 180, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 181, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should redirect to \/patch\")"
+  },
+  {
+    "A_name" : "testThatRequestRedirectHandlerIsPrioritizedOverSessionRedirectHandler",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 203, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 206, Column: 9",
+        "H_initialValue" : "Session(redirectHandler: Redirector.doNotFollow)"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 208, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 209, Column: 9",
+        "H_initialValue" : "expectation(description: \"Request should redirect to \/get\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 206, Column: 9",
+    "H_initialValue" : "Session(redirectHandler: Redirector.doNotFollow)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 208, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 209, Column: 9",
+    "H_initialValue" : "expectation(description: \"Request should redirect to \/get\")"
+  },
+  {
+    "A_name" : "StaticRedirectHandlerTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 230, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "takeRedirectHandler",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 231, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any RedirectHandler"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "testThatFollowRedirectorCanBeCreatedStaticallyFromProtocol",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 235, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatDoNotFollowRedirectorCanBeCreatedStaticallyFromProtocol",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 240, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatModifyRedirectorCanBeCreatedStaticallyFromProtocol",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RedirectHandlerTests.swift - Line: 245, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "takeRedirectHandler",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 231, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any RedirectHandler"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "testThatFollowRedirectorCanBeCreatedStaticallyFromProtocol",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 235, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testThatDoNotFollowRedirectorCanBeCreatedStaticallyFromProtocol",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 240, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testThatModifyRedirectorCanBeCreatedStaticallyFromProtocol",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RedirectHandlerTests.swift - Line: 245, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

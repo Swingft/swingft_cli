@@ -1,0 +1,3691 @@
+[
+  {
+    "A_name" : "ObservableGroupByTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 13, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "ObservableGroupByTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testGroupBy_TwoGroup",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 17, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 18, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 20, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(205, 1),\n            .next(210, 2),\n            .next(240, 3),\n            .next(280, 4),\n            .next(320, 5),\n            .next(350, 6),\n            .next(370, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .completed(600)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 33, Column: 9",
+            "H_initialValue" : "scheduler.start { () -> Observable<String> in\n            let group: Observable<GroupedObservable<Int, Int>> = xs.groupBy { x in x % 2 }\n            let mappedWithIndex = group.enumerated().map { (i: Int, go: GroupedObservable<Int, Int>) -> Observable<String> in\n                return go.map { (e: Int) -> String in\n                    return \"\\(i) \\(e)\"\n                }\n            }\n            let result = mappedWithIndex.merge()\n            return result\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_OuterComplete",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 62, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 63, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "keyInvoked",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 65, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 67, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 86, Column: 9",
+            "H_initialValue" : "scheduler.start { () -> Observable<String> in\n            let group: Observable<GroupedObservable<String, String>> = xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                return x.lowercased().trimWhitespace()\n            }\n            return group.map { (go: GroupedObservable<String, String>) -> String in\n                return go.key\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_OuterError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 113, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 114, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "keyInvoked",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 116, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 118, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .error(570, testError),\n            .completed(600),\n            .error(650, testError)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 139, Column: 9",
+            "H_initialValue" : "scheduler.start { () -> Observable<String> in\n            let group: Observable<GroupedObservable<String, String>> = xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                return x.lowercased().trimWhitespace()\n            }\n            return group.map { (go: GroupedObservable<String, String>) -> String in\n                return go.key\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_OuterDispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 167, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 168, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "keyInvoked",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 170, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 172, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 194, Column: 9",
+            "H_initialValue" : "scheduler.start(disposed: 355) { () -> Observable<String> in\n            let group: Observable<GroupedObservable<String, String>> = xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                return x.lowercased().trimWhitespace()\n            }\n            return group.map { (go: GroupedObservable<String, String>) -> String in\n                return go.key\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_OuterKeySelectorThrows",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 219, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 220, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "keyInvoked",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 222, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 224, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 246, Column: 9",
+            "H_initialValue" : "scheduler.start { () -> Observable<String> in\n            let group: Observable<GroupedObservable<String, String>> = xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                if keyInvoked == 10 {\n                    throw testError\n                }\n                return x.lowercased().trimWhitespace()\n            }\n            return group.map { (go: GroupedObservable<String, String>) -> String in\n                return go.key\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_InnerComplete",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 276, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 277, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 279, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+          },
+          {
+            "A_name" : "outerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 301, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "inners",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 302, Column: 9",
+            "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+          },
+          {
+            "A_name" : "innerSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 303, Column: 9",
+            "H_initialValue" : "Dictionary<String, Disposable>()"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 304, Column: 9",
+            "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_InnerCompleteAll",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 357, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 358, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 360, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+          },
+          {
+            "A_name" : "outerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 382, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "inners",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 383, Column: 9",
+            "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+          },
+          {
+            "A_name" : "innerSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 384, Column: 9",
+            "H_initialValue" : "Dictionary<String, Disposable>()"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 385, Column: 9",
+            "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_InnerError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 439, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 440, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 442, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .error(570, testError),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+          },
+          {
+            "A_name" : "outerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 464, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "inners",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 465, Column: 9",
+            "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+          },
+          {
+            "A_name" : "innerSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 466, Column: 9",
+            "H_initialValue" : "Dictionary<String, Disposable>()"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 467, Column: 9",
+            "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_InnerDispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 519, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 520, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 522, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+          },
+          {
+            "A_name" : "outerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 544, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "inners",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 545, Column: 9",
+            "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+          },
+          {
+            "A_name" : "innerSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 546, Column: 9",
+            "H_initialValue" : "Dictionary<String, Disposable>()"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 547, Column: 9",
+            "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_InnerKeyThrow",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 593, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 594, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "keyInvoked",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 596, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 598, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+          },
+          {
+            "A_name" : "outer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 620, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "outerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 621, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "inners",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 622, Column: 9",
+            "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+          },
+          {
+            "A_name" : "innerSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 623, Column: 9",
+            "H_initialValue" : "Dictionary<String, Disposable>()"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 624, Column: 9",
+            "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_OuterIndependence",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 677, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 678, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 680, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+          },
+          {
+            "A_name" : "outer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 702, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "outerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 703, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "inners",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 704, Column: 9",
+            "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+          },
+          {
+            "A_name" : "innerSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 705, Column: 9",
+            "H_initialValue" : "Dictionary<String, Disposable>()"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 706, Column: 9",
+            "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+          },
+          {
+            "A_name" : "outerResults",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 707, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(String.self)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_InnerIndependence",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 774, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 775, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 777, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+          },
+          {
+            "A_name" : "outerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 799, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "inners",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 800, Column: 9",
+            "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+          },
+          {
+            "A_name" : "innerSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 801, Column: 9",
+            "H_initialValue" : "Dictionary<String, Disposable>()"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 802, Column: 9",
+            "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+          },
+          {
+            "A_name" : "outerResults",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 803, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(String.self)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_InnerMultipleIndependence",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 869, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 870, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 872, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+          },
+          {
+            "A_name" : "outerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 894, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "inners",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 895, Column: 9",
+            "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+          },
+          {
+            "A_name" : "innerSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 896, Column: 9",
+            "H_initialValue" : "Dictionary<String, Disposable>()"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 897, Column: 9",
+            "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+          },
+          {
+            "A_name" : "outerResults",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 898, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(String.self)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_InnerEscapeComplete",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 969, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 970, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 972, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(310, \"foO \"),\n            .next(470, \"FOO \"),\n            .next(530, \"    fOo    \"),\n            .completed(570)\n            ])"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 981, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(String.self)"
+          },
+          {
+            "A_name" : "outer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 982, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "outerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 983, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "inner",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 984, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "innerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 985, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_InnerEscapeError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1017, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 1018, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 1020, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(310, \"foO \"),\n            .next(470, \"FOO \"),\n            .next(530, \"    fOo    \"),\n            .error(570, testError)\n            ])"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 1029, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(String.self)"
+          },
+          {
+            "A_name" : "outer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 1030, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "outerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 1031, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "inner",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 1032, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "innerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 1033, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testGroupBy_InnerEscapeDispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1065, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 1066, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 1068, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(310, \"foO \"),\n            .next(470, \"FOO \"),\n            .next(530, \"    fOo    \"),\n            .error(570, testError)\n            ])"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 1077, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(String.self)"
+          },
+          {
+            "A_name" : "outerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 1078, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "inner",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 1079, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "innerSubscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+GroupByTests.swift - Line: 1080, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testGroupBy_TwoGroup",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 17, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 18, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 20, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(205, 1),\n            .next(210, 2),\n            .next(240, 3),\n            .next(280, 4),\n            .next(320, 5),\n            .next(350, 6),\n            .next(370, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .completed(600)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 33, Column: 9",
+        "H_initialValue" : "scheduler.start { () -> Observable<String> in\n            let group: Observable<GroupedObservable<Int, Int>> = xs.groupBy { x in x % 2 }\n            let mappedWithIndex = group.enumerated().map { (i: Int, go: GroupedObservable<Int, Int>) -> Observable<String> in\n                return go.map { (e: Int) -> String in\n                    return \"\\(i) \\(e)\"\n                }\n            }\n            let result = mappedWithIndex.merge()\n            return result\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 18, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 20, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(205, 1),\n            .next(210, 2),\n            .next(240, 3),\n            .next(280, 4),\n            .next(320, 5),\n            .next(350, 6),\n            .next(370, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .completed(600)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 33, Column: 9",
+    "H_initialValue" : "scheduler.start { () -> Observable<String> in\n            let group: Observable<GroupedObservable<Int, Int>> = xs.groupBy { x in x % 2 }\n            let mappedWithIndex = group.enumerated().map { (i: Int, go: GroupedObservable<Int, Int>) -> Observable<String> in\n                return go.map { (e: Int) -> String in\n                    return \"\\(i) \\(e)\"\n                }\n            }\n            let result = mappedWithIndex.merge()\n            return result\n        }"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 34, Column: 13",
+    "H_initialValue" : "xs.groupBy { x in x % 2 }"
+  },
+  {
+    "A_name" : "mappedWithIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 35, Column: 13",
+    "H_initialValue" : "group.enumerated().map { (i: Int, go: GroupedObservable<Int, Int>) -> Observable<String> in\n                return go.map { (e: Int) -> String in\n                    return \"\\(i) \\(e)\"\n                }\n            }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 40, Column: 13",
+    "H_initialValue" : "mappedWithIndex.merge()"
+  },
+  {
+    "A_name" : "testGroupBy_OuterComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 62, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 63, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "keyInvoked",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 65, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 67, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 86, Column: 9",
+        "H_initialValue" : "scheduler.start { () -> Observable<String> in\n            let group: Observable<GroupedObservable<String, String>> = xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                return x.lowercased().trimWhitespace()\n            }\n            return group.map { (go: GroupedObservable<String, String>) -> String in\n                return go.key\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 63, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "keyInvoked",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 65, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 67, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 86, Column: 9",
+    "H_initialValue" : "scheduler.start { () -> Observable<String> in\n            let group: Observable<GroupedObservable<String, String>> = xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                return x.lowercased().trimWhitespace()\n            }\n            return group.map { (go: GroupedObservable<String, String>) -> String in\n                return go.key\n            }\n        }"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 87, Column: 13",
+    "H_initialValue" : "xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                return x.lowercased().trimWhitespace()\n            }"
+  },
+  {
+    "A_name" : "testGroupBy_OuterError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 113, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 114, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "keyInvoked",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 116, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 118, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .error(570, testError),\n            .completed(600),\n            .error(650, testError)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 139, Column: 9",
+        "H_initialValue" : "scheduler.start { () -> Observable<String> in\n            let group: Observable<GroupedObservable<String, String>> = xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                return x.lowercased().trimWhitespace()\n            }\n            return group.map { (go: GroupedObservable<String, String>) -> String in\n                return go.key\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 114, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "keyInvoked",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 116, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 118, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .error(570, testError),\n            .completed(600),\n            .error(650, testError)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 139, Column: 9",
+    "H_initialValue" : "scheduler.start { () -> Observable<String> in\n            let group: Observable<GroupedObservable<String, String>> = xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                return x.lowercased().trimWhitespace()\n            }\n            return group.map { (go: GroupedObservable<String, String>) -> String in\n                return go.key\n            }\n        }"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 140, Column: 13",
+    "H_initialValue" : "xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                return x.lowercased().trimWhitespace()\n            }"
+  },
+  {
+    "A_name" : "testGroupBy_OuterDispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 167, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 168, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "keyInvoked",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 170, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 172, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 194, Column: 9",
+        "H_initialValue" : "scheduler.start(disposed: 355) { () -> Observable<String> in\n            let group: Observable<GroupedObservable<String, String>> = xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                return x.lowercased().trimWhitespace()\n            }\n            return group.map { (go: GroupedObservable<String, String>) -> String in\n                return go.key\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 168, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "keyInvoked",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 170, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 172, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 194, Column: 9",
+    "H_initialValue" : "scheduler.start(disposed: 355) { () -> Observable<String> in\n            let group: Observable<GroupedObservable<String, String>> = xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                return x.lowercased().trimWhitespace()\n            }\n            return group.map { (go: GroupedObservable<String, String>) -> String in\n                return go.key\n            }\n        }"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 195, Column: 13",
+    "H_initialValue" : "xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                return x.lowercased().trimWhitespace()\n            }"
+  },
+  {
+    "A_name" : "testGroupBy_OuterKeySelectorThrows",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 219, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 220, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "keyInvoked",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 222, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 224, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 246, Column: 9",
+        "H_initialValue" : "scheduler.start { () -> Observable<String> in\n            let group: Observable<GroupedObservable<String, String>> = xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                if keyInvoked == 10 {\n                    throw testError\n                }\n                return x.lowercased().trimWhitespace()\n            }\n            return group.map { (go: GroupedObservable<String, String>) -> String in\n                return go.key\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 220, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "keyInvoked",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 222, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 224, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 246, Column: 9",
+    "H_initialValue" : "scheduler.start { () -> Observable<String> in\n            let group: Observable<GroupedObservable<String, String>> = xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                if keyInvoked == 10 {\n                    throw testError\n                }\n                return x.lowercased().trimWhitespace()\n            }\n            return group.map { (go: GroupedObservable<String, String>) -> String in\n                return go.key\n            }\n        }"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 247, Column: 13",
+    "H_initialValue" : "xs.groupBy { x in\n                keyInvoked += 1\n                if x == \"error\" { throw testError }\n\n                if keyInvoked == 10 {\n                    throw testError\n                }\n                return x.lowercased().trimWhitespace()\n            }"
+  },
+  {
+    "A_name" : "testGroupBy_InnerComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 276, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 277, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 279, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+      },
+      {
+        "A_name" : "outerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 301, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inners",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 302, Column: 9",
+        "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+      },
+      {
+        "A_name" : "innerSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 303, Column: 9",
+        "H_initialValue" : "Dictionary<String, Disposable>()"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 304, Column: 9",
+        "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 277, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 279, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+  },
+  {
+    "A_name" : "outerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 301, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inners",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 302, Column: 9",
+    "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+  },
+  {
+    "A_name" : "innerSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 303, Column: 9",
+    "H_initialValue" : "Dictionary<String, Disposable>()"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 304, Column: 9",
+    "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+  },
+  {
+    "A_name" : "outer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 307, Column: 13",
+    "H_initialValue" : "xs.groupBy { x in\n                if x == \"error\" { throw testError }\n                return x.lowercased().trimWhitespace()\n            }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 312, Column: 17",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "testGroupBy_InnerCompleteAll",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 357, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 358, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 360, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+      },
+      {
+        "A_name" : "outerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 382, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inners",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 383, Column: 9",
+        "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+      },
+      {
+        "A_name" : "innerSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 384, Column: 9",
+        "H_initialValue" : "Dictionary<String, Disposable>()"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 385, Column: 9",
+        "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 358, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 360, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+  },
+  {
+    "A_name" : "outerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 382, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inners",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 383, Column: 9",
+    "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+  },
+  {
+    "A_name" : "innerSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 384, Column: 9",
+    "H_initialValue" : "Dictionary<String, Disposable>()"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 385, Column: 9",
+    "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+  },
+  {
+    "A_name" : "outer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 388, Column: 13",
+    "H_initialValue" : "xs.groupBy { x in\n                if x == \"error\" { throw testError }\n                return x.lowercased().trimWhitespace()\n            }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 393, Column: 17",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "testGroupBy_InnerError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 439, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 440, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 442, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .error(570, testError),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+      },
+      {
+        "A_name" : "outerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 464, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inners",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 465, Column: 9",
+        "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+      },
+      {
+        "A_name" : "innerSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 466, Column: 9",
+        "H_initialValue" : "Dictionary<String, Disposable>()"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 467, Column: 9",
+        "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 440, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 442, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .error(570, testError),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+  },
+  {
+    "A_name" : "outerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 464, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inners",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 465, Column: 9",
+    "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+  },
+  {
+    "A_name" : "innerSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 466, Column: 9",
+    "H_initialValue" : "Dictionary<String, Disposable>()"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 467, Column: 9",
+    "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+  },
+  {
+    "A_name" : "outer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 470, Column: 13",
+    "H_initialValue" : "xs.groupBy { x in\n                if x == \"error\" { throw testError }\n                return x.lowercased().trimWhitespace()\n            }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 475, Column: 17",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "testGroupBy_InnerDispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 519, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 520, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 522, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+      },
+      {
+        "A_name" : "outerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 544, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inners",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 545, Column: 9",
+        "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+      },
+      {
+        "A_name" : "innerSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 546, Column: 9",
+        "H_initialValue" : "Dictionary<String, Disposable>()"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 547, Column: 9",
+        "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 520, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 522, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+  },
+  {
+    "A_name" : "outerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 544, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inners",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 545, Column: 9",
+    "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+  },
+  {
+    "A_name" : "innerSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 546, Column: 9",
+    "H_initialValue" : "Dictionary<String, Disposable>()"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 547, Column: 9",
+    "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+  },
+  {
+    "A_name" : "outer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 550, Column: 13",
+    "H_initialValue" : "xs.groupBy { x in\n                if x == \"error\" { throw testError }\n                return x.lowercased().trimWhitespace()\n            }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 555, Column: 17",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "testGroupBy_InnerKeyThrow",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 593, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 594, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "keyInvoked",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 596, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 598, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+      },
+      {
+        "A_name" : "outer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 620, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "outerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 621, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inners",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 622, Column: 9",
+        "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+      },
+      {
+        "A_name" : "innerSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 623, Column: 9",
+        "H_initialValue" : "Dictionary<String, Disposable>()"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 624, Column: 9",
+        "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 594, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "keyInvoked",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 596, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 598, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+  },
+  {
+    "A_name" : "outer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 620, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "outerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 621, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inners",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 622, Column: 9",
+    "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+  },
+  {
+    "A_name" : "innerSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 623, Column: 9",
+    "H_initialValue" : "Dictionary<String, Disposable>()"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 624, Column: 9",
+    "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 639, Column: 17",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "testGroupBy_OuterIndependence",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 677, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 678, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 680, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+      },
+      {
+        "A_name" : "outer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 702, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "outerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 703, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inners",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 704, Column: 9",
+        "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+      },
+      {
+        "A_name" : "innerSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 705, Column: 9",
+        "H_initialValue" : "Dictionary<String, Disposable>()"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 706, Column: 9",
+        "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+      },
+      {
+        "A_name" : "outerResults",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 707, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(String.self)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 678, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 680, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+  },
+  {
+    "A_name" : "outer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 702, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "outerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 703, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inners",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 704, Column: 9",
+    "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+  },
+  {
+    "A_name" : "innerSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 705, Column: 9",
+    "H_initialValue" : "Dictionary<String, Disposable>()"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 706, Column: 9",
+    "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+  },
+  {
+    "A_name" : "outerResults",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 707, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 722, Column: 25",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "testGroupBy_InnerIndependence",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 774, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 775, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 777, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+      },
+      {
+        "A_name" : "outerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 799, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inners",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 800, Column: 9",
+        "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+      },
+      {
+        "A_name" : "innerSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 801, Column: 9",
+        "H_initialValue" : "Dictionary<String, Disposable>()"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 802, Column: 9",
+        "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+      },
+      {
+        "A_name" : "outerResults",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 803, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(String.self)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 775, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 777, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+  },
+  {
+    "A_name" : "outerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 799, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inners",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 800, Column: 9",
+    "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+  },
+  {
+    "A_name" : "innerSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 801, Column: 9",
+    "H_initialValue" : "Dictionary<String, Disposable>()"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 802, Column: 9",
+    "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+  },
+  {
+    "A_name" : "outerResults",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 803, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "outer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 806, Column: 13",
+    "H_initialValue" : "xs.groupBy { x in\n                if x == \"error\" { throw testError }\n                return x.lowercased().trimWhitespace()\n            }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 815, Column: 25",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "testGroupBy_InnerMultipleIndependence",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 869, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 870, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 872, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+      },
+      {
+        "A_name" : "outerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 894, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inners",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 895, Column: 9",
+        "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+      },
+      {
+        "A_name" : "innerSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 896, Column: 9",
+        "H_initialValue" : "Dictionary<String, Disposable>()"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 897, Column: 9",
+        "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+      },
+      {
+        "A_name" : "outerResults",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 898, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(String.self)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 870, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 872, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, \"abc\"),\n            .next(110, \"zoo\"),\n            .next(130, \"oof\"),\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(270, \"baR  \"),\n            .next(310, \"foO \"),\n            .next(350, \" Baz   \"),\n            .next(360, \"  qux \"),\n            .next(390, \"   bar\"),\n            .next(420, \" BAR  \"),\n            .next(470, \"FOO \"),\n            .next(480, \"baz  \"),\n            .next(510, \" bAZ \"),\n            .next(530, \"    fOo    \"),\n            .completed(570),\n            .next(580, \"error\"),\n            .completed(600),\n            .error(650, testError)\n            ])"
+  },
+  {
+    "A_name" : "outerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 894, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inners",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 895, Column: 9",
+    "H_initialValue" : "Dictionary<String, GroupedObservable<String, String>>()"
+  },
+  {
+    "A_name" : "innerSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 896, Column: 9",
+    "H_initialValue" : "Dictionary<String, Disposable>()"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 897, Column: 9",
+    "H_initialValue" : "Dictionary<String, TestableObserver<String>>()"
+  },
+  {
+    "A_name" : "outerResults",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 898, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "outer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 901, Column: 13",
+    "H_initialValue" : "xs.groupBy { x in\n                if x == \"error\" { throw testError }\n                return x.lowercased().trimWhitespace()\n            }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 910, Column: 25",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "testGroupBy_InnerEscapeComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 969, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 970, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 972, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(310, \"foO \"),\n            .next(470, \"FOO \"),\n            .next(530, \"    fOo    \"),\n            .completed(570)\n            ])"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 981, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(String.self)"
+      },
+      {
+        "A_name" : "outer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 982, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "outerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 983, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inner",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 984, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "innerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 985, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 970, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 972, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(310, \"foO \"),\n            .next(470, \"FOO \"),\n            .next(530, \"    fOo    \"),\n            .completed(570)\n            ])"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 981, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "outer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 982, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "outerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 983, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inner",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 984, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "innerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 985, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testGroupBy_InnerEscapeError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1017, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1018, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1020, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(310, \"foO \"),\n            .next(470, \"FOO \"),\n            .next(530, \"    fOo    \"),\n            .error(570, testError)\n            ])"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1029, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(String.self)"
+      },
+      {
+        "A_name" : "outer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1030, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "outerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1031, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inner",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1032, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "innerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1033, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1018, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1020, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(310, \"foO \"),\n            .next(470, \"FOO \"),\n            .next(530, \"    fOo    \"),\n            .error(570, testError)\n            ])"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1029, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "outer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1030, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "outerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1031, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inner",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1032, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "innerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1033, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testGroupBy_InnerEscapeDispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1065, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1066, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1068, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(310, \"foO \"),\n            .next(470, \"FOO \"),\n            .next(530, \"    fOo    \"),\n            .error(570, testError)\n            ])"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1077, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(String.self)"
+      },
+      {
+        "A_name" : "outerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1078, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inner",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1079, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "innerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1080, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1066, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1068, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(220, \"  foo\"),\n            .next(240, \" FoO \"),\n            .next(310, \"foO \"),\n            .next(470, \"FOO \"),\n            .next(530, \"    fOo    \"),\n            .error(570, testError)\n            ])"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1077, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(String.self)"
+  },
+  {
+    "A_name" : "outerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1078, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inner",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1079, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "innerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1080, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "outer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1083, Column: 13",
+    "H_initialValue" : "xs.groupBy { x in\n                return x.lowercased().trimWhitespace()\n            }"
+  },
+  {
+    "A_name" : "testGroupByReleasesResourcesOnComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1112, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testGroupByReleasesResourcesOnError1",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1116, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testGroupByReleasesResourcesOnError2",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1120, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "String",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1128, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "trimWhitespace",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+GroupByTests.swift - Line: 1129, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "trimWhitespace",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+GroupByTests.swift - Line: 1129, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  }
+]

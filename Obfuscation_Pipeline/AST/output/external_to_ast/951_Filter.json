@@ -1,0 +1,425 @@
+[
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Filter.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "filter",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Filter.swift - Line: 19, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Element) throws -> Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "filter",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Filter.swift - Line: 19, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Element) throws -> Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Filter.swift - Line: 25, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "ignoreElements",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Filter.swift - Line: 33, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Observable<Never>"
+      }
+    ]
+  },
+  {
+    "A_name" : "ignoreElements",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Filter.swift - Line: 33, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Observable<Never>"
+  },
+  {
+    "A_name" : "FilterSink",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sink<Observer>",
+      "ObserverType"
+    ],
+    "F_location" : "Filter.swift - Line: 39, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "predicate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Filter.swift - Line: 43, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Filter.swift - Line: 45, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping Predicate",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "predicate",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Filter.swift - Line: 50, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "predicate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Filter.swift - Line: 43, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Filter.swift - Line: 45, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping Predicate",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "predicate",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Filter.swift - Line: 50, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "satisfies",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Filter.swift - Line: 54, Column: 17",
+    "H_initialValue" : "try self.predicate(value)"
+  },
+  {
+    "A_name" : "Filter",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Element>"
+    ],
+    "F_location" : "Filter.swift - Line: 70, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Filter.swift - Line: 73, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "predicate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Filter.swift - Line: 74, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Filter.swift - Line: 76, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<Element>",
+          "@escaping Predicate"
+        ],
+        "I_parameters" : [
+          "source",
+          "predicate"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Filter.swift - Line: 81, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Filter.swift - Line: 82, Column: 9",
+            "H_initialValue" : "FilterSink(predicate: self.predicate, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Filter.swift - Line: 83, Column: 9",
+            "H_initialValue" : "self.source.subscribe(sink)"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Filter.swift - Line: 73, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "predicate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Filter.swift - Line: 74, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Filter.swift - Line: 76, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<Element>",
+      "@escaping Predicate"
+    ],
+    "I_parameters" : [
+      "source",
+      "predicate"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Filter.swift - Line: 81, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Filter.swift - Line: 82, Column: 9",
+        "H_initialValue" : "FilterSink(predicate: self.predicate, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Filter.swift - Line: 83, Column: 9",
+        "H_initialValue" : "self.source.subscribe(sink)"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Filter.swift - Line: 82, Column: 9",
+    "H_initialValue" : "FilterSink(predicate: self.predicate, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Filter.swift - Line: 83, Column: 9",
+    "H_initialValue" : "self.source.subscribe(sink)"
+  }
+]

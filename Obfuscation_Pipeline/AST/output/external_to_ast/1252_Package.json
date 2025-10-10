@@ -1,0 +1,22 @@
+[
+  {
+    "A_name" : "package",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Package.swift - Line: 5, Column: 1",
+    "H_initialValue" : "Package(\n    name: \"Quick\",\n    platforms: [\n        .macOS(.v10_10), .iOS(.v9), .tvOS(.v9)\n    ],\n    products: [\n        .library(name: \"Quick\", targets: [\"Quick\"]),\n    ],\n    dependencies: [\n        .package(url: \"https:\/\/github.com\/Quick\/Nimble.git\", from: \"9.1.0\"),\n    ],\n    targets: {\n        var targets: [Target] = [\n            .testTarget(\n                name: \"QuickTests\",\n                dependencies: [ \"Quick\", \"Nimble\" ],\n                exclude: [\n                    \"QuickAfterSuiteTests\/AfterSuiteTests+ObjC.m\",\n                    \"QuickFocusedTests\/FocusedTests+ObjC.m\",\n                    \"QuickTests\/FunctionalTests\/ObjC\",\n                    \"QuickTests\/Helpers\/QCKSpecRunner.h\",\n                    \"QuickTests\/Helpers\/QCKSpecRunner.m\",\n                    \"QuickTests\/Helpers\/QuickTestsBridgingHeader.h\",\n                    \"QuickTests\/QuickConfigurationTests.m\",\n                ]\n            ),\n            .testTarget(\n                name: \"QuickIssue853RegressionTests\",\n                dependencies: [ \"Quick\" ]\n            ),\n        ]\n#if os(macOS)\n        targets.append(contentsOf: [\n            .target(name: \"QuickObjCRuntime\", dependencies: []),\n            .target(name: \"Quick\", dependencies: [ \"QuickObjCRuntime\" ]),\n        ])\n#else\n        targets.append(contentsOf: [\n            .target(name: \"Quick\", dependencies: []),\n        ])\n#endif\n        return targets\n    }(),\n    swiftLanguageVersions: [.v5]\n)"
+  },
+  {
+    "A_name" : "targets",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Package.swift - Line: 17, Column: 9",
+    "H_initialValue" : "[\n            .testTarget(\n                name: \"QuickTests\",\n                dependencies: [ \"Quick\", \"Nimble\" ],\n                exclude: [\n                    \"QuickAfterSuiteTests\/AfterSuiteTests+ObjC.m\",\n                    \"QuickFocusedTests\/FocusedTests+ObjC.m\",\n                    \"QuickTests\/FunctionalTests\/ObjC\",\n                    \"QuickTests\/Helpers\/QCKSpecRunner.h\",\n                    \"QuickTests\/Helpers\/QCKSpecRunner.m\",\n                    \"QuickTests\/Helpers\/QuickTestsBridgingHeader.h\",\n                    \"QuickTests\/QuickConfigurationTests.m\",\n                ]\n            ),\n            .testTarget(\n                name: \"QuickIssue853RegressionTests\",\n                dependencies: [ \"Quick\" ]\n            ),\n        ]"
+  }
+]

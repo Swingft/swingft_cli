@@ -1,0 +1,400 @@
+[
+  {
+    "A_name" : "BaseUIViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BaseUIViewController+Navigation.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "NavigationType",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "BaseUIViewController+Navigation.swift - Line: 15, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "titleOnly",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseUIViewController+Navigation.swift - Line: 16, Column: 14",
+            "I_parameterType" : [
+              "String"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "backTitle",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseUIViewController+Navigation.swift - Line: 17, Column: 14",
+            "I_parameterType" : [
+              "String"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "backTitleMenu",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseUIViewController+Navigation.swift - Line: 18, Column: 14",
+            "I_parameterType" : [
+              "String",
+              "String?"
+            ],
+            "I_parameters" : [
+              "title",
+              "rightIconName"
+            ]
+          },
+          {
+            "A_name" : "backOnly",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseUIViewController+Navigation.swift - Line: 19, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "backSearchBar",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseUIViewController+Navigation.swift - Line: 20, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "setupNavigationBar",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseUIViewController+Navigation.swift - Line: 25, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "makeTitleLabel",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseUIViewController+Navigation.swift - Line: 74, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "label",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseUIViewController+Navigation.swift - Line: 75, Column: 9",
+            "H_initialValue" : "UILabel()"
+          }
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> UILabel"
+      },
+      {
+        "A_name" : "makeBarButton",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseUIViewController+Navigation.swift - Line: 86, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "button",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseUIViewController+Navigation.swift - Line: 87, Column: 9",
+            "H_initialValue" : "UIButton(type: .system)"
+          },
+          {
+            "A_name" : "image",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BaseUIViewController+Navigation.swift - Line: 89, Column: 9",
+            "H_initialValue" : "UIImage(named: imageName, in: .module, compatibleWith: nil)?\n            .withRenderingMode(.alwaysOriginal)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "Selector"
+        ],
+        "I_parameters" : [
+          "imageName",
+          "action"
+        ],
+        "J_returnType" : "-> UIBarButtonItem"
+      }
+    ]
+  },
+  {
+    "A_name" : "NavigationType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BaseUIViewController+Navigation.swift - Line: 15, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "titleOnly",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseUIViewController+Navigation.swift - Line: 16, Column: 14",
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "backTitle",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseUIViewController+Navigation.swift - Line: 17, Column: 14",
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "backTitleMenu",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseUIViewController+Navigation.swift - Line: 18, Column: 14",
+        "I_parameterType" : [
+          "String",
+          "String?"
+        ],
+        "I_parameters" : [
+          "title",
+          "rightIconName"
+        ]
+      },
+      {
+        "A_name" : "backOnly",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseUIViewController+Navigation.swift - Line: 19, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "backSearchBar",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseUIViewController+Navigation.swift - Line: 20, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "setupNavigationBar",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseUIViewController+Navigation.swift - Line: 25, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "makeTitleLabel",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseUIViewController+Navigation.swift - Line: 74, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "label",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseUIViewController+Navigation.swift - Line: 75, Column: 9",
+        "H_initialValue" : "UILabel()"
+      }
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> UILabel"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseUIViewController+Navigation.swift - Line: 75, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "makeBarButton",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseUIViewController+Navigation.swift - Line: 86, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "button",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseUIViewController+Navigation.swift - Line: 87, Column: 9",
+        "H_initialValue" : "UIButton(type: .system)"
+      },
+      {
+        "A_name" : "image",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BaseUIViewController+Navigation.swift - Line: 89, Column: 9",
+        "H_initialValue" : "UIImage(named: imageName, in: .module, compatibleWith: nil)?\n            .withRenderingMode(.alwaysOriginal)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "Selector"
+    ],
+    "I_parameters" : [
+      "imageName",
+      "action"
+    ],
+    "J_returnType" : "-> UIBarButtonItem"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseUIViewController+Navigation.swift - Line: 87, Column: 9",
+    "H_initialValue" : "UIButton(type: .system)"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BaseUIViewController+Navigation.swift - Line: 89, Column: 9",
+    "H_initialValue" : "UIImage(named: imageName, in: .module, compatibleWith: nil)?\n            .withRenderingMode(.alwaysOriginal)"
+  }
+]

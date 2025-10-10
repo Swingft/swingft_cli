@@ -1,0 +1,576 @@
+[
+  {
+    "A_name" : "generateCustomSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 13, Column: 1",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "runAutomatically",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 14, Column: 1",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "useAnimatedUpdateForCollectionView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 15, Column: 1",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "PartialUpdatesViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ViewController"
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 20, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "reloadTableViewOutlet",
+        "B_kind" : "variable",
+        "C_accessLevel" : "weak",
+        "D_attributes" : [
+          "IBOutlet",
+          "weak"
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 22, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "partialUpdatesTableViewOutlet",
+        "B_kind" : "variable",
+        "C_accessLevel" : "weak",
+        "D_attributes" : [
+          "IBOutlet",
+          "weak"
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 23, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "partialUpdatesCollectionViewOutlet",
+        "B_kind" : "variable",
+        "C_accessLevel" : "weak",
+        "D_attributes" : [
+          "IBOutlet",
+          "weak"
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 24, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "timer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 26, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "initialValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 28, Column: 5",
+        "H_initialValue" : "[\n        NumberSection(model: \"section 1\", items: [1, 2, 3]),\n        NumberSection(model: \"section 2\", items: [4, 5, 6]),\n        NumberSection(model: \"section 3\", items: [7, 8, 9]),\n        NumberSection(model: \"section 4\", items: [10, 11, 12]),\n        NumberSection(model: \"section 5\", items: [13, 14, 15]),\n        NumberSection(model: \"section 6\", items: [16, 17, 18]),\n        NumberSection(model: \"section 7\", items: [19, 20, 21]),\n        NumberSection(model: \"section 8\", items: [22, 23, 24]),\n        NumberSection(model: \"section 9\", items: [25, 26, 27]),\n        NumberSection(model: \"section 10\", items: [28, 29, 30])\n        ]"
+      },
+      {
+        "A_name" : "firstChange",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 42, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "generator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 44, Column: 5",
+        "H_initialValue" : "Randomizer(rng: PseudoRandomGenerator(4, 3), sections: initialValue)"
+      },
+      {
+        "A_name" : "sections",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 46, Column: 5",
+        "H_initialValue" : "BehaviorRelay(value: [NumberSection]())"
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 51, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tvAnimatedDataSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PartialUpdatesViewController.swift - Line: 81, Column: 9",
+            "H_initialValue" : "RxTableViewSectionedAnimatedDataSource<NumberSection>(\n            configureCell: configureCell,\n            titleForHeaderInSection: titleForSection\n        )"
+          },
+          {
+            "A_name" : "reloadDataSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PartialUpdatesViewController.swift - Line: 85, Column: 9",
+            "H_initialValue" : "RxTableViewSectionedReloadDataSource<NumberSection>(\n            configureCell: configureCell,\n            titleForHeaderInSection: titleForSection\n        )"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "viewWillDisappear",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 145, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "randomize",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "IBAction"
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 149, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "values",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PartialUpdatesViewController.swift - Line: 151, Column: 9",
+            "H_initialValue" : "generator.sections"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "reloadTableViewOutlet",
+    "B_kind" : "variable",
+    "C_accessLevel" : "weak",
+    "D_attributes" : [
+      "IBOutlet",
+      "weak"
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 22, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "partialUpdatesTableViewOutlet",
+    "B_kind" : "variable",
+    "C_accessLevel" : "weak",
+    "D_attributes" : [
+      "IBOutlet",
+      "weak"
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 23, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "partialUpdatesCollectionViewOutlet",
+    "B_kind" : "variable",
+    "C_accessLevel" : "weak",
+    "D_attributes" : [
+      "IBOutlet",
+      "weak"
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 24, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "timer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 26, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "initialValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 28, Column: 5",
+    "H_initialValue" : "[\n        NumberSection(model: \"section 1\", items: [1, 2, 3]),\n        NumberSection(model: \"section 2\", items: [4, 5, 6]),\n        NumberSection(model: \"section 3\", items: [7, 8, 9]),\n        NumberSection(model: \"section 4\", items: [10, 11, 12]),\n        NumberSection(model: \"section 5\", items: [13, 14, 15]),\n        NumberSection(model: \"section 6\", items: [16, 17, 18]),\n        NumberSection(model: \"section 7\", items: [19, 20, 21]),\n        NumberSection(model: \"section 8\", items: [22, 23, 24]),\n        NumberSection(model: \"section 9\", items: [25, 26, 27]),\n        NumberSection(model: \"section 10\", items: [28, 29, 30])\n        ]"
+  },
+  {
+    "A_name" : "firstChange",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 42, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "generator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 44, Column: 5",
+    "H_initialValue" : "Randomizer(rng: PseudoRandomGenerator(4, 3), sections: initialValue)"
+  },
+  {
+    "A_name" : "sections",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 46, Column: 5",
+    "H_initialValue" : "BehaviorRelay(value: [NumberSection]())"
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 51, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tvAnimatedDataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 81, Column: 9",
+        "H_initialValue" : "RxTableViewSectionedAnimatedDataSource<NumberSection>(\n            configureCell: configureCell,\n            titleForHeaderInSection: titleForSection\n        )"
+      },
+      {
+        "A_name" : "reloadDataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 85, Column: 9",
+        "H_initialValue" : "RxTableViewSectionedReloadDataSource<NumberSection>(\n            configureCell: configureCell,\n            titleForHeaderInSection: titleForSection\n        )"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "nSections",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 62, Column: 13",
+    "H_initialValue" : "UIApplication.isInUITest ? 5 : 10"
+  },
+  {
+    "A_name" : "nItems",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 63, Column: 13",
+    "H_initialValue" : "UIApplication.isInUITest ? 10 : 100"
+  },
+  {
+    "A_name" : "sections",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 65, Column: 13",
+    "H_initialValue" : "[AnimatableSectionModel<String, Int>]()"
+  },
+  {
+    "A_name" : "tvAnimatedDataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 81, Column: 9",
+    "H_initialValue" : "RxTableViewSectionedAnimatedDataSource<NumberSection>(\n            configureCell: configureCell,\n            titleForHeaderInSection: titleForSection\n        )"
+  },
+  {
+    "A_name" : "reloadDataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 85, Column: 9",
+    "H_initialValue" : "RxTableViewSectionedReloadDataSource<NumberSection>(\n            configureCell: configureCell,\n            titleForHeaderInSection: titleForSection\n        )"
+  },
+  {
+    "A_name" : "cvAnimatedDataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 111, Column: 13",
+    "H_initialValue" : "RxCollectionViewSectionedAnimatedDataSource(\n                configureCell: configureCollectionViewCell,\n                configureSupplementaryView: configureSupplementaryView\n            )"
+  },
+  {
+    "A_name" : "cvReloadDataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 120, Column: 13",
+    "H_initialValue" : "RxCollectionViewSectionedReloadDataSource(\n                configureCell: configureCollectionViewCell,\n                configureSupplementaryView: configureSupplementaryView\n            )"
+  },
+  {
+    "A_name" : "viewWillDisappear",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 145, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "randomize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "IBAction"
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 149, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "values",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 151, Column: 9",
+        "H_initialValue" : "generator.sections"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 151, Column: 9",
+    "H_initialValue" : "generator.sections"
+  },
+  {
+    "A_name" : "PartialUpdatesViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 164, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "tableViewDataSourceUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 165, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> (\n        TableViewSectionedDataSource<NumberSection>.ConfigureCell,\n        TableViewSectionedDataSource<NumberSection>.TitleForHeaderInSection\n        )"
+      },
+      {
+        "A_name" : "collectionViewDataSourceUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "PartialUpdatesViewController.swift - Line: 181, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> (\n        CollectionViewSectionedDataSource<NumberSection>.ConfigureCell,\n        CollectionViewSectionedDataSource<NumberSection>.ConfigureSupplementaryView\n        )"
+      }
+    ]
+  },
+  {
+    "A_name" : "tableViewDataSourceUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 165, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> (\n        TableViewSectionedDataSource<NumberSection>.ConfigureCell,\n        TableViewSectionedDataSource<NumberSection>.TitleForHeaderInSection\n        )"
+  },
+  {
+    "A_name" : "cell",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 171, Column: 17",
+    "H_initialValue" : "tv.dequeueReusableCell(withIdentifier: \"Cell\") ?? UITableViewCell(style:.default, reuseIdentifier: \"Cell\")"
+  },
+  {
+    "A_name" : "collectionViewDataSourceUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 181, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> (\n        CollectionViewSectionedDataSource<NumberSection>.ConfigureCell,\n        CollectionViewSectionedDataSource<NumberSection>.ConfigureSupplementaryView\n        )"
+  },
+  {
+    "A_name" : "cell",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 187, Column: 17",
+    "H_initialValue" : "cv.dequeueReusableCell(withReuseIdentifier: \"Cell\", for: ip) as! NumberCell"
+  },
+  {
+    "A_name" : "section",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PartialUpdatesViewController.swift - Line: 193, Column: 17",
+    "H_initialValue" : "cv.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: \"Section\", for: ip) as! NumberSectionView"
+  }
+]

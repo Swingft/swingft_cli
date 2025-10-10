@@ -1,0 +1,118 @@
+[
+  {
+    "A_name" : "ObservableConvertibleType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+Concurrency.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "values",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+Concurrency.swift - Line: 28, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Concurrency.swift - Line: 28, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isFinished",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Concurrency.swift - Line: 30, Column: 13",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Concurrency.swift - Line: 31, Column: 13",
+    "H_initialValue" : "asObservable().subscribe(\n                onNext: { value in continuation.yield(value) },\n                onError: { error in\n                    isFinished = true\n                    continuation.finish(throwing: error)\n                },\n                onCompleted: {\n                    isFinished = true\n                    continuation.finish()\n                },\n                onDisposed: {\n                    guard !isFinished else { return }\n                    continuation.finish(throwing: CancellationError() )\n                }\n            )"
+  },
+  {
+    "A_name" : "AsyncSequence",
+    "B_kind" : "extension",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+Concurrency.swift - Line: 55, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "asObservable",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+Concurrency.swift - Line: 61, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "asObservable",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Concurrency.swift - Line: 61, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Concurrency.swift - Line: 63, Column: 13",
+    "H_initialValue" : "Task {\n                do {\n                    for try await value in self {\n                        observer.onNext(value)\n                    }\n\n                    observer.onCompleted()\n                } catch is CancellationError {\n                    observer.onCompleted()\n                } catch {\n                    observer.onError(error)\n                }\n            }"
+  }
+]

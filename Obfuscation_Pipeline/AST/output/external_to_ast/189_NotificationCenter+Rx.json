@@ -1,0 +1,68 @@
+[
+  {
+    "A_name" : "Reactive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NotificationCenter+Rx.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "notification",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationCenter+Rx.swift - Line: 20, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Notification.Name?",
+          "AnyObject?"
+        ],
+        "I_parameters" : [
+          "_",
+          "object"
+        ],
+        "J_returnType" : "-> Observable<Notification>"
+      }
+    ]
+  },
+  {
+    "A_name" : "notification",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCenter+Rx.swift - Line: 20, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Notification.Name?",
+      "AnyObject?"
+    ],
+    "I_parameters" : [
+      "_",
+      "object"
+    ],
+    "J_returnType" : "-> Observable<Notification>"
+  },
+  {
+    "A_name" : "nsObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCenter+Rx.swift - Line: 22, Column: 13",
+    "H_initialValue" : "self.base.addObserver(forName: name, object: object, queue: nil) { notification in\n                observer.on(.next(notification))\n            }"
+  }
+]

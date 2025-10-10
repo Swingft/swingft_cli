@@ -1,0 +1,406 @@
+[
+  {
+    "A_name" : "ObservableConcurrencyTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ConcurrencyTests.swift - Line: 17, Column: 5",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      }
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 17, Column: 5",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "ObservableConcurrencyTests",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 20, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testAwaitsValuesAndFinishes",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ConcurrencyTests.swift - Line: 22, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ConcurrencyTests.swift - Line: 23, Column: 9",
+            "H_initialValue" : "Observable\n            .from(1...10)"
+          },
+          {
+            "A_name" : "values",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ConcurrencyTests.swift - Line: 26, Column: 9",
+            "H_initialValue" : "[Int]()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testAwaitsValuesAndErrors",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ConcurrencyTests.swift - Line: 39, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "driver",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ConcurrencyTests.swift - Line: 40, Column: 9",
+            "H_initialValue" : "Observable\n            .from(1...10)\n            .map { n -> Int in\n                if n > 5 {\n                    throw RxError.unknown\n                }\n\n                return n\n            }"
+          },
+          {
+            "A_name" : "values",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ConcurrencyTests.swift - Line: 50, Column: 9",
+            "H_initialValue" : "[Int]()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThrowsCancellationErrorWithoutEvents",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ConcurrencyTests.swift - Line: 61, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ConcurrencyTests.swift - Line: 62, Column: 9",
+            "H_initialValue" : "Observable<Void>.never()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testNotThrowingCancellation",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ConcurrencyTests.swift - Line: 76, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ConcurrencyTests.swift - Line: 77, Column: 9",
+            "H_initialValue" : "Observable.from(1...10)"
+          },
+          {
+            "A_name" : "task",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ConcurrencyTests.swift - Line: 78, Column: 9",
+            "H_initialValue" : "Task {\n            do {\n                var values = [Int]()\n                for try await value in observable.values {\n                    values.append(value)\n                }\n                XCTAssertTrue(values == Array(1...10))\n            } catch {\n                XCTFail(\"Should not throw CancellationError\")\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testAwaitsValuesAndFinishes",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 22, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ConcurrencyTests.swift - Line: 23, Column: 9",
+        "H_initialValue" : "Observable\n            .from(1...10)"
+      },
+      {
+        "A_name" : "values",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ConcurrencyTests.swift - Line: 26, Column: 9",
+        "H_initialValue" : "[Int]()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "observable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 23, Column: 9",
+    "H_initialValue" : "Observable\n            .from(1...10)"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 26, Column: 9",
+    "H_initialValue" : "[Int]()"
+  },
+  {
+    "A_name" : "testAwaitsValuesAndErrors",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 39, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "driver",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ConcurrencyTests.swift - Line: 40, Column: 9",
+        "H_initialValue" : "Observable\n            .from(1...10)\n            .map { n -> Int in\n                if n > 5 {\n                    throw RxError.unknown\n                }\n\n                return n\n            }"
+      },
+      {
+        "A_name" : "values",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ConcurrencyTests.swift - Line: 50, Column: 9",
+        "H_initialValue" : "[Int]()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "driver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 40, Column: 9",
+    "H_initialValue" : "Observable\n            .from(1...10)\n            .map { n -> Int in\n                if n > 5 {\n                    throw RxError.unknown\n                }\n\n                return n\n            }"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 50, Column: 9",
+    "H_initialValue" : "[Int]()"
+  },
+  {
+    "A_name" : "testThrowsCancellationErrorWithoutEvents",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 61, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ConcurrencyTests.swift - Line: 62, Column: 9",
+        "H_initialValue" : "Observable<Void>.never()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "observable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 62, Column: 9",
+    "H_initialValue" : "Observable<Void>.never()"
+  },
+  {
+    "A_name" : "testNotThrowingCancellation",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 76, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ConcurrencyTests.swift - Line: 77, Column: 9",
+        "H_initialValue" : "Observable.from(1...10)"
+      },
+      {
+        "A_name" : "task",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ConcurrencyTests.swift - Line: 78, Column: 9",
+        "H_initialValue" : "Task {\n            do {\n                var values = [Int]()\n                for try await value in observable.values {\n                    values.append(value)\n                }\n                XCTAssertTrue(values == Array(1...10))\n            } catch {\n                XCTFail(\"Should not throw CancellationError\")\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "observable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 77, Column: 9",
+    "H_initialValue" : "Observable.from(1...10)"
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 78, Column: 9",
+    "H_initialValue" : "Task {\n            do {\n                var values = [Int]()\n                for try await value in observable.values {\n                    values.append(value)\n                }\n                XCTAssertTrue(values == Array(1...10))\n            } catch {\n                XCTFail(\"Should not throw CancellationError\")\n            }\n        }"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ConcurrencyTests.swift - Line: 80, Column: 17",
+    "H_initialValue" : "[Int]()"
+  }
+]

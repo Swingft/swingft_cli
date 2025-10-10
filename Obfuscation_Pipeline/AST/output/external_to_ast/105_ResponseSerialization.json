@@ -1,0 +1,2238 @@
+[
+  {
+    "A_name" : "DataResponseSerializerProtocol",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 28, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 42, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest?",
+          "HTTPURLResponse?",
+          "Data?",
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "request",
+          "response",
+          "data",
+          "error"
+        ],
+        "J_returnType" : "-> SerializedObject"
+      }
+    ]
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 42, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest?",
+      "HTTPURLResponse?",
+      "Data?",
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "request",
+      "response",
+      "data",
+      "error"
+    ],
+    "J_returnType" : "-> SerializedObject"
+  },
+  {
+    "A_name" : "DownloadResponseSerializerProtocol",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 46, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "serializeDownload",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 60, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest?",
+          "HTTPURLResponse?",
+          "URL?",
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "request",
+          "response",
+          "fileURL",
+          "error"
+        ],
+        "J_returnType" : "-> SerializedObject"
+      }
+    ]
+  },
+  {
+    "A_name" : "serializeDownload",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 60, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest?",
+      "HTTPURLResponse?",
+      "URL?",
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "request",
+      "response",
+      "fileURL",
+      "error"
+    ],
+    "J_returnType" : "-> SerializedObject"
+  },
+  {
+    "A_name" : "ResponseSerializer",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "DataResponseSerializerProtocol & DownloadResponseSerializerProtocol"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 64, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "dataPreprocessor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 66, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "emptyRequestMethods",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 68, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "emptyResponseCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 70, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "dataPreprocessor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 66, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "emptyRequestMethods",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 68, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "emptyResponseCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 70, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "DataPreprocessor",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 74, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "preprocess",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 77, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Data"
+      }
+    ]
+  },
+  {
+    "A_name" : "preprocess",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 77, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "PassthroughPreprocessor",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "DataPreprocessor"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 81, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 83, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "preprocess",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 85, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Data"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 83, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "preprocess",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 85, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "GoogleXSSIPreprocessor",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "DataPreprocessor"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 89, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 91, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "preprocess",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 93, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Data"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 91, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "preprocess",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 93, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "DataPreprocessor",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 98, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "passthrough",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 100, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "passthrough",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 100, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "DataPreprocessor",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 103, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "googleXSSI",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 105, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "googleXSSI",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 105, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ResponseSerializer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 108, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "defaultDataPreprocessor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 110, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "defaultEmptyRequestMethods",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 112, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "defaultEmptyResponseCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 114, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dataPreprocessor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 116, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "emptyRequestMethods",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 117, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "emptyResponseCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 118, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "requestAllowsEmptyResponseData",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 125, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool?"
+      },
+      {
+        "A_name" : "responseAllowsEmptyResponseData",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 136, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "HTTPURLResponse?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool?"
+      },
+      {
+        "A_name" : "emptyResponseAllowed",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 148, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest?",
+          "HTTPURLResponse?"
+        ],
+        "I_parameters" : [
+          "forRequest",
+          "response"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "defaultDataPreprocessor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 110, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "defaultEmptyRequestMethods",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 112, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "defaultEmptyResponseCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 114, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dataPreprocessor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 116, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "emptyRequestMethods",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 117, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "emptyResponseCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 118, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "requestAllowsEmptyResponseData",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 125, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool?"
+  },
+  {
+    "A_name" : "responseAllowsEmptyResponseData",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 136, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "HTTPURLResponse?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool?"
+  },
+  {
+    "A_name" : "emptyResponseAllowed",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 148, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest?",
+      "HTTPURLResponse?"
+    ],
+    "I_parameters" : [
+      "forRequest",
+      "response"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "DownloadResponseSerializerProtocol",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 155, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "serializeDownload",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 156, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ResponseSerialization.swift - Line: 163, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "URLRequest?",
+          "HTTPURLResponse?",
+          "URL?",
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "request",
+          "response",
+          "fileURL",
+          "error"
+        ],
+        "J_returnType" : "-> Self.SerializedObject"
+      }
+    ]
+  },
+  {
+    "A_name" : "serializeDownload",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 156, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 163, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "URLRequest?",
+      "HTTPURLResponse?",
+      "URL?",
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "request",
+      "response",
+      "fileURL",
+      "error"
+    ],
+    "J_returnType" : "-> Self.SerializedObject"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 163, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "URLResponseSerializer",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "DownloadResponseSerializerProtocol"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 182, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 184, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "serializeDownload",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 186, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest?",
+          "HTTPURLResponse?",
+          "URL?",
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "request",
+          "response",
+          "fileURL",
+          "error"
+        ],
+        "J_returnType" : "-> URL"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 184, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "serializeDownload",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 186, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest?",
+      "HTTPURLResponse?",
+      "URL?",
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "request",
+      "response",
+      "fileURL",
+      "error"
+    ],
+    "J_returnType" : "-> URL"
+  },
+  {
+    "A_name" : "DownloadResponseSerializerProtocol",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 200, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 202, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 202, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "DataResponseSerializer",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ResponseSerializer"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 210, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "dataPreprocessor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 211, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "emptyResponseCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 212, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "emptyRequestMethods",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 213, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 221, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any DataPreprocessor",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "dataPreprocessor",
+          "emptyResponseCodes",
+          "emptyRequestMethods"
+        ]
+      },
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 229, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest?",
+          "HTTPURLResponse?",
+          "Data?",
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "request",
+          "response",
+          "data",
+          "error"
+        ],
+        "J_returnType" : "-> Data"
+      }
+    ]
+  },
+  {
+    "A_name" : "dataPreprocessor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 211, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "emptyResponseCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 212, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "emptyRequestMethods",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 213, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 221, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any DataPreprocessor",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "dataPreprocessor",
+      "emptyResponseCodes",
+      "emptyRequestMethods"
+    ]
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 229, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest?",
+      "HTTPURLResponse?",
+      "Data?",
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "request",
+      "response",
+      "data",
+      "error"
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "ResponseSerializer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 246, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 248, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 258, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any DataPreprocessor",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "dataPreprocessor",
+          "emptyResponseCodes",
+          "emptyRequestMethods"
+        ],
+        "J_returnType" : "-> DataResponseSerializer"
+      }
+    ]
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 248, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 258, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any DataPreprocessor",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "dataPreprocessor",
+      "emptyResponseCodes",
+      "emptyRequestMethods"
+    ],
+    "J_returnType" : "-> DataResponseSerializer"
+  },
+  {
+    "A_name" : "StringResponseSerializer",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ResponseSerializer"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 272, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "dataPreprocessor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 273, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "encoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 275, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "emptyResponseCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 276, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "emptyRequestMethods",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 277, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 287, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any DataPreprocessor",
+          "String.Encoding?",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "dataPreprocessor",
+          "encoding",
+          "emptyResponseCodes",
+          "emptyRequestMethods"
+        ]
+      },
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 297, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "convertedEncoding",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ResponseSerialization.swift - Line: 310, Column: 9",
+            "H_initialValue" : "encoding"
+          },
+          {
+            "A_name" : "actualEncoding",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ResponseSerialization.swift - Line: 316, Column: 9",
+            "H_initialValue" : "convertedEncoding ?? .isoLatin1"
+          }
+        ],
+        "I_parameterType" : [
+          "URLRequest?",
+          "HTTPURLResponse?",
+          "Data?",
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "request",
+          "response",
+          "data",
+          "error"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "dataPreprocessor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 273, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "encoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 275, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "emptyResponseCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 276, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "emptyRequestMethods",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 277, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 287, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any DataPreprocessor",
+      "String.Encoding?",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "dataPreprocessor",
+      "encoding",
+      "emptyResponseCodes",
+      "emptyRequestMethods"
+    ]
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 297, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "convertedEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 310, Column: 9",
+        "H_initialValue" : "encoding"
+      },
+      {
+        "A_name" : "actualEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 316, Column: 9",
+        "H_initialValue" : "convertedEncoding ?? .isoLatin1"
+      }
+    ],
+    "I_parameterType" : [
+      "URLRequest?",
+      "HTTPURLResponse?",
+      "Data?",
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "request",
+      "response",
+      "data",
+      "error"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "convertedEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 310, Column: 9",
+    "H_initialValue" : "encoding"
+  },
+  {
+    "A_name" : "actualEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 316, Column: 9",
+    "H_initialValue" : "convertedEncoding ?? .isoLatin1"
+  },
+  {
+    "A_name" : "ResponseSerializer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 326, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "string",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 328, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "string",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 340, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any DataPreprocessor",
+          "String.Encoding?",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "dataPreprocessor",
+          "encoding",
+          "emptyResponseCodes",
+          "emptyRequestMethods"
+        ],
+        "J_returnType" : "-> StringResponseSerializer"
+      }
+    ]
+  },
+  {
+    "A_name" : "string",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 328, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "string",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 340, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any DataPreprocessor",
+      "String.Encoding?",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "dataPreprocessor",
+      "encoding",
+      "emptyResponseCodes",
+      "emptyRequestMethods"
+    ],
+    "J_returnType" : "-> StringResponseSerializer"
+  },
+  {
+    "A_name" : "JSONResponseSerializer",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available",
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ResponseSerializer"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 359, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "dataPreprocessor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 361, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "emptyResponseCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 362, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "emptyRequestMethods",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 363, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 365, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 374, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any DataPreprocessor",
+          "Set<Int>",
+          "Set<HTTPMethod>",
+          "JSONSerialization.ReadingOptions"
+        ],
+        "I_parameters" : [
+          "dataPreprocessor",
+          "emptyResponseCodes",
+          "emptyRequestMethods",
+          "options"
+        ]
+      },
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 384, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest?",
+          "HTTPURLResponse?",
+          "Data?",
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "request",
+          "response",
+          "data",
+          "error"
+        ],
+        "J_returnType" : "-> Any"
+      }
+    ]
+  },
+  {
+    "A_name" : "dataPreprocessor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 361, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "emptyResponseCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 362, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "emptyRequestMethods",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 363, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 365, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 374, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any DataPreprocessor",
+      "Set<Int>",
+      "Set<HTTPMethod>",
+      "JSONSerialization.ReadingOptions"
+    ],
+    "I_parameters" : [
+      "dataPreprocessor",
+      "emptyResponseCodes",
+      "emptyRequestMethods",
+      "options"
+    ]
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 384, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest?",
+      "HTTPURLResponse?",
+      "Data?",
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "request",
+      "response",
+      "data",
+      "error"
+    ],
+    "J_returnType" : "-> Any"
+  },
+  {
+    "A_name" : "EmptyResponse",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 408, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "emptyValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 412, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "emptyValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 412, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "Empty",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Codable",
+      "Sendable"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 416, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 418, Column: 5",
+        "H_initialValue" : "Empty()"
+      }
+    ]
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 418, Column: 5",
+    "H_initialValue" : "Empty()"
+  },
+  {
+    "A_name" : "Empty",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "EmptyResponse"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 421, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "emptyValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 422, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Empty"
+      }
+    ]
+  },
+  {
+    "A_name" : "emptyValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 422, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Empty"
+  },
+  {
+    "A_name" : "DataDecoder",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 430, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "decode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 439, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "D.Type",
+          "Data"
+        ],
+        "I_parameters" : [
+          "_",
+          "from"
+        ],
+        "J_returnType" : "-> D"
+      }
+    ]
+  },
+  {
+    "A_name" : "decode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 439, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "D.Type",
+      "Data"
+    ],
+    "I_parameters" : [
+      "_",
+      "from"
+    ],
+    "J_returnType" : "-> D"
+  },
+  {
+    "A_name" : "JSONDecoder",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "DataDecoder"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 443, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "PropertyListDecoder",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "DataDecoder"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 445, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "DecodableResponseSerializer",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ResponseSerializer"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 462, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "dataPreprocessor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 463, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "decoder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 465, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "emptyResponseCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 466, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "emptyRequestMethods",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 467, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 476, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any DataPreprocessor",
+          "any DataDecoder",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "dataPreprocessor",
+          "decoder",
+          "emptyResponseCodes",
+          "emptyRequestMethods"
+        ]
+      },
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 486, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest?",
+          "HTTPURLResponse?",
+          "Data?",
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "request",
+          "response",
+          "data",
+          "error"
+        ],
+        "J_returnType" : "-> T"
+      }
+    ]
+  },
+  {
+    "A_name" : "dataPreprocessor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 463, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "decoder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 465, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "emptyResponseCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 466, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "emptyRequestMethods",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 467, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 476, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any DataPreprocessor",
+      "any DataDecoder",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "dataPreprocessor",
+      "decoder",
+      "emptyResponseCodes",
+      "emptyRequestMethods"
+    ]
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 486, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest?",
+      "HTTPURLResponse?",
+      "Data?",
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "request",
+      "response",
+      "data",
+      "error"
+    ],
+    "J_returnType" : "-> T"
+  },
+  {
+    "A_name" : "ResponseSerializer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 511, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "decodable",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ResponseSerialization.swift - Line: 522, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T.Type",
+          "any DataPreprocessor",
+          "any DataDecoder",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "of",
+          "dataPreprocessor",
+          "decoder",
+          "emptyResponseCodes",
+          "emptyRequestMethods"
+        ],
+        "J_returnType" : "-> DecodableResponseSerializer<T>"
+      }
+    ]
+  },
+  {
+    "A_name" : "decodable",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ResponseSerialization.swift - Line: 522, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T.Type",
+      "any DataPreprocessor",
+      "any DataDecoder",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "of",
+      "dataPreprocessor",
+      "decoder",
+      "emptyResponseCodes",
+      "emptyRequestMethods"
+    ],
+    "J_returnType" : "-> DecodableResponseSerializer<T>"
+  }
+]

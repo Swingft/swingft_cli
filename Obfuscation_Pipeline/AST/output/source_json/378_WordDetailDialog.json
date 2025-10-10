@@ -1,0 +1,502 @@
+[
+  {
+    "A_name" : "WordDetailDialog",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIView"
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "onBookmarkToggled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 15, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dialogContainerView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 19, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 16\n        view.clipsToBounds = true\n        return view\n    }()"
+      },
+      {
+        "A_name" : "wordCard",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 27, Column: 5",
+        "H_initialValue" : "WordCard()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 31, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 38, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "setStyle",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 44, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tap",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WordDetailDialog.swift - Line: 48, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismiss(_:)))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 52, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 57, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 71, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "PhraseData"
+        ],
+        "I_parameters" : [
+          "data"
+        ]
+      },
+      {
+        "A_name" : "showAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 79, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "dismiss",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 90, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "dismiss",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 94, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "location",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WordDetailDialog.swift - Line: 95, Column: 9",
+            "H_initialValue" : "sender.location(in: dialogContainerView)"
+          }
+        ],
+        "I_parameterType" : [
+          "UITapGestureRecognizer"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "performDismissAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 101, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "onBookmarkToggled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 15, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dialogContainerView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 19, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 16\n        view.clipsToBounds = true\n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 20, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "wordCard",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 27, Column: 5",
+    "H_initialValue" : "WordCard()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 31, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 38, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "setStyle",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 44, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 48, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismiss(_:)))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 48, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismiss(_:)))"
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 52, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 57, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 71, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "PhraseData"
+    ],
+    "I_parameters" : [
+      "data"
+    ]
+  },
+  {
+    "A_name" : "showAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 79, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dismiss",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 90, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dismiss",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 94, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "location",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordDetailDialog.swift - Line: 95, Column: 9",
+        "H_initialValue" : "sender.location(in: dialogContainerView)"
+      }
+    ],
+    "I_parameterType" : [
+      "UITapGestureRecognizer"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "location",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 95, Column: 9",
+    "H_initialValue" : "sender.location(in: dialogContainerView)"
+  },
+  {
+    "A_name" : "performDismissAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordDetailDialog.swift - Line: 101, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

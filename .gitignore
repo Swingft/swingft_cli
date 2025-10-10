@@ -23,6 +23,40 @@ obf2
 obf3
 path
 
+# 임시/캐시 디렉토리들
+ConsoleLLM_Portable/models/  # 모델 파일들만 제외
+ConsoleLLM_Portable/python_env/  # Python 환경도 제외
+ast_analyzers/
+exclude_inputs/
+exclude_results/
+batch_results/
+results/
+test_output/
+test_jsons/
+Obfuscation_Pipeline_backup/
+models/
+
+exclude_debug_inputs/
+check_exception/
+
+# 임시 파일들
+swift_file_list.txt
+identifiers.txt
+input.json
+input_part.json
+output_part.json
+llm_input.json
+llm_output.json
+debug_symbols_report.txt
+test_result.json
+test_choose.json
+test_detail.json
+test_identifier.py
+ex.py
+analyze_exclude.py
+parse_exclusions.py
+batch_process_exclusions.py
+debug_symbol_remover.py
 
 # 테스트용 소스코드/폴더 (Swift)
 test/
@@ -39,10 +73,8 @@ Tests/
 **/Test/**/*.swift
 **/Tests/**/*.swift
 *.swift
-# 기타
-# (필요시 추가) 
-debug_symbol_remover.py
+
+# 기타 불필요한 파일들
 exception_list.json
-swingft_config.json
 exception_list2.json
 broken_config*

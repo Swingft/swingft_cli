@@ -1,0 +1,386 @@
+[
+  {
+    "A_name" : "RxTextViewDelegateProxy",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "DelegateProxy<NSTextView, NSTextViewDelegate>",
+      "DelegateProxyType",
+      "NSTextViewDelegate"
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 17, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSTextView+Rx.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSTextView"
+        ],
+        "I_parameters" : [
+          "textView"
+        ]
+      },
+      {
+        "A_name" : "registerKnownImplementations",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "NSTextView+Rx.swift - Line: 39, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "textSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSTextView+Rx.swift - Line: 43, Column: 5",
+        "H_initialValue" : "PublishSubject<String>()"
+      },
+      {
+        "A_name" : "textDidChange",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSTextView+Rx.swift - Line: 47, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "textView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NSTextView+Rx.swift - Line: 48, Column: 9",
+            "H_initialValue" : "castOrFatalError(notification.object)"
+          },
+          {
+            "A_name" : "nextValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NSTextView+Rx.swift - Line: 49, Column: 9",
+            "H_initialValue" : "textView.string"
+          }
+        ],
+        "I_parameterType" : [
+          "Notification"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "currentDelegate",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "class"
+        ],
+        "F_location" : "NSTextView+Rx.swift - Line: 57, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ParentObject"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> NSTextViewDelegate?"
+      },
+      {
+        "A_name" : "setCurrentDelegate",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "class"
+        ],
+        "F_location" : "NSTextView+Rx.swift - Line: 62, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSTextViewDelegate?",
+          "ParentObject"
+        ],
+        "I_parameters" : [
+          "_",
+          "to"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "textView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 25, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "textView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 28, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSTextView"
+    ],
+    "I_parameters" : [
+      "textView"
+    ]
+  },
+  {
+    "A_name" : "registerKnownImplementations",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 39, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "textSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 43, Column: 5",
+    "H_initialValue" : "PublishSubject<String>()"
+  },
+  {
+    "A_name" : "textDidChange",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 47, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "textView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSTextView+Rx.swift - Line: 48, Column: 9",
+        "H_initialValue" : "castOrFatalError(notification.object)"
+      },
+      {
+        "A_name" : "nextValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSTextView+Rx.swift - Line: 49, Column: 9",
+        "H_initialValue" : "textView.string"
+      }
+    ],
+    "I_parameterType" : [
+      "Notification"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "textView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 48, Column: 9",
+    "H_initialValue" : "castOrFatalError(notification.object)"
+  },
+  {
+    "A_name" : "nextValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 49, Column: 9",
+    "H_initialValue" : "textView.string"
+  },
+  {
+    "A_name" : "currentDelegate",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "class"
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 57, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ParentObject"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> NSTextViewDelegate?"
+  },
+  {
+    "A_name" : "setCurrentDelegate",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "class"
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 62, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSTextViewDelegate?",
+      "ParentObject"
+    ],
+    "I_parameters" : [
+      "_",
+      "to"
+    ]
+  },
+  {
+    "A_name" : "Reactive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 68, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "delegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSTextView+Rx.swift - Line: 73, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "string",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSTextView+Rx.swift - Line: 78, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "delegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 73, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "string",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 78, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "delegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 79, Column: 9",
+    "H_initialValue" : "RxTextViewDelegateProxy.proxy(for: self.base)"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 81, Column: 9",
+    "H_initialValue" : "Observable.deferred { [weak textView = self.base] in\n            delegate.textSubject.startWith(textView?.string ?? \"\")\n        }.take(until: self.deallocated)"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSTextView+Rx.swift - Line: 85, Column: 9",
+    "H_initialValue" : "Binder(self.base) { control, value in\n            control.string = value\n        }"
+  }
+]

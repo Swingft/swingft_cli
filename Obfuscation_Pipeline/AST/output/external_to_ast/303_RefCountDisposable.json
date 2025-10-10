@@ -1,0 +1,446 @@
+[
+  {
+    "A_name" : "RefCountDisposable",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "DisposeBase",
+      "Cancelable"
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 11, Column: 5",
+        "H_initialValue" : "SpinLock()"
+      },
+      {
+        "A_name" : "disposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 12, Column: 5",
+        "H_initialValue" : "nil as Disposable?"
+      },
+      {
+        "A_name" : "primaryDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 13, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "count",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 14, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 17, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 22, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Disposable"
+        ],
+        "I_parameters" : [
+          "disposable"
+        ]
+      },
+      {
+        "A_name" : "retain",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 32, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 49, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "oldDisposable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RefCountDisposable.swift - Line: 50, Column: 9",
+            "H_initialValue" : "self.lock.performLocked {\n            if let oldDisposable = self.disposable, !self.primaryDisposed {\n                self.primaryDisposed = true\n\n                if self.count == 0 {\n                    self.disposable = nil\n                    return oldDisposable\n                }\n            }\n\n            return nil\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "release",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 68, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "oldDisposable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RefCountDisposable.swift - Line: 69, Column: 9",
+            "H_initialValue" : "self.lock.performLocked {\n            if let oldDisposable = self.disposable {\n                do {\n                    _ = try decrementChecked(&self.count)\n                } catch {\n                    rxFatalError(\"RefCountDisposable decrement on release failed\")\n                }\n\n                guard self.count >= 0 else {\n                    rxFatalError(\"RefCountDisposable counter is lower than 0\")\n                }\n\n                if self.primaryDisposed && self.count == 0 {\n                    self.disposable = nil\n                    return oldDisposable\n                }\n            }\n\n            return nil\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 11, Column: 5",
+    "H_initialValue" : "SpinLock()"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 12, Column: 5",
+    "H_initialValue" : "nil as Disposable?"
+  },
+  {
+    "A_name" : "primaryDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 13, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "count",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 14, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 17, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 22, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Disposable"
+    ],
+    "I_parameters" : [
+      "disposable"
+    ]
+  },
+  {
+    "A_name" : "retain",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 32, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 49, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "oldDisposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 50, Column: 9",
+        "H_initialValue" : "self.lock.performLocked {\n            if let oldDisposable = self.disposable, !self.primaryDisposed {\n                self.primaryDisposed = true\n\n                if self.count == 0 {\n                    self.disposable = nil\n                    return oldDisposable\n                }\n            }\n\n            return nil\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "oldDisposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 50, Column: 9",
+    "H_initialValue" : "self.lock.performLocked {\n            if let oldDisposable = self.disposable, !self.primaryDisposed {\n                self.primaryDisposed = true\n\n                if self.count == 0 {\n                    self.disposable = nil\n                    return oldDisposable\n                }\n            }\n\n            return nil\n        }"
+  },
+  {
+    "A_name" : "release",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 68, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "oldDisposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 69, Column: 9",
+        "H_initialValue" : "self.lock.performLocked {\n            if let oldDisposable = self.disposable {\n                do {\n                    _ = try decrementChecked(&self.count)\n                } catch {\n                    rxFatalError(\"RefCountDisposable decrement on release failed\")\n                }\n\n                guard self.count >= 0 else {\n                    rxFatalError(\"RefCountDisposable counter is lower than 0\")\n                }\n\n                if self.primaryDisposed && self.count == 0 {\n                    self.disposable = nil\n                    return oldDisposable\n                }\n            }\n\n            return nil\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "oldDisposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 69, Column: 9",
+    "H_initialValue" : "self.lock.performLocked {\n            if let oldDisposable = self.disposable {\n                do {\n                    _ = try decrementChecked(&self.count)\n                } catch {\n                    rxFatalError(\"RefCountDisposable decrement on release failed\")\n                }\n\n                guard self.count >= 0 else {\n                    rxFatalError(\"RefCountDisposable counter is lower than 0\")\n                }\n\n                if self.primaryDisposed && self.count == 0 {\n                    self.disposable = nil\n                    return oldDisposable\n                }\n            }\n\n            return nil\n        }"
+  },
+  {
+    "A_name" : "RefCountInnerDisposable",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "DisposeBase",
+      "Disposable"
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 96, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 98, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 99, Column: 5",
+        "H_initialValue" : "AtomicInt(0)"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 101, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "RefCountDisposable"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RefCountDisposable.swift - Line: 106, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 98, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 99, Column: 5",
+    "H_initialValue" : "AtomicInt(0)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 101, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "RefCountDisposable"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RefCountDisposable.swift - Line: 106, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

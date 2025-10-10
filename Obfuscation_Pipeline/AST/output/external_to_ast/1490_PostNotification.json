@@ -1,0 +1,469 @@
+[
+  {
+    "A_name" : "NotificationCollector",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 4, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "observedNotifications",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotification.swift - Line: 5, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "notificationCenter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotification.swift - Line: 6, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "names",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotification.swift - Line: 7, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "tokens",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotification.swift - Line: 8, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "PostNotification.swift - Line: 10, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NotificationCenter",
+          "Set<Notification.Name>"
+        ],
+        "I_parameters" : [
+          "notificationCenter",
+          "names"
+        ]
+      },
+      {
+        "A_name" : "startObserving",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotification.swift - Line: 17, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "observedNotifications",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 5, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "notificationCenter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 6, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "names",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 7, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "tokens",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 8, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "PostNotification.swift - Line: 10, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NotificationCenter",
+      "Set<Notification.Name>"
+    ],
+    "I_parameters" : [
+      "notificationCenter",
+      "names"
+    ]
+  },
+  {
+    "A_name" : "startObserving",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 17, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "addObserver",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 18, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Notification.Name?"
+    ],
+    "I_parameters" : [
+      "forName"
+    ],
+    "J_returnType" : "-> NSObjectProtocol"
+  },
+  {
+    "A_name" : "mainThread",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 41, Column: 1",
+    "H_initialValue" : "pthread_self()"
+  },
+  {
+    "A_name" : "_postNotifications",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 43, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "collector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotification.swift - Line: 49, Column: 5",
+        "H_initialValue" : "NotificationCollector(notificationCenter: center, names: names)"
+      },
+      {
+        "A_name" : "once",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotification.swift - Line: 51, Column: 5",
+        "H_initialValue" : "false"
+      }
+    ],
+    "I_parameterType" : [
+      "Predicate<[Notification]>",
+      "NotificationCenter",
+      "Set<Notification.Name>"
+    ],
+    "I_parameters" : [
+      "_",
+      "from",
+      "names"
+    ],
+    "J_returnType" : "-> Predicate<Out>"
+  },
+  {
+    "A_name" : "collector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 49, Column: 5",
+    "H_initialValue" : "NotificationCollector(notificationCenter: center, names: names)"
+  },
+  {
+    "A_name" : "once",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 51, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "collectorNotificationsExpression",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 54, Column: 9",
+    "H_initialValue" : "Expression(\n            memoizedExpression: { _ in\n                return collector.observedNotifications\n            },\n            location: actualExpression.location,\n            withoutCaching: true\n        )"
+  },
+  {
+    "A_name" : "actualValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 68, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 75, Column: 9",
+    "H_initialValue" : "try predicate.satisfies(collectorNotificationsExpression)"
+  },
+  {
+    "A_name" : "postNotifications",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 83, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Predicate<[Notification]>",
+      "NotificationCenter"
+    ],
+    "I_parameters" : [
+      "_",
+      "from"
+    ],
+    "J_returnType" : "-> Predicate<Out>"
+  },
+  {
+    "A_name" : "postNotifications",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "PostNotification.swift - Line: 90, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Predicate<[Notification]>",
+      "NotificationCenter"
+    ],
+    "I_parameters" : [
+      "_",
+      "fromNotificationCenter"
+    ],
+    "J_returnType" : "-> Predicate<Out>"
+  },
+  {
+    "A_name" : "postDistributedNotifications",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 99, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Predicate<[Notification]>",
+      "DistributedNotificationCenter",
+      "Set<Notification.Name>"
+    ],
+    "I_parameters" : [
+      "_",
+      "from",
+      "names"
+    ],
+    "J_returnType" : "-> Predicate<Out>"
+  },
+  {
+    "A_name" : "postNotifications",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "PostNotification.swift - Line: 108, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "collector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotification.swift - Line: 114, Column: 5",
+        "H_initialValue" : "NotificationCollector(notificationCenter: center)"
+      },
+      {
+        "A_name" : "once",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotification.swift - Line: 116, Column: 5",
+        "H_initialValue" : "false"
+      }
+    ],
+    "I_parameterType" : [
+      "T",
+      "NotificationCenter"
+    ],
+    "I_parameters" : [
+      "_",
+      "from"
+    ],
+    "J_returnType" : "-> Predicate<Any>"
+  },
+  {
+    "A_name" : "collector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 114, Column: 5",
+    "H_initialValue" : "NotificationCollector(notificationCenter: center)"
+  },
+  {
+    "A_name" : "once",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 116, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "collectorNotificationsExpression",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 119, Column: 9",
+    "H_initialValue" : "Expression(memoizedExpression: { _ in\n            return collector.observedNotifications\n            }, location: actualExpression.location, withoutCaching: true)"
+  },
+  {
+    "A_name" : "failureMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 129, Column: 9",
+    "H_initialValue" : "FailureMessage()"
+  },
+  {
+    "A_name" : "match",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotification.swift - Line: 130, Column: 9",
+    "H_initialValue" : "try notificationsMatcher.matches(collectorNotificationsExpression, failureMessage: failureMessage)"
+  },
+  {
+    "A_name" : "postNotifications",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "PostNotification.swift - Line: 140, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T",
+      "NotificationCenter"
+    ],
+    "I_parameters" : [
+      "_",
+      "fromNotificationCenter"
+    ],
+    "J_returnType" : "-> Predicate<Any>"
+  }
+]

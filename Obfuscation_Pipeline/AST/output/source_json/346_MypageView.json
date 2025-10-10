@@ -1,0 +1,1044 @@
+[
+  {
+    "A_name" : "MypageView",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIView"
+    ],
+    "F_location" : "MypageView.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "MenuItem",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 16, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "notification",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MypageView.swift - Line: 17, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "blockedUsers",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MypageView.swift - Line: 18, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "support",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MypageView.swift - Line: 19, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "policy",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MypageView.swift - Line: 20, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "onMenuTap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 25, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onEditProfileTap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 26, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "scrollView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 30, Column: 5",
+        "H_initialValue" : "UIScrollView()"
+      },
+      {
+        "A_name" : "contentView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 31, Column: 5",
+        "H_initialValue" : "UIView()"
+      },
+      {
+        "A_name" : "titleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 33, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"마이페이지\"\n        label.font = .suit(.head_b_18)\n        label.textColor = .black\n        return label\n    }()"
+      },
+      {
+        "A_name" : "profileCardView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 41, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 12\n        return view\n    }()"
+      },
+      {
+        "A_name" : "menuCardView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 48, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 12\n        return view\n    }()"
+      },
+      {
+        "A_name" : "profileImageView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 55, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.backgroundColor = .gray200\n        imageView.layer.cornerRadius = 30\n        imageView.contentMode = .scaleAspectFill\n        imageView.clipsToBounds = true\n        imageView.layer.borderWidth = 1\n        imageView.layer.borderColor = UIColor.gray200.cgColor\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "nicknameLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 66, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"내 닉네임\"\n        label.font = .suit(.head_b_18)\n        label.textColor = .black\n        return label\n    }()"
+      },
+      {
+        "A_name" : "editButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 74, Column: 5",
+        "H_initialValue" : "{\n        let button = UIButton()\n        button.setImage(UIImage(named: \"ic_pen_24_ios\", in: .module, compatibleWith: nil), for: .normal)\n        button.tintColor = .gray400\n        return button\n    }()"
+      },
+      {
+        "A_name" : "feedButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 81, Column: 5",
+        "H_initialValue" : "{\n        let button = UIButton()\n        button.setTitle(\"나의 피드\", for: .normal)\n        button.setTitleColor(.white, for: .normal)\n        button.backgroundColor = .black\n        button.titleLabel?.font = .suit(.body_sb_14)\n        button.layer.cornerRadius = 4\n        return button\n    }()"
+      },
+      {
+        "A_name" : "versionLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 91, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"버전 정보\"\n        label.font = .suit(.body_m_14)\n        label.textColor = .gray700\n        return label\n    }()"
+      },
+      {
+        "A_name" : "versionIconView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 99, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"ic_info_24_ios\", in: .module, compatibleWith: nil)\n        imageView.tintColor = .gray700\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "versionValueLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 106, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"1.01.01\"\n        label.font = .suit(.caption_r_14)\n        label.textColor = .gray400\n        return label\n    }()"
+      },
+      {
+        "A_name" : "logoutButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 114, Column: 5",
+        "H_initialValue" : "{\n        let button = UIButton()\n        button.setTitle(\"로그아웃\", for: .normal)\n        button.setTitleColor(.black, for: .normal)\n        button.setImage(UIImage(named: \"ic_logout_24_ios\", in: .module, compatibleWith: nil), for: .normal)\n        button.tintColor = .black\n        button.titleLabel?.font = .systemFont(ofSize: 14)\n        button.contentHorizontalAlignment = .leading\n        button.semanticContentAttribute = .forceLeftToRight\n        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)\n        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)\n        return button\n    }()"
+      },
+      {
+        "A_name" : "menuItems",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 128, Column: 5",
+        "H_initialValue" : "[\n        (.notification, \"알림 설정\", \"ic_bell_24_ios\"),\n        (.blockedUsers, \"차단한 유저\", \"ic_block_black_24_ios\"),\n        (.support, \"고객센터\", \"ic_customer_24_ios\"),\n        (.policy, \"개인정보 처리방침 및 이용약관\", \"ic_document_24_ios\")\n    ]"
+      },
+      {
+        "A_name" : "menuRows",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 135, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MypageView.swift - Line: 139, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MypageView.swift - Line: 158, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "makeMenuRowView",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 247, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MypageView.swift - Line: 248, Column: 9",
+            "H_initialValue" : "UIControl()"
+          },
+          {
+            "A_name" : "iconView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MypageView.swift - Line: 250, Column: 9",
+            "H_initialValue" : "UIImageView(image: UIImage(named: icon, in: .module, compatibleWith: nil))"
+          },
+          {
+            "A_name" : "titleLabel",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MypageView.swift - Line: 253, Column: 9",
+            "H_initialValue" : "UILabel()"
+          },
+          {
+            "A_name" : "chevron",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MypageView.swift - Line: 258, Column: 9",
+            "H_initialValue" : "UIImageView(image: UIImage(named: \"ic_arrow_right_g_24_ios\", in: .module, compatibleWith: nil))"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "@escaping () -> Void"
+        ],
+        "I_parameters" : [
+          "title",
+          "icon",
+          "action"
+        ],
+        "J_returnType" : "-> UIControl"
+      },
+      {
+        "A_name" : "addGesture",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 281, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "imageTapGesture",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MypageView.swift - Line: 282, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(handleEditProfileTap))"
+          },
+          {
+            "A_name" : "nicknameTapGesture",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MypageView.swift - Line: 286, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(handleEditProfileTap))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "handleEditProfileTap",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "MypageView.swift - Line: 293, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "MenuItem",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 16, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "notification",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 17, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "blockedUsers",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 18, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "support",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 19, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "policy",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 20, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "onMenuTap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 25, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onEditProfileTap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 26, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "scrollView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 30, Column: 5",
+    "H_initialValue" : "UIScrollView()"
+  },
+  {
+    "A_name" : "contentView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 31, Column: 5",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "titleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 33, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"마이페이지\"\n        label.font = .suit(.head_b_18)\n        label.textColor = .black\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 34, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "profileCardView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 41, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 12\n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 42, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "menuCardView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 48, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 12\n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 49, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "profileImageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 55, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.backgroundColor = .gray200\n        imageView.layer.cornerRadius = 30\n        imageView.contentMode = .scaleAspectFill\n        imageView.clipsToBounds = true\n        imageView.layer.borderWidth = 1\n        imageView.layer.borderColor = UIColor.gray200.cgColor\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 56, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "nicknameLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 66, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"내 닉네임\"\n        label.font = .suit(.head_b_18)\n        label.textColor = .black\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 67, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "editButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 74, Column: 5",
+    "H_initialValue" : "{\n        let button = UIButton()\n        button.setImage(UIImage(named: \"ic_pen_24_ios\", in: .module, compatibleWith: nil), for: .normal)\n        button.tintColor = .gray400\n        return button\n    }()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 75, Column: 9",
+    "H_initialValue" : "UIButton()"
+  },
+  {
+    "A_name" : "feedButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 81, Column: 5",
+    "H_initialValue" : "{\n        let button = UIButton()\n        button.setTitle(\"나의 피드\", for: .normal)\n        button.setTitleColor(.white, for: .normal)\n        button.backgroundColor = .black\n        button.titleLabel?.font = .suit(.body_sb_14)\n        button.layer.cornerRadius = 4\n        return button\n    }()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 82, Column: 9",
+    "H_initialValue" : "UIButton()"
+  },
+  {
+    "A_name" : "versionLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 91, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"버전 정보\"\n        label.font = .suit(.body_m_14)\n        label.textColor = .gray700\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 92, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "versionIconView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 99, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"ic_info_24_ios\", in: .module, compatibleWith: nil)\n        imageView.tintColor = .gray700\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 100, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "versionValueLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 106, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"1.01.01\"\n        label.font = .suit(.caption_r_14)\n        label.textColor = .gray400\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 107, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "logoutButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 114, Column: 5",
+    "H_initialValue" : "{\n        let button = UIButton()\n        button.setTitle(\"로그아웃\", for: .normal)\n        button.setTitleColor(.black, for: .normal)\n        button.setImage(UIImage(named: \"ic_logout_24_ios\", in: .module, compatibleWith: nil), for: .normal)\n        button.tintColor = .black\n        button.titleLabel?.font = .systemFont(ofSize: 14)\n        button.contentHorizontalAlignment = .leading\n        button.semanticContentAttribute = .forceLeftToRight\n        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 8)\n        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 0)\n        return button\n    }()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 115, Column: 9",
+    "H_initialValue" : "UIButton()"
+  },
+  {
+    "A_name" : "menuItems",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 128, Column: 5",
+    "H_initialValue" : "[\n        (.notification, \"알림 설정\", \"ic_bell_24_ios\"),\n        (.blockedUsers, \"차단한 유저\", \"ic_block_black_24_ios\"),\n        (.support, \"고객센터\", \"ic_customer_24_ios\"),\n        (.policy, \"개인정보 처리방침 및 이용약관\", \"ic_document_24_ios\")\n    ]"
+  },
+  {
+    "A_name" : "menuRows",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 135, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MypageView.swift - Line: 139, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "row",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 148, Column: 13",
+    "H_initialValue" : "makeMenuRowView(title: item.title, icon: item.icon) { [weak self] in\n                self?.onMenuTap?(item.item)\n            }"
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MypageView.swift - Line: 158, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "makeMenuRowView",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 247, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 248, Column: 9",
+        "H_initialValue" : "UIControl()"
+      },
+      {
+        "A_name" : "iconView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 250, Column: 9",
+        "H_initialValue" : "UIImageView(image: UIImage(named: icon, in: .module, compatibleWith: nil))"
+      },
+      {
+        "A_name" : "titleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 253, Column: 9",
+        "H_initialValue" : "UILabel()"
+      },
+      {
+        "A_name" : "chevron",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 258, Column: 9",
+        "H_initialValue" : "UIImageView(image: UIImage(named: \"ic_arrow_right_g_24_ios\", in: .module, compatibleWith: nil))"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "@escaping () -> Void"
+    ],
+    "I_parameters" : [
+      "title",
+      "icon",
+      "action"
+    ],
+    "J_returnType" : "-> UIControl"
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 248, Column: 9",
+    "H_initialValue" : "UIControl()"
+  },
+  {
+    "A_name" : "iconView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 250, Column: 9",
+    "H_initialValue" : "UIImageView(image: UIImage(named: icon, in: .module, compatibleWith: nil))"
+  },
+  {
+    "A_name" : "titleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 253, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "chevron",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 258, Column: 9",
+    "H_initialValue" : "UIImageView(image: UIImage(named: \"ic_arrow_right_g_24_ios\", in: .module, compatibleWith: nil))"
+  },
+  {
+    "A_name" : "addGesture",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 281, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "imageTapGesture",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 282, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(handleEditProfileTap))"
+      },
+      {
+        "A_name" : "nicknameTapGesture",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 286, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(handleEditProfileTap))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "imageTapGesture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 282, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(handleEditProfileTap))"
+  },
+  {
+    "A_name" : "nicknameTapGesture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 286, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(handleEditProfileTap))"
+  },
+  {
+    "A_name" : "handleEditProfileTap",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "MypageView.swift - Line: 293, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "MypageView",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 300, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MypageView.swift - Line: 301, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String?"
+        ],
+        "I_parameters" : [
+          "nickname",
+          "profileImageURL"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MypageView.swift - Line: 301, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String?"
+    ],
+    "I_parameters" : [
+      "nickname",
+      "profileImageURL"
+    ]
+  }
+]

@@ -1,0 +1,585 @@
+[
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "ifEmpty",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 18, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<Element>"
+        ],
+        "I_parameters" : [
+          "switchTo"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "ifEmpty",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 18, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<Element>"
+    ],
+    "I_parameters" : [
+      "switchTo"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "SwitchIfEmpty",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Element>"
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 23, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 25, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "ifEmpty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 26, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 28, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<Element>",
+          "Observable<Element>"
+        ],
+        "I_parameters" : [
+          "source",
+          "ifEmpty"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 33, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SwitchIfEmpty.swift - Line: 34, Column: 9",
+            "H_initialValue" : "SwitchIfEmptySink(ifEmpty: self.ifEmpty,\n                                     observer: observer,\n                                     cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SwitchIfEmpty.swift - Line: 37, Column: 9",
+            "H_initialValue" : "sink.run(self.source.asObservable())"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 25, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ifEmpty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 26, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 28, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<Element>",
+      "Observable<Element>"
+    ],
+    "I_parameters" : [
+      "source",
+      "ifEmpty"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 33, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 34, Column: 9",
+        "H_initialValue" : "SwitchIfEmptySink(ifEmpty: self.ifEmpty,\n                                     observer: observer,\n                                     cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 37, Column: 9",
+        "H_initialValue" : "sink.run(self.source.asObservable())"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 34, Column: 9",
+    "H_initialValue" : "SwitchIfEmptySink(ifEmpty: self.ifEmpty,\n                                     observer: observer,\n                                     cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 37, Column: 9",
+    "H_initialValue" : "sink.run(self.source.asObservable())"
+  },
+  {
+    "A_name" : "SwitchIfEmptySink",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sink<Observer>",
+      "ObserverType"
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 43, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "ifEmpty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 47, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isEmpty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 48, Column: 5",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "ifEmptySubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 49, Column: 5",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 51, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<Element>",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "ifEmpty",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 56, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SwitchIfEmpty.swift - Line: 57, Column: 9",
+            "H_initialValue" : "source.subscribe(self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Observable<Observer.Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 61, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "ifEmpty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 47, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isEmpty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 48, Column: 5",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "ifEmptySubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 49, Column: 5",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 51, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<Element>",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "ifEmpty",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 56, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 57, Column: 9",
+        "H_initialValue" : "source.subscribe(self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Observable<Observer.Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 57, Column: 9",
+    "H_initialValue" : "source.subscribe(self)"
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 61, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "ifEmptySink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 75, Column: 13",
+    "H_initialValue" : "SwitchIfEmptySinkIter(parent: self)"
+  },
+  {
+    "A_name" : "SwitchIfEmptySinkIter",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ObserverType"
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 81, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 86, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 88, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent"
+        ],
+        "I_parameters" : [
+          "parent"
+        ]
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SwitchIfEmpty.swift - Line: 92, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 86, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 88, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent"
+    ],
+    "I_parameters" : [
+      "parent"
+    ]
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SwitchIfEmpty.swift - Line: 92, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  }
+]

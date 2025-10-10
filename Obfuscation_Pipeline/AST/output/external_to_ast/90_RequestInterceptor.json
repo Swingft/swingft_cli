@@ -1,0 +1,1721 @@
+[
+  {
+    "A_name" : "RequestAdapterState",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 28, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "requestID",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 30, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 33, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "requestID",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 30, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 33, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "RequestAdapter",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 39, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "adapt",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 46, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "Session",
+          "@escaping @Sendable (_ result: Result<URLRequest, any Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "for",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "adapt",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 54, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "RequestAdapterState",
+          "@escaping @Sendable (_ result: Result<URLRequest, any Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "using",
+          "completion"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "adapt",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 46, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "Session",
+      "@escaping @Sendable (_ result: Result<URLRequest, any Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "for",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "adapt",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 54, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "RequestAdapterState",
+      "@escaping @Sendable (_ result: Result<URLRequest, any Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "using",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "RequestAdapter",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 57, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "adapt",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 58, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "RequestAdapterState",
+          "@escaping @Sendable (_ result: Result<URLRequest, any Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "using",
+          "completion"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "adapt",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 58, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "RequestAdapterState",
+      "@escaping @Sendable (_ result: Result<URLRequest, any Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "using",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "RetryResult",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 67, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "retry",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 69, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "retryWithDelay",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 71, Column: 10",
+        "I_parameterType" : [
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "doNotRetry",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 73, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "doNotRetryWithError",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 75, Column: 10",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "RetryResult",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 78, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "retryRequired",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 79, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "delay",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 86, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 93, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "retryRequired",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 79, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "delay",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 86, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 93, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "RequestRetrier",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 101, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "retry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 113, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "Session",
+          "any Error",
+          "@escaping @Sendable (RetryResult) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "for",
+          "dueTo",
+          "completion"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 113, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "Session",
+      "any Error",
+      "@escaping @Sendable (RetryResult) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "for",
+      "dueTo",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "RequestInterceptor",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RequestAdapter",
+      "RequestRetrier"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 119, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "RequestInterceptor",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 121, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "adapt",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 122, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "Session",
+          "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "for",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "retry",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 127, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "Session",
+          "any Error",
+          "@escaping @Sendable (RetryResult) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "for",
+          "dueTo",
+          "completion"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "adapt",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 122, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "Session",
+      "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "for",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 127, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "Session",
+      "any Error",
+      "@escaping @Sendable (RetryResult) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "for",
+      "dueTo",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "Adapter",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable",
+      "RequestInterceptor"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 150, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "adaptHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 151, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 157, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping AdaptHandler"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "adapt",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "preconcurrency"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 162, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "Session",
+          "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "for",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "adapt",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "preconcurrency"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 167, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "RequestAdapterState",
+          "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "using",
+          "completion"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "adaptHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 151, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 157, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping AdaptHandler"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "adapt",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "preconcurrency"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 162, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "Session",
+      "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "for",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "adapt",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "preconcurrency"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 167, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "RequestAdapterState",
+      "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "using",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "RequestAdapter",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 173, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "adapter",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "static"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 178, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping AdaptHandler"
+        ],
+        "I_parameters" : [
+          "using"
+        ],
+        "J_returnType" : "-> Adapter"
+      }
+    ]
+  },
+  {
+    "A_name" : "adapter",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "static"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 178, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping AdaptHandler"
+    ],
+    "I_parameters" : [
+      "using"
+    ],
+    "J_returnType" : "-> Adapter"
+  },
+  {
+    "A_name" : "Retrier",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable",
+      "RequestInterceptor"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 187, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "retryHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 188, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 193, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping RetryHandler"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "retry",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "preconcurrency"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 198, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "Session",
+          "any Error",
+          "@escaping @Sendable (RetryResult) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "for",
+          "dueTo",
+          "completion"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "retryHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 188, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 193, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping RetryHandler"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "preconcurrency"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 198, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "Session",
+      "any Error",
+      "@escaping @Sendable (RetryResult) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "for",
+      "dueTo",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "RequestRetrier",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 207, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "retrier",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "static"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 212, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping RetryHandler"
+        ],
+        "I_parameters" : [
+          "using"
+        ],
+        "J_returnType" : "-> Retrier"
+      }
+    ]
+  },
+  {
+    "A_name" : "retrier",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "static"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 212, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping RetryHandler"
+    ],
+    "I_parameters" : [
+      "using"
+    ],
+    "J_returnType" : "-> Retrier"
+  },
+  {
+    "A_name" : "Interceptor",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable",
+      "RequestInterceptor"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 221, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "adapters",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 223, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "retriers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 225, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 232, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping AdaptHandler",
+          "@escaping RetryHandler"
+        ],
+        "I_parameters" : [
+          "adaptHandler",
+          "retryHandler"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 242, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any RequestAdapter",
+          "any RequestRetrier"
+        ],
+        "I_parameters" : [
+          "adapter",
+          "retrier"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 253, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[any RequestAdapter]",
+          "[any RequestRetrier]",
+          "[any RequestInterceptor]"
+        ],
+        "I_parameters" : [
+          "adapters",
+          "retriers",
+          "interceptors"
+        ]
+      },
+      {
+        "A_name" : "adapt",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "preconcurrency"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 260, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "Session",
+          "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "for",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "adapt",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 265, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "pendingAdapters",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RequestInterceptor.swift - Line: 269, Column: 9",
+            "H_initialValue" : "adapters"
+          },
+          {
+            "A_name" : "adapter",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RequestInterceptor.swift - Line: 273, Column: 9",
+            "H_initialValue" : "pendingAdapters.removeFirst()"
+          }
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "Session",
+          "[any RequestAdapter]",
+          "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "for",
+          "using",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "adapt",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "preconcurrency"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 285, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "RequestAdapterState",
+          "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "using",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "adapt",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 290, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "pendingAdapters",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RequestInterceptor.swift - Line: 294, Column: 9",
+            "H_initialValue" : "adapters"
+          },
+          {
+            "A_name" : "adapter",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RequestInterceptor.swift - Line: 298, Column: 9",
+            "H_initialValue" : "pendingAdapters.removeFirst()"
+          }
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "RequestAdapterState",
+          "[any RequestAdapter]",
+          "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "using",
+          "adapters",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "retry",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "preconcurrency"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 310, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "Session",
+          "any Error",
+          "@escaping @Sendable (RetryResult) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "for",
+          "dueTo",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "retry",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 318, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "pendingRetriers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RequestInterceptor.swift - Line: 323, Column: 9",
+            "H_initialValue" : "retriers"
+          },
+          {
+            "A_name" : "retrier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RequestInterceptor.swift - Line: 327, Column: 9",
+            "H_initialValue" : "pendingRetriers.removeFirst()"
+          }
+        ],
+        "I_parameterType" : [
+          "Request",
+          "Session",
+          "any Error",
+          "[any RequestRetrier]",
+          "@escaping @Sendable (RetryResult) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "for",
+          "dueTo",
+          "using",
+          "completion"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "adapters",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 223, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "retriers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 225, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 232, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping AdaptHandler",
+      "@escaping RetryHandler"
+    ],
+    "I_parameters" : [
+      "adaptHandler",
+      "retryHandler"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 242, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any RequestAdapter",
+      "any RequestRetrier"
+    ],
+    "I_parameters" : [
+      "adapter",
+      "retrier"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 253, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[any RequestAdapter]",
+      "[any RequestRetrier]",
+      "[any RequestInterceptor]"
+    ],
+    "I_parameters" : [
+      "adapters",
+      "retriers",
+      "interceptors"
+    ]
+  },
+  {
+    "A_name" : "adapt",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "preconcurrency"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 260, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "Session",
+      "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "for",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "adapt",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 265, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "pendingAdapters",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 269, Column: 9",
+        "H_initialValue" : "adapters"
+      },
+      {
+        "A_name" : "adapter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 273, Column: 9",
+        "H_initialValue" : "pendingAdapters.removeFirst()"
+      }
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "Session",
+      "[any RequestAdapter]",
+      "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "for",
+      "using",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "pendingAdapters",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 269, Column: 9",
+    "H_initialValue" : "adapters"
+  },
+  {
+    "A_name" : "adapter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 273, Column: 9",
+    "H_initialValue" : "pendingAdapters.removeFirst()"
+  },
+  {
+    "A_name" : "adapt",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "preconcurrency"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 285, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "RequestAdapterState",
+      "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "using",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "adapt",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 290, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "pendingAdapters",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 294, Column: 9",
+        "H_initialValue" : "adapters"
+      },
+      {
+        "A_name" : "adapter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 298, Column: 9",
+        "H_initialValue" : "pendingAdapters.removeFirst()"
+      }
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "RequestAdapterState",
+      "[any RequestAdapter]",
+      "@escaping @Sendable (Result<URLRequest, any Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "using",
+      "adapters",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "pendingAdapters",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 294, Column: 9",
+    "H_initialValue" : "adapters"
+  },
+  {
+    "A_name" : "adapter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 298, Column: 9",
+    "H_initialValue" : "pendingAdapters.removeFirst()"
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "preconcurrency"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 310, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "Session",
+      "any Error",
+      "@escaping @Sendable (RetryResult) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "for",
+      "dueTo",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 318, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "pendingRetriers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 323, Column: 9",
+        "H_initialValue" : "retriers"
+      },
+      {
+        "A_name" : "retrier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 327, Column: 9",
+        "H_initialValue" : "pendingRetriers.removeFirst()"
+      }
+    ],
+    "I_parameterType" : [
+      "Request",
+      "Session",
+      "any Error",
+      "[any RequestRetrier]",
+      "@escaping @Sendable (RetryResult) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "for",
+      "dueTo",
+      "using",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "pendingRetriers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 323, Column: 9",
+    "H_initialValue" : "retriers"
+  },
+  {
+    "A_name" : "retrier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 327, Column: 9",
+    "H_initialValue" : "pendingRetriers.removeFirst()"
+  },
+  {
+    "A_name" : "RequestInterceptor",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 341, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interceptor",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "static"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 348, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping AdaptHandler",
+          "@escaping RetryHandler"
+        ],
+        "I_parameters" : [
+          "adapter",
+          "retrier"
+        ],
+        "J_returnType" : "-> Interceptor"
+      },
+      {
+        "A_name" : "interceptor",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "static"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 358, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any RequestAdapter",
+          "any RequestRetrier"
+        ],
+        "I_parameters" : [
+          "adapter",
+          "retrier"
+        ],
+        "J_returnType" : "-> Interceptor"
+      },
+      {
+        "A_name" : "interceptor",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "static"
+        ],
+        "F_location" : "RequestInterceptor.swift - Line: 370, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[any RequestAdapter]",
+          "[any RequestRetrier]",
+          "[any RequestInterceptor]"
+        ],
+        "I_parameters" : [
+          "adapters",
+          "retriers",
+          "interceptors"
+        ],
+        "J_returnType" : "-> Interceptor"
+      }
+    ]
+  },
+  {
+    "A_name" : "interceptor",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "static"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 348, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping AdaptHandler",
+      "@escaping RetryHandler"
+    ],
+    "I_parameters" : [
+      "adapter",
+      "retrier"
+    ],
+    "J_returnType" : "-> Interceptor"
+  },
+  {
+    "A_name" : "interceptor",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "static"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 358, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any RequestAdapter",
+      "any RequestRetrier"
+    ],
+    "I_parameters" : [
+      "adapter",
+      "retrier"
+    ],
+    "J_returnType" : "-> Interceptor"
+  },
+  {
+    "A_name" : "interceptor",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "static"
+    ],
+    "F_location" : "RequestInterceptor.swift - Line: 370, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[any RequestAdapter]",
+      "[any RequestRetrier]",
+      "[any RequestInterceptor]"
+    ],
+    "I_parameters" : [
+      "adapters",
+      "retriers",
+      "interceptors"
+    ],
+    "J_returnType" : "-> Interceptor"
+  }
+]

@@ -1,0 +1,579 @@
+[
+  {
+    "A_name" : "CGSize",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "KingfisherCompatibleValue"
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 29, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "KingfisherWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 30, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "resize",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 38, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGSize",
+          "ContentMode"
+        ],
+        "I_parameters" : [
+          "to",
+          "for"
+        ],
+        "J_returnType" : "-> CGSize"
+      },
+      {
+        "A_name" : "constrained",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 53, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "aspectWidth",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SizeExtensions.swift - Line: 54, Column: 9",
+            "H_initialValue" : "round(aspectRatio * size.height)"
+          },
+          {
+            "A_name" : "aspectHeight",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SizeExtensions.swift - Line: 55, Column: 9",
+            "H_initialValue" : "round(size.width \/ aspectRatio)"
+          }
+        ],
+        "I_parameterType" : [
+          "CGSize"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> CGSize"
+      },
+      {
+        "A_name" : "filling",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 66, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "aspectWidth",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SizeExtensions.swift - Line: 67, Column: 9",
+            "H_initialValue" : "round(aspectRatio * size.height)"
+          },
+          {
+            "A_name" : "aspectHeight",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SizeExtensions.swift - Line: 68, Column: 9",
+            "H_initialValue" : "round(size.width \/ aspectRatio)"
+          }
+        ],
+        "I_parameterType" : [
+          "CGSize"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> CGSize"
+      },
+      {
+        "A_name" : "constrainedRect",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 82, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "unifiedAnchor",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SizeExtensions.swift - Line: 84, Column: 9",
+            "H_initialValue" : "CGPoint(x: anchor.x.clamped(to: 0.0...1.0),\n                                    y: anchor.y.clamped(to: 0.0...1.0))"
+          },
+          {
+            "A_name" : "x",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SizeExtensions.swift - Line: 87, Column: 9",
+            "H_initialValue" : "unifiedAnchor.x * base.width - unifiedAnchor.x * size.width"
+          },
+          {
+            "A_name" : "y",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SizeExtensions.swift - Line: 88, Column: 9",
+            "H_initialValue" : "unifiedAnchor.y * base.height - unifiedAnchor.y * size.height"
+          },
+          {
+            "A_name" : "r",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SizeExtensions.swift - Line: 89, Column: 9",
+            "H_initialValue" : "CGRect(x: x, y: y, width: size.width, height: size.height)"
+          },
+          {
+            "A_name" : "ori",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SizeExtensions.swift - Line: 91, Column: 9",
+            "H_initialValue" : "CGRect(origin: .zero, size: base)"
+          }
+        ],
+        "I_parameterType" : [
+          "CGSize",
+          "CGPoint"
+        ],
+        "I_parameters" : [
+          "for",
+          "anchor"
+        ],
+        "J_returnType" : "-> CGRect"
+      },
+      {
+        "A_name" : "aspectRatio",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 95, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "resize",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 38, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGSize",
+      "ContentMode"
+    ],
+    "I_parameters" : [
+      "to",
+      "for"
+    ],
+    "J_returnType" : "-> CGSize"
+  },
+  {
+    "A_name" : "constrained",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 53, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "aspectWidth",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 54, Column: 9",
+        "H_initialValue" : "round(aspectRatio * size.height)"
+      },
+      {
+        "A_name" : "aspectHeight",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 55, Column: 9",
+        "H_initialValue" : "round(size.width \/ aspectRatio)"
+      }
+    ],
+    "I_parameterType" : [
+      "CGSize"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> CGSize"
+  },
+  {
+    "A_name" : "aspectWidth",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 54, Column: 9",
+    "H_initialValue" : "round(aspectRatio * size.height)"
+  },
+  {
+    "A_name" : "aspectHeight",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 55, Column: 9",
+    "H_initialValue" : "round(size.width \/ aspectRatio)"
+  },
+  {
+    "A_name" : "filling",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 66, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "aspectWidth",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 67, Column: 9",
+        "H_initialValue" : "round(aspectRatio * size.height)"
+      },
+      {
+        "A_name" : "aspectHeight",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 68, Column: 9",
+        "H_initialValue" : "round(size.width \/ aspectRatio)"
+      }
+    ],
+    "I_parameterType" : [
+      "CGSize"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> CGSize"
+  },
+  {
+    "A_name" : "aspectWidth",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 67, Column: 9",
+    "H_initialValue" : "round(aspectRatio * size.height)"
+  },
+  {
+    "A_name" : "aspectHeight",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 68, Column: 9",
+    "H_initialValue" : "round(size.width \/ aspectRatio)"
+  },
+  {
+    "A_name" : "constrainedRect",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 82, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "unifiedAnchor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 84, Column: 9",
+        "H_initialValue" : "CGPoint(x: anchor.x.clamped(to: 0.0...1.0),\n                                    y: anchor.y.clamped(to: 0.0...1.0))"
+      },
+      {
+        "A_name" : "x",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 87, Column: 9",
+        "H_initialValue" : "unifiedAnchor.x * base.width - unifiedAnchor.x * size.width"
+      },
+      {
+        "A_name" : "y",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 88, Column: 9",
+        "H_initialValue" : "unifiedAnchor.y * base.height - unifiedAnchor.y * size.height"
+      },
+      {
+        "A_name" : "r",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 89, Column: 9",
+        "H_initialValue" : "CGRect(x: x, y: y, width: size.width, height: size.height)"
+      },
+      {
+        "A_name" : "ori",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 91, Column: 9",
+        "H_initialValue" : "CGRect(origin: .zero, size: base)"
+      }
+    ],
+    "I_parameterType" : [
+      "CGSize",
+      "CGPoint"
+    ],
+    "I_parameters" : [
+      "for",
+      "anchor"
+    ],
+    "J_returnType" : "-> CGRect"
+  },
+  {
+    "A_name" : "unifiedAnchor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 84, Column: 9",
+    "H_initialValue" : "CGPoint(x: anchor.x.clamped(to: 0.0...1.0),\n                                    y: anchor.y.clamped(to: 0.0...1.0))"
+  },
+  {
+    "A_name" : "x",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 87, Column: 9",
+    "H_initialValue" : "unifiedAnchor.x * base.width - unifiedAnchor.x * size.width"
+  },
+  {
+    "A_name" : "y",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 88, Column: 9",
+    "H_initialValue" : "unifiedAnchor.y * base.height - unifiedAnchor.y * size.height"
+  },
+  {
+    "A_name" : "r",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 89, Column: 9",
+    "H_initialValue" : "CGRect(x: x, y: y, width: size.width, height: size.height)"
+  },
+  {
+    "A_name" : "ori",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 91, Column: 9",
+    "H_initialValue" : "CGRect(origin: .zero, size: base)"
+  },
+  {
+    "A_name" : "aspectRatio",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 95, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "CGRect",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 100, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "scaled",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 101, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGFloat"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> CGRect"
+      }
+    ]
+  },
+  {
+    "A_name" : "scaled",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 101, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGFloat"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> CGRect"
+  },
+  {
+    "A_name" : "Comparable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 107, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "clamped",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SizeExtensions.swift - Line: 108, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ClosedRange<Self>"
+        ],
+        "I_parameters" : [
+          "to"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "clamped",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SizeExtensions.swift - Line: 108, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ClosedRange<Self>"
+    ],
+    "I_parameters" : [
+      "to"
+    ],
+    "J_returnType" : "-> Self"
+  }
+]

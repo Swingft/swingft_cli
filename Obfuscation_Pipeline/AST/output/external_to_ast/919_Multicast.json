@@ -1,0 +1,1802 @@
+[
+  {
+    "A_name" : "ConnectableObservable",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Observable<Element>",
+      "ConnectableObservableType"
+    ],
+    "F_location" : "Multicast.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "connect",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 21, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      }
+    ]
+  },
+  {
+    "A_name" : "connect",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 21, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 26, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "multicast",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 41, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping () throws -> Subject",
+          "@escaping (Observable<Subject.Element>) throws -> Observable<Result>"
+        ],
+        "I_parameters" : [
+          "_",
+          "selector"
+        ],
+        "J_returnType" : "-> Observable<Result>"
+      }
+    ]
+  },
+  {
+    "A_name" : "multicast",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 41, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping () throws -> Subject",
+      "@escaping (Observable<Subject.Element>) throws -> Observable<Result>"
+    ],
+    "I_parameters" : [
+      "_",
+      "selector"
+    ],
+    "J_returnType" : "-> Observable<Result>"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 51, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "publish",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 62, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> ConnectableObservable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "publish",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 62, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> ConnectableObservable<Element>"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 67, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "replay",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 79, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ConnectableObservable<Element>"
+      },
+      {
+        "A_name" : "replayAll",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 93, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> ConnectableObservable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "replay",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 79, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ConnectableObservable<Element>"
+  },
+  {
+    "A_name" : "replayAll",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 93, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> ConnectableObservable<Element>"
+  },
+  {
+    "A_name" : "ConnectableObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 99, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "refCount",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 108, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "refCount",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 108, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 113, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "multicast",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 127, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Subject"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ConnectableObservable<Subject.Element>"
+      },
+      {
+        "A_name" : "multicast",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 144, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping () -> Subject"
+        ],
+        "I_parameters" : [
+          "makeSubject"
+        ],
+        "J_returnType" : "-> ConnectableObservable<Subject.Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "multicast",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 127, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Subject"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ConnectableObservable<Subject.Element>"
+  },
+  {
+    "A_name" : "multicast",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 144, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping () -> Subject"
+    ],
+    "I_parameters" : [
+      "makeSubject"
+    ],
+    "J_returnType" : "-> ConnectableObservable<Subject.Element>"
+  },
+  {
+    "A_name" : "Connection",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ObserverType",
+      "Disposable"
+    ],
+    "F_location" : "Multicast.swift - Line: 150, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 153, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 155, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 156, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "subjectObserver",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 157, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "disposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 159, Column: 5",
+        "H_initialValue" : "AtomicInt(0)"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 161, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ConnectableObservableAdapter<Subject>",
+          "Subject.Observer",
+          "RecursiveLock",
+          "Disposable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "subjectObserver",
+          "lock",
+          "subscription"
+        ]
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 168, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Subject.Observer.Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 178, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 153, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 155, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 156, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subjectObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 157, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "disposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 159, Column: 5",
+    "H_initialValue" : "AtomicInt(0)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 161, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ConnectableObservableAdapter<Subject>",
+      "Subject.Observer",
+      "RecursiveLock",
+      "Disposable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "subjectObserver",
+      "lock",
+      "subscription"
+    ]
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 168, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Subject.Observer.Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 178, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "ConnectableObservableAdapter",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ConnectableObservable<Subject.Element>"
+    ],
+    "F_location" : "Multicast.swift - Line: 196, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 200, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "makeSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 201, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 203, Column: 5",
+        "H_initialValue" : "RecursiveLock()"
+      },
+      {
+        "A_name" : "subject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 204, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "connection",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 207, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 209, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<Subject.Observer.Element>",
+          "@escaping () -> Subject"
+        ],
+        "I_parameters" : [
+          "source",
+          "makeSubject"
+        ]
+      },
+      {
+        "A_name" : "connect",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Multicast.swift - Line: 216, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "lazySubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 231, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "subscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Multicast.swift - Line: 241, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable"
+      }
+    ]
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 200, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "makeSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 201, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 203, Column: 5",
+    "H_initialValue" : "RecursiveLock()"
+  },
+  {
+    "A_name" : "subject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 204, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "connection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 207, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 209, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<Subject.Observer.Element>",
+      "@escaping () -> Subject"
+    ],
+    "I_parameters" : [
+      "source",
+      "makeSubject"
+    ]
+  },
+  {
+    "A_name" : "connect",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Multicast.swift - Line: 216, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "singleAssignmentDisposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 222, Column: 13",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "connection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 223, Column: 13",
+    "H_initialValue" : "Connection(parent: self, subjectObserver: self.lazySubject.asObserver(), lock: self.lock, subscription: singleAssignmentDisposable)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 225, Column: 13",
+    "H_initialValue" : "self.source.subscribe(connection)"
+  },
+  {
+    "A_name" : "lazySubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 231, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 236, Column: 9",
+    "H_initialValue" : "self.makeSubject()"
+  },
+  {
+    "A_name" : "subscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Multicast.swift - Line: 241, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "RefCountSink",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sink<Observer>",
+      "ObserverType"
+    ],
+    "F_location" : "Multicast.swift - Line: 246, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 252, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "connectionIdSnapshot",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 254, Column: 5",
+        "H_initialValue" : "-1"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 256, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 261, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Multicast.swift - Line: 262, Column: 9",
+            "H_initialValue" : "self.parent.source.subscribe(self)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 303, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 252, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "connectionIdSnapshot",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 254, Column: 5",
+    "H_initialValue" : "-1"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 256, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 261, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 262, Column: 9",
+        "H_initialValue" : "self.parent.source.subscribe(self)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 262, Column: 9",
+    "H_initialValue" : "self.parent.source.subscribe(self)"
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 303, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "connection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 310, Column: 17",
+    "H_initialValue" : "self.parent.connectableSubscription"
+  },
+  {
+    "A_name" : "RefCount",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<ConnectableSource.Element>"
+    ],
+    "F_location" : "Multicast.swift - Line: 323, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 324, Column: 5",
+        "H_initialValue" : "RecursiveLock()"
+      },
+      {
+        "A_name" : "count",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 327, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "connectionId",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 328, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "connectableSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 329, Column: 5",
+        "H_initialValue" : "nil as Disposable?"
+      },
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 331, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 333, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ConnectableSource"
+        ],
+        "I_parameters" : [
+          "source"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Multicast.swift - Line: 337, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Multicast.swift - Line: 339, Column: 9",
+            "H_initialValue" : "RefCountSink(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Multicast.swift - Line: 340, Column: 9",
+            "H_initialValue" : "sink.run()"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 324, Column: 5",
+    "H_initialValue" : "RecursiveLock()"
+  },
+  {
+    "A_name" : "count",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 327, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "connectionId",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 328, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "connectableSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 329, Column: 5",
+    "H_initialValue" : "nil as Disposable?"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 331, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 333, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ConnectableSource"
+    ],
+    "I_parameters" : [
+      "source"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Multicast.swift - Line: 337, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 339, Column: 9",
+        "H_initialValue" : "RefCountSink(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 340, Column: 9",
+        "H_initialValue" : "sink.run()"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 339, Column: 9",
+    "H_initialValue" : "RefCountSink(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 340, Column: 9",
+    "H_initialValue" : "sink.run()"
+  },
+  {
+    "A_name" : "MulticastSink",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sink<Observer>",
+      "ObserverType"
+    ],
+    "F_location" : "Multicast.swift - Line: 345, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 350, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 352, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "MutlicastType",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 357, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 376, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<ResultType>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 350, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 352, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "MutlicastType",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 357, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 359, Column: 13",
+    "H_initialValue" : "try self.parent.subjectSelector()"
+  },
+  {
+    "A_name" : "connectable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 360, Column: 13",
+    "H_initialValue" : "ConnectableObservableAdapter(source: self.parent.source, makeSubject: { subject })"
+  },
+  {
+    "A_name" : "observable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 362, Column: 13",
+    "H_initialValue" : "try self.parent.selector(connectable)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 364, Column: 13",
+    "H_initialValue" : "observable.subscribe(self)"
+  },
+  {
+    "A_name" : "connection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 365, Column: 13",
+    "H_initialValue" : "connectable.connect()"
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 376, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<ResultType>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "Multicast",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Result>"
+    ],
+    "F_location" : "Multicast.swift - Line: 386, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 390, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "subjectSelector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 391, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "selector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 392, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 394, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<Subject.Observer.Element>",
+          "@escaping SubjectSelectorType",
+          "@escaping SelectorType"
+        ],
+        "I_parameters" : [
+          "source",
+          "subjectSelector",
+          "selector"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Multicast.swift - Line: 400, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Multicast.swift - Line: 401, Column: 9",
+            "H_initialValue" : "MulticastSink(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Multicast.swift - Line: 402, Column: 9",
+            "H_initialValue" : "sink.run()"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 390, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subjectSelector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 391, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "selector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 392, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 394, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<Subject.Observer.Element>",
+      "@escaping SubjectSelectorType",
+      "@escaping SelectorType"
+    ],
+    "I_parameters" : [
+      "source",
+      "subjectSelector",
+      "selector"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Multicast.swift - Line: 400, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 401, Column: 9",
+        "H_initialValue" : "MulticastSink(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Multicast.swift - Line: 402, Column: 9",
+        "H_initialValue" : "sink.run()"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 401, Column: 9",
+    "H_initialValue" : "MulticastSink(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Multicast.swift - Line: 402, Column: 9",
+    "H_initialValue" : "sink.run()"
+  }
+]

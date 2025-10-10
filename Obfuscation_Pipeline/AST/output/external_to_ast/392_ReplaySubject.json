@@ -1,0 +1,1458 @@
+[
+  {
+    "A_name" : "ReplaySubject",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Observable<Element>",
+      "SubjectType",
+      "ObserverType",
+      "Disposable"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "hasObservers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 23, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 27, Column: 5",
+        "H_initialValue" : "RecursiveLock()"
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 30, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "stopped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 31, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "stoppedEvent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 32, Column: 5",
+        "H_initialValue" : "nil as Event<Element>?"
+      },
+      {
+        "A_name" : "observers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 37, Column: 5",
+        "H_initialValue" : "Observers()"
+      },
+      {
+        "A_name" : "isStopped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "final",
+        "D_attributes" : [
+          "final"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 43, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 50, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "asObserver",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 55, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> ReplaySubject<Element>"
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 60, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "create",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 67, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "bufferSize"
+        ],
+        "J_returnType" : "-> ReplaySubject<Element>"
+      },
+      {
+        "A_name" : "createUnbounded",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 79, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> ReplaySubject<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "hasObservers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 23, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 27, Column: 5",
+    "H_initialValue" : "RecursiveLock()"
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 30, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "stopped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 31, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "stoppedEvent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 32, Column: 5",
+    "H_initialValue" : "nil as Event<Element>?"
+  },
+  {
+    "A_name" : "observers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 37, Column: 5",
+    "H_initialValue" : "Observers()"
+  },
+  {
+    "A_name" : "synchronizationTracker",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 40, Column: 9",
+    "H_initialValue" : "SynchronizationTracker()"
+  },
+  {
+    "A_name" : "isStopped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 43, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 50, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "asObserver",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 55, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> ReplaySubject<Element>"
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 60, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "create",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 67, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "bufferSize"
+    ],
+    "J_returnType" : "-> ReplaySubject<Element>"
+  },
+  {
+    "A_name" : "createUnbounded",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 79, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> ReplaySubject<Element>"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 84, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "ReplayBufferBase",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ReplaySubject<Element>",
+      "SynchronizedUnsubscribeType"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 94, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "trim",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 98, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "addValueToBuffer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 102, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "replayBuffer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 106, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 110, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "synchronized_on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 118, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observers"
+      },
+      {
+        "A_name" : "subscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 142, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "synchronized_subscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 146, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "anyObserver",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplaySubject.swift - Line: 152, Column: 9",
+            "H_initialValue" : "observer.asObserver()"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "synchronizedUnsubscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 165, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DisposeKey"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "synchronized_unsubscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 169, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DisposeKey"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 177, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "synchronizedDispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 183, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "synchronized_dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 187, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "trim",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 98, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "addValueToBuffer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 102, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "replayBuffer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 106, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 110, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "synchronized_on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 118, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observers"
+  },
+  {
+    "A_name" : "observers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 136, Column: 13",
+    "H_initialValue" : "self.observers"
+  },
+  {
+    "A_name" : "subscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 142, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "synchronized_subscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 146, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "anyObserver",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 152, Column: 9",
+        "H_initialValue" : "observer.asObserver()"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "anyObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 152, Column: 9",
+    "H_initialValue" : "observer.asObserver()"
+  },
+  {
+    "A_name" : "key",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 160, Column: 13",
+    "H_initialValue" : "self.observers.insert(observer.on)"
+  },
+  {
+    "A_name" : "synchronizedUnsubscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 165, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DisposeKey"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "synchronized_unsubscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 169, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DisposeKey"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 177, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "synchronizedDispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 183, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "synchronized_dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 187, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "ReplayOne",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ReplayBufferBase<Element>"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 193, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 194, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 196, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "trim",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 200, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "addValueToBuffer",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 204, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "replayBuffer",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 208, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "synchronized_dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 214, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 194, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 196, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "trim",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 200, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "addValueToBuffer",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 204, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "replayBuffer",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 208, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "synchronized_dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 214, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "ReplayManyBase",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ReplayBufferBase<Element>"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 220, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "queue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 221, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 223, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "queueSize"
+        ]
+      },
+      {
+        "A_name" : "addValueToBuffer",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 227, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "replayBuffer",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 231, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "synchronized_dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 237, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "queue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 221, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 223, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "queueSize"
+    ]
+  },
+  {
+    "A_name" : "addValueToBuffer",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 227, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "replayBuffer",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 231, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "synchronized_dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 237, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "ReplayMany",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ReplayManyBase<Element>"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 243, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "bufferSize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 244, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 246, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "bufferSize"
+        ]
+      },
+      {
+        "A_name" : "trim",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 252, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "bufferSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 244, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 246, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "bufferSize"
+    ]
+  },
+  {
+    "A_name" : "trim",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 252, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "ReplayAll",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ReplayManyBase<Element>"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 259, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 260, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "trim",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ReplaySubject.swift - Line: 264, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 260, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "trim",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ReplaySubject.swift - Line: 264, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "A_name" : "WordBookRepository",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "WordBookRepository.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "fetchWords",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookRepository.swift - Line: 11, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SortOption"
+        ],
+        "I_parameters" : [
+          "sort"
+        ],
+        "J_returnType" : "-> AnyPublisher<[(date: String, items: [WordEntity])], Error>"
+      },
+      {
+        "A_name" : "fetchWordDetail",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookRepository.swift - Line: 12, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "id"
+        ],
+        "J_returnType" : "-> AnyPublisher<WordEntity, Error>"
+      },
+      {
+        "A_name" : "toggleBookmark",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookRepository.swift - Line: 13, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "phraseId",
+          "isBookmarked"
+        ],
+        "J_returnType" : "-> AnyPublisher<Void, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "fetchWords",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookRepository.swift - Line: 11, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SortOption"
+    ],
+    "I_parameters" : [
+      "sort"
+    ],
+    "J_returnType" : "-> AnyPublisher<[(date: String, items: [WordEntity])], Error>"
+  },
+  {
+    "A_name" : "fetchWordDetail",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookRepository.swift - Line: 12, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "id"
+    ],
+    "J_returnType" : "-> AnyPublisher<WordEntity, Error>"
+  },
+  {
+    "A_name" : "toggleBookmark",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookRepository.swift - Line: 13, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "phraseId",
+      "isBookmarked"
+    ],
+    "J_returnType" : "-> AnyPublisher<Void, Error>"
+  }
+]

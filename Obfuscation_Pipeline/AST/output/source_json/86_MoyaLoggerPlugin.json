@@ -1,0 +1,402 @@
+[
+  {
+    "A_name" : "MoyaLoggerPlugin",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "PluginType"
+    ],
+    "F_location" : "MoyaLoggerPlugin.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "willSend",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaLoggerPlugin.swift - Line: 13, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaLoggerPlugin.swift - Line: 18, Column: 9",
+            "H_initialValue" : "httpRequest.description"
+          },
+          {
+            "A_name" : "method",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaLoggerPlugin.swift - Line: 19, Column: 9",
+            "H_initialValue" : "httpRequest.httpMethod ?? \"unknown method\""
+          },
+          {
+            "A_name" : "log",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaLoggerPlugin.swift - Line: 20, Column: 9",
+            "H_initialValue" : "\"----------------------------------------------------\\n1️⃣[\\(method)] \\(url)\\n----------------------------------------------------\\n\""
+          }
+        ],
+        "I_parameterType" : [
+          "RequestType",
+          "TargetType"
+        ],
+        "I_parameters" : [
+          "_",
+          "target"
+        ]
+      },
+      {
+        "A_name" : "didReceive",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaLoggerPlugin.swift - Line: 33, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Result<Response, MoyaError>",
+          "TargetType"
+        ],
+        "I_parameters" : [
+          "_",
+          "target"
+        ]
+      },
+      {
+        "A_name" : "onSucceed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaLoggerPlugin.swift - Line: 42, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaLoggerPlugin.swift - Line: 43, Column: 9",
+            "H_initialValue" : "response.request"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaLoggerPlugin.swift - Line: 44, Column: 9",
+            "H_initialValue" : "request?.url?.absoluteString ?? \"nil\""
+          },
+          {
+            "A_name" : "statusCode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaLoggerPlugin.swift - Line: 45, Column: 9",
+            "H_initialValue" : "response.statusCode"
+          },
+          {
+            "A_name" : "log",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaLoggerPlugin.swift - Line: 46, Column: 9",
+            "H_initialValue" : "\"------------------- 네트워크 통신 성공했는가? -------------------\""
+          }
+        ],
+        "I_parameterType" : [
+          "Response"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "onFail",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaLoggerPlugin.swift - Line: 56, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "log",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaLoggerPlugin.swift - Line: 61, Column: 9",
+            "H_initialValue" : "\"네트워크 오류\""
+          }
+        ],
+        "I_parameterType" : [
+          "MoyaError"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "willSend",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaLoggerPlugin.swift - Line: 13, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaLoggerPlugin.swift - Line: 18, Column: 9",
+        "H_initialValue" : "httpRequest.description"
+      },
+      {
+        "A_name" : "method",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaLoggerPlugin.swift - Line: 19, Column: 9",
+        "H_initialValue" : "httpRequest.httpMethod ?? \"unknown method\""
+      },
+      {
+        "A_name" : "log",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaLoggerPlugin.swift - Line: 20, Column: 9",
+        "H_initialValue" : "\"----------------------------------------------------\\n1️⃣[\\(method)] \\(url)\\n----------------------------------------------------\\n\""
+      }
+    ],
+    "I_parameterType" : [
+      "RequestType",
+      "TargetType"
+    ],
+    "I_parameters" : [
+      "_",
+      "target"
+    ]
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaLoggerPlugin.swift - Line: 18, Column: 9",
+    "H_initialValue" : "httpRequest.description"
+  },
+  {
+    "A_name" : "method",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaLoggerPlugin.swift - Line: 19, Column: 9",
+    "H_initialValue" : "httpRequest.httpMethod ?? \"unknown method\""
+  },
+  {
+    "A_name" : "log",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaLoggerPlugin.swift - Line: 20, Column: 9",
+    "H_initialValue" : "\"----------------------------------------------------\\n1️⃣[\\(method)] \\(url)\\n----------------------------------------------------\\n\""
+  },
+  {
+    "A_name" : "didReceive",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaLoggerPlugin.swift - Line: 33, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Result<Response, MoyaError>",
+      "TargetType"
+    ],
+    "I_parameters" : [
+      "_",
+      "target"
+    ]
+  },
+  {
+    "A_name" : "onSucceed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaLoggerPlugin.swift - Line: 42, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaLoggerPlugin.swift - Line: 43, Column: 9",
+        "H_initialValue" : "response.request"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaLoggerPlugin.swift - Line: 44, Column: 9",
+        "H_initialValue" : "request?.url?.absoluteString ?? \"nil\""
+      },
+      {
+        "A_name" : "statusCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaLoggerPlugin.swift - Line: 45, Column: 9",
+        "H_initialValue" : "response.statusCode"
+      },
+      {
+        "A_name" : "log",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaLoggerPlugin.swift - Line: 46, Column: 9",
+        "H_initialValue" : "\"------------------- 네트워크 통신 성공했는가? -------------------\""
+      }
+    ],
+    "I_parameterType" : [
+      "Response"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaLoggerPlugin.swift - Line: 43, Column: 9",
+    "H_initialValue" : "response.request"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaLoggerPlugin.swift - Line: 44, Column: 9",
+    "H_initialValue" : "request?.url?.absoluteString ?? \"nil\""
+  },
+  {
+    "A_name" : "statusCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaLoggerPlugin.swift - Line: 45, Column: 9",
+    "H_initialValue" : "response.statusCode"
+  },
+  {
+    "A_name" : "log",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaLoggerPlugin.swift - Line: 46, Column: 9",
+    "H_initialValue" : "\"------------------- 네트워크 통신 성공했는가? -------------------\""
+  },
+  {
+    "A_name" : "onFail",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaLoggerPlugin.swift - Line: 56, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "log",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaLoggerPlugin.swift - Line: 61, Column: 9",
+        "H_initialValue" : "\"네트워크 오류\""
+      }
+    ],
+    "I_parameterType" : [
+      "MoyaError"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "log",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaLoggerPlugin.swift - Line: 61, Column: 9",
+    "H_initialValue" : "\"네트워크 오류\""
+  }
+]

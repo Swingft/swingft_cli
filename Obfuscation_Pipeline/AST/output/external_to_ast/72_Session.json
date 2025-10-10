@@ -1,0 +1,4730 @@
+[
+  {
+    "A_name" : "Session",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "Session.swift - Line: 30, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "`default`",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Session.swift - Line: 32, Column: 5",
+        "H_initialValue" : "Session()"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 40, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "delegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 42, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rootQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 44, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "startRequestsImmediately",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 46, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "requestQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 50, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "serializationQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 54, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "interceptor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 57, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "serverTrustManager",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 59, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "redirectHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 61, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cachedResponseHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 63, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "eventMonitor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 65, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "defaultEventMonitors",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Session.swift - Line: 67, Column: 5",
+        "H_initialValue" : "[AlamofireNotifications()]"
+      },
+      {
+        "A_name" : "requestTaskMap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 71, Column: 5",
+        "H_initialValue" : "RequestTaskMap()"
+      },
+      {
+        "A_name" : "activeRequests",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 73, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "waitingCompletions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 75, Column: 5",
+        "H_initialValue" : "[:]"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 108, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "SessionDelegate",
+          "DispatchQueue",
+          "Bool",
+          "DispatchQueue?",
+          "DispatchQueue?",
+          "(any RequestInterceptor)?",
+          "ServerTrustManager?",
+          "(any RedirectHandler)?",
+          "(any CachedResponseHandler)?",
+          "[any EventMonitor]"
+        ],
+        "I_parameters" : [
+          "session",
+          "delegate",
+          "rootQueue",
+          "startRequestsImmediately",
+          "requestQueue",
+          "serializationQueue",
+          "interceptor",
+          "serverTrustManager",
+          "redirectHandler",
+          "cachedResponseHandler",
+          "eventMonitors"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "Session.swift - Line: 172, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "serialRootQueue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 186, Column: 9",
+            "H_initialValue" : "(rootQueue === DispatchQueue.main) ? rootQueue : DispatchQueue(label: rootQueue.label,\n                                                                                             target: rootQueue)"
+          },
+          {
+            "A_name" : "delegateQueue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 188, Column: 9",
+            "H_initialValue" : "OperationQueue(maxConcurrentOperationCount: 1, underlyingQueue: serialRootQueue, name: \"\\(serialRootQueue.label).sessionDelegate\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 189, Column: 9",
+            "H_initialValue" : "URLSession(configuration: configuration, delegate: delegate, delegateQueue: delegateQueue)"
+          }
+        ],
+        "I_parameterType" : [
+          "URLSessionConfiguration",
+          "SessionDelegate",
+          "DispatchQueue",
+          "Bool",
+          "DispatchQueue?",
+          "DispatchQueue?",
+          "(any RequestInterceptor)?",
+          "ServerTrustManager?",
+          "(any RedirectHandler)?",
+          "(any CachedResponseHandler)?",
+          "[any EventMonitor]"
+        ],
+        "I_parameters" : [
+          "configuration",
+          "delegate",
+          "rootQueue",
+          "startRequestsImmediately",
+          "requestQueue",
+          "serializationQueue",
+          "interceptor",
+          "serverTrustManager",
+          "redirectHandler",
+          "cachedResponseHandler",
+          "eventMonitors"
+        ]
+      },
+      {
+        "A_name" : "withAllRequests",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 220, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping @Sendable (Set<Request>) -> Void"
+        ],
+        "I_parameters" : [
+          "perform"
+        ]
+      },
+      {
+        "A_name" : "cancelAllRequests",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 235, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "(@Sendable () -> Void)?"
+        ],
+        "I_parameters" : [
+          "completingOnQueue",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "RequestConvertible",
+        "B_kind" : "struct",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "URLRequestConvertible"
+        ],
+        "F_location" : "Session.swift - Line: 249, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 250, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "method",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 251, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "parameters",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 252, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "encoding",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 253, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 254, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "requestModifier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 255, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "asURLRequest",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 257, Column: 9",
+            "G_members" : [
+              {
+                "A_name" : "request",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "Session.swift - Line: 258, Column: 13",
+                "H_initialValue" : "try URLRequest(url: url, method: method, headers: headers)"
+              }
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ],
+            "J_returnType" : "-> URLRequest"
+          }
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 280, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "convertible",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 287, Column: 9",
+            "H_initialValue" : "RequestConvertible(url: convertible,\n                                             method: method,\n                                             parameters: parameters,\n                                             encoding: encoding,\n                                             headers: headers,\n                                             requestModifier: requestModifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "any URLConvertible",
+          "HTTPMethod",
+          "Parameters?",
+          "any ParameterEncoding",
+          "HTTPHeaders?",
+          "(any RequestInterceptor)?",
+          "RequestModifier?"
+        ],
+        "I_parameters" : [
+          "_",
+          "method",
+          "parameters",
+          "encoding",
+          "headers",
+          "interceptor",
+          "requestModifier"
+        ],
+        "J_returnType" : "-> DataRequest"
+      },
+      {
+        "A_name" : "RequestEncodableConvertible",
+        "B_kind" : "struct",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "URLRequestConvertible"
+        ],
+        "F_location" : "Session.swift - Line: 297, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 298, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "method",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 299, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "parameters",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 300, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "encoder",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 301, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 302, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "requestModifier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 303, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "asURLRequest",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 305, Column: 9",
+            "G_members" : [
+              {
+                "A_name" : "request",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "Session.swift - Line: 306, Column: 13",
+                "H_initialValue" : "try URLRequest(url: url, method: method, headers: headers)"
+              }
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ],
+            "J_returnType" : "-> URLRequest"
+          }
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 328, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "convertible",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 335, Column: 9",
+            "H_initialValue" : "RequestEncodableConvertible(url: convertible,\n                                                      method: method,\n                                                      parameters: parameters,\n                                                      encoder: encoder,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "any URLConvertible",
+          "HTTPMethod",
+          "Parameters?",
+          "any ParameterEncoder",
+          "HTTPHeaders?",
+          "(any RequestInterceptor)?",
+          "RequestModifier?"
+        ],
+        "I_parameters" : [
+          "_",
+          "method",
+          "parameters",
+          "encoder",
+          "headers",
+          "interceptor",
+          "requestModifier"
+        ],
+        "J_returnType" : "-> DataRequest"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 352, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 353, Column: 9",
+            "H_initialValue" : "DataRequest(convertible: convertible,\n                                  underlyingQueue: rootQueue,\n                                  serializationQueue: serializationQueue,\n                                  eventMonitor: eventMonitor,\n                                  interceptor: interceptor,\n                                  delegate: self)"
+          }
+        ],
+        "I_parameterType" : [
+          "any URLRequestConvertible",
+          "(any RequestInterceptor)?"
+        ],
+        "I_parameters" : [
+          "_",
+          "interceptor"
+        ],
+        "J_returnType" : "-> DataRequest"
+      },
+      {
+        "A_name" : "streamRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 385, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "convertible",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 393, Column: 9",
+            "H_initialValue" : "RequestEncodableConvertible(url: convertible,\n                                                      method: method,\n                                                      parameters: parameters,\n                                                      encoder: encoder,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "any URLConvertible",
+          "HTTPMethod",
+          "Parameters?",
+          "any ParameterEncoder",
+          "HTTPHeaders?",
+          "Bool",
+          "(any RequestInterceptor)?",
+          "RequestModifier?"
+        ],
+        "I_parameters" : [
+          "_",
+          "method",
+          "parameters",
+          "encoder",
+          "headers",
+          "automaticallyCancelOnStreamError",
+          "interceptor",
+          "requestModifier"
+        ],
+        "J_returnType" : "-> DataStreamRequest"
+      },
+      {
+        "A_name" : "streamRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 419, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "convertible",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 425, Column: 9",
+            "H_initialValue" : "RequestEncodableConvertible(url: convertible,\n                                                      method: method,\n                                                      parameters: Empty?.none,\n                                                      encoder: URLEncodedFormParameterEncoder.default,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "any URLConvertible",
+          "HTTPMethod",
+          "HTTPHeaders?",
+          "Bool",
+          "(any RequestInterceptor)?",
+          "RequestModifier?"
+        ],
+        "I_parameters" : [
+          "_",
+          "method",
+          "headers",
+          "automaticallyCancelOnStreamError",
+          "interceptor",
+          "requestModifier"
+        ],
+        "J_returnType" : "-> DataStreamRequest"
+      },
+      {
+        "A_name" : "streamRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 447, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 450, Column: 9",
+            "H_initialValue" : "DataStreamRequest(convertible: convertible,\n                                        automaticallyCancelOnStreamError: automaticallyCancelOnStreamError,\n                                        underlyingQueue: rootQueue,\n                                        serializationQueue: serializationQueue,\n                                        eventMonitor: eventMonitor,\n                                        interceptor: interceptor,\n                                        delegate: self)"
+          }
+        ],
+        "I_parameterType" : [
+          "any URLRequestConvertible",
+          "Bool",
+          "(any RequestInterceptor)?"
+        ],
+        "I_parameters" : [
+          "_",
+          "automaticallyCancelOnStreamError",
+          "interceptor"
+        ],
+        "J_returnType" : "-> DataStreamRequest"
+      },
+      {
+        "A_name" : "download",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 550, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "convertible",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 558, Column: 9",
+            "H_initialValue" : "RequestConvertible(url: convertible,\n                                             method: method,\n                                             parameters: parameters,\n                                             encoding: encoding,\n                                             headers: headers,\n                                             requestModifier: requestModifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "any URLConvertible",
+          "HTTPMethod",
+          "Parameters?",
+          "any ParameterEncoding",
+          "HTTPHeaders?",
+          "(any RequestInterceptor)?",
+          "RequestModifier?",
+          "DownloadRequest.Destination?"
+        ],
+        "I_parameters" : [
+          "_",
+          "method",
+          "parameters",
+          "encoding",
+          "headers",
+          "interceptor",
+          "requestModifier",
+          "to"
+        ],
+        "J_returnType" : "-> DownloadRequest"
+      },
+      {
+        "A_name" : "download",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 585, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "convertible",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 593, Column: 9",
+            "H_initialValue" : "RequestEncodableConvertible(url: convertible,\n                                                      method: method,\n                                                      parameters: parameters,\n                                                      encoder: encoder,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "any URLConvertible",
+          "HTTPMethod",
+          "Parameters?",
+          "any ParameterEncoder",
+          "HTTPHeaders?",
+          "(any RequestInterceptor)?",
+          "RequestModifier?",
+          "DownloadRequest.Destination?"
+        ],
+        "I_parameters" : [
+          "_",
+          "method",
+          "parameters",
+          "encoder",
+          "headers",
+          "interceptor",
+          "requestModifier",
+          "to"
+        ],
+        "J_returnType" : "-> DownloadRequest"
+      },
+      {
+        "A_name" : "download",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 612, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 615, Column: 9",
+            "H_initialValue" : "DownloadRequest(downloadable: .request(convertible),\n                                      underlyingQueue: rootQueue,\n                                      serializationQueue: serializationQueue,\n                                      eventMonitor: eventMonitor,\n                                      interceptor: interceptor,\n                                      delegate: self,\n                                      destination: destination ?? DownloadRequest.defaultDestination)"
+          }
+        ],
+        "I_parameterType" : [
+          "any URLRequestConvertible",
+          "(any RequestInterceptor)?",
+          "DownloadRequest.Destination?"
+        ],
+        "I_parameters" : [
+          "_",
+          "interceptor",
+          "to"
+        ],
+        "J_returnType" : "-> DownloadRequest"
+      },
+      {
+        "A_name" : "download",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 646, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 649, Column: 9",
+            "H_initialValue" : "DownloadRequest(downloadable: .resumeData(data),\n                                      underlyingQueue: rootQueue,\n                                      serializationQueue: serializationQueue,\n                                      eventMonitor: eventMonitor,\n                                      interceptor: interceptor,\n                                      delegate: self,\n                                      destination: destination ?? DownloadRequest.defaultDestination)"
+          }
+        ],
+        "I_parameterType" : [
+          "Data",
+          "(any RequestInterceptor)?",
+          "DownloadRequest.Destination?"
+        ],
+        "I_parameters" : [
+          "resumingWith",
+          "interceptor",
+          "to"
+        ],
+        "J_returnType" : "-> DownloadRequest"
+      },
+      {
+        "A_name" : "ParameterlessRequestConvertible",
+        "B_kind" : "struct",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "URLRequestConvertible"
+        ],
+        "F_location" : "Session.swift - Line: 664, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 665, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "method",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 666, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 667, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "requestModifier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 668, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "asURLRequest",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 670, Column: 9",
+            "G_members" : [
+              {
+                "A_name" : "request",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "Session.swift - Line: 671, Column: 13",
+                "H_initialValue" : "try URLRequest(url: url, method: method, headers: headers)"
+              }
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ],
+            "J_returnType" : "-> URLRequest"
+          }
+        ]
+      },
+      {
+        "A_name" : "Upload",
+        "B_kind" : "struct",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "UploadConvertible"
+        ],
+        "F_location" : "Session.swift - Line: 678, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 679, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "uploadable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 680, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "createUploadable",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 682, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ],
+            "J_returnType" : "-> UploadRequest.Uploadable"
+          },
+          {
+            "A_name" : "asURLRequest",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 686, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ],
+            "J_returnType" : "-> URLRequest"
+          }
+        ]
+      },
+      {
+        "A_name" : "upload",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 707, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "convertible",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 714, Column: 9",
+            "H_initialValue" : "ParameterlessRequestConvertible(url: convertible,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "Data",
+          "any URLConvertible",
+          "HTTPMethod",
+          "HTTPHeaders?",
+          "(any RequestInterceptor)?",
+          "FileManager",
+          "RequestModifier?"
+        ],
+        "I_parameters" : [
+          "_",
+          "to",
+          "method",
+          "headers",
+          "interceptor",
+          "fileManager",
+          "requestModifier"
+        ],
+        "J_returnType" : "-> UploadRequest"
+      },
+      {
+        "A_name" : "upload",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 732, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data",
+          "any URLRequestConvertible",
+          "(any RequestInterceptor)?",
+          "FileManager"
+        ],
+        "I_parameters" : [
+          "_",
+          "with",
+          "interceptor",
+          "fileManager"
+        ],
+        "J_returnType" : "-> UploadRequest"
+      },
+      {
+        "A_name" : "upload",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 756, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "convertible",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 763, Column: 9",
+            "H_initialValue" : "ParameterlessRequestConvertible(url: convertible,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "URL",
+          "any URLConvertible",
+          "HTTPMethod",
+          "HTTPHeaders?",
+          "(any RequestInterceptor)?",
+          "FileManager",
+          "RequestModifier?"
+        ],
+        "I_parameters" : [
+          "_",
+          "to",
+          "method",
+          "headers",
+          "interceptor",
+          "fileManager",
+          "requestModifier"
+        ],
+        "J_returnType" : "-> UploadRequest"
+      },
+      {
+        "A_name" : "upload",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 782, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL",
+          "any URLRequestConvertible",
+          "(any RequestInterceptor)?",
+          "FileManager"
+        ],
+        "I_parameters" : [
+          "_",
+          "with",
+          "interceptor",
+          "fileManager"
+        ],
+        "J_returnType" : "-> UploadRequest"
+      },
+      {
+        "A_name" : "upload",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 806, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "convertible",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 813, Column: 9",
+            "H_initialValue" : "ParameterlessRequestConvertible(url: convertible,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+          }
+        ],
+        "I_parameterType" : [
+          "InputStream",
+          "any URLConvertible",
+          "HTTPMethod",
+          "HTTPHeaders?",
+          "(any RequestInterceptor)?",
+          "FileManager",
+          "RequestModifier?"
+        ],
+        "I_parameters" : [
+          "_",
+          "to",
+          "method",
+          "headers",
+          "interceptor",
+          "fileManager",
+          "requestModifier"
+        ],
+        "J_returnType" : "-> UploadRequest"
+      },
+      {
+        "A_name" : "upload",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 832, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "InputStream",
+          "any URLRequestConvertible",
+          "(any RequestInterceptor)?",
+          "FileManager"
+        ],
+        "I_parameters" : [
+          "_",
+          "with",
+          "interceptor",
+          "fileManager"
+        ],
+        "J_returnType" : "-> UploadRequest"
+      },
+      {
+        "A_name" : "upload",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 872, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "convertible",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 880, Column: 9",
+            "H_initialValue" : "ParameterlessRequestConvertible(url: url,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+          },
+          {
+            "A_name" : "formData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 885, Column: 9",
+            "H_initialValue" : "MultipartFormData(fileManager: fileManager)"
+          }
+        ],
+        "I_parameterType" : [
+          "@escaping (MultipartFormData) -> Void",
+          "any URLConvertible",
+          "UInt64",
+          "HTTPMethod",
+          "HTTPHeaders?",
+          "(any RequestInterceptor)?",
+          "FileManager",
+          "RequestModifier?"
+        ],
+        "I_parameters" : [
+          "multipartFormData",
+          "to",
+          "usingThreshold",
+          "method",
+          "headers",
+          "interceptor",
+          "fileManager",
+          "requestModifier"
+        ],
+        "J_returnType" : "-> UploadRequest"
+      },
+      {
+        "A_name" : "upload",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 922, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "formData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 927, Column: 9",
+            "H_initialValue" : "MultipartFormData(fileManager: fileManager)"
+          }
+        ],
+        "I_parameterType" : [
+          "@escaping (MultipartFormData) -> Void",
+          "any URLRequestConvertible",
+          "UInt64",
+          "(any RequestInterceptor)?",
+          "FileManager"
+        ],
+        "I_parameters" : [
+          "multipartFormData",
+          "with",
+          "usingThreshold",
+          "interceptor",
+          "fileManager"
+        ],
+        "J_returnType" : "-> UploadRequest"
+      },
+      {
+        "A_name" : "upload",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 968, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "convertible",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 976, Column: 9",
+            "H_initialValue" : "ParameterlessRequestConvertible(url: url,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+          },
+          {
+            "A_name" : "multipartUpload",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 981, Column: 9",
+            "H_initialValue" : "MultipartUpload(encodingMemoryThreshold: encodingMemoryThreshold,\n                                              request: convertible,\n                                              multipartFormData: multipartFormData)"
+          }
+        ],
+        "I_parameterType" : [
+          "MultipartFormData",
+          "any URLConvertible",
+          "UInt64",
+          "HTTPMethod",
+          "HTTPHeaders?",
+          "(any RequestInterceptor)?",
+          "FileManager",
+          "RequestModifier?"
+        ],
+        "I_parameters" : [
+          "multipartFormData",
+          "to",
+          "usingThreshold",
+          "method",
+          "headers",
+          "interceptor",
+          "fileManager",
+          "requestModifier"
+        ],
+        "J_returnType" : "-> UploadRequest"
+      },
+      {
+        "A_name" : "upload",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1015, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "multipartUpload",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 1020, Column: 9",
+            "H_initialValue" : "MultipartUpload(encodingMemoryThreshold: encodingMemoryThreshold,\n                                              request: request,\n                                              multipartFormData: multipartFormData)"
+          }
+        ],
+        "I_parameterType" : [
+          "MultipartFormData",
+          "any URLRequestConvertible",
+          "UInt64",
+          "(any RequestInterceptor)?",
+          "FileManager"
+        ],
+        "I_parameters" : [
+          "multipartFormData",
+          "with",
+          "usingThreshold",
+          "interceptor",
+          "fileManager"
+        ],
+        "J_returnType" : "-> UploadRequest"
+      },
+      {
+        "A_name" : "upload",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1031, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "uploadable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 1035, Column: 9",
+            "H_initialValue" : "Upload(request: convertible, uploadable: uploadable)"
+          }
+        ],
+        "I_parameterType" : [
+          "UploadRequest.Uploadable",
+          "any URLRequestConvertible",
+          "(any RequestInterceptor)?",
+          "FileManager"
+        ],
+        "I_parameters" : [
+          "_",
+          "with",
+          "interceptor",
+          "fileManager"
+        ],
+        "J_returnType" : "-> UploadRequest"
+      },
+      {
+        "A_name" : "upload",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1040, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 1041, Column: 9",
+            "H_initialValue" : "UploadRequest(convertible: upload,\n                                    underlyingQueue: rootQueue,\n                                    serializationQueue: serializationQueue,\n                                    eventMonitor: eventMonitor,\n                                    interceptor: interceptor,\n                                    fileManager: fileManager,\n                                    delegate: self)"
+          }
+        ],
+        "I_parameterType" : [
+          "any UploadConvertible",
+          "(any RequestInterceptor)?",
+          "FileManager"
+        ],
+        "I_parameters" : [
+          "_",
+          "interceptor",
+          "fileManager"
+        ],
+        "J_returnType" : "-> UploadRequest"
+      },
+      {
+        "A_name" : "perform",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1059, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "performDataRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1088, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DataRequest"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "performDataStreamRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1094, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DataStreamRequest"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "performUploadRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1109, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UploadRequest"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "performDownloadRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1124, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DownloadRequest"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "performSetupOperations",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1135, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "initialRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 1140, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "adapterState",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 1160, Column: 9",
+            "H_initialValue" : "RequestAdapterState(requestID: request.id, session: self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Request",
+          "any URLRequestConvertible",
+          "@escaping @Sendable () -> Bool"
+        ],
+        "I_parameters" : [
+          "for",
+          "convertible",
+          "shouldCreateTask"
+        ]
+      },
+      {
+        "A_name" : "didCreateURLRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1180, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "task",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 1187, Column: 9",
+            "H_initialValue" : "request.task(for: urlRequest, using: session)"
+          }
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "Request"
+        ],
+        "I_parameters" : [
+          "_",
+          "for"
+        ]
+      },
+      {
+        "A_name" : "didReceiveResumeData",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1194, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "task",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 1199, Column: 9",
+            "H_initialValue" : "request.task(forResumeData: data, using: session)"
+          }
+        ],
+        "I_parameterType" : [
+          "Data",
+          "DownloadRequest"
+        ],
+        "I_parameters" : [
+          "_",
+          "for"
+        ]
+      },
+      {
+        "A_name" : "updateStatesForTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1206, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask",
+          "Request"
+        ],
+        "I_parameters" : [
+          "_",
+          "request"
+        ]
+      },
+      {
+        "A_name" : "adapter",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1231, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> (any RequestAdapter)?"
+      },
+      {
+        "A_name" : "retrier",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1239, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> (any RequestRetrier)?"
+      },
+      {
+        "A_name" : "finishRequestsForDeinit",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1249, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "`default`",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Session.swift - Line: 32, Column: 5",
+    "H_initialValue" : "Session()"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 40, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "delegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 42, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rootQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 44, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "startRequestsImmediately",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 46, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "requestQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 50, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "serializationQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 54, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "interceptor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 57, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "serverTrustManager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 59, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "redirectHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 61, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cachedResponseHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 63, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "eventMonitor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 65, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "defaultEventMonitors",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Session.swift - Line: 67, Column: 5",
+    "H_initialValue" : "[AlamofireNotifications()]"
+  },
+  {
+    "A_name" : "requestTaskMap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 71, Column: 5",
+    "H_initialValue" : "RequestTaskMap()"
+  },
+  {
+    "A_name" : "activeRequests",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 73, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "waitingCompletions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 75, Column: 5",
+    "H_initialValue" : "[:]"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 108, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "SessionDelegate",
+      "DispatchQueue",
+      "Bool",
+      "DispatchQueue?",
+      "DispatchQueue?",
+      "(any RequestInterceptor)?",
+      "ServerTrustManager?",
+      "(any RedirectHandler)?",
+      "(any CachedResponseHandler)?",
+      "[any EventMonitor]"
+    ],
+    "I_parameters" : [
+      "session",
+      "delegate",
+      "rootQueue",
+      "startRequestsImmediately",
+      "requestQueue",
+      "serializationQueue",
+      "interceptor",
+      "serverTrustManager",
+      "redirectHandler",
+      "cachedResponseHandler",
+      "eventMonitors"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "Session.swift - Line: 172, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "serialRootQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 186, Column: 9",
+        "H_initialValue" : "(rootQueue === DispatchQueue.main) ? rootQueue : DispatchQueue(label: rootQueue.label,\n                                                                                             target: rootQueue)"
+      },
+      {
+        "A_name" : "delegateQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 188, Column: 9",
+        "H_initialValue" : "OperationQueue(maxConcurrentOperationCount: 1, underlyingQueue: serialRootQueue, name: \"\\(serialRootQueue.label).sessionDelegate\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 189, Column: 9",
+        "H_initialValue" : "URLSession(configuration: configuration, delegate: delegate, delegateQueue: delegateQueue)"
+      }
+    ],
+    "I_parameterType" : [
+      "URLSessionConfiguration",
+      "SessionDelegate",
+      "DispatchQueue",
+      "Bool",
+      "DispatchQueue?",
+      "DispatchQueue?",
+      "(any RequestInterceptor)?",
+      "ServerTrustManager?",
+      "(any RedirectHandler)?",
+      "(any CachedResponseHandler)?",
+      "[any EventMonitor]"
+    ],
+    "I_parameters" : [
+      "configuration",
+      "delegate",
+      "rootQueue",
+      "startRequestsImmediately",
+      "requestQueue",
+      "serializationQueue",
+      "interceptor",
+      "serverTrustManager",
+      "redirectHandler",
+      "cachedResponseHandler",
+      "eventMonitors"
+    ]
+  },
+  {
+    "A_name" : "serialRootQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 186, Column: 9",
+    "H_initialValue" : "(rootQueue === DispatchQueue.main) ? rootQueue : DispatchQueue(label: rootQueue.label,\n                                                                                             target: rootQueue)"
+  },
+  {
+    "A_name" : "delegateQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 188, Column: 9",
+    "H_initialValue" : "OperationQueue(maxConcurrentOperationCount: 1, underlyingQueue: serialRootQueue, name: \"\\(serialRootQueue.label).sessionDelegate\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 189, Column: 9",
+    "H_initialValue" : "URLSession(configuration: configuration, delegate: delegate, delegateQueue: delegateQueue)"
+  },
+  {
+    "A_name" : "withAllRequests",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 220, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping @Sendable (Set<Request>) -> Void"
+    ],
+    "I_parameters" : [
+      "perform"
+    ]
+  },
+  {
+    "A_name" : "cancelAllRequests",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 235, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "(@Sendable () -> Void)?"
+    ],
+    "I_parameters" : [
+      "completingOnQueue",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "RequestConvertible",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "URLRequestConvertible"
+    ],
+    "F_location" : "Session.swift - Line: 249, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 250, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "method",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 251, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "parameters",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 252, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "encoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 253, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 254, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "requestModifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 255, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "asURLRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 257, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 258, Column: 13",
+            "H_initialValue" : "try URLRequest(url: url, method: method, headers: headers)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> URLRequest"
+      }
+    ]
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 250, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "method",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 251, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "parameters",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 252, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "encoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 253, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 254, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "requestModifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 255, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "asURLRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 257, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 258, Column: 13",
+        "H_initialValue" : "try URLRequest(url: url, method: method, headers: headers)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> URLRequest"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 258, Column: 13",
+    "H_initialValue" : "try URLRequest(url: url, method: method, headers: headers)"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 280, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "convertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 287, Column: 9",
+        "H_initialValue" : "RequestConvertible(url: convertible,\n                                             method: method,\n                                             parameters: parameters,\n                                             encoding: encoding,\n                                             headers: headers,\n                                             requestModifier: requestModifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLConvertible",
+      "HTTPMethod",
+      "Parameters?",
+      "any ParameterEncoding",
+      "HTTPHeaders?",
+      "(any RequestInterceptor)?",
+      "RequestModifier?"
+    ],
+    "I_parameters" : [
+      "_",
+      "method",
+      "parameters",
+      "encoding",
+      "headers",
+      "interceptor",
+      "requestModifier"
+    ],
+    "J_returnType" : "-> DataRequest"
+  },
+  {
+    "A_name" : "convertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 287, Column: 9",
+    "H_initialValue" : "RequestConvertible(url: convertible,\n                                             method: method,\n                                             parameters: parameters,\n                                             encoding: encoding,\n                                             headers: headers,\n                                             requestModifier: requestModifier)"
+  },
+  {
+    "A_name" : "RequestEncodableConvertible",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "URLRequestConvertible"
+    ],
+    "F_location" : "Session.swift - Line: 297, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 298, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "method",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 299, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "parameters",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 300, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "encoder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 301, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 302, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "requestModifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 303, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "asURLRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 305, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 306, Column: 13",
+            "H_initialValue" : "try URLRequest(url: url, method: method, headers: headers)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> URLRequest"
+      }
+    ]
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 298, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "method",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 299, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "parameters",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 300, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "encoder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 301, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 302, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "requestModifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 303, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "asURLRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 305, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 306, Column: 13",
+        "H_initialValue" : "try URLRequest(url: url, method: method, headers: headers)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> URLRequest"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 306, Column: 13",
+    "H_initialValue" : "try URLRequest(url: url, method: method, headers: headers)"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 328, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "convertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 335, Column: 9",
+        "H_initialValue" : "RequestEncodableConvertible(url: convertible,\n                                                      method: method,\n                                                      parameters: parameters,\n                                                      encoder: encoder,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLConvertible",
+      "HTTPMethod",
+      "Parameters?",
+      "any ParameterEncoder",
+      "HTTPHeaders?",
+      "(any RequestInterceptor)?",
+      "RequestModifier?"
+    ],
+    "I_parameters" : [
+      "_",
+      "method",
+      "parameters",
+      "encoder",
+      "headers",
+      "interceptor",
+      "requestModifier"
+    ],
+    "J_returnType" : "-> DataRequest"
+  },
+  {
+    "A_name" : "convertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 335, Column: 9",
+    "H_initialValue" : "RequestEncodableConvertible(url: convertible,\n                                                      method: method,\n                                                      parameters: parameters,\n                                                      encoder: encoder,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 352, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 353, Column: 9",
+        "H_initialValue" : "DataRequest(convertible: convertible,\n                                  underlyingQueue: rootQueue,\n                                  serializationQueue: serializationQueue,\n                                  eventMonitor: eventMonitor,\n                                  interceptor: interceptor,\n                                  delegate: self)"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLRequestConvertible",
+      "(any RequestInterceptor)?"
+    ],
+    "I_parameters" : [
+      "_",
+      "interceptor"
+    ],
+    "J_returnType" : "-> DataRequest"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 353, Column: 9",
+    "H_initialValue" : "DataRequest(convertible: convertible,\n                                  underlyingQueue: rootQueue,\n                                  serializationQueue: serializationQueue,\n                                  eventMonitor: eventMonitor,\n                                  interceptor: interceptor,\n                                  delegate: self)"
+  },
+  {
+    "A_name" : "streamRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 385, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "convertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 393, Column: 9",
+        "H_initialValue" : "RequestEncodableConvertible(url: convertible,\n                                                      method: method,\n                                                      parameters: parameters,\n                                                      encoder: encoder,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLConvertible",
+      "HTTPMethod",
+      "Parameters?",
+      "any ParameterEncoder",
+      "HTTPHeaders?",
+      "Bool",
+      "(any RequestInterceptor)?",
+      "RequestModifier?"
+    ],
+    "I_parameters" : [
+      "_",
+      "method",
+      "parameters",
+      "encoder",
+      "headers",
+      "automaticallyCancelOnStreamError",
+      "interceptor",
+      "requestModifier"
+    ],
+    "J_returnType" : "-> DataStreamRequest"
+  },
+  {
+    "A_name" : "convertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 393, Column: 9",
+    "H_initialValue" : "RequestEncodableConvertible(url: convertible,\n                                                      method: method,\n                                                      parameters: parameters,\n                                                      encoder: encoder,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+  },
+  {
+    "A_name" : "streamRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 419, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "convertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 425, Column: 9",
+        "H_initialValue" : "RequestEncodableConvertible(url: convertible,\n                                                      method: method,\n                                                      parameters: Empty?.none,\n                                                      encoder: URLEncodedFormParameterEncoder.default,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLConvertible",
+      "HTTPMethod",
+      "HTTPHeaders?",
+      "Bool",
+      "(any RequestInterceptor)?",
+      "RequestModifier?"
+    ],
+    "I_parameters" : [
+      "_",
+      "method",
+      "headers",
+      "automaticallyCancelOnStreamError",
+      "interceptor",
+      "requestModifier"
+    ],
+    "J_returnType" : "-> DataStreamRequest"
+  },
+  {
+    "A_name" : "convertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 425, Column: 9",
+    "H_initialValue" : "RequestEncodableConvertible(url: convertible,\n                                                      method: method,\n                                                      parameters: Empty?.none,\n                                                      encoder: URLEncodedFormParameterEncoder.default,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+  },
+  {
+    "A_name" : "streamRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 447, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 450, Column: 9",
+        "H_initialValue" : "DataStreamRequest(convertible: convertible,\n                                        automaticallyCancelOnStreamError: automaticallyCancelOnStreamError,\n                                        underlyingQueue: rootQueue,\n                                        serializationQueue: serializationQueue,\n                                        eventMonitor: eventMonitor,\n                                        interceptor: interceptor,\n                                        delegate: self)"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLRequestConvertible",
+      "Bool",
+      "(any RequestInterceptor)?"
+    ],
+    "I_parameters" : [
+      "_",
+      "automaticallyCancelOnStreamError",
+      "interceptor"
+    ],
+    "J_returnType" : "-> DataStreamRequest"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 450, Column: 9",
+    "H_initialValue" : "DataStreamRequest(convertible: convertible,\n                                        automaticallyCancelOnStreamError: automaticallyCancelOnStreamError,\n                                        underlyingQueue: rootQueue,\n                                        serializationQueue: serializationQueue,\n                                        eventMonitor: eventMonitor,\n                                        interceptor: interceptor,\n                                        delegate: self)"
+  },
+  {
+    "A_name" : "webSocketRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "available",
+      "_spi"
+    ],
+    "F_location" : "Session.swift - Line: 464, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any URLConvertible",
+      "WebSocketRequest.Configuration",
+      "HTTPHeaders?",
+      "(any RequestInterceptor)?",
+      "RequestModifier?"
+    ],
+    "I_parameters" : [
+      "to",
+      "configuration",
+      "headers",
+      "interceptor",
+      "requestModifier"
+    ],
+    "J_returnType" : "-> WebSocketRequest"
+  },
+  {
+    "A_name" : "webSocketRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "available",
+      "_spi"
+    ],
+    "F_location" : "Session.swift - Line: 483, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "convertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 493, Column: 9",
+        "H_initialValue" : "RequestEncodableConvertible(url: url,\n                                                      method: .get,\n                                                      parameters: parameters,\n                                                      encoder: encoder,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 499, Column: 9",
+        "H_initialValue" : "WebSocketRequest(convertible: convertible,\n                                       configuration: configuration,\n                                       underlyingQueue: rootQueue,\n                                       serializationQueue: serializationQueue,\n                                       eventMonitor: eventMonitor,\n                                       interceptor: interceptor,\n                                       delegate: self)"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLConvertible",
+      "WebSocketRequest.Configuration",
+      "Parameters?",
+      "any ParameterEncoder",
+      "HTTPHeaders?",
+      "(any RequestInterceptor)?",
+      "RequestModifier?"
+    ],
+    "I_parameters" : [
+      "to",
+      "configuration",
+      "parameters",
+      "encoder",
+      "headers",
+      "interceptor",
+      "requestModifier"
+    ],
+    "J_returnType" : "-> WebSocketRequest"
+  },
+  {
+    "A_name" : "convertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 493, Column: 9",
+    "H_initialValue" : "RequestEncodableConvertible(url: url,\n                                                      method: .get,\n                                                      parameters: parameters,\n                                                      encoder: encoder,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 499, Column: 9",
+    "H_initialValue" : "WebSocketRequest(convertible: convertible,\n                                       configuration: configuration,\n                                       underlyingQueue: rootQueue,\n                                       serializationQueue: serializationQueue,\n                                       eventMonitor: eventMonitor,\n                                       interceptor: interceptor,\n                                       delegate: self)"
+  },
+  {
+    "A_name" : "webSocketRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "available",
+      "_spi"
+    ],
+    "F_location" : "Session.swift - Line: 512, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 516, Column: 9",
+        "H_initialValue" : "WebSocketRequest(convertible: convertible,\n                                       configuration: configuration,\n                                       underlyingQueue: rootQueue,\n                                       serializationQueue: serializationQueue,\n                                       eventMonitor: eventMonitor,\n                                       interceptor: interceptor,\n                                       delegate: self)"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLRequestConvertible",
+      "WebSocketRequest.Configuration",
+      "(any RequestInterceptor)?"
+    ],
+    "I_parameters" : [
+      "performing",
+      "configuration",
+      "interceptor"
+    ],
+    "J_returnType" : "-> WebSocketRequest"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 516, Column: 9",
+    "H_initialValue" : "WebSocketRequest(convertible: convertible,\n                                       configuration: configuration,\n                                       underlyingQueue: rootQueue,\n                                       serializationQueue: serializationQueue,\n                                       eventMonitor: eventMonitor,\n                                       interceptor: interceptor,\n                                       delegate: self)"
+  },
+  {
+    "A_name" : "download",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 550, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "convertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 558, Column: 9",
+        "H_initialValue" : "RequestConvertible(url: convertible,\n                                             method: method,\n                                             parameters: parameters,\n                                             encoding: encoding,\n                                             headers: headers,\n                                             requestModifier: requestModifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLConvertible",
+      "HTTPMethod",
+      "Parameters?",
+      "any ParameterEncoding",
+      "HTTPHeaders?",
+      "(any RequestInterceptor)?",
+      "RequestModifier?",
+      "DownloadRequest.Destination?"
+    ],
+    "I_parameters" : [
+      "_",
+      "method",
+      "parameters",
+      "encoding",
+      "headers",
+      "interceptor",
+      "requestModifier",
+      "to"
+    ],
+    "J_returnType" : "-> DownloadRequest"
+  },
+  {
+    "A_name" : "convertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 558, Column: 9",
+    "H_initialValue" : "RequestConvertible(url: convertible,\n                                             method: method,\n                                             parameters: parameters,\n                                             encoding: encoding,\n                                             headers: headers,\n                                             requestModifier: requestModifier)"
+  },
+  {
+    "A_name" : "download",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 585, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "convertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 593, Column: 9",
+        "H_initialValue" : "RequestEncodableConvertible(url: convertible,\n                                                      method: method,\n                                                      parameters: parameters,\n                                                      encoder: encoder,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLConvertible",
+      "HTTPMethod",
+      "Parameters?",
+      "any ParameterEncoder",
+      "HTTPHeaders?",
+      "(any RequestInterceptor)?",
+      "RequestModifier?",
+      "DownloadRequest.Destination?"
+    ],
+    "I_parameters" : [
+      "_",
+      "method",
+      "parameters",
+      "encoder",
+      "headers",
+      "interceptor",
+      "requestModifier",
+      "to"
+    ],
+    "J_returnType" : "-> DownloadRequest"
+  },
+  {
+    "A_name" : "convertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 593, Column: 9",
+    "H_initialValue" : "RequestEncodableConvertible(url: convertible,\n                                                      method: method,\n                                                      parameters: parameters,\n                                                      encoder: encoder,\n                                                      headers: headers,\n                                                      requestModifier: requestModifier)"
+  },
+  {
+    "A_name" : "download",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 612, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 615, Column: 9",
+        "H_initialValue" : "DownloadRequest(downloadable: .request(convertible),\n                                      underlyingQueue: rootQueue,\n                                      serializationQueue: serializationQueue,\n                                      eventMonitor: eventMonitor,\n                                      interceptor: interceptor,\n                                      delegate: self,\n                                      destination: destination ?? DownloadRequest.defaultDestination)"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLRequestConvertible",
+      "(any RequestInterceptor)?",
+      "DownloadRequest.Destination?"
+    ],
+    "I_parameters" : [
+      "_",
+      "interceptor",
+      "to"
+    ],
+    "J_returnType" : "-> DownloadRequest"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 615, Column: 9",
+    "H_initialValue" : "DownloadRequest(downloadable: .request(convertible),\n                                      underlyingQueue: rootQueue,\n                                      serializationQueue: serializationQueue,\n                                      eventMonitor: eventMonitor,\n                                      interceptor: interceptor,\n                                      delegate: self,\n                                      destination: destination ?? DownloadRequest.defaultDestination)"
+  },
+  {
+    "A_name" : "download",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 646, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 649, Column: 9",
+        "H_initialValue" : "DownloadRequest(downloadable: .resumeData(data),\n                                      underlyingQueue: rootQueue,\n                                      serializationQueue: serializationQueue,\n                                      eventMonitor: eventMonitor,\n                                      interceptor: interceptor,\n                                      delegate: self,\n                                      destination: destination ?? DownloadRequest.defaultDestination)"
+      }
+    ],
+    "I_parameterType" : [
+      "Data",
+      "(any RequestInterceptor)?",
+      "DownloadRequest.Destination?"
+    ],
+    "I_parameters" : [
+      "resumingWith",
+      "interceptor",
+      "to"
+    ],
+    "J_returnType" : "-> DownloadRequest"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 649, Column: 9",
+    "H_initialValue" : "DownloadRequest(downloadable: .resumeData(data),\n                                      underlyingQueue: rootQueue,\n                                      serializationQueue: serializationQueue,\n                                      eventMonitor: eventMonitor,\n                                      interceptor: interceptor,\n                                      delegate: self,\n                                      destination: destination ?? DownloadRequest.defaultDestination)"
+  },
+  {
+    "A_name" : "ParameterlessRequestConvertible",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "URLRequestConvertible"
+    ],
+    "F_location" : "Session.swift - Line: 664, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 665, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "method",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 666, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 667, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "requestModifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 668, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "asURLRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 670, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 671, Column: 13",
+            "H_initialValue" : "try URLRequest(url: url, method: method, headers: headers)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> URLRequest"
+      }
+    ]
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 665, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "method",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 666, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 667, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "requestModifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 668, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "asURLRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 670, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 671, Column: 13",
+        "H_initialValue" : "try URLRequest(url: url, method: method, headers: headers)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> URLRequest"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 671, Column: 13",
+    "H_initialValue" : "try URLRequest(url: url, method: method, headers: headers)"
+  },
+  {
+    "A_name" : "Upload",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UploadConvertible"
+    ],
+    "F_location" : "Session.swift - Line: 678, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 679, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uploadable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 680, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "createUploadable",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 682, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> UploadRequest.Uploadable"
+      },
+      {
+        "A_name" : "asURLRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 686, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> URLRequest"
+      }
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 679, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uploadable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 680, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "createUploadable",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 682, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> UploadRequest.Uploadable"
+  },
+  {
+    "A_name" : "asURLRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 686, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> URLRequest"
+  },
+  {
+    "A_name" : "upload",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 707, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "convertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 714, Column: 9",
+        "H_initialValue" : "ParameterlessRequestConvertible(url: convertible,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "Data",
+      "any URLConvertible",
+      "HTTPMethod",
+      "HTTPHeaders?",
+      "(any RequestInterceptor)?",
+      "FileManager",
+      "RequestModifier?"
+    ],
+    "I_parameters" : [
+      "_",
+      "to",
+      "method",
+      "headers",
+      "interceptor",
+      "fileManager",
+      "requestModifier"
+    ],
+    "J_returnType" : "-> UploadRequest"
+  },
+  {
+    "A_name" : "convertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 714, Column: 9",
+    "H_initialValue" : "ParameterlessRequestConvertible(url: convertible,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+  },
+  {
+    "A_name" : "upload",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 732, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data",
+      "any URLRequestConvertible",
+      "(any RequestInterceptor)?",
+      "FileManager"
+    ],
+    "I_parameters" : [
+      "_",
+      "with",
+      "interceptor",
+      "fileManager"
+    ],
+    "J_returnType" : "-> UploadRequest"
+  },
+  {
+    "A_name" : "upload",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 756, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "convertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 763, Column: 9",
+        "H_initialValue" : "ParameterlessRequestConvertible(url: convertible,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "URL",
+      "any URLConvertible",
+      "HTTPMethod",
+      "HTTPHeaders?",
+      "(any RequestInterceptor)?",
+      "FileManager",
+      "RequestModifier?"
+    ],
+    "I_parameters" : [
+      "_",
+      "to",
+      "method",
+      "headers",
+      "interceptor",
+      "fileManager",
+      "requestModifier"
+    ],
+    "J_returnType" : "-> UploadRequest"
+  },
+  {
+    "A_name" : "convertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 763, Column: 9",
+    "H_initialValue" : "ParameterlessRequestConvertible(url: convertible,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+  },
+  {
+    "A_name" : "upload",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 782, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL",
+      "any URLRequestConvertible",
+      "(any RequestInterceptor)?",
+      "FileManager"
+    ],
+    "I_parameters" : [
+      "_",
+      "with",
+      "interceptor",
+      "fileManager"
+    ],
+    "J_returnType" : "-> UploadRequest"
+  },
+  {
+    "A_name" : "upload",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 806, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "convertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 813, Column: 9",
+        "H_initialValue" : "ParameterlessRequestConvertible(url: convertible,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+      }
+    ],
+    "I_parameterType" : [
+      "InputStream",
+      "any URLConvertible",
+      "HTTPMethod",
+      "HTTPHeaders?",
+      "(any RequestInterceptor)?",
+      "FileManager",
+      "RequestModifier?"
+    ],
+    "I_parameters" : [
+      "_",
+      "to",
+      "method",
+      "headers",
+      "interceptor",
+      "fileManager",
+      "requestModifier"
+    ],
+    "J_returnType" : "-> UploadRequest"
+  },
+  {
+    "A_name" : "convertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 813, Column: 9",
+    "H_initialValue" : "ParameterlessRequestConvertible(url: convertible,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+  },
+  {
+    "A_name" : "upload",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 832, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "InputStream",
+      "any URLRequestConvertible",
+      "(any RequestInterceptor)?",
+      "FileManager"
+    ],
+    "I_parameters" : [
+      "_",
+      "with",
+      "interceptor",
+      "fileManager"
+    ],
+    "J_returnType" : "-> UploadRequest"
+  },
+  {
+    "A_name" : "upload",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 872, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "convertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 880, Column: 9",
+        "H_initialValue" : "ParameterlessRequestConvertible(url: url,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+      },
+      {
+        "A_name" : "formData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 885, Column: 9",
+        "H_initialValue" : "MultipartFormData(fileManager: fileManager)"
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping (MultipartFormData) -> Void",
+      "any URLConvertible",
+      "UInt64",
+      "HTTPMethod",
+      "HTTPHeaders?",
+      "(any RequestInterceptor)?",
+      "FileManager",
+      "RequestModifier?"
+    ],
+    "I_parameters" : [
+      "multipartFormData",
+      "to",
+      "usingThreshold",
+      "method",
+      "headers",
+      "interceptor",
+      "fileManager",
+      "requestModifier"
+    ],
+    "J_returnType" : "-> UploadRequest"
+  },
+  {
+    "A_name" : "convertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 880, Column: 9",
+    "H_initialValue" : "ParameterlessRequestConvertible(url: url,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+  },
+  {
+    "A_name" : "formData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 885, Column: 9",
+    "H_initialValue" : "MultipartFormData(fileManager: fileManager)"
+  },
+  {
+    "A_name" : "upload",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 922, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "formData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 927, Column: 9",
+        "H_initialValue" : "MultipartFormData(fileManager: fileManager)"
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping (MultipartFormData) -> Void",
+      "any URLRequestConvertible",
+      "UInt64",
+      "(any RequestInterceptor)?",
+      "FileManager"
+    ],
+    "I_parameters" : [
+      "multipartFormData",
+      "with",
+      "usingThreshold",
+      "interceptor",
+      "fileManager"
+    ],
+    "J_returnType" : "-> UploadRequest"
+  },
+  {
+    "A_name" : "formData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 927, Column: 9",
+    "H_initialValue" : "MultipartFormData(fileManager: fileManager)"
+  },
+  {
+    "A_name" : "upload",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 968, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "convertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 976, Column: 9",
+        "H_initialValue" : "ParameterlessRequestConvertible(url: url,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+      },
+      {
+        "A_name" : "multipartUpload",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 981, Column: 9",
+        "H_initialValue" : "MultipartUpload(encodingMemoryThreshold: encodingMemoryThreshold,\n                                              request: convertible,\n                                              multipartFormData: multipartFormData)"
+      }
+    ],
+    "I_parameterType" : [
+      "MultipartFormData",
+      "any URLConvertible",
+      "UInt64",
+      "HTTPMethod",
+      "HTTPHeaders?",
+      "(any RequestInterceptor)?",
+      "FileManager",
+      "RequestModifier?"
+    ],
+    "I_parameters" : [
+      "multipartFormData",
+      "to",
+      "usingThreshold",
+      "method",
+      "headers",
+      "interceptor",
+      "fileManager",
+      "requestModifier"
+    ],
+    "J_returnType" : "-> UploadRequest"
+  },
+  {
+    "A_name" : "convertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 976, Column: 9",
+    "H_initialValue" : "ParameterlessRequestConvertible(url: url,\n                                                          method: method,\n                                                          headers: headers,\n                                                          requestModifier: requestModifier)"
+  },
+  {
+    "A_name" : "multipartUpload",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 981, Column: 9",
+    "H_initialValue" : "MultipartUpload(encodingMemoryThreshold: encodingMemoryThreshold,\n                                              request: convertible,\n                                              multipartFormData: multipartFormData)"
+  },
+  {
+    "A_name" : "upload",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1015, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "multipartUpload",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1020, Column: 9",
+        "H_initialValue" : "MultipartUpload(encodingMemoryThreshold: encodingMemoryThreshold,\n                                              request: request,\n                                              multipartFormData: multipartFormData)"
+      }
+    ],
+    "I_parameterType" : [
+      "MultipartFormData",
+      "any URLRequestConvertible",
+      "UInt64",
+      "(any RequestInterceptor)?",
+      "FileManager"
+    ],
+    "I_parameters" : [
+      "multipartFormData",
+      "with",
+      "usingThreshold",
+      "interceptor",
+      "fileManager"
+    ],
+    "J_returnType" : "-> UploadRequest"
+  },
+  {
+    "A_name" : "multipartUpload",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1020, Column: 9",
+    "H_initialValue" : "MultipartUpload(encodingMemoryThreshold: encodingMemoryThreshold,\n                                              request: request,\n                                              multipartFormData: multipartFormData)"
+  },
+  {
+    "A_name" : "upload",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1031, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "uploadable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1035, Column: 9",
+        "H_initialValue" : "Upload(request: convertible, uploadable: uploadable)"
+      }
+    ],
+    "I_parameterType" : [
+      "UploadRequest.Uploadable",
+      "any URLRequestConvertible",
+      "(any RequestInterceptor)?",
+      "FileManager"
+    ],
+    "I_parameters" : [
+      "_",
+      "with",
+      "interceptor",
+      "fileManager"
+    ],
+    "J_returnType" : "-> UploadRequest"
+  },
+  {
+    "A_name" : "uploadable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1035, Column: 9",
+    "H_initialValue" : "Upload(request: convertible, uploadable: uploadable)"
+  },
+  {
+    "A_name" : "upload",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1040, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1041, Column: 9",
+        "H_initialValue" : "UploadRequest(convertible: upload,\n                                    underlyingQueue: rootQueue,\n                                    serializationQueue: serializationQueue,\n                                    eventMonitor: eventMonitor,\n                                    interceptor: interceptor,\n                                    fileManager: fileManager,\n                                    delegate: self)"
+      }
+    ],
+    "I_parameterType" : [
+      "any UploadConvertible",
+      "(any RequestInterceptor)?",
+      "FileManager"
+    ],
+    "I_parameters" : [
+      "_",
+      "interceptor",
+      "fileManager"
+    ],
+    "J_returnType" : "-> UploadRequest"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1041, Column: 9",
+    "H_initialValue" : "UploadRequest(convertible: upload,\n                                    underlyingQueue: rootQueue,\n                                    serializationQueue: serializationQueue,\n                                    eventMonitor: eventMonitor,\n                                    interceptor: interceptor,\n                                    fileManager: fileManager,\n                                    delegate: self)"
+  },
+  {
+    "A_name" : "perform",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1059, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "performDataRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1088, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataRequest"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "performDataStreamRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1094, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataStreamRequest"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "performWebSocketRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Session.swift - Line: 1101, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "WebSocketRequest"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "performUploadRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1109, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UploadRequest"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "uploadable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1114, Column: 17",
+    "H_initialValue" : "try request.upload.createUploadable()"
+  },
+  {
+    "A_name" : "performDownloadRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1124, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DownloadRequest"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "performSetupOperations",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1135, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "initialRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1140, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "adapterState",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1160, Column: 9",
+        "H_initialValue" : "RequestAdapterState(requestID: request.id, session: self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Request",
+      "any URLRequestConvertible",
+      "@escaping @Sendable () -> Bool"
+    ],
+    "I_parameters" : [
+      "for",
+      "convertible",
+      "shouldCreateTask"
+    ]
+  },
+  {
+    "A_name" : "initialRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1140, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "adapterState",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1160, Column: 9",
+    "H_initialValue" : "RequestAdapterState(requestID: request.id, session: self)"
+  },
+  {
+    "A_name" : "adaptedRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1164, Column: 17",
+    "H_initialValue" : "try result.get()"
+  },
+  {
+    "A_name" : "didCreateURLRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1180, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "task",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1187, Column: 9",
+        "H_initialValue" : "request.task(for: urlRequest, using: session)"
+      }
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "Request"
+    ],
+    "I_parameters" : [
+      "_",
+      "for"
+    ]
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1187, Column: 9",
+    "H_initialValue" : "request.task(for: urlRequest, using: session)"
+  },
+  {
+    "A_name" : "didReceiveResumeData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1194, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "task",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1199, Column: 9",
+        "H_initialValue" : "request.task(forResumeData: data, using: session)"
+      }
+    ],
+    "I_parameterType" : [
+      "Data",
+      "DownloadRequest"
+    ],
+    "I_parameters" : [
+      "_",
+      "for"
+    ]
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1199, Column: 9",
+    "H_initialValue" : "request.task(forResumeData: data, using: session)"
+  },
+  {
+    "A_name" : "updateStatesForTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1206, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask",
+      "Request"
+    ],
+    "I_parameters" : [
+      "_",
+      "request"
+    ]
+  },
+  {
+    "A_name" : "adapter",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1231, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> (any RequestAdapter)?"
+  },
+  {
+    "A_name" : "retrier",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1239, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> (any RequestRetrier)?"
+  },
+  {
+    "A_name" : "finishRequestsForDeinit",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1249, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "Session",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RequestDelegate"
+    ],
+    "F_location" : "Session.swift - Line: 1260, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "sessionConfiguration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1261, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "startImmediately",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1265, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cleanup",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1267, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request"
+        ],
+        "I_parameters" : [
+          "after"
+        ]
+      },
+      {
+        "A_name" : "retryResult",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1271, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "AFError",
+          "@escaping @Sendable (RetryResult) -> Void"
+        ],
+        "I_parameters" : [
+          "for",
+          "dueTo",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "retryRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1287, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "TimeInterval?"
+        ],
+        "I_parameters" : [
+          "_",
+          "withDelay"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "sessionConfiguration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1261, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "startImmediately",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1265, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cleanup",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1267, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request"
+    ],
+    "I_parameters" : [
+      "after"
+    ]
+  },
+  {
+    "A_name" : "retryResult",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1271, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "AFError",
+      "@escaping @Sendable (RetryResult) -> Void"
+    ],
+    "I_parameters" : [
+      "for",
+      "dueTo",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "retryError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1281, Column: 17",
+    "H_initialValue" : "AFError.requestRetryFailed(retryError: retryResultError, originalError: error)"
+  },
+  {
+    "A_name" : "retryRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1287, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "TimeInterval?"
+    ],
+    "I_parameters" : [
+      "_",
+      "withDelay"
+    ]
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1289, Column: 13",
+    "H_initialValue" : "{\n                guard !request.isCancelled else { return }\n\n                request.prepareForRetry()\n                self.perform(request)\n            }"
+  },
+  {
+    "A_name" : "Session",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "SessionStateProvider"
+    ],
+    "F_location" : "Session.swift - Line: 1307, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1308, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> Request?"
+      },
+      {
+        "A_name" : "didGatherMetricsForTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1314, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didDisassociate",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 1317, Column: 9",
+            "H_initialValue" : "requestTaskMap.disassociateIfNecessaryAfterGatheringMetricsForTask(task)"
+          }
+        ],
+        "I_parameterType" : [
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "didCompleteTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1325, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didDisassociate",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Session.swift - Line: 1328, Column: 9",
+            "H_initialValue" : "requestTaskMap.disassociateIfNecessaryAfterCompletingTask(task)"
+          }
+        ],
+        "I_parameterType" : [
+          "URLSessionTask",
+          "@escaping () -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "credential",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1337, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask",
+          "URLProtectionSpace"
+        ],
+        "I_parameters" : [
+          "for",
+          "in"
+        ],
+        "J_returnType" : "-> URLCredential?"
+      },
+      {
+        "A_name" : "cancelRequestsForSessionInvalidation",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1344, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "with"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1308, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> Request?"
+  },
+  {
+    "A_name" : "didGatherMetricsForTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1314, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didDisassociate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1317, Column: 9",
+        "H_initialValue" : "requestTaskMap.disassociateIfNecessaryAfterGatheringMetricsForTask(task)"
+      }
+    ],
+    "I_parameterType" : [
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "didDisassociate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1317, Column: 9",
+    "H_initialValue" : "requestTaskMap.disassociateIfNecessaryAfterGatheringMetricsForTask(task)"
+  },
+  {
+    "A_name" : "didCompleteTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1325, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didDisassociate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Session.swift - Line: 1328, Column: 9",
+        "H_initialValue" : "requestTaskMap.disassociateIfNecessaryAfterCompletingTask(task)"
+      }
+    ],
+    "I_parameterType" : [
+      "URLSessionTask",
+      "@escaping () -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "didDisassociate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1328, Column: 9",
+    "H_initialValue" : "requestTaskMap.disassociateIfNecessaryAfterCompletingTask(task)"
+  },
+  {
+    "A_name" : "credential",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1337, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask",
+      "URLProtectionSpace"
+    ],
+    "I_parameters" : [
+      "for",
+      "in"
+    ],
+    "J_returnType" : "-> URLCredential?"
+  },
+  {
+    "A_name" : "cancelRequestsForSessionInvalidation",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Session.swift - Line: 1344, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "with"
+    ]
+  }
+]

@@ -1,0 +1,491 @@
+[
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "reduce",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Reduce.swift - Line: 23, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "A",
+          "@escaping (A, Element) throws -> A",
+          "@escaping (A) throws -> Result"
+        ],
+        "I_parameters" : [
+          "_",
+          "accumulator",
+          "mapResult"
+        ],
+        "J_returnType" : "-> Observable<Result>"
+      },
+      {
+        "A_name" : "reduce",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Reduce.swift - Line: 39, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "A",
+          "@escaping (A, Element) throws -> A"
+        ],
+        "I_parameters" : [
+          "_",
+          "accumulator"
+        ],
+        "J_returnType" : "-> Observable<A>"
+      }
+    ]
+  },
+  {
+    "A_name" : "reduce",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 23, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "A",
+      "@escaping (A, Element) throws -> A",
+      "@escaping (A) throws -> Result"
+    ],
+    "I_parameters" : [
+      "_",
+      "accumulator",
+      "mapResult"
+    ],
+    "J_returnType" : "-> Observable<Result>"
+  },
+  {
+    "A_name" : "reduce",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 39, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "A",
+      "@escaping (A, Element) throws -> A"
+    ],
+    "I_parameters" : [
+      "_",
+      "accumulator"
+    ],
+    "J_returnType" : "-> Observable<A>"
+  },
+  {
+    "A_name" : "ReduceSink",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sink<Observer>",
+      "ObserverType"
+    ],
+    "F_location" : "Reduce.swift - Line: 45, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Reduce.swift - Line: 49, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "accumulation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Reduce.swift - Line: 50, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Reduce.swift - Line: 52, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Reduce.swift - Line: 59, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<SourceType>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 49, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "accumulation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 50, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 52, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 59, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<SourceType>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 74, Column: 17",
+    "H_initialValue" : "try self.parent.mapResult(self.accumulation)"
+  },
+  {
+    "A_name" : "Reduce",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<ResultType>"
+    ],
+    "F_location" : "Reduce.swift - Line: 87, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Reduce.swift - Line: 91, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "seed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Reduce.swift - Line: 92, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "accumulator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Reduce.swift - Line: 93, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "mapResult",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Reduce.swift - Line: 94, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Reduce.swift - Line: 96, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<SourceType>",
+          "AccumulateType",
+          "@escaping AccumulatorType",
+          "@escaping ResultSelectorType"
+        ],
+        "I_parameters" : [
+          "source",
+          "seed",
+          "accumulator",
+          "mapResult"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Reduce.swift - Line: 103, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Reduce.swift - Line: 104, Column: 9",
+            "H_initialValue" : "ReduceSink(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Reduce.swift - Line: 105, Column: 9",
+            "H_initialValue" : "self.source.subscribe(sink)"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 91, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "seed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 92, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "accumulator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 93, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mapResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 94, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 96, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<SourceType>",
+      "AccumulateType",
+      "@escaping AccumulatorType",
+      "@escaping ResultSelectorType"
+    ],
+    "I_parameters" : [
+      "source",
+      "seed",
+      "accumulator",
+      "mapResult"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Reduce.swift - Line: 103, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Reduce.swift - Line: 104, Column: 9",
+        "H_initialValue" : "ReduceSink(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Reduce.swift - Line: 105, Column: 9",
+        "H_initialValue" : "self.source.subscribe(sink)"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 104, Column: 9",
+    "H_initialValue" : "ReduceSink(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Reduce.swift - Line: 105, Column: 9",
+    "H_initialValue" : "self.source.subscribe(sink)"
+  }
+]

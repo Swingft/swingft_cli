@@ -1,0 +1,627 @@
+[
+  {
+    "A_name" : "WordCardType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "basic",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 12, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "withExample",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 13, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "withDate",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 14, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "WordCard",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIView"
+    ],
+    "F_location" : "WordCard.swift - Line: 17, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "chipStackView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 21, Column: 5",
+        "H_initialValue" : "UIStackView()"
+      },
+      {
+        "A_name" : "phraseLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 22, Column: 5",
+        "H_initialValue" : "UILabel()"
+      },
+      {
+        "A_name" : "explanationLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 23, Column: 5",
+        "H_initialValue" : "UILabel()"
+      },
+      {
+        "A_name" : "savedDateLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 24, Column: 5",
+        "H_initialValue" : "UILabel()"
+      },
+      {
+        "A_name" : "reasonLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 25, Column: 5",
+        "H_initialValue" : "UILabel()"
+      },
+      {
+        "A_name" : "bookmarkButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 26, Column: 5",
+        "H_initialValue" : "UIButton(type: .custom)"
+      },
+      {
+        "A_name" : "isMarked",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 30, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "cardType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 31, Column: 5",
+        "H_initialValue" : ".basic"
+      },
+      {
+        "A_name" : "onBookmarkToggled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 32, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "WordCard.swift - Line: 36, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "WordCard.swift - Line: 42, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 48, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "WordCardType",
+          "PhraseData"
+        ],
+        "I_parameters" : [
+          "type",
+          "data"
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 162, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 182, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "didTapBookmark",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "WordCard.swift - Line: 190, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "updateBookmarkImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 196, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "imageName",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WordCard.swift - Line: 197, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "image",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WordCard.swift - Line: 205, Column: 9",
+            "H_initialValue" : "UIImage(named: imageName, in: .module, compatibleWith: nil)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "chipType",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 209, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "from"
+        ],
+        "J_returnType" : "-> ChipType?"
+      }
+    ]
+  },
+  {
+    "A_name" : "chipStackView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 21, Column: 5",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "phraseLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 22, Column: 5",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "explanationLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 23, Column: 5",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "savedDateLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 24, Column: 5",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "reasonLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 25, Column: 5",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "bookmarkButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 26, Column: 5",
+    "H_initialValue" : "UIButton(type: .custom)"
+  },
+  {
+    "A_name" : "isMarked",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 30, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "cardType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 31, Column: 5",
+    "H_initialValue" : ".basic"
+  },
+  {
+    "A_name" : "onBookmarkToggled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 32, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "WordCard.swift - Line: 36, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "WordCard.swift - Line: 42, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 48, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "WordCardType",
+      "PhraseData"
+    ],
+    "I_parameters" : [
+      "type",
+      "data"
+    ]
+  },
+  {
+    "A_name" : "inset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 153, Column: 13",
+    "H_initialValue" : "(type == .withDate) ? 24 : 12"
+  },
+  {
+    "A_name" : "size",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 154, Column: 13",
+    "H_initialValue" : "(type == .withDate) ? 36 : 28"
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 162, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 182, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didTapBookmark",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "WordCard.swift - Line: 190, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "updateBookmarkImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 196, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "imageName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 197, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "image",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordCard.swift - Line: 205, Column: 9",
+        "H_initialValue" : "UIImage(named: imageName, in: .module, compatibleWith: nil)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "imageName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 197, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 205, Column: 9",
+    "H_initialValue" : "UIImage(named: imageName, in: .module, compatibleWith: nil)"
+  },
+  {
+    "A_name" : "chipType",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordCard.swift - Line: 209, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "from"
+    ],
+    "J_returnType" : "-> ChipType?"
+  }
+]

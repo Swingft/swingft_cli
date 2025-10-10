@@ -1,0 +1,186 @@
+[
+  {
+    "A_name" : "String",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "String+C99ExtendedIdentifier.swift - Line: 4, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "invalidCharacters",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "String+C99ExtendedIdentifier.swift - Line: 5, Column: 5",
+        "H_initialValue" : "{\n        var invalidCharacters = CharacterSet()\n\n        let invalidCharacterSets: [CharacterSet] = [\n            .whitespacesAndNewlines,\n            .illegalCharacters,\n            .controlCharacters,\n            .punctuationCharacters,\n            .nonBaseCharacters,\n            .symbols,\n        ]\n\n        for invalidSet in invalidCharacterSets {\n            invalidCharacters.formUnion(invalidSet)\n        }\n\n        return invalidCharacters\n    }()"
+      },
+      {
+        "A_name" : "c99ExtendedIdentifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "String+C99ExtendedIdentifier.swift - Line: 24, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "invalidCharacters",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "String+C99ExtendedIdentifier.swift - Line: 5, Column: 5",
+    "H_initialValue" : "{\n        var invalidCharacters = CharacterSet()\n\n        let invalidCharacterSets: [CharacterSet] = [\n            .whitespacesAndNewlines,\n            .illegalCharacters,\n            .controlCharacters,\n            .punctuationCharacters,\n            .nonBaseCharacters,\n            .symbols,\n        ]\n\n        for invalidSet in invalidCharacterSets {\n            invalidCharacters.formUnion(invalidSet)\n        }\n\n        return invalidCharacters\n    }()"
+  },
+  {
+    "A_name" : "invalidCharacters",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String+C99ExtendedIdentifier.swift - Line: 6, Column: 9",
+    "H_initialValue" : "CharacterSet()"
+  },
+  {
+    "A_name" : "invalidCharacterSets",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String+C99ExtendedIdentifier.swift - Line: 8, Column: 9",
+    "H_initialValue" : "[\n            .whitespacesAndNewlines,\n            .illegalCharacters,\n            .controlCharacters,\n            .punctuationCharacters,\n            .nonBaseCharacters,\n            .symbols,\n        ]"
+  },
+  {
+    "A_name" : "c99ExtendedIdentifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String+C99ExtendedIdentifier.swift - Line: 24, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "validComponents",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String+C99ExtendedIdentifier.swift - Line: 25, Column: 9",
+    "H_initialValue" : "components(separatedBy: String.invalidCharacters)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "String+C99ExtendedIdentifier.swift - Line: 26, Column: 9",
+    "H_initialValue" : "validComponents.joined(separator: \"_\")"
+  },
+  {
+    "A_name" : "QCKObjCStringUtils",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "objc"
+    ],
+    "E_adoptedClassProtocols" : [
+      "NSObject"
+    ],
+    "F_location" : "String+C99ExtendedIdentifier.swift - Line: 37, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "String+C99ExtendedIdentifier.swift - Line: 39, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "c99ExtendedIdentifier",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "objc",
+          "static"
+        ],
+        "F_location" : "String+C99ExtendedIdentifier.swift - Line: 41, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "from"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "String+C99ExtendedIdentifier.swift - Line: 39, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "c99ExtendedIdentifier",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "objc",
+      "static"
+    ],
+    "F_location" : "String+C99ExtendedIdentifier.swift - Line: 41, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "from"
+    ],
+    "J_returnType" : "-> String"
+  }
+]

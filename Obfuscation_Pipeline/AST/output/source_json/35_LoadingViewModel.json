@@ -1,0 +1,922 @@
+[
+  {
+    "A_name" : "LoadingViewModel",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseViewModel"
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "diaryWritingUseCase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uploadImageUseCase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 17, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "stateSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 21, Column: 5",
+        "H_initialValue" : "CurrentValueSubject<State, Never>(.loading)"
+      },
+      {
+        "A_name" : "diaryIdSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 22, Column: 5",
+        "H_initialValue" : "CurrentValueSubject<Int?, Never>(nil)"
+      },
+      {
+        "A_name" : "feedbackCompletedSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 23, Column: 5",
+        "H_initialValue" : "PassthroughSubject<Result<Void, Error>, Never>()"
+      },
+      {
+        "A_name" : "statePublisher",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 25, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "diaryIdPublisher",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 26, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "originalText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 28, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "date",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 29, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "imageFile",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 30, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "startTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 32, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "errorCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 33, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "maxErrorCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 34, Column: 5",
+        "H_initialValue" : "2"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 37, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DiaryWritingUseCase",
+          "UploadImageUseCase"
+        ],
+        "I_parameters" : [
+          "diaryWritingUseCase",
+          "uploadImageUseCase"
+        ]
+      },
+      {
+        "A_name" : "State",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 48, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "loading",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoadingViewModel.swift - Line: 49, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "success",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoadingViewModel.swift - Line: 50, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "error",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoadingViewModel.swift - Line: 51, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "Input",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 56, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "startLoading",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoadingViewModel.swift - Line: 57, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "retryTapped",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoadingViewModel.swift - Line: 58, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeTapped",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoadingViewModel.swift - Line: 59, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "Output",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 62, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "state",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoadingViewModel.swift - Line: 63, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "goToHome",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoadingViewModel.swift - Line: 64, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "transform",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 69, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Input"
+        ],
+        "I_parameters" : [
+          "input"
+        ],
+        "J_returnType" : "-> Output"
+      },
+      {
+        "A_name" : "postDiary",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 87, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "Data?"
+        ],
+        "I_parameters" : [
+          "originalText",
+          "date",
+          "imageFile"
+        ]
+      },
+      {
+        "A_name" : "retryFeedback",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 97, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "startLoadingState",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 103, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "startDiaryRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 109, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "contentType",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoadingViewModel.swift - Line: 112, Column: 9",
+            "H_initialValue" : "\"image\/jpeg\""
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "Data?"
+        ],
+        "I_parameters" : [
+          "originalText",
+          "date",
+          "imageFile"
+        ]
+      },
+      {
+        "A_name" : "handleFeedbackCompleted",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 173, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "success"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "diaryWritingUseCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uploadImageUseCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 17, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "stateSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 21, Column: 5",
+    "H_initialValue" : "CurrentValueSubject<State, Never>(.loading)"
+  },
+  {
+    "A_name" : "diaryIdSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 22, Column: 5",
+    "H_initialValue" : "CurrentValueSubject<Int?, Never>(nil)"
+  },
+  {
+    "A_name" : "feedbackCompletedSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 23, Column: 5",
+    "H_initialValue" : "PassthroughSubject<Result<Void, Error>, Never>()"
+  },
+  {
+    "A_name" : "statePublisher",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 25, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "diaryIdPublisher",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 26, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "originalText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 28, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "date",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 29, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageFile",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 30, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "startTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 32, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "errorCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 33, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "maxErrorCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 34, Column: 5",
+    "H_initialValue" : "2"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 37, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DiaryWritingUseCase",
+      "UploadImageUseCase"
+    ],
+    "I_parameters" : [
+      "diaryWritingUseCase",
+      "uploadImageUseCase"
+    ]
+  },
+  {
+    "A_name" : "State",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 48, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "loading",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 49, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "success",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 50, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 51, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Input",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 56, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "startLoading",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 57, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "retryTapped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 58, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeTapped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 59, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "startLoading",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 57, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "retryTapped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 58, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeTapped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 59, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Output",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 62, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "state",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 63, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "goToHome",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 64, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 63, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "goToHome",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 64, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "transform",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 69, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Input"
+    ],
+    "I_parameters" : [
+      "input"
+    ],
+    "J_returnType" : "-> Output"
+  },
+  {
+    "A_name" : "postDiary",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 87, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "Data?"
+    ],
+    "I_parameters" : [
+      "originalText",
+      "date",
+      "imageFile"
+    ]
+  },
+  {
+    "A_name" : "retryFeedback",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 97, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "startLoadingState",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 103, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "startDiaryRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 109, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "contentType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoadingViewModel.swift - Line: 112, Column: 9",
+        "H_initialValue" : "\"image\/jpeg\""
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "Data?"
+    ],
+    "I_parameters" : [
+      "originalText",
+      "date",
+      "imageFile"
+    ]
+  },
+  {
+    "A_name" : "contentType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 112, Column: 9",
+    "H_initialValue" : "\"image\/jpeg\""
+  },
+  {
+    "A_name" : "entity",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 122, Column: 25",
+    "H_initialValue" : "DiaryWritingEntity(\n                            originalText: originalText,\n                            date: date,\n                            fileKey: fileKey\n                        )"
+  },
+  {
+    "A_name" : "entity",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 147, Column: 13",
+    "H_initialValue" : "DiaryWritingEntity(\n                originalText: originalText,\n                date: date,\n                fileKey: nil\n            )"
+  },
+  {
+    "A_name" : "handleFeedbackCompleted",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "LoadingViewModel.swift - Line: 173, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "success"
+    ]
+  }
+]

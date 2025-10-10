@@ -1,0 +1,268 @@
+[
+  {
+    "A_name" : "AsyncImageDownloadRequestModifier",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "RequestModifier.swift - Line: 49, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "modified",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestModifier.swift - Line: 66, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> URLRequest?"
+      },
+      {
+        "A_name" : "onDownloadTaskStarted",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestModifier.swift - Line: 75, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "modified",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestModifier.swift - Line: 66, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> URLRequest?"
+  },
+  {
+    "A_name" : "onDownloadTaskStarted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestModifier.swift - Line: 75, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ImageDownloadRequestModifier",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AsyncImageDownloadRequestModifier"
+    ],
+    "F_location" : "RequestModifier.swift - Line: 96, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "modified",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestModifier.swift - Line: 116, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> URLRequest?"
+      }
+    ]
+  },
+  {
+    "A_name" : "modified",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestModifier.swift - Line: 116, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> URLRequest?"
+  },
+  {
+    "A_name" : "ImageDownloadRequestModifier",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RequestModifier.swift - Line: 119, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "onDownloadTaskStarted",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestModifier.swift - Line: 122, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "onDownloadTaskStarted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestModifier.swift - Line: 122, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AnyModifier",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ImageDownloadRequestModifier"
+    ],
+    "F_location" : "RequestModifier.swift - Line: 128, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "block",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestModifier.swift - Line: 130, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "modified",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestModifier.swift - Line: 132, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> URLRequest?"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestModifier.swift - Line: 139, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping @Sendable (URLRequest) -> URLRequest?"
+        ],
+        "I_parameters" : [
+          "modify"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "block",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestModifier.swift - Line: 130, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "modified",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestModifier.swift - Line: 132, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> URLRequest?"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestModifier.swift - Line: 139, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping @Sendable (URLRequest) -> URLRequest?"
+    ],
+    "I_parameters" : [
+      "modify"
+    ]
+  }
+]

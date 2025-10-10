@@ -1,0 +1,857 @@
+[
+  {
+    "A_name" : "TableViewEditingCommandsViewModel",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 22, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "favoriteUsers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 23, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "users",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 24, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "executeCommand",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 26, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TableViewEditingCommandsViewModel",
+          "TableViewEditingCommand"
+        ],
+        "I_parameters" : [
+          "state",
+          "_"
+        ],
+        "J_returnType" : "-> TableViewEditingCommandsViewModel"
+      }
+    ]
+  },
+  {
+    "A_name" : "favoriteUsers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 23, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "users",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 24, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "executeCommand",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 26, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TableViewEditingCommandsViewModel",
+      "TableViewEditingCommand"
+    ],
+    "I_parameters" : [
+      "state",
+      "_"
+    ],
+    "J_returnType" : "-> TableViewEditingCommandsViewModel"
+  },
+  {
+    "A_name" : "all",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 33, Column: 13",
+    "H_initialValue" : "[state.favoriteUsers, state.users]"
+  },
+  {
+    "A_name" : "all",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 37, Column: 13",
+    "H_initialValue" : "[state.favoriteUsers, state.users]"
+  },
+  {
+    "A_name" : "user",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 38, Column: 13",
+    "H_initialValue" : "all[from.section][from.row]"
+  },
+  {
+    "A_name" : "TableViewEditingCommand",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 47, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setUsers",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 48, Column: 10",
+        "I_parameterType" : [
+          "[User]"
+        ],
+        "I_parameters" : [
+          "users"
+        ]
+      },
+      {
+        "A_name" : "setFavoriteUsers",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 49, Column: 10",
+        "I_parameterType" : [
+          "[User]"
+        ],
+        "I_parameters" : [
+          "favoriteUsers"
+        ]
+      },
+      {
+        "A_name" : "deleteUser",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 50, Column: 10",
+        "I_parameterType" : [
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "indexPath"
+        ]
+      },
+      {
+        "A_name" : "moveUser",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 51, Column: 10",
+        "I_parameterType" : [
+          "IndexPath",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "from",
+          "to"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "TableViewWithEditingCommandsViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ViewController",
+      "UITableViewDelegate"
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 54, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "tableView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "weak",
+        "D_attributes" : [
+          "IBOutlet",
+          "weak"
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 56, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 58, Column: 5",
+        "H_initialValue" : "TableViewWithEditingCommandsViewController.configureDataSource()"
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 60, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "superMan",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 67, Column: 9",
+            "H_initialValue" : "User(\n            firstName: \"Super\",\n            lastName: \"Man\",\n            imageURL: \"http:\/\/nerdreactor.com\/wp-content\/uploads\/2015\/02\/Superman1.jpg\"\n        )"
+          },
+          {
+            "A_name" : "watMan",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 73, Column: 9",
+            "H_initialValue" : "User(firstName: \"Wat\",\n            lastName: \"Man\",\n            imageURL: \"http:\/\/www.iri.upc.edu\/files\/project\/98\/main.GIF\"\n        )"
+          },
+          {
+            "A_name" : "loadFavoriteUsers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 78, Column: 9",
+            "H_initialValue" : "RandomUserAPI.sharedAPI\n            .getExampleUserResultSet()\n            .map(TableViewEditingCommand.setUsers)\n            .catchAndReturn(TableViewEditingCommand.setUsers(users: []))"
+          },
+          {
+            "A_name" : "initialLoadCommand",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 83, Column: 9",
+            "H_initialValue" : "Observable.just(TableViewEditingCommand.setFavoriteUsers(favoriteUsers: [superMan, watMan]))\n                .concat(loadFavoriteUsers)\n                .observe(on:MainScheduler.instance)"
+          },
+          {
+            "A_name" : "uiFeedback",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 87, Column: 9",
+            "H_initialValue" : "bind(self) { this, state in\n            let subscriptions = [\n                state.map {\n                        [\n                            SectionModel(model: \"Favorite Users\", items: $0.favoriteUsers),\n                            SectionModel(model: \"Normal Users\", items: $0.users)\n                        ]\n                    }\n                    .bind(to: this.tableView.rx.items(dataSource: this.dataSource)),\n                this.tableView.rx.itemSelected\n                    .withLatestFrom(state) { i, latestState in\n                        let all = [latestState.favoriteUsers, latestState.users]\n                        return all[i.section][i.row]\n                    }\n                    .subscribe(onNext: { [weak this] user in\n                        this?.showDetailsForUser(user)\n                    }),\n            ]\n\n            let events: [Observable<TableViewEditingCommand>] = [\n\n                this.tableView.rx.itemDeleted.map(TableViewEditingCommand.deleteUser),\n                this.tableView .rx.itemMoved.map({ val in return TableViewEditingCommand.moveUser(from: val.0, to: val.1) })\n            ]\n\n            return Bindings(subscriptions: subscriptions, events: events)\n        }"
+          },
+          {
+            "A_name" : "initialLoadFeedback",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 115, Column: 9",
+            "H_initialValue" : "{ _ in initialLoadCommand }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setEditing",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 132, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "animated"
+        ]
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 139, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "title",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 140, Column: 9",
+            "H_initialValue" : "dataSource[section]"
+          },
+          {
+            "A_name" : "label",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 142, Column: 9",
+            "H_initialValue" : "UILabel(frame: CGRect.zero)"
+          }
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "viewForHeaderInSection"
+        ],
+        "J_returnType" : "-> UIView?"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 152, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "heightForHeaderInSection"
+        ],
+        "J_returnType" : "-> CGFloat"
+      },
+      {
+        "A_name" : "showDetailsForUser",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 158, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "storyboard",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 159, Column: 9",
+            "H_initialValue" : "UIStoryboard(name: \"TableViewWithEditingCommands\", bundle: Bundle(identifier: \"RxExample-iOS\"))"
+          },
+          {
+            "A_name" : "viewController",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 160, Column: 9",
+            "H_initialValue" : "storyboard.instantiateViewController(withIdentifier: \"DetailViewController\") as! DetailViewController"
+          }
+        ],
+        "I_parameterType" : [
+          "User"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "configureDataSource",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 167, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dataSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 168, Column: 9",
+            "H_initialValue" : "RxTableViewSectionedReloadDataSource<SectionModel<String, User>>(\n            configureCell: { (_, tv, ip, user: User) in\n                let cell = tv.dequeueReusableCell(withIdentifier: \"Cell\")!\n                cell.textLabel?.text = user.firstName + \" \" + user.lastName\n                return cell\n            },\n            titleForHeaderInSection: { dataSource, sectionIndex in\n                return dataSource[sectionIndex].model\n            },\n            canEditRowAtIndexPath: { (ds, ip) in\n                return true\n            },\n            canMoveRowAtIndexPath: { _, _ in\n                return true\n            }\n        )"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> RxTableViewSectionedReloadDataSource<SectionModel<String, User>>"
+      }
+    ]
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "weak",
+    "D_attributes" : [
+      "IBOutlet",
+      "weak"
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 56, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 58, Column: 5",
+    "H_initialValue" : "TableViewWithEditingCommandsViewController.configureDataSource()"
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 60, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "superMan",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 67, Column: 9",
+        "H_initialValue" : "User(\n            firstName: \"Super\",\n            lastName: \"Man\",\n            imageURL: \"http:\/\/nerdreactor.com\/wp-content\/uploads\/2015\/02\/Superman1.jpg\"\n        )"
+      },
+      {
+        "A_name" : "watMan",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 73, Column: 9",
+        "H_initialValue" : "User(firstName: \"Wat\",\n            lastName: \"Man\",\n            imageURL: \"http:\/\/www.iri.upc.edu\/files\/project\/98\/main.GIF\"\n        )"
+      },
+      {
+        "A_name" : "loadFavoriteUsers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 78, Column: 9",
+        "H_initialValue" : "RandomUserAPI.sharedAPI\n            .getExampleUserResultSet()\n            .map(TableViewEditingCommand.setUsers)\n            .catchAndReturn(TableViewEditingCommand.setUsers(users: []))"
+      },
+      {
+        "A_name" : "initialLoadCommand",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 83, Column: 9",
+        "H_initialValue" : "Observable.just(TableViewEditingCommand.setFavoriteUsers(favoriteUsers: [superMan, watMan]))\n                .concat(loadFavoriteUsers)\n                .observe(on:MainScheduler.instance)"
+      },
+      {
+        "A_name" : "uiFeedback",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 87, Column: 9",
+        "H_initialValue" : "bind(self) { this, state in\n            let subscriptions = [\n                state.map {\n                        [\n                            SectionModel(model: \"Favorite Users\", items: $0.favoriteUsers),\n                            SectionModel(model: \"Normal Users\", items: $0.users)\n                        ]\n                    }\n                    .bind(to: this.tableView.rx.items(dataSource: this.dataSource)),\n                this.tableView.rx.itemSelected\n                    .withLatestFrom(state) { i, latestState in\n                        let all = [latestState.favoriteUsers, latestState.users]\n                        return all[i.section][i.row]\n                    }\n                    .subscribe(onNext: { [weak this] user in\n                        this?.showDetailsForUser(user)\n                    }),\n            ]\n\n            let events: [Observable<TableViewEditingCommand>] = [\n\n                this.tableView.rx.itemDeleted.map(TableViewEditingCommand.deleteUser),\n                this.tableView .rx.itemMoved.map({ val in return TableViewEditingCommand.moveUser(from: val.0, to: val.1) })\n            ]\n\n            return Bindings(subscriptions: subscriptions, events: events)\n        }"
+      },
+      {
+        "A_name" : "initialLoadFeedback",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 115, Column: 9",
+        "H_initialValue" : "{ _ in initialLoadCommand }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "superMan",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 67, Column: 9",
+    "H_initialValue" : "User(\n            firstName: \"Super\",\n            lastName: \"Man\",\n            imageURL: \"http:\/\/nerdreactor.com\/wp-content\/uploads\/2015\/02\/Superman1.jpg\"\n        )"
+  },
+  {
+    "A_name" : "watMan",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 73, Column: 9",
+    "H_initialValue" : "User(firstName: \"Wat\",\n            lastName: \"Man\",\n            imageURL: \"http:\/\/www.iri.upc.edu\/files\/project\/98\/main.GIF\"\n        )"
+  },
+  {
+    "A_name" : "loadFavoriteUsers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 78, Column: 9",
+    "H_initialValue" : "RandomUserAPI.sharedAPI\n            .getExampleUserResultSet()\n            .map(TableViewEditingCommand.setUsers)\n            .catchAndReturn(TableViewEditingCommand.setUsers(users: []))"
+  },
+  {
+    "A_name" : "initialLoadCommand",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 83, Column: 9",
+    "H_initialValue" : "Observable.just(TableViewEditingCommand.setFavoriteUsers(favoriteUsers: [superMan, watMan]))\n                .concat(loadFavoriteUsers)\n                .observe(on:MainScheduler.instance)"
+  },
+  {
+    "A_name" : "uiFeedback",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 87, Column: 9",
+    "H_initialValue" : "bind(self) { this, state in\n            let subscriptions = [\n                state.map {\n                        [\n                            SectionModel(model: \"Favorite Users\", items: $0.favoriteUsers),\n                            SectionModel(model: \"Normal Users\", items: $0.users)\n                        ]\n                    }\n                    .bind(to: this.tableView.rx.items(dataSource: this.dataSource)),\n                this.tableView.rx.itemSelected\n                    .withLatestFrom(state) { i, latestState in\n                        let all = [latestState.favoriteUsers, latestState.users]\n                        return all[i.section][i.row]\n                    }\n                    .subscribe(onNext: { [weak this] user in\n                        this?.showDetailsForUser(user)\n                    }),\n            ]\n\n            let events: [Observable<TableViewEditingCommand>] = [\n\n                this.tableView.rx.itemDeleted.map(TableViewEditingCommand.deleteUser),\n                this.tableView .rx.itemMoved.map({ val in return TableViewEditingCommand.moveUser(from: val.0, to: val.1) })\n            ]\n\n            return Bindings(subscriptions: subscriptions, events: events)\n        }"
+  },
+  {
+    "A_name" : "subscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 88, Column: 13",
+    "H_initialValue" : "[\n                state.map {\n                        [\n                            SectionModel(model: \"Favorite Users\", items: $0.favoriteUsers),\n                            SectionModel(model: \"Normal Users\", items: $0.users)\n                        ]\n                    }\n                    .bind(to: this.tableView.rx.items(dataSource: this.dataSource)),\n                this.tableView.rx.itemSelected\n                    .withLatestFrom(state) { i, latestState in\n                        let all = [latestState.favoriteUsers, latestState.users]\n                        return all[i.section][i.row]\n                    }\n                    .subscribe(onNext: { [weak this] user in\n                        this?.showDetailsForUser(user)\n                    }),\n            ]"
+  },
+  {
+    "A_name" : "all",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 98, Column: 25",
+    "H_initialValue" : "[latestState.favoriteUsers, latestState.users]"
+  },
+  {
+    "A_name" : "events",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 106, Column: 13",
+    "H_initialValue" : "[\n\n                this.tableView.rx.itemDeleted.map(TableViewEditingCommand.deleteUser),\n                this.tableView .rx.itemMoved.map({ val in return TableViewEditingCommand.moveUser(from: val.0, to: val.1) })\n            ]"
+  },
+  {
+    "A_name" : "initialLoadFeedback",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 115, Column: 9",
+    "H_initialValue" : "{ _ in initialLoadCommand }"
+  },
+  {
+    "A_name" : "setEditing",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 132, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "animated"
+    ]
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 139, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "title",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 140, Column: 9",
+        "H_initialValue" : "dataSource[section]"
+      },
+      {
+        "A_name" : "label",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 142, Column: 9",
+        "H_initialValue" : "UILabel(frame: CGRect.zero)"
+      }
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "viewForHeaderInSection"
+    ],
+    "J_returnType" : "-> UIView?"
+  },
+  {
+    "A_name" : "title",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 140, Column: 9",
+    "H_initialValue" : "dataSource[section]"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 142, Column: 9",
+    "H_initialValue" : "UILabel(frame: CGRect.zero)"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 152, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "heightForHeaderInSection"
+    ],
+    "J_returnType" : "-> CGFloat"
+  },
+  {
+    "A_name" : "showDetailsForUser",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 158, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "storyboard",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 159, Column: 9",
+        "H_initialValue" : "UIStoryboard(name: \"TableViewWithEditingCommands\", bundle: Bundle(identifier: \"RxExample-iOS\"))"
+      },
+      {
+        "A_name" : "viewController",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 160, Column: 9",
+        "H_initialValue" : "storyboard.instantiateViewController(withIdentifier: \"DetailViewController\") as! DetailViewController"
+      }
+    ],
+    "I_parameterType" : [
+      "User"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "storyboard",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 159, Column: 9",
+    "H_initialValue" : "UIStoryboard(name: \"TableViewWithEditingCommands\", bundle: Bundle(identifier: \"RxExample-iOS\"))"
+  },
+  {
+    "A_name" : "viewController",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 160, Column: 9",
+    "H_initialValue" : "storyboard.instantiateViewController(withIdentifier: \"DetailViewController\") as! DetailViewController"
+  },
+  {
+    "A_name" : "configureDataSource",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 167, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 168, Column: 9",
+        "H_initialValue" : "RxTableViewSectionedReloadDataSource<SectionModel<String, User>>(\n            configureCell: { (_, tv, ip, user: User) in\n                let cell = tv.dequeueReusableCell(withIdentifier: \"Cell\")!\n                cell.textLabel?.text = user.firstName + \" \" + user.lastName\n                return cell\n            },\n            titleForHeaderInSection: { dataSource, sectionIndex in\n                return dataSource[sectionIndex].model\n            },\n            canEditRowAtIndexPath: { (ds, ip) in\n                return true\n            },\n            canMoveRowAtIndexPath: { _, _ in\n                return true\n            }\n        )"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> RxTableViewSectionedReloadDataSource<SectionModel<String, User>>"
+  },
+  {
+    "A_name" : "dataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 168, Column: 9",
+    "H_initialValue" : "RxTableViewSectionedReloadDataSource<SectionModel<String, User>>(\n            configureCell: { (_, tv, ip, user: User) in\n                let cell = tv.dequeueReusableCell(withIdentifier: \"Cell\")!\n                cell.textLabel?.text = user.firstName + \" \" + user.lastName\n                return cell\n            },\n            titleForHeaderInSection: { dataSource, sectionIndex in\n                return dataSource[sectionIndex].model\n            },\n            canEditRowAtIndexPath: { (ds, ip) in\n                return true\n            },\n            canMoveRowAtIndexPath: { _, _ in\n                return true\n            }\n        )"
+  },
+  {
+    "A_name" : "cell",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewWithEditingCommandsViewController.swift - Line: 170, Column: 17",
+    "H_initialValue" : "tv.dequeueReusableCell(withIdentifier: \"Cell\")!"
+  }
+]

@@ -1,0 +1,928 @@
+[
+  {
+    "A_name" : "ValidatingProperty",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "MutablePropertyProtocol"
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 19, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "getter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 20, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 21, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 24, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 30, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "producer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 38, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "signal",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 42, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lifetime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 45, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 58, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "isSettingInnerValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ValidatingProperty.swift - Line: 69, Column: 3",
+            "H_initialValue" : "false"
+          }
+        ],
+        "I_parameterType" : [
+          "Inner",
+          "@escaping (Value) -> Decision"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 107, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Value",
+          "@escaping (Value) -> Decision"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 126, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "other",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ValidatingProperty.swift - Line: 133, Column: 3",
+            "H_initialValue" : "Property(other)"
+          }
+        ],
+        "I_parameterType" : [
+          "MutableProperty<Value>",
+          "Other",
+          "@escaping (Value, Other.Value) -> Decision"
+        ],
+        "I_parameters" : [
+          "_",
+          "with",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 171, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Value",
+          "Other",
+          "@escaping (Value, Other.Value) -> Decision"
+        ],
+        "I_parameters" : [
+          "_",
+          "with",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 192, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Value",
+          "ValidatingProperty<U, E>",
+          "@escaping (Value, U) -> Decision"
+        ],
+        "I_parameters" : [
+          "_",
+          "with",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 210, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "otherValidations",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ValidatingProperty.swift - Line: 216, Column: 3",
+            "H_initialValue" : "other.result"
+          }
+        ],
+        "I_parameterType" : [
+          "MutableProperty<Value>",
+          "ValidatingProperty<U, E>",
+          "@escaping (Value, U) -> Decision"
+        ],
+        "I_parameters" : [
+          "_",
+          "with",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "Decision",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 258, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "valid",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ValidatingProperty.swift - Line: 260, Column: 8",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "coerced",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ValidatingProperty.swift - Line: 264, Column: 8",
+            "I_parameterType" : [
+              "Value",
+              "ValidationError?"
+            ],
+            "I_parameters" : [
+              "_",
+              "_"
+            ]
+          },
+          {
+            "A_name" : "invalid",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ValidatingProperty.swift - Line: 267, Column: 8",
+            "I_parameterType" : [
+              "ValidationError"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "Result",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 271, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "valid",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ValidatingProperty.swift - Line: 273, Column: 8",
+            "I_parameterType" : [
+              "Value"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "coerced",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ValidatingProperty.swift - Line: 277, Column: 8",
+            "I_parameterType" : [
+              "Value",
+              "Value",
+              "ValidationError?"
+            ],
+            "I_parameters" : [
+              "replacement",
+              "proposed",
+              "error"
+            ]
+          },
+          {
+            "A_name" : "invalid",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ValidatingProperty.swift - Line: 280, Column: 8",
+            "I_parameterType" : [
+              "Value",
+              "ValidationError"
+            ],
+            "I_parameters" : [
+              "_",
+              "_"
+            ]
+          },
+          {
+            "A_name" : "isInvalid",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ValidatingProperty.swift - Line: 283, Column: 3",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "value",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ValidatingProperty.swift - Line: 292, Column: 3",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "error",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ValidatingProperty.swift - Line: 304, Column: 3",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "fileprivate",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ValidatingProperty.swift - Line: 312, Column: 3",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "Value",
+              "Decision"
+            ],
+            "I_parameters" : [
+              "_",
+              "_"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "getter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 20, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 21, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 24, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 30, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 38, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 42, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lifetime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 45, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 58, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "isSettingInnerValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 69, Column: 3",
+        "H_initialValue" : "false"
+      }
+    ],
+    "I_parameterType" : [
+      "Inner",
+      "@escaping (Value) -> Decision"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "isSettingInnerValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 69, Column: 3",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "mutableResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 72, Column: 4",
+    "H_initialValue" : "MutableProperty(Result(initial, validator(initial)))"
+  },
+  {
+    "A_name" : "writebackValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 82, Column: 6",
+    "H_initialValue" : "mutableResult.modify { result in\n\t\t\t\t\t\tresult = Result(input, validator(input))\n\t\t\t\t\t\treturn result.value\n\t\t\t\t\t}"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 107, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Value",
+      "@escaping (Value) -> Decision"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 126, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "other",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 133, Column: 3",
+        "H_initialValue" : "Property(other)"
+      }
+    ],
+    "I_parameterType" : [
+      "MutableProperty<Value>",
+      "Other",
+      "@escaping (Value, Other.Value) -> Decision"
+    ],
+    "I_parameters" : [
+      "_",
+      "with",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "other",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 133, Column: 3",
+    "H_initialValue" : "Property(other)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 171, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Value",
+      "Other",
+      "@escaping (Value, Other.Value) -> Decision"
+    ],
+    "I_parameters" : [
+      "_",
+      "with",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 192, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Value",
+      "ValidatingProperty<U, E>",
+      "@escaping (Value, U) -> Decision"
+    ],
+    "I_parameters" : [
+      "_",
+      "with",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 210, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "otherValidations",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 216, Column: 3",
+        "H_initialValue" : "other.result"
+      }
+    ],
+    "I_parameterType" : [
+      "MutableProperty<Value>",
+      "ValidatingProperty<U, E>",
+      "@escaping (Value, U) -> Decision"
+    ],
+    "I_parameters" : [
+      "_",
+      "with",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "otherValidations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 216, Column: 3",
+    "H_initialValue" : "other.result"
+  },
+  {
+    "A_name" : "otherValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 219, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Decision",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 258, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "valid",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 260, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "coerced",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 264, Column: 8",
+        "I_parameterType" : [
+          "Value",
+          "ValidationError?"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "invalid",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 267, Column: 8",
+        "I_parameterType" : [
+          "ValidationError"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Result",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 271, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "valid",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 273, Column: 8",
+        "I_parameterType" : [
+          "Value"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "coerced",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 277, Column: 8",
+        "I_parameterType" : [
+          "Value",
+          "Value",
+          "ValidationError?"
+        ],
+        "I_parameters" : [
+          "replacement",
+          "proposed",
+          "error"
+        ]
+      },
+      {
+        "A_name" : "invalid",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 280, Column: 8",
+        "I_parameterType" : [
+          "Value",
+          "ValidationError"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "isInvalid",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 283, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 292, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 304, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ValidatingProperty.swift - Line: 312, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Value",
+          "Decision"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "isInvalid",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 283, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 292, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 304, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ValidatingProperty.swift - Line: 312, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Value",
+      "Decision"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ]
+  }
+]

@@ -1,0 +1,593 @@
+[
+  {
+    "A_name" : "Request",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RequestType"
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 27, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "sessionHeaders",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 28, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "sessionHeaders",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 28, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "CancellableToken",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Cancellable",
+      "CustomDebugStringConvertible"
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 37, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "cancelAction",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 38, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 39, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isCancelled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 41, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 43, Column: 5",
+        "H_initialValue" : "DispatchSemaphore(value: 1)"
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 45, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 53, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping () -> Void"
+        ],
+        "I_parameters" : [
+          "action"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 58, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request"
+        ],
+        "I_parameters" : [
+          "request"
+        ]
+      },
+      {
+        "A_name" : "debugDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 66, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "cancelAction",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 38, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 39, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isCancelled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 41, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 43, Column: 5",
+    "H_initialValue" : "DispatchSemaphore(value: 1)"
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 45, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 53, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping () -> Void"
+    ],
+    "I_parameters" : [
+      "action"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 58, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request"
+    ],
+    "I_parameters" : [
+      "request"
+    ]
+  },
+  {
+    "A_name" : "debugDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 66, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Requestable",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 77, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "response",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 78, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue?",
+          "@escaping RequestableCompletion"
+        ],
+        "I_parameters" : [
+          "callbackQueue",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 78, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue?",
+      "@escaping RequestableCompletion"
+    ],
+    "I_parameters" : [
+      "callbackQueue",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "DataRequest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Requestable"
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 81, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "response",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 82, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue?",
+          "@escaping RequestableCompletion"
+        ],
+        "I_parameters" : [
+          "callbackQueue",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 82, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue?",
+      "@escaping RequestableCompletion"
+    ],
+    "I_parameters" : [
+      "callbackQueue",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "DownloadRequest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Requestable"
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 95, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "response",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 96, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue?",
+          "@escaping RequestableCompletion"
+        ],
+        "I_parameters" : [
+          "callbackQueue",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 96, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue?",
+      "@escaping RequestableCompletion"
+    ],
+    "I_parameters" : [
+      "callbackQueue",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "MoyaRequestInterceptor",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "RequestInterceptor"
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 109, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "prepare",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 110, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "willSend",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "Atomic"
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 112, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 115, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "((URLRequest) -> URLRequest)?",
+          "((URLRequest) -> Void)?"
+        ],
+        "I_parameters" : [
+          "prepare",
+          "willSend"
+        ]
+      },
+      {
+        "A_name" : "adapt",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 120, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Moya+Alamofire.swift - Line: 121, Column: 9",
+            "H_initialValue" : "prepare?(urlRequest) ?? urlRequest"
+          }
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "Alamofire.Session",
+          "@escaping (Result<URLRequest, Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "for",
+          "completion"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "prepare",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 110, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "willSend",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "Atomic"
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 112, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 115, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "((URLRequest) -> URLRequest)?",
+      "((URLRequest) -> Void)?"
+    ],
+    "I_parameters" : [
+      "prepare",
+      "willSend"
+    ]
+  },
+  {
+    "A_name" : "adapt",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 120, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Moya+Alamofire.swift - Line: 121, Column: 9",
+        "H_initialValue" : "prepare?(urlRequest) ?? urlRequest"
+      }
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "Alamofire.Session",
+      "@escaping (Result<URLRequest, Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "for",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Moya+Alamofire.swift - Line: 121, Column: 9",
+    "H_initialValue" : "prepare?(urlRequest) ?? urlRequest"
+  }
+]

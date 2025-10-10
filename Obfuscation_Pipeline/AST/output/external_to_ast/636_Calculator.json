@@ -1,0 +1,526 @@
+[
+  {
+    "A_name" : "Operator",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "addition",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 10, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "subtraction",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 11, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "multiplication",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 12, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "division",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 13, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "CalculatorCommand",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "clear",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 17, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "changeSign",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 18, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "percent",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 19, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "operation",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 20, Column: 10",
+        "I_parameterType" : [
+          "Operator"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "equal",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 21, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "addNumber",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 22, Column: 10",
+        "I_parameterType" : [
+          "Character"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "addDot",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 23, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "CalculatorState",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 26, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "oneOperand",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 27, Column: 10",
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "screen"
+        ]
+      },
+      {
+        "A_name" : "oneOperandAndOperator",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 28, Column: 10",
+        "I_parameterType" : [
+          "Double",
+          "Operator"
+        ],
+        "I_parameters" : [
+          "operand",
+          "operator"
+        ]
+      },
+      {
+        "A_name" : "twoOperandsAndOperator",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 29, Column: 10",
+        "I_parameterType" : [
+          "Double",
+          "Operator",
+          "String"
+        ],
+        "I_parameters" : [
+          "operand",
+          "operator",
+          "screen"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "CalculatorState",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 32, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "initial",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Calculator.swift - Line: 33, Column: 5",
+        "H_initialValue" : "CalculatorState.oneOperand(screen: \"0\")"
+      },
+      {
+        "A_name" : "mapScreen",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 35, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(String) -> String"
+        ],
+        "I_parameters" : [
+          "transform"
+        ],
+        "J_returnType" : "-> CalculatorState"
+      },
+      {
+        "A_name" : "screen",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 46, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "sign",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 57, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "initial",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Calculator.swift - Line: 33, Column: 5",
+    "H_initialValue" : "CalculatorState.oneOperand(screen: \"0\")"
+  },
+  {
+    "A_name" : "mapScreen",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 35, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(String) -> String"
+    ],
+    "I_parameters" : [
+      "transform"
+    ],
+    "J_returnType" : "-> CalculatorState"
+  },
+  {
+    "A_name" : "screen",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 46, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sign",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 57, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "CalculatorState",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 70, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "reduce",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Calculator.swift - Line: 71, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CalculatorState",
+          "CalculatorCommand"
+        ],
+        "I_parameters" : [
+          "state",
+          "_"
+        ],
+        "J_returnType" : "-> CalculatorState"
+      }
+    ]
+  },
+  {
+    "A_name" : "reduce",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Calculator.swift - Line: 71, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CalculatorState",
+      "CalculatorCommand"
+    ],
+    "I_parameters" : [
+      "state",
+      "_"
+    ],
+    "J_returnType" : "-> CalculatorState"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 95, Column: 17",
+    "H_initialValue" : "operat.perform(operand, screen.doubleValue)"
+  },
+  {
+    "A_name" : "Operator",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 104, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "sign",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 105, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "perform",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 114, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "sign",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 105, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "perform",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 114, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "String",
+    "B_kind" : "extension",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 124, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "doubleValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Calculator.swift - Line: 125, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "doubleValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Calculator.swift - Line: 125, Column: 5",
+    "H_initialValue" : ""
+  }
+]

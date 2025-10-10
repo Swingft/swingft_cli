@@ -1,0 +1,1626 @@
+[
+  {
+    "A_name" : "AsyncSubjectTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "test_hasObserversManyObserver",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 15, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 16, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "subject",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 18, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 20, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 21, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 23, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 24, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 26, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 27, Column: 9",
+            "H_initialValue" : "nil"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_infinite",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 45, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 46, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 48, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 1),\n            .next(110, 2),\n            .next(220, 3),\n            .next(270, 4),\n            .next(340, 5),\n            .next(410, 6),\n            .next(520, 7),\n            .next(630, 8),\n            .next(710, 9),\n            .next(870, 10),\n            .next(940, 11),\n            .next(1020, 12),\n            ])"
+          },
+          {
+            "A_name" : "subject",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 63, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 64, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 66, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 67, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 69, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 70, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 72, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 73, Column: 9",
+            "H_initialValue" : "nil"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_finite",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 97, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 98, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 100, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 1),\n            .next(110, 2),\n            .next(220, 3),\n            .next(270, 4),\n            .next(340, 5),\n            .next(410, 6),\n            .next(520, 7),\n            .completed(630),\n            .next(640, 9),\n            .completed(650),\n            .error(660, testError)\n            ])"
+          },
+          {
+            "A_name" : "subject",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 114, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 115, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 117, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 118, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 120, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 121, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 123, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 124, Column: 9",
+            "H_initialValue" : "nil"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_error",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 154, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 155, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 157, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 1),\n            .next(110, 2),\n            .next(220, 3),\n            .next(270, 4),\n            .next(340, 5),\n            .next(410, 6),\n            .next(520, 7),\n            .error(630, testError),\n            .next(640, 9),\n            .completed(650),\n            .error(660, testError)\n            ])"
+          },
+          {
+            "A_name" : "subject",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 171, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 172, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 174, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 175, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 177, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 178, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 180, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 181, Column: 9",
+            "H_initialValue" : "nil"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_empty",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 210, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 211, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 213, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .completed(630),\n            .next(640, 9),\n            .completed(650),\n            .error(660, testError)\n            ])"
+          },
+          {
+            "A_name" : "subject",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 220, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 221, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 223, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 224, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 226, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 227, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "results3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 229, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AsyncSubjectTests.swift - Line: 230, Column: 9",
+            "H_initialValue" : "nil"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "test_hasObserversManyObserver",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 15, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 16, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "subject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 18, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 20, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 21, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 23, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 24, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 26, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 27, Column: 9",
+        "H_initialValue" : "nil"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 16, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "subject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 18, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 20, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 21, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 23, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 24, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 26, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 27, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "test_infinite",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 45, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 46, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 48, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 1),\n            .next(110, 2),\n            .next(220, 3),\n            .next(270, 4),\n            .next(340, 5),\n            .next(410, 6),\n            .next(520, 7),\n            .next(630, 8),\n            .next(710, 9),\n            .next(870, 10),\n            .next(940, 11),\n            .next(1020, 12),\n            ])"
+      },
+      {
+        "A_name" : "subject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 63, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 64, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 66, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 67, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 69, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 70, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 72, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 73, Column: 9",
+        "H_initialValue" : "nil"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 46, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 48, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 1),\n            .next(110, 2),\n            .next(220, 3),\n            .next(270, 4),\n            .next(340, 5),\n            .next(410, 6),\n            .next(520, 7),\n            .next(630, 8),\n            .next(710, 9),\n            .next(870, 10),\n            .next(940, 11),\n            .next(1020, 12),\n            ])"
+  },
+  {
+    "A_name" : "subject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 63, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 64, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 66, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 67, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 69, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 70, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 72, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 73, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "test_finite",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 97, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 98, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 100, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 1),\n            .next(110, 2),\n            .next(220, 3),\n            .next(270, 4),\n            .next(340, 5),\n            .next(410, 6),\n            .next(520, 7),\n            .completed(630),\n            .next(640, 9),\n            .completed(650),\n            .error(660, testError)\n            ])"
+      },
+      {
+        "A_name" : "subject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 114, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 115, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 117, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 118, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 120, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 121, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 123, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 124, Column: 9",
+        "H_initialValue" : "nil"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 98, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 100, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 1),\n            .next(110, 2),\n            .next(220, 3),\n            .next(270, 4),\n            .next(340, 5),\n            .next(410, 6),\n            .next(520, 7),\n            .completed(630),\n            .next(640, 9),\n            .completed(650),\n            .error(660, testError)\n            ])"
+  },
+  {
+    "A_name" : "subject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 114, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 115, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 117, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 118, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 120, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 121, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 123, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 124, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "test_error",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 154, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 155, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 157, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 1),\n            .next(110, 2),\n            .next(220, 3),\n            .next(270, 4),\n            .next(340, 5),\n            .next(410, 6),\n            .next(520, 7),\n            .error(630, testError),\n            .next(640, 9),\n            .completed(650),\n            .error(660, testError)\n            ])"
+      },
+      {
+        "A_name" : "subject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 171, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 172, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 174, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 175, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 177, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 178, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 180, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 181, Column: 9",
+        "H_initialValue" : "nil"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 155, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 157, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 1),\n            .next(110, 2),\n            .next(220, 3),\n            .next(270, 4),\n            .next(340, 5),\n            .next(410, 6),\n            .next(520, 7),\n            .error(630, testError),\n            .next(640, 9),\n            .completed(650),\n            .error(660, testError)\n            ])"
+  },
+  {
+    "A_name" : "subject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 171, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 172, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 174, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 175, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 177, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 178, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 180, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 181, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "test_empty",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 210, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 211, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 213, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .completed(630),\n            .next(640, 9),\n            .completed(650),\n            .error(660, testError)\n            ])"
+      },
+      {
+        "A_name" : "subject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 220, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 221, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 223, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 224, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 226, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 227, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "results3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 229, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AsyncSubjectTests.swift - Line: 230, Column: 9",
+        "H_initialValue" : "nil"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 211, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 213, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .completed(630),\n            .next(640, 9),\n            .completed(650),\n            .error(660, testError)\n            ])"
+  },
+  {
+    "A_name" : "subject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 220, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 221, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 223, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 224, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 226, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 227, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "results3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 229, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AsyncSubjectTests.swift - Line: 230, Column: 9",
+    "H_initialValue" : "nil"
+  }
+]

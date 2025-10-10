@@ -1,0 +1,206 @@
+[
+  {
+    "A_name" : "FeedUseCase",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "FeedUseCase.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "execute",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedUseCase.swift - Line: 11, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FeedType"
+        ],
+        "I_parameters" : [
+          "type"
+        ],
+        "J_returnType" : "-> AnyPublisher<([FeedEntity], Bool?), Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "execute",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedUseCase.swift - Line: 11, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FeedType"
+    ],
+    "I_parameters" : [
+      "type"
+    ],
+    "J_returnType" : "-> AnyPublisher<([FeedEntity], Bool?), Error>"
+  },
+  {
+    "A_name" : "DefaultFeedUseCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "FeedUseCase"
+    ],
+    "F_location" : "FeedUseCase.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "repository",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedUseCase.swift - Line: 15, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedUseCase.swift - Line: 17, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FeedRepository"
+        ],
+        "I_parameters" : [
+          "repository"
+        ]
+      },
+      {
+        "A_name" : "execute",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedUseCase.swift - Line: 21, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FeedType"
+        ],
+        "I_parameters" : [
+          "type"
+        ],
+        "J_returnType" : "-> AnyPublisher<([FeedEntity], Bool?), Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "repository",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedUseCase.swift - Line: 15, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedUseCase.swift - Line: 17, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FeedRepository"
+    ],
+    "I_parameters" : [
+      "repository"
+    ]
+  },
+  {
+    "A_name" : "execute",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedUseCase.swift - Line: 21, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FeedType"
+    ],
+    "I_parameters" : [
+      "type"
+    ],
+    "J_returnType" : "-> AnyPublisher<([FeedEntity], Bool?), Error>"
+  },
+  {
+    "A_name" : "FeedType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "FeedUseCase.swift - Line: 27, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "recommend",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedUseCase.swift - Line: 28, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "following",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedUseCase.swift - Line: 29, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  }
+]

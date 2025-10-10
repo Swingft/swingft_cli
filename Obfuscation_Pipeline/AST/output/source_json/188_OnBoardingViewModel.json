@@ -1,0 +1,588 @@
+[
+  {
+    "A_name" : "OnBoardingViewModel",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseViewModel"
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Input",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 16, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "nicknameChanged",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewModel.swift - Line: 17, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "startTapped",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewModel.swift - Line: 18, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "Output",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 21, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "nicknameState",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewModel.swift - Line: 22, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "startButtonEnabled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewModel.swift - Line: 23, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "signUpResult",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewModel.swift - Line: 24, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "useCase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 29, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uploadImageUseCase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 30, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "navigateToHomeSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 31, Column: 5",
+        "H_initialValue" : "PassthroughSubject<Void, Never>()"
+      },
+      {
+        "A_name" : "latestValidNickname",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 32, Column: 5",
+        "H_initialValue" : "\"\""
+      },
+      {
+        "A_name" : "selectedImageData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 33, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "latestFileKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 34, Column: 5",
+        "H_initialValue" : "\"\""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 38, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "OnBoardingUseCase",
+          "UploadImageUseCase"
+        ],
+        "I_parameters" : [
+          "useCase",
+          "uploadImageUseCase"
+        ]
+      },
+      {
+        "A_name" : "transform",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 45, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "nicknameChanged",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewModel.swift - Line: 46, Column: 9",
+            "H_initialValue" : "input.nicknameChanged\n            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }\n            .removeDuplicates()\n            .handleEvents(receiveOutput: { [weak self] nickname in\n                self?.latestValidNickname = nickname\n            })\n            .share()"
+          },
+          {
+            "A_name" : "nicknameValidatoinState",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewModel.swift - Line: 54, Column: 9",
+            "H_initialValue" : "nicknameChanged\n            .map { [weak self] nickname -> nickNameTextField.State in\n                guard let self else { return .normal }\n\n                switch useCase.validate(nickname) {\n                case .empty:\n                    return .normal\n                case .tooShort:\n                    return .error(\"최소 2글자 이상 입력해주세요.\")\n                case .containsInvalidCharacters:\n                    return .error(\"특수문자, 이모지는 사용이 불가능해요.\")\n                case .valid:\n                    return .wait\n                }\n            }"
+          },
+          {
+            "A_name" : "nicknameDupicateState",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewModel.swift - Line: 70, Column: 9",
+            "H_initialValue" : "nicknameChanged\n            .filter { [weak self] in self?.useCase.validate($0) == .valid }\n            .debounce(for: .milliseconds(1000), scheduler: RunLoop.main)\n            .map { nickname in\n                self.useCase.checkDuplicate(nickname)\n                    .map { (isAvailable, message) in\n                        if isAvailable {\n                            return (nickname, nickNameTextField.State.success(message ?? \"사용 가능한 닉네임이에요\"))\n                        } else {\n                            return (nickname, nickNameTextField.State.error(message ?? \"이미 사용 중인 닉네임이에요.\"))\n                        }\n                    }\n                    .eraseToAnyPublisher()\n            }\n            .switchToLatest()\n            .combineLatest(nicknameChanged)\n            .compactMap { response, currentNickname in\n                let (responseNickname, state) = response\n                return responseNickname == currentNickname ? state : nil\n            }"
+          },
+          {
+            "A_name" : "nicknameState",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewModel.swift - Line: 92, Column: 9",
+            "H_initialValue" : "Publishers.Merge(nicknameValidatoinState, nicknameDupicateState)\n            .share()"
+          },
+          {
+            "A_name" : "isStartButtonEnabled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewModel.swift - Line: 95, Column: 9",
+            "H_initialValue" : "nicknameState\n            .map {\n                if case .success = $0 {\n                    return true\n                } else {\n                    return false\n                }\n            }"
+          }
+        ],
+        "I_parameterType" : [
+          "Input"
+        ],
+        "I_parameters" : [
+          "input"
+        ],
+        "J_returnType" : "-> Output"
+      }
+    ]
+  },
+  {
+    "A_name" : "Input",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 16, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "nicknameChanged",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 17, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "startTapped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 18, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "nicknameChanged",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 17, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "startTapped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 18, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Output",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 21, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "nicknameState",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 22, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "startButtonEnabled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 23, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "signUpResult",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 24, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "nicknameState",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 22, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "startButtonEnabled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 23, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signUpResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 24, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "useCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 29, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uploadImageUseCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 30, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "navigateToHomeSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 31, Column: 5",
+    "H_initialValue" : "PassthroughSubject<Void, Never>()"
+  },
+  {
+    "A_name" : "latestValidNickname",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 32, Column: 5",
+    "H_initialValue" : "\"\""
+  },
+  {
+    "A_name" : "selectedImageData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 33, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "latestFileKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 34, Column: 5",
+    "H_initialValue" : "\"\""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 38, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "OnBoardingUseCase",
+      "UploadImageUseCase"
+    ],
+    "I_parameters" : [
+      "useCase",
+      "uploadImageUseCase"
+    ]
+  },
+  {
+    "A_name" : "transform",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 45, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "nicknameChanged",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 46, Column: 9",
+        "H_initialValue" : "input.nicknameChanged\n            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }\n            .removeDuplicates()\n            .handleEvents(receiveOutput: { [weak self] nickname in\n                self?.latestValidNickname = nickname\n            })\n            .share()"
+      },
+      {
+        "A_name" : "nicknameValidatoinState",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 54, Column: 9",
+        "H_initialValue" : "nicknameChanged\n            .map { [weak self] nickname -> nickNameTextField.State in\n                guard let self else { return .normal }\n\n                switch useCase.validate(nickname) {\n                case .empty:\n                    return .normal\n                case .tooShort:\n                    return .error(\"최소 2글자 이상 입력해주세요.\")\n                case .containsInvalidCharacters:\n                    return .error(\"특수문자, 이모지는 사용이 불가능해요.\")\n                case .valid:\n                    return .wait\n                }\n            }"
+      },
+      {
+        "A_name" : "nicknameDupicateState",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 70, Column: 9",
+        "H_initialValue" : "nicknameChanged\n            .filter { [weak self] in self?.useCase.validate($0) == .valid }\n            .debounce(for: .milliseconds(1000), scheduler: RunLoop.main)\n            .map { nickname in\n                self.useCase.checkDuplicate(nickname)\n                    .map { (isAvailable, message) in\n                        if isAvailable {\n                            return (nickname, nickNameTextField.State.success(message ?? \"사용 가능한 닉네임이에요\"))\n                        } else {\n                            return (nickname, nickNameTextField.State.error(message ?? \"이미 사용 중인 닉네임이에요.\"))\n                        }\n                    }\n                    .eraseToAnyPublisher()\n            }\n            .switchToLatest()\n            .combineLatest(nicknameChanged)\n            .compactMap { response, currentNickname in\n                let (responseNickname, state) = response\n                return responseNickname == currentNickname ? state : nil\n            }"
+      },
+      {
+        "A_name" : "nicknameState",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 92, Column: 9",
+        "H_initialValue" : "Publishers.Merge(nicknameValidatoinState, nicknameDupicateState)\n            .share()"
+      },
+      {
+        "A_name" : "isStartButtonEnabled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewModel.swift - Line: 95, Column: 9",
+        "H_initialValue" : "nicknameState\n            .map {\n                if case .success = $0 {\n                    return true\n                } else {\n                    return false\n                }\n            }"
+      }
+    ],
+    "I_parameterType" : [
+      "Input"
+    ],
+    "I_parameters" : [
+      "input"
+    ],
+    "J_returnType" : "-> Output"
+  },
+  {
+    "A_name" : "nicknameChanged",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 46, Column: 9",
+    "H_initialValue" : "input.nicknameChanged\n            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }\n            .removeDuplicates()\n            .handleEvents(receiveOutput: { [weak self] nickname in\n                self?.latestValidNickname = nickname\n            })\n            .share()"
+  },
+  {
+    "A_name" : "nicknameValidatoinState",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 54, Column: 9",
+    "H_initialValue" : "nicknameChanged\n            .map { [weak self] nickname -> nickNameTextField.State in\n                guard let self else { return .normal }\n\n                switch useCase.validate(nickname) {\n                case .empty:\n                    return .normal\n                case .tooShort:\n                    return .error(\"최소 2글자 이상 입력해주세요.\")\n                case .containsInvalidCharacters:\n                    return .error(\"특수문자, 이모지는 사용이 불가능해요.\")\n                case .valid:\n                    return .wait\n                }\n            }"
+  },
+  {
+    "A_name" : "nicknameDupicateState",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 70, Column: 9",
+    "H_initialValue" : "nicknameChanged\n            .filter { [weak self] in self?.useCase.validate($0) == .valid }\n            .debounce(for: .milliseconds(1000), scheduler: RunLoop.main)\n            .map { nickname in\n                self.useCase.checkDuplicate(nickname)\n                    .map { (isAvailable, message) in\n                        if isAvailable {\n                            return (nickname, nickNameTextField.State.success(message ?? \"사용 가능한 닉네임이에요\"))\n                        } else {\n                            return (nickname, nickNameTextField.State.error(message ?? \"이미 사용 중인 닉네임이에요.\"))\n                        }\n                    }\n                    .eraseToAnyPublisher()\n            }\n            .switchToLatest()\n            .combineLatest(nicknameChanged)\n            .compactMap { response, currentNickname in\n                let (responseNickname, state) = response\n                return responseNickname == currentNickname ? state : nil\n            }"
+  },
+  {
+    "A_name" : "nicknameState",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 92, Column: 9",
+    "H_initialValue" : "Publishers.Merge(nicknameValidatoinState, nicknameDupicateState)\n            .share()"
+  },
+  {
+    "A_name" : "isStartButtonEnabled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 95, Column: 9",
+    "H_initialValue" : "nicknameState\n            .map {\n                if case .success = $0 {\n                    return true\n                } else {\n                    return false\n                }\n            }"
+  },
+  {
+    "A_name" : "imageData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 108, Column: 17",
+    "H_initialValue" : "self.selectedImageData"
+  },
+  {
+    "A_name" : "contentType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewModel.swift - Line: 109, Column: 17",
+    "H_initialValue" : "\"image\/jpeg\""
+  }
+]

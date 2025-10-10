@@ -1,0 +1,408 @@
+[
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "subscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableType+Extensions.swift - Line: 20, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableType+Extensions.swift - Line: 21, Column: 9",
+            "H_initialValue" : "AnonymousObserver { e in\n            on(e)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "@escaping (Event<Element>) -> Void"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "subscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableType+Extensions.swift - Line: 42, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Object",
+          "((Object, Element) -> Void)?",
+          "((Object, Swift.Error) -> Void)?",
+          "((Object) -> Void)?",
+          "((Object) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "onNext",
+          "onError",
+          "onCompleted",
+          "onDisposed"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "subscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableType+Extensions.swift - Line: 79, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "disposable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableType+Extensions.swift - Line: 85, Column: 13",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "callStack",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableType+Extensions.swift - Line: 98, Column: 13",
+            "H_initialValue" : "Hooks.recordCallStackOnError ? Hooks.customCaptureSubscriptionCallstack() : []"
+          },
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObservableType+Extensions.swift - Line: 100, Column: 13",
+            "H_initialValue" : "AnonymousObserver<Element> { event in\n                \n                #if DEBUG\n                    synchronizationTracker.register(synchronizationErrorMessage: .default)\n                    defer { synchronizationTracker.unregister() }\n                #endif\n                \n                switch event {\n                case .next(let value):\n                    onNext?(value)\n                case .error(let error):\n                    if let onError = onError {\n                        onError(error)\n                    }\n                    else {\n                        Hooks.defaultErrorHandler(callStack, error)\n                    }\n                    disposable.dispose()\n                case .completed:\n                    onCompleted?()\n                    disposable.dispose()\n                }\n            }"
+          }
+        ],
+        "I_parameterType" : [
+          "((Element) -> Void)?",
+          "((Swift.Error) -> Void)?",
+          "(() -> Void)?",
+          "(() -> Void)?"
+        ],
+        "I_parameters" : [
+          "onNext",
+          "onError",
+          "onCompleted",
+          "onDisposed"
+        ],
+        "J_returnType" : "-> Disposable"
+      }
+    ]
+  },
+  {
+    "A_name" : "subscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 20, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableType+Extensions.swift - Line: 21, Column: 9",
+        "H_initialValue" : "AnonymousObserver { e in\n            on(e)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping (Event<Element>) -> Void"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 21, Column: 9",
+    "H_initialValue" : "AnonymousObserver { e in\n            on(e)\n        }"
+  },
+  {
+    "A_name" : "subscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 42, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Object",
+      "((Object, Element) -> Void)?",
+      "((Object, Swift.Error) -> Void)?",
+      "((Object) -> Void)?",
+      "((Object) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "onNext",
+      "onError",
+      "onCompleted",
+      "onDisposed"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 79, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "disposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableType+Extensions.swift - Line: 85, Column: 13",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "callStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableType+Extensions.swift - Line: 98, Column: 13",
+        "H_initialValue" : "Hooks.recordCallStackOnError ? Hooks.customCaptureSubscriptionCallstack() : []"
+      },
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObservableType+Extensions.swift - Line: 100, Column: 13",
+        "H_initialValue" : "AnonymousObserver<Element> { event in\n                \n                #if DEBUG\n                    synchronizationTracker.register(synchronizationErrorMessage: .default)\n                    defer { synchronizationTracker.unregister() }\n                #endif\n                \n                switch event {\n                case .next(let value):\n                    onNext?(value)\n                case .error(let error):\n                    if let onError = onError {\n                        onError(error)\n                    }\n                    else {\n                        Hooks.defaultErrorHandler(callStack, error)\n                    }\n                    disposable.dispose()\n                case .completed:\n                    onCompleted?()\n                    disposable.dispose()\n                }\n            }"
+      }
+    ],
+    "I_parameterType" : [
+      "((Element) -> Void)?",
+      "((Swift.Error) -> Void)?",
+      "(() -> Void)?",
+      "(() -> Void)?"
+    ],
+    "I_parameters" : [
+      "onNext",
+      "onError",
+      "onCompleted",
+      "onDisposed"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 85, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "synchronizationTracker",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 95, Column: 17",
+    "H_initialValue" : "SynchronizationTracker()"
+  },
+  {
+    "A_name" : "callStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 98, Column: 13",
+    "H_initialValue" : "Hooks.recordCallStackOnError ? Hooks.customCaptureSubscriptionCallstack() : []"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 100, Column: 13",
+    "H_initialValue" : "AnonymousObserver<Element> { event in\n                \n                #if DEBUG\n                    synchronizationTracker.register(synchronizationErrorMessage: .default)\n                    defer { synchronizationTracker.unregister() }\n                #endif\n                \n                switch event {\n                case .next(let value):\n                    onNext?(value)\n                case .error(let error):\n                    if let onError = onError {\n                        onError(error)\n                    }\n                    else {\n                        Hooks.defaultErrorHandler(callStack, error)\n                    }\n                    disposable.dispose()\n                case .completed:\n                    onCompleted?()\n                    disposable.dispose()\n                }\n            }"
+  },
+  {
+    "A_name" : "Hooks",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 132, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ObservableType+Extensions.swift - Line: 136, Column: 5",
+        "H_initialValue" : "RecursiveLock()"
+      },
+      {
+        "A_name" : "_defaultErrorHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ObservableType+Extensions.swift - Line: 137, Column: 5",
+        "H_initialValue" : "{ subscriptionCallStack, error in\n        #if DEBUG\n            let serializedCallStack = subscriptionCallStack.joined(separator: \"\\n\")\n            print(\"Unhandled error happened: \\(error)\")\n            if !serializedCallStack.isEmpty {\n                print(\"subscription called from:\\n\\(serializedCallStack)\")\n            }\n        #endif\n    }"
+      },
+      {
+        "A_name" : "_customCaptureSubscriptionCallstack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ObservableType+Extensions.swift - Line: 146, Column: 5",
+        "H_initialValue" : "{\n        #if DEBUG\n            return Thread.callStackSymbols\n        #else\n            return []\n        #endif\n    }"
+      },
+      {
+        "A_name" : "defaultErrorHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ObservableType+Extensions.swift - Line: 155, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "customCaptureSubscriptionCallstack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ObservableType+Extensions.swift - Line: 165, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 136, Column: 5",
+    "H_initialValue" : "RecursiveLock()"
+  },
+  {
+    "A_name" : "_defaultErrorHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 137, Column: 5",
+    "H_initialValue" : "{ subscriptionCallStack, error in\n        #if DEBUG\n            let serializedCallStack = subscriptionCallStack.joined(separator: \"\\n\")\n            print(\"Unhandled error happened: \\(error)\")\n            if !serializedCallStack.isEmpty {\n                print(\"subscription called from:\\n\\(serializedCallStack)\")\n            }\n        #endif\n    }"
+  },
+  {
+    "A_name" : "serializedCallStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 139, Column: 13",
+    "H_initialValue" : "subscriptionCallStack.joined(separator: \"\\n\")"
+  },
+  {
+    "A_name" : "_customCaptureSubscriptionCallstack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 146, Column: 5",
+    "H_initialValue" : "{\n        #if DEBUG\n            return Thread.callStackSymbols\n        #else\n            return []\n        #endif\n    }"
+  },
+  {
+    "A_name" : "defaultErrorHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 155, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "customCaptureSubscriptionCallstack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ObservableType+Extensions.swift - Line: 165, Column: 5",
+    "H_initialValue" : ""
+  }
+]

@@ -1,0 +1,636 @@
+[
+  {
+    "A_name" : "BlockModal",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIView"
+    ],
+    "F_location" : "BlockModal.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "onApplyTapped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 14, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "backgroundDimView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 17, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = UIColor.dim\n        view.alpha = 0\n        return view\n    }()"
+      },
+      {
+        "A_name" : "modalSheetView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 24, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 12\n        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]\n        view.clipsToBounds = true\n        return view\n    }()"
+      },
+      {
+        "A_name" : "titleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 33, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.head_b_18)\n        label.textColor = .black\n        label.textAlignment = .left\n        label.text = \"정말 차단하실 건가요?\"\n        return label\n    }()"
+      },
+      {
+        "A_name" : "infoLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 42, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_m_14)\n        label.textColor = .gray400\n        label.numberOfLines = 0\n        label.textAlignment = .left\n        label.text = \"차단 시 상대방은 차단 여부를 알 수 없으며,\\n언제든 차단을 해제 할 수 있어요.\"\n        return label\n    }()"
+      },
+      {
+        "A_name" : "blockedUserStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 52, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.spacing = 4\n        stack.alignment = .center\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "blockedByMeStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 60, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.spacing = 4\n        stack.alignment = .center\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "blockedUserIcon",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 68, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"ic_check_20_ios\", in: .module, with: nil)\n        imageView.contentMode = .scaleAspectFit\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "blockedByMeIcon",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 75, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"ic_check_20_ios\", in: .module, with: nil)\n        imageView.contentMode = .scaleAspectFit\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "blockedUserInfoLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 82, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_m_14)\n        label.textColor = .gray850\n        label.text = \"상대의 모든 활동을 확인할 수 없어요.\"\n        return label\n    }()"
+      },
+      {
+        "A_name" : "blockedByMeInfoLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 90, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_m_14)\n        label.textColor = .gray850\n        label.text = \"상대는 나의 모든 활동을 확인할 수 없어요.\"\n        return label\n    }()"
+      },
+      {
+        "A_name" : "applyButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 98, Column: 5",
+        "H_initialValue" : "CTAButton(style: .TextButton(\"차단하기\"), autoBackground: false)"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "BlockModal.swift - Line: 101, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "BlockModal.swift - Line: 108, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "setupUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 113, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tapGesture",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BlockModal.swift - Line: 121, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismiss))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setupLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 125, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setupAction",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 160, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "show",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 169, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UIView"
+        ],
+        "I_parameters" : [
+          "in"
+        ]
+      },
+      {
+        "A_name" : "dismiss",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "BlockModal.swift - Line: 185, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "onApplyTapped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 14, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "backgroundDimView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 17, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = UIColor.dim\n        view.alpha = 0\n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 18, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "modalSheetView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 24, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 12\n        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]\n        view.clipsToBounds = true\n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 25, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "titleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 33, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.head_b_18)\n        label.textColor = .black\n        label.textAlignment = .left\n        label.text = \"정말 차단하실 건가요?\"\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 34, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "infoLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 42, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_m_14)\n        label.textColor = .gray400\n        label.numberOfLines = 0\n        label.textAlignment = .left\n        label.text = \"차단 시 상대방은 차단 여부를 알 수 없으며,\\n언제든 차단을 해제 할 수 있어요.\"\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 43, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "blockedUserStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 52, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.spacing = 4\n        stack.alignment = .center\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 53, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "blockedByMeStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 60, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.spacing = 4\n        stack.alignment = .center\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 61, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "blockedUserIcon",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 68, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"ic_check_20_ios\", in: .module, with: nil)\n        imageView.contentMode = .scaleAspectFit\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 69, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "blockedByMeIcon",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 75, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"ic_check_20_ios\", in: .module, with: nil)\n        imageView.contentMode = .scaleAspectFit\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 76, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "blockedUserInfoLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 82, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_m_14)\n        label.textColor = .gray850\n        label.text = \"상대의 모든 활동을 확인할 수 없어요.\"\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 83, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "blockedByMeInfoLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 90, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_m_14)\n        label.textColor = .gray850\n        label.text = \"상대는 나의 모든 활동을 확인할 수 없어요.\"\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 91, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "applyButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 98, Column: 5",
+    "H_initialValue" : "CTAButton(style: .TextButton(\"차단하기\"), autoBackground: false)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "BlockModal.swift - Line: 101, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "BlockModal.swift - Line: 108, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "setupUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 113, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tapGesture",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockModal.swift - Line: 121, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismiss))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tapGesture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 121, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismiss))"
+  },
+  {
+    "A_name" : "setupLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 125, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setupAction",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 160, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "show",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockModal.swift - Line: 169, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UIView"
+    ],
+    "I_parameters" : [
+      "in"
+    ]
+  },
+  {
+    "A_name" : "dismiss",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "BlockModal.swift - Line: 185, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

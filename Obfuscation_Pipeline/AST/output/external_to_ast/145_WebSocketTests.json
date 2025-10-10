@@ -1,0 +1,5044 @@
+[
+  {
+    "A_name" : "WebSocketTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "available",
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testThatWebSocketsCanReceiveMessageEvents",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 17, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didConnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 19, Column: 9",
+            "H_initialValue" : "expectation(description: \"didConnect\")"
+          },
+          {
+            "A_name" : "didReceiveMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 20, Column: 9",
+            "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+          },
+          {
+            "A_name" : "didDisconnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 21, Column: 9",
+            "H_initialValue" : "expectation(description: \"didDisconnect\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 22, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 23, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "connectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 25, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "message",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 26, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeCode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 27, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeReason",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 28, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "receivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 29, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatWebSocketsCanReceiveMessageEventsWithParameters",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 62, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didConnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 64, Column: 9",
+            "H_initialValue" : "expectation(description: \"didConnect\")"
+          },
+          {
+            "A_name" : "didReceiveMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 65, Column: 9",
+            "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+          },
+          {
+            "A_name" : "didDisconnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 66, Column: 9",
+            "H_initialValue" : "expectation(description: \"didDisconnect\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 67, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 68, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "connectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 70, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "message",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 71, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeCode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 72, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeReason",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 73, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "receivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 74, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatWebSocketsCanReceiveAMessage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 107, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didReceiveMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 109, Column: 9",
+            "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 110, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 111, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "receivedMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 113, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatWebSocketsCanReceiveADecodableMessage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 131, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didConnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 133, Column: 9",
+            "H_initialValue" : "expectation(description: \"didConnect\")"
+          },
+          {
+            "A_name" : "didReceiveMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 134, Column: 9",
+            "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+          },
+          {
+            "A_name" : "didDisconnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 135, Column: 9",
+            "H_initialValue" : "expectation(description: \"didDisconnect\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 136, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 137, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "connectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 139, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "message",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 140, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeCode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 141, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeReason",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 142, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "receivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 143, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatWebSocketsCanReceiveADecodableValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 178, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didReceiveValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 180, Column: 9",
+            "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 181, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 183, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "receivedValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 185, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatWebSocketsCanReceiveAMessageWithAProtocol",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 202, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didConnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 204, Column: 9",
+            "H_initialValue" : "expectation(description: \"didConnect\")"
+          },
+          {
+            "A_name" : "didReceiveMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 205, Column: 9",
+            "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+          },
+          {
+            "A_name" : "didDisconnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 206, Column: 9",
+            "H_initialValue" : "expectation(description: \"didDisconnect\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 207, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 208, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "`protocol`",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 210, Column: 9",
+            "H_initialValue" : "\"protocol\""
+          },
+          {
+            "A_name" : "connectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 211, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "message",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 212, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeCode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 213, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeReason",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 214, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "receivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 215, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatWebSocketsCanReceiveMultipleMessages",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 248, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "count",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 250, Column: 9",
+            "H_initialValue" : "5"
+          },
+          {
+            "A_name" : "didConnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 251, Column: 9",
+            "H_initialValue" : "expectation(description: \"didConnect\")"
+          },
+          {
+            "A_name" : "didReceiveMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 252, Column: 9",
+            "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+          },
+          {
+            "A_name" : "didDisconnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 254, Column: 9",
+            "H_initialValue" : "expectation(description: \"didDisconnect\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 255, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 257, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "connectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 259, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "messages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 260, Column: 9",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "closeCode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 261, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeReason",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 262, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "receivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 263, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatWebSocketsCanSendAndReceiveMessages",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 294, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didConnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 296, Column: 9",
+            "H_initialValue" : "expectation(description: \"didConnect\")"
+          },
+          {
+            "A_name" : "didSend",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 297, Column: 9",
+            "H_initialValue" : "expectation(description: \"didSend\")"
+          },
+          {
+            "A_name" : "didReceiveMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 298, Column: 9",
+            "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+          },
+          {
+            "A_name" : "didDisconnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 299, Column: 9",
+            "H_initialValue" : "expectation(description: \"didDisconnect\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 300, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 301, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "sentMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 302, Column: 9",
+            "H_initialValue" : "URLSessionWebSocketTask.Message.string(\"Echo\")"
+          },
+          {
+            "A_name" : "connectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 304, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "message",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 305, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeCode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 306, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeReason",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 307, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "receivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 308, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 311, Column: 9",
+            "H_initialValue" : "session.webSocketRequest(.websocketEcho)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatWebSocketsCanBeCancelled",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 345, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didConnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 347, Column: 9",
+            "H_initialValue" : "expectation(description: \"didConnect\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 348, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 349, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "connectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 351, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "receivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 352, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 355, Column: 9",
+            "H_initialValue" : "session.webSocketRequest(.websocketEcho)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testOnePingOnly",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 380, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didConnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 382, Column: 9",
+            "H_initialValue" : "expectation(description: \"didConnect\")"
+          },
+          {
+            "A_name" : "didSend",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 383, Column: 9",
+            "H_initialValue" : "expectation(description: \"didSend\")"
+          },
+          {
+            "A_name" : "didReceiveMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 384, Column: 9",
+            "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+          },
+          {
+            "A_name" : "didReceivePong",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 385, Column: 9",
+            "H_initialValue" : "expectation(description: \"didReceivePong\")"
+          },
+          {
+            "A_name" : "didDisconnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 387, Column: 9",
+            "H_initialValue" : "expectation(description: \"didDisconnect\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 388, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 389, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "sentMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 390, Column: 9",
+            "H_initialValue" : "URLSessionWebSocketTask.Message.string(\"Echo\")"
+          },
+          {
+            "A_name" : "connectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 392, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "message",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 393, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "receivedPong",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 394, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeCode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 395, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeReason",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 396, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "receivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 397, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 400, Column: 9",
+            "H_initialValue" : "session.webSocketRequest(.websocketEcho)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatTimePingsOccur",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 449, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didConnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 451, Column: 9",
+            "H_initialValue" : "expectation(description: \"didConnect\")"
+          },
+          {
+            "A_name" : "didDisconnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 452, Column: 9",
+            "H_initialValue" : "expectation(description: \"didDisconnect\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 453, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 454, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "connectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 456, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeCode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 457, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeReason",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 458, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "receivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 459, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 462, Column: 9",
+            "H_initialValue" : "session.webSocketRequest(.websocketPings(), configuration: .pingInterval(0.01))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatWebSocketFailsWithTooSmallMaximumMessageSize",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 490, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didConnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 492, Column: 9",
+            "H_initialValue" : "expectation(description: \"didConnect\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 493, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 494, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "connectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 496, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "receivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 497, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatWebSocketsFinishAfterNonNormalResponseCode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 520, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didConnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 522, Column: 9",
+            "H_initialValue" : "expectation(description: \"didConnect\")"
+          },
+          {
+            "A_name" : "didReceiveMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 523, Column: 9",
+            "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+          },
+          {
+            "A_name" : "didDisconnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 524, Column: 9",
+            "H_initialValue" : "expectation(description: \"didDisconnect\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 525, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 526, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "connectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 528, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "message",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 529, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeCode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 530, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeReason",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 531, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "receivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 532, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatWebSocketsCanHaveMultipleHandlers",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 565, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didConnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 567, Column: 9",
+            "H_initialValue" : "expectation(description: \"didConnect\")"
+          },
+          {
+            "A_name" : "didReceiveMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 569, Column: 9",
+            "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+          },
+          {
+            "A_name" : "didDisconnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 571, Column: 9",
+            "H_initialValue" : "expectation(description: \"didDisconnect\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 573, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 575, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "firstConnectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 577, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "firstMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 578, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "firstCloseCode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 579, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "firstCloseReason",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 580, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "firstReceivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 581, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "secondConnectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 582, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "secondMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 583, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "secondCloseCode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 584, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "secondCloseReason",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 585, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "secondReceivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 586, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testThatWebSocketsCanReceiveMessageEvents",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 17, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didConnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 19, Column: 9",
+        "H_initialValue" : "expectation(description: \"didConnect\")"
+      },
+      {
+        "A_name" : "didReceiveMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 20, Column: 9",
+        "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+      },
+      {
+        "A_name" : "didDisconnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 21, Column: 9",
+        "H_initialValue" : "expectation(description: \"didDisconnect\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 22, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 23, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "connectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 25, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "message",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 26, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 27, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeReason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 28, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "receivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 29, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didConnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 19, Column: 9",
+    "H_initialValue" : "expectation(description: \"didConnect\")"
+  },
+  {
+    "A_name" : "didReceiveMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 20, Column: 9",
+    "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+  },
+  {
+    "A_name" : "didDisconnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 21, Column: 9",
+    "H_initialValue" : "expectation(description: \"didDisconnect\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 22, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 23, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "connectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 25, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 26, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 27, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeReason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 28, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "receivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 29, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatWebSocketsCanReceiveMessageEventsWithParameters",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 62, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didConnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 64, Column: 9",
+        "H_initialValue" : "expectation(description: \"didConnect\")"
+      },
+      {
+        "A_name" : "didReceiveMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 65, Column: 9",
+        "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+      },
+      {
+        "A_name" : "didDisconnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 66, Column: 9",
+        "H_initialValue" : "expectation(description: \"didDisconnect\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 67, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 68, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "connectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 70, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "message",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 71, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 72, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeReason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 73, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "receivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 74, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didConnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 64, Column: 9",
+    "H_initialValue" : "expectation(description: \"didConnect\")"
+  },
+  {
+    "A_name" : "didReceiveMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 65, Column: 9",
+    "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+  },
+  {
+    "A_name" : "didDisconnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 66, Column: 9",
+    "H_initialValue" : "expectation(description: \"didDisconnect\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 67, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 68, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "connectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 70, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 71, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 72, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeReason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 73, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "receivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 74, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatWebSocketsCanReceiveAMessage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 107, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didReceiveMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 109, Column: 9",
+        "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 110, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 111, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "receivedMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 113, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didReceiveMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 109, Column: 9",
+    "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 110, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 111, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "receivedMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 113, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatWebSocketsCanReceiveADecodableMessage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 131, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didConnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 133, Column: 9",
+        "H_initialValue" : "expectation(description: \"didConnect\")"
+      },
+      {
+        "A_name" : "didReceiveMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 134, Column: 9",
+        "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+      },
+      {
+        "A_name" : "didDisconnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 135, Column: 9",
+        "H_initialValue" : "expectation(description: \"didDisconnect\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 136, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 137, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "connectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 139, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "message",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 140, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 141, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeReason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 142, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "receivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 143, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didConnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 133, Column: 9",
+    "H_initialValue" : "expectation(description: \"didConnect\")"
+  },
+  {
+    "A_name" : "didReceiveMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 134, Column: 9",
+    "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+  },
+  {
+    "A_name" : "didDisconnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 135, Column: 9",
+    "H_initialValue" : "expectation(description: \"didDisconnect\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 136, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 137, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "connectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 139, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 140, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 141, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeReason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 142, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "receivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 143, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatWebSocketsCanReceiveADecodableValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 178, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didReceiveValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 180, Column: 9",
+        "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 181, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 183, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "receivedValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 185, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didReceiveValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 180, Column: 9",
+    "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 181, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 183, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "receivedValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 185, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatWebSocketsCanReceiveAMessageWithAProtocol",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 202, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didConnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 204, Column: 9",
+        "H_initialValue" : "expectation(description: \"didConnect\")"
+      },
+      {
+        "A_name" : "didReceiveMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 205, Column: 9",
+        "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+      },
+      {
+        "A_name" : "didDisconnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 206, Column: 9",
+        "H_initialValue" : "expectation(description: \"didDisconnect\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 207, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 208, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "`protocol`",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 210, Column: 9",
+        "H_initialValue" : "\"protocol\""
+      },
+      {
+        "A_name" : "connectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 211, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "message",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 212, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 213, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeReason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 214, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "receivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 215, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didConnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 204, Column: 9",
+    "H_initialValue" : "expectation(description: \"didConnect\")"
+  },
+  {
+    "A_name" : "didReceiveMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 205, Column: 9",
+    "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+  },
+  {
+    "A_name" : "didDisconnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 206, Column: 9",
+    "H_initialValue" : "expectation(description: \"didDisconnect\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 207, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 208, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "`protocol`",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 210, Column: 9",
+    "H_initialValue" : "\"protocol\""
+  },
+  {
+    "A_name" : "connectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 211, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 212, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 213, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeReason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 214, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "receivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 215, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatWebSocketsCanReceiveMultipleMessages",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 248, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "count",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 250, Column: 9",
+        "H_initialValue" : "5"
+      },
+      {
+        "A_name" : "didConnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 251, Column: 9",
+        "H_initialValue" : "expectation(description: \"didConnect\")"
+      },
+      {
+        "A_name" : "didReceiveMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 252, Column: 9",
+        "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+      },
+      {
+        "A_name" : "didDisconnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 254, Column: 9",
+        "H_initialValue" : "expectation(description: \"didDisconnect\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 255, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 257, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "connectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 259, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "messages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 260, Column: 9",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "closeCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 261, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeReason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 262, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "receivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 263, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "count",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 250, Column: 9",
+    "H_initialValue" : "5"
+  },
+  {
+    "A_name" : "didConnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 251, Column: 9",
+    "H_initialValue" : "expectation(description: \"didConnect\")"
+  },
+  {
+    "A_name" : "didReceiveMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 252, Column: 9",
+    "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+  },
+  {
+    "A_name" : "didDisconnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 254, Column: 9",
+    "H_initialValue" : "expectation(description: \"didDisconnect\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 255, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 257, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "connectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 259, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "messages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 260, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "closeCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 261, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeReason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 262, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "receivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 263, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatWebSocketsCanSendAndReceiveMessages",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 294, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didConnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 296, Column: 9",
+        "H_initialValue" : "expectation(description: \"didConnect\")"
+      },
+      {
+        "A_name" : "didSend",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 297, Column: 9",
+        "H_initialValue" : "expectation(description: \"didSend\")"
+      },
+      {
+        "A_name" : "didReceiveMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 298, Column: 9",
+        "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+      },
+      {
+        "A_name" : "didDisconnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 299, Column: 9",
+        "H_initialValue" : "expectation(description: \"didDisconnect\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 300, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 301, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "sentMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 302, Column: 9",
+        "H_initialValue" : "URLSessionWebSocketTask.Message.string(\"Echo\")"
+      },
+      {
+        "A_name" : "connectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 304, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "message",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 305, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 306, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeReason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 307, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "receivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 308, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 311, Column: 9",
+        "H_initialValue" : "session.webSocketRequest(.websocketEcho)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didConnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 296, Column: 9",
+    "H_initialValue" : "expectation(description: \"didConnect\")"
+  },
+  {
+    "A_name" : "didSend",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 297, Column: 9",
+    "H_initialValue" : "expectation(description: \"didSend\")"
+  },
+  {
+    "A_name" : "didReceiveMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 298, Column: 9",
+    "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+  },
+  {
+    "A_name" : "didDisconnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 299, Column: 9",
+    "H_initialValue" : "expectation(description: \"didDisconnect\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 300, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 301, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "sentMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 302, Column: 9",
+    "H_initialValue" : "URLSessionWebSocketTask.Message.string(\"Echo\")"
+  },
+  {
+    "A_name" : "connectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 304, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 305, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 306, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeReason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 307, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "receivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 308, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 311, Column: 9",
+    "H_initialValue" : "session.webSocketRequest(.websocketEcho)"
+  },
+  {
+    "A_name" : "testThatWebSocketsCanBeCancelled",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 345, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didConnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 347, Column: 9",
+        "H_initialValue" : "expectation(description: \"didConnect\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 348, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 349, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "connectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 351, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "receivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 352, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 355, Column: 9",
+        "H_initialValue" : "session.webSocketRequest(.websocketEcho)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didConnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 347, Column: 9",
+    "H_initialValue" : "expectation(description: \"didConnect\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 348, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 349, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "connectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 351, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "receivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 352, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 355, Column: 9",
+    "H_initialValue" : "session.webSocketRequest(.websocketEcho)"
+  },
+  {
+    "A_name" : "testOnePingOnly",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 380, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didConnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 382, Column: 9",
+        "H_initialValue" : "expectation(description: \"didConnect\")"
+      },
+      {
+        "A_name" : "didSend",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 383, Column: 9",
+        "H_initialValue" : "expectation(description: \"didSend\")"
+      },
+      {
+        "A_name" : "didReceiveMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 384, Column: 9",
+        "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+      },
+      {
+        "A_name" : "didReceivePong",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 385, Column: 9",
+        "H_initialValue" : "expectation(description: \"didReceivePong\")"
+      },
+      {
+        "A_name" : "didDisconnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 387, Column: 9",
+        "H_initialValue" : "expectation(description: \"didDisconnect\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 388, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 389, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "sentMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 390, Column: 9",
+        "H_initialValue" : "URLSessionWebSocketTask.Message.string(\"Echo\")"
+      },
+      {
+        "A_name" : "connectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 392, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "message",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 393, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "receivedPong",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 394, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 395, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeReason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 396, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "receivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 397, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 400, Column: 9",
+        "H_initialValue" : "session.webSocketRequest(.websocketEcho)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didConnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 382, Column: 9",
+    "H_initialValue" : "expectation(description: \"didConnect\")"
+  },
+  {
+    "A_name" : "didSend",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 383, Column: 9",
+    "H_initialValue" : "expectation(description: \"didSend\")"
+  },
+  {
+    "A_name" : "didReceiveMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 384, Column: 9",
+    "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+  },
+  {
+    "A_name" : "didReceivePong",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 385, Column: 9",
+    "H_initialValue" : "expectation(description: \"didReceivePong\")"
+  },
+  {
+    "A_name" : "didDisconnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 387, Column: 9",
+    "H_initialValue" : "expectation(description: \"didDisconnect\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 388, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 389, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "sentMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 390, Column: 9",
+    "H_initialValue" : "URLSessionWebSocketTask.Message.string(\"Echo\")"
+  },
+  {
+    "A_name" : "connectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 392, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 393, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "receivedPong",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 394, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 395, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeReason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 396, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "receivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 397, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 400, Column: 9",
+    "H_initialValue" : "session.webSocketRequest(.websocketEcho)"
+  },
+  {
+    "A_name" : "testThatTimePingsOccur",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 449, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didConnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 451, Column: 9",
+        "H_initialValue" : "expectation(description: \"didConnect\")"
+      },
+      {
+        "A_name" : "didDisconnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 452, Column: 9",
+        "H_initialValue" : "expectation(description: \"didDisconnect\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 453, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 454, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "connectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 456, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 457, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeReason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 458, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "receivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 459, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 462, Column: 9",
+        "H_initialValue" : "session.webSocketRequest(.websocketPings(), configuration: .pingInterval(0.01))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didConnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 451, Column: 9",
+    "H_initialValue" : "expectation(description: \"didConnect\")"
+  },
+  {
+    "A_name" : "didDisconnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 452, Column: 9",
+    "H_initialValue" : "expectation(description: \"didDisconnect\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 453, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 454, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "connectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 456, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 457, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeReason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 458, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "receivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 459, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 462, Column: 9",
+    "H_initialValue" : "session.webSocketRequest(.websocketPings(), configuration: .pingInterval(0.01))"
+  },
+  {
+    "A_name" : "testThatWebSocketFailsWithTooSmallMaximumMessageSize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 490, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didConnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 492, Column: 9",
+        "H_initialValue" : "expectation(description: \"didConnect\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 493, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 494, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "connectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 496, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "receivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 497, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didConnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 492, Column: 9",
+    "H_initialValue" : "expectation(description: \"didConnect\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 493, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 494, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "connectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 496, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "receivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 497, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatWebSocketsFinishAfterNonNormalResponseCode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 520, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didConnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 522, Column: 9",
+        "H_initialValue" : "expectation(description: \"didConnect\")"
+      },
+      {
+        "A_name" : "didReceiveMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 523, Column: 9",
+        "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+      },
+      {
+        "A_name" : "didDisconnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 524, Column: 9",
+        "H_initialValue" : "expectation(description: \"didDisconnect\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 525, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 526, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "connectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 528, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "message",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 529, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 530, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeReason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 531, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "receivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 532, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didConnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 522, Column: 9",
+    "H_initialValue" : "expectation(description: \"didConnect\")"
+  },
+  {
+    "A_name" : "didReceiveMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 523, Column: 9",
+    "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+  },
+  {
+    "A_name" : "didDisconnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 524, Column: 9",
+    "H_initialValue" : "expectation(description: \"didDisconnect\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 525, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 526, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "connectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 528, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 529, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 530, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeReason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 531, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "receivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 532, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatWebSocketsCanHaveMultipleHandlers",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 565, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didConnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 567, Column: 9",
+        "H_initialValue" : "expectation(description: \"didConnect\")"
+      },
+      {
+        "A_name" : "didReceiveMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 569, Column: 9",
+        "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+      },
+      {
+        "A_name" : "didDisconnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 571, Column: 9",
+        "H_initialValue" : "expectation(description: \"didDisconnect\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 573, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 575, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "firstConnectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 577, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "firstMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 578, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "firstCloseCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 579, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "firstCloseReason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 580, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "firstReceivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 581, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "secondConnectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 582, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "secondMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 583, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "secondCloseCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 584, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "secondCloseReason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 585, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "secondReceivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 586, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didConnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 567, Column: 9",
+    "H_initialValue" : "expectation(description: \"didConnect\")"
+  },
+  {
+    "A_name" : "didReceiveMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 569, Column: 9",
+    "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+  },
+  {
+    "A_name" : "didDisconnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 571, Column: 9",
+    "H_initialValue" : "expectation(description: \"didDisconnect\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 573, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 575, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "firstConnectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 577, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "firstMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 578, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "firstCloseCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 579, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "firstCloseReason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 580, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "firstReceivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 581, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "secondConnectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 582, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "secondMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 583, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "secondCloseCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 584, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "secondCloseReason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 585, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "secondReceivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 586, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "WebSocketIntegrationTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "available",
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 642, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testThatWebSocketsCanReceiveMessageEventsAfterRetry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 644, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "didConnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 646, Column: 9",
+            "H_initialValue" : "expectation(description: \"didConnect\")"
+          },
+          {
+            "A_name" : "didReceiveMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 647, Column: 9",
+            "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+          },
+          {
+            "A_name" : "didDisconnect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 648, Column: 9",
+            "H_initialValue" : "expectation(description: \"didDisconnect\")"
+          },
+          {
+            "A_name" : "didComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 649, Column: 9",
+            "H_initialValue" : "expectation(description: \"didComplete\")"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 650, Column: 9",
+            "H_initialValue" : "stored(Session())"
+          },
+          {
+            "A_name" : "connectedProtocol",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 652, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "message",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 653, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeCode",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 654, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "closeReason",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 655, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "receivedCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WebSocketTests.swift - Line: 656, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testThatWebSocketsCanReceiveMessageEventsAfterRetry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 644, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "didConnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 646, Column: 9",
+        "H_initialValue" : "expectation(description: \"didConnect\")"
+      },
+      {
+        "A_name" : "didReceiveMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 647, Column: 9",
+        "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+      },
+      {
+        "A_name" : "didDisconnect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 648, Column: 9",
+        "H_initialValue" : "expectation(description: \"didDisconnect\")"
+      },
+      {
+        "A_name" : "didComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 649, Column: 9",
+        "H_initialValue" : "expectation(description: \"didComplete\")"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 650, Column: 9",
+        "H_initialValue" : "stored(Session())"
+      },
+      {
+        "A_name" : "connectedProtocol",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 652, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "message",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 653, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 654, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "closeReason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 655, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "receivedCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 656, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didConnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 646, Column: 9",
+    "H_initialValue" : "expectation(description: \"didConnect\")"
+  },
+  {
+    "A_name" : "didReceiveMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 647, Column: 9",
+    "H_initialValue" : "expectation(description: \"didReceiveMessage\")"
+  },
+  {
+    "A_name" : "didDisconnect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 648, Column: 9",
+    "H_initialValue" : "expectation(description: \"didDisconnect\")"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 649, Column: 9",
+    "H_initialValue" : "expectation(description: \"didComplete\")"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 650, Column: 9",
+    "H_initialValue" : "stored(Session())"
+  },
+  {
+    "A_name" : "connectedProtocol",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 652, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 653, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 654, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "closeReason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 655, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "receivedCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 656, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "WebSocketRequest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 691, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "onCompletion",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 693, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping @Sendable () -> Void"
+        ],
+        "I_parameters" : [
+          "queue",
+          "handler"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "onCompletion",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 693, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping @Sendable () -> Void"
+    ],
+    "I_parameters" : [
+      "queue",
+      "handler"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "Foundation.URLSessionWebSocketTask.Message",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Equatable"
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 703, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "==",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 705, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionWebSocketTask.Message",
+          "URLSessionWebSocketTask.Message"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "string",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 716, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 722, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 705, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionWebSocketTask.Message",
+      "URLSessionWebSocketTask.Message"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "string",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 716, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 722, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Session",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 729, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "webSocketRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "WebSocketTests.swift - Line: 730, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Endpoint",
+          "WebSocketRequest.Configuration",
+          "(any RequestInterceptor)?"
+        ],
+        "I_parameters" : [
+          "_",
+          "configuration",
+          "interceptor"
+        ],
+        "J_returnType" : "-> WebSocketRequest"
+      }
+    ]
+  },
+  {
+    "A_name" : "webSocketRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "WebSocketTests.swift - Line: 730, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Endpoint",
+      "WebSocketRequest.Configuration",
+      "(any RequestInterceptor)?"
+    ],
+    "I_parameters" : [
+      "_",
+      "configuration",
+      "interceptor"
+    ],
+    "J_returnType" : "-> WebSocketRequest"
+  }
+]

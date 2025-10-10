@@ -1,0 +1,862 @@
+[
+  {
+    "A_name" : "DetailViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UITableViewController"
+    ],
+    "F_location" : "DetailViewController.swift - Line: 28, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Sections",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Int"
+        ],
+        "F_location" : "DetailViewController.swift - Line: 29, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headers",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DetailViewController.swift - Line: 30, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "body",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DetailViewController.swift - Line: 30, Column: 23",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DetailViewController.swift - Line: 33, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DetailViewController.swift - Line: 49, Column: 5",
+        "H_initialValue" : "[:]"
+      },
+      {
+        "A_name" : "body",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DetailViewController.swift - Line: 50, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "elapsedTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DetailViewController.swift - Line: 51, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "segueIdentifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DetailViewController.swift - Line: 52, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "numberFormatter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DetailViewController.swift - Line: 54, Column: 5",
+        "H_initialValue" : "{\n        let formatter = NumberFormatter()\n        formatter.numberStyle = .decimal\n        return formatter\n    }()"
+      },
+      {
+        "A_name" : "awakeFromNib",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DetailViewController.swift - Line: 62, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "viewDidAppear",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DetailViewController.swift - Line: 67, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "refresh",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "IBAction"
+        ],
+        "F_location" : "DetailViewController.swift - Line: 74, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "start",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DetailViewController.swift - Line: 82, Column: 9",
+            "H_initialValue" : "CACurrentMediaTime()"
+          },
+          {
+            "A_name" : "requestComplete",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DetailViewController.swift - Line: 84, Column: 9",
+            "H_initialValue" : "{ response, result in\n            let end = CACurrentMediaTime()\n            self.elapsedTime = end - start\n\n            if let response {\n                for (field, value) in response.allHeaderFields {\n                    self.headers[\"\\(field)\"] = \"\\(value)\"\n                }\n            }\n\n            if let segueIdentifier = self.segueIdentifier {\n                switch segueIdentifier {\n                case \"GET\", \"POST\", \"PUT\", \"DELETE\":\n                    if case let .success(value) = result { self.body = value }\n                case \"DOWNLOAD\":\n                    self.body = self.downloadedBodyString()\n                default:\n                    break\n                }\n            }\n\n            self.tableView.reloadData()\n            self.refreshControl?.endRefreshing()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "downloadedBodyString",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DetailViewController.swift - Line: 120, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fileManager",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DetailViewController.swift - Line: 121, Column: 9",
+            "H_initialValue" : "FileManager.default"
+          },
+          {
+            "A_name" : "cachesDirectory",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DetailViewController.swift - Line: 122, Column: 9",
+            "H_initialValue" : "fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "Sections",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Int"
+    ],
+    "F_location" : "DetailViewController.swift - Line: 29, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DetailViewController.swift - Line: 30, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "body",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DetailViewController.swift - Line: 30, Column: 23",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 33, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 49, Column: 5",
+    "H_initialValue" : "[:]"
+  },
+  {
+    "A_name" : "body",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 50, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "elapsedTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 51, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "segueIdentifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 52, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "numberFormatter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DetailViewController.swift - Line: 54, Column: 5",
+    "H_initialValue" : "{\n        let formatter = NumberFormatter()\n        formatter.numberStyle = .decimal\n        return formatter\n    }()"
+  },
+  {
+    "A_name" : "formatter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 55, Column: 9",
+    "H_initialValue" : "NumberFormatter()"
+  },
+  {
+    "A_name" : "awakeFromNib",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DetailViewController.swift - Line: 62, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "viewDidAppear",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DetailViewController.swift - Line: 67, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "refresh",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "IBAction"
+    ],
+    "F_location" : "DetailViewController.swift - Line: 74, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "start",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DetailViewController.swift - Line: 82, Column: 9",
+        "H_initialValue" : "CACurrentMediaTime()"
+      },
+      {
+        "A_name" : "requestComplete",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DetailViewController.swift - Line: 84, Column: 9",
+        "H_initialValue" : "{ response, result in\n            let end = CACurrentMediaTime()\n            self.elapsedTime = end - start\n\n            if let response {\n                for (field, value) in response.allHeaderFields {\n                    self.headers[\"\\(field)\"] = \"\\(value)\"\n                }\n            }\n\n            if let segueIdentifier = self.segueIdentifier {\n                switch segueIdentifier {\n                case \"GET\", \"POST\", \"PUT\", \"DELETE\":\n                    if case let .success(value) = result { self.body = value }\n                case \"DOWNLOAD\":\n                    self.body = self.downloadedBodyString()\n                default:\n                    break\n                }\n            }\n\n            self.tableView.reloadData()\n            self.refreshControl?.endRefreshing()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "start",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 82, Column: 9",
+    "H_initialValue" : "CACurrentMediaTime()"
+  },
+  {
+    "A_name" : "requestComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 84, Column: 9",
+    "H_initialValue" : "{ response, result in\n            let end = CACurrentMediaTime()\n            self.elapsedTime = end - start\n\n            if let response {\n                for (field, value) in response.allHeaderFields {\n                    self.headers[\"\\(field)\"] = \"\\(value)\"\n                }\n            }\n\n            if let segueIdentifier = self.segueIdentifier {\n                switch segueIdentifier {\n                case \"GET\", \"POST\", \"PUT\", \"DELETE\":\n                    if case let .success(value) = result { self.body = value }\n                case \"DOWNLOAD\":\n                    self.body = self.downloadedBodyString()\n                default:\n                    break\n                }\n            }\n\n            self.tableView.reloadData()\n            self.refreshControl?.endRefreshing()\n        }"
+  },
+  {
+    "A_name" : "end",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 85, Column: 13",
+    "H_initialValue" : "CACurrentMediaTime()"
+  },
+  {
+    "A_name" : "downloadedBodyString",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 120, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fileManager",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DetailViewController.swift - Line: 121, Column: 9",
+        "H_initialValue" : "FileManager.default"
+      },
+      {
+        "A_name" : "cachesDirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DetailViewController.swift - Line: 122, Column: 9",
+        "H_initialValue" : "fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "fileManager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 121, Column: 9",
+    "H_initialValue" : "FileManager.default"
+  },
+  {
+    "A_name" : "cachesDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 122, Column: 9",
+    "H_initialValue" : "fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0]"
+  },
+  {
+    "A_name" : "contents",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 125, Column: 13",
+    "H_initialValue" : "try fileManager.contentsOfDirectory(at: cachesDirectory,\n                                                               includingPropertiesForKeys: nil,\n                                                               options: .skipsHiddenFiles)"
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 130, Column: 17",
+    "H_initialValue" : "try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())"
+  },
+  {
+    "A_name" : "prettyData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 131, Column: 17",
+    "H_initialValue" : "try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)"
+  },
+  {
+    "A_name" : "DetailViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 148, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DetailViewController.swift - Line: 149, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "numberOfRowsInSection"
+        ],
+        "J_returnType" : "-> Int"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DetailViewController.swift - Line: 158, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "cellForRowAt"
+        ],
+        "J_returnType" : "-> UITableViewCell"
+      }
+    ]
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DetailViewController.swift - Line: 149, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "numberOfRowsInSection"
+    ],
+    "J_returnType" : "-> Int"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DetailViewController.swift - Line: 158, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "cellForRowAt"
+    ],
+    "J_returnType" : "-> UITableViewCell"
+  },
+  {
+    "A_name" : "cell",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 161, Column: 13",
+    "H_initialValue" : "tableView.dequeueReusableCell(withIdentifier: \"Header\")!"
+  },
+  {
+    "A_name" : "field",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 162, Column: 13",
+    "H_initialValue" : "headers.keys.sorted(by: <)[indexPath.row]"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 163, Column: 13",
+    "H_initialValue" : "headers[field]"
+  },
+  {
+    "A_name" : "cell",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 170, Column: 13",
+    "H_initialValue" : "tableView.dequeueReusableCell(withIdentifier: \"Body\")!"
+  },
+  {
+    "A_name" : "DetailViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 180, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "numberOfSections",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DetailViewController.swift - Line: 181, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView"
+        ],
+        "I_parameters" : [
+          "in"
+        ],
+        "J_returnType" : "-> Int"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DetailViewController.swift - Line: 185, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "titleForHeaderInSection"
+        ],
+        "J_returnType" : "-> String?"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DetailViewController.swift - Line: 198, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "heightForRowAt"
+        ],
+        "J_returnType" : "-> CGFloat"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DetailViewController.swift - Line: 207, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "titleForFooterInSection"
+        ],
+        "J_returnType" : "-> String?"
+      }
+    ]
+  },
+  {
+    "A_name" : "numberOfSections",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DetailViewController.swift - Line: 181, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView"
+    ],
+    "I_parameters" : [
+      "in"
+    ],
+    "J_returnType" : "-> Int"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DetailViewController.swift - Line: 185, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "titleForHeaderInSection"
+    ],
+    "J_returnType" : "-> String?"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DetailViewController.swift - Line: 198, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "heightForRowAt"
+    ],
+    "J_returnType" : "-> CGFloat"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DetailViewController.swift - Line: 207, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "titleForFooterInSection"
+    ],
+    "J_returnType" : "-> String?"
+  },
+  {
+    "A_name" : "elapsedTimeText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DetailViewController.swift - Line: 209, Column: 13",
+    "H_initialValue" : "DetailViewController.numberFormatter.string(from: elapsedTime as NSNumber) ?? \"???\""
+  }
+]

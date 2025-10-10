@@ -1,0 +1,414 @@
+[
+  {
+    "A_name" : "FollowListUseCase",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "FollowListUseCase.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "fetchFollowers",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListUseCase.swift - Line: 11, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "targetUserId"
+        ],
+        "J_returnType" : "-> AnyPublisher<[Follower], Error>"
+      },
+      {
+        "A_name" : "fetchFollowings",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListUseCase.swift - Line: 12, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "targetUserId"
+        ],
+        "J_returnType" : "-> AnyPublisher<[Follower], Error>"
+      },
+      {
+        "A_name" : "follow",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListUseCase.swift - Line: 13, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "userId"
+        ],
+        "J_returnType" : "-> AnyPublisher<Void, Error>"
+      },
+      {
+        "A_name" : "unfollow",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListUseCase.swift - Line: 14, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "userId"
+        ],
+        "J_returnType" : "-> AnyPublisher<Bool, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "fetchFollowers",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListUseCase.swift - Line: 11, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "targetUserId"
+    ],
+    "J_returnType" : "-> AnyPublisher<[Follower], Error>"
+  },
+  {
+    "A_name" : "fetchFollowings",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListUseCase.swift - Line: 12, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "targetUserId"
+    ],
+    "J_returnType" : "-> AnyPublisher<[Follower], Error>"
+  },
+  {
+    "A_name" : "follow",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListUseCase.swift - Line: 13, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "userId"
+    ],
+    "J_returnType" : "-> AnyPublisher<Void, Error>"
+  },
+  {
+    "A_name" : "unfollow",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListUseCase.swift - Line: 14, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "userId"
+    ],
+    "J_returnType" : "-> AnyPublisher<Bool, Error>"
+  },
+  {
+    "A_name" : "DefaultFollowListUseCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "FollowListUseCase"
+    ],
+    "F_location" : "FollowListUseCase.swift - Line: 17, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "followListRepository",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListUseCase.swift - Line: 19, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "followingRepository",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListUseCase.swift - Line: 20, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListUseCase.swift - Line: 22, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FollowListRepository",
+          "FollowingRepository"
+        ],
+        "I_parameters" : [
+          "followListRepository",
+          "followingRepository"
+        ]
+      },
+      {
+        "A_name" : "fetchFollowers",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListUseCase.swift - Line: 30, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "targetUserId"
+        ],
+        "J_returnType" : "-> AnyPublisher<[Follower], Error>"
+      },
+      {
+        "A_name" : "fetchFollowings",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListUseCase.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "targetUserId"
+        ],
+        "J_returnType" : "-> AnyPublisher<[Follower], Error>"
+      },
+      {
+        "A_name" : "follow",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListUseCase.swift - Line: 38, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "userId"
+        ],
+        "J_returnType" : "-> AnyPublisher<Void, Error>"
+      },
+      {
+        "A_name" : "unfollow",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListUseCase.swift - Line: 42, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "userId"
+        ],
+        "J_returnType" : "-> AnyPublisher<Bool, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "followListRepository",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListUseCase.swift - Line: 19, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "followingRepository",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListUseCase.swift - Line: 20, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListUseCase.swift - Line: 22, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FollowListRepository",
+      "FollowingRepository"
+    ],
+    "I_parameters" : [
+      "followListRepository",
+      "followingRepository"
+    ]
+  },
+  {
+    "A_name" : "fetchFollowers",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListUseCase.swift - Line: 30, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "targetUserId"
+    ],
+    "J_returnType" : "-> AnyPublisher<[Follower], Error>"
+  },
+  {
+    "A_name" : "fetchFollowings",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListUseCase.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "targetUserId"
+    ],
+    "J_returnType" : "-> AnyPublisher<[Follower], Error>"
+  },
+  {
+    "A_name" : "follow",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListUseCase.swift - Line: 38, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "userId"
+    ],
+    "J_returnType" : "-> AnyPublisher<Void, Error>"
+  },
+  {
+    "A_name" : "unfollow",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListUseCase.swift - Line: 42, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "userId"
+    ],
+    "J_returnType" : "-> AnyPublisher<Bool, Error>"
+  }
+]

@@ -1,0 +1,274 @@
+[
+  {
+    "A_name" : "LivePhotoResourceDownloadingResult",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ImageDownloader+LivePhoto.swift - Line: 33, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDownloader+LivePhoto.swift - Line: 36, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "originalData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDownloader+LivePhoto.swift - Line: 39, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDownloader+LivePhoto.swift - Line: 46, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data",
+          "URL?"
+        ],
+        "I_parameters" : [
+          "originalData",
+          "url"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDownloader+LivePhoto.swift - Line: 36, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "originalData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDownloader+LivePhoto.swift - Line: 39, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDownloader+LivePhoto.swift - Line: 46, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data",
+      "URL?"
+    ],
+    "I_parameters" : [
+      "originalData",
+      "url"
+    ]
+  },
+  {
+    "A_name" : "ImageDownloader",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ImageDownloader+LivePhoto.swift - Line: 52, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "downloadLivePhotoResource",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDownloader+LivePhoto.swift - Line: 54, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "task",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageDownloader+LivePhoto.swift - Line: 58, Column: 9",
+            "H_initialValue" : "CancellationDownloadTask()"
+          }
+        ],
+        "I_parameterType" : [
+          "URL",
+          "KingfisherParsedOptionsInfo"
+        ],
+        "I_parameters" : [
+          "with",
+          "options"
+        ],
+        "J_returnType" : "-> LivePhotoResourceDownloadingResult"
+      },
+      {
+        "A_name" : "downloadLivePhotoResource",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "ImageDownloader+LivePhoto.swift - Line: 79, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "checkedOptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageDownloader+LivePhoto.swift - Line: 85, Column: 9",
+            "H_initialValue" : "options"
+          }
+        ],
+        "I_parameterType" : [
+          "URL",
+          "KingfisherParsedOptionsInfo",
+          "(@Sendable (Result<LivePhotoResourceDownloadingResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "options",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask"
+      }
+    ]
+  },
+  {
+    "A_name" : "downloadLivePhotoResource",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDownloader+LivePhoto.swift - Line: 54, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "task",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDownloader+LivePhoto.swift - Line: 58, Column: 9",
+        "H_initialValue" : "CancellationDownloadTask()"
+      }
+    ],
+    "I_parameterType" : [
+      "URL",
+      "KingfisherParsedOptionsInfo"
+    ],
+    "I_parameters" : [
+      "with",
+      "options"
+    ],
+    "J_returnType" : "-> LivePhotoResourceDownloadingResult"
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDownloader+LivePhoto.swift - Line: 58, Column: 9",
+    "H_initialValue" : "CancellationDownloadTask()"
+  },
+  {
+    "A_name" : "downloadTask",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDownloader+LivePhoto.swift - Line: 61, Column: 17",
+    "H_initialValue" : "downloadLivePhotoResource(with: url, options: options) { result in\n                    continuation.resume(with: result)\n                }"
+  },
+  {
+    "A_name" : "downloadLivePhotoResource",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "ImageDownloader+LivePhoto.swift - Line: 79, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "checkedOptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDownloader+LivePhoto.swift - Line: 85, Column: 9",
+        "H_initialValue" : "options"
+      }
+    ],
+    "I_parameterType" : [
+      "URL",
+      "KingfisherParsedOptionsInfo",
+      "(@Sendable (Result<LivePhotoResourceDownloadingResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "options",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask"
+  },
+  {
+    "A_name" : "checkedOptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDownloader+LivePhoto.swift - Line: 85, Column: 9",
+    "H_initialValue" : "options"
+  },
+  {
+    "A_name" : "newResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDownloader+LivePhoto.swift - Line: 97, Column: 13",
+    "H_initialValue" : "result.map { LivePhotoResourceDownloadingResult(originalData: $0.originalData, url: $0.url) }"
+  }
+]

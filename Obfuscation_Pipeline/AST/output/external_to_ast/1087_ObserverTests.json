@@ -1,0 +1,733 @@
+[
+  {
+    "A_name" : "ObserverTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "ObserverTests.swift - Line: 13, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "ObserverTests",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testConvenienceOn_Next",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 17, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 18, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "a",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 19, Column: 9",
+            "H_initialValue" : "Observable.create { o in\n            observer = o\n            return Disposables.create()\n        }"
+          },
+          {
+            "A_name" : "elements",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 24, Column: 9",
+            "H_initialValue" : "[Int]()"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 26, Column: 9",
+            "H_initialValue" : "a.subscribe(onNext: { n in\n            elements.append(n)\n        })"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testConvenienceOn_Error",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 39, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 40, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "a",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 41, Column: 9",
+            "H_initialValue" : "Observable.create { o in\n            observer = o\n            return Disposables.create()\n        }"
+          },
+          {
+            "A_name" : "elements",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 46, Column: 9",
+            "H_initialValue" : "[Int]()"
+          },
+          {
+            "A_name" : "errorNotification",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 47, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testConvenienceOn_Complete",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 68, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 69, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "a",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 70, Column: 9",
+            "H_initialValue" : "Observable.create { o in\n            observer = o\n            return Disposables.create()\n        }"
+          },
+          {
+            "A_name" : "elements",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 75, Column: 9",
+            "H_initialValue" : "[Int]()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testConvenienceOn_Next",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 17, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 18, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "a",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 19, Column: 9",
+        "H_initialValue" : "Observable.create { o in\n            observer = o\n            return Disposables.create()\n        }"
+      },
+      {
+        "A_name" : "elements",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 24, Column: 9",
+        "H_initialValue" : "[Int]()"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 26, Column: 9",
+        "H_initialValue" : "a.subscribe(onNext: { n in\n            elements.append(n)\n        })"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 18, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "a",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 19, Column: 9",
+    "H_initialValue" : "Observable.create { o in\n            observer = o\n            return Disposables.create()\n        }"
+  },
+  {
+    "A_name" : "elements",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 24, Column: 9",
+    "H_initialValue" : "[Int]()"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 26, Column: 9",
+    "H_initialValue" : "a.subscribe(onNext: { n in\n            elements.append(n)\n        })"
+  },
+  {
+    "A_name" : "testConvenienceOn_Error",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 39, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 40, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "a",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 41, Column: 9",
+        "H_initialValue" : "Observable.create { o in\n            observer = o\n            return Disposables.create()\n        }"
+      },
+      {
+        "A_name" : "elements",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 46, Column: 9",
+        "H_initialValue" : "[Int]()"
+      },
+      {
+        "A_name" : "errorNotification",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 47, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 40, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "a",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 41, Column: 9",
+    "H_initialValue" : "Observable.create { o in\n            observer = o\n            return Disposables.create()\n        }"
+  },
+  {
+    "A_name" : "elements",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 46, Column: 9",
+    "H_initialValue" : "[Int]()"
+  },
+  {
+    "A_name" : "errorNotification",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 47, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testConvenienceOn_Complete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 68, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 69, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "a",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 70, Column: 9",
+        "H_initialValue" : "Observable.create { o in\n            observer = o\n            return Disposables.create()\n        }"
+      },
+      {
+        "A_name" : "elements",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 75, Column: 9",
+        "H_initialValue" : "[Int]()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 69, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "a",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 70, Column: 9",
+    "H_initialValue" : "Observable.create { o in\n            observer = o\n            return Disposables.create()\n        }"
+  },
+  {
+    "A_name" : "elements",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 75, Column: 9",
+    "H_initialValue" : "[Int]()"
+  },
+  {
+    "A_name" : "ObserverTests",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 93, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testMapElement",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 94, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 95, Column: 9",
+            "H_initialValue" : "PrimitiveMockObserver<Int>()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMapElementCompleted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 104, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 105, Column: 9",
+            "H_initialValue" : "PrimitiveMockObserver<Int>()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMapElementError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 114, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 115, Column: 9",
+            "H_initialValue" : "PrimitiveMockObserver<Int>()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMapElementThrow",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 124, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ObserverTests.swift - Line: 125, Column: 9",
+            "H_initialValue" : "PrimitiveMockObserver<Int>()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testMapElement",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 94, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 95, Column: 9",
+        "H_initialValue" : "PrimitiveMockObserver<Int>()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 95, Column: 9",
+    "H_initialValue" : "PrimitiveMockObserver<Int>()"
+  },
+  {
+    "A_name" : "testMapElementCompleted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 104, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 105, Column: 9",
+        "H_initialValue" : "PrimitiveMockObserver<Int>()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 105, Column: 9",
+    "H_initialValue" : "PrimitiveMockObserver<Int>()"
+  },
+  {
+    "A_name" : "testMapElementError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 114, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 115, Column: 9",
+        "H_initialValue" : "PrimitiveMockObserver<Int>()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 115, Column: 9",
+    "H_initialValue" : "PrimitiveMockObserver<Int>()"
+  },
+  {
+    "A_name" : "testMapElementThrow",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 124, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ObserverTests.swift - Line: 125, Column: 9",
+        "H_initialValue" : "PrimitiveMockObserver<Int>()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ObserverTests.swift - Line: 125, Column: 9",
+    "H_initialValue" : "PrimitiveMockObserver<Int>()"
+  }
+]

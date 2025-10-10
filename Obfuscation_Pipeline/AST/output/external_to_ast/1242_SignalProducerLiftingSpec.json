@@ -1,0 +1,2688 @@
+[
+  {
+    "A_name" : "SignalProducerLiftingSpec",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "QuickSpec"
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "spec",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SignalProducerLiftingSpec.swift - Line: 17, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "spec",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 17, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "mappedProducer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 21, Column: 5",
+    "H_initialValue" : "producer.map { String($0 + 1) }"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 23, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mappedProducer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 41, Column: 5",
+    "H_initialValue" : "producer.map(value: 1)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 43, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producerError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 62, Column: 5",
+    "H_initialValue" : "NSError(domain: \"com.reactivecocoa.errordomain\", code: 100, userInfo: nil)"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 63, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "token",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 78, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lifetime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 79, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "destination",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 80, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "tupleProducer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 81, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "tupleObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 82, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "theLens",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 83, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "getterCounter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 84, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "lensScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 85, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "targetScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 86, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "target",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 87, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "initialValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 173, Column: 5",
+    "H_initialValue" : "(character: \"🎃\", other: 42)"
+  },
+  {
+    "A_name" : "nextValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 174, Column: 5",
+    "H_initialValue" : "(character: \"😾\", other: 74)"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 176, Column: 5",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "theLens",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 178, Column: 5",
+    "H_initialValue" : "tupleProducer.lazyMap(on: scheduler) { $0.character }"
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 180, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "initialValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 197, Column: 5",
+    "H_initialValue" : "(character: \"🎃\", other: 42)"
+  },
+  {
+    "A_name" : "nextValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 198, Column: 5",
+    "H_initialValue" : "(character: \"😾\", other: 74)"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 202, Column: 5",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 203, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "getterEvaluated",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 204, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "theLens",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 205, Column: 5",
+    "H_initialValue" : "tupleProducer.lazyMap(on: scheduler) { (tuple: (character: String, other: Int)) -> String in\n\t\t\t\t\tgetterEvaluated = true\n\t\t\t\t\treturn tuple.character\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "initialValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 248, Column: 5",
+    "H_initialValue" : "(character: \"🎃\", other: 42)"
+  },
+  {
+    "A_name" : "nextValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 249, Column: 5",
+    "H_initialValue" : "(character: \"😾\", other: 74)"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 253, Column: 5",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 255, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "getterEvaluated",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 256, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "theLens",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 257, Column: 5",
+    "H_initialValue" : "tupleProducer.lazyMap(on: scheduler) { (tuple: (character: String, other: Int)) -> String in\n\t\t\t\t\tgetterEvaluated = true\n\t\t\t\t\treturn tuple.character\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "initialValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 303, Column: 5",
+    "H_initialValue" : "(character: \"🎃\", other: 42)"
+  },
+  {
+    "A_name" : "labelKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 307, Column: 5",
+    "H_initialValue" : "DispatchSpecificKey<String>()"
+  },
+  {
+    "A_name" : "testQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 308, Column: 5",
+    "H_initialValue" : "DispatchQueue(label: \"test queue\", target: .main)"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 311, Column: 5",
+    "H_initialValue" : "QueueScheduler(internalQueue: testQueue)"
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 313, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "isOnTestQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 314, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "theLens",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 315, Column: 5",
+    "H_initialValue" : "tupleProducer.lazyMap(on: testScheduler) { (tuple: (character: String, other: Int)) -> String in\n\t\t\t\t\tisOnTestQueue = DispatchQueue.getSpecific(key: labelKey) == \"test queue\"\n\t\t\t\t\treturn tuple.character\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "mappedProducer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 345, Column: 5",
+    "H_initialValue" : "producer.filter { $0 % 2 == 0 }"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 347, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mappedProducer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 367, Column: 5",
+    "H_initialValue" : "producer.skipNil()"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 369, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 391, Column: 5",
+    "H_initialValue" : "baseProducer.scan(\"\", +)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 393, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 410, Column: 5",
+    "H_initialValue" : "baseProducer.scan(into: \"\") { $0 += $1 }"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 412, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 429, Column: 5",
+    "H_initialValue" : "baseProducer.scanMap(false) { state, value -> (Bool, String) in\n\t\t\t\t\treturn (true, state ? \"\\(value)\" : \"initial\")\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 433, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 453, Column: 5",
+    "H_initialValue" : "baseProducer.scanMap(into: false) { (state: inout Bool, value: Int) -> String in\n\t\t\t\t\tdefer { state = true }\n\t\t\t\t\treturn state ? \"\\(value)\" : \"initial\"\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 458, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 478, Column: 5",
+    "H_initialValue" : "baseProducer.reduce(1, +)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 480, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 481, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 511, Column: 5",
+    "H_initialValue" : "baseProducer.reduce(1, +)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 513, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 514, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 540, Column: 5",
+    "H_initialValue" : "baseProducer.reduce(into: 1) { $0 += $1 }"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 542, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 543, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 573, Column: 5",
+    "H_initialValue" : "baseProducer.reduce(into: 1) { $0 += $1 }"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 575, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 576, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 602, Column: 5",
+    "H_initialValue" : "baseProducer.skip(first: 1)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 604, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 618, Column: 5",
+    "H_initialValue" : "baseProducer.skip(first: 0)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 620, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 636, Column: 5",
+    "H_initialValue" : "baseProducer.skipRepeats()"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 638, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 658, Column: 5",
+    "H_initialValue" : "baseProducer.skipRepeats { $0.count == $1.count }"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 660, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 680, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 681, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 683, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 720, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 721, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "triggerObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 722, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 724, Column: 4",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 783, Column: 5",
+    "H_initialValue" : "baseProducer.take(first: 2)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 785, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 786, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "numbers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 811, Column: 5",
+    "H_initialValue" : "[ 1, 2, 4, 4, 5 ]"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 812, Column: 5",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 814, Column: 5",
+    "H_initialValue" : "SignalProducer { observer, _ in\n\t\t\t\t\t\/\/ workaround `Class declaration cannot close over value 'observer' defined in outer scope`\n\t\t\t\t\tlet observer = observer\n\n\t\t\t\t\ttestScheduler.schedule {\n\t\t\t\t\t\tfor number in numbers {\n\t\t\t\t\t\t\tobserver.send(value: number)\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 816, Column: 6",
+    "H_initialValue" : "observer"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 825, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "numbers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 837, Column: 5",
+    "H_initialValue" : "[ 1, 2, 4, 4, 5 ]"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 838, Column: 5",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 840, Column: 5",
+    "H_initialValue" : "SignalProducer { observer, _ in\n\t\t\t\t\t\/\/ workaround `Class declaration cannot close over value 'observer' defined in outer scope`\n\t\t\t\t\tlet observer = observer\n\n\t\t\t\t\ttestScheduler.schedule {\n\t\t\t\t\t\tfor number in numbers {\n\t\t\t\t\t\t\tobserver.send(value: number)\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 842, Column: 6",
+    "H_initialValue" : "observer"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 851, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "interrupted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 852, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 877, Column: 5",
+    "H_initialValue" : "original.collect()"
+  },
+  {
+    "A_name" : "expectedResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 878, Column: 5",
+    "H_initialValue" : "[ 1, 2, 3 ]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 880, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 898, Column: 5",
+    "H_initialValue" : "original.collect()"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 900, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 911, Column: 5",
+    "H_initialValue" : "original.collect()"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 913, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 925, Column: 5",
+    "H_initialValue" : "original.collect(count: 3)"
+  },
+  {
+    "A_name" : "observedValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 927, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 933, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 956, Column: 5",
+    "H_initialValue" : "original.collect { _, value in value != 5 }"
+  },
+  {
+    "A_name" : "expectedValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 958, Column: 5",
+    "H_initialValue" : "[\n\t\t\t\t\t[5, 5],\n\t\t\t\t\t[42, 5],\n\t\t\t\t]"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 981, Column: 5",
+    "H_initialValue" : "original.collect { values in values.reduce(0, +) == 10 }"
+  },
+  {
+    "A_name" : "expectedValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 983, Column: 5",
+    "H_initialValue" : "[\n\t\t\t\t\t[1, 2, 3, 4],\n\t\t\t\t\t[5, 6, 7, 8, 9],\n\t\t\t\t]"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1006, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1007, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "triggerObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1008, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1010, Column: 4",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1011, Column: 4",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1081, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1082, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "replacementObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1083, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1085, Column: 4",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1086, Column: 4",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1146, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1147, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "latestValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1156, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1157, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "latestValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1182, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1183, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1204, Column: 5",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1207, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1232, Column: 5",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1233, Column: 5",
+    "H_initialValue" : "SignalProducer { observer, _ in\n\t\t\t\t\ttestScheduler.schedule {\n\t\t\t\t\t\tobserver.send(value: 1)\n\t\t\t\t\t}\n\t\t\t\t\ttestScheduler.schedule(after: .seconds(5)) {\n\t\t\t\t\t\tobserver.send(value: 2)\n\t\t\t\t\t\tobserver.sendCompleted()\n\t\t\t\t\t}\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1243, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1244, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1272, Column: 5",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1273, Column: 5",
+    "H_initialValue" : "SignalProducer { observer, _ in\n\t\t\t\t\t\/\/ workaround `Class declaration cannot close over value 'observer' defined in outer scope`\n\t\t\t\t\tlet observer = observer\n\n\t\t\t\t\ttestScheduler.schedule {\n\t\t\t\t\t\tobserver.send(error: TestError.default)\n\t\t\t\t\t}\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1275, Column: 6",
+    "H_initialValue" : "observer"
+  },
+  {
+    "A_name" : "errored",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1282, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1302, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1303, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1304, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1316, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1367, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1368, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "sampledProducer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1422, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1423, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "samplerObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1424, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1435, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1445, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1453, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1463, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1474, Column: 5",
+    "H_initialValue" : "SignalProducer<Int, Never>([1])"
+  },
+  {
+    "A_name" : "sampler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1475, Column: 5",
+    "H_initialValue" : "SignalProducer<String, Never>(value: \"a\")"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1477, Column: 5",
+    "H_initialValue" : "producer.sample(with: sampler)"
+  },
+  {
+    "A_name" : "valueReceived",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1479, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sampledProducer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1492, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1493, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "samplerObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1494, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1505, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1515, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1523, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1533, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1544, Column: 5",
+    "H_initialValue" : "SignalProducer<Int, Never>([1])"
+  },
+  {
+    "A_name" : "sampler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1545, Column: 5",
+    "H_initialValue" : "SignalProducer<(), Never>(value: ())"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1547, Column: 5",
+    "H_initialValue" : "producer.sample(on: sampler)"
+  },
+  {
+    "A_name" : "valueReceived",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1549, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Payload",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1556, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "action",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducerLiftingSpec.swift - Line: 1557, Column: 6",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducerLiftingSpec.swift - Line: 1559, Column: 6",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping () -> Void"
+        ],
+        "I_parameters" : [
+          "onDeinit"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "action",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1557, Column: 6",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1559, Column: 6",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping () -> Void"
+    ],
+    "I_parameters" : [
+      "onDeinit"
+    ]
+  },
+  {
+    "A_name" : "sampledProducer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1568, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "samplerObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1569, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1570, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "payloadFreed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1584, Column: 6",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1586, Column: 6",
+    "H_initialValue" : "sampledProducer.start()"
+  },
+  {
+    "A_name" : "withLatestProducer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1605, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1606, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sampleeObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1607, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1618, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1628, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1636, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1646, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "event",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1654, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "event",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1662, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "withLatestProducer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1671, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1672, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sampleeObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1673, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1684, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1694, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1702, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1712, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "event",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1720, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "event",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1728, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "combinedProducer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1742, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1743, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "otherObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1744, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "latest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1755, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1772, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "leftObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1789, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rightObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1790, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "zipped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1791, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1803, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1828, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1829, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "latestEvent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1863, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1894, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dematerialized",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1895, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1904, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "errored",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1919, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1929, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "latestResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1941, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1974, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dematerialized",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1975, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1984, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "errored",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 1999, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2010, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastThree",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2011, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2020, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2036, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2048, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "errored",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2049, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2073, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2074, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2075, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2085, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "errored",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2086, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2111, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "errored",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2112, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2137, Column: 5",
+    "H_initialValue" : "SignalProducer<Int, Never>.never\n\t\t\t\t\t.timeout(after: 2, raising: TestError.default, on: testScheduler)"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2147, Column: 5",
+    "H_initialValue" : "baseProducer.attempt { _ in\n\t\t\t\t\treturn .success(())\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "current",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2151, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2166, Column: 5",
+    "H_initialValue" : "baseProducer.attempt { _ in\n\t\t\t\t\treturn .failure(.default)\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2170, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2183, Column: 5",
+    "H_initialValue" : "baseProducer.attemptMap { num -> Result<Bool, TestError> in\n\t\t\t\t\treturn .success(num % 2 == 0)\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "even",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2187, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2203, Column: 5",
+    "H_initialValue" : "baseProducer.attemptMap { _ -> Result<Bool, TestError> in\n\t\t\t\t\treturn .failure(.default)\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2207, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2218, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "initialValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2219, Column: 4",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "latestValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2220, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testAsyncInterruptionScheduler",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2245, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isInterrupted",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducerLiftingSpec.swift - Line: 2251, Column: 2",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducerLiftingSpec.swift - Line: 2253, Column: 2",
+        "H_initialValue" : "TestScheduler()"
+      },
+      {
+        "A_name" : "producer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducerLiftingSpec.swift - Line: 2254, Column: 2",
+        "H_initialValue" : "transform(SignalProducer(0 ..< 128), scheduler)"
+      },
+      {
+        "A_name" : "failedExpectations",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducerLiftingSpec.swift - Line: 2256, Column: 2",
+        "H_initialValue" : "gatherFailingExpectations {\n\t\tlet disposable = producer.startWithInterrupted { isInterrupted = true }\n\t\texpect(isInterrupted) == false\n\n\t\tdisposable.dispose()\n\t\texpect(isInterrupted) == false\n\n\t\tscheduler.run()\n\t\texpect(isInterrupted) == true\n\t}"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "FileString",
+      "UInt",
+      "(SignalProducer<Int, Never>, TestScheduler) -> SignalProducer<Int, Never>"
+    ],
+    "I_parameters" : [
+      "op",
+      "file",
+      "line",
+      "transform"
+    ]
+  },
+  {
+    "A_name" : "isInterrupted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2251, Column: 2",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2253, Column: 2",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2254, Column: 2",
+    "H_initialValue" : "transform(SignalProducer(0 ..< 128), scheduler)"
+  },
+  {
+    "A_name" : "failedExpectations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2256, Column: 2",
+    "H_initialValue" : "gatherFailingExpectations {\n\t\tlet disposable = producer.startWithInterrupted { isInterrupted = true }\n\t\texpect(isInterrupted) == false\n\n\t\tdisposable.dispose()\n\t\texpect(isInterrupted) == false\n\n\t\tscheduler.run()\n\t\texpect(isInterrupted) == true\n\t}"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2257, Column: 3",
+    "H_initialValue" : "producer.startWithInterrupted { isInterrupted = true }"
+  },
+  {
+    "A_name" : "testAsyncASAPInterruption",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2273, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "valueCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducerLiftingSpec.swift - Line: 2279, Column: 2",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "interruptCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducerLiftingSpec.swift - Line: 2280, Column: 2",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "unexpectedEventCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducerLiftingSpec.swift - Line: 2281, Column: 2",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducerLiftingSpec.swift - Line: 2283, Column: 2",
+        "H_initialValue" : "TestScheduler()"
+      },
+      {
+        "A_name" : "disposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducerLiftingSpec.swift - Line: 2285, Column: 2",
+        "H_initialValue" : "transform(SignalProducer(0 ..< 128), scheduler)\n\t\t.start { event in\n\t\t\tswitch event {\n\t\t\tcase .value:\n\t\t\t\tvalueCount += 1\n\t\t\tcase .interrupted:\n\t\t\t\tinterruptCount += 1\n\t\t\tcase .failed, .completed:\n\t\t\t\tunexpectedEventCount += 1\n\t\t\t}\n\t}"
+      },
+      {
+        "A_name" : "failedExpectations",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducerLiftingSpec.swift - Line: 2304, Column: 2",
+        "H_initialValue" : "gatherFailingExpectations {\n\t\texpect(interruptCount) == 1\n\t\texpect(unexpectedEventCount) == 0\n\t\texpect(valueCount) == 0\n\t}"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "FileString",
+      "UInt",
+      "(SignalProducer<Int, Never>, TestScheduler) -> SignalProducer<Int, Never>"
+    ],
+    "I_parameters" : [
+      "op",
+      "file",
+      "line",
+      "transform"
+    ]
+  },
+  {
+    "A_name" : "valueCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2279, Column: 2",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "interruptCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2280, Column: 2",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "unexpectedEventCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2281, Column: 2",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2283, Column: 2",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2285, Column: 2",
+    "H_initialValue" : "transform(SignalProducer(0 ..< 128), scheduler)\n\t\t.start { event in\n\t\t\tswitch event {\n\t\t\tcase .value:\n\t\t\t\tvalueCount += 1\n\t\t\tcase .interrupted:\n\t\t\t\tinterruptCount += 1\n\t\t\tcase .failed, .completed:\n\t\t\t\tunexpectedEventCount += 1\n\t\t\t}\n\t}"
+  },
+  {
+    "A_name" : "failedExpectations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducerLiftingSpec.swift - Line: 2304, Column: 2",
+    "H_initialValue" : "gatherFailingExpectations {\n\t\texpect(interruptCount) == 1\n\t\texpect(unexpectedEventCount) == 0\n\t\texpect(valueCount) == 0\n\t}"
+  }
+]

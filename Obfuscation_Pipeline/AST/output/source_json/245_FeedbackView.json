@@ -1,0 +1,780 @@
+[
+  {
+    "A_name" : "FeedbackView",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIView"
+    ],
+    "F_location" : "FeedbackView.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "scrollView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 15, Column: 5",
+        "H_initialValue" : "UIScrollView()"
+      },
+      {
+        "A_name" : "contentView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 16, Column: 5",
+        "H_initialValue" : "UIStackView()"
+      },
+      {
+        "A_name" : "bottomSpacingView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 17, Column: 5",
+        "H_initialValue" : "UIView()"
+      },
+      {
+        "A_name" : "detailImageView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 18, Column: 5",
+        "H_initialValue" : "DetailImageView(image: UIImage(resource: .imgLoadFailLargeIos))"
+      },
+      {
+        "A_name" : "currentDiaryData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 20, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isHighlightingEnabled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 21, Column: 5",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "toggleButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 22, Column: 5",
+        "H_initialValue" : "UIButton(type: .system)"
+      },
+      {
+        "A_name" : "dateLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 24, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_sb_16)\n        label.textColor = .gray700\n        return label\n    }()"
+      },
+      {
+        "A_name" : "AILabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 31, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.caption_r_14)\n        label.textColor = .gray500\n        label.text = \"교정된 일기\"\n        return label\n    }()"
+      },
+      {
+        "A_name" : "controlSwitch",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "FeedbackView.swift - Line: 39, Column: 5",
+        "H_initialValue" : "{\n        let toggle = CustomToggle(frame: CGRect(x: 0, y: 0, width: 52, height: 28))\n        toggle.addTarget(self, action: #selector(toggleButtonTapped), for: .valueChanged)\n        return toggle\n    }()"
+      },
+      {
+        "A_name" : "headerStackView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 45, Column: 5",
+        "H_initialValue" : "{\n        let stackView = UIStackView()\n        stackView.axis = .horizontal\n        stackView.alignment = .center\n        return stackView\n    }()"
+      },
+      {
+        "A_name" : "diaryTextView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 52, Column: 5",
+        "H_initialValue" : "HighlightTextView()"
+      },
+      {
+        "A_name" : "feedbackStackView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 54, Column: 5",
+        "H_initialValue" : "{\n        let stackView = UIStackView()\n        stackView.axis = .vertical\n        stackView.alignment = .center\n        stackView.spacing = 12\n        return stackView\n    }()"
+      },
+      {
+        "A_name" : "feedbackLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 62, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_sb_16)\n        label.textColor = .hilingualBlack\n        return label\n    }()"
+      },
+      {
+        "A_name" : "emptyFeedbackView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 69, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        \n        let imageView = UIImageView(image: UIImage(named: \"img_feedback_wow_ios\", in: .module, with: nil))\n        imageView.contentMode = .scaleAspectFit\n        \n        let separator = UIView()\n        separator.backgroundColor = .gray300\n        \n        let label = UILabel()\n        label.text = \"추가 설명이 필요 없는 일기네요!\"\n        label.font = .suit(.body_m_14)\n        label.textColor = .hilingualBlack\n\n        label.numberOfLines = 0\n        \n        let stack = UIStackView(arrangedSubviews: [imageView, separator, label])\n        stack.axis = .vertical\n        stack.spacing = 16\n        stack.alignment = .center\n        \n        view.addSubview(stack)\n        view.layer.cornerRadius = 8\n        view.layer.masksToBounds = true\n        \n        view.snp.makeConstraints {\n            $0.height.equalTo(199)\n        }\n        \n        stack.snp.makeConstraints {\n            $0.edges.equalToSuperview().inset(12)\n        }\n        \n        separator.snp.makeConstraints {\n            $0.horizontalEdges.equalToSuperview()\n            $0.height.equalTo(0.5)\n        }\n        \n        label.snp.makeConstraints {\n            $0.horizontalEdges.equalToSuperview()\n            $0.top.equalTo(separator.snp.bottom).offset(8)\n        }\n        \n        return view\n    }()"
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedbackView.swift - Line: 118, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedbackView.swift - Line: 130, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "scrollToTop",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 167, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "configureDiary",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 173, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DiaryViewData"
+        ],
+        "I_parameters" : [
+          "data"
+        ]
+      },
+      {
+        "A_name" : "configureFeedbacks",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 186, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "count",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedbackView.swift - Line: 199, Column: 9",
+            "H_initialValue" : "data.count"
+          },
+          {
+            "A_name" : "fullText",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedbackView.swift - Line: 200, Column: 9",
+            "H_initialValue" : "\"주요 피드백 \\(count)개를 알려드릴게요!\""
+          },
+          {
+            "A_name" : "attributedText",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedbackView.swift - Line: 201, Column: 9",
+            "H_initialValue" : "NSMutableAttributedString(\n            attributedString: .suit(.body_sb_16, text: fullText)\n        )"
+          },
+          {
+            "A_name" : "bottomSpacingView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedbackView.swift - Line: 225, Column: 9",
+            "H_initialValue" : "UIView()"
+          }
+        ],
+        "I_parameterType" : [
+          "[FeedbackItem]"
+        ],
+        "I_parameters" : [
+          "data"
+        ]
+      },
+      {
+        "A_name" : "toggleButtonTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "FeedbackView.swift - Line: 234, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "scrollView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 15, Column: 5",
+    "H_initialValue" : "UIScrollView()"
+  },
+  {
+    "A_name" : "contentView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 16, Column: 5",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "bottomSpacingView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 17, Column: 5",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "detailImageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 18, Column: 5",
+    "H_initialValue" : "DetailImageView(image: UIImage(resource: .imgLoadFailLargeIos))"
+  },
+  {
+    "A_name" : "currentDiaryData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 20, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isHighlightingEnabled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 21, Column: 5",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "toggleButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 22, Column: 5",
+    "H_initialValue" : "UIButton(type: .system)"
+  },
+  {
+    "A_name" : "dateLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 24, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_sb_16)\n        label.textColor = .gray700\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 25, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "AILabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 31, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.caption_r_14)\n        label.textColor = .gray500\n        label.text = \"교정된 일기\"\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 32, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "controlSwitch",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "FeedbackView.swift - Line: 39, Column: 5",
+    "H_initialValue" : "{\n        let toggle = CustomToggle(frame: CGRect(x: 0, y: 0, width: 52, height: 28))\n        toggle.addTarget(self, action: #selector(toggleButtonTapped), for: .valueChanged)\n        return toggle\n    }()"
+  },
+  {
+    "A_name" : "toggle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 40, Column: 9",
+    "H_initialValue" : "CustomToggle(frame: CGRect(x: 0, y: 0, width: 52, height: 28))"
+  },
+  {
+    "A_name" : "headerStackView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 45, Column: 5",
+    "H_initialValue" : "{\n        let stackView = UIStackView()\n        stackView.axis = .horizontal\n        stackView.alignment = .center\n        return stackView\n    }()"
+  },
+  {
+    "A_name" : "stackView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 46, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "diaryTextView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 52, Column: 5",
+    "H_initialValue" : "HighlightTextView()"
+  },
+  {
+    "A_name" : "feedbackStackView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 54, Column: 5",
+    "H_initialValue" : "{\n        let stackView = UIStackView()\n        stackView.axis = .vertical\n        stackView.alignment = .center\n        stackView.spacing = 12\n        return stackView\n    }()"
+  },
+  {
+    "A_name" : "stackView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 55, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "feedbackLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 62, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_sb_16)\n        label.textColor = .hilingualBlack\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 63, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "emptyFeedbackView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 69, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        \n        let imageView = UIImageView(image: UIImage(named: \"img_feedback_wow_ios\", in: .module, with: nil))\n        imageView.contentMode = .scaleAspectFit\n        \n        let separator = UIView()\n        separator.backgroundColor = .gray300\n        \n        let label = UILabel()\n        label.text = \"추가 설명이 필요 없는 일기네요!\"\n        label.font = .suit(.body_m_14)\n        label.textColor = .hilingualBlack\n\n        label.numberOfLines = 0\n        \n        let stack = UIStackView(arrangedSubviews: [imageView, separator, label])\n        stack.axis = .vertical\n        stack.spacing = 16\n        stack.alignment = .center\n        \n        view.addSubview(stack)\n        view.layer.cornerRadius = 8\n        view.layer.masksToBounds = true\n        \n        view.snp.makeConstraints {\n            $0.height.equalTo(199)\n        }\n        \n        stack.snp.makeConstraints {\n            $0.edges.equalToSuperview().inset(12)\n        }\n        \n        separator.snp.makeConstraints {\n            $0.horizontalEdges.equalToSuperview()\n            $0.height.equalTo(0.5)\n        }\n        \n        label.snp.makeConstraints {\n            $0.horizontalEdges.equalToSuperview()\n            $0.top.equalTo(separator.snp.bottom).offset(8)\n        }\n        \n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 70, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 73, Column: 9",
+    "H_initialValue" : "UIImageView(image: UIImage(named: \"img_feedback_wow_ios\", in: .module, with: nil))"
+  },
+  {
+    "A_name" : "separator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 76, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 79, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 86, Column: 9",
+    "H_initialValue" : "UIStackView(arrangedSubviews: [imageView, separator, label])"
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedbackView.swift - Line: 118, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedbackView.swift - Line: 130, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scrollToTop",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 167, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "configureDiary",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 173, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DiaryViewData"
+    ],
+    "I_parameters" : [
+      "data"
+    ]
+  },
+  {
+    "A_name" : "configureFeedbacks",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 186, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "count",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 199, Column: 9",
+        "H_initialValue" : "data.count"
+      },
+      {
+        "A_name" : "fullText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 200, Column: 9",
+        "H_initialValue" : "\"주요 피드백 \\(count)개를 알려드릴게요!\""
+      },
+      {
+        "A_name" : "attributedText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 201, Column: 9",
+        "H_initialValue" : "NSMutableAttributedString(\n            attributedString: .suit(.body_sb_16, text: fullText)\n        )"
+      },
+      {
+        "A_name" : "bottomSpacingView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackView.swift - Line: 225, Column: 9",
+        "H_initialValue" : "UIView()"
+      }
+    ],
+    "I_parameterType" : [
+      "[FeedbackItem]"
+    ],
+    "I_parameters" : [
+      "data"
+    ]
+  },
+  {
+    "A_name" : "count",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 199, Column: 9",
+    "H_initialValue" : "data.count"
+  },
+  {
+    "A_name" : "fullText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 200, Column: 9",
+    "H_initialValue" : "\"주요 피드백 \\(count)개를 알려드릴게요!\""
+  },
+  {
+    "A_name" : "attributedText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 201, Column: 9",
+    "H_initialValue" : "NSMutableAttributedString(\n            attributedString: .suit(.body_sb_16, text: fullText)\n        )"
+  },
+  {
+    "A_name" : "nsRange",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 206, Column: 13",
+    "H_initialValue" : "NSRange(range, in: fullText)"
+  },
+  {
+    "A_name" : "feedbackView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 213, Column: 13",
+    "H_initialValue" : "HighlightingFeedback()"
+  },
+  {
+    "A_name" : "bottomSpacingView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackView.swift - Line: 225, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "toggleButtonTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "FeedbackView.swift - Line: 234, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

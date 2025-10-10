@@ -1,0 +1,1790 @@
+[
+  {
+    "A_name" : "timeoutLeeway",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 5, Column: 1",
+    "H_initialValue" : "DispatchTimeInterval.milliseconds(1)"
+  },
+  {
+    "A_name" : "pollLeeway",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 6, Column: 1",
+    "H_initialValue" : "DispatchTimeInterval.milliseconds(1)"
+  },
+  {
+    "A_name" : "WaitingInfo",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomStringConvertible"
+    ],
+    "F_location" : "Await.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "name",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 10, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "file",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 11, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lineNumber",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 12, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "description",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 14, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "name",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 10, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "file",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 11, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lineNumber",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 12, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "description",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 14, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "WaitLock",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 19, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "acquireWaitingLock",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 20, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "FileString",
+          "UInt"
+        ],
+        "I_parameters" : [
+          "_",
+          "file",
+          "line"
+        ]
+      },
+      {
+        "A_name" : "releaseWaitingLock",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 21, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "isWaitingLocked",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 22, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "acquireWaitingLock",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 20, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "FileString",
+      "UInt"
+    ],
+    "I_parameters" : [
+      "_",
+      "file",
+      "line"
+    ]
+  },
+  {
+    "A_name" : "releaseWaitingLock",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 21, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "isWaitingLocked",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 22, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "AssertionWaitLock",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "WaitLock"
+    ],
+    "F_location" : "Await.swift - Line: 25, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "currentWaiter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 26, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 27, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "acquireWaitingLock",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 29, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "info",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Await.swift - Line: 30, Column: 9",
+            "H_initialValue" : "WaitingInfo(name: fnName, file: file, lineNumber: line)"
+          },
+          {
+            "A_name" : "isMainThread",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Await.swift - Line: 31, Column: 9",
+            "H_initialValue" : "Thread.isMainThread"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "FileString",
+          "UInt"
+        ],
+        "I_parameters" : [
+          "_",
+          "file",
+          "line"
+        ]
+      },
+      {
+        "A_name" : "isWaitingLocked",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 53, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "releaseWaitingLock",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 57, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "currentWaiter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 26, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 27, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "acquireWaitingLock",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 29, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "info",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 30, Column: 9",
+        "H_initialValue" : "WaitingInfo(name: fnName, file: file, lineNumber: line)"
+      },
+      {
+        "A_name" : "isMainThread",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 31, Column: 9",
+        "H_initialValue" : "Thread.isMainThread"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "FileString",
+      "UInt"
+    ],
+    "I_parameters" : [
+      "_",
+      "file",
+      "line"
+    ]
+  },
+  {
+    "A_name" : "info",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 30, Column: 9",
+    "H_initialValue" : "WaitingInfo(name: fnName, file: file, lineNumber: line)"
+  },
+  {
+    "A_name" : "isMainThread",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 31, Column: 9",
+    "H_initialValue" : "Thread.isMainThread"
+  },
+  {
+    "A_name" : "isWaitingLocked",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 53, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "releaseWaitingLock",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 57, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "AwaitResult",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 62, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "incomplete",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 64, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "timedOut",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 66, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "blockedRunLoop",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 72, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "completed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 74, Column: 10",
+        "I_parameterType" : [
+          "T"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "errorThrown",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 76, Column: 10",
+        "I_parameterType" : [
+          "Error"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "raisedException",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 78, Column: 10",
+        "I_parameterType" : [
+          "NSException"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "isIncomplete",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 80, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "isCompleted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 87, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "isIncomplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 80, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "isCompleted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 87, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "AwaitPromise",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 97, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "asyncResult",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 98, Column: 5",
+        "H_initialValue" : ".incomplete"
+      },
+      {
+        "A_name" : "signal",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 99, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 101, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "resolveResult",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 114, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AwaitResult<T>"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "asyncResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 98, Column: 5",
+    "H_initialValue" : ".incomplete"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 99, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 101, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "resolveResult",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 114, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AwaitResult<T>"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "AwaitTrigger",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 124, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "timeoutSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 125, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "actionSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 126, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "start",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 127, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "timeoutSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 125, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "actionSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 126, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "start",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 127, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AwaitPromiseBuilder",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 134, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "awaiter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 135, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "waitLock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 136, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "trigger",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 137, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "promise",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 138, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 140, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Awaiter",
+          "WaitLock",
+          "AwaitPromise<T>",
+          "AwaitTrigger"
+        ],
+        "I_parameters" : [
+          "awaiter",
+          "waitLock",
+          "promise",
+          "trigger"
+        ]
+      },
+      {
+        "A_name" : "timeout",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 151, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchTimeInterval",
+          "DispatchTimeInterval"
+        ],
+        "I_parameters" : [
+          "_",
+          "forcefullyAbortTimeout"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "wait",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 236, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "capture",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Await.swift - Line: 242, Column: 9",
+            "H_initialValue" : "NMBExceptionCapture(handler: ({ exception in\n            _ = self.promise.resolveResult(.raisedException(exception))\n        }), finally: ({\n            self.waitLock.releaseWaitingLock()\n        }))"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "FileString",
+          "UInt"
+        ],
+        "I_parameters" : [
+          "_",
+          "file",
+          "line"
+        ],
+        "J_returnType" : "-> AwaitResult<T>"
+      }
+    ]
+  },
+  {
+    "A_name" : "awaiter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 135, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "waitLock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 136, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "trigger",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 137, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "promise",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 138, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 140, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Awaiter",
+      "WaitLock",
+      "AwaitPromise<T>",
+      "AwaitTrigger"
+    ],
+    "I_parameters" : [
+      "awaiter",
+      "waitLock",
+      "promise",
+      "trigger"
+    ]
+  },
+  {
+    "A_name" : "timeout",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 151, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchTimeInterval",
+      "DispatchTimeInterval"
+    ],
+    "I_parameters" : [
+      "_",
+      "forcefullyAbortTimeout"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "timedOutSem",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 187, Column: 13",
+    "H_initialValue" : "DispatchSemaphore(value: 0)"
+  },
+  {
+    "A_name" : "semTimedOutOrBlocked",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 188, Column: 13",
+    "H_initialValue" : "DispatchSemaphore(value: 0)"
+  },
+  {
+    "A_name" : "runLoop",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 190, Column: 13",
+    "H_initialValue" : "CFRunLoopGetMain()"
+  },
+  {
+    "A_name" : "runLoopMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 192, Column: 17",
+    "H_initialValue" : "CFRunLoopMode.defaultMode.rawValue"
+  },
+  {
+    "A_name" : "runLoopMode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 194, Column: 17",
+    "H_initialValue" : "kCFRunLoopDefaultMode"
+  },
+  {
+    "A_name" : "now",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 207, Column: 13",
+    "H_initialValue" : "DispatchTime.now() + forcefullyAbortTimeout"
+  },
+  {
+    "A_name" : "didNotTimeOut",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 208, Column: 13",
+    "H_initialValue" : "timedOutSem.wait(timeout: now) != .success"
+  },
+  {
+    "A_name" : "timeoutWasNotTriggered",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 209, Column: 13",
+    "H_initialValue" : "semTimedOutOrBlocked.wait(timeout: .now()) == .success"
+  },
+  {
+    "A_name" : "wait",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 236, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "capture",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 242, Column: 9",
+        "H_initialValue" : "NMBExceptionCapture(handler: ({ exception in\n            _ = self.promise.resolveResult(.raisedException(exception))\n        }), finally: ({\n            self.waitLock.releaseWaitingLock()\n        }))"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "FileString",
+      "UInt"
+    ],
+    "I_parameters" : [
+      "_",
+      "file",
+      "line"
+    ],
+    "J_returnType" : "-> AwaitResult<T>"
+  },
+  {
+    "A_name" : "capture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 242, Column: 9",
+    "H_initialValue" : "NMBExceptionCapture(handler: ({ exception in\n            _ = self.promise.resolveResult(.raisedException(exception))\n        }), finally: ({\n            self.waitLock.releaseWaitingLock()\n        }))"
+  },
+  {
+    "A_name" : "Awaiter",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 269, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "waitLock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 270, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "timeoutQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 271, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "asyncQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 272, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 274, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "WaitLock",
+          "DispatchQueue",
+          "DispatchQueue"
+        ],
+        "I_parameters" : [
+          "waitLock",
+          "asyncQueue",
+          "timeoutQueue"
+        ]
+      },
+      {
+        "A_name" : "createTimerSource",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 283, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> DispatchSourceTimer"
+      },
+      {
+        "A_name" : "performBlock",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 287, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "promise",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Await.swift - Line: 292, Column: 13",
+            "H_initialValue" : "AwaitPromise<T>()"
+          },
+          {
+            "A_name" : "timeoutSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Await.swift - Line: 293, Column: 13",
+            "H_initialValue" : "createTimerSource(timeoutQueue)"
+          },
+          {
+            "A_name" : "completionCount",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Await.swift - Line: 294, Column: 13",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "trigger",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Await.swift - Line: 295, Column: 13",
+            "H_initialValue" : "AwaitTrigger(timeoutSource: timeoutSource, actionSource: nil) {\n                try closure { result in\n                    completionCount += 1\n                    if completionCount < 2 {\n                        func completeBlock() {\n                            if promise.resolveResult(.completed(result)) {\n                                CFRunLoopStop(CFRunLoopGetMain())\n                            }\n                        }\n\n                        if Thread.isMainThread {\n                            completeBlock()\n                        } else {\n                            DispatchQueue.main.async { completeBlock() }\n                        }\n                    } else {\n                        fail(\"waitUntil(..) expects its completion closure to be only called once\",\n                             file: file, line: line)\n                    }\n                }\n            }"
+          }
+        ],
+        "I_parameterType" : [
+          "FileString",
+          "UInt",
+          "@escaping (@escaping (T) -> Void) throws -> Void"
+        ],
+        "I_parameters" : [
+          "file",
+          "line",
+          "_"
+        ],
+        "J_returnType" : "-> AwaitPromiseBuilder<T>"
+      },
+      {
+        "A_name" : "poll",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 324, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "promise",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Await.swift - Line: 325, Column: 9",
+            "H_initialValue" : "AwaitPromise<T>()"
+          },
+          {
+            "A_name" : "timeoutSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Await.swift - Line: 326, Column: 9",
+            "H_initialValue" : "createTimerSource(timeoutQueue)"
+          },
+          {
+            "A_name" : "asyncSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Await.swift - Line: 327, Column: 9",
+            "H_initialValue" : "createTimerSource(asyncQueue)"
+          },
+          {
+            "A_name" : "trigger",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Await.swift - Line: 328, Column: 9",
+            "H_initialValue" : "AwaitTrigger(timeoutSource: timeoutSource, actionSource: asyncSource) {\n            let interval = pollInterval\n            asyncSource.schedule(deadline: .now(), repeating: interval, leeway: pollLeeway)\n            asyncSource.setEventHandler {\n                do {\n                    if let result = try closure() {\n                        if promise.resolveResult(.completed(result)) {\n                            CFRunLoopStop(CFRunLoopGetCurrent())\n                        }\n                    }\n                } catch let error {\n                    if promise.resolveResult(.errorThrown(error)) {\n                        CFRunLoopStop(CFRunLoopGetCurrent())\n                    }\n                }\n            }\n            asyncSource.resume()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "DispatchTimeInterval",
+          "@escaping () throws -> T?"
+        ],
+        "I_parameters" : [
+          "_",
+          "closure"
+        ],
+        "J_returnType" : "-> AwaitPromiseBuilder<T>"
+      }
+    ]
+  },
+  {
+    "A_name" : "waitLock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 270, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "timeoutQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 271, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "asyncQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 272, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 274, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "WaitLock",
+      "DispatchQueue",
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "waitLock",
+      "asyncQueue",
+      "timeoutQueue"
+    ]
+  },
+  {
+    "A_name" : "createTimerSource",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 283, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> DispatchSourceTimer"
+  },
+  {
+    "A_name" : "performBlock",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 287, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "promise",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 292, Column: 13",
+        "H_initialValue" : "AwaitPromise<T>()"
+      },
+      {
+        "A_name" : "timeoutSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 293, Column: 13",
+        "H_initialValue" : "createTimerSource(timeoutQueue)"
+      },
+      {
+        "A_name" : "completionCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 294, Column: 13",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "trigger",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 295, Column: 13",
+        "H_initialValue" : "AwaitTrigger(timeoutSource: timeoutSource, actionSource: nil) {\n                try closure { result in\n                    completionCount += 1\n                    if completionCount < 2 {\n                        func completeBlock() {\n                            if promise.resolveResult(.completed(result)) {\n                                CFRunLoopStop(CFRunLoopGetMain())\n                            }\n                        }\n\n                        if Thread.isMainThread {\n                            completeBlock()\n                        } else {\n                            DispatchQueue.main.async { completeBlock() }\n                        }\n                    } else {\n                        fail(\"waitUntil(..) expects its completion closure to be only called once\",\n                             file: file, line: line)\n                    }\n                }\n            }"
+      }
+    ],
+    "I_parameterType" : [
+      "FileString",
+      "UInt",
+      "@escaping (@escaping (T) -> Void) throws -> Void"
+    ],
+    "I_parameters" : [
+      "file",
+      "line",
+      "_"
+    ],
+    "J_returnType" : "-> AwaitPromiseBuilder<T>"
+  },
+  {
+    "A_name" : "promise",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 292, Column: 13",
+    "H_initialValue" : "AwaitPromise<T>()"
+  },
+  {
+    "A_name" : "timeoutSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 293, Column: 13",
+    "H_initialValue" : "createTimerSource(timeoutQueue)"
+  },
+  {
+    "A_name" : "completionCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 294, Column: 13",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "trigger",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 295, Column: 13",
+    "H_initialValue" : "AwaitTrigger(timeoutSource: timeoutSource, actionSource: nil) {\n                try closure { result in\n                    completionCount += 1\n                    if completionCount < 2 {\n                        func completeBlock() {\n                            if promise.resolveResult(.completed(result)) {\n                                CFRunLoopStop(CFRunLoopGetMain())\n                            }\n                        }\n\n                        if Thread.isMainThread {\n                            completeBlock()\n                        } else {\n                            DispatchQueue.main.async { completeBlock() }\n                        }\n                    } else {\n                        fail(\"waitUntil(..) expects its completion closure to be only called once\",\n                             file: file, line: line)\n                    }\n                }\n            }"
+  },
+  {
+    "A_name" : "completeBlock",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 299, Column: 25",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "poll",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 324, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "promise",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 325, Column: 9",
+        "H_initialValue" : "AwaitPromise<T>()"
+      },
+      {
+        "A_name" : "timeoutSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 326, Column: 9",
+        "H_initialValue" : "createTimerSource(timeoutQueue)"
+      },
+      {
+        "A_name" : "asyncSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 327, Column: 9",
+        "H_initialValue" : "createTimerSource(asyncQueue)"
+      },
+      {
+        "A_name" : "trigger",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 328, Column: 9",
+        "H_initialValue" : "AwaitTrigger(timeoutSource: timeoutSource, actionSource: asyncSource) {\n            let interval = pollInterval\n            asyncSource.schedule(deadline: .now(), repeating: interval, leeway: pollLeeway)\n            asyncSource.setEventHandler {\n                do {\n                    if let result = try closure() {\n                        if promise.resolveResult(.completed(result)) {\n                            CFRunLoopStop(CFRunLoopGetCurrent())\n                        }\n                    }\n                } catch let error {\n                    if promise.resolveResult(.errorThrown(error)) {\n                        CFRunLoopStop(CFRunLoopGetCurrent())\n                    }\n                }\n            }\n            asyncSource.resume()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "DispatchTimeInterval",
+      "@escaping () throws -> T?"
+    ],
+    "I_parameters" : [
+      "_",
+      "closure"
+    ],
+    "J_returnType" : "-> AwaitPromiseBuilder<T>"
+  },
+  {
+    "A_name" : "promise",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 325, Column: 9",
+    "H_initialValue" : "AwaitPromise<T>()"
+  },
+  {
+    "A_name" : "timeoutSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 326, Column: 9",
+    "H_initialValue" : "createTimerSource(timeoutQueue)"
+  },
+  {
+    "A_name" : "asyncSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 327, Column: 9",
+    "H_initialValue" : "createTimerSource(asyncQueue)"
+  },
+  {
+    "A_name" : "trigger",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 328, Column: 9",
+    "H_initialValue" : "AwaitTrigger(timeoutSource: timeoutSource, actionSource: asyncSource) {\n            let interval = pollInterval\n            asyncSource.schedule(deadline: .now(), repeating: interval, leeway: pollLeeway)\n            asyncSource.setEventHandler {\n                do {\n                    if let result = try closure() {\n                        if promise.resolveResult(.completed(result)) {\n                            CFRunLoopStop(CFRunLoopGetCurrent())\n                        }\n                    }\n                } catch let error {\n                    if promise.resolveResult(.errorThrown(error)) {\n                        CFRunLoopStop(CFRunLoopGetCurrent())\n                    }\n                }\n            }\n            asyncSource.resume()\n        }"
+  },
+  {
+    "A_name" : "interval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 329, Column: 13",
+    "H_initialValue" : "pollInterval"
+  },
+  {
+    "A_name" : "pollBlock",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 355, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "awaiter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 362, Column: 9",
+        "H_initialValue" : "NimbleEnvironment.activeInstance.awaiter"
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Await.swift - Line: 363, Column: 9",
+        "H_initialValue" : "awaiter.poll(pollInterval) { () throws -> Bool? in\n            if try expression() {\n                return true\n            }\n            return nil\n        }.timeout(timeoutInterval, forcefullyAbortTimeout: timeoutInterval.divided).wait(fnName, file: file, line: line)"
+      }
+    ],
+    "I_parameterType" : [
+      "DispatchTimeInterval",
+      "DispatchTimeInterval",
+      "FileString",
+      "UInt",
+      "String",
+      "@escaping () throws -> Bool"
+    ],
+    "I_parameters" : [
+      "pollInterval",
+      "timeoutInterval",
+      "file",
+      "line",
+      "fnName",
+      "expression"
+    ],
+    "J_returnType" : "-> AwaitResult<Bool>"
+  },
+  {
+    "A_name" : "awaiter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 362, Column: 9",
+    "H_initialValue" : "NimbleEnvironment.activeInstance.awaiter"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Await.swift - Line: 363, Column: 9",
+    "H_initialValue" : "awaiter.poll(pollInterval) { () throws -> Bool? in\n            if try expression() {\n                return true\n            }\n            return nil\n        }.timeout(timeoutInterval, forcefullyAbortTimeout: timeoutInterval.divided).wait(fnName, file: file, line: line)"
+  }
+]

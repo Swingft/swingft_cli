@@ -1,0 +1,6876 @@
+[
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 23, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2",
+          "@escaping (O1.Element, O2.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 23, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2",
+      "@escaping (O1.Element, O2.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 33, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 41, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Observable<(O1.Element, O2.Element)>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 41, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Observable<(O1.Element, O2.Element)>"
+  },
+  {
+    "A_name" : "CombineLatestSink2_",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "CombineLatestSink<Observer>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 51, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 55, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "latestElement1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 57, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 58, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 60, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 65, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 66, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 67, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "observer1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 69, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+          },
+          {
+            "A_name" : "observer2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 70, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "getResult",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 81, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Result"
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 55, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "latestElement1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 57, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 58, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 60, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 65, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 66, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 67, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "observer1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 69, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+      },
+      {
+        "A_name" : "observer2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 70, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 66, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 67, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "observer1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 69, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+  },
+  {
+    "A_name" : "observer2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 70, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+  },
+  {
+    "A_name" : "getResult",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 81, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Result"
+  },
+  {
+    "A_name" : "CombineLatest2",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Result>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 86, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 89, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 90, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "resultSelector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 92, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 94, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<E1>",
+          "Observable<E2>",
+          "@escaping ResultSelector"
+        ],
+        "I_parameters" : [
+          "source1",
+          "source2",
+          "resultSelector"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 101, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 102, Column: 9",
+            "H_initialValue" : "CombineLatestSink2_(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 103, Column: 9",
+            "H_initialValue" : "sink.run()"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 89, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 90, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "resultSelector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 92, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 94, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<E1>",
+      "Observable<E2>",
+      "@escaping ResultSelector"
+    ],
+    "I_parameters" : [
+      "source1",
+      "source2",
+      "resultSelector"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 101, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 102, Column: 9",
+        "H_initialValue" : "CombineLatestSink2_(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 103, Column: 9",
+        "H_initialValue" : "sink.run()"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 102, Column: 9",
+    "H_initialValue" : "CombineLatestSink2_(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 103, Column: 9",
+    "H_initialValue" : "sink.run()"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 112, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 121, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2",
+          "O3",
+          "@escaping (O1.Element, O2.Element, O3.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 121, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2",
+      "O3",
+      "@escaping (O1.Element, O2.Element, O3.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 131, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 139, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2",
+          "O3"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Observable<(O1.Element, O2.Element, O3.Element)>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 139, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2",
+      "O3"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Observable<(O1.Element, O2.Element, O3.Element)>"
+  },
+  {
+    "A_name" : "CombineLatestSink3_",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "CombineLatestSink<Observer>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 149, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 153, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "latestElement1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 155, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 156, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 157, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 159, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 164, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 165, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 166, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 167, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "observer1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 169, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+          },
+          {
+            "A_name" : "observer2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 170, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+          },
+          {
+            "A_name" : "observer3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 171, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "getResult",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 184, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Result"
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 153, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "latestElement1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 155, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 156, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 157, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 159, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 164, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 165, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 166, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 167, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "observer1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 169, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+      },
+      {
+        "A_name" : "observer2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 170, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+      },
+      {
+        "A_name" : "observer3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 171, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 165, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 166, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 167, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "observer1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 169, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+  },
+  {
+    "A_name" : "observer2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 170, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+  },
+  {
+    "A_name" : "observer3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 171, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+  },
+  {
+    "A_name" : "getResult",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 184, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Result"
+  },
+  {
+    "A_name" : "CombineLatest3",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Result>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 189, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 192, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 193, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 194, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "resultSelector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 196, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 198, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<E1>",
+          "Observable<E2>",
+          "Observable<E3>",
+          "@escaping ResultSelector"
+        ],
+        "I_parameters" : [
+          "source1",
+          "source2",
+          "source3",
+          "resultSelector"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 206, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 207, Column: 9",
+            "H_initialValue" : "CombineLatestSink3_(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 208, Column: 9",
+            "H_initialValue" : "sink.run()"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 192, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 193, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 194, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "resultSelector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 196, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 198, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<E1>",
+      "Observable<E2>",
+      "Observable<E3>",
+      "@escaping ResultSelector"
+    ],
+    "I_parameters" : [
+      "source1",
+      "source2",
+      "source3",
+      "resultSelector"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 206, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 207, Column: 9",
+        "H_initialValue" : "CombineLatestSink3_(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 208, Column: 9",
+        "H_initialValue" : "sink.run()"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 207, Column: 9",
+    "H_initialValue" : "CombineLatestSink3_(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 208, Column: 9",
+    "H_initialValue" : "sink.run()"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 217, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 226, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "@escaping (O1.Element, O2.Element, O3.Element, O4.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 226, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2",
+      "O3",
+      "O4",
+      "@escaping (O1.Element, O2.Element, O3.Element, O4.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 236, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 244, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2",
+          "O3",
+          "O4"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Observable<(O1.Element, O2.Element, O3.Element, O4.Element)>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 244, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2",
+      "O3",
+      "O4"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Observable<(O1.Element, O2.Element, O3.Element, O4.Element)>"
+  },
+  {
+    "A_name" : "CombineLatestSink4_",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "CombineLatestSink<Observer>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 254, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 258, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "latestElement1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 260, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 261, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 262, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 263, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 265, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 270, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 271, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 272, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 273, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription4",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 274, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "observer1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 276, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+          },
+          {
+            "A_name" : "observer2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 277, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+          },
+          {
+            "A_name" : "observer3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 278, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+          },
+          {
+            "A_name" : "observer4",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 279, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "getResult",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 294, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Result"
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 258, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "latestElement1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 260, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 261, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 262, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 263, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 265, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 270, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 271, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 272, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 273, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 274, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "observer1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 276, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+      },
+      {
+        "A_name" : "observer2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 277, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+      },
+      {
+        "A_name" : "observer3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 278, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+      },
+      {
+        "A_name" : "observer4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 279, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 271, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 272, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 273, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 274, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "observer1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 276, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+  },
+  {
+    "A_name" : "observer2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 277, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+  },
+  {
+    "A_name" : "observer3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 278, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+  },
+  {
+    "A_name" : "observer4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 279, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+  },
+  {
+    "A_name" : "getResult",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 294, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Result"
+  },
+  {
+    "A_name" : "CombineLatest4",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Result>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 299, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 302, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 303, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 304, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 305, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "resultSelector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 307, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 309, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<E1>",
+          "Observable<E2>",
+          "Observable<E3>",
+          "Observable<E4>",
+          "@escaping ResultSelector"
+        ],
+        "I_parameters" : [
+          "source1",
+          "source2",
+          "source3",
+          "source4",
+          "resultSelector"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 318, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 319, Column: 9",
+            "H_initialValue" : "CombineLatestSink4_(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 320, Column: 9",
+            "H_initialValue" : "sink.run()"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 302, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 303, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 304, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 305, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "resultSelector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 307, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 309, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<E1>",
+      "Observable<E2>",
+      "Observable<E3>",
+      "Observable<E4>",
+      "@escaping ResultSelector"
+    ],
+    "I_parameters" : [
+      "source1",
+      "source2",
+      "source3",
+      "source4",
+      "resultSelector"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 318, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 319, Column: 9",
+        "H_initialValue" : "CombineLatestSink4_(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 320, Column: 9",
+        "H_initialValue" : "sink.run()"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 319, Column: 9",
+    "H_initialValue" : "CombineLatestSink4_(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 320, Column: 9",
+    "H_initialValue" : "sink.run()"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 329, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 338, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "@escaping (O1.Element, O2.Element, O3.Element, O4.Element, O5.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 338, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2",
+      "O3",
+      "O4",
+      "O5",
+      "@escaping (O1.Element, O2.Element, O3.Element, O4.Element, O5.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 348, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 356, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Observable<(O1.Element, O2.Element, O3.Element, O4.Element, O5.Element)>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 356, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2",
+      "O3",
+      "O4",
+      "O5"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Observable<(O1.Element, O2.Element, O3.Element, O4.Element, O5.Element)>"
+  },
+  {
+    "A_name" : "CombineLatestSink5_",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "CombineLatestSink<Observer>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 366, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 370, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "latestElement1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 372, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 373, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 374, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 375, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 376, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 378, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 383, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 384, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 385, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 386, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription4",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 387, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription5",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 388, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "observer1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 390, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+          },
+          {
+            "A_name" : "observer2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 391, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+          },
+          {
+            "A_name" : "observer3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 392, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+          },
+          {
+            "A_name" : "observer4",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 393, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+          },
+          {
+            "A_name" : "observer5",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 394, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 4, setLatestValue: { (e: E5) -> Void in self.latestElement5 = e }, this: subscription5)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "getResult",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 411, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Result"
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 370, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "latestElement1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 372, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 373, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 374, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 375, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 376, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 378, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 383, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 384, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 385, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 386, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 387, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 388, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "observer1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 390, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+      },
+      {
+        "A_name" : "observer2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 391, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+      },
+      {
+        "A_name" : "observer3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 392, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+      },
+      {
+        "A_name" : "observer4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 393, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+      },
+      {
+        "A_name" : "observer5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 394, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 4, setLatestValue: { (e: E5) -> Void in self.latestElement5 = e }, this: subscription5)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 384, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 385, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 386, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 387, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 388, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "observer1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 390, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+  },
+  {
+    "A_name" : "observer2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 391, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+  },
+  {
+    "A_name" : "observer3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 392, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+  },
+  {
+    "A_name" : "observer4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 393, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+  },
+  {
+    "A_name" : "observer5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 394, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 4, setLatestValue: { (e: E5) -> Void in self.latestElement5 = e }, this: subscription5)"
+  },
+  {
+    "A_name" : "getResult",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 411, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Result"
+  },
+  {
+    "A_name" : "CombineLatest5",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Result>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 416, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 419, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 420, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 421, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 422, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 423, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "resultSelector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 425, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 427, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<E1>",
+          "Observable<E2>",
+          "Observable<E3>",
+          "Observable<E4>",
+          "Observable<E5>",
+          "@escaping ResultSelector"
+        ],
+        "I_parameters" : [
+          "source1",
+          "source2",
+          "source3",
+          "source4",
+          "source5",
+          "resultSelector"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 437, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 438, Column: 9",
+            "H_initialValue" : "CombineLatestSink5_(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 439, Column: 9",
+            "H_initialValue" : "sink.run()"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 419, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 420, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 421, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 422, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 423, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "resultSelector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 425, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 427, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<E1>",
+      "Observable<E2>",
+      "Observable<E3>",
+      "Observable<E4>",
+      "Observable<E5>",
+      "@escaping ResultSelector"
+    ],
+    "I_parameters" : [
+      "source1",
+      "source2",
+      "source3",
+      "source4",
+      "source5",
+      "resultSelector"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 437, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 438, Column: 9",
+        "H_initialValue" : "CombineLatestSink5_(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 439, Column: 9",
+        "H_initialValue" : "sink.run()"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 438, Column: 9",
+    "H_initialValue" : "CombineLatestSink5_(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 439, Column: 9",
+    "H_initialValue" : "sink.run()"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 448, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 457, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "O6",
+          "@escaping (O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 457, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2",
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "@escaping (O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 467, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 475, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "O6"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Observable<(O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element)>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 475, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2",
+      "O3",
+      "O4",
+      "O5",
+      "O6"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Observable<(O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element)>"
+  },
+  {
+    "A_name" : "CombineLatestSink6_",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "CombineLatestSink<Observer>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 485, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 489, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "latestElement1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 491, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 492, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 493, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 494, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 495, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement6",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 496, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 498, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 503, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 504, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 505, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 506, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription4",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 507, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription5",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 508, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription6",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 509, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "observer1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 511, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+          },
+          {
+            "A_name" : "observer2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 512, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+          },
+          {
+            "A_name" : "observer3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 513, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+          },
+          {
+            "A_name" : "observer4",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 514, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+          },
+          {
+            "A_name" : "observer5",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 515, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 4, setLatestValue: { (e: E5) -> Void in self.latestElement5 = e }, this: subscription5)"
+          },
+          {
+            "A_name" : "observer6",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 516, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 5, setLatestValue: { (e: E6) -> Void in self.latestElement6 = e }, this: subscription6)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "getResult",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 535, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Result"
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 489, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "latestElement1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 491, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 492, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 493, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 494, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 495, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement6",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 496, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 498, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 503, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 504, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 505, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 506, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 507, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 508, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription6",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 509, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "observer1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 511, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+      },
+      {
+        "A_name" : "observer2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 512, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+      },
+      {
+        "A_name" : "observer3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 513, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+      },
+      {
+        "A_name" : "observer4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 514, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+      },
+      {
+        "A_name" : "observer5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 515, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 4, setLatestValue: { (e: E5) -> Void in self.latestElement5 = e }, this: subscription5)"
+      },
+      {
+        "A_name" : "observer6",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 516, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 5, setLatestValue: { (e: E6) -> Void in self.latestElement6 = e }, this: subscription6)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 504, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 505, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 506, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 507, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 508, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription6",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 509, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "observer1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 511, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+  },
+  {
+    "A_name" : "observer2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 512, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+  },
+  {
+    "A_name" : "observer3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 513, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+  },
+  {
+    "A_name" : "observer4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 514, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+  },
+  {
+    "A_name" : "observer5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 515, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 4, setLatestValue: { (e: E5) -> Void in self.latestElement5 = e }, this: subscription5)"
+  },
+  {
+    "A_name" : "observer6",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 516, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 5, setLatestValue: { (e: E6) -> Void in self.latestElement6 = e }, this: subscription6)"
+  },
+  {
+    "A_name" : "getResult",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 535, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Result"
+  },
+  {
+    "A_name" : "CombineLatest6",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Result>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 540, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 543, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 544, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 545, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 546, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 547, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source6",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 548, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "resultSelector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 550, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 552, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<E1>",
+          "Observable<E2>",
+          "Observable<E3>",
+          "Observable<E4>",
+          "Observable<E5>",
+          "Observable<E6>",
+          "@escaping ResultSelector"
+        ],
+        "I_parameters" : [
+          "source1",
+          "source2",
+          "source3",
+          "source4",
+          "source5",
+          "source6",
+          "resultSelector"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 563, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 564, Column: 9",
+            "H_initialValue" : "CombineLatestSink6_(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 565, Column: 9",
+            "H_initialValue" : "sink.run()"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 543, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 544, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 545, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 546, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 547, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source6",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 548, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "resultSelector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 550, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 552, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<E1>",
+      "Observable<E2>",
+      "Observable<E3>",
+      "Observable<E4>",
+      "Observable<E5>",
+      "Observable<E6>",
+      "@escaping ResultSelector"
+    ],
+    "I_parameters" : [
+      "source1",
+      "source2",
+      "source3",
+      "source4",
+      "source5",
+      "source6",
+      "resultSelector"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 563, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 564, Column: 9",
+        "H_initialValue" : "CombineLatestSink6_(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 565, Column: 9",
+        "H_initialValue" : "sink.run()"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 564, Column: 9",
+    "H_initialValue" : "CombineLatestSink6_(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 565, Column: 9",
+    "H_initialValue" : "sink.run()"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 574, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 583, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "O6",
+          "O7",
+          "@escaping (O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element, O7.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 583, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2",
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7",
+      "@escaping (O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element, O7.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 593, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 601, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "O6",
+          "O7"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Observable<(O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element, O7.Element)>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 601, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2",
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Observable<(O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element, O7.Element)>"
+  },
+  {
+    "A_name" : "CombineLatestSink7_",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "CombineLatestSink<Observer>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 611, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 615, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "latestElement1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 617, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 618, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 619, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 620, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 621, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement6",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 622, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement7",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 623, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 625, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 630, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 631, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 632, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 633, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription4",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 634, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription5",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 635, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription6",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 636, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription7",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 637, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "observer1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 639, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+          },
+          {
+            "A_name" : "observer2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 640, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+          },
+          {
+            "A_name" : "observer3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 641, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+          },
+          {
+            "A_name" : "observer4",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 642, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+          },
+          {
+            "A_name" : "observer5",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 643, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 4, setLatestValue: { (e: E5) -> Void in self.latestElement5 = e }, this: subscription5)"
+          },
+          {
+            "A_name" : "observer6",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 644, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 5, setLatestValue: { (e: E6) -> Void in self.latestElement6 = e }, this: subscription6)"
+          },
+          {
+            "A_name" : "observer7",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 645, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 6, setLatestValue: { (e: E7) -> Void in self.latestElement7 = e }, this: subscription7)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "getResult",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 666, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Result"
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 615, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "latestElement1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 617, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 618, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 619, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 620, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 621, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement6",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 622, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement7",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 623, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 625, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 630, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 631, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 632, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 633, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 634, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 635, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription6",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 636, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription7",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 637, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "observer1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 639, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+      },
+      {
+        "A_name" : "observer2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 640, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+      },
+      {
+        "A_name" : "observer3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 641, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+      },
+      {
+        "A_name" : "observer4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 642, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+      },
+      {
+        "A_name" : "observer5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 643, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 4, setLatestValue: { (e: E5) -> Void in self.latestElement5 = e }, this: subscription5)"
+      },
+      {
+        "A_name" : "observer6",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 644, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 5, setLatestValue: { (e: E6) -> Void in self.latestElement6 = e }, this: subscription6)"
+      },
+      {
+        "A_name" : "observer7",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 645, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 6, setLatestValue: { (e: E7) -> Void in self.latestElement7 = e }, this: subscription7)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 631, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 632, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 633, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 634, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 635, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription6",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 636, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription7",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 637, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "observer1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 639, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+  },
+  {
+    "A_name" : "observer2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 640, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+  },
+  {
+    "A_name" : "observer3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 641, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+  },
+  {
+    "A_name" : "observer4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 642, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+  },
+  {
+    "A_name" : "observer5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 643, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 4, setLatestValue: { (e: E5) -> Void in self.latestElement5 = e }, this: subscription5)"
+  },
+  {
+    "A_name" : "observer6",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 644, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 5, setLatestValue: { (e: E6) -> Void in self.latestElement6 = e }, this: subscription6)"
+  },
+  {
+    "A_name" : "observer7",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 645, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 6, setLatestValue: { (e: E7) -> Void in self.latestElement7 = e }, this: subscription7)"
+  },
+  {
+    "A_name" : "getResult",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 666, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Result"
+  },
+  {
+    "A_name" : "CombineLatest7",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Result>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 671, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 674, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 675, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 676, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 677, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 678, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source6",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 679, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source7",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 680, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "resultSelector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 682, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 684, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<E1>",
+          "Observable<E2>",
+          "Observable<E3>",
+          "Observable<E4>",
+          "Observable<E5>",
+          "Observable<E6>",
+          "Observable<E7>",
+          "@escaping ResultSelector"
+        ],
+        "I_parameters" : [
+          "source1",
+          "source2",
+          "source3",
+          "source4",
+          "source5",
+          "source6",
+          "source7",
+          "resultSelector"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 696, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 697, Column: 9",
+            "H_initialValue" : "CombineLatestSink7_(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 698, Column: 9",
+            "H_initialValue" : "sink.run()"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 674, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 675, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 676, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 677, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 678, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source6",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 679, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source7",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 680, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "resultSelector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 682, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 684, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<E1>",
+      "Observable<E2>",
+      "Observable<E3>",
+      "Observable<E4>",
+      "Observable<E5>",
+      "Observable<E6>",
+      "Observable<E7>",
+      "@escaping ResultSelector"
+    ],
+    "I_parameters" : [
+      "source1",
+      "source2",
+      "source3",
+      "source4",
+      "source5",
+      "source6",
+      "source7",
+      "resultSelector"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 696, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 697, Column: 9",
+        "H_initialValue" : "CombineLatestSink7_(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 698, Column: 9",
+        "H_initialValue" : "sink.run()"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 697, Column: 9",
+    "H_initialValue" : "CombineLatestSink7_(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 698, Column: 9",
+    "H_initialValue" : "sink.run()"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 707, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 716, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "O6",
+          "O7",
+          "O8",
+          "@escaping (O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element, O7.Element, O8.Element) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 716, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2",
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7",
+      "O8",
+      "@escaping (O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element, O7.Element, O8.Element) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 726, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "combineLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 734, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "O6",
+          "O7",
+          "O8"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Observable<(O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element, O7.Element, O8.Element)>"
+      }
+    ]
+  },
+  {
+    "A_name" : "combineLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 734, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O1",
+      "O2",
+      "O3",
+      "O4",
+      "O5",
+      "O6",
+      "O7",
+      "O8"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Observable<(O1.Element, O2.Element, O3.Element, O4.Element, O5.Element, O6.Element, O7.Element, O8.Element)>"
+  },
+  {
+    "A_name" : "CombineLatestSink8_",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "CombineLatestSink<Observer>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 744, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 748, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "latestElement1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 750, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 751, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 752, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 753, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 754, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement6",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 755, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement7",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 756, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "latestElement8",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 757, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 759, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 764, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 765, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 766, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 767, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription4",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 768, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription5",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 769, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription6",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 770, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription7",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 771, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription8",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 772, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "observer1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 774, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+          },
+          {
+            "A_name" : "observer2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 775, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+          },
+          {
+            "A_name" : "observer3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 776, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+          },
+          {
+            "A_name" : "observer4",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 777, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+          },
+          {
+            "A_name" : "observer5",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 778, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 4, setLatestValue: { (e: E5) -> Void in self.latestElement5 = e }, this: subscription5)"
+          },
+          {
+            "A_name" : "observer6",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 779, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 5, setLatestValue: { (e: E6) -> Void in self.latestElement6 = e }, this: subscription6)"
+          },
+          {
+            "A_name" : "observer7",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 780, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 6, setLatestValue: { (e: E7) -> Void in self.latestElement7 = e }, this: subscription7)"
+          },
+          {
+            "A_name" : "observer8",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 781, Column: 9",
+            "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 7, setLatestValue: { (e: E8) -> Void in self.latestElement8 = e }, this: subscription8)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "getResult",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 804, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Result"
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 748, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "latestElement1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 750, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 751, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 752, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 753, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 754, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement6",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 755, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement7",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 756, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "latestElement8",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 757, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 759, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 764, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 765, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 766, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 767, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 768, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 769, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription6",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 770, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription7",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 771, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription8",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 772, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "observer1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 774, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+      },
+      {
+        "A_name" : "observer2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 775, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+      },
+      {
+        "A_name" : "observer3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 776, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+      },
+      {
+        "A_name" : "observer4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 777, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+      },
+      {
+        "A_name" : "observer5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 778, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 4, setLatestValue: { (e: E5) -> Void in self.latestElement5 = e }, this: subscription5)"
+      },
+      {
+        "A_name" : "observer6",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 779, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 5, setLatestValue: { (e: E6) -> Void in self.latestElement6 = e }, this: subscription6)"
+      },
+      {
+        "A_name" : "observer7",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 780, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 6, setLatestValue: { (e: E7) -> Void in self.latestElement7 = e }, this: subscription7)"
+      },
+      {
+        "A_name" : "observer8",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 781, Column: 9",
+        "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 7, setLatestValue: { (e: E8) -> Void in self.latestElement8 = e }, this: subscription8)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 765, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 766, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 767, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 768, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 769, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription6",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 770, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription7",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 771, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription8",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 772, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "observer1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 774, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 0, setLatestValue: { (e: E1) -> Void in self.latestElement1 = e }, this: subscription1)"
+  },
+  {
+    "A_name" : "observer2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 775, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 1, setLatestValue: { (e: E2) -> Void in self.latestElement2 = e }, this: subscription2)"
+  },
+  {
+    "A_name" : "observer3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 776, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 2, setLatestValue: { (e: E3) -> Void in self.latestElement3 = e }, this: subscription3)"
+  },
+  {
+    "A_name" : "observer4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 777, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 3, setLatestValue: { (e: E4) -> Void in self.latestElement4 = e }, this: subscription4)"
+  },
+  {
+    "A_name" : "observer5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 778, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 4, setLatestValue: { (e: E5) -> Void in self.latestElement5 = e }, this: subscription5)"
+  },
+  {
+    "A_name" : "observer6",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 779, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 5, setLatestValue: { (e: E6) -> Void in self.latestElement6 = e }, this: subscription6)"
+  },
+  {
+    "A_name" : "observer7",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 780, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 6, setLatestValue: { (e: E7) -> Void in self.latestElement7 = e }, this: subscription7)"
+  },
+  {
+    "A_name" : "observer8",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 781, Column: 9",
+    "H_initialValue" : "CombineLatestObserver(lock: self.lock, parent: self, index: 7, setLatestValue: { (e: E8) -> Void in self.latestElement8 = e }, this: subscription8)"
+  },
+  {
+    "A_name" : "getResult",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 804, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Result"
+  },
+  {
+    "A_name" : "CombineLatest8",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Result>"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 809, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 812, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 813, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 814, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source4",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 815, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source5",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 816, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source6",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 817, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source7",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 818, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source8",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 819, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "resultSelector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 821, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 823, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<E1>",
+          "Observable<E2>",
+          "Observable<E3>",
+          "Observable<E4>",
+          "Observable<E5>",
+          "Observable<E6>",
+          "Observable<E7>",
+          "Observable<E8>",
+          "@escaping ResultSelector"
+        ],
+        "I_parameters" : [
+          "source1",
+          "source2",
+          "source3",
+          "source4",
+          "source5",
+          "source6",
+          "source7",
+          "source8",
+          "resultSelector"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 836, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 837, Column: 9",
+            "H_initialValue" : "CombineLatestSink8_(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CombineLatest+arity.swift - Line: 838, Column: 9",
+            "H_initialValue" : "sink.run()"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 812, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 813, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 814, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source4",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 815, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source5",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 816, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source6",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 817, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source7",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 818, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source8",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 819, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "resultSelector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 821, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 823, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<E1>",
+      "Observable<E2>",
+      "Observable<E3>",
+      "Observable<E4>",
+      "Observable<E5>",
+      "Observable<E6>",
+      "Observable<E7>",
+      "Observable<E8>",
+      "@escaping ResultSelector"
+    ],
+    "I_parameters" : [
+      "source1",
+      "source2",
+      "source3",
+      "source4",
+      "source5",
+      "source6",
+      "source7",
+      "source8",
+      "resultSelector"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 836, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 837, Column: 9",
+        "H_initialValue" : "CombineLatestSink8_(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CombineLatest+arity.swift - Line: 838, Column: 9",
+        "H_initialValue" : "sink.run()"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 837, Column: 9",
+    "H_initialValue" : "CombineLatestSink8_(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CombineLatest+arity.swift - Line: 838, Column: 9",
+    "H_initialValue" : "sink.run()"
+  }
+]

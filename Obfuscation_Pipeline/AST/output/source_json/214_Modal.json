@@ -1,0 +1,962 @@
+[
+  {
+    "A_name" : "Modal",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIView"
+    ],
+    "F_location" : "Modal.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "buttons",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 13, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "modalSheetView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 17, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 12\n        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]\n        view.clipsToBounds = true\n        return view\n    }()"
+      },
+      {
+        "A_name" : "modalLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 26, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"이미지 선택하기\"\n        label.font = .suit(.head_b_16)\n        label.textColor = .black\n        label.textAlignment = .center\n        return label\n    }()"
+      },
+      {
+        "A_name" : "stackView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 35, Column: 5",
+        "H_initialValue" : "{\n        let stackView = UIStackView()\n        stackView.backgroundColor = .white\n        stackView.axis = .vertical\n        stackView.spacing = 8\n        return stackView\n    }()"
+      },
+      {
+        "A_name" : "stackTopToLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 43, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "stackTopToSheet",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 44, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Modal.swift - Line: 48, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "Modal.swift - Line: 55, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "setStyle",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 61, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tap",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Modal.swift - Line: 62, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismissModal))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 66, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 71, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setTitle",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 94, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String?"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 107, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String?",
+          "[(String, UIImage?, () -> Void)]"
+        ],
+        "I_parameters" : [
+          "title",
+          "items"
+        ]
+      },
+      {
+        "A_name" : "applyStyle",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 134, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "button",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Modal.swift - Line: 136, Column: 9",
+            "H_initialValue" : "buttons[index]"
+          },
+          {
+            "A_name" : "plainTitle",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Modal.swift - Line: 139, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Modal.swift - Line: 146, Column: 9",
+            "H_initialValue" : "AttributeContainer()"
+          },
+          {
+            "A_name" : "attributed",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Modal.swift - Line: 150, Column: 9",
+            "H_initialValue" : "AttributedString(plainTitle, attributes: container)"
+          },
+          {
+            "A_name" : "config",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Modal.swift - Line: 152, Column: 9",
+            "H_initialValue" : "button.configuration ?? .plain()"
+          }
+        ],
+        "I_parameterType" : [
+          "Int",
+          "UIColor",
+          "UIFont"
+        ],
+        "I_parameters" : [
+          "to",
+          "titleColor",
+          "font"
+        ]
+      },
+      {
+        "A_name" : "showAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 159, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "dismissModal",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "Modal.swift - Line: 168, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "buttons",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 13, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "modalSheetView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 17, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 12\n        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]\n        view.clipsToBounds = true\n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 18, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "modalLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 26, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"이미지 선택하기\"\n        label.font = .suit(.head_b_16)\n        label.textColor = .black\n        label.textAlignment = .center\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 27, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "stackView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 35, Column: 5",
+    "H_initialValue" : "{\n        let stackView = UIStackView()\n        stackView.backgroundColor = .white\n        stackView.axis = .vertical\n        stackView.spacing = 8\n        return stackView\n    }()"
+  },
+  {
+    "A_name" : "stackView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 36, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "stackTopToLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 43, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "stackTopToSheet",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 44, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Modal.swift - Line: 48, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "Modal.swift - Line: 55, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "setStyle",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 61, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 62, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismissModal))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 62, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismissModal))"
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 66, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 71, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setTitle",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 94, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String?"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 107, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String?",
+      "[(String, UIImage?, () -> Void)]"
+    ],
+    "I_parameters" : [
+      "title",
+      "items"
+    ]
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 113, Column: 13",
+    "H_initialValue" : "UIButton(type: .system)"
+  },
+  {
+    "A_name" : "config",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 114, Column: 13",
+    "H_initialValue" : "UIButton.Configuration.plain()"
+  },
+  {
+    "A_name" : "attributedTitle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 116, Column: 13",
+    "H_initialValue" : "AttributedString(title, attributes: AttributeContainer([\n                .font: UIFont.suit(.body_sb_14),\n                .foregroundColor: UIColor.gray700\n            ]))"
+  },
+  {
+    "A_name" : "applyStyle",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 134, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "button",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 136, Column: 9",
+        "H_initialValue" : "buttons[index]"
+      },
+      {
+        "A_name" : "plainTitle",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 139, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 146, Column: 9",
+        "H_initialValue" : "AttributeContainer()"
+      },
+      {
+        "A_name" : "attributed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 150, Column: 9",
+        "H_initialValue" : "AttributedString(plainTitle, attributes: container)"
+      },
+      {
+        "A_name" : "config",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 152, Column: 9",
+        "H_initialValue" : "button.configuration ?? .plain()"
+      }
+    ],
+    "I_parameterType" : [
+      "Int",
+      "UIColor",
+      "UIFont"
+    ],
+    "I_parameters" : [
+      "to",
+      "titleColor",
+      "font"
+    ]
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 136, Column: 9",
+    "H_initialValue" : "buttons[index]"
+  },
+  {
+    "A_name" : "plainTitle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 139, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 146, Column: 9",
+    "H_initialValue" : "AttributeContainer()"
+  },
+  {
+    "A_name" : "attributed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 150, Column: 9",
+    "H_initialValue" : "AttributedString(plainTitle, attributes: container)"
+  },
+  {
+    "A_name" : "config",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 152, Column: 9",
+    "H_initialValue" : "button.configuration ?? .plain()"
+  },
+  {
+    "A_name" : "showAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 159, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dismissModal",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "Modal.swift - Line: 168, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "UIButton",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 178, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "applyStyle",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 179, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "title",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Modal.swift - Line: 180, Column: 9",
+            "H_initialValue" : "self.currentTitle ?? \"\""
+          },
+          {
+            "A_name" : "attributed",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Modal.swift - Line: 181, Column: 9",
+            "H_initialValue" : "NSAttributedString(\n            string: title,\n            attributes: [\n                .foregroundColor: titleColor,\n                .font: font\n            ]\n        )"
+          }
+        ],
+        "I_parameterType" : [
+          "UIColor",
+          "UIFont"
+        ],
+        "I_parameters" : [
+          "titleColor",
+          "font"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "applyStyle",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 179, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "title",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 180, Column: 9",
+        "H_initialValue" : "self.currentTitle ?? \"\""
+      },
+      {
+        "A_name" : "attributed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 181, Column: 9",
+        "H_initialValue" : "NSAttributedString(\n            string: title,\n            attributes: [\n                .foregroundColor: titleColor,\n                .font: font\n            ]\n        )"
+      }
+    ],
+    "I_parameterType" : [
+      "UIColor",
+      "UIFont"
+    ],
+    "I_parameters" : [
+      "titleColor",
+      "font"
+    ]
+  },
+  {
+    "A_name" : "title",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 180, Column: 9",
+    "H_initialValue" : "self.currentTitle ?? \"\""
+  },
+  {
+    "A_name" : "attributed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 181, Column: 9",
+    "H_initialValue" : "NSAttributedString(\n            string: title,\n            attributes: [\n                .foregroundColor: titleColor,\n                .font: font\n            ]\n        )"
+  },
+  {
+    "A_name" : "ModalPreviewViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIViewController"
+    ],
+    "F_location" : "Modal.swift - Line: 194, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "modal",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Modal.swift - Line: 196, Column: 5",
+        "H_initialValue" : "Modal()"
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Modal.swift - Line: 198, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "viewDidAppear",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Modal.swift - Line: 219, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "modal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Modal.swift - Line: 196, Column: 5",
+    "H_initialValue" : "Modal()"
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Modal.swift - Line: 198, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "viewDidAppear",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Modal.swift - Line: 219, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  }
+]

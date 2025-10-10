@@ -1,0 +1,66 @@
+[
+  {
+    "A_name" : "DispatchQueue",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DispatchQueue+Extensions.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "token",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DispatchQueue+Extensions.swift - Line: 12, Column: 5",
+        "H_initialValue" : "{\n        let key = DispatchSpecificKey<()>()\n        DispatchQueue.main.setSpecific(key: key, value: ())\n        return key\n    }()"
+      },
+      {
+        "A_name" : "isMain",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DispatchQueue+Extensions.swift - Line: 18, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "token",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DispatchQueue+Extensions.swift - Line: 12, Column: 5",
+    "H_initialValue" : "{\n        let key = DispatchSpecificKey<()>()\n        DispatchQueue.main.setSpecific(key: key, value: ())\n        return key\n    }()"
+  },
+  {
+    "A_name" : "key",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DispatchQueue+Extensions.swift - Line: 13, Column: 9",
+    "H_initialValue" : "DispatchSpecificKey<()>()"
+  },
+  {
+    "A_name" : "isMain",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DispatchQueue+Extensions.swift - Line: 18, Column: 5",
+    "H_initialValue" : ""
+  }
+]

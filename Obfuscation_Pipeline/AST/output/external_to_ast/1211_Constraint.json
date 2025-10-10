@@ -1,0 +1,1234 @@
+[
+  {
+    "A_name" : "Constraint",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 30, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "sourceLocation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 32, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "label",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 33, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "from",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 35, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "to",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 36, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "relation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 37, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "multiplier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 38, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "constant",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 39, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "priority",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 44, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "layoutConstraints",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 49, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isActive",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 51, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 73, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "layoutFromAttributes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Constraint.swift - Line: 92, Column: 9",
+            "H_initialValue" : "self.from.attributes.layoutAttributes"
+          },
+          {
+            "A_name" : "layoutToAttributes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Constraint.swift - Line: 93, Column: 9",
+            "H_initialValue" : "self.to.attributes.layoutAttributes"
+          },
+          {
+            "A_name" : "layoutFrom",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Constraint.swift - Line: 96, Column: 9",
+            "H_initialValue" : "self.from.layoutConstraintItem!"
+          },
+          {
+            "A_name" : "layoutRelation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Constraint.swift - Line: 99, Column: 9",
+            "H_initialValue" : "self.relation.layoutRelation"
+          }
+        ],
+        "I_parameterType" : [
+          "ConstraintItem",
+          "ConstraintItem",
+          "ConstraintRelation",
+          "(String, UInt)",
+          "String?",
+          "ConstraintMultiplierTarget",
+          "ConstraintConstantTarget",
+          "ConstraintPriorityTarget"
+        ],
+        "I_parameters" : [
+          "from",
+          "to",
+          "relation",
+          "sourceLocation",
+          "label",
+          "multiplier",
+          "constant",
+          "priority"
+        ]
+      },
+      {
+        "A_name" : "install",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Constraint.swift - Line: 218, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "uninstall",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Constraint.swift - Line: 223, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "activate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 228, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "deactivate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 232, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "update",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Constraint.swift - Line: 236, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ConstraintOffsetTarget"
+        ],
+        "I_parameters" : [
+          "offset"
+        ],
+        "J_returnType" : "-> Constraint"
+      },
+      {
+        "A_name" : "update",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Constraint.swift - Line: 242, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ConstraintInsetTarget"
+        ],
+        "I_parameters" : [
+          "inset"
+        ],
+        "J_returnType" : "-> Constraint"
+      },
+      {
+        "A_name" : "update",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Constraint.swift - Line: 257, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ConstraintPriorityTarget"
+        ],
+        "I_parameters" : [
+          "priority"
+        ],
+        "J_returnType" : "-> Constraint"
+      },
+      {
+        "A_name" : "update",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Constraint.swift - Line: 263, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ConstraintPriority"
+        ],
+        "I_parameters" : [
+          "priority"
+        ],
+        "J_returnType" : "-> Constraint"
+      },
+      {
+        "A_name" : "updateOffset",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Constraint.swift - Line: 269, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ConstraintOffsetTarget"
+        ],
+        "I_parameters" : [
+          "amount"
+        ],
+        "J_returnType" : "-> Void"
+      },
+      {
+        "A_name" : "updateInsets",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Constraint.swift - Line: 272, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ConstraintInsetTarget"
+        ],
+        "I_parameters" : [
+          "amount"
+        ],
+        "J_returnType" : "-> Void"
+      },
+      {
+        "A_name" : "updatePriority",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Constraint.swift - Line: 275, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ConstraintPriorityTarget"
+        ],
+        "I_parameters" : [
+          "amount"
+        ],
+        "J_returnType" : "-> Void"
+      },
+      {
+        "A_name" : "updatePriorityRequired",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Constraint.swift - Line: 278, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Void"
+      },
+      {
+        "A_name" : "updatePriorityHigh",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Constraint.swift - Line: 281, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Void"
+      },
+      {
+        "A_name" : "updatePriorityMedium",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Constraint.swift - Line: 284, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Void"
+      },
+      {
+        "A_name" : "updatePriorityLow",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Constraint.swift - Line: 287, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Void"
+      },
+      {
+        "A_name" : "updateConstantAndPriorityIfNeeded",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 292, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "activateIfNeeded",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 304, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "layoutConstraints",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Constraint.swift - Line: 309, Column: 9",
+            "H_initialValue" : "self.layoutConstraints"
+          }
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "updatingExisting"
+        ]
+      },
+      {
+        "A_name" : "deactivateIfNeeded",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 332, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "layoutConstraints",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Constraint.swift - Line: 337, Column: 9",
+            "H_initialValue" : "self.layoutConstraints"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "sourceLocation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 32, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 33, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "from",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 35, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "to",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 36, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "relation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 37, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "multiplier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 38, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "constant",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 39, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "priority",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 44, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "layoutConstraints",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 49, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isActive",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 51, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 73, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "layoutFromAttributes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 92, Column: 9",
+        "H_initialValue" : "self.from.attributes.layoutAttributes"
+      },
+      {
+        "A_name" : "layoutToAttributes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 93, Column: 9",
+        "H_initialValue" : "self.to.attributes.layoutAttributes"
+      },
+      {
+        "A_name" : "layoutFrom",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 96, Column: 9",
+        "H_initialValue" : "self.from.layoutConstraintItem!"
+      },
+      {
+        "A_name" : "layoutRelation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 99, Column: 9",
+        "H_initialValue" : "self.relation.layoutRelation"
+      }
+    ],
+    "I_parameterType" : [
+      "ConstraintItem",
+      "ConstraintItem",
+      "ConstraintRelation",
+      "(String, UInt)",
+      "String?",
+      "ConstraintMultiplierTarget",
+      "ConstraintConstantTarget",
+      "ConstraintPriorityTarget"
+    ],
+    "I_parameters" : [
+      "from",
+      "to",
+      "relation",
+      "sourceLocation",
+      "label",
+      "multiplier",
+      "constant",
+      "priority"
+    ]
+  },
+  {
+    "A_name" : "layoutFromAttributes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 92, Column: 9",
+    "H_initialValue" : "self.from.attributes.layoutAttributes"
+  },
+  {
+    "A_name" : "layoutToAttributes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 93, Column: 9",
+    "H_initialValue" : "self.to.attributes.layoutAttributes"
+  },
+  {
+    "A_name" : "layoutFrom",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 96, Column: 9",
+    "H_initialValue" : "self.from.layoutConstraintItem!"
+  },
+  {
+    "A_name" : "layoutRelation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 99, Column: 9",
+    "H_initialValue" : "self.relation.layoutRelation"
+  },
+  {
+    "A_name" : "layoutToAttribute",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 103, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "layoutConstant",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 181, Column: 13",
+    "H_initialValue" : "self.constant.constraintConstantTargetValueFor(layoutAttribute: layoutToAttribute)"
+  },
+  {
+    "A_name" : "layoutTo",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 184, Column: 13",
+    "H_initialValue" : "self.to.target"
+  },
+  {
+    "A_name" : "layoutConstraint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 192, Column: 13",
+    "H_initialValue" : "LayoutConstraint(\n                item: layoutFrom,\n                attribute: layoutFromAttribute,\n                relatedBy: layoutRelation,\n                toItem: layoutTo,\n                attribute: layoutToAttribute,\n                multiplier: self.multiplier.constraintMultiplierTargetValue,\n                constant: layoutConstant\n            )"
+  },
+  {
+    "A_name" : "install",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Constraint.swift - Line: 218, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "uninstall",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Constraint.swift - Line: 223, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "activate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 228, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "deactivate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 232, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "update",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Constraint.swift - Line: 236, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ConstraintOffsetTarget"
+    ],
+    "I_parameters" : [
+      "offset"
+    ],
+    "J_returnType" : "-> Constraint"
+  },
+  {
+    "A_name" : "update",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Constraint.swift - Line: 242, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ConstraintInsetTarget"
+    ],
+    "I_parameters" : [
+      "inset"
+    ],
+    "J_returnType" : "-> Constraint"
+  },
+  {
+    "A_name" : "update",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult",
+      "available"
+    ],
+    "F_location" : "Constraint.swift - Line: 249, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ConstraintDirectionalInsetTarget"
+    ],
+    "I_parameters" : [
+      "inset"
+    ],
+    "J_returnType" : "-> Constraint"
+  },
+  {
+    "A_name" : "update",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Constraint.swift - Line: 257, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ConstraintPriorityTarget"
+    ],
+    "I_parameters" : [
+      "priority"
+    ],
+    "J_returnType" : "-> Constraint"
+  },
+  {
+    "A_name" : "update",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Constraint.swift - Line: 263, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ConstraintPriority"
+    ],
+    "I_parameters" : [
+      "priority"
+    ],
+    "J_returnType" : "-> Constraint"
+  },
+  {
+    "A_name" : "updateOffset",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Constraint.swift - Line: 269, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ConstraintOffsetTarget"
+    ],
+    "I_parameters" : [
+      "amount"
+    ],
+    "J_returnType" : "-> Void"
+  },
+  {
+    "A_name" : "updateInsets",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Constraint.swift - Line: 272, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ConstraintInsetTarget"
+    ],
+    "I_parameters" : [
+      "amount"
+    ],
+    "J_returnType" : "-> Void"
+  },
+  {
+    "A_name" : "updatePriority",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Constraint.swift - Line: 275, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ConstraintPriorityTarget"
+    ],
+    "I_parameters" : [
+      "amount"
+    ],
+    "J_returnType" : "-> Void"
+  },
+  {
+    "A_name" : "updatePriorityRequired",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Constraint.swift - Line: 278, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Void"
+  },
+  {
+    "A_name" : "updatePriorityHigh",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Constraint.swift - Line: 281, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Void"
+  },
+  {
+    "A_name" : "updatePriorityMedium",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Constraint.swift - Line: 284, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Void"
+  },
+  {
+    "A_name" : "updatePriorityLow",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Constraint.swift - Line: 287, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Void"
+  },
+  {
+    "A_name" : "updateConstantAndPriorityIfNeeded",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 292, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "attribute",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 294, Column: 13",
+    "H_initialValue" : "(layoutConstraint.secondAttribute == .notAnAttribute) ? layoutConstraint.firstAttribute : layoutConstraint.secondAttribute"
+  },
+  {
+    "A_name" : "requiredPriority",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 297, Column: 13",
+    "H_initialValue" : "ConstraintPriority.required.value"
+  },
+  {
+    "A_name" : "activateIfNeeded",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 304, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "layoutConstraints",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 309, Column: 9",
+        "H_initialValue" : "self.layoutConstraints"
+      }
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "updatingExisting"
+    ]
+  },
+  {
+    "A_name" : "layoutConstraints",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 309, Column: 9",
+    "H_initialValue" : "self.layoutConstraints"
+  },
+  {
+    "A_name" : "existingLayoutConstraints",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 312, Column: 13",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "existingLayoutConstraint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 318, Column: 17",
+    "H_initialValue" : "existingLayoutConstraints.first { $0 == layoutConstraint }"
+  },
+  {
+    "A_name" : "updateLayoutAttribute",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 323, Column: 17",
+    "H_initialValue" : "(updateLayoutConstraint.secondAttribute == .notAnAttribute) ? updateLayoutConstraint.firstAttribute : updateLayoutConstraint.secondAttribute"
+  },
+  {
+    "A_name" : "deactivateIfNeeded",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 332, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "layoutConstraints",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Constraint.swift - Line: 337, Column: 9",
+        "H_initialValue" : "self.layoutConstraints"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "layoutConstraints",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Constraint.swift - Line: 337, Column: 9",
+    "H_initialValue" : "self.layoutConstraints"
+  }
+]

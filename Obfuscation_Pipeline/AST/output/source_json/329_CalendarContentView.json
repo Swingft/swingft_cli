@@ -1,0 +1,1049 @@
+[
+  {
+    "A_name" : "CalendarContentView",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UICollectionView"
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "calendar",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 15, Column: 5",
+        "H_initialValue" : "Calendar.current"
+      },
+      {
+        "A_name" : "currentDate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 16, Column: 5",
+        "H_initialValue" : "Date()"
+      },
+      {
+        "A_name" : "startOfMonth",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 17, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "days",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 21, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "filledDates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 22, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "selectedDate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 26, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onDateSelected",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 30, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rowCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 32, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 38, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "flowLayout",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 39, Column: 9",
+            "H_initialValue" : "UICollectionViewFlowLayout()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 52, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "reload",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 58, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Date"
+        ],
+        "I_parameters" : [
+          "for"
+        ]
+      },
+      {
+        "A_name" : "setSelectedDate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 67, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Date"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "generateDays",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 73, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "range",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 78, Column: 9",
+            "H_initialValue" : "calendar.range(of: .day, in: .month, for: currentDate)!"
+          },
+          {
+            "A_name" : "firstOfMonthWeekday",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 79, Column: 9",
+            "H_initialValue" : "calendar.component(.weekday, from: startOfMonth)"
+          },
+          {
+            "A_name" : "firstWeekday",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 80, Column: 9",
+            "H_initialValue" : "calendar.firstWeekday"
+          },
+          {
+            "A_name" : "offset",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 81, Column: 9",
+            "H_initialValue" : "(firstOfMonthWeekday - firstWeekday + 7) % 7"
+          },
+          {
+            "A_name" : "remainder",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 100, Column: 9",
+            "H_initialValue" : "days.count % 7"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "updateItemSize",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 112, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "width",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 113, Column: 9",
+            "H_initialValue" : "bounds.width \/ 7"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "layoutSubviews",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 120, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "intrinsicContentSize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 125, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "calendar",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 15, Column: 5",
+    "H_initialValue" : "Calendar.current"
+  },
+  {
+    "A_name" : "currentDate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 16, Column: 5",
+    "H_initialValue" : "Date()"
+  },
+  {
+    "A_name" : "startOfMonth",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 17, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "days",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 21, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "filledDates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 22, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "selectedDate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 26, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onDateSelected",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 30, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rowCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 32, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 38, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "flowLayout",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 39, Column: 9",
+        "H_initialValue" : "UICollectionViewFlowLayout()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "flowLayout",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 39, Column: 9",
+    "H_initialValue" : "UICollectionViewFlowLayout()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 52, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "reload",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 58, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Date"
+    ],
+    "I_parameters" : [
+      "for"
+    ]
+  },
+  {
+    "A_name" : "setSelectedDate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 67, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Date"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "generateDays",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 73, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "range",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 78, Column: 9",
+        "H_initialValue" : "calendar.range(of: .day, in: .month, for: currentDate)!"
+      },
+      {
+        "A_name" : "firstOfMonthWeekday",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 79, Column: 9",
+        "H_initialValue" : "calendar.component(.weekday, from: startOfMonth)"
+      },
+      {
+        "A_name" : "firstWeekday",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 80, Column: 9",
+        "H_initialValue" : "calendar.firstWeekday"
+      },
+      {
+        "A_name" : "offset",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 81, Column: 9",
+        "H_initialValue" : "(firstOfMonthWeekday - firstWeekday + 7) % 7"
+      },
+      {
+        "A_name" : "remainder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 100, Column: 9",
+        "H_initialValue" : "days.count % 7"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "range",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 78, Column: 9",
+    "H_initialValue" : "calendar.range(of: .day, in: .month, for: currentDate)!"
+  },
+  {
+    "A_name" : "firstOfMonthWeekday",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 79, Column: 9",
+    "H_initialValue" : "calendar.component(.weekday, from: startOfMonth)"
+  },
+  {
+    "A_name" : "firstWeekday",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 80, Column: 9",
+    "H_initialValue" : "calendar.firstWeekday"
+  },
+  {
+    "A_name" : "offset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 81, Column: 9",
+    "H_initialValue" : "(firstOfMonthWeekday - firstWeekday + 7) % 7"
+  },
+  {
+    "A_name" : "remainder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 100, Column: 9",
+    "H_initialValue" : "days.count % 7"
+  },
+  {
+    "A_name" : "extra",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 102, Column: 13",
+    "H_initialValue" : "7 - remainder"
+  },
+  {
+    "A_name" : "updateItemSize",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 112, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "width",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 113, Column: 9",
+        "H_initialValue" : "bounds.width \/ 7"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "width",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 113, Column: 9",
+    "H_initialValue" : "bounds.width \/ 7"
+  },
+  {
+    "A_name" : "layoutSubviews",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 120, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "intrinsicContentSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 125, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rowHeight",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 126, Column: 9",
+    "H_initialValue" : "34"
+  },
+  {
+    "A_name" : "lineSpacing",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 127, Column: 9",
+    "H_initialValue" : "14"
+  },
+  {
+    "A_name" : "rowCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 128, Column: 9",
+    "H_initialValue" : "self.rowCount"
+  },
+  {
+    "A_name" : "totalHeight",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 129, Column: 9",
+    "H_initialValue" : "CGFloat(rowCount) * rowHeight + CGFloat(max(0, rowCount - 1)) * lineSpacing"
+  },
+  {
+    "A_name" : "CalendarContentView",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UICollectionViewDataSource",
+      "UICollectionViewDelegate"
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 136, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 138, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "numberOfItemsInSection"
+        ],
+        "J_returnType" : "-> Int"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 143, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "cell",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 145, Column: 9",
+            "H_initialValue" : "collectionView.dequeueReusableCell(\n            withReuseIdentifier: \"CustomCalendarCell\", for: indexPath\n        ) as! CustomCalendarCell"
+          },
+          {
+            "A_name" : "date",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 148, Column: 9",
+            "H_initialValue" : "days[indexPath.item]"
+          },
+          {
+            "A_name" : "day",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 149, Column: 9",
+            "H_initialValue" : "calendar.component(.day, from: date)"
+          },
+          {
+            "A_name" : "isToday",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 150, Column: 9",
+            "H_initialValue" : "calendar.isDateInToday(date)"
+          },
+          {
+            "A_name" : "isSelected",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 151, Column: 9",
+            "H_initialValue" : "selectedDate != nil && calendar.isDate(selectedDate!, inSameDayAs: date)"
+          },
+          {
+            "A_name" : "isFilled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 152, Column: 9",
+            "H_initialValue" : "filledDates.contains { calendar.isDate($0, inSameDayAs: date) }"
+          },
+          {
+            "A_name" : "isWithinMonth",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CalendarContentView.swift - Line: 153, Column: 9",
+            "H_initialValue" : "calendar.isDate(date, equalTo: currentDate, toGranularity: .month)"
+          }
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "cellForItemAt"
+        ],
+        "J_returnType" : "-> UICollectionViewCell"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 166, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "didSelectItemAt"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 138, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "numberOfItemsInSection"
+    ],
+    "J_returnType" : "-> Int"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 143, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "cell",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 145, Column: 9",
+        "H_initialValue" : "collectionView.dequeueReusableCell(\n            withReuseIdentifier: \"CustomCalendarCell\", for: indexPath\n        ) as! CustomCalendarCell"
+      },
+      {
+        "A_name" : "date",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 148, Column: 9",
+        "H_initialValue" : "days[indexPath.item]"
+      },
+      {
+        "A_name" : "day",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 149, Column: 9",
+        "H_initialValue" : "calendar.component(.day, from: date)"
+      },
+      {
+        "A_name" : "isToday",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 150, Column: 9",
+        "H_initialValue" : "calendar.isDateInToday(date)"
+      },
+      {
+        "A_name" : "isSelected",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 151, Column: 9",
+        "H_initialValue" : "selectedDate != nil && calendar.isDate(selectedDate!, inSameDayAs: date)"
+      },
+      {
+        "A_name" : "isFilled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 152, Column: 9",
+        "H_initialValue" : "filledDates.contains { calendar.isDate($0, inSameDayAs: date) }"
+      },
+      {
+        "A_name" : "isWithinMonth",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CalendarContentView.swift - Line: 153, Column: 9",
+        "H_initialValue" : "calendar.isDate(date, equalTo: currentDate, toGranularity: .month)"
+      }
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "cellForItemAt"
+    ],
+    "J_returnType" : "-> UICollectionViewCell"
+  },
+  {
+    "A_name" : "cell",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 145, Column: 9",
+    "H_initialValue" : "collectionView.dequeueReusableCell(\n            withReuseIdentifier: \"CustomCalendarCell\", for: indexPath\n        ) as! CustomCalendarCell"
+  },
+  {
+    "A_name" : "date",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 148, Column: 9",
+    "H_initialValue" : "days[indexPath.item]"
+  },
+  {
+    "A_name" : "day",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 149, Column: 9",
+    "H_initialValue" : "calendar.component(.day, from: date)"
+  },
+  {
+    "A_name" : "isToday",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 150, Column: 9",
+    "H_initialValue" : "calendar.isDateInToday(date)"
+  },
+  {
+    "A_name" : "isSelected",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 151, Column: 9",
+    "H_initialValue" : "selectedDate != nil && calendar.isDate(selectedDate!, inSameDayAs: date)"
+  },
+  {
+    "A_name" : "isFilled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 152, Column: 9",
+    "H_initialValue" : "filledDates.contains { calendar.isDate($0, inSameDayAs: date) }"
+  },
+  {
+    "A_name" : "isWithinMonth",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 153, Column: 9",
+    "H_initialValue" : "calendar.isDate(date, equalTo: currentDate, toGranularity: .month)"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CalendarContentView.swift - Line: 166, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "didSelectItemAt"
+    ]
+  }
+]

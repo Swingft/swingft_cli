@@ -1,0 +1,820 @@
+[
+  {
+    "A_name" : "HTTPHeadersTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 28, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testHeadersAreStoreUniquelyByCaseInsensitiveName",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 29, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headersFromDictionaryLiteral",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 31, Column: 9",
+            "H_initialValue" : "[\"key\": \"\", \"Key\": \"\", \"KEY\": \"\"]"
+          },
+          {
+            "A_name" : "headersFromDictionary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 32, Column: 9",
+            "H_initialValue" : "HTTPHeaders([\"key\": \"\", \"Key\": \"\", \"KEY\": \"\"])"
+          },
+          {
+            "A_name" : "headersFromArrayLiteral",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 33, Column: 9",
+            "H_initialValue" : "[HTTPHeader(name: \"key\", value: \"\"),\n                                                    HTTPHeader(name: \"Key\", value: \"\"),\n                                                    HTTPHeader(name: \"KEY\", value: \"\")]"
+          },
+          {
+            "A_name" : "headersFromArray",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 36, Column: 9",
+            "H_initialValue" : "HTTPHeaders([HTTPHeader(name: \"key\", value: \"\"),\n                                            HTTPHeader(name: \"Key\", value: \"\"),\n                                            HTTPHeader(name: \"KEY\", value: \"\")])"
+          },
+          {
+            "A_name" : "headersCreatedManually",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 39, Column: 9",
+            "H_initialValue" : "HTTPHeaders()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testHeadersPreserveOrderOfInsertion",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 52, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headersFromDictionaryLiteral",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 54, Column: 9",
+            "H_initialValue" : "[\"c\": \"\", \"a\": \"\", \"b\": \"\"]"
+          },
+          {
+            "A_name" : "headersFromArrayLiteral",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 56, Column: 9",
+            "H_initialValue" : "[HTTPHeader(name: \"b\", value: \"\"),\n                                                    HTTPHeader(name: \"a\", value: \"\"),\n                                                    HTTPHeader(name: \"c\", value: \"\")]"
+          },
+          {
+            "A_name" : "headersFromArray",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 59, Column: 9",
+            "H_initialValue" : "HTTPHeaders([HTTPHeader(name: \"b\", value: \"\"),\n                                            HTTPHeader(name: \"a\", value: \"\"),\n                                            HTTPHeader(name: \"c\", value: \"\")])"
+          },
+          {
+            "A_name" : "headersCreatedManually",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 62, Column: 9",
+            "H_initialValue" : "HTTPHeaders()"
+          },
+          {
+            "A_name" : "dictionaryLiteralNames",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 68, Column: 9",
+            "H_initialValue" : "headersFromDictionaryLiteral.map(\\.name)"
+          },
+          {
+            "A_name" : "arrayLiteralNames",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 69, Column: 9",
+            "H_initialValue" : "headersFromArrayLiteral.map(\\.name)"
+          },
+          {
+            "A_name" : "arrayNames",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 70, Column: 9",
+            "H_initialValue" : "headersFromArray.map(\\.name)"
+          },
+          {
+            "A_name" : "manualNames",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 71, Column: 9",
+            "H_initialValue" : "headersCreatedManually.map(\\.name)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testHeadersCanBeProperlySortedByName",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 80, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 82, Column: 9",
+            "H_initialValue" : "[\"c\": \"\", \"a\": \"\", \"b\": \"\"]"
+          },
+          {
+            "A_name" : "sortedHeaders",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 85, Column: 9",
+            "H_initialValue" : "headers.sorted()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testHeadersCanInsensitivelyGetAndSetThroughSubscript",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 92, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 94, Column: 9",
+            "H_initialValue" : "[\"c\": \"\", \"a\": \"\", \"b\": \"\"]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testHeadersPreserveLastFormAndValueOfAName",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 107, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 109, Column: 9",
+            "H_initialValue" : "[\"c\": \"a\"]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testHeadersHaveUnsortedDescription",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 118, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 120, Column: 9",
+            "H_initialValue" : "[\"c\": \"c\", \"a\": \"a\", \"b\": \"b\"]"
+          },
+          {
+            "A_name" : "description",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 123, Column: 9",
+            "H_initialValue" : "headers.description"
+          },
+          {
+            "A_name" : "expectedDescription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeadersTests.swift - Line: 124, Column: 9",
+            "H_initialValue" : "\"\"\"\n        c: c\n        a: a\n        b: b\n        \"\"\""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testHeadersAreStoreUniquelyByCaseInsensitiveName",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 29, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headersFromDictionaryLiteral",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 31, Column: 9",
+        "H_initialValue" : "[\"key\": \"\", \"Key\": \"\", \"KEY\": \"\"]"
+      },
+      {
+        "A_name" : "headersFromDictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 32, Column: 9",
+        "H_initialValue" : "HTTPHeaders([\"key\": \"\", \"Key\": \"\", \"KEY\": \"\"])"
+      },
+      {
+        "A_name" : "headersFromArrayLiteral",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 33, Column: 9",
+        "H_initialValue" : "[HTTPHeader(name: \"key\", value: \"\"),\n                                                    HTTPHeader(name: \"Key\", value: \"\"),\n                                                    HTTPHeader(name: \"KEY\", value: \"\")]"
+      },
+      {
+        "A_name" : "headersFromArray",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 36, Column: 9",
+        "H_initialValue" : "HTTPHeaders([HTTPHeader(name: \"key\", value: \"\"),\n                                            HTTPHeader(name: \"Key\", value: \"\"),\n                                            HTTPHeader(name: \"KEY\", value: \"\")])"
+      },
+      {
+        "A_name" : "headersCreatedManually",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 39, Column: 9",
+        "H_initialValue" : "HTTPHeaders()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "headersFromDictionaryLiteral",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 31, Column: 9",
+    "H_initialValue" : "[\"key\": \"\", \"Key\": \"\", \"KEY\": \"\"]"
+  },
+  {
+    "A_name" : "headersFromDictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 32, Column: 9",
+    "H_initialValue" : "HTTPHeaders([\"key\": \"\", \"Key\": \"\", \"KEY\": \"\"])"
+  },
+  {
+    "A_name" : "headersFromArrayLiteral",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 33, Column: 9",
+    "H_initialValue" : "[HTTPHeader(name: \"key\", value: \"\"),\n                                                    HTTPHeader(name: \"Key\", value: \"\"),\n                                                    HTTPHeader(name: \"KEY\", value: \"\")]"
+  },
+  {
+    "A_name" : "headersFromArray",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 36, Column: 9",
+    "H_initialValue" : "HTTPHeaders([HTTPHeader(name: \"key\", value: \"\"),\n                                            HTTPHeader(name: \"Key\", value: \"\"),\n                                            HTTPHeader(name: \"KEY\", value: \"\")])"
+  },
+  {
+    "A_name" : "headersCreatedManually",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 39, Column: 9",
+    "H_initialValue" : "HTTPHeaders()"
+  },
+  {
+    "A_name" : "testHeadersPreserveOrderOfInsertion",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 52, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headersFromDictionaryLiteral",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 54, Column: 9",
+        "H_initialValue" : "[\"c\": \"\", \"a\": \"\", \"b\": \"\"]"
+      },
+      {
+        "A_name" : "headersFromArrayLiteral",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 56, Column: 9",
+        "H_initialValue" : "[HTTPHeader(name: \"b\", value: \"\"),\n                                                    HTTPHeader(name: \"a\", value: \"\"),\n                                                    HTTPHeader(name: \"c\", value: \"\")]"
+      },
+      {
+        "A_name" : "headersFromArray",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 59, Column: 9",
+        "H_initialValue" : "HTTPHeaders([HTTPHeader(name: \"b\", value: \"\"),\n                                            HTTPHeader(name: \"a\", value: \"\"),\n                                            HTTPHeader(name: \"c\", value: \"\")])"
+      },
+      {
+        "A_name" : "headersCreatedManually",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 62, Column: 9",
+        "H_initialValue" : "HTTPHeaders()"
+      },
+      {
+        "A_name" : "dictionaryLiteralNames",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 68, Column: 9",
+        "H_initialValue" : "headersFromDictionaryLiteral.map(\\.name)"
+      },
+      {
+        "A_name" : "arrayLiteralNames",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 69, Column: 9",
+        "H_initialValue" : "headersFromArrayLiteral.map(\\.name)"
+      },
+      {
+        "A_name" : "arrayNames",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 70, Column: 9",
+        "H_initialValue" : "headersFromArray.map(\\.name)"
+      },
+      {
+        "A_name" : "manualNames",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 71, Column: 9",
+        "H_initialValue" : "headersCreatedManually.map(\\.name)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "headersFromDictionaryLiteral",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 54, Column: 9",
+    "H_initialValue" : "[\"c\": \"\", \"a\": \"\", \"b\": \"\"]"
+  },
+  {
+    "A_name" : "headersFromArrayLiteral",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 56, Column: 9",
+    "H_initialValue" : "[HTTPHeader(name: \"b\", value: \"\"),\n                                                    HTTPHeader(name: \"a\", value: \"\"),\n                                                    HTTPHeader(name: \"c\", value: \"\")]"
+  },
+  {
+    "A_name" : "headersFromArray",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 59, Column: 9",
+    "H_initialValue" : "HTTPHeaders([HTTPHeader(name: \"b\", value: \"\"),\n                                            HTTPHeader(name: \"a\", value: \"\"),\n                                            HTTPHeader(name: \"c\", value: \"\")])"
+  },
+  {
+    "A_name" : "headersCreatedManually",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 62, Column: 9",
+    "H_initialValue" : "HTTPHeaders()"
+  },
+  {
+    "A_name" : "dictionaryLiteralNames",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 68, Column: 9",
+    "H_initialValue" : "headersFromDictionaryLiteral.map(\\.name)"
+  },
+  {
+    "A_name" : "arrayLiteralNames",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 69, Column: 9",
+    "H_initialValue" : "headersFromArrayLiteral.map(\\.name)"
+  },
+  {
+    "A_name" : "arrayNames",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 70, Column: 9",
+    "H_initialValue" : "headersFromArray.map(\\.name)"
+  },
+  {
+    "A_name" : "manualNames",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 71, Column: 9",
+    "H_initialValue" : "headersCreatedManually.map(\\.name)"
+  },
+  {
+    "A_name" : "testHeadersCanBeProperlySortedByName",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 80, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 82, Column: 9",
+        "H_initialValue" : "[\"c\": \"\", \"a\": \"\", \"b\": \"\"]"
+      },
+      {
+        "A_name" : "sortedHeaders",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 85, Column: 9",
+        "H_initialValue" : "headers.sorted()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 82, Column: 9",
+    "H_initialValue" : "[\"c\": \"\", \"a\": \"\", \"b\": \"\"]"
+  },
+  {
+    "A_name" : "sortedHeaders",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 85, Column: 9",
+    "H_initialValue" : "headers.sorted()"
+  },
+  {
+    "A_name" : "testHeadersCanInsensitivelyGetAndSetThroughSubscript",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 92, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 94, Column: 9",
+        "H_initialValue" : "[\"c\": \"\", \"a\": \"\", \"b\": \"\"]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 94, Column: 9",
+    "H_initialValue" : "[\"c\": \"\", \"a\": \"\", \"b\": \"\"]"
+  },
+  {
+    "A_name" : "testHeadersPreserveLastFormAndValueOfAName",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 107, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 109, Column: 9",
+        "H_initialValue" : "[\"c\": \"a\"]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 109, Column: 9",
+    "H_initialValue" : "[\"c\": \"a\"]"
+  },
+  {
+    "A_name" : "testHeadersHaveUnsortedDescription",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 118, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 120, Column: 9",
+        "H_initialValue" : "[\"c\": \"c\", \"a\": \"a\", \"b\": \"b\"]"
+      },
+      {
+        "A_name" : "description",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 123, Column: 9",
+        "H_initialValue" : "headers.description"
+      },
+      {
+        "A_name" : "expectedDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeadersTests.swift - Line: 124, Column: 9",
+        "H_initialValue" : "\"\"\"\n        c: c\n        a: a\n        b: b\n        \"\"\""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 120, Column: 9",
+    "H_initialValue" : "[\"c\": \"c\", \"a\": \"a\", \"b\": \"b\"]"
+  },
+  {
+    "A_name" : "description",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 123, Column: 9",
+    "H_initialValue" : "headers.description"
+  },
+  {
+    "A_name" : "expectedDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeadersTests.swift - Line: 124, Column: 9",
+    "H_initialValue" : "\"\"\"\n        c: c\n        a: a\n        b: b\n        \"\"\""
+  }
+]

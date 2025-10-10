@@ -1,0 +1,744 @@
+[
+  {
+    "A_name" : "KFImage",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 31, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "Context",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "ImageContext.swift - Line: 33, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "propertyQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 35, Column: 9",
+        "H_initialValue" : "DispatchQueue(label: \"com.onevcat.Kingfisher.KFImageContextPropertyQueue\")"
+      },
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 37, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 38, Column: 9",
+        "H_initialValue" : "KingfisherParsedOptionsInfo(\n            KingfisherManager.shared.defaultOptions + [.loadDiskFileSynchronously]\n        )"
+      },
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 41, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_configurations",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 46, Column: 9",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "configurations",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 47, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_renderConfigurations",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 52, Column: 9",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "renderConfigurations",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 53, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_contentConfiguration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 58, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "contentConfiguration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 59, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_cancelOnDisappear",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 64, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "cancelOnDisappear",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 65, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_reducePriorityOnDisappear",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 70, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "reducePriorityOnDisappear",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 71, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_placeholder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 76, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "placeholder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 77, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_failureView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 82, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "failureView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 83, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_startLoadingBeforeViewAppear",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 88, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "startLoadingBeforeViewAppear",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 89, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onFailureDelegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 94, Column: 9",
+        "H_initialValue" : "Delegate<KingfisherError, Void>()"
+      },
+      {
+        "A_name" : "onSuccessDelegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 95, Column: 9",
+        "H_initialValue" : "Delegate<RetrieveImageResult, Void>()"
+      },
+      {
+        "A_name" : "onProgressDelegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 96, Column: 9",
+        "H_initialValue" : "Delegate<(Int64, Int64), Void>()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 98, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source?"
+        ],
+        "I_parameters" : [
+          "source"
+        ]
+      },
+      {
+        "A_name" : "shouldApplyFade",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 102, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CacheType"
+        ],
+        "I_parameters" : [
+          "cacheType"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "fadeTransitionDuration",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 106, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CacheType"
+        ],
+        "I_parameters" : [
+          "cacheType"
+        ],
+        "J_returnType" : "-> TimeInterval?"
+      }
+    ]
+  },
+  {
+    "A_name" : "propertyQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 35, Column: 9",
+    "H_initialValue" : "DispatchQueue(label: \"com.onevcat.Kingfisher.KFImageContextPropertyQueue\")"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 37, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 38, Column: 9",
+    "H_initialValue" : "KingfisherParsedOptionsInfo(\n            KingfisherManager.shared.defaultOptions + [.loadDiskFileSynchronously]\n        )"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 41, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_configurations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 46, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "configurations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 47, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_renderConfigurations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 52, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "renderConfigurations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 53, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_contentConfiguration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 58, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "contentConfiguration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 59, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_cancelOnDisappear",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 64, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "cancelOnDisappear",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 65, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_reducePriorityOnDisappear",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 70, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "reducePriorityOnDisappear",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 71, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_placeholder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 76, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "placeholder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 77, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_failureView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 82, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "failureView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 83, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_startLoadingBeforeViewAppear",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 88, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "startLoadingBeforeViewAppear",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 89, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onFailureDelegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 94, Column: 9",
+    "H_initialValue" : "Delegate<KingfisherError, Void>()"
+  },
+  {
+    "A_name" : "onSuccessDelegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 95, Column: 9",
+    "H_initialValue" : "Delegate<RetrieveImageResult, Void>()"
+  },
+  {
+    "A_name" : "onProgressDelegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 96, Column: 9",
+    "H_initialValue" : "Delegate<(Int64, Int64), Void>()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 98, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source?"
+    ],
+    "I_parameters" : [
+      "source"
+    ]
+  },
+  {
+    "A_name" : "shouldApplyFade",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 102, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CacheType"
+    ],
+    "I_parameters" : [
+      "cacheType"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "fadeTransitionDuration",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 106, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CacheType"
+    ],
+    "I_parameters" : [
+      "cacheType"
+    ],
+    "J_returnType" : "-> TimeInterval?"
+  },
+  {
+    "A_name" : "ImageTransition",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 114, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "fadeDuration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 116, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "fadeDuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 116, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KFImage.Context",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Hashable"
+    ],
+    "F_location" : "ImageContext.swift - Line: 127, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "==",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ImageContext.swift - Line: 129, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "KFImage.Context<HoldingView>",
+          "KFImage.Context<HoldingView>"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "hash",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageContext.swift - Line: 134, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "inout Hasher"
+        ],
+        "I_parameters" : [
+          "into"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ImageContext.swift - Line: 129, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KFImage.Context<HoldingView>",
+      "KFImage.Context<HoldingView>"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "hash",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 134, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "inout Hasher"
+    ],
+    "I_parameters" : [
+      "into"
+    ]
+  },
+  {
+    "A_name" : "KFAnimatedImage",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ImageContext.swift - Line: 141, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

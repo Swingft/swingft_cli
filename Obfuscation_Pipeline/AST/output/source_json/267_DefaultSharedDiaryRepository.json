@@ -1,0 +1,182 @@
+[
+  {
+    "A_name" : "DefaultSharedDiaryRepository",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "SharedDiaryRepository"
+    ],
+    "F_location" : "DefaultSharedDiaryRepository.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "service",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultSharedDiaryRepository.swift - Line: 15, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultSharedDiaryRepository.swift - Line: 17, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SharedDiaryService"
+        ],
+        "I_parameters" : [
+          "service"
+        ]
+      },
+      {
+        "A_name" : "fetchSharedDiary",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultSharedDiaryRepository.swift - Line: 21, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "diaryId"
+        ],
+        "J_returnType" : "-> AnyPublisher<SharedDiaryEntity, Error>"
+      },
+      {
+        "A_name" : "toggleLike",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultSharedDiaryRepository.swift - Line: 49, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "diaryId",
+          "isLiked"
+        ],
+        "J_returnType" : "-> AnyPublisher<Void, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "service",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultSharedDiaryRepository.swift - Line: 15, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultSharedDiaryRepository.swift - Line: 17, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SharedDiaryService"
+    ],
+    "I_parameters" : [
+      "service"
+    ]
+  },
+  {
+    "A_name" : "fetchSharedDiary",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultSharedDiaryRepository.swift - Line: 21, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "diaryId"
+    ],
+    "J_returnType" : "-> AnyPublisher<SharedDiaryEntity, Error>"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultSharedDiaryRepository.swift - Line: 24, Column: 17",
+    "H_initialValue" : "dto.data"
+  },
+  {
+    "A_name" : "profile",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultSharedDiaryRepository.swift - Line: 26, Column: 17",
+    "H_initialValue" : "SharedDiaryEntity.Profile(\n                    userId: data.profile.userId,\n                    profileImg: data.profile.profileImg ?? \"\",\n                    nickname: data.profile.nickname,\n                    streak: data.profile.streak\n                )"
+  },
+  {
+    "A_name" : "diary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultSharedDiaryRepository.swift - Line: 33, Column: 17",
+    "H_initialValue" : "SharedDiaryEntity.Diary(\n                    sharedDate: data.diary.sharedDate,\n                    likeCount: data.diary.likeCount,\n                    isLiked: data.diary.isLiked\n                )"
+  },
+  {
+    "A_name" : "toggleLike",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultSharedDiaryRepository.swift - Line: 49, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "diaryId",
+      "isLiked"
+    ],
+    "J_returnType" : "-> AnyPublisher<Void, Error>"
+  }
+]

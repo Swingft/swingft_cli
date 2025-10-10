@@ -1,0 +1,340 @@
+[
+  {
+    "A_name" : "memoizedClosure",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expression.swift - Line: 3, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "cache",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expression.swift - Line: 4, Column: 5",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping () throws -> T"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> (Bool) throws -> T"
+  },
+  {
+    "A_name" : "cache",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expression.swift - Line: 4, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Expression",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Expression.swift - Line: 24, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "_expression",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expression.swift - Line: 25, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_withoutCaching",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expression.swift - Line: 26, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "location",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expression.swift - Line: 27, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isClosure",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expression.swift - Line: 28, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expression.swift - Line: 41, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping () throws -> T?",
+          "SourceLocation",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "expression",
+          "location",
+          "isClosure"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expression.swift - Line: 62, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Bool) throws -> T?",
+          "SourceLocation",
+          "Bool",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "memoizedExpression",
+          "location",
+          "withoutCaching",
+          "isClosure"
+        ]
+      },
+      {
+        "A_name" : "cast",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expression.swift - Line: 77, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (T?) throws -> U?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Expression<U>"
+      },
+      {
+        "A_name" : "evaluate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expression.swift - Line: 85, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> T?"
+      },
+      {
+        "A_name" : "withoutCaching",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expression.swift - Line: 89, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Expression<T>"
+      }
+    ]
+  },
+  {
+    "A_name" : "_expression",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expression.swift - Line: 25, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_withoutCaching",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expression.swift - Line: 26, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "location",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expression.swift - Line: 27, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isClosure",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expression.swift - Line: 28, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expression.swift - Line: 41, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping () throws -> T?",
+      "SourceLocation",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "expression",
+      "location",
+      "isClosure"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expression.swift - Line: 62, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Bool) throws -> T?",
+      "SourceLocation",
+      "Bool",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "memoizedExpression",
+      "location",
+      "withoutCaching",
+      "isClosure"
+    ]
+  },
+  {
+    "A_name" : "cast",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expression.swift - Line: 77, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (T?) throws -> U?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Expression<U>"
+  },
+  {
+    "A_name" : "evaluate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expression.swift - Line: 85, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> T?"
+  },
+  {
+    "A_name" : "withoutCaching",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expression.swift - Line: 89, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Expression<T>"
+  }
+]

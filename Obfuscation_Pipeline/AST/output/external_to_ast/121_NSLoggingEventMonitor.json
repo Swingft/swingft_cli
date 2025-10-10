@@ -1,0 +1,1892 @@
+[
+  {
+    "A_name" : "NSLoggingEventMonitor",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "EventMonitor"
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 28, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "queue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 29, Column: 5",
+        "H_initialValue" : "DispatchQueue(label: \"org.alamofire.nsLoggingEventMonitorQueue\", qos: .utility)"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 31, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 33, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "_",
+          "didBecomeInvalidWithError"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 37, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask",
+          "URLAuthenticationChallenge"
+        ],
+        "I_parameters" : [
+          "_",
+          "task",
+          "didReceive"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 41, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask",
+          "Int64",
+          "Int64",
+          "Int64"
+        ],
+        "I_parameters" : [
+          "_",
+          "task",
+          "didSendBodyData",
+          "totalBytesSent",
+          "totalBytesExpectedToSend"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 49, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "_",
+          "taskNeedsNewBodyStream"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 53, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask",
+          "HTTPURLResponse",
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "_",
+          "task",
+          "willPerformHTTPRedirection",
+          "newRequest"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 60, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask",
+          "URLSessionTaskMetrics"
+        ],
+        "I_parameters" : [
+          "_",
+          "task",
+          "didFinishCollecting"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 64, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask",
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "_",
+          "task",
+          "didCompleteWithError"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 68, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "_",
+          "taskIsWaitingForConnectivity"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 72, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionDataTask",
+          "Data"
+        ],
+        "I_parameters" : [
+          "_",
+          "dataTask",
+          "didReceive"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 76, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionDataTask",
+          "CachedURLResponse"
+        ],
+        "I_parameters" : [
+          "_",
+          "dataTask",
+          "willCacheResponse"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 82, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionDownloadTask",
+          "Int64",
+          "Int64"
+        ],
+        "I_parameters" : [
+          "_",
+          "downloadTask",
+          "didResumeAtOffset",
+          "expectedTotalBytes"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 89, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionDownloadTask",
+          "Int64",
+          "Int64",
+          "Int64"
+        ],
+        "I_parameters" : [
+          "_",
+          "downloadTask",
+          "didWriteData",
+          "totalBytesWritten",
+          "totalBytesExpectedToWrite"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 97, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionDownloadTask",
+          "URL"
+        ],
+        "I_parameters" : [
+          "_",
+          "downloadTask",
+          "didFinishDownloadingTo"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 103, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "_",
+          "didCreateInitialURLRequest"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 107, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "any Error"
+        ],
+        "I_parameters" : [
+          "_",
+          "didFailToCreateURLRequestWithError"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 111, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "URLRequest",
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "_",
+          "didAdaptInitialRequest",
+          "to"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 115, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "URLRequest",
+          "any Error"
+        ],
+        "I_parameters" : [
+          "_",
+          "didFailToAdaptURLRequest",
+          "withError"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 119, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "_",
+          "didCreateURLRequest"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 123, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "_",
+          "didCreateTask"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 127, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "URLSessionTaskMetrics"
+        ],
+        "I_parameters" : [
+          "_",
+          "didGatherMetrics"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 131, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "URLSessionTask",
+          "any Error"
+        ],
+        "I_parameters" : [
+          "_",
+          "didFailTask",
+          "earlyWithError"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 135, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "URLSessionTask",
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "_",
+          "didCompleteTask",
+          "with"
+        ]
+      },
+      {
+        "A_name" : "requestDidFinish",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 139, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "requestDidResume",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 143, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 147, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "_",
+          "didResumeTask"
+        ]
+      },
+      {
+        "A_name" : "requestDidSuspend",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 151, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 155, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "_",
+          "didSuspendTask"
+        ]
+      },
+      {
+        "A_name" : "requestDidCancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 159, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 163, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "_",
+          "didCancelTask"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 167, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DataRequest",
+          "DataResponse<Data?, any Error>"
+        ],
+        "I_parameters" : [
+          "_",
+          "didParseResponse"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 171, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DataRequest",
+          "DataResponse<Value, any Error>"
+        ],
+        "I_parameters" : [
+          "_",
+          "didParseResponse"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 175, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DownloadRequest",
+          "DownloadResponse<Data?, any Error>"
+        ],
+        "I_parameters" : [
+          "_",
+          "didParseResponse"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 179, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DownloadRequest",
+          "DownloadResponse<Value, any Error>"
+        ],
+        "I_parameters" : [
+          "_",
+          "didParseResponse"
+        ]
+      },
+      {
+        "A_name" : "requestIsRetrying",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 183, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 187, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DataRequest",
+          "URLRequest?",
+          "HTTPURLResponse",
+          "Data?",
+          "Request.ValidationResult"
+        ],
+        "I_parameters" : [
+          "_",
+          "didValidateRequest",
+          "response",
+          "data",
+          "withResult"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 191, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DataStreamRequest",
+          "URLRequest?",
+          "HTTPURLResponse",
+          "Request.ValidationResult"
+        ],
+        "I_parameters" : [
+          "_",
+          "didValidateRequest",
+          "response",
+          "withResult"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 195, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DataStreamRequest",
+          "Result<Value, AFError>"
+        ],
+        "I_parameters" : [
+          "_",
+          "didParseStream"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 199, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UploadRequest",
+          "UploadRequest.Uploadable"
+        ],
+        "I_parameters" : [
+          "_",
+          "didCreateUploadable"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 203, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UploadRequest",
+          "any Error"
+        ],
+        "I_parameters" : [
+          "_",
+          "didFailToCreateUploadableWithError"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 207, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UploadRequest",
+          "InputStream"
+        ],
+        "I_parameters" : [
+          "_",
+          "didProvideInputStream"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 211, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DownloadRequest",
+          "URLSessionTask",
+          "Result<URL, any Error>"
+        ],
+        "I_parameters" : [
+          "_",
+          "didFinishDownloadingUsing",
+          "with"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 215, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DownloadRequest",
+          "URL"
+        ],
+        "I_parameters" : [
+          "_",
+          "didCreateDestinationURL"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSLoggingEventMonitor.swift - Line: 219, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DownloadRequest",
+          "URLRequest?",
+          "HTTPURLResponse",
+          "URL?",
+          "URL?",
+          "Request.ValidationResult"
+        ],
+        "I_parameters" : [
+          "_",
+          "didValidateRequest",
+          "response",
+          "temporaryURL",
+          "destinationURL",
+          "withResult"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "queue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 29, Column: 5",
+    "H_initialValue" : "DispatchQueue(label: \"org.alamofire.nsLoggingEventMonitorQueue\", qos: .utility)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 31, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 33, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "_",
+      "didBecomeInvalidWithError"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 37, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask",
+      "URLAuthenticationChallenge"
+    ],
+    "I_parameters" : [
+      "_",
+      "task",
+      "didReceive"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 41, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask",
+      "Int64",
+      "Int64",
+      "Int64"
+    ],
+    "I_parameters" : [
+      "_",
+      "task",
+      "didSendBodyData",
+      "totalBytesSent",
+      "totalBytesExpectedToSend"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 49, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "_",
+      "taskNeedsNewBodyStream"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 53, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask",
+      "HTTPURLResponse",
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "_",
+      "task",
+      "willPerformHTTPRedirection",
+      "newRequest"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 60, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask",
+      "URLSessionTaskMetrics"
+    ],
+    "I_parameters" : [
+      "_",
+      "task",
+      "didFinishCollecting"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 64, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask",
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "_",
+      "task",
+      "didCompleteWithError"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 68, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "_",
+      "taskIsWaitingForConnectivity"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 72, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionDataTask",
+      "Data"
+    ],
+    "I_parameters" : [
+      "_",
+      "dataTask",
+      "didReceive"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 76, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionDataTask",
+      "CachedURLResponse"
+    ],
+    "I_parameters" : [
+      "_",
+      "dataTask",
+      "willCacheResponse"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 82, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionDownloadTask",
+      "Int64",
+      "Int64"
+    ],
+    "I_parameters" : [
+      "_",
+      "downloadTask",
+      "didResumeAtOffset",
+      "expectedTotalBytes"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 89, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionDownloadTask",
+      "Int64",
+      "Int64",
+      "Int64"
+    ],
+    "I_parameters" : [
+      "_",
+      "downloadTask",
+      "didWriteData",
+      "totalBytesWritten",
+      "totalBytesExpectedToWrite"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 97, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionDownloadTask",
+      "URL"
+    ],
+    "I_parameters" : [
+      "_",
+      "downloadTask",
+      "didFinishDownloadingTo"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 103, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "_",
+      "didCreateInitialURLRequest"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 107, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "any Error"
+    ],
+    "I_parameters" : [
+      "_",
+      "didFailToCreateURLRequestWithError"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 111, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "URLRequest",
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "_",
+      "didAdaptInitialRequest",
+      "to"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 115, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "URLRequest",
+      "any Error"
+    ],
+    "I_parameters" : [
+      "_",
+      "didFailToAdaptURLRequest",
+      "withError"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 119, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "_",
+      "didCreateURLRequest"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 123, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "_",
+      "didCreateTask"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 127, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "URLSessionTaskMetrics"
+    ],
+    "I_parameters" : [
+      "_",
+      "didGatherMetrics"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 131, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "URLSessionTask",
+      "any Error"
+    ],
+    "I_parameters" : [
+      "_",
+      "didFailTask",
+      "earlyWithError"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 135, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "URLSessionTask",
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "_",
+      "didCompleteTask",
+      "with"
+    ]
+  },
+  {
+    "A_name" : "requestDidFinish",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 139, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "requestDidResume",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 143, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 147, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "_",
+      "didResumeTask"
+    ]
+  },
+  {
+    "A_name" : "requestDidSuspend",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 151, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 155, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "_",
+      "didSuspendTask"
+    ]
+  },
+  {
+    "A_name" : "requestDidCancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 159, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 163, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "_",
+      "didCancelTask"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 167, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataRequest",
+      "DataResponse<Data?, any Error>"
+    ],
+    "I_parameters" : [
+      "_",
+      "didParseResponse"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 171, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataRequest",
+      "DataResponse<Value, any Error>"
+    ],
+    "I_parameters" : [
+      "_",
+      "didParseResponse"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 175, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DownloadRequest",
+      "DownloadResponse<Data?, any Error>"
+    ],
+    "I_parameters" : [
+      "_",
+      "didParseResponse"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 179, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DownloadRequest",
+      "DownloadResponse<Value, any Error>"
+    ],
+    "I_parameters" : [
+      "_",
+      "didParseResponse"
+    ]
+  },
+  {
+    "A_name" : "requestIsRetrying",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 183, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 187, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataRequest",
+      "URLRequest?",
+      "HTTPURLResponse",
+      "Data?",
+      "Request.ValidationResult"
+    ],
+    "I_parameters" : [
+      "_",
+      "didValidateRequest",
+      "response",
+      "data",
+      "withResult"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 191, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataStreamRequest",
+      "URLRequest?",
+      "HTTPURLResponse",
+      "Request.ValidationResult"
+    ],
+    "I_parameters" : [
+      "_",
+      "didValidateRequest",
+      "response",
+      "withResult"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 195, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataStreamRequest",
+      "Result<Value, AFError>"
+    ],
+    "I_parameters" : [
+      "_",
+      "didParseStream"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 199, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UploadRequest",
+      "UploadRequest.Uploadable"
+    ],
+    "I_parameters" : [
+      "_",
+      "didCreateUploadable"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 203, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UploadRequest",
+      "any Error"
+    ],
+    "I_parameters" : [
+      "_",
+      "didFailToCreateUploadableWithError"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 207, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UploadRequest",
+      "InputStream"
+    ],
+    "I_parameters" : [
+      "_",
+      "didProvideInputStream"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 211, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DownloadRequest",
+      "URLSessionTask",
+      "Result<URL, any Error>"
+    ],
+    "I_parameters" : [
+      "_",
+      "didFinishDownloadingUsing",
+      "with"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 215, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DownloadRequest",
+      "URL"
+    ],
+    "I_parameters" : [
+      "_",
+      "didCreateDestinationURL"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSLoggingEventMonitor.swift - Line: 219, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DownloadRequest",
+      "URLRequest?",
+      "HTTPURLResponse",
+      "URL?",
+      "URL?",
+      "Request.ValidationResult"
+    ],
+    "I_parameters" : [
+      "_",
+      "didValidateRequest",
+      "response",
+      "temporaryURL",
+      "destinationURL",
+      "withResult"
+    ]
+  }
+]

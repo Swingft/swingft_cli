@@ -1,0 +1,590 @@
+[
+  {
+    "A_name" : "SortOptionModal",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIView"
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "modalSheetView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 15, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 12\n        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]\n        view.clipsToBounds = true\n        return view\n    }()"
+      },
+      {
+        "A_name" : "modalLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 24, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"단어 정렬\"\n        label.font = .systemFont(ofSize: 16, weight: .semibold)\n        label.textColor = .black\n        label.textAlignment = .center\n        return label\n    }()"
+      },
+      {
+        "A_name" : "stackView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 33, Column: 5",
+        "H_initialValue" : "{\n        let stackView = UIStackView()\n        stackView.axis = .vertical\n        stackView.spacing = 8\n        return stackView\n    }()"
+      },
+      {
+        "A_name" : "selectedIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 42, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onSelect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 43, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "sortOptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 45, Column: 5",
+        "H_initialValue" : "[\n        (\"최신순\", \"ic_listdown_black_24_ios\", \"ic_listdown_gray_24_ios\"),\n        (\"A-Z순\", \"ic_az_black_24_ios\", \"ic_az_gray_24_ios\")\n    ]"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 52, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 59, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "setStyle",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 65, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tap",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SortOptionModal.swift - Line: 67, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismissModal))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 71, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 76, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 95, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "@escaping (Int) -> Void"
+        ],
+        "I_parameters" : [
+          "selectedIndex",
+          "onSelect"
+        ]
+      },
+      {
+        "A_name" : "showAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 121, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "dismiss",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 130, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sheetHeight",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SortOptionModal.swift - Line: 132, Column: 9",
+            "H_initialValue" : "modalSheetView.bounds.height"
+          }
+        ],
+        "I_parameterType" : [
+          "(() -> Void)?"
+        ],
+        "I_parameters" : [
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "dismissModal",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 146, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "modalSheetView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 15, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 12\n        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]\n        view.clipsToBounds = true\n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 16, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "modalLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 24, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"단어 정렬\"\n        label.font = .systemFont(ofSize: 16, weight: .semibold)\n        label.textColor = .black\n        label.textAlignment = .center\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 25, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "stackView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 33, Column: 5",
+    "H_initialValue" : "{\n        let stackView = UIStackView()\n        stackView.axis = .vertical\n        stackView.spacing = 8\n        return stackView\n    }()"
+  },
+  {
+    "A_name" : "stackView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 34, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "selectedIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 42, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onSelect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 43, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sortOptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 45, Column: 5",
+    "H_initialValue" : "[\n        (\"최신순\", \"ic_listdown_black_24_ios\", \"ic_listdown_gray_24_ios\"),\n        (\"A-Z순\", \"ic_az_black_24_ios\", \"ic_az_gray_24_ios\")\n    ]"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 52, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 59, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "setStyle",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 65, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 67, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismissModal))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 67, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismissModal))"
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 71, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 76, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 95, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "@escaping (Int) -> Void"
+    ],
+    "I_parameters" : [
+      "selectedIndex",
+      "onSelect"
+    ]
+  },
+  {
+    "A_name" : "isSelected",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 101, Column: 13",
+    "H_initialValue" : "index == selectedIndex"
+  },
+  {
+    "A_name" : "iconName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 102, Column: 13",
+    "H_initialValue" : "isSelected ? option.selectedIconName : option.unselectedIconName"
+  },
+  {
+    "A_name" : "icon",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 103, Column: 13",
+    "H_initialValue" : "UIImage(named: iconName, in: .module, compatibleWith: nil)"
+  },
+  {
+    "A_name" : "itemView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 105, Column: 13",
+    "H_initialValue" : "SortOptionItemView(\n                title: option.title,\n                icon: icon,\n                isSelected: isSelected\n            ) { [weak self] in\n                self?.selectedIndex = index\n                self?.onSelect?(index)\n                self?.dismissModal()\n            }"
+  },
+  {
+    "A_name" : "showAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 121, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dismiss",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 130, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sheetHeight",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SortOptionModal.swift - Line: 132, Column: 9",
+        "H_initialValue" : "modalSheetView.bounds.height"
+      }
+    ],
+    "I_parameterType" : [
+      "(() -> Void)?"
+    ],
+    "I_parameters" : [
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "sheetHeight",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 132, Column: 9",
+    "H_initialValue" : "modalSheetView.bounds.height"
+  },
+  {
+    "A_name" : "dismissModal",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "SortOptionModal.swift - Line: 146, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

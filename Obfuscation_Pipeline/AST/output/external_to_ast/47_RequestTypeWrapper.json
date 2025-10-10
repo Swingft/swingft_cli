@@ -1,0 +1,314 @@
+[
+  {
+    "A_name" : "RequestTypeWrapper",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RequestType"
+    ],
+    "F_location" : "RequestTypeWrapper.swift - Line: 4, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestTypeWrapper.swift - Line: 6, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "sessionHeaders",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestTypeWrapper.swift - Line: 8, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestTypeWrapper.swift - Line: 10, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_urlRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestTypeWrapper.swift - Line: 11, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestTypeWrapper.swift - Line: 13, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "URLRequest?"
+        ],
+        "I_parameters" : [
+          "request",
+          "urlRequest"
+        ]
+      },
+      {
+        "A_name" : "authenticate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestTypeWrapper.swift - Line: 18, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "newRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RequestTypeWrapper.swift - Line: 19, Column: 9",
+            "H_initialValue" : "_request.authenticate(username: username, password: password, persistence: persistence)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "URLCredential.Persistence"
+        ],
+        "I_parameters" : [
+          "username",
+          "password",
+          "persistence"
+        ],
+        "J_returnType" : "-> RequestTypeWrapper"
+      },
+      {
+        "A_name" : "authenticate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestTypeWrapper.swift - Line: 23, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "newRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RequestTypeWrapper.swift - Line: 24, Column: 9",
+            "H_initialValue" : "_request.authenticate(with: credential)"
+          }
+        ],
+        "I_parameterType" : [
+          "URLCredential"
+        ],
+        "I_parameters" : [
+          "with"
+        ],
+        "J_returnType" : "-> RequestTypeWrapper"
+      },
+      {
+        "A_name" : "cURLDescription",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestTypeWrapper.swift - Line: 28, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (String) -> Void"
+        ],
+        "I_parameters" : [
+          "calling"
+        ],
+        "J_returnType" : "-> RequestTypeWrapper"
+      }
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestTypeWrapper.swift - Line: 6, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sessionHeaders",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestTypeWrapper.swift - Line: 8, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestTypeWrapper.swift - Line: 10, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_urlRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestTypeWrapper.swift - Line: 11, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestTypeWrapper.swift - Line: 13, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "URLRequest?"
+    ],
+    "I_parameters" : [
+      "request",
+      "urlRequest"
+    ]
+  },
+  {
+    "A_name" : "authenticate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestTypeWrapper.swift - Line: 18, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "newRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestTypeWrapper.swift - Line: 19, Column: 9",
+        "H_initialValue" : "_request.authenticate(username: username, password: password, persistence: persistence)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "URLCredential.Persistence"
+    ],
+    "I_parameters" : [
+      "username",
+      "password",
+      "persistence"
+    ],
+    "J_returnType" : "-> RequestTypeWrapper"
+  },
+  {
+    "A_name" : "newRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestTypeWrapper.swift - Line: 19, Column: 9",
+    "H_initialValue" : "_request.authenticate(username: username, password: password, persistence: persistence)"
+  },
+  {
+    "A_name" : "authenticate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestTypeWrapper.swift - Line: 23, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "newRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RequestTypeWrapper.swift - Line: 24, Column: 9",
+        "H_initialValue" : "_request.authenticate(with: credential)"
+      }
+    ],
+    "I_parameterType" : [
+      "URLCredential"
+    ],
+    "I_parameters" : [
+      "with"
+    ],
+    "J_returnType" : "-> RequestTypeWrapper"
+  },
+  {
+    "A_name" : "newRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestTypeWrapper.swift - Line: 24, Column: 9",
+    "H_initialValue" : "_request.authenticate(with: credential)"
+  },
+  {
+    "A_name" : "cURLDescription",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RequestTypeWrapper.swift - Line: 28, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (String) -> Void"
+    ],
+    "I_parameters" : [
+      "calling"
+    ],
+    "J_returnType" : "-> RequestTypeWrapper"
+  }
+]

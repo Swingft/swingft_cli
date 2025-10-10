@@ -1,0 +1,340 @@
+[
+  {
+    "A_name" : "SharedSequenceTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "backgroundScheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedSequence+Test.swift - Line: 16, Column: 5",
+        "H_initialValue" : "SerialDispatchQueueScheduler(qos: .default)"
+      },
+      {
+        "A_name" : "tearDown",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SharedSequence+Test.swift - Line: 18, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "backgroundScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 16, Column: 5",
+    "H_initialValue" : "SerialDispatchQueueScheduler(qos: .default)"
+  },
+  {
+    "A_name" : "tearDown",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 18, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "SharedSequenceTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 28, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "subscribeTwiceOnBackgroundSchedulerAndOnlyOneSubscription",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedSequence+Test.swift - Line: 29, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "firstElements",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SharedSequence+Test.swift - Line: 30, Column: 9",
+            "H_initialValue" : "[Result]()"
+          },
+          {
+            "A_name" : "secondElements",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SharedSequence+Test.swift - Line: 31, Column: 9",
+            "H_initialValue" : "[Result]()"
+          },
+          {
+            "A_name" : "subscribeFinished",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SharedSequence+Test.swift - Line: 33, Column: 9",
+            "H_initialValue" : "self.expectation(description: \"subscribeFinished\")"
+          },
+          {
+            "A_name" : "expectation1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SharedSequence+Test.swift - Line: 35, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "expectation2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SharedSequence+Test.swift - Line: 36, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "SharedSequence<S, Result>",
+          "@escaping (Result) -> Bool",
+          "() -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "expectationFulfilled",
+          "subscribedOnBackground"
+        ],
+        "J_returnType" : "-> [Result]"
+      }
+    ]
+  },
+  {
+    "A_name" : "subscribeTwiceOnBackgroundSchedulerAndOnlyOneSubscription",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 29, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "firstElements",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedSequence+Test.swift - Line: 30, Column: 9",
+        "H_initialValue" : "[Result]()"
+      },
+      {
+        "A_name" : "secondElements",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedSequence+Test.swift - Line: 31, Column: 9",
+        "H_initialValue" : "[Result]()"
+      },
+      {
+        "A_name" : "subscribeFinished",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedSequence+Test.swift - Line: 33, Column: 9",
+        "H_initialValue" : "self.expectation(description: \"subscribeFinished\")"
+      },
+      {
+        "A_name" : "expectation1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedSequence+Test.swift - Line: 35, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expectation2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedSequence+Test.swift - Line: 36, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "SharedSequence<S, Result>",
+      "@escaping (Result) -> Bool",
+      "() -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "expectationFulfilled",
+      "subscribedOnBackground"
+    ],
+    "J_returnType" : "-> [Result]"
+  },
+  {
+    "A_name" : "firstElements",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 30, Column: 9",
+    "H_initialValue" : "[Result]()"
+  },
+  {
+    "A_name" : "secondElements",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 31, Column: 9",
+    "H_initialValue" : "[Result]()"
+  },
+  {
+    "A_name" : "subscribeFinished",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 33, Column: 9",
+    "H_initialValue" : "self.expectation(description: \"subscribeFinished\")"
+  },
+  {
+    "A_name" : "expectation1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 35, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expectation2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 36, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subscribing1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 39, Column: 13",
+    "H_initialValue" : "AtomicInt(1)"
+  },
+  {
+    "A_name" : "firstSubscriptionFuture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 40, Column: 13",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "firstSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 41, Column: 13",
+    "H_initialValue" : "xs.asObservable().subscribe { e in\n                if globalLoad(subscribing1) == 0 {\n                    XCTAssertTrue(DispatchQueue.isMain)\n                }\n                switch e {\n                case .next(let element):\n                    firstElements.append(element)\n                    if expectationFulfilled(element) {\n                        expectation1.fulfill()\n                        firstSubscriptionFuture.dispose()\n                    }\n                case .error(let error):\n                    XCTFail(\"Error passed \\(error)\")\n                case .completed:\n                    expectation1.fulfill()\n                }\n            }"
+  },
+  {
+    "A_name" : "subscribing",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 61, Column: 13",
+    "H_initialValue" : "AtomicInt(1)"
+  },
+  {
+    "A_name" : "secondSubscriptionFuture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 62, Column: 13",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "secondSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedSequence+Test.swift - Line: 63, Column: 13",
+    "H_initialValue" : "xs.asObservable().subscribe { e in\n                if globalLoad(subscribing) == 0 {\n                    XCTAssertTrue(DispatchQueue.isMain)\n                }\n                switch e {\n                case .next(let element):\n                    secondElements.append(element)\n                    if expectationFulfilled(element) {\n                        expectation2.fulfill()\n                        secondSubscriptionFuture.dispose()\n                    }\n                case .error(let error):\n                    XCTFail(\"Error passed \\(error)\")\n                case .completed:\n                    expectation2.fulfill()\n                }\n            }"
+  }
+]

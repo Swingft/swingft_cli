@@ -1,0 +1,351 @@
+[
+  {
+    "A_name" : "SignalProducerProtocol",
+    "B_kind" : "extension",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SignalProducer+Response.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "filter",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducer+Response.swift - Line: 17, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "R"
+        ],
+        "I_parameters" : [
+          "statusCodes"
+        ],
+        "J_returnType" : "-> SignalProducer<Value, MoyaError>"
+      },
+      {
+        "A_name" : "filter",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducer+Response.swift - Line: 24, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "statusCode"
+        ],
+        "J_returnType" : "-> SignalProducer<Value, MoyaError>"
+      },
+      {
+        "A_name" : "filterSuccessfulStatusCodes",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducer+Response.swift - Line: 31, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> SignalProducer<Value, MoyaError>"
+      },
+      {
+        "A_name" : "filterSuccessfulStatusAndRedirectCodes",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducer+Response.swift - Line: 38, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> SignalProducer<Value, MoyaError>"
+      },
+      {
+        "A_name" : "mapImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducer+Response.swift - Line: 45, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> SignalProducer<Image, MoyaError>"
+      },
+      {
+        "A_name" : "mapJSON",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducer+Response.swift - Line: 52, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "failsOnEmptyData"
+        ],
+        "J_returnType" : "-> SignalProducer<Any, MoyaError>"
+      },
+      {
+        "A_name" : "mapString",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducer+Response.swift - Line: 59, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String?"
+        ],
+        "I_parameters" : [
+          "atKeyPath"
+        ],
+        "J_returnType" : "-> SignalProducer<String, MoyaError>"
+      },
+      {
+        "A_name" : "map",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalProducer+Response.swift - Line: 66, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "D.Type",
+          "String?",
+          "JSONDecoder",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "atKeyPath",
+          "using",
+          "failsOnEmptyData"
+        ],
+        "J_returnType" : "-> SignalProducer<D, MoyaError>"
+      }
+    ]
+  },
+  {
+    "A_name" : "filter",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducer+Response.swift - Line: 17, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "R"
+    ],
+    "I_parameters" : [
+      "statusCodes"
+    ],
+    "J_returnType" : "-> SignalProducer<Value, MoyaError>"
+  },
+  {
+    "A_name" : "filter",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducer+Response.swift - Line: 24, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "statusCode"
+    ],
+    "J_returnType" : "-> SignalProducer<Value, MoyaError>"
+  },
+  {
+    "A_name" : "filterSuccessfulStatusCodes",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducer+Response.swift - Line: 31, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> SignalProducer<Value, MoyaError>"
+  },
+  {
+    "A_name" : "filterSuccessfulStatusAndRedirectCodes",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducer+Response.swift - Line: 38, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> SignalProducer<Value, MoyaError>"
+  },
+  {
+    "A_name" : "mapImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducer+Response.swift - Line: 45, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> SignalProducer<Image, MoyaError>"
+  },
+  {
+    "A_name" : "mapJSON",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducer+Response.swift - Line: 52, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "failsOnEmptyData"
+    ],
+    "J_returnType" : "-> SignalProducer<Any, MoyaError>"
+  },
+  {
+    "A_name" : "mapString",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducer+Response.swift - Line: 59, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String?"
+    ],
+    "I_parameters" : [
+      "atKeyPath"
+    ],
+    "J_returnType" : "-> SignalProducer<String, MoyaError>"
+  },
+  {
+    "A_name" : "map",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducer+Response.swift - Line: 66, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "D.Type",
+      "String?",
+      "JSONDecoder",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "atKeyPath",
+      "using",
+      "failsOnEmptyData"
+    ],
+    "J_returnType" : "-> SignalProducer<D, MoyaError>"
+  },
+  {
+    "A_name" : "unwrapThrowable",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalProducer+Response.swift - Line: 74, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "() throws -> T"
+    ],
+    "I_parameters" : [
+      "throwable"
+    ],
+    "J_returnType" : "-> SignalProducer<T, MoyaError>"
+  }
+]

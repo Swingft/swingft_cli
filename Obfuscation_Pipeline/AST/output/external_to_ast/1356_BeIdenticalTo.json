@@ -1,0 +1,218 @@
+[
+  {
+    "A_name" : "beIdenticalTo",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalTo.swift - Line: 3, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Predicate<Any>"
+  },
+  {
+    "A_name" : "actual",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalTo.swift - Line: 5, Column: 9",
+    "H_initialValue" : "try actualExpression.evaluate() as AnyObject?"
+  },
+  {
+    "A_name" : "bool",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalTo.swift - Line: 7, Column: 9",
+    "H_initialValue" : "actual === (expected as AnyObject?) && actual !== nil"
+  },
+  {
+    "A_name" : "Expectation",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BeIdenticalTo.swift - Line: 18, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "===",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "BeIdenticalTo.swift - Line: 19, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Expectation",
+          "Any?"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ]
+      },
+      {
+        "A_name" : "!==",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "BeIdenticalTo.swift - Line: 23, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Expectation",
+          "Any?"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "===",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "BeIdenticalTo.swift - Line: 19, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Expectation",
+      "Any?"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ]
+  },
+  {
+    "A_name" : "!==",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "BeIdenticalTo.swift - Line: 23, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Expectation",
+      "Any?"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ]
+  },
+  {
+    "A_name" : "be",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalTo.swift - Line: 32, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Predicate<Any>"
+  },
+  {
+    "A_name" : "NMBPredicate",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BeIdenticalTo.swift - Line: 39, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "beIdenticalToMatcher",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "class"
+        ],
+        "F_location" : "BeIdenticalTo.swift - Line: 40, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSObject?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> NMBPredicate"
+      }
+    ]
+  },
+  {
+    "A_name" : "beIdenticalToMatcher",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "class"
+    ],
+    "F_location" : "BeIdenticalTo.swift - Line: 40, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSObject?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> NMBPredicate"
+  },
+  {
+    "A_name" : "aExpr",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalTo.swift - Line: 42, Column: 13",
+    "H_initialValue" : "actualExpression.cast { $0 as Any? }"
+  }
+]

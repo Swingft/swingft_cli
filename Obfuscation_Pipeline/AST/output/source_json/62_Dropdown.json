@@ -1,0 +1,728 @@
+[
+  {
+    "A_name" : "Dropdown",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIView"
+    ],
+    "F_location" : "Dropdown.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isExpanded",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 14, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "isKorean",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 15, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "topicEn",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 18, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "topicKor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 24, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dropdownBackgroundStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 32, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .vertical\n        stack.distribution = .equalSpacing\n        stack.backgroundColor = .gray100\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "dropdownHeaderStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 40, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.distribution = .equalSpacing\n        stack.backgroundColor = .gray100\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "titleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 48, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_m_14)\n        label.text = \"오늘의 추천 주제 참고하기\"\n        label.textColor = .gray700\n        return label\n    }()"
+      },
+      {
+        "A_name" : "arrowImageView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 56, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(resource: .icArrowDownGray20Ios)\n        imageView.contentMode = .scaleAspectFit\n        imageView.tintColor = .gray400\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "tapButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 64, Column: 5",
+        "H_initialValue" : "UIButton()"
+      },
+      {
+        "A_name" : "dropdownContentStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 66, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.distribution = .fill\n        stack.alignment = .center\n        stack.backgroundColor = .white\n        stack.layer.cornerRadius = 8\n        stack.isLayoutMarginsRelativeArrangement = true\n        stack.layoutMargins = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)\n        stack.isHidden = true\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "topicEnLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 79, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.attributedText = .suit(.body_sb_16, text: \"What surprised you today?\")\n        label.textColor = .gray700\n        label.numberOfLines = 3\n        return label\n    }()"
+      },
+      {
+        "A_name" : "changeButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 87, Column: 5",
+        "H_initialValue" : "{\n        let button = UIButton()\n        button.setImage(UIImage(resource: .icChange20Ios), for: .normal)\n        button.imageView?.contentMode = .scaleAspectFit\n        button.tintColor = .gray300\n        return button\n    }()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Dropdown.swift - Line: 97, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "Dropdown.swift - Line: 105, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "setStyle",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 111, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 117, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 126, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setActions",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 154, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "toggleDropdown",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "Dropdown.swift - Line: 159, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "changeTopicText",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "Dropdown.swift - Line: 165, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "updateLabel",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 170, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "text",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Dropdown.swift - Line: 171, Column: 9",
+            "H_initialValue" : "isKorean ? (topicKor ?? \"What surprised you today?\") : (topicEn ?? \"What surprised you today?\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 175, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String?",
+          "String?"
+        ],
+        "I_parameters" : [
+          "kor",
+          "en"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "isExpanded",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 14, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "isKorean",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 15, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "topicEn",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 18, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "topicKor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 24, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dropdownBackgroundStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 32, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .vertical\n        stack.distribution = .equalSpacing\n        stack.backgroundColor = .gray100\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 33, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "dropdownHeaderStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 40, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.distribution = .equalSpacing\n        stack.backgroundColor = .gray100\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 41, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "titleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 48, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_m_14)\n        label.text = \"오늘의 추천 주제 참고하기\"\n        label.textColor = .gray700\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 49, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "arrowImageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 56, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(resource: .icArrowDownGray20Ios)\n        imageView.contentMode = .scaleAspectFit\n        imageView.tintColor = .gray400\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 57, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "tapButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 64, Column: 5",
+    "H_initialValue" : "UIButton()"
+  },
+  {
+    "A_name" : "dropdownContentStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 66, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.distribution = .fill\n        stack.alignment = .center\n        stack.backgroundColor = .white\n        stack.layer.cornerRadius = 8\n        stack.isLayoutMarginsRelativeArrangement = true\n        stack.layoutMargins = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)\n        stack.isHidden = true\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 67, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "topicEnLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 79, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.attributedText = .suit(.body_sb_16, text: \"What surprised you today?\")\n        label.textColor = .gray700\n        label.numberOfLines = 3\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 80, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "changeButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 87, Column: 5",
+    "H_initialValue" : "{\n        let button = UIButton()\n        button.setImage(UIImage(resource: .icChange20Ios), for: .normal)\n        button.imageView?.contentMode = .scaleAspectFit\n        button.tintColor = .gray300\n        return button\n    }()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 88, Column: 9",
+    "H_initialValue" : "UIButton()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Dropdown.swift - Line: 97, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "Dropdown.swift - Line: 105, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "setStyle",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 111, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 117, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 126, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setActions",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 154, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "toggleDropdown",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "Dropdown.swift - Line: 159, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "changeTopicText",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "Dropdown.swift - Line: 165, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "updateLabel",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 170, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "text",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Dropdown.swift - Line: 171, Column: 9",
+        "H_initialValue" : "isKorean ? (topicKor ?? \"What surprised you today?\") : (topicEn ?? \"What surprised you today?\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "text",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 171, Column: 9",
+    "H_initialValue" : "isKorean ? (topicKor ?? \"What surprised you today?\") : (topicEn ?? \"What surprised you today?\")"
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 175, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String?",
+      "String?"
+    ],
+    "I_parameters" : [
+      "kor",
+      "en"
+    ]
+  },
+  {
+    "A_name" : "dropdown",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Dropdown.swift - Line: 186, Column: 5",
+    "H_initialValue" : "Dropdown()"
+  }
+]

@@ -1,0 +1,706 @@
+[
+  {
+    "A_name" : "RetryContext",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 32, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "propertyQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 34, Column: 5",
+        "H_initialValue" : "DispatchQueue(label: \"com.onevcat.Kingfisher.RetryContextPropertyQueue\")"
+      },
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 37, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 40, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_retriedCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 42, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "retriedCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 47, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_userInfo",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 52, Column: 5",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "userInfo",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 59, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 64, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source",
+          "KingfisherError"
+        ],
+        "I_parameters" : [
+          "source",
+          "error"
+        ]
+      },
+      {
+        "A_name" : "increaseRetryCount",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 70, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> RetryContext"
+      }
+    ]
+  },
+  {
+    "A_name" : "propertyQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 34, Column: 5",
+    "H_initialValue" : "DispatchQueue(label: \"com.onevcat.Kingfisher.RetryContextPropertyQueue\")"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 37, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 40, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_retriedCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 42, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "retriedCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 47, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_userInfo",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 52, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "userInfo",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 59, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 64, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source",
+      "KingfisherError"
+    ],
+    "I_parameters" : [
+      "source",
+      "error"
+    ]
+  },
+  {
+    "A_name" : "increaseRetryCount",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 70, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> RetryContext"
+  },
+  {
+    "A_name" : "RetryDecision",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 78, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "retry",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 81, Column: 10",
+        "I_parameterType" : [
+          "Any?"
+        ],
+        "I_parameters" : [
+          "userInfo"
+        ]
+      },
+      {
+        "A_name" : "stop",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 83, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "RetryStrategy",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 87, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "retry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 97, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "RetryContext",
+          "@escaping @Sendable (RetryDecision) -> Void"
+        ],
+        "I_parameters" : [
+          "context",
+          "retryHandler"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 97, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "RetryContext",
+      "@escaping @Sendable (RetryDecision) -> Void"
+    ],
+    "I_parameters" : [
+      "context",
+      "retryHandler"
+    ]
+  },
+  {
+    "A_name" : "DelayRetryStrategy",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RetryStrategy"
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 104, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Interval",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 107, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "seconds",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategy.swift - Line: 113, Column: 14",
+            "I_parameterType" : [
+              "TimeInterval"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "accumulated",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategy.swift - Line: 118, Column: 14",
+            "I_parameterType" : [
+              "TimeInterval"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "custom",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategy.swift - Line: 123, Column: 14",
+            "I_parameterType" : [
+              "@Sendable (_ retriedCount: Int) -> TimeInterval"
+            ],
+            "I_parameters" : [
+              "block"
+            ]
+          },
+          {
+            "A_name" : "timeInterval",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategy.swift - Line: 125, Column: 9",
+            "G_members" : [
+              {
+                "A_name" : "retryAfter",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "RetryStrategy.swift - Line: 126, Column: 13",
+                "H_initialValue" : ""
+              }
+            ],
+            "I_parameterType" : [
+              "Int"
+            ],
+            "I_parameters" : [
+              "for"
+            ],
+            "J_returnType" : "-> TimeInterval"
+          }
+        ]
+      },
+      {
+        "A_name" : "maxRetryCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 140, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "retryInterval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 143, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 153, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "Interval"
+        ],
+        "I_parameters" : [
+          "maxRetryCount",
+          "retryInterval"
+        ]
+      },
+      {
+        "A_name" : "retry",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 158, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "interval",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategy.swift - Line: 177, Column: 9",
+            "H_initialValue" : "retryInterval.timeInterval(for: context.retriedCount)"
+          }
+        ],
+        "I_parameterType" : [
+          "RetryContext",
+          "@escaping @Sendable (RetryDecision) -> Void"
+        ],
+        "I_parameters" : [
+          "context",
+          "retryHandler"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Interval",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 107, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "seconds",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 113, Column: 14",
+        "I_parameterType" : [
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "accumulated",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 118, Column: 14",
+        "I_parameterType" : [
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "custom",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 123, Column: 14",
+        "I_parameterType" : [
+          "@Sendable (_ retriedCount: Int) -> TimeInterval"
+        ],
+        "I_parameters" : [
+          "block"
+        ]
+      },
+      {
+        "A_name" : "timeInterval",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 125, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "retryAfter",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryStrategy.swift - Line: 126, Column: 13",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> TimeInterval"
+      }
+    ]
+  },
+  {
+    "A_name" : "timeInterval",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 125, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "retryAfter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 126, Column: 13",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> TimeInterval"
+  },
+  {
+    "A_name" : "retryAfter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 126, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "maxRetryCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 140, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "retryInterval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 143, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 153, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "Interval"
+    ],
+    "I_parameters" : [
+      "maxRetryCount",
+      "retryInterval"
+    ]
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 158, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "interval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryStrategy.swift - Line: 177, Column: 9",
+        "H_initialValue" : "retryInterval.timeInterval(for: context.retriedCount)"
+      }
+    ],
+    "I_parameterType" : [
+      "RetryContext",
+      "@escaping @Sendable (RetryDecision) -> Void"
+    ],
+    "I_parameters" : [
+      "context",
+      "retryHandler"
+    ]
+  },
+  {
+    "A_name" : "interval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryStrategy.swift - Line: 177, Column: 9",
+    "H_initialValue" : "retryInterval.timeInterval(for: context.retriedCount)"
+  }
+]

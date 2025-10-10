@@ -1,0 +1,3444 @@
+{
+  "MLArrayBatchProvider": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLArrayBatchProvider",
+    "members": {
+      "array": {
+        "kind": "Var",
+        "type": "array",
+        "usr": "c:objc(cs)MLArrayBatchProvider(py)array"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MLBatchProvider": {
+    "kind": "Protocol",
+    "module": "CoreML",
+    "usr": "c:objc(pl)MLBatchProvider",
+    "members": {
+      "count": {
+        "kind": "Var",
+        "type": "count",
+        "usr": "c:objc(pl)MLBatchProvider(py)count"
+      },
+      "features": {
+        "kind": "Func",
+        "type": "features(at:)",
+        "usr": "c:objc(pl)MLBatchProvider(im)featuresAtIndex:"
+      }
+    }
+  },
+  "MLCPUComputeDevice": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLCPUComputeDevice",
+    "members": {}
+  },
+  "MLComputeDeviceProtocol": {
+    "kind": "Protocol",
+    "module": "CoreML",
+    "usr": "c:objc(pl)MLComputeDeviceProtocol",
+    "members": {}
+  },
+  "MLComputeUnits": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "c:@E@MLComputeUnits",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So14MLComputeUnitsV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So14MLComputeUnitsV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So14MLComputeUnitsV8RawValuea"
+      },
+      "cpuOnly": {
+        "kind": "EnumElement",
+        "type": "cpuOnly",
+        "usr": "c:@E@MLComputeUnits@MLComputeUnitsCPUOnly"
+      },
+      "cpuAndGPU": {
+        "kind": "EnumElement",
+        "type": "cpuAndGPU",
+        "usr": "c:@E@MLComputeUnits@MLComputeUnitsCPUAndGPU"
+      },
+      "all": {
+        "kind": "EnumElement",
+        "type": "all",
+        "usr": "c:@E@MLComputeUnits@MLComputeUnitsAll"
+      },
+      "cpuAndNeuralEngine": {
+        "kind": "EnumElement",
+        "type": "cpuAndNeuralEngine",
+        "usr": "c:@E@MLComputeUnits@MLComputeUnitsCPUAndNeuralEngine"
+      }
+    }
+  },
+  "MLCustomLayer": {
+    "kind": "Protocol",
+    "module": "CoreML",
+    "usr": "c:objc(pl)MLCustomLayer",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(parameters:)",
+        "usr": "c:objc(pl)MLCustomLayer(im)initWithParameterDictionary:error:"
+      },
+      "setWeightData": {
+        "kind": "Func",
+        "type": "setWeightData(_:)",
+        "usr": "c:objc(pl)MLCustomLayer(im)setWeightData:error:"
+      },
+      "outputShapes": {
+        "kind": "Func",
+        "type": "outputShapes(forInputShapes:)",
+        "usr": "c:objc(pl)MLCustomLayer(im)outputShapesForInputShapes:error:"
+      },
+      "evaluate": {
+        "kind": "Func",
+        "type": "evaluate(inputs:outputs:)",
+        "usr": "c:objc(pl)MLCustomLayer(im)evaluateOnCPUWithInputs:outputs:error:"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(commandBuffer:inputs:outputs:)",
+        "usr": "c:objc(pl)MLCustomLayer(im)encodeToCommandBuffer:inputs:outputs:error:"
+      }
+    }
+  },
+  "MLCustomModel": {
+    "kind": "Protocol",
+    "module": "CoreML",
+    "usr": "c:objc(pl)MLCustomModel",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(modelDescription:parameters:)",
+        "usr": "c:objc(pl)MLCustomModel(im)initWithModelDescription:parameterDictionary:error:"
+      },
+      "prediction": {
+        "kind": "Func",
+        "type": "prediction(from:options:)",
+        "usr": "c:objc(pl)MLCustomModel(im)predictionFromFeatures:options:error:"
+      },
+      "predictions": {
+        "kind": "Func",
+        "type": "predictions(from:options:)",
+        "usr": "c:objc(pl)MLCustomModel(im)predictionsFromBatch:options:error:"
+      }
+    }
+  },
+  "MLDictionaryConstraint": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLDictionaryConstraint",
+    "members": {
+      "keyType": {
+        "kind": "Var",
+        "type": "keyType",
+        "usr": "c:objc(cs)MLDictionaryConstraint(py)keyType"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MLDictionaryFeatureProvider": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLDictionaryFeatureProvider",
+    "members": {
+      "dictionary": {
+        "kind": "Var",
+        "type": "dictionary",
+        "usr": "c:objc(cs)MLDictionaryFeatureProvider(py)dictionary"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "subscript": {
+        "kind": "Subscript",
+        "type": "subscript(_:)",
+        "usr": "c:objc(cs)MLDictionaryFeatureProvider(im)objectForKeyedSubscript:"
+      }
+    }
+  },
+  "MLFeatureDescription": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLFeatureDescription",
+    "members": {
+      "name": {
+        "kind": "Var",
+        "type": "name",
+        "usr": "c:objc(cs)MLFeatureDescription(py)name"
+      },
+      "type": {
+        "kind": "Var",
+        "type": "type",
+        "usr": "c:objc(cs)MLFeatureDescription(py)type"
+      },
+      "isOptional": {
+        "kind": "Var",
+        "type": "isOptional",
+        "usr": "c:objc(cs)MLFeatureDescription(py)optional"
+      },
+      "isAllowedValue": {
+        "kind": "Func",
+        "type": "isAllowedValue(_:)",
+        "usr": "c:objc(cs)MLFeatureDescription(im)isAllowedValue:"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "multiArrayConstraint": {
+        "kind": "Var",
+        "type": "multiArrayConstraint",
+        "usr": "c:objc(cs)MLFeatureDescription(py)multiArrayConstraint"
+      },
+      "imageConstraint": {
+        "kind": "Var",
+        "type": "imageConstraint",
+        "usr": "c:objc(cs)MLFeatureDescription(py)imageConstraint"
+      },
+      "dictionaryConstraint": {
+        "kind": "Var",
+        "type": "dictionaryConstraint",
+        "usr": "c:objc(cs)MLFeatureDescription(py)dictionaryConstraint"
+      },
+      "sequenceConstraint": {
+        "kind": "Var",
+        "type": "sequenceConstraint",
+        "usr": "c:objc(cs)MLFeatureDescription(py)sequenceConstraint"
+      },
+      "stateConstraint": {
+        "kind": "Var",
+        "type": "stateConstraint",
+        "usr": "c:objc(cs)MLFeatureDescription(py)stateConstraint"
+      }
+    }
+  },
+  "MLFeatureProvider": {
+    "kind": "Protocol",
+    "module": "CoreML",
+    "usr": "c:objc(pl)MLFeatureProvider",
+    "members": {
+      "featureNames": {
+        "kind": "Var",
+        "type": "featureNames",
+        "usr": "c:objc(pl)MLFeatureProvider(py)featureNames"
+      },
+      "featureValue": {
+        "kind": "Func",
+        "type": "featureValue(for:)",
+        "usr": "c:objc(pl)MLFeatureProvider(im)featureValueForName:"
+      }
+    }
+  },
+  "MLFeatureType": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "c:@E@MLFeatureType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So13MLFeatureTypeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So13MLFeatureTypeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So13MLFeatureTypeV8RawValuea"
+      },
+      "invalid": {
+        "kind": "EnumElement",
+        "type": "invalid",
+        "usr": "c:@E@MLFeatureType@MLFeatureTypeInvalid"
+      },
+      "int64": {
+        "kind": "EnumElement",
+        "type": "int64",
+        "usr": "c:@E@MLFeatureType@MLFeatureTypeInt64"
+      },
+      "double": {
+        "kind": "EnumElement",
+        "type": "double",
+        "usr": "c:@E@MLFeatureType@MLFeatureTypeDouble"
+      },
+      "string": {
+        "kind": "EnumElement",
+        "type": "string",
+        "usr": "c:@E@MLFeatureType@MLFeatureTypeString"
+      },
+      "image": {
+        "kind": "EnumElement",
+        "type": "image",
+        "usr": "c:@E@MLFeatureType@MLFeatureTypeImage"
+      },
+      "multiArray": {
+        "kind": "EnumElement",
+        "type": "multiArray",
+        "usr": "c:@E@MLFeatureType@MLFeatureTypeMultiArray"
+      },
+      "dictionary": {
+        "kind": "EnumElement",
+        "type": "dictionary",
+        "usr": "c:@E@MLFeatureType@MLFeatureTypeDictionary"
+      },
+      "sequence": {
+        "kind": "EnumElement",
+        "type": "sequence",
+        "usr": "c:@E@MLFeatureType@MLFeatureTypeSequence"
+      },
+      "state": {
+        "kind": "EnumElement",
+        "type": "state",
+        "usr": "c:@E@MLFeatureType@MLFeatureTypeState"
+      }
+    }
+  },
+  "MLFeatureValue": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLFeatureValue",
+    "members": {
+      "type": {
+        "kind": "Var",
+        "type": "type",
+        "usr": "c:objc(cs)MLFeatureValue(py)type"
+      },
+      "isUndefined": {
+        "kind": "Var",
+        "type": "isUndefined",
+        "usr": "c:objc(cs)MLFeatureValue(py)undefined"
+      },
+      "int64Value": {
+        "kind": "Var",
+        "type": "int64Value",
+        "usr": "c:objc(cs)MLFeatureValue(py)int64Value"
+      },
+      "doubleValue": {
+        "kind": "Var",
+        "type": "doubleValue",
+        "usr": "c:objc(cs)MLFeatureValue(py)doubleValue"
+      },
+      "stringValue": {
+        "kind": "Var",
+        "type": "stringValue",
+        "usr": "c:objc(cs)MLFeatureValue(py)stringValue"
+      },
+      "multiArrayValue": {
+        "kind": "Var",
+        "type": "multiArrayValue",
+        "usr": "c:objc(cs)MLFeatureValue(py)multiArrayValue"
+      },
+      "dictionaryValue": {
+        "kind": "Var",
+        "type": "dictionaryValue",
+        "usr": "c:objc(cs)MLFeatureValue(py)dictionaryValue"
+      },
+      "imageBufferValue": {
+        "kind": "Var",
+        "type": "imageBufferValue",
+        "usr": "c:objc(cs)MLFeatureValue(py)imageBufferValue"
+      },
+      "sequenceValue": {
+        "kind": "Var",
+        "type": "sequenceValue",
+        "usr": "c:objc(cs)MLFeatureValue(py)sequenceValue"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_:)",
+        "usr": "s:So14MLFeatureValueC6CoreMLEyAbC017MLSendableFeatureB0Vcfc"
+      },
+      "isEqual": {
+        "kind": "Func",
+        "type": "isEqual(to:)",
+        "usr": "c:objc(cs)MLFeatureValue(im)isEqualToFeatureValue:"
+      },
+      "shapedArrayValue": {
+        "kind": "Func",
+        "type": "shapedArrayValue(of:)",
+        "usr": "s:So14MLFeatureValueC6CoreMLE011shapedArrayB02ofAC08MLShapedF0VyxGSgxm_tAC0hF6ScalarRzlF"
+      }
+    }
+  },
+  "ImageOption": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "c:@T@MLFeatureValueImageOption",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So25MLFeatureValueImageOptiona03rawB0ABSS_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So25MLFeatureValueImageOptiona03rawB0SSvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So25MLFeatureValueImageOptiona03RawB0a"
+      },
+      "_ObjectiveCType": {
+        "kind": "TypeAlias",
+        "type": "_ObjectiveCType",
+        "usr": "s:So25MLFeatureValueImageOptiona15_ObjectiveCTypea"
+      },
+      "cropRect": {
+        "kind": "Var",
+        "type": "cropRect",
+        "usr": "c:@MLFeatureValueImageOptionCropRect"
+      },
+      "cropAndScale": {
+        "kind": "Var",
+        "type": "cropAndScale",
+        "usr": "c:@MLFeatureValueImageOptionCropAndScale"
+      }
+    }
+  },
+  "MLGPUComputeDevice": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLGPUComputeDevice",
+    "members": {
+      "metalDevice": {
+        "kind": "Var",
+        "type": "metalDevice",
+        "usr": "c:objc(cs)MLGPUComputeDevice(py)metalDevice"
+      }
+    }
+  },
+  "MLImageConstraint": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLImageConstraint",
+    "members": {
+      "pixelsHigh": {
+        "kind": "Var",
+        "type": "pixelsHigh",
+        "usr": "c:objc(cs)MLImageConstraint(py)pixelsHigh"
+      },
+      "pixelsWide": {
+        "kind": "Var",
+        "type": "pixelsWide",
+        "usr": "c:objc(cs)MLImageConstraint(py)pixelsWide"
+      },
+      "pixelFormatType": {
+        "kind": "Var",
+        "type": "pixelFormatType",
+        "usr": "c:objc(cs)MLImageConstraint(py)pixelFormatType"
+      },
+      "sizeConstraint": {
+        "kind": "Var",
+        "type": "sizeConstraint",
+        "usr": "c:objc(cs)MLImageConstraint(py)sizeConstraint"
+      }
+    }
+  },
+  "MLImageSize": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLImageSize",
+    "members": {
+      "pixelsWide": {
+        "kind": "Var",
+        "type": "pixelsWide",
+        "usr": "c:objc(cs)MLImageSize(py)pixelsWide"
+      },
+      "pixelsHigh": {
+        "kind": "Var",
+        "type": "pixelsHigh",
+        "usr": "c:objc(cs)MLImageSize(py)pixelsHigh"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MLImageSizeConstraint": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLImageSizeConstraint",
+    "members": {
+      "type": {
+        "kind": "Var",
+        "type": "type",
+        "usr": "c:objc(cs)MLImageSizeConstraint(py)type"
+      },
+      "pixelsWideRange": {
+        "kind": "Var",
+        "type": "pixelsWideRange",
+        "usr": "c:objc(cs)MLImageSizeConstraint(py)pixelsWideRange"
+      },
+      "pixelsHighRange": {
+        "kind": "Var",
+        "type": "pixelsHighRange",
+        "usr": "c:objc(cs)MLImageSizeConstraint(py)pixelsHighRange"
+      },
+      "enumeratedImageSizes": {
+        "kind": "Var",
+        "type": "enumeratedImageSizes",
+        "usr": "c:objc(cs)MLImageSizeConstraint(py)enumeratedImageSizes"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MLImageSizeConstraintType": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "c:@E@MLImageSizeConstraintType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So25MLImageSizeConstraintTypeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So25MLImageSizeConstraintTypeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So25MLImageSizeConstraintTypeV8RawValuea"
+      },
+      "unspecified": {
+        "kind": "EnumElement",
+        "type": "unspecified",
+        "usr": "c:@E@MLImageSizeConstraintType@MLImageSizeConstraintTypeUnspecified"
+      },
+      "enumerated": {
+        "kind": "EnumElement",
+        "type": "enumerated",
+        "usr": "c:@E@MLImageSizeConstraintType@MLImageSizeConstraintTypeEnumerated"
+      },
+      "range": {
+        "kind": "EnumElement",
+        "type": "range",
+        "usr": "c:@E@MLImageSizeConstraintType@MLImageSizeConstraintTypeRange"
+      }
+    }
+  },
+  "MLKey": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLKey",
+    "members": {
+      "name": {
+        "kind": "Var",
+        "type": "name",
+        "usr": "c:objc(cs)MLKey(py)name"
+      },
+      "scope": {
+        "kind": "Var",
+        "type": "scope",
+        "usr": "c:objc(cs)MLKey(py)scope"
+      }
+    }
+  },
+  "MLMetricKey": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLMetricKey",
+    "members": {
+      "lossValue": {
+        "kind": "Var",
+        "type": "lossValue",
+        "usr": "c:objc(cs)MLMetricKey(cpy)lossValue"
+      },
+      "epochIndex": {
+        "kind": "Var",
+        "type": "epochIndex",
+        "usr": "c:objc(cs)MLMetricKey(cpy)epochIndex"
+      },
+      "miniBatchIndex": {
+        "kind": "Var",
+        "type": "miniBatchIndex",
+        "usr": "c:objc(cs)MLMetricKey(cpy)miniBatchIndex"
+      }
+    }
+  },
+  "MLModel": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLModel",
+    "members": {
+      "modelDescription": {
+        "kind": "Var",
+        "type": "modelDescription",
+        "usr": "c:objc(cs)MLModel(py)modelDescription"
+      },
+      "configuration": {
+        "kind": "Var",
+        "type": "configuration",
+        "usr": "c:objc(cs)MLModel(py)configuration"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "prediction": {
+        "kind": "Func",
+        "type": "prediction(from:using:options:)",
+        "usr": "s:So7MLModelC6CoreMLE10prediction4from5using7optionsSo17MLFeatureProvider_pSoAH_p_So7MLStateCSo19MLPredictionOptionsCtYaKF"
+      },
+      "predictions": {
+        "kind": "Func",
+        "type": "predictions(from:options:)",
+        "usr": "c:objc(cs)MLModel(im)predictionsFromBatch:options:error:"
+      },
+      "parameterValue": {
+        "kind": "Func",
+        "type": "parameterValue(for:)",
+        "usr": "c:objc(cs)MLModel(im)parameterValueForKey:error:"
+      },
+      "load": {
+        "kind": "Func",
+        "type": "load(contentsOf:configuration:)",
+        "usr": "s:So7MLModelC6CoreMLE4load10contentsOf13configurationAB10Foundation3URLV_So0A13ConfigurationCtYaKFZ"
+      },
+      "compileModel": {
+        "kind": "Func",
+        "type": "compileModel(at:)",
+        "usr": "s:So7MLModelC6CoreMLE12compileModel2at10Foundation3URLVAH_tYaKFZ"
+      },
+      "makeState": {
+        "kind": "Func",
+        "type": "makeState()",
+        "usr": "s:So7MLModelC6CoreMLE9makeStateSo7MLStateCyF"
+      },
+      "availableComputeDevices": {
+        "kind": "Var",
+        "type": "availableComputeDevices",
+        "usr": "s:So7MLModelC6CoreMLE23availableComputeDevicesSayAC15MLComputeDeviceOGvpZ"
+      }
+    }
+  },
+  "MLModelAsset": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLModelAsset",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(url:)",
+        "usr": "c:objc(cs)MLModelAsset(cm)modelAssetWithURL:error:"
+      },
+      "modelDescription": {
+        "kind": "Func",
+        "type": "modelDescription(of:)",
+        "usr": "c:objc(cs)MLModelAsset(im)modelDescriptionOfFunctionNamed:completionHandler:"
+      },
+      "functionNames": {
+        "kind": "Var",
+        "type": "functionNames",
+        "usr": "c:objc(cs)MLModelAsset(im)functionNamesWithCompletionHandler:"
+      }
+    }
+  },
+  "MLModelCollection": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLModelCollection",
+    "members": {
+      "identifier": {
+        "kind": "Var",
+        "type": "identifier",
+        "usr": "c:objc(cs)MLModelCollection(py)identifier"
+      },
+      "entries": {
+        "kind": "Var",
+        "type": "entries",
+        "usr": "c:objc(cs)MLModelCollection(py)entries"
+      },
+      "deploymentID": {
+        "kind": "Var",
+        "type": "deploymentID",
+        "usr": "c:objc(cs)MLModelCollection(py)deploymentID"
+      },
+      "didChangeNotification": {
+        "kind": "Var",
+        "type": "didChangeNotification",
+        "usr": "c:@MLModelCollectionDidChangeNotification"
+      }
+    }
+  },
+  "Entry": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLModelCollectionEntry",
+    "members": {
+      "modelIdentifier": {
+        "kind": "Var",
+        "type": "modelIdentifier",
+        "usr": "c:objc(cs)MLModelCollectionEntry(py)modelIdentifier"
+      },
+      "modelURL": {
+        "kind": "Var",
+        "type": "modelURL",
+        "usr": "c:objc(cs)MLModelCollectionEntry(py)modelURL"
+      },
+      "isEqual": {
+        "kind": "Func",
+        "type": "isEqual(to:)",
+        "usr": "c:objc(cs)MLModelCollectionEntry(im)isEqualToModelCollectionEntry:"
+      }
+    }
+  },
+  "MLModelConfiguration": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLModelConfiguration",
+    "members": {
+      "modelDisplayName": {
+        "kind": "Var",
+        "type": "modelDisplayName",
+        "usr": "c:objc(cs)MLModelConfiguration(py)modelDisplayName"
+      },
+      "computeUnits": {
+        "kind": "Var",
+        "type": "computeUnits",
+        "usr": "c:objc(cs)MLModelConfiguration(py)computeUnits"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "allowLowPrecisionAccumulationOnGPU": {
+        "kind": "Var",
+        "type": "allowLowPrecisionAccumulationOnGPU",
+        "usr": "c:objc(cs)MLModelConfiguration(py)allowLowPrecisionAccumulationOnGPU"
+      },
+      "preferredMetalDevice": {
+        "kind": "Var",
+        "type": "preferredMetalDevice",
+        "usr": "c:objc(cs)MLModelConfiguration(py)preferredMetalDevice"
+      },
+      "parameters": {
+        "kind": "Var",
+        "type": "parameters",
+        "usr": "c:objc(cs)MLModelConfiguration(py)parameters"
+      },
+      "functionName": {
+        "kind": "Var",
+        "type": "functionName",
+        "usr": "c:objc(cs)MLModelConfiguration(py)functionName"
+      },
+      "optimizationHints": {
+        "kind": "Var",
+        "type": "optimizationHints",
+        "usr": "s:So20MLModelConfigurationC6CoreMLE17optimizationHintsAC014MLOptimizationF0Vvp"
+      }
+    }
+  },
+  "MLModelDescription": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLModelDescription",
+    "members": {
+      "inputDescriptionsByName": {
+        "kind": "Var",
+        "type": "inputDescriptionsByName",
+        "usr": "c:objc(cs)MLModelDescription(py)inputDescriptionsByName"
+      },
+      "outputDescriptionsByName": {
+        "kind": "Var",
+        "type": "outputDescriptionsByName",
+        "usr": "c:objc(cs)MLModelDescription(py)outputDescriptionsByName"
+      },
+      "stateDescriptionsByName": {
+        "kind": "Var",
+        "type": "stateDescriptionsByName",
+        "usr": "c:objc(cs)MLModelDescription(py)stateDescriptionsByName"
+      },
+      "predictedFeatureName": {
+        "kind": "Var",
+        "type": "predictedFeatureName",
+        "usr": "c:objc(cs)MLModelDescription(py)predictedFeatureName"
+      },
+      "predictedProbabilitiesName": {
+        "kind": "Var",
+        "type": "predictedProbabilitiesName",
+        "usr": "c:objc(cs)MLModelDescription(py)predictedProbabilitiesName"
+      },
+      "metadata": {
+        "kind": "Var",
+        "type": "metadata",
+        "usr": "c:objc(cs)MLModelDescription(py)metadata"
+      },
+      "classLabels": {
+        "kind": "Var",
+        "type": "classLabels",
+        "usr": "c:objc(cs)MLModelDescription(py)classLabels"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "isUpdatable": {
+        "kind": "Var",
+        "type": "isUpdatable",
+        "usr": "c:objc(cs)MLModelDescription(py)isUpdatable"
+      },
+      "trainingInputDescriptionsByName": {
+        "kind": "Var",
+        "type": "trainingInputDescriptionsByName",
+        "usr": "c:objc(cs)MLModelDescription(py)trainingInputDescriptionsByName"
+      },
+      "parameterDescriptionsByKey": {
+        "kind": "Var",
+        "type": "parameterDescriptionsByKey",
+        "usr": "c:objc(cs)MLModelDescription(py)parameterDescriptionsByKey"
+      }
+    }
+  },
+  "MLModelError": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:SC12MLModelErrorLeV",
+    "members": {
+      "_nsError": {
+        "kind": "Var",
+        "type": "_nsError",
+        "usr": "s:SC12MLModelErrorLeV03_nsB0So7NSErrorCvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_nsError:)",
+        "usr": "s:SC12MLModelErrorLeV03_nsB0ABSo7NSErrorC_tcfc"
+      },
+      "errorDomain": {
+        "kind": "Var",
+        "type": "errorDomain",
+        "usr": "s:SC12MLModelErrorLeV11errorDomainSSvpZ"
+      },
+      "Code": {
+        "kind": "Enum",
+        "type": "Code",
+        "usr": "c:@E@MLModelError"
+      },
+      "generic": {
+        "kind": "Var",
+        "type": "generic",
+        "usr": "s:SC12MLModelErrorLeV7genericSoAAVvpZ"
+      },
+      "featureType": {
+        "kind": "Var",
+        "type": "featureType",
+        "usr": "s:SC12MLModelErrorLeV11featureTypeSoAAVvpZ"
+      },
+      "io": {
+        "kind": "Var",
+        "type": "io",
+        "usr": "s:SC12MLModelErrorLeV2ioSoAAVvpZ"
+      },
+      "customLayer": {
+        "kind": "Var",
+        "type": "customLayer",
+        "usr": "s:SC12MLModelErrorLeV11customLayerSoAAVvpZ"
+      },
+      "customModel": {
+        "kind": "Var",
+        "type": "customModel",
+        "usr": "s:SC12MLModelErrorLeV11customModelSoAAVvpZ"
+      },
+      "update": {
+        "kind": "Var",
+        "type": "update",
+        "usr": "s:SC12MLModelErrorLeV6updateSoAAVvpZ"
+      },
+      "parameters": {
+        "kind": "Var",
+        "type": "parameters",
+        "usr": "s:SC12MLModelErrorLeV10parametersSoAAVvpZ"
+      },
+      "modelDecryptionKeyFetch": {
+        "kind": "Var",
+        "type": "modelDecryptionKeyFetch",
+        "usr": "s:SC12MLModelErrorLeV23modelDecryptionKeyFetchSoAAVvpZ"
+      },
+      "modelDecryption": {
+        "kind": "Var",
+        "type": "modelDecryption",
+        "usr": "s:SC12MLModelErrorLeV15modelDecryptionSoAAVvpZ"
+      },
+      "modelCollection": {
+        "kind": "Var",
+        "type": "modelCollection",
+        "usr": "s:SC12MLModelErrorLeV15modelCollectionSoAAVvpZ"
+      },
+      "predictionCancelled": {
+        "kind": "Var",
+        "type": "predictionCancelled",
+        "usr": "s:SC12MLModelErrorLeV19predictionCancelledSoAAVvpZ"
+      }
+    }
+  },
+  "Code": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "c:@E@MLModelError",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So12MLModelErrorV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So12MLModelErrorV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So12MLModelErrorV8RawValuea"
+      },
+      "_ErrorType": {
+        "kind": "TypeAlias",
+        "type": "_ErrorType",
+        "usr": "c:@E@MLModelError"
+      },
+      "generic": {
+        "kind": "EnumElement",
+        "type": "generic",
+        "usr": "c:@E@MLModelError@MLModelErrorGeneric"
+      },
+      "featureType": {
+        "kind": "EnumElement",
+        "type": "featureType",
+        "usr": "c:@E@MLModelError@MLModelErrorFeatureType"
+      },
+      "io": {
+        "kind": "EnumElement",
+        "type": "io",
+        "usr": "c:@E@MLModelError@MLModelErrorIO"
+      },
+      "customLayer": {
+        "kind": "EnumElement",
+        "type": "customLayer",
+        "usr": "c:@E@MLModelError@MLModelErrorCustomLayer"
+      },
+      "customModel": {
+        "kind": "EnumElement",
+        "type": "customModel",
+        "usr": "c:@E@MLModelError@MLModelErrorCustomModel"
+      },
+      "update": {
+        "kind": "EnumElement",
+        "type": "update",
+        "usr": "c:@E@MLModelError@MLModelErrorUpdate"
+      },
+      "parameters": {
+        "kind": "EnumElement",
+        "type": "parameters",
+        "usr": "c:@E@MLModelError@MLModelErrorParameters"
+      },
+      "modelDecryptionKeyFetch": {
+        "kind": "EnumElement",
+        "type": "modelDecryptionKeyFetch",
+        "usr": "c:@E@MLModelError@MLModelErrorModelDecryptionKeyFetch"
+      },
+      "modelDecryption": {
+        "kind": "EnumElement",
+        "type": "modelDecryption",
+        "usr": "c:@E@MLModelError@MLModelErrorModelDecryption"
+      },
+      "modelCollection": {
+        "kind": "EnumElement",
+        "type": "modelCollection",
+        "usr": "c:@E@MLModelError@MLModelErrorModelCollection"
+      },
+      "predictionCancelled": {
+        "kind": "EnumElement",
+        "type": "predictionCancelled",
+        "usr": "c:@E@MLModelError@MLModelErrorPredictionCancelled"
+      }
+    }
+  },
+  "MLModelMetadataKey": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "c:@T@MLModelMetadataKey",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So18MLModelMetadataKeya8rawValueABSS_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So18MLModelMetadataKeya8rawValueSSvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So18MLModelMetadataKeya8RawValuea"
+      },
+      "_ObjectiveCType": {
+        "kind": "TypeAlias",
+        "type": "_ObjectiveCType",
+        "usr": "s:So18MLModelMetadataKeya15_ObjectiveCTypea"
+      },
+      "description": {
+        "kind": "Var",
+        "type": "description",
+        "usr": "c:@MLModelDescriptionKey"
+      },
+      "versionString": {
+        "kind": "Var",
+        "type": "versionString",
+        "usr": "c:@MLModelVersionStringKey"
+      },
+      "author": {
+        "kind": "Var",
+        "type": "author",
+        "usr": "c:@MLModelAuthorKey"
+      },
+      "license": {
+        "kind": "Var",
+        "type": "license",
+        "usr": "c:@MLModelLicenseKey"
+      },
+      "creatorDefinedKey": {
+        "kind": "Var",
+        "type": "creatorDefinedKey",
+        "usr": "c:@MLModelCreatorDefinedKey"
+      }
+    }
+  },
+  "MLMultiArray": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLMultiArray",
+    "members": {
+      "dataPointer": {
+        "kind": "Var",
+        "type": "dataPointer",
+        "usr": "c:objc(cs)MLMultiArray(py)dataPointer"
+      },
+      "dataType": {
+        "kind": "Var",
+        "type": "dataType",
+        "usr": "c:objc(cs)MLMultiArray(py)dataType"
+      },
+      "shape": {
+        "kind": "Var",
+        "type": "shape",
+        "usr": "c:objc(cs)MLMultiArray(py)shape"
+      },
+      "strides": {
+        "kind": "Var",
+        "type": "strides",
+        "usr": "c:objc(cs)MLMultiArray(py)strides"
+      },
+      "count": {
+        "kind": "Var",
+        "type": "count",
+        "usr": "c:objc(cs)MLMultiArray(py)count"
+      },
+      "pixelBuffer": {
+        "kind": "Var",
+        "type": "pixelBuffer",
+        "usr": "c:objc(cs)MLMultiArray(py)pixelBuffer"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_:)",
+        "usr": "s:So12MLMultiArrayC6CoreMLEyABxcAC08MLShapedB8ProtocolRzlufc"
+      },
+      "subscript": {
+        "kind": "Subscript",
+        "type": "subscript(_:)",
+        "usr": "c:objc(cs)MLMultiArray(im)objectForKeyedSubscript:"
+      },
+      "transfer": {
+        "kind": "Func",
+        "type": "transfer(to:)",
+        "usr": "c:objc(cs)MLMultiArray(im)transferToMultiArray:"
+      },
+      "withUnsafeBytes": {
+        "kind": "Func",
+        "type": "withUnsafeBytes(_:)",
+        "usr": "s:So12MLMultiArrayC6CoreMLE15withUnsafeBytesyxxSWKXEKlF"
+      },
+      "withUnsafeMutableBytes": {
+        "kind": "Func",
+        "type": "withUnsafeMutableBytes(_:)",
+        "usr": "s:So12MLMultiArrayC6CoreMLE22withUnsafeMutableBytesyxxSw_SaySiGtKXEKlF"
+      },
+      "withUnsafeBufferPointer": {
+        "kind": "Func",
+        "type": "withUnsafeBufferPointer(ofType:_:)",
+        "usr": "s:So12MLMultiArrayC6CoreMLE23withUnsafeBufferPointer6ofType_q_xm_q_SRyxGKXEtKAC08MLShapedB6ScalarRzr0_lF"
+      },
+      "withUnsafeMutableBufferPointer": {
+        "kind": "Func",
+        "type": "withUnsafeMutableBufferPointer(ofType:_:)",
+        "usr": "s:So12MLMultiArrayC6CoreMLE30withUnsafeMutableBufferPointer6ofType_q_xm_q_SryxG_SaySiGtKXEtKAC08MLShapedB6ScalarRzr0_lF"
+      }
+    }
+  },
+  "MLMultiArrayConstraint": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLMultiArrayConstraint",
+    "members": {
+      "shape": {
+        "kind": "Var",
+        "type": "shape",
+        "usr": "c:objc(cs)MLMultiArrayConstraint(py)shape"
+      },
+      "dataType": {
+        "kind": "Var",
+        "type": "dataType",
+        "usr": "c:objc(cs)MLMultiArrayConstraint(py)dataType"
+      },
+      "shapeConstraint": {
+        "kind": "Var",
+        "type": "shapeConstraint",
+        "usr": "c:objc(cs)MLMultiArrayConstraint(py)shapeConstraint"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MLMultiArrayDataType": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "c:@E@MLMultiArrayDataType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So20MLMultiArrayDataTypeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So20MLMultiArrayDataTypeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So20MLMultiArrayDataTypeV8RawValuea"
+      },
+      "double": {
+        "kind": "EnumElement",
+        "type": "double",
+        "usr": "c:@E@MLMultiArrayDataType@MLMultiArrayDataTypeDouble"
+      },
+      "float64": {
+        "kind": "Var",
+        "type": "float64",
+        "usr": "c:@E@MLMultiArrayDataType@MLMultiArrayDataTypeFloat64"
+      },
+      "float32": {
+        "kind": "EnumElement",
+        "type": "float32",
+        "usr": "c:@E@MLMultiArrayDataType@MLMultiArrayDataTypeFloat32"
+      },
+      "float16": {
+        "kind": "EnumElement",
+        "type": "float16",
+        "usr": "c:@E@MLMultiArrayDataType@MLMultiArrayDataTypeFloat16"
+      },
+      "float": {
+        "kind": "Var",
+        "type": "float",
+        "usr": "c:@E@MLMultiArrayDataType@MLMultiArrayDataTypeFloat"
+      },
+      "int32": {
+        "kind": "EnumElement",
+        "type": "int32",
+        "usr": "c:@E@MLMultiArrayDataType@MLMultiArrayDataTypeInt32"
+      }
+    }
+  },
+  "MLMultiArrayShapeConstraint": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLMultiArrayShapeConstraint",
+    "members": {
+      "type": {
+        "kind": "Var",
+        "type": "type",
+        "usr": "c:objc(cs)MLMultiArrayShapeConstraint(py)type"
+      },
+      "sizeRangeForDimension": {
+        "kind": "Var",
+        "type": "sizeRangeForDimension",
+        "usr": "c:objc(cs)MLMultiArrayShapeConstraint(py)sizeRangeForDimension"
+      },
+      "enumeratedShapes": {
+        "kind": "Var",
+        "type": "enumeratedShapes",
+        "usr": "c:objc(cs)MLMultiArrayShapeConstraint(py)enumeratedShapes"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MLMultiArrayShapeConstraintType": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "c:@E@MLMultiArrayShapeConstraintType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So31MLMultiArrayShapeConstraintTypeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So31MLMultiArrayShapeConstraintTypeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So31MLMultiArrayShapeConstraintTypeV8RawValuea"
+      },
+      "unspecified": {
+        "kind": "EnumElement",
+        "type": "unspecified",
+        "usr": "c:@E@MLMultiArrayShapeConstraintType@MLMultiArrayShapeConstraintTypeUnspecified"
+      },
+      "enumerated": {
+        "kind": "EnumElement",
+        "type": "enumerated",
+        "usr": "c:@E@MLMultiArrayShapeConstraintType@MLMultiArrayShapeConstraintTypeEnumerated"
+      },
+      "range": {
+        "kind": "EnumElement",
+        "type": "range",
+        "usr": "c:@E@MLMultiArrayShapeConstraintType@MLMultiArrayShapeConstraintTypeRange"
+      }
+    }
+  },
+  "MLNeuralEngineComputeDevice": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLNeuralEngineComputeDevice",
+    "members": {
+      "totalCoreCount": {
+        "kind": "Var",
+        "type": "totalCoreCount",
+        "usr": "c:objc(cs)MLNeuralEngineComputeDevice(py)totalCoreCount"
+      }
+    }
+  },
+  "MLNumericConstraint": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLNumericConstraint",
+    "members": {
+      "minNumber": {
+        "kind": "Var",
+        "type": "minNumber",
+        "usr": "c:objc(cs)MLNumericConstraint(py)minNumber"
+      },
+      "maxNumber": {
+        "kind": "Var",
+        "type": "maxNumber",
+        "usr": "c:objc(cs)MLNumericConstraint(py)maxNumber"
+      },
+      "enumeratedNumbers": {
+        "kind": "Var",
+        "type": "enumeratedNumbers",
+        "usr": "c:objc(cs)MLNumericConstraint(py)enumeratedNumbers"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MLParameterDescription": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLParameterDescription",
+    "members": {
+      "key": {
+        "kind": "Var",
+        "type": "key",
+        "usr": "c:objc(cs)MLParameterDescription(py)key"
+      },
+      "defaultValue": {
+        "kind": "Var",
+        "type": "defaultValue",
+        "usr": "c:objc(cs)MLParameterDescription(py)defaultValue"
+      },
+      "numericConstraint": {
+        "kind": "Var",
+        "type": "numericConstraint",
+        "usr": "c:objc(cs)MLParameterDescription(py)numericConstraint"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MLParameterKey": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLParameterKey",
+    "members": {
+      "learningRate": {
+        "kind": "Var",
+        "type": "learningRate",
+        "usr": "c:objc(cs)MLParameterKey(cpy)learningRate"
+      },
+      "momentum": {
+        "kind": "Var",
+        "type": "momentum",
+        "usr": "c:objc(cs)MLParameterKey(cpy)momentum"
+      },
+      "miniBatchSize": {
+        "kind": "Var",
+        "type": "miniBatchSize",
+        "usr": "c:objc(cs)MLParameterKey(cpy)miniBatchSize"
+      },
+      "beta1": {
+        "kind": "Var",
+        "type": "beta1",
+        "usr": "c:objc(cs)MLParameterKey(cpy)beta1"
+      },
+      "beta2": {
+        "kind": "Var",
+        "type": "beta2",
+        "usr": "c:objc(cs)MLParameterKey(cpy)beta2"
+      },
+      "eps": {
+        "kind": "Var",
+        "type": "eps",
+        "usr": "c:objc(cs)MLParameterKey(cpy)eps"
+      },
+      "epochs": {
+        "kind": "Var",
+        "type": "epochs",
+        "usr": "c:objc(cs)MLParameterKey(cpy)epochs"
+      },
+      "shuffle": {
+        "kind": "Var",
+        "type": "shuffle",
+        "usr": "c:objc(cs)MLParameterKey(cpy)shuffle"
+      },
+      "seed": {
+        "kind": "Var",
+        "type": "seed",
+        "usr": "c:objc(cs)MLParameterKey(cpy)seed"
+      },
+      "numberOfNeighbors": {
+        "kind": "Var",
+        "type": "numberOfNeighbors",
+        "usr": "c:objc(cs)MLParameterKey(cpy)numberOfNeighbors"
+      },
+      "linkedModelFileName": {
+        "kind": "Var",
+        "type": "linkedModelFileName",
+        "usr": "c:objc(cs)MLParameterKey(cpy)linkedModelFileName"
+      },
+      "linkedModelSearchPath": {
+        "kind": "Var",
+        "type": "linkedModelSearchPath",
+        "usr": "c:objc(cs)MLParameterKey(cpy)linkedModelSearchPath"
+      },
+      "weights": {
+        "kind": "Var",
+        "type": "weights",
+        "usr": "c:objc(cs)MLParameterKey(cpy)weights"
+      },
+      "biases": {
+        "kind": "Var",
+        "type": "biases",
+        "usr": "c:objc(cs)MLParameterKey(cpy)biases"
+      },
+      "scoped": {
+        "kind": "Func",
+        "type": "scoped(to:)",
+        "usr": "c:objc(cs)MLParameterKey(im)scopedTo:"
+      }
+    }
+  },
+  "MLPredictionOptions": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLPredictionOptions",
+    "members": {
+      "usesCPUOnly": {
+        "kind": "Var",
+        "type": "usesCPUOnly",
+        "usr": "c:objc(cs)MLPredictionOptions(py)usesCPUOnly"
+      },
+      "outputBackings": {
+        "kind": "Var",
+        "type": "outputBackings",
+        "usr": "c:objc(cs)MLPredictionOptions(py)outputBackings"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MLSequence": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLSequence",
+    "members": {
+      "type": {
+        "kind": "Var",
+        "type": "type",
+        "usr": "c:objc(cs)MLSequence(py)type"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "stringValues": {
+        "kind": "Var",
+        "type": "stringValues",
+        "usr": "c:objc(cs)MLSequence(py)stringValues"
+      },
+      "int64Values": {
+        "kind": "Var",
+        "type": "int64Values",
+        "usr": "c:objc(cs)MLSequence(py)int64Values"
+      }
+    }
+  },
+  "MLSequenceConstraint": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLSequenceConstraint",
+    "members": {
+      "valueDescription": {
+        "kind": "Var",
+        "type": "valueDescription",
+        "usr": "c:objc(cs)MLSequenceConstraint(py)valueDescription"
+      },
+      "countRange": {
+        "kind": "Var",
+        "type": "countRange",
+        "usr": "c:objc(cs)MLSequenceConstraint(py)countRange"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MLState": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLState",
+    "members": {
+      "withMultiArray": {
+        "kind": "Func",
+        "type": "withMultiArray(for:_:)",
+        "usr": "s:So7MLStateC6CoreMLE14withMultiArray3for_xSS_xSo07MLMultiF0CKXEtKlF"
+      }
+    }
+  },
+  "MLStateConstraint": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLStateConstraint",
+    "members": {
+      "dataType": {
+        "kind": "Var",
+        "type": "dataType",
+        "usr": "c:objc(cs)MLStateConstraint(py)dataType"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "bufferShape": {
+        "kind": "Var",
+        "type": "bufferShape",
+        "usr": "s:So17MLStateConstraintC6CoreMLE11bufferShapeSaySiGvp"
+      }
+    }
+  },
+  "MLTask": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLTask",
+    "members": {
+      "taskIdentifier": {
+        "kind": "Var",
+        "type": "taskIdentifier",
+        "usr": "c:objc(cs)MLTask(py)taskIdentifier"
+      },
+      "state": {
+        "kind": "Var",
+        "type": "state",
+        "usr": "c:objc(cs)MLTask(py)state"
+      },
+      "error": {
+        "kind": "Var",
+        "type": "error",
+        "usr": "c:objc(cs)MLTask(py)error"
+      },
+      "resume": {
+        "kind": "Func",
+        "type": "resume()",
+        "usr": "c:objc(cs)MLTask(im)resume"
+      },
+      "cancel": {
+        "kind": "Func",
+        "type": "cancel()",
+        "usr": "c:objc(cs)MLTask(im)cancel"
+      }
+    }
+  },
+  "MLTaskState": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "c:@E@MLTaskState",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So11MLTaskStateV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So11MLTaskStateV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So11MLTaskStateV8RawValuea"
+      },
+      "suspended": {
+        "kind": "EnumElement",
+        "type": "suspended",
+        "usr": "c:@E@MLTaskState@MLTaskStateSuspended"
+      },
+      "running": {
+        "kind": "EnumElement",
+        "type": "running",
+        "usr": "c:@E@MLTaskState@MLTaskStateRunning"
+      },
+      "cancelling": {
+        "kind": "EnumElement",
+        "type": "cancelling",
+        "usr": "c:@E@MLTaskState@MLTaskStateCancelling"
+      },
+      "completed": {
+        "kind": "EnumElement",
+        "type": "completed",
+        "usr": "c:@E@MLTaskState@MLTaskStateCompleted"
+      },
+      "failed": {
+        "kind": "EnumElement",
+        "type": "failed",
+        "usr": "c:@E@MLTaskState@MLTaskStateFailed"
+      }
+    }
+  },
+  "MLUpdateContext": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLUpdateContext",
+    "members": {
+      "task": {
+        "kind": "Var",
+        "type": "task",
+        "usr": "c:objc(cs)MLUpdateContext(py)task"
+      },
+      "model": {
+        "kind": "Var",
+        "type": "model",
+        "usr": "c:objc(cs)MLUpdateContext(py)model"
+      },
+      "event": {
+        "kind": "Var",
+        "type": "event",
+        "usr": "c:objc(cs)MLUpdateContext(py)event"
+      },
+      "metrics": {
+        "kind": "Var",
+        "type": "metrics",
+        "usr": "c:objc(cs)MLUpdateContext(py)metrics"
+      },
+      "parameters": {
+        "kind": "Var",
+        "type": "parameters",
+        "usr": "c:objc(cs)MLUpdateContext(py)parameters"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "MLUpdateProgressEvent": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "c:@E@MLUpdateProgressEvent",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So21MLUpdateProgressEventV8rawValueABSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So21MLUpdateProgressEventV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So21MLUpdateProgressEventV8RawValuea"
+      },
+      "Element": {
+        "kind": "TypeAlias",
+        "type": "Element",
+        "usr": "s:So21MLUpdateProgressEventV7Elementa"
+      },
+      "ArrayLiteralElement": {
+        "kind": "TypeAlias",
+        "type": "ArrayLiteralElement",
+        "usr": "s:So21MLUpdateProgressEventV19ArrayLiteralElementa"
+      },
+      "trainingBegin": {
+        "kind": "Var",
+        "type": "trainingBegin",
+        "usr": "c:@E@MLUpdateProgressEvent@MLUpdateProgressEventTrainingBegin"
+      },
+      "epochEnd": {
+        "kind": "Var",
+        "type": "epochEnd",
+        "usr": "c:@E@MLUpdateProgressEvent@MLUpdateProgressEventEpochEnd"
+      },
+      "miniBatchEnd": {
+        "kind": "Var",
+        "type": "miniBatchEnd",
+        "usr": "c:@E@MLUpdateProgressEvent@MLUpdateProgressEventMiniBatchEnd"
+      }
+    }
+  },
+  "MLUpdateProgressHandlers": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLUpdateProgressHandlers",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(forEvents:progressHandler:completionHandler:)",
+        "usr": "c:objc(cs)MLUpdateProgressHandlers(im)initForEvents:progressHandler:completionHandler:"
+      }
+    }
+  },
+  "MLUpdateTask": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "c:objc(cs)MLUpdateTask",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(forModelAt:trainingData:progressHandlers:)",
+        "usr": "c:objc(cs)MLUpdateTask(cm)updateTaskForModelAtURL:trainingData:progressHandlers:error:"
+      },
+      "resume": {
+        "kind": "Func",
+        "type": "resume(withParameters:)",
+        "usr": "c:objc(cs)MLUpdateTask(im)resumeWithParameters:"
+      }
+    }
+  },
+  "MLWritable": {
+    "kind": "Protocol",
+    "module": "CoreML",
+    "usr": "c:objc(pl)MLWritable",
+    "members": {
+      "write": {
+        "kind": "Func",
+        "type": "write(to:)",
+        "usr": "c:objc(pl)MLWritable(im)writeToURL:error:"
+      }
+    }
+  },
+  "MLShapedArraySlice": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML18MLShapedArraySliceV",
+    "members": {
+      "ArrayLiteralElement": {
+        "kind": "TypeAlias",
+        "type": "ArrayLiteralElement",
+        "usr": "s:6CoreML18MLShapedArraySliceV0D14LiteralElementa"
+      },
+      "SubSequence": {
+        "kind": "TypeAlias",
+        "type": "SubSequence",
+        "usr": "s:6CoreML18MLShapedArraySliceV11SubSequencea"
+      },
+      "shape": {
+        "kind": "Var",
+        "type": "shape",
+        "usr": "s:6CoreML18MLShapedArraySliceV5shapeSaySiGvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:6CoreML18MLShapedArraySliceVAASeRzrlE4fromACyxGs7Decoder_p_tKcfc"
+      },
+      "strides": {
+        "kind": "Var",
+        "type": "strides",
+        "usr": "s:6CoreML18MLShapedArraySliceV7stridesSaySiGvp"
+      },
+      "subscript": {
+        "kind": "Subscript",
+        "type": "subscript(scalarAt:)",
+        "usr": "s:6CoreML18MLShapedArraySliceV8scalarAtxqd___tcSlRd__Si7ElementRtd__luip"
+      },
+      "withUnsafeShapedBufferPointer": {
+        "kind": "Func",
+        "type": "withUnsafeShapedBufferPointer(_:)",
+        "usr": "s:6CoreML18MLShapedArraySliceV29withUnsafeShapedBufferPointeryqd__qd__SRyxG_SaySiGAFtKXEKlF"
+      },
+      "withUnsafeMutableShapedBufferPointer": {
+        "kind": "Func",
+        "type": "withUnsafeMutableShapedBufferPointer(using:_:)",
+        "usr": "s:6CoreML18MLShapedArraySliceV36withUnsafeMutableShapedBufferPointer5using_qd__AA0cdJ6LayoutO_qd__SryxGz_SaySiGAItKXEtKlF"
+      },
+      "Index": {
+        "kind": "TypeAlias",
+        "type": "Index",
+        "usr": "s:6CoreML18MLShapedArraySliceV5Indexa"
+      },
+      "Indices": {
+        "kind": "TypeAlias",
+        "type": "Indices",
+        "usr": "s:6CoreML18MLShapedArraySliceV7Indicesa"
+      },
+      "Iterator": {
+        "kind": "TypeAlias",
+        "type": "Iterator",
+        "usr": "s:6CoreML18MLShapedArraySliceV8Iteratora"
+      },
+      "Scalar": {
+        "kind": "TypeAlias",
+        "type": "Scalar",
+        "usr": "s:6CoreML18MLShapedArraySliceV6Scalara"
+      },
+      "Element": {
+        "kind": "TypeAlias",
+        "type": "Element",
+        "usr": "s:6CoreML18MLShapedArraySliceV7Elementa"
+      },
+      "startIndex": {
+        "kind": "Var",
+        "type": "startIndex",
+        "usr": "s:6CoreML18MLShapedArraySliceV10startIndexSivp"
+      },
+      "endIndex": {
+        "kind": "Var",
+        "type": "endIndex",
+        "usr": "s:6CoreML18MLShapedArraySliceV8endIndexSivp"
+      },
+      "reshaped": {
+        "kind": "Func",
+        "type": "reshaped(to:)",
+        "usr": "s:6CoreML18MLShapedArraySliceV8reshaped2toACyxGSaySiG_tF"
+      },
+      "squeezingShape": {
+        "kind": "Func",
+        "type": "squeezingShape()",
+        "usr": "s:6CoreML18MLShapedArraySliceV14squeezingShapeACyxGyF"
+      },
+      "expandingShape": {
+        "kind": "Func",
+        "type": "expandingShape(at:)",
+        "usr": "s:6CoreML18MLShapedArraySliceV14expandingShape2atACyxGSi_tF"
+      },
+      "transposed": {
+        "kind": "Func",
+        "type": "transposed(permutation:)",
+        "usr": "s:6CoreML18MLShapedArraySliceV10transposed11permutationACyxGSaySiG_tF"
+      },
+      "changingLayout": {
+        "kind": "Func",
+        "type": "changingLayout(to:)",
+        "usr": "s:6CoreML18MLShapedArraySliceV14changingLayout2toACyxGAA0cd6BufferG0O_tF"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:6CoreML18MLShapedArraySliceVAASERzrlE6encode2toys7Encoder_p_tKF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:6CoreML18MLShapedArraySliceVAASQRzrlE2eeoiySbACyxG_AEtFZ"
+      }
+    }
+  },
+  "MLSendableFeatureValue": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML22MLSendableFeatureValueV",
+    "members": {
+      "type": {
+        "kind": "Var",
+        "type": "type",
+        "usr": "s:6CoreML22MLSendableFeatureValueV4typeSo13MLFeatureTypeVvp"
+      },
+      "isUndefined": {
+        "kind": "Var",
+        "type": "isUndefined",
+        "usr": "s:6CoreML22MLSendableFeatureValueV11isUndefinedSbvp"
+      },
+      "isScalar": {
+        "kind": "Var",
+        "type": "isScalar",
+        "usr": "s:6CoreML22MLSendableFeatureValueV8isScalarSbvp"
+      },
+      "isShapedArray": {
+        "kind": "Var",
+        "type": "isShapedArray",
+        "usr": "s:6CoreML22MLSendableFeatureValueV13isShapedArraySbvp"
+      },
+      "integerValue": {
+        "kind": "Var",
+        "type": "integerValue",
+        "usr": "s:6CoreML22MLSendableFeatureValueV07integerE0SiSgvp"
+      },
+      "float16Value": {
+        "kind": "Var",
+        "type": "float16Value",
+        "usr": "s:6CoreML22MLSendableFeatureValueV07float16E0s7Float16VSgvp"
+      },
+      "floatValue": {
+        "kind": "Var",
+        "type": "floatValue",
+        "usr": "s:6CoreML22MLSendableFeatureValueV05floatE0SfSgvp"
+      },
+      "doubleValue": {
+        "kind": "Var",
+        "type": "doubleValue",
+        "usr": "s:6CoreML22MLSendableFeatureValueV06doubleE0SdSgvp"
+      },
+      "stringValue": {
+        "kind": "Var",
+        "type": "stringValue",
+        "usr": "s:6CoreML22MLSendableFeatureValueV06stringE0SSSgvp"
+      },
+      "stringArrayValue": {
+        "kind": "Var",
+        "type": "stringArrayValue",
+        "usr": "s:6CoreML22MLSendableFeatureValueV011stringArrayE0SaySSGSgvp"
+      },
+      "stringDictionaryValue": {
+        "kind": "Var",
+        "type": "stringDictionaryValue",
+        "usr": "s:6CoreML22MLSendableFeatureValueV016stringDictionaryE0SDySSSdGSgvp"
+      },
+      "integerDictionaryValue": {
+        "kind": "Var",
+        "type": "integerDictionaryValue",
+        "usr": "s:6CoreML22MLSendableFeatureValueV017integerDictionaryE0SDySiSdGSgvp"
+      },
+      "shapedArrayValue": {
+        "kind": "Func",
+        "type": "shapedArrayValue(of:)",
+        "usr": "s:6CoreML22MLSendableFeatureValueV011shapedArrayE02ofAA08MLShapedG0VyxGSgxm_tAA0iG6ScalarRzlF"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_:)",
+        "usr": "s:6CoreML22MLSendableFeatureValueVyACSgSo09MLFeatureE0Ccfc"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:6CoreML22MLSendableFeatureValueV2eeoiySbAC_ACtFZ"
+      },
+      "debugDescription": {
+        "kind": "Var",
+        "type": "debugDescription",
+        "usr": "s:6CoreML22MLSendableFeatureValueV16debugDescriptionSSvp"
+      }
+    }
+  },
+  "MLShapedArrayProtocol": {
+    "kind": "Protocol",
+    "module": "CoreML",
+    "usr": "s:6CoreML21MLShapedArrayProtocolP",
+    "members": {
+      "Scalar": {
+        "kind": "AssociatedType",
+        "type": "Scalar",
+        "usr": "s:6CoreML21MLShapedArrayProtocolP6ScalarQa"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(converting:)",
+        "usr": "s:6CoreML21MLShapedArrayProtocolPAAE10convertingxSo07MLMultiD0C_tcfc"
+      },
+      "shape": {
+        "kind": "Var",
+        "type": "shape",
+        "usr": "s:6CoreML21MLShapedArrayProtocolP5shapeSaySiGvp"
+      },
+      "strides": {
+        "kind": "Var",
+        "type": "strides",
+        "usr": "s:6CoreML21MLShapedArrayProtocolP7stridesSaySiGvp"
+      },
+      "subscript": {
+        "kind": "Subscript",
+        "type": "subscript(_:)",
+        "usr": "s:6CoreML21MLShapedArrayProtocolPAAEyAA0cD5SliceVy6ScalarQzGSicip"
+      },
+      "withUnsafeShapedBufferPointer": {
+        "kind": "Func",
+        "type": "withUnsafeShapedBufferPointer(_:)",
+        "usr": "s:6CoreML21MLShapedArrayProtocolP29withUnsafeShapedBufferPointeryqd__qd__SRy6ScalarQzG_SaySiGAHtKXEKlF"
+      },
+      "withUnsafeMutableShapedBufferPointer": {
+        "kind": "Func",
+        "type": "withUnsafeMutableShapedBufferPointer(_:)",
+        "usr": "s:6CoreML21MLShapedArrayProtocolP36withUnsafeMutableShapedBufferPointeryqd__qd__Sry6ScalarQzGz_SaySiGAHtKXEKlF"
+      },
+      "isScalar": {
+        "kind": "Var",
+        "type": "isScalar",
+        "usr": "s:6CoreML21MLShapedArrayProtocolPAAE8isScalarSbvp"
+      },
+      "count": {
+        "kind": "Var",
+        "type": "count",
+        "usr": "s:6CoreML21MLShapedArrayProtocolPAAE5countSivp"
+      },
+      "scalarCount": {
+        "kind": "Var",
+        "type": "scalarCount",
+        "usr": "s:6CoreML21MLShapedArrayProtocolPAAE11scalarCountSivp"
+      },
+      "scalars": {
+        "kind": "Var",
+        "type": "scalars",
+        "usr": "s:6CoreML21MLShapedArrayProtocolPAAE7scalarsSay6ScalarQzGvp"
+      },
+      "scalar": {
+        "kind": "Var",
+        "type": "scalar",
+        "usr": "s:6CoreML21MLShapedArrayProtocolPAAE6scalar6ScalarQzSgvp"
+      },
+      "fill": {
+        "kind": "Func",
+        "type": "fill(with:)",
+        "usr": "s:6CoreML21MLShapedArrayProtocolPAAE4fill4withyqd___tSlRd__7ElementQyd__6ScalarRtzlF"
+      },
+      "index": {
+        "kind": "Func",
+        "type": "index(_:offsetBy:)",
+        "usr": "s:6CoreML21MLShapedArrayProtocolPAAE5index_8offsetByS2i_SitF"
+      }
+    }
+  },
+  "MLTensorRangeExpression": {
+    "kind": "Protocol",
+    "module": "CoreML",
+    "usr": "s:6CoreML23MLTensorRangeExpressionP",
+    "members": {
+      "fillAll": {
+        "kind": "Var",
+        "type": "fillAll",
+        "usr": "s:6CoreML23MLTensorRangeExpressionPA2A01_cD0VRszrlE7fillAllAaB_pvpZ"
+      },
+      "newAxis": {
+        "kind": "Var",
+        "type": "newAxis",
+        "usr": "s:6CoreML23MLTensorRangeExpressionPA2A01_cD0VRszrlE7newAxisAaB_pvpZ"
+      },
+      "squeezeAxis": {
+        "kind": "Var",
+        "type": "squeezeAxis",
+        "usr": "s:6CoreML23MLTensorRangeExpressionPA2A01_cD0VRszrlE11squeezeAxisAaB_pvpZ"
+      },
+      "index": {
+        "kind": "Func",
+        "type": "index(_:)",
+        "usr": "s:6CoreML23MLTensorRangeExpressionPA2A01_cD0VRszrlE5indexyAaB_pSiFZ"
+      },
+      "range": {
+        "kind": "Func",
+        "type": "range(_:stride:)",
+        "usr": "s:6CoreML23MLTensorRangeExpressionPA2A01_cD0VRszrlE5range_6strideAaB_pSnySiG_SitFZ"
+      },
+      "closedRange": {
+        "kind": "Func",
+        "type": "closedRange(_:stride:)",
+        "usr": "s:6CoreML23MLTensorRangeExpressionPA2A01_cD0VRszrlE06closedD0_6strideAaB_pSNySiG_SitFZ"
+      },
+      "partialRangeFrom": {
+        "kind": "Func",
+        "type": "partialRangeFrom(_:stride:)",
+        "usr": "s:6CoreML23MLTensorRangeExpressionPA2A01_cD0VRszrlE07partialD4From_6strideAaB_ps07PartialdG0VySiG_SitFZ"
+      },
+      "partialRangeUpTo": {
+        "kind": "Func",
+        "type": "partialRangeUpTo(_:stride:)",
+        "usr": "s:6CoreML23MLTensorRangeExpressionPA2A01_cD0VRszrlE07partialD4UpTo_6strideAaB_ps07PartialD7ThroughVySiG_SitFZ"
+      }
+    }
+  },
+  "MLComputeDevice": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "s:6CoreML15MLComputeDeviceO",
+    "members": {
+      "cpu": {
+        "kind": "EnumElement",
+        "type": "cpu",
+        "usr": "s:6CoreML15MLComputeDeviceO3cpuyACSo012MLCPUComputeD0CcACmF"
+      },
+      "gpu": {
+        "kind": "EnumElement",
+        "type": "gpu",
+        "usr": "s:6CoreML15MLComputeDeviceO3gpuyACSo012MLGPUComputeD0CcACmF"
+      },
+      "neuralEngine": {
+        "kind": "EnumElement",
+        "type": "neuralEngine",
+        "usr": "s:6CoreML15MLComputeDeviceO12neuralEngineyACSo08MLNeuralf7ComputeD0CcACmF"
+      },
+      "description": {
+        "kind": "Var",
+        "type": "description",
+        "usr": "s:6CoreML15MLComputeDeviceO11descriptionSSvp"
+      },
+      "allComputeDevices": {
+        "kind": "Var",
+        "type": "allComputeDevices",
+        "usr": "s:6CoreML15MLComputeDeviceO17allComputeDevicesSayACGvpZ"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:6CoreML15MLComputeDeviceO2eeoiySbAC_ACtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:6CoreML15MLComputeDeviceO4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:6CoreML15MLComputeDeviceO9hashValueSivp"
+      }
+    }
+  },
+  "MLComputePlan": {
+    "kind": "Class",
+    "module": "CoreML",
+    "usr": "s:6CoreML13MLComputePlanC",
+    "members": {
+      "modelStructure": {
+        "kind": "Var",
+        "type": "modelStructure",
+        "usr": "s:6CoreML13MLComputePlanC14modelStructureAA07MLModelF0Ovp"
+      },
+      "load": {
+        "kind": "Func",
+        "type": "load(contentsOf:configuration:)",
+        "usr": "s:6CoreML13MLComputePlanC4load10contentsOf13configurationAC10Foundation3URLV_So20MLModelConfigurationCtYaKFZ"
+      },
+      "estimatedCost": {
+        "kind": "Func",
+        "type": "estimatedCost(of:)",
+        "usr": "s:6CoreML13MLComputePlanC13estimatedCost2ofAC0F0VSgAA16MLModelStructureO7ProgramV9OperationV_tF"
+      },
+      "deviceUsage": {
+        "kind": "Func",
+        "type": "deviceUsage(for:)",
+        "usr": "s:6CoreML13MLComputePlanC11deviceUsage3forAC06DeviceF0VSgAA16MLModelStructureO7ProgramV9OperationV_tF"
+      }
+    }
+  },
+  "DeviceUsage": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML13MLComputePlanC11DeviceUsageV",
+    "members": {
+      "supported": {
+        "kind": "Var",
+        "type": "supported",
+        "usr": "s:6CoreML13MLComputePlanC11DeviceUsageV9supportedSayAA0cE0OGvp"
+      },
+      "preferred": {
+        "kind": "Var",
+        "type": "preferred",
+        "usr": "s:6CoreML13MLComputePlanC11DeviceUsageV9preferredAA0cE0Ovp"
+      }
+    }
+  },
+  "Cost": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML13MLComputePlanC4CostV",
+    "members": {
+      "weight": {
+        "kind": "Var",
+        "type": "weight",
+        "usr": "s:6CoreML13MLComputePlanC4CostV6weightSdvp"
+      }
+    }
+  },
+  "MLOptimizationHints": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML19MLOptimizationHintsV",
+    "members": {
+      "ReshapeFrequency": {
+        "kind": "Enum",
+        "type": "ReshapeFrequency",
+        "usr": "s:6CoreML19MLOptimizationHintsV16ReshapeFrequencyO"
+      },
+      "SpecializationStrategy": {
+        "kind": "Enum",
+        "type": "SpecializationStrategy",
+        "usr": "s:6CoreML19MLOptimizationHintsV22SpecializationStrategyO"
+      },
+      "reshapeFrequency": {
+        "kind": "Var",
+        "type": "reshapeFrequency",
+        "usr": "s:6CoreML19MLOptimizationHintsV16reshapeFrequencyAC07ReshapeF0Ovp"
+      },
+      "specializationStrategy": {
+        "kind": "Var",
+        "type": "specializationStrategy",
+        "usr": "s:6CoreML19MLOptimizationHintsV22specializationStrategyAC014SpecializationF0Ovp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "s:6CoreML19MLOptimizationHintsVACycfc"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:6CoreML19MLOptimizationHintsV2eeoiySbAC_ACtFZ"
+      }
+    }
+  },
+  "ReshapeFrequency": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "s:6CoreML19MLOptimizationHintsV16ReshapeFrequencyO",
+    "members": {
+      "frequent": {
+        "kind": "EnumElement",
+        "type": "frequent",
+        "usr": "s:6CoreML19MLOptimizationHintsV16ReshapeFrequencyO8frequentyA2EmF"
+      },
+      "infrequent": {
+        "kind": "EnumElement",
+        "type": "infrequent",
+        "usr": "s:6CoreML19MLOptimizationHintsV16ReshapeFrequencyO10infrequentyA2EmF"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:6CoreML19MLOptimizationHintsV16ReshapeFrequencyO8rawValueAESgSi_tcfc"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:6CoreML19MLOptimizationHintsV16ReshapeFrequencyO8RawValuea"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:6CoreML19MLOptimizationHintsV16ReshapeFrequencyO8rawValueSivp"
+      }
+    }
+  },
+  "SpecializationStrategy": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "s:6CoreML19MLOptimizationHintsV22SpecializationStrategyO",
+    "members": {
+      "default": {
+        "kind": "EnumElement",
+        "type": "default",
+        "usr": "s:6CoreML19MLOptimizationHintsV22SpecializationStrategyO7defaultyA2EmF"
+      },
+      "fastPrediction": {
+        "kind": "EnumElement",
+        "type": "fastPrediction",
+        "usr": "s:6CoreML19MLOptimizationHintsV22SpecializationStrategyO14fastPredictionyA2EmF"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:6CoreML19MLOptimizationHintsV22SpecializationStrategyO8rawValueAESgSi_tcfc"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:6CoreML19MLOptimizationHintsV22SpecializationStrategyO8RawValuea"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:6CoreML19MLOptimizationHintsV22SpecializationStrategyO8rawValueSivp"
+      }
+    }
+  },
+  "MLShapedArray": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML13MLShapedArrayV",
+    "members": {
+      "ArrayLiteralElement": {
+        "kind": "TypeAlias",
+        "type": "ArrayLiteralElement",
+        "usr": "s:6CoreML13MLShapedArrayV0D14LiteralElementa"
+      },
+      "SubSequence": {
+        "kind": "TypeAlias",
+        "type": "SubSequence",
+        "usr": "s:6CoreML13MLShapedArrayV11SubSequencea"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(data:shape:)",
+        "usr": "s:6CoreML13MLShapedArrayV4data5shapeACyxG10Foundation4DataV_SaySiGtcfc"
+      },
+      "shape": {
+        "kind": "Var",
+        "type": "shape",
+        "usr": "s:6CoreML13MLShapedArrayV5shapeSaySiGvp"
+      },
+      "strides": {
+        "kind": "Var",
+        "type": "strides",
+        "usr": "s:6CoreML13MLShapedArrayV7stridesSaySiGvp"
+      },
+      "withUnsafeShapedBufferPointer": {
+        "kind": "Func",
+        "type": "withUnsafeShapedBufferPointer(_:)",
+        "usr": "s:6CoreML13MLShapedArrayV29withUnsafeShapedBufferPointeryqd__qd__SRyxG_SaySiGAFtKXEKlF"
+      },
+      "withUnsafeMutableShapedBufferPointer": {
+        "kind": "Func",
+        "type": "withUnsafeMutableShapedBufferPointer(using:_:)",
+        "usr": "s:6CoreML13MLShapedArrayV36withUnsafeMutableShapedBufferPointer5using_qd__AA0cdI6LayoutO_qd__SryxGz_SaySiGAItKXEtKlF"
+      },
+      "withPixelBufferIfAvailable": {
+        "kind": "Func",
+        "type": "withPixelBufferIfAvailable(_:)",
+        "usr": "s:6CoreML13MLShapedArrayV26withPixelBufferIfAvailableyqd__Sgqd__So11CVBufferRefaKXEKlF"
+      },
+      "withMutablePixelBufferIfAvailable": {
+        "kind": "Func",
+        "type": "withMutablePixelBufferIfAvailable(_:)",
+        "usr": "s:6CoreML13MLShapedArrayV33withMutablePixelBufferIfAvailableyqd__Sgqd__So11CVBufferRefaKXEKlF"
+      },
+      "Element": {
+        "kind": "TypeAlias",
+        "type": "Element",
+        "usr": "s:6CoreML13MLShapedArrayV7Elementa"
+      },
+      "Index": {
+        "kind": "TypeAlias",
+        "type": "Index",
+        "usr": "s:6CoreML13MLShapedArrayV5Indexa"
+      },
+      "Indices": {
+        "kind": "TypeAlias",
+        "type": "Indices",
+        "usr": "s:6CoreML13MLShapedArrayV7Indicesa"
+      },
+      "Iterator": {
+        "kind": "TypeAlias",
+        "type": "Iterator",
+        "usr": "s:6CoreML13MLShapedArrayV8Iteratora"
+      },
+      "Scalar": {
+        "kind": "TypeAlias",
+        "type": "Scalar",
+        "usr": "s:6CoreML13MLShapedArrayV6Scalara"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:6CoreML13MLShapedArrayVAASERzrlE6encode2toys7Encoder_p_tKF"
+      },
+      "description": {
+        "kind": "Var",
+        "type": "description",
+        "usr": "s:6CoreML13MLShapedArrayV11descriptionSSvp"
+      },
+      "indices": {
+        "kind": "Var",
+        "type": "indices",
+        "usr": "s:6CoreML13MLShapedArrayV7indicesSnySiGvp"
+      },
+      "startIndex": {
+        "kind": "Var",
+        "type": "startIndex",
+        "usr": "s:6CoreML13MLShapedArrayV10startIndexSivp"
+      },
+      "endIndex": {
+        "kind": "Var",
+        "type": "endIndex",
+        "usr": "s:6CoreML13MLShapedArrayV8endIndexSivp"
+      },
+      "subscript": {
+        "kind": "Subscript",
+        "type": "subscript(_:)",
+        "usr": "s:6CoreML13MLShapedArrayVyAA0cD5SliceVyxGqd__cSlRd__SnySiG7ElementRtd__luip"
+      },
+      "reshaped": {
+        "kind": "Func",
+        "type": "reshaped(to:)",
+        "usr": "s:6CoreML13MLShapedArrayV8reshaped2toACyxGSaySiG_tF"
+      },
+      "squeezingShape": {
+        "kind": "Func",
+        "type": "squeezingShape()",
+        "usr": "s:6CoreML13MLShapedArrayV14squeezingShapeACyxGyF"
+      },
+      "expandingShape": {
+        "kind": "Func",
+        "type": "expandingShape(at:)",
+        "usr": "s:6CoreML13MLShapedArrayV14expandingShape2atACyxGSi_tF"
+      },
+      "transposed": {
+        "kind": "Func",
+        "type": "transposed(permutation:)",
+        "usr": "s:6CoreML13MLShapedArrayV10transposed11permutationACyxGSaySiG_tF"
+      },
+      "changingLayout": {
+        "kind": "Func",
+        "type": "changingLayout(to:)",
+        "usr": "s:6CoreML13MLShapedArrayV14changingLayout2toACyxGAA0cd6BufferF0O_tF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:6CoreML13MLShapedArrayVAASQRzrlE2eeoiySbACyxG_AEtFZ"
+      }
+    }
+  },
+  "MLShapedArrayBufferLayout": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "s:6CoreML25MLShapedArrayBufferLayoutO",
+    "members": {
+      "firstMajorContiguous": {
+        "kind": "EnumElement",
+        "type": "firstMajorContiguous",
+        "usr": "s:6CoreML25MLShapedArrayBufferLayoutO20firstMajorContiguousyA2CmF"
+      },
+      "lastMajorContiguous": {
+        "kind": "EnumElement",
+        "type": "lastMajorContiguous",
+        "usr": "s:6CoreML25MLShapedArrayBufferLayoutO19lastMajorContiguousyA2CmF"
+      },
+      "strides": {
+        "kind": "EnumElement",
+        "type": "strides",
+        "usr": "s:6CoreML25MLShapedArrayBufferLayoutO7stridesyACSaySiGcACmF"
+      }
+    }
+  },
+  "MLShapedArrayScalar": {
+    "kind": "Protocol",
+    "module": "CoreML",
+    "usr": "s:6CoreML19MLShapedArrayScalarP",
+    "members": {
+      "multiArrayDataType": {
+        "kind": "Var",
+        "type": "multiArrayDataType",
+        "usr": "s:6CoreML19MLShapedArrayScalarP05multiD8DataTypeSo07MLMultidgH0VvpZ"
+      }
+    }
+  },
+  "MLModelStructure": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "s:6CoreML16MLModelStructureO",
+    "members": {
+      "neuralNetwork": {
+        "kind": "EnumElement",
+        "type": "neuralNetwork",
+        "usr": "s:6CoreML16MLModelStructureO13neuralNetworkyA2C06NeuralF0VcACmF"
+      },
+      "program": {
+        "kind": "EnumElement",
+        "type": "program",
+        "usr": "s:6CoreML16MLModelStructureO7programyA2C7ProgramVcACmF"
+      },
+      "pipeline": {
+        "kind": "EnumElement",
+        "type": "pipeline",
+        "usr": "s:6CoreML16MLModelStructureO8pipelineyA2C8PipelineVcACmF"
+      },
+      "unsupported": {
+        "kind": "EnumElement",
+        "type": "unsupported",
+        "usr": "s:6CoreML16MLModelStructureO11unsupportedyA2CmF"
+      },
+      "load": {
+        "kind": "Func",
+        "type": "load(asset:)",
+        "usr": "s:6CoreML16MLModelStructureO4load5assetACSo0C5AssetC_tYaKFZ"
+      }
+    }
+  },
+  "Program": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML16MLModelStructureO7ProgramV",
+    "members": {
+      "Binding": {
+        "kind": "Enum",
+        "type": "Binding",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV7BindingO"
+      },
+      "functions": {
+        "kind": "Var",
+        "type": "functions",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV9functionsSDySSAE8FunctionVGvp"
+      }
+    }
+  },
+  "ValueType": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML16MLModelStructureO7ProgramV9ValueTypeV",
+    "members": {}
+  },
+  "Value": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML16MLModelStructureO7ProgramV5ValueV",
+    "members": {}
+  },
+  "NamedValueType": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML16MLModelStructureO7ProgramV14NamedValueTypeV",
+    "members": {
+      "name": {
+        "kind": "Var",
+        "type": "name",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV14NamedValueTypeV4nameSSvp"
+      },
+      "type": {
+        "kind": "Var",
+        "type": "type",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV14NamedValueTypeV4typeAE0gH0Vvp"
+      }
+    }
+  },
+  "Binding": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "s:6CoreML16MLModelStructureO7ProgramV7BindingO",
+    "members": {
+      "value": {
+        "kind": "EnumElement",
+        "type": "value",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV7BindingO5valueyAgE5ValueVcAGmF"
+      },
+      "name": {
+        "kind": "EnumElement",
+        "type": "name",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV7BindingO4nameyAGSScAGmF"
+      }
+    }
+  },
+  "Argument": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML16MLModelStructureO7ProgramV8ArgumentV",
+    "members": {
+      "bindings": {
+        "kind": "Var",
+        "type": "bindings",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV8ArgumentV8bindingsSayAE7BindingOGvp"
+      }
+    }
+  },
+  "Function": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML16MLModelStructureO7ProgramV8FunctionV",
+    "members": {
+      "inputs": {
+        "kind": "Var",
+        "type": "inputs",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV8FunctionV6inputsSayAE14NamedValueTypeVGvp"
+      },
+      "block": {
+        "kind": "Var",
+        "type": "block",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV8FunctionV5blockAE5BlockVvp"
+      }
+    }
+  },
+  "Block": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML16MLModelStructureO7ProgramV5BlockV",
+    "members": {
+      "inputs": {
+        "kind": "Var",
+        "type": "inputs",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV5BlockV6inputsSayAE14NamedValueTypeVGvp"
+      },
+      "outputNames": {
+        "kind": "Var",
+        "type": "outputNames",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV5BlockV11outputNamesSaySSGvp"
+      },
+      "operations": {
+        "kind": "Var",
+        "type": "operations",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV5BlockV10operationsSayAE9OperationVGvp"
+      }
+    }
+  },
+  "Operation": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML16MLModelStructureO7ProgramV9OperationV",
+    "members": {
+      "operatorName": {
+        "kind": "Var",
+        "type": "operatorName",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV9OperationV12operatorNameSSvp"
+      },
+      "inputs": {
+        "kind": "Var",
+        "type": "inputs",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV9OperationV6inputsSDySSAE8ArgumentVGvp"
+      },
+      "outputs": {
+        "kind": "Var",
+        "type": "outputs",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV9OperationV7outputsSayAE14NamedValueTypeVGvp"
+      },
+      "blocks": {
+        "kind": "Var",
+        "type": "blocks",
+        "usr": "s:6CoreML16MLModelStructureO7ProgramV9OperationV6blocksSayAE5BlockVGvp"
+      }
+    }
+  },
+  "NeuralNetwork": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML16MLModelStructureO13NeuralNetworkV",
+    "members": {
+      "layers": {
+        "kind": "Var",
+        "type": "layers",
+        "usr": "s:6CoreML16MLModelStructureO13NeuralNetworkV6layersSayAE5LayerVGvp"
+      }
+    }
+  },
+  "Layer": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML16MLModelStructureO13NeuralNetworkV5LayerV",
+    "members": {
+      "name": {
+        "kind": "Var",
+        "type": "name",
+        "usr": "s:6CoreML16MLModelStructureO13NeuralNetworkV5LayerV4nameSSvp"
+      },
+      "type": {
+        "kind": "Var",
+        "type": "type",
+        "usr": "s:6CoreML16MLModelStructureO13NeuralNetworkV5LayerV4typeSSvp"
+      },
+      "inputNames": {
+        "kind": "Var",
+        "type": "inputNames",
+        "usr": "s:6CoreML16MLModelStructureO13NeuralNetworkV5LayerV10inputNamesSaySSGvp"
+      },
+      "outputNames": {
+        "kind": "Var",
+        "type": "outputNames",
+        "usr": "s:6CoreML16MLModelStructureO13NeuralNetworkV5LayerV11outputNamesSaySSGvp"
+      }
+    }
+  },
+  "Pipeline": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML16MLModelStructureO8PipelineV",
+    "members": {
+      "subModelNames": {
+        "kind": "Var",
+        "type": "subModelNames",
+        "usr": "s:6CoreML16MLModelStructureO8PipelineV13subModelNamesSaySSGvp"
+      },
+      "subModels": {
+        "kind": "Var",
+        "type": "subModels",
+        "usr": "s:6CoreML16MLModelStructureO8PipelineV9subModelsSayACGvp"
+      }
+    }
+  },
+  "MLComputePolicy": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML15MLComputePolicyV",
+    "members": {
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:6CoreML15MLComputePolicyV2eeoiySbAC_ACtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:6CoreML15MLComputePolicyV4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:6CoreML15MLComputePolicyV9hashValueSivp"
+      },
+      "description": {
+        "kind": "Var",
+        "type": "description",
+        "usr": "s:6CoreML15MLComputePolicyV11descriptionSSvp"
+      },
+      "customMirror": {
+        "kind": "Var",
+        "type": "customMirror",
+        "usr": "s:6CoreML15MLComputePolicyV12customMirrors0F0Vvp"
+      },
+      "cpuAndGPU": {
+        "kind": "Var",
+        "type": "cpuAndGPU",
+        "usr": "s:6CoreML15MLComputePolicyV9cpuAndGPUACvpZ"
+      },
+      "cpuOnly": {
+        "kind": "Var",
+        "type": "cpuOnly",
+        "usr": "s:6CoreML15MLComputePolicyV7cpuOnlyACvpZ"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_:)",
+        "usr": "s:6CoreML15MLComputePolicyVyACSo0C5UnitsVcfc"
+      }
+    }
+  },
+  "MLShapedArrayRangeExpression": {
+    "kind": "Protocol",
+    "module": "CoreML",
+    "usr": "s:6CoreML28MLShapedArrayRangeExpressionP",
+    "members": {
+      "relative": {
+        "kind": "Func",
+        "type": "relative(toShapedArrayAxis:)",
+        "usr": "s:6CoreML28MLShapedArrayRangeExpressionP8relative08toShapedD4AxisSnySiGAF_tF"
+      }
+    }
+  },
+  "MLTensorScalar": {
+    "kind": "Protocol",
+    "module": "CoreML",
+    "usr": "s:6CoreML14MLTensorScalarP",
+    "members": {}
+  },
+  "MLTensor": {
+    "kind": "Struct",
+    "module": "CoreML",
+    "usr": "s:6CoreML8MLTensorV",
+    "members": {
+      ".!": {
+        "kind": "Func",
+        "type": ".!(_:)",
+        "usr": "s:6CoreML8MLTensorV2znopyA2CFZ"
+      },
+      ".&": {
+        "kind": "Func",
+        "type": ".&(_:_:)",
+        "usr": "s:6CoreML8MLTensorV2zaoiyA2C_ACtFZ"
+      },
+      ".|": {
+        "kind": "Func",
+        "type": ".|(_:_:)",
+        "usr": "s:6CoreML8MLTensorV2zooiyA2C_ACtFZ"
+      },
+      ".^": {
+        "kind": "Func",
+        "type": ".^(_:_:)",
+        "usr": "s:6CoreML8MLTensorV2zxoiyA2C_ACtFZ"
+      },
+      "all": {
+        "kind": "Func",
+        "type": "all(alongAxes:keepRank:)",
+        "usr": "s:6CoreML8MLTensorV3all9alongAxes8keepRankACSaySiG_SbtF"
+      },
+      "any": {
+        "kind": "Func",
+        "type": "any(alongAxes:keepRank:)",
+        "usr": "s:6CoreML8MLTensorV3any9alongAxes8keepRankACSaySiG_SbtF"
+      },
+      "cast": {
+        "kind": "Func",
+        "type": "cast(to:)",
+        "usr": "s:6CoreML8MLTensorV4cast2toACxm_tAA0C6ScalarRzlF"
+      },
+      "squeezingShape": {
+        "kind": "Func",
+        "type": "squeezingShape(at:)",
+        "usr": "s:6CoreML8MLTensorV14squeezingShape2atACSaySiG_tF"
+      },
+      "expandingShape": {
+        "kind": "Func",
+        "type": "expandingShape(at:)",
+        "usr": "s:6CoreML8MLTensorV14expandingShape2atACSaySiG_tF"
+      },
+      "reshaped": {
+        "kind": "Func",
+        "type": "reshaped(to:)",
+        "usr": "s:6CoreML8MLTensorV8reshaped2toACSaySiG_tF"
+      },
+      "flattened": {
+        "kind": "Func",
+        "type": "flattened()",
+        "usr": "s:6CoreML8MLTensorV9flattenedACyF"
+      },
+      "transposed": {
+        "kind": "Func",
+        "type": "transposed(permutation:)",
+        "usr": "s:6CoreML8MLTensorV10transposed11permutationACSaySiG_tF"
+      },
+      "replacing": {
+        "kind": "Func",
+        "type": "replacing(with:atIndices:alongAxis:)",
+        "usr": "s:6CoreML8MLTensorV9replacing4with9atIndices9alongAxisA2C_ACSitF"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(bytesNoCopy:shape:scalarType:deallocator:)",
+        "usr": "s:6CoreML8MLTensorV11bytesNoCopy5shape10scalarType11deallocatorACSW_SaySiGAA0C6Scalar_pXp10Foundation4DataV11DeallocatorOtcfc"
+      },
+      "concatenated": {
+        "kind": "Func",
+        "type": "concatenated(with:alongAxis:)",
+        "usr": "s:6CoreML8MLTensorV12concatenated4with9alongAxisA2C_SitF"
+      },
+      "ArrayLiteralElement": {
+        "kind": "TypeAlias",
+        "type": "ArrayLiteralElement",
+        "usr": "s:6CoreML8MLTensorV19ArrayLiteralElementa"
+      },
+      "unstacked": {
+        "kind": "Func",
+        "type": "unstacked(alongAxis:)",
+        "usr": "s:6CoreML8MLTensorV9unstacked9alongAxisSayACGSi_tF"
+      },
+      "split": {
+        "kind": "Func",
+        "type": "split(sizes:alongAxis:)",
+        "usr": "s:6CoreML8MLTensorV5split5sizes9alongAxisSayACGSaySiG_SitF"
+      },
+      "reversed": {
+        "kind": "Func",
+        "type": "reversed(alongAxes:)",
+        "usr": "s:6CoreML8MLTensorV8reversed9alongAxesACSaySiG_tF"
+      },
+      "ResizeMethod": {
+        "kind": "Enum",
+        "type": "ResizeMethod",
+        "usr": "s:6CoreML8MLTensorV12ResizeMethodO"
+      },
+      "resized": {
+        "kind": "Func",
+        "type": "resized(to:method:)",
+        "usr": "s:6CoreML8MLTensorV7resized2to6methodACSi9newHeight_Si0G5Widtht_AC12ResizeMethodOtF"
+      },
+      "clamped": {
+        "kind": "Func",
+        "type": "clamped(to:)",
+        "usr": "s:6CoreML8MLTensorV7clamped2toACs19PartialRangeThroughVySfG_tF"
+      },
+      "softmax": {
+        "kind": "Func",
+        "type": "softmax(alongAxis:)",
+        "usr": "s:6CoreML8MLTensorV7softmax9alongAxisACSi_tF"
+      },
+      "+": {
+        "kind": "Func",
+        "type": "+(_:_:)",
+        "usr": "s:6CoreML8MLTensorV1poiyA2C_ACtFZ"
+      },
+      "+=": {
+        "kind": "Func",
+        "type": "+=(_:_:)",
+        "usr": "s:6CoreML8MLTensorV2peoiyyACz_ACtFZ"
+      },
+      "-": {
+        "kind": "Func",
+        "type": "-(_:)",
+        "usr": "s:6CoreML8MLTensorV1sopyA2CFZ"
+      },
+      "-=": {
+        "kind": "Func",
+        "type": "-=(_:_:)",
+        "usr": "s:6CoreML8MLTensorV2seoiyyACz_ACtFZ"
+      },
+      "*": {
+        "kind": "Func",
+        "type": "*(_:_:)",
+        "usr": "s:6CoreML8MLTensorV1moiyA2C_ACtFZ"
+      },
+      "*=": {
+        "kind": "Func",
+        "type": "*=(_:_:)",
+        "usr": "s:6CoreML8MLTensorV2meoiyyACz_ACtFZ"
+      },
+      "/": {
+        "kind": "Func",
+        "type": "/(_:_:)",
+        "usr": "s:6CoreML8MLTensorV1doiyA2C_ACtFZ"
+      },
+      "/=": {
+        "kind": "Func",
+        "type": "/=(_:_:)",
+        "usr": "s:6CoreML8MLTensorV2deoiyyACz_ACtFZ"
+      },
+      "%": {
+        "kind": "Func",
+        "type": "%(_:_:)",
+        "usr": "s:6CoreML8MLTensorV1roiyA2C_ACtFZ"
+      },
+      "%=": {
+        "kind": "Func",
+        "type": "%=(_:_:)",
+        "usr": "s:6CoreML8MLTensorV2reoiyyACz_ACtFZ"
+      },
+      "pow": {
+        "kind": "Func",
+        "type": "pow(_:)",
+        "usr": "s:6CoreML8MLTensorV3powyA2CF"
+      },
+      "tiled": {
+        "kind": "Func",
+        "type": "tiled(multiples:)",
+        "usr": "s:6CoreML8MLTensorV5tiled9multiplesACSaySiG_tF"
+      },
+      "bandPart": {
+        "kind": "Func",
+        "type": "bandPart(lowerBandCount:upperBandCount:)",
+        "usr": "s:6CoreML8MLTensorV8bandPart14lowerBandCount05uppergH0ACSi_SitF"
+      },
+      "cumulativeProduct": {
+        "kind": "Func",
+        "type": "cumulativeProduct(alongAxis:)",
+        "usr": "s:6CoreML8MLTensorV17cumulativeProduct9alongAxisACSi_tF"
+      },
+      "cumulativeSum": {
+        "kind": "Func",
+        "type": "cumulativeSum(alongAxis:)",
+        "usr": "s:6CoreML8MLTensorV13cumulativeSum9alongAxisACSi_tF"
+      },
+      "topK": {
+        "kind": "Func",
+        "type": "topK(_:)",
+        "usr": "s:6CoreML8MLTensorV4topKyAC6values_AC7indicestSiF"
+      },
+      "PaddingMode": {
+        "kind": "Enum",
+        "type": "PaddingMode",
+        "usr": "s:6CoreML8MLTensorV11PaddingModeO"
+      },
+      "padded": {
+        "kind": "Func",
+        "type": "padded(forSizes:mode:)",
+        "usr": "s:6CoreML8MLTensorV6padded8forSizes4modeACSaySi6before_Si5aftertG_AC11PaddingModeOtF"
+      },
+      "argsort": {
+        "kind": "Func",
+        "type": "argsort(alongAxis:descendingOrder:)",
+        "usr": "s:6CoreML8MLTensorV7argsort9alongAxis15descendingOrderACSi_SbtF"
+      },
+      ".==": {
+        "kind": "Func",
+        "type": ".==(_:_:)",
+        "usr": "s:6CoreML8MLTensorV3zeeoiyA2C_ACtFZ"
+      },
+      ".!=": {
+        "kind": "Func",
+        "type": ".!=(_:_:)",
+        "usr": "s:6CoreML8MLTensorV3zneoiyA2C_ACtFZ"
+      },
+      ".>": {
+        "kind": "Func",
+        "type": ".>(_:_:)",
+        "usr": "s:6CoreML8MLTensorV2zgoiyA2C_ACtFZ"
+      },
+      ".>=": {
+        "kind": "Func",
+        "type": ".>=(_:_:)",
+        "usr": "s:6CoreML8MLTensorV3zgeoiyA2C_ACtFZ"
+      },
+      ".<": {
+        "kind": "Func",
+        "type": ".<(_:_:)",
+        "usr": "s:6CoreML8MLTensorV2zloiyA2C_ACtFZ"
+      },
+      ".<=": {
+        "kind": "Func",
+        "type": ".<=(_:_:)",
+        "usr": "s:6CoreML8MLTensorV3zleoiyA2C_ACtFZ"
+      },
+      "gathering": {
+        "kind": "Func",
+        "type": "gathering(atIndices:)",
+        "usr": "s:6CoreML8MLTensorV9gathering9atIndicesA2C_tF"
+      },
+      "subscript": {
+        "kind": "Subscript",
+        "type": "subscript(_:)",
+        "usr": "s:6CoreML8MLTensorVyAcA0C15RangeExpression_pSgd_tcip"
+      },
+      "sum": {
+        "kind": "Func",
+        "type": "sum(alongAxes:keepRank:)",
+        "usr": "s:6CoreML8MLTensorV3sum9alongAxes8keepRankACSaySiG_SbtF"
+      },
+      "mean": {
+        "kind": "Func",
+        "type": "mean(alongAxes:keepRank:)",
+        "usr": "s:6CoreML8MLTensorV4mean9alongAxes8keepRankACSaySiG_SbtF"
+      },
+      "min": {
+        "kind": "Func",
+        "type": "min(alongAxes:keepRank:)",
+        "usr": "s:6CoreML8MLTensorV3min9alongAxes8keepRankACSaySiG_SbtF"
+      },
+      "max": {
+        "kind": "Func",
+        "type": "max(alongAxes:keepRank:)",
+        "usr": "s:6CoreML8MLTensorV3max9alongAxes8keepRankACSaySiG_SbtF"
+      },
+      "product": {
+        "kind": "Func",
+        "type": "product(alongAxes:keepRank:)",
+        "usr": "s:6CoreML8MLTensorV7product9alongAxes8keepRankACSaySiG_SbtF"
+      },
+      "argmax": {
+        "kind": "Func",
+        "type": "argmax(alongAxis:keepRank:)",
+        "usr": "s:6CoreML8MLTensorV6argmax9alongAxis8keepRankACSi_SbtF"
+      },
+      "argmin": {
+        "kind": "Func",
+        "type": "argmin(alongAxis:keepRank:)",
+        "usr": "s:6CoreML8MLTensorV6argmin9alongAxis8keepRankACSi_SbtF"
+      },
+      "abs": {
+        "kind": "Func",
+        "type": "abs()",
+        "usr": "s:6CoreML8MLTensorV3absACyF"
+      },
+      "acos": {
+        "kind": "Func",
+        "type": "acos()",
+        "usr": "s:6CoreML8MLTensorV4acosACyF"
+      },
+      "acosh": {
+        "kind": "Func",
+        "type": "acosh()",
+        "usr": "s:6CoreML8MLTensorV5acoshACyF"
+      },
+      "asin": {
+        "kind": "Func",
+        "type": "asin()",
+        "usr": "s:6CoreML8MLTensorV4asinACyF"
+      },
+      "asinh": {
+        "kind": "Func",
+        "type": "asinh()",
+        "usr": "s:6CoreML8MLTensorV5asinhACyF"
+      },
+      "atan": {
+        "kind": "Func",
+        "type": "atan()",
+        "usr": "s:6CoreML8MLTensorV4atanACyF"
+      },
+      "atanh": {
+        "kind": "Func",
+        "type": "atanh()",
+        "usr": "s:6CoreML8MLTensorV5atanhACyF"
+      },
+      "ceil": {
+        "kind": "Func",
+        "type": "ceil()",
+        "usr": "s:6CoreML8MLTensorV4ceilACyF"
+      },
+      "cos": {
+        "kind": "Func",
+        "type": "cos()",
+        "usr": "s:6CoreML8MLTensorV3cosACyF"
+      },
+      "cosh": {
+        "kind": "Func",
+        "type": "cosh()",
+        "usr": "s:6CoreML8MLTensorV4coshACyF"
+      },
+      "exp": {
+        "kind": "Func",
+        "type": "exp()",
+        "usr": "s:6CoreML8MLTensorV3expACyF"
+      },
+      "exp2": {
+        "kind": "Func",
+        "type": "exp2()",
+        "usr": "s:6CoreML8MLTensorV4exp2ACyF"
+      },
+      "floor": {
+        "kind": "Func",
+        "type": "floor()",
+        "usr": "s:6CoreML8MLTensorV5floorACyF"
+      },
+      "log": {
+        "kind": "Func",
+        "type": "log()",
+        "usr": "s:6CoreML8MLTensorV3logACyF"
+      },
+      "reciprocal": {
+        "kind": "Func",
+        "type": "reciprocal()",
+        "usr": "s:6CoreML8MLTensorV10reciprocalACyF"
+      },
+      "round": {
+        "kind": "Func",
+        "type": "round()",
+        "usr": "s:6CoreML8MLTensorV5roundACyF"
+      },
+      "rsqrt": {
+        "kind": "Func",
+        "type": "rsqrt()",
+        "usr": "s:6CoreML8MLTensorV5rsqrtACyF"
+      },
+      "sign": {
+        "kind": "Func",
+        "type": "sign()",
+        "usr": "s:6CoreML8MLTensorV4signACyF"
+      },
+      "sin": {
+        "kind": "Func",
+        "type": "sin()",
+        "usr": "s:6CoreML8MLTensorV3sinACyF"
+      },
+      "sinh": {
+        "kind": "Func",
+        "type": "sinh()",
+        "usr": "s:6CoreML8MLTensorV4sinhACyF"
+      },
+      "squareRoot": {
+        "kind": "Func",
+        "type": "squareRoot()",
+        "usr": "s:6CoreML8MLTensorV10squareRootACyF"
+      },
+      "squared": {
+        "kind": "Func",
+        "type": "squared()",
+        "usr": "s:6CoreML8MLTensorV7squaredACyF"
+      },
+      "tan": {
+        "kind": "Func",
+        "type": "tan()",
+        "usr": "s:6CoreML8MLTensorV3tanACyF"
+      },
+      "tanh": {
+        "kind": "Func",
+        "type": "tanh()",
+        "usr": "s:6CoreML8MLTensorV4tanhACyF"
+      },
+      "matmul": {
+        "kind": "Func",
+        "type": "matmul(_:)",
+        "usr": "s:6CoreML8MLTensorV6matmulyA2CF"
+      },
+      "FloatLiteralType": {
+        "kind": "TypeAlias",
+        "type": "FloatLiteralType",
+        "usr": "s:6CoreML8MLTensorV16FloatLiteralTypea"
+      },
+      "IntegerLiteralType": {
+        "kind": "TypeAlias",
+        "type": "IntegerLiteralType",
+        "usr": "s:6CoreML8MLTensorV18IntegerLiteralTypea"
+      },
+      "BooleanLiteralType": {
+        "kind": "TypeAlias",
+        "type": "BooleanLiteralType",
+        "usr": "s:6CoreML8MLTensorV18BooleanLiteralTypea"
+      },
+      "rank": {
+        "kind": "Var",
+        "type": "rank",
+        "usr": "s:6CoreML8MLTensorV4rankSivp"
+      },
+      "shape": {
+        "kind": "Var",
+        "type": "shape",
+        "usr": "s:6CoreML8MLTensorV5shapeSaySiGvp"
+      },
+      "scalarCount": {
+        "kind": "Var",
+        "type": "scalarCount",
+        "usr": "s:6CoreML8MLTensorV11scalarCountSivp"
+      },
+      "isScalar": {
+        "kind": "Var",
+        "type": "isScalar",
+        "usr": "s:6CoreML8MLTensorV8isScalarSbvp"
+      },
+      "scalarType": {
+        "kind": "Var",
+        "type": "scalarType",
+        "usr": "s:6CoreML8MLTensorV10scalarTypeAA0C6Scalar_pXpvp"
+      },
+      "description": {
+        "kind": "Var",
+        "type": "description",
+        "usr": "s:6CoreML8MLTensorV11descriptionSSvp"
+      },
+      "customMirror": {
+        "kind": "Var",
+        "type": "customMirror",
+        "usr": "s:6CoreML8MLTensorV12customMirrors0E0Vvp"
+      },
+      "shapedArray": {
+        "kind": "Func",
+        "type": "shapedArray(of:)",
+        "usr": "s:6CoreML8MLTensorV11shapedArray2ofAA08MLShapedE0VyxGxm_tYaAA0gE6ScalarRzAA0cH0RzlF"
+      }
+    }
+  },
+  "ResizeMethod": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "s:6CoreML8MLTensorV12ResizeMethodO",
+    "members": {
+      "bilinear": {
+        "kind": "EnumElement",
+        "type": "bilinear",
+        "usr": "s:6CoreML8MLTensorV12ResizeMethodO8bilinearyAESb_tcAEmF"
+      },
+      "nearestNeighbor": {
+        "kind": "EnumElement",
+        "type": "nearestNeighbor",
+        "usr": "s:6CoreML8MLTensorV12ResizeMethodO15nearestNeighboryA2EmF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:6CoreML8MLTensorV12ResizeMethodO2eeoiySbAE_AEtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:6CoreML8MLTensorV12ResizeMethodO4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:6CoreML8MLTensorV12ResizeMethodO9hashValueSivp"
+      },
+      "description": {
+        "kind": "Var",
+        "type": "description",
+        "usr": "s:6CoreML8MLTensorV12ResizeMethodO11descriptionSSvp"
+      }
+    }
+  },
+  "PaddingMode": {
+    "kind": "Enum",
+    "module": "CoreML",
+    "usr": "s:6CoreML8MLTensorV11PaddingModeO",
+    "members": {
+      "constant": {
+        "kind": "EnumElement",
+        "type": "constant",
+        "usr": "s:6CoreML8MLTensorV11PaddingModeO8constantyAESfcAEmF"
+      },
+      "reflection": {
+        "kind": "EnumElement",
+        "type": "reflection",
+        "usr": "s:6CoreML8MLTensorV11PaddingModeO10reflectionyA2EmF"
+      },
+      "symmetric": {
+        "kind": "EnumElement",
+        "type": "symmetric",
+        "usr": "s:6CoreML8MLTensorV11PaddingModeO9symmetricyA2EmF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:6CoreML8MLTensorV11PaddingModeO2eeoiySbAE_AEtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:6CoreML8MLTensorV11PaddingModeO4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:6CoreML8MLTensorV11PaddingModeO9hashValueSivp"
+      },
+      "description": {
+        "kind": "Var",
+        "type": "description",
+        "usr": "s:6CoreML8MLTensorV11PaddingModeO11descriptionSSvp"
+      }
+    }
+  },
+  "Int": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:Si",
+    "members": {}
+  },
+  "Range": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:Sn",
+    "members": {
+      "relative": {
+        "kind": "Func",
+        "type": "relative(toShapedArrayAxis:)",
+        "usr": "s:Sn6CoreMLSiRszrlE8relative17toShapedArrayAxisSnySiGAD_tF"
+      }
+    }
+  },
+  "ClosedRange": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:SN",
+    "members": {
+      "relative": {
+        "kind": "Func",
+        "type": "relative(toShapedArrayAxis:)",
+        "usr": "s:SN6CoreMLSiRszrlE8relative17toShapedArrayAxisSnySiGAD_tF"
+      }
+    }
+  },
+  "PartialRangeFrom": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:s16PartialRangeFromV",
+    "members": {
+      "relative": {
+        "kind": "Func",
+        "type": "relative(toShapedArrayAxis:)",
+        "usr": "s:s16PartialRangeFromV6CoreMLSiRszrlE8relative17toShapedArrayAxisSnySiGAF_tF"
+      }
+    }
+  },
+  "PartialRangeUpTo": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:s16PartialRangeUpToV",
+    "members": {
+      "relative": {
+        "kind": "Func",
+        "type": "relative(toShapedArrayAxis:)",
+        "usr": "s:s16PartialRangeUpToV6CoreMLSiRszrlE8relative17toShapedArrayAxisSnySiGAF_tF"
+      }
+    }
+  },
+  "PartialRangeThrough": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:s19PartialRangeThroughV",
+    "members": {
+      "relative": {
+        "kind": "Func",
+        "type": "relative(toShapedArrayAxis:)",
+        "usr": "s:s19PartialRangeThroughV6CoreMLSiRszrlE8relative17toShapedArrayAxisSnySiGAF_tF"
+      }
+    }
+  },
+  "UnsafeBufferPointer": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:SR",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_:)",
+        "usr": "s:SR6CoreMLEySRyxGSo12MLMultiArrayCKcfc"
+      }
+    }
+  },
+  "UnsafeMutableBufferPointer": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:Sr",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_:)",
+        "usr": "s:Sr6CoreMLEySryxGSo12MLMultiArrayCKcfc"
+      }
+    }
+  },
+  "Int32": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:s5Int32V",
+    "members": {
+      "multiArrayDataType": {
+        "kind": "Var",
+        "type": "multiArrayDataType",
+        "usr": "s:s5Int32V6CoreMLE18multiArrayDataTypeSo07MLMultiefG0VvpZ"
+      }
+    }
+  },
+  "Double": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:Sd",
+    "members": {
+      "multiArrayDataType": {
+        "kind": "Var",
+        "type": "multiArrayDataType",
+        "usr": "s:Sd6CoreMLE18multiArrayDataTypeSo07MLMultideF0VvpZ"
+      }
+    }
+  },
+  "Float": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:Sf",
+    "members": {
+      "multiArrayDataType": {
+        "kind": "Var",
+        "type": "multiArrayDataType",
+        "usr": "s:Sf6CoreMLE18multiArrayDataTypeSo07MLMultideF0VvpZ"
+      }
+    }
+  },
+  "Float16": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:s7Float16V",
+    "members": {
+      "multiArrayDataType": {
+        "kind": "Var",
+        "type": "multiArrayDataType",
+        "usr": "s:s7Float16V6CoreMLE18multiArrayDataTypeSo07MLMultiefG0VvpZ"
+      }
+    }
+  },
+  "Int8": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:s4Int8V",
+    "members": {}
+  },
+  "Int16": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:s5Int16V",
+    "members": {}
+  },
+  "UInt8": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:s5UInt8V",
+    "members": {}
+  },
+  "UInt16": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:s6UInt16V",
+    "members": {}
+  },
+  "UInt32": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:s6UInt32V",
+    "members": {}
+  },
+  "Bool": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:Sb",
+    "members": {}
+  }
+}

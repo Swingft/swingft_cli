@@ -1,0 +1,1084 @@
+[
+  {
+    "A_name" : "ProgressResponse",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 13, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "progressObject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 19, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Progress?",
+          "Response?"
+        ],
+        "I_parameters" : [
+          "progress",
+          "response"
+        ]
+      },
+      {
+        "A_name" : "progress",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 25, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "completed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 38, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 13, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "progressObject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 19, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Progress?",
+      "Response?"
+    ],
+    "I_parameters" : [
+      "progress",
+      "response"
+    ]
+  },
+  {
+    "A_name" : "progress",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 25, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 38, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "MoyaProviderType",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyObject"
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 43, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 48, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Target",
+          "DispatchQueue?",
+          "Moya.ProgressBlock?",
+          "@escaping Moya.Completion"
+        ],
+        "I_parameters" : [
+          "_",
+          "callbackQueue",
+          "progress",
+          "completion"
+        ],
+        "J_returnType" : "-> Cancellable"
+      }
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 48, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Target",
+      "DispatchQueue?",
+      "Moya.ProgressBlock?",
+      "@escaping Moya.Completion"
+    ],
+    "I_parameters" : [
+      "_",
+      "callbackQueue",
+      "progress",
+      "completion"
+    ],
+    "J_returnType" : "-> Cancellable"
+  },
+  {
+    "A_name" : "MoyaProvider",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "MoyaProviderType"
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 52, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "endpointClosure",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 67, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "requestClosure",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 70, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "stubClosure",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 74, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 76, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "plugins",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 80, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "trackInflights",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 82, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inflightRequests",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 84, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "internalInflightRequests",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "Atomic"
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 86, Column: 5",
+        "H_initialValue" : "[:]"
+      },
+      {
+        "A_name" : "callbackQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 90, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 92, Column: 5",
+        "H_initialValue" : "NSRecursiveLock()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 95, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping EndpointClosure",
+          "@escaping RequestClosure",
+          "@escaping StubClosure",
+          "DispatchQueue?",
+          "Session",
+          "[PluginType]",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "endpointClosure",
+          "requestClosure",
+          "stubClosure",
+          "callbackQueue",
+          "session",
+          "plugins",
+          "trackInflights"
+        ]
+      },
+      {
+        "A_name" : "endpoint",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 113, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Target"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Endpoint"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 118, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "callbackQueue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider.swift - Line: 124, Column: 9",
+            "H_initialValue" : "callbackQueue ?? self.callbackQueue"
+          }
+        ],
+        "I_parameterType" : [
+          "Target",
+          "DispatchQueue?",
+          "ProgressBlock?",
+          "@escaping Completion"
+        ],
+        "I_parameters" : [
+          "_",
+          "callbackQueue",
+          "progress",
+          "completion"
+        ],
+        "J_returnType" : "-> Cancellable"
+      },
+      {
+        "A_name" : "stubRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 132, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "callbackQueue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider.swift - Line: 134, Column: 9",
+            "H_initialValue" : "callbackQueue ?? self.callbackQueue"
+          },
+          {
+            "A_name" : "cancellableToken",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider.swift - Line: 135, Column: 9",
+            "H_initialValue" : "CancellableToken { }"
+          },
+          {
+            "A_name" : "preparedRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider.swift - Line: 136, Column: 9",
+            "H_initialValue" : "notifyPluginsOfImpendingStub(for: request, target: target)"
+          },
+          {
+            "A_name" : "plugins",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider.swift - Line: 137, Column: 9",
+            "H_initialValue" : "self.plugins"
+          },
+          {
+            "A_name" : "stub",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider.swift - Line: 138, Column: 9",
+            "H_initialValue" : "createStubFunction(cancellableToken, forTarget: target, withCompletion: completion, endpoint: endpoint, plugins: plugins, request: preparedRequest)"
+          }
+        ],
+        "I_parameterType" : [
+          "Target",
+          "URLRequest",
+          "DispatchQueue?",
+          "@escaping Moya.Completion",
+          "Endpoint",
+          "Moya.StubBehavior"
+        ],
+        "I_parameters" : [
+          "_",
+          "request",
+          "callbackQueue",
+          "completion",
+          "endpoint",
+          "stubBehavior"
+        ],
+        "J_returnType" : "-> CancellableToken"
+      }
+    ]
+  },
+  {
+    "A_name" : "endpointClosure",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 67, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "requestClosure",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 70, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "stubClosure",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 74, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 76, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "plugins",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 80, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "trackInflights",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 82, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inflightRequests",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 84, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "internalInflightRequests",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "Atomic"
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 86, Column: 5",
+    "H_initialValue" : "[:]"
+  },
+  {
+    "A_name" : "callbackQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 90, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 92, Column: 5",
+    "H_initialValue" : "NSRecursiveLock()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 95, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping EndpointClosure",
+      "@escaping RequestClosure",
+      "@escaping StubClosure",
+      "DispatchQueue?",
+      "Session",
+      "[PluginType]",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "endpointClosure",
+      "requestClosure",
+      "stubClosure",
+      "callbackQueue",
+      "session",
+      "plugins",
+      "trackInflights"
+    ]
+  },
+  {
+    "A_name" : "endpoint",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 113, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Target"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Endpoint"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 118, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "callbackQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 124, Column: 9",
+        "H_initialValue" : "callbackQueue ?? self.callbackQueue"
+      }
+    ],
+    "I_parameterType" : [
+      "Target",
+      "DispatchQueue?",
+      "ProgressBlock?",
+      "@escaping Completion"
+    ],
+    "I_parameters" : [
+      "_",
+      "callbackQueue",
+      "progress",
+      "completion"
+    ],
+    "J_returnType" : "-> Cancellable"
+  },
+  {
+    "A_name" : "callbackQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 124, Column: 9",
+    "H_initialValue" : "callbackQueue ?? self.callbackQueue"
+  },
+  {
+    "A_name" : "stubRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 132, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "callbackQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 134, Column: 9",
+        "H_initialValue" : "callbackQueue ?? self.callbackQueue"
+      },
+      {
+        "A_name" : "cancellableToken",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 135, Column: 9",
+        "H_initialValue" : "CancellableToken { }"
+      },
+      {
+        "A_name" : "preparedRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 136, Column: 9",
+        "H_initialValue" : "notifyPluginsOfImpendingStub(for: request, target: target)"
+      },
+      {
+        "A_name" : "plugins",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 137, Column: 9",
+        "H_initialValue" : "self.plugins"
+      },
+      {
+        "A_name" : "stub",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 138, Column: 9",
+        "H_initialValue" : "createStubFunction(cancellableToken, forTarget: target, withCompletion: completion, endpoint: endpoint, plugins: plugins, request: preparedRequest)"
+      }
+    ],
+    "I_parameterType" : [
+      "Target",
+      "URLRequest",
+      "DispatchQueue?",
+      "@escaping Moya.Completion",
+      "Endpoint",
+      "Moya.StubBehavior"
+    ],
+    "I_parameters" : [
+      "_",
+      "request",
+      "callbackQueue",
+      "completion",
+      "endpoint",
+      "stubBehavior"
+    ],
+    "J_returnType" : "-> CancellableToken"
+  },
+  {
+    "A_name" : "callbackQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 134, Column: 9",
+    "H_initialValue" : "callbackQueue ?? self.callbackQueue"
+  },
+  {
+    "A_name" : "cancellableToken",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 135, Column: 9",
+    "H_initialValue" : "CancellableToken { }"
+  },
+  {
+    "A_name" : "preparedRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 136, Column: 9",
+    "H_initialValue" : "notifyPluginsOfImpendingStub(for: request, target: target)"
+  },
+  {
+    "A_name" : "plugins",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 137, Column: 9",
+    "H_initialValue" : "self.plugins"
+  },
+  {
+    "A_name" : "stub",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 138, Column: 9",
+    "H_initialValue" : "createStubFunction(cancellableToken, forTarget: target, withCompletion: completion, endpoint: endpoint, plugins: plugins, request: preparedRequest)"
+  },
+  {
+    "A_name" : "killTimeOffset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 148, Column: 13",
+    "H_initialValue" : "Int64(CDouble(delay) * CDouble(NSEC_PER_SEC))"
+  },
+  {
+    "A_name" : "killTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 149, Column: 13",
+    "H_initialValue" : "DispatchTime.now() + Double(killTimeOffset) \/ Double(NSEC_PER_SEC)"
+  },
+  {
+    "A_name" : "StubBehavior",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 165, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "never",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 168, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "immediate",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 171, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "delayed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 174, Column: 10",
+        "I_parameterType" : [
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "seconds"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "MoyaProvider",
+    "B_kind" : "extension",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 177, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "neverStub",
+        "B_kind" : "function",
+        "C_accessLevel" : "final",
+        "D_attributes" : [
+          "final",
+          "class"
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 183, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Target"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Moya.StubBehavior"
+      },
+      {
+        "A_name" : "immediatelyStub",
+        "B_kind" : "function",
+        "C_accessLevel" : "final",
+        "D_attributes" : [
+          "final",
+          "class"
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 186, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Target"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Moya.StubBehavior"
+      },
+      {
+        "A_name" : "delayedStub",
+        "B_kind" : "function",
+        "C_accessLevel" : "final",
+        "D_attributes" : [
+          "final",
+          "class"
+        ],
+        "F_location" : "MoyaProvider.swift - Line: 189, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> (Target) -> Moya.StubBehavior"
+      }
+    ]
+  },
+  {
+    "A_name" : "neverStub",
+    "B_kind" : "function",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final",
+      "class"
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 183, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Target"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Moya.StubBehavior"
+  },
+  {
+    "A_name" : "immediatelyStub",
+    "B_kind" : "function",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final",
+      "class"
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 186, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Target"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Moya.StubBehavior"
+  },
+  {
+    "A_name" : "delayedStub",
+    "B_kind" : "function",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final",
+      "class"
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 189, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TimeInterval"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> (Target) -> Moya.StubBehavior"
+  },
+  {
+    "A_name" : "convertResponseToResult",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 195, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "HTTPURLResponse?",
+      "URLRequest?",
+      "Data?",
+      "Swift.Error?"
+    ],
+    "I_parameters" : [
+      "_",
+      "request",
+      "data",
+      "error"
+    ],
+    "J_returnType" : "->\n    Result<Moya.Response, MoyaError>"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 199, Column: 13",
+    "H_initialValue" : "Moya.Response(statusCode: response.statusCode, data: data ?? Data(), request: request, response: response)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 202, Column: 13",
+    "H_initialValue" : "Moya.Response(statusCode: response.statusCode, data: data ?? Data(), request: request, response: response)"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 203, Column: 13",
+    "H_initialValue" : "MoyaError.underlying(error, response)"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 206, Column: 13",
+    "H_initialValue" : "MoyaError.underlying(error, nil)"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider.swift - Line: 209, Column: 13",
+    "H_initialValue" : "MoyaError.underlying(NSError(domain: NSURLErrorDomain, code: NSURLErrorUnknown, userInfo: nil), nil)"
+  }
+]

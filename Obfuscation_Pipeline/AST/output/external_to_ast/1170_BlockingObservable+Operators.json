@@ -1,0 +1,710 @@
+[
+  {
+    "A_name" : "MaterializedSequenceResult",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "frozen"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 19, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "completed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 20, Column: 10",
+        "I_parameterType" : [
+          "[T]"
+        ],
+        "I_parameters" : [
+          "elements"
+        ]
+      },
+      {
+        "A_name" : "failed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 21, Column: 10",
+        "I_parameterType" : [
+          "[T]",
+          "Error"
+        ],
+        "I_parameters" : [
+          "elements",
+          "error"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "BlockingObservable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 24, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "toArray",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 30, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BlockingObservable+Operators.swift - Line: 31, Column: 9",
+            "H_initialValue" : "self.materializeResult()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> [Element]"
+      }
+    ]
+  },
+  {
+    "A_name" : "toArray",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 30, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 31, Column: 9",
+        "H_initialValue" : "self.materializeResult()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> [Element]"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 31, Column: 9",
+    "H_initialValue" : "self.materializeResult()"
+  },
+  {
+    "A_name" : "BlockingObservable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 36, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "first",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 42, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BlockingObservable+Operators.swift - Line: 43, Column: 9",
+            "H_initialValue" : "self.materializeResult(max: 1)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Element?"
+      }
+    ]
+  },
+  {
+    "A_name" : "first",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 42, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 43, Column: 9",
+        "H_initialValue" : "self.materializeResult(max: 1)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Element?"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 43, Column: 9",
+    "H_initialValue" : "self.materializeResult(max: 1)"
+  },
+  {
+    "A_name" : "BlockingObservable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 48, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "last",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 54, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BlockingObservable+Operators.swift - Line: 55, Column: 9",
+            "H_initialValue" : "self.materializeResult()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Element?"
+      }
+    ]
+  },
+  {
+    "A_name" : "last",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 54, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 55, Column: 9",
+        "H_initialValue" : "self.materializeResult()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Element?"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 55, Column: 9",
+    "H_initialValue" : "self.materializeResult()"
+  },
+  {
+    "A_name" : "BlockingObservable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 60, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "single",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 66, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Element"
+      },
+      {
+        "A_name" : "single",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 76, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BlockingObservable+Operators.swift - Line: 77, Column: 9",
+            "H_initialValue" : "self.materializeResult(max: 2, predicate: predicate)"
+          },
+          {
+            "A_name" : "elements",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BlockingObservable+Operators.swift - Line: 78, Column: 9",
+            "H_initialValue" : "try self.elementsOrThrow(results)"
+          }
+        ],
+        "I_parameterType" : [
+          "@escaping (Element) throws -> Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Element"
+      }
+    ]
+  },
+  {
+    "A_name" : "single",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 66, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Element"
+  },
+  {
+    "A_name" : "single",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 76, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 77, Column: 9",
+        "H_initialValue" : "self.materializeResult(max: 2, predicate: predicate)"
+      },
+      {
+        "A_name" : "elements",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 78, Column: 9",
+        "H_initialValue" : "try self.elementsOrThrow(results)"
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping (Element) throws -> Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Element"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 77, Column: 9",
+    "H_initialValue" : "self.materializeResult(max: 2, predicate: predicate)"
+  },
+  {
+    "A_name" : "elements",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 78, Column: 9",
+    "H_initialValue" : "try self.elementsOrThrow(results)"
+  },
+  {
+    "A_name" : "BlockingObservable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 92, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "materialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 98, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> MaterializedSequenceResult<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "materialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 98, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> MaterializedSequenceResult<Element>"
+  },
+  {
+    "A_name" : "BlockingObservable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 103, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "materializeResult",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 104, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "elements",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BlockingObservable+Operators.swift - Line: 105, Column: 9",
+            "H_initialValue" : "[Element]()"
+          },
+          {
+            "A_name" : "error",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BlockingObservable+Operators.swift - Line: 106, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "lock",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BlockingObservable+Operators.swift - Line: 108, Column: 9",
+            "H_initialValue" : "RunLoopLock(timeout: self.timeout)"
+          },
+          {
+            "A_name" : "d",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BlockingObservable+Operators.swift - Line: 110, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          }
+        ],
+        "I_parameterType" : [
+          "Int?",
+          "@escaping (Element) throws -> Bool"
+        ],
+        "I_parameters" : [
+          "max",
+          "predicate"
+        ],
+        "J_returnType" : "-> MaterializedSequenceResult<Element>"
+      },
+      {
+        "A_name" : "elementsOrThrow",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 162, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "MaterializedSequenceResult<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> [Element]"
+      }
+    ]
+  },
+  {
+    "A_name" : "materializeResult",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 104, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "elements",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 105, Column: 9",
+        "H_initialValue" : "[Element]()"
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 106, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 108, Column: 9",
+        "H_initialValue" : "RunLoopLock(timeout: self.timeout)"
+      },
+      {
+        "A_name" : "d",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockingObservable+Operators.swift - Line: 110, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      }
+    ],
+    "I_parameterType" : [
+      "Int?",
+      "@escaping (Element) throws -> Bool"
+    ],
+    "I_parameters" : [
+      "max",
+      "predicate"
+    ],
+    "J_returnType" : "-> MaterializedSequenceResult<Element>"
+  },
+  {
+    "A_name" : "elements",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 105, Column: 9",
+    "H_initialValue" : "[Element]()"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 106, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 108, Column: 9",
+    "H_initialValue" : "RunLoopLock(timeout: self.timeout)"
+  },
+  {
+    "A_name" : "d",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 110, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 117, Column: 13",
+    "H_initialValue" : "self.source.subscribe { event in\n                if d.isDisposed {\n                    return\n                }\n                switch event {\n                case .next(let element):\n                    do {\n                        if try predicate(element) {\n                            elements.append(element)\n                        }\n                        if let max = max, elements.count >= max {\n                            d.dispose()\n                            lock.stop()\n                        }\n                    } catch let err {\n                        error = err\n                        d.dispose()\n                        lock.stop()\n                    }\n                case .error(let err):\n                    error = err\n                    d.dispose()\n                    lock.stop()\n                case .completed:\n                    d.dispose()\n                    lock.stop()\n                }\n            }"
+  },
+  {
+    "A_name" : "elementsOrThrow",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockingObservable+Operators.swift - Line: 162, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "MaterializedSequenceResult<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> [Element]"
+  }
+]

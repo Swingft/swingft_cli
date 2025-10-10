@@ -1,0 +1,2774 @@
+[
+  {
+    "A_name" : "ServerTrustManager",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 31, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "allHostsMustBeEvaluated",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 33, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "evaluators",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 36, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 49, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool",
+          "[String: any ServerTrustEvaluating]"
+        ],
+        "I_parameters" : [
+          "allHostsMustBeEvaluated",
+          "evaluators"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "allHostsMustBeEvaluated",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 33, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "evaluators",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 36, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 49, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool",
+      "[String: any ServerTrustEvaluating]"
+    ],
+    "I_parameters" : [
+      "allHostsMustBeEvaluated",
+      "evaluators"
+    ]
+  },
+  {
+    "A_name" : "serverTrustEvaluator",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 65, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forHost"
+    ],
+    "J_returnType" : "-> (any ServerTrustEvaluating)?"
+  },
+  {
+    "A_name" : "ServerTrustEvaluating",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 80, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "evaluate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 91, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SecTrust",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forHost"
+    ]
+  },
+  {
+    "A_name" : "DefaultTrustEvaluator",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ServerTrustEvaluating"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 101, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "validateHost",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 102, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 107, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "validateHost"
+        ]
+      },
+      {
+        "A_name" : "evaluate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 111, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SecTrust",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "forHost"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "validateHost",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 102, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 107, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "validateHost"
+    ]
+  },
+  {
+    "A_name" : "evaluate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 111, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SecTrust",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forHost"
+    ]
+  },
+  {
+    "A_name" : "RevocationTrustEvaluator",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ServerTrustEvaluating"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 125, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Options",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "OptionSet",
+          "Sendable"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 128, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "crl",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 130, Column: 9",
+            "H_initialValue" : "Options(rawValue: kSecRevocationCRLMethod)"
+          },
+          {
+            "A_name" : "networkAccessDisabled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 132, Column: 9",
+            "H_initialValue" : "Options(rawValue: kSecRevocationNetworkAccessDisabled)"
+          },
+          {
+            "A_name" : "ocsp",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 134, Column: 9",
+            "H_initialValue" : "Options(rawValue: kSecRevocationOCSPMethod)"
+          },
+          {
+            "A_name" : "preferCRL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 136, Column: 9",
+            "H_initialValue" : "Options(rawValue: kSecRevocationPreferCRL)"
+          },
+          {
+            "A_name" : "requirePositiveResponse",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 139, Column: 9",
+            "H_initialValue" : "Options(rawValue: kSecRevocationRequirePositiveResponse)"
+          },
+          {
+            "A_name" : "any",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 142, Column: 9",
+            "H_initialValue" : "Options(rawValue: kSecRevocationUseAnyAvailableMethod)"
+          },
+          {
+            "A_name" : "rawValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 145, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 150, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "CFOptionFlags"
+            ],
+            "I_parameters" : [
+              "rawValue"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "performDefaultValidation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 155, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "validateHost",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 156, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 157, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 172, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool",
+          "Bool",
+          "Options"
+        ],
+        "I_parameters" : [
+          "performDefaultValidation",
+          "validateHost",
+          "options"
+        ]
+      },
+      {
+        "A_name" : "evaluate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 178, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SecTrust",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "forHost"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Options",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "OptionSet",
+      "Sendable"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 128, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "crl",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 130, Column: 9",
+        "H_initialValue" : "Options(rawValue: kSecRevocationCRLMethod)"
+      },
+      {
+        "A_name" : "networkAccessDisabled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 132, Column: 9",
+        "H_initialValue" : "Options(rawValue: kSecRevocationNetworkAccessDisabled)"
+      },
+      {
+        "A_name" : "ocsp",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 134, Column: 9",
+        "H_initialValue" : "Options(rawValue: kSecRevocationOCSPMethod)"
+      },
+      {
+        "A_name" : "preferCRL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 136, Column: 9",
+        "H_initialValue" : "Options(rawValue: kSecRevocationPreferCRL)"
+      },
+      {
+        "A_name" : "requirePositiveResponse",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 139, Column: 9",
+        "H_initialValue" : "Options(rawValue: kSecRevocationRequirePositiveResponse)"
+      },
+      {
+        "A_name" : "any",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 142, Column: 9",
+        "H_initialValue" : "Options(rawValue: kSecRevocationUseAnyAvailableMethod)"
+      },
+      {
+        "A_name" : "rawValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 145, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 150, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CFOptionFlags"
+        ],
+        "I_parameters" : [
+          "rawValue"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "crl",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 130, Column: 9",
+    "H_initialValue" : "Options(rawValue: kSecRevocationCRLMethod)"
+  },
+  {
+    "A_name" : "networkAccessDisabled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 132, Column: 9",
+    "H_initialValue" : "Options(rawValue: kSecRevocationNetworkAccessDisabled)"
+  },
+  {
+    "A_name" : "ocsp",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 134, Column: 9",
+    "H_initialValue" : "Options(rawValue: kSecRevocationOCSPMethod)"
+  },
+  {
+    "A_name" : "preferCRL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 136, Column: 9",
+    "H_initialValue" : "Options(rawValue: kSecRevocationPreferCRL)"
+  },
+  {
+    "A_name" : "requirePositiveResponse",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 139, Column: 9",
+    "H_initialValue" : "Options(rawValue: kSecRevocationRequirePositiveResponse)"
+  },
+  {
+    "A_name" : "any",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 142, Column: 9",
+    "H_initialValue" : "Options(rawValue: kSecRevocationUseAnyAvailableMethod)"
+  },
+  {
+    "A_name" : "rawValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 145, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 150, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CFOptionFlags"
+    ],
+    "I_parameters" : [
+      "rawValue"
+    ]
+  },
+  {
+    "A_name" : "performDefaultValidation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 155, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "validateHost",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 156, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 157, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 172, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool",
+      "Bool",
+      "Options"
+    ],
+    "I_parameters" : [
+      "performDefaultValidation",
+      "validateHost",
+      "options"
+    ]
+  },
+  {
+    "A_name" : "evaluate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 178, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SecTrust",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forHost"
+    ]
+  },
+  {
+    "A_name" : "ServerTrustEvaluating",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 197, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "revocationChecking",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 199, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "revocationChecking",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 215, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool",
+          "Bool",
+          "RevocationTrustEvaluator.Options"
+        ],
+        "I_parameters" : [
+          "performDefaultValidation",
+          "validateHost",
+          "options"
+        ],
+        "J_returnType" : "-> RevocationTrustEvaluator"
+      }
+    ]
+  },
+  {
+    "A_name" : "revocationChecking",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 199, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "revocationChecking",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 215, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool",
+      "Bool",
+      "RevocationTrustEvaluator.Options"
+    ],
+    "I_parameters" : [
+      "performDefaultValidation",
+      "validateHost",
+      "options"
+    ],
+    "J_returnType" : "-> RevocationTrustEvaluator"
+  },
+  {
+    "A_name" : "PinnedCertificatesTrustEvaluator",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ServerTrustEvaluating"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 229, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "certificates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 230, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "acceptSelfSignedCertificates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 231, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "performDefaultValidation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 232, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "validateHost",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 233, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 248, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[SecCertificate]",
+          "Bool",
+          "Bool",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "certificates",
+          "acceptSelfSignedCertificates",
+          "performDefaultValidation",
+          "validateHost"
+        ]
+      },
+      {
+        "A_name" : "evaluate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 258, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "serverCertificatesData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 275, Column: 9",
+            "H_initialValue" : "Set(trust.af.certificateData)"
+          },
+          {
+            "A_name" : "pinnedCertificatesData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 276, Column: 9",
+            "H_initialValue" : "Set(certificates.af.data)"
+          },
+          {
+            "A_name" : "pinnedCertificatesInServerData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 277, Column: 9",
+            "H_initialValue" : "!serverCertificatesData.isDisjoint(with: pinnedCertificatesData)"
+          }
+        ],
+        "I_parameterType" : [
+          "SecTrust",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "forHost"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "certificates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 230, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "acceptSelfSignedCertificates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 231, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "performDefaultValidation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 232, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "validateHost",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 233, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 248, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[SecCertificate]",
+      "Bool",
+      "Bool",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "certificates",
+      "acceptSelfSignedCertificates",
+      "performDefaultValidation",
+      "validateHost"
+    ]
+  },
+  {
+    "A_name" : "evaluate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 258, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "serverCertificatesData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 275, Column: 9",
+        "H_initialValue" : "Set(trust.af.certificateData)"
+      },
+      {
+        "A_name" : "pinnedCertificatesData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 276, Column: 9",
+        "H_initialValue" : "Set(certificates.af.data)"
+      },
+      {
+        "A_name" : "pinnedCertificatesInServerData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 277, Column: 9",
+        "H_initialValue" : "!serverCertificatesData.isDisjoint(with: pinnedCertificatesData)"
+      }
+    ],
+    "I_parameterType" : [
+      "SecTrust",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forHost"
+    ]
+  },
+  {
+    "A_name" : "serverCertificatesData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 275, Column: 9",
+    "H_initialValue" : "Set(trust.af.certificateData)"
+  },
+  {
+    "A_name" : "pinnedCertificatesData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 276, Column: 9",
+    "H_initialValue" : "Set(certificates.af.data)"
+  },
+  {
+    "A_name" : "pinnedCertificatesInServerData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 277, Column: 9",
+    "H_initialValue" : "!serverCertificatesData.isDisjoint(with: pinnedCertificatesData)"
+  },
+  {
+    "A_name" : "ServerTrustEvaluating",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 287, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "pinnedCertificates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 289, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "pinnedCertificates",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 304, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[SecCertificate]",
+          "Bool",
+          "Bool",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "certificates",
+          "acceptSelfSignedCertificates",
+          "performDefaultValidation",
+          "validateHost"
+        ],
+        "J_returnType" : "-> PinnedCertificatesTrustEvaluator"
+      }
+    ]
+  },
+  {
+    "A_name" : "pinnedCertificates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 289, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "pinnedCertificates",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 304, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[SecCertificate]",
+      "Bool",
+      "Bool",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "certificates",
+      "acceptSelfSignedCertificates",
+      "performDefaultValidation",
+      "validateHost"
+    ],
+    "J_returnType" : "-> PinnedCertificatesTrustEvaluator"
+  },
+  {
+    "A_name" : "PublicKeysTrustEvaluator",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ServerTrustEvaluating"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 320, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "keys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 321, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "performDefaultValidation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 322, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "validateHost",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 323, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 338, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[SecKey]",
+          "Bool",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "keys",
+          "performDefaultValidation",
+          "validateHost"
+        ]
+      },
+      {
+        "A_name" : "evaluate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 346, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "pinnedKeysInServerKeys",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 359, Column: 9",
+            "H_initialValue" : "{\n            for serverPublicKey in trust.af.publicKeys {\n                if keys.contains(serverPublicKey) {\n                    return true\n                }\n            }\n            return false\n        }()"
+          }
+        ],
+        "I_parameterType" : [
+          "SecTrust",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "forHost"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "keys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 321, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "performDefaultValidation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 322, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "validateHost",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 323, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 338, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[SecKey]",
+      "Bool",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "keys",
+      "performDefaultValidation",
+      "validateHost"
+    ]
+  },
+  {
+    "A_name" : "evaluate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 346, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "pinnedKeysInServerKeys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 359, Column: 9",
+        "H_initialValue" : "{\n            for serverPublicKey in trust.af.publicKeys {\n                if keys.contains(serverPublicKey) {\n                    return true\n                }\n            }\n            return false\n        }()"
+      }
+    ],
+    "I_parameterType" : [
+      "SecTrust",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forHost"
+    ]
+  },
+  {
+    "A_name" : "pinnedKeysInServerKeys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 359, Column: 9",
+    "H_initialValue" : "{\n            for serverPublicKey in trust.af.publicKeys {\n                if keys.contains(serverPublicKey) {\n                    return true\n                }\n            }\n            return false\n        }()"
+  },
+  {
+    "A_name" : "ServerTrustEvaluating",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 377, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "publicKeys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 379, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "publicKeys",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 394, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[SecKey]",
+          "Bool",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "keys",
+          "performDefaultValidation",
+          "validateHost"
+        ],
+        "J_returnType" : "-> PublicKeysTrustEvaluator"
+      }
+    ]
+  },
+  {
+    "A_name" : "publicKeys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 379, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "publicKeys",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 394, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[SecKey]",
+      "Bool",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "keys",
+      "performDefaultValidation",
+      "validateHost"
+    ],
+    "J_returnType" : "-> PublicKeysTrustEvaluator"
+  },
+  {
+    "A_name" : "CompositeTrustEvaluator",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ServerTrustEvaluating"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 403, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "evaluators",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 404, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 409, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[any ServerTrustEvaluating]"
+        ],
+        "I_parameters" : [
+          "evaluators"
+        ]
+      },
+      {
+        "A_name" : "evaluate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 413, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SecTrust",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "forHost"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "evaluators",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 404, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 409, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[any ServerTrustEvaluating]"
+    ],
+    "I_parameters" : [
+      "evaluators"
+    ]
+  },
+  {
+    "A_name" : "evaluate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 413, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SecTrust",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forHost"
+    ]
+  },
+  {
+    "A_name" : "ServerTrustEvaluating",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 418, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "composite",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 422, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[any ServerTrustEvaluating]"
+        ],
+        "I_parameters" : [
+          "evaluators"
+        ],
+        "J_returnType" : "-> CompositeTrustEvaluator"
+      }
+    ]
+  },
+  {
+    "A_name" : "composite",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 422, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[any ServerTrustEvaluating]"
+    ],
+    "I_parameters" : [
+      "evaluators"
+    ],
+    "J_returnType" : "-> CompositeTrustEvaluator"
+  },
+  {
+    "A_name" : "DisabledTrustEvaluator",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ServerTrustEvaluating"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 443, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 445, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "evaluate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 447, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SecTrust",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "forHost"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 445, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "evaluate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 447, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SecTrust",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forHost"
+    ]
+  },
+  {
+    "A_name" : "[ServerTrustEvaluating]",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 452, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "evaluate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 463, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SecTrust",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forHost"
+    ]
+  },
+  {
+    "A_name" : "Bundle",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AlamofireExtended"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 471, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "AlamofireExtension",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 472, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "certificates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 474, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "publicKeys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 485, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "paths",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 494, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[String]"
+        ],
+        "I_parameters" : [
+          "forResourcesOfTypes"
+        ],
+        "J_returnType" : "-> [String]"
+      }
+    ]
+  },
+  {
+    "A_name" : "certificates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 474, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "publicKeys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 485, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "paths",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 494, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[String]"
+    ],
+    "I_parameters" : [
+      "forResourcesOfTypes"
+    ],
+    "J_returnType" : "-> [String]"
+  },
+  {
+    "A_name" : "SecTrust",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AlamofireExtended"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 499, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "AlamofireExtension",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 500, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "evaluate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 506, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SecPolicy"
+        ],
+        "I_parameters" : [
+          "afterApplying"
+        ]
+      },
+      {
+        "A_name" : "validate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available",
+          "available",
+          "available",
+          "available"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 517, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SecPolicy",
+          "(_ status: OSStatus, _ result: SecTrustResultType) -> any Error"
+        ],
+        "I_parameters" : [
+          "policy",
+          "errorProducer"
+        ]
+      },
+      {
+        "A_name" : "apply",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 531, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "status",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 532, Column: 9",
+            "H_initialValue" : "SecTrustSetPolicies(type, policy)"
+          }
+        ],
+        "I_parameterType" : [
+          "SecPolicy"
+        ],
+        "I_parameters" : [
+          "policy"
+        ],
+        "J_returnType" : "-> SecTrust"
+      },
+      {
+        "A_name" : "evaluate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 547, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "error",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 549, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "evaluationSucceeded",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 550, Column: 9",
+            "H_initialValue" : "SecTrustEvaluateWithError(type, &error)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "validate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available",
+          "available",
+          "available",
+          "available"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 562, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 567, Column: 9",
+            "H_initialValue" : "SecTrustResultType.invalid"
+          },
+          {
+            "A_name" : "status",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 568, Column: 9",
+            "H_initialValue" : "SecTrustEvaluate(type, &result)"
+          }
+        ],
+        "I_parameterType" : [
+          "(_ status: OSStatus, _ result: SecTrustResultType) -> any Error"
+        ],
+        "I_parameters" : [
+          "errorProducer"
+        ]
+      },
+      {
+        "A_name" : "setAnchorCertificates",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 579, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "status",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 581, Column: 9",
+            "H_initialValue" : "SecTrustSetAnchorCertificates(type, certificates as CFArray)"
+          },
+          {
+            "A_name" : "onlyStatus",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ServerTrustEvaluation.swift - Line: 588, Column: 9",
+            "H_initialValue" : "SecTrustSetAnchorCertificatesOnly(type, true)"
+          }
+        ],
+        "I_parameterType" : [
+          "[SecCertificate]"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "publicKeys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 596, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "certificates",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 601, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "certificateData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 612, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "performDefaultValidation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 620, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forHost"
+        ]
+      },
+      {
+        "A_name" : "performValidation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 635, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forHost"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "evaluate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 506, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SecPolicy"
+    ],
+    "I_parameters" : [
+      "afterApplying"
+    ]
+  },
+  {
+    "A_name" : "validate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available",
+      "available",
+      "available",
+      "available"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 517, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SecPolicy",
+      "(_ status: OSStatus, _ result: SecTrustResultType) -> any Error"
+    ],
+    "I_parameters" : [
+      "policy",
+      "errorProducer"
+    ]
+  },
+  {
+    "A_name" : "apply",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 531, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "status",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 532, Column: 9",
+        "H_initialValue" : "SecTrustSetPolicies(type, policy)"
+      }
+    ],
+    "I_parameterType" : [
+      "SecPolicy"
+    ],
+    "I_parameters" : [
+      "policy"
+    ],
+    "J_returnType" : "-> SecTrust"
+  },
+  {
+    "A_name" : "status",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 532, Column: 9",
+    "H_initialValue" : "SecTrustSetPolicies(type, policy)"
+  },
+  {
+    "A_name" : "evaluate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 547, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 549, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "evaluationSucceeded",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 550, Column: 9",
+        "H_initialValue" : "SecTrustEvaluateWithError(type, &error)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 549, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "evaluationSucceeded",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 550, Column: 9",
+    "H_initialValue" : "SecTrustEvaluateWithError(type, &error)"
+  },
+  {
+    "A_name" : "validate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available",
+      "available",
+      "available",
+      "available"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 562, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 567, Column: 9",
+        "H_initialValue" : "SecTrustResultType.invalid"
+      },
+      {
+        "A_name" : "status",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 568, Column: 9",
+        "H_initialValue" : "SecTrustEvaluate(type, &result)"
+      }
+    ],
+    "I_parameterType" : [
+      "(_ status: OSStatus, _ result: SecTrustResultType) -> any Error"
+    ],
+    "I_parameters" : [
+      "errorProducer"
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 567, Column: 9",
+    "H_initialValue" : "SecTrustResultType.invalid"
+  },
+  {
+    "A_name" : "status",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 568, Column: 9",
+    "H_initialValue" : "SecTrustEvaluate(type, &result)"
+  },
+  {
+    "A_name" : "setAnchorCertificates",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 579, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "status",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 581, Column: 9",
+        "H_initialValue" : "SecTrustSetAnchorCertificates(type, certificates as CFArray)"
+      },
+      {
+        "A_name" : "onlyStatus",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 588, Column: 9",
+        "H_initialValue" : "SecTrustSetAnchorCertificatesOnly(type, true)"
+      }
+    ],
+    "I_parameterType" : [
+      "[SecCertificate]"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "status",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 581, Column: 9",
+    "H_initialValue" : "SecTrustSetAnchorCertificates(type, certificates as CFArray)"
+  },
+  {
+    "A_name" : "onlyStatus",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 588, Column: 9",
+    "H_initialValue" : "SecTrustSetAnchorCertificatesOnly(type, true)"
+  },
+  {
+    "A_name" : "publicKeys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 596, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "certificates",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 601, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "certificateData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 612, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "performDefaultValidation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 620, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forHost"
+    ]
+  },
+  {
+    "A_name" : "performValidation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 635, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forHost"
+    ]
+  },
+  {
+    "A_name" : "SecPolicy",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AlamofireExtended"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 646, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "AlamofireExtension",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 647, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "`default`",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 649, Column: 5",
+        "H_initialValue" : "SecPolicyCreateSSL(true, nil)"
+      },
+      {
+        "A_name" : "hostname",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 656, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> SecPolicy"
+      },
+      {
+        "A_name" : "revocation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 667, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "RevocationTrustEvaluator.Options"
+        ],
+        "I_parameters" : [
+          "options"
+        ],
+        "J_returnType" : "-> SecPolicy"
+      }
+    ]
+  },
+  {
+    "A_name" : "`default`",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 649, Column: 5",
+    "H_initialValue" : "SecPolicyCreateSSL(true, nil)"
+  },
+  {
+    "A_name" : "hostname",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 656, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> SecPolicy"
+  },
+  {
+    "A_name" : "revocation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 667, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "RevocationTrustEvaluator.Options"
+    ],
+    "I_parameters" : [
+      "options"
+    ],
+    "J_returnType" : "-> SecPolicy"
+  },
+  {
+    "A_name" : "Array",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AlamofireExtended"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 676, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "AlamofireExtension",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 677, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 679, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "publicKeys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 684, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 679, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "publicKeys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 684, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "SecCertificate",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AlamofireExtended"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 689, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "AlamofireExtension",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 690, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "publicKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 695, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "publicKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 695, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "policy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 696, Column: 9",
+    "H_initialValue" : "SecPolicyCreateBasicX509()"
+  },
+  {
+    "A_name" : "trust",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 697, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "trustCreationStatus",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 698, Column: 9",
+    "H_initialValue" : "SecTrustCreateWithCertificates(type, policy, &trust)"
+  },
+  {
+    "A_name" : "OSStatus",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AlamofireExtended"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 710, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "AlamofireExtension",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 711, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isSuccess",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 713, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "isSuccess",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 713, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "SecTrustResultType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AlamofireExtended"
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 716, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "AlamofireExtension",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 717, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isSuccess",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ServerTrustEvaluation.swift - Line: 719, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "isSuccess",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ServerTrustEvaluation.swift - Line: 719, Column: 5",
+    "H_initialValue" : ""
+  }
+]

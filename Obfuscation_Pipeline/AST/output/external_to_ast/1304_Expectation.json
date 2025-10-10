@@ -1,0 +1,568 @@
+[
+  {
+    "A_name" : "expressionDoesNotMatch",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Expectation.swift - Line: 1, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "msg",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expectation.swift - Line: 4, Column: 5",
+        "H_initialValue" : "FailureMessage()"
+      }
+    ],
+    "I_parameterType" : [
+      "Expression<T>",
+      "U",
+      "String",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "matcher",
+      "toNot",
+      "description"
+    ],
+    "J_returnType" : "-> (Bool, FailureMessage)"
+  },
+  {
+    "A_name" : "msg",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 4, Column: 5",
+    "H_initialValue" : "FailureMessage()"
+  },
+  {
+    "A_name" : "pass",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 8, Column: 9",
+    "H_initialValue" : "try matcher.doesNotMatch(expression, failureMessage: msg)"
+  },
+  {
+    "A_name" : "execute",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 19, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expectation.swift - Line: 37, Column: 5",
+        "H_initialValue" : "(false, FailureMessage())"
+      }
+    ],
+    "I_parameterType" : [
+      "Expression<T>",
+      "ExpectationStyle",
+      "Predicate<T>",
+      "String",
+      "String?",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "to",
+      "description",
+      "captureExceptions"
+    ],
+    "J_returnType" : "-> (Bool, FailureMessage)"
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 20, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "msg",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expectation.swift - Line: 21, Column: 9",
+        "H_initialValue" : "FailureMessage()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> (Bool, FailureMessage)"
+  },
+  {
+    "A_name" : "msg",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 21, Column: 9",
+    "H_initialValue" : "FailureMessage()"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 25, Column: 13",
+    "H_initialValue" : "try predicate.satisfies(expression)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 37, Column: 5",
+    "H_initialValue" : "(false, FailureMessage())"
+  },
+  {
+    "A_name" : "capture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 39, Column: 9",
+    "H_initialValue" : "NMBExceptionCapture(handler: ({ exception -> Void in\n            let msg = FailureMessage()\n            msg.stringValue = \"unexpected exception raised: \\(exception)\"\n            result = (false, msg)\n        }), finally: nil)"
+  },
+  {
+    "A_name" : "msg",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 40, Column: 13",
+    "H_initialValue" : "FailureMessage()"
+  },
+  {
+    "A_name" : "Expectation",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 54, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "expression",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expectation.swift - Line: 56, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expectation.swift - Line: 58, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Expression<T>"
+        ],
+        "I_parameters" : [
+          "expression"
+        ]
+      },
+      {
+        "A_name" : "verify",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expectation.swift - Line: 62, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "handler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Expectation.swift - Line: 63, Column: 9",
+            "H_initialValue" : "NimbleEnvironment.activeInstance.assertionHandler"
+          }
+        ],
+        "I_parameterType" : [
+          "Bool",
+          "FailureMessage"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "to",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available",
+          "discardableResult"
+        ],
+        "F_location" : "Expectation.swift - Line: 70, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "U",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "description"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "toNot",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available",
+          "discardableResult"
+        ],
+        "F_location" : "Expectation.swift - Line: 87, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "U",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "description"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "notTo",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available",
+          "discardableResult"
+        ],
+        "F_location" : "Expectation.swift - Line: 99, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "U",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "description"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "to",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Expectation.swift - Line: 109, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Predicate<T>",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "description"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "toNot",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Expectation.swift - Line: 117, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Predicate<T>",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "description"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "notTo",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Expectation.swift - Line: 127, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Predicate<T>",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "description"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "expression",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 56, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 58, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Expression<T>"
+    ],
+    "I_parameters" : [
+      "expression"
+    ]
+  },
+  {
+    "A_name" : "verify",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 62, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "handler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Expectation.swift - Line: 63, Column: 9",
+        "H_initialValue" : "NimbleEnvironment.activeInstance.assertionHandler"
+      }
+    ],
+    "I_parameterType" : [
+      "Bool",
+      "FailureMessage"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "handler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Expectation.swift - Line: 63, Column: 9",
+    "H_initialValue" : "NimbleEnvironment.activeInstance.assertionHandler"
+  },
+  {
+    "A_name" : "to",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available",
+      "discardableResult"
+    ],
+    "F_location" : "Expectation.swift - Line: 70, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "U",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "description"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "toNot",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available",
+      "discardableResult"
+    ],
+    "F_location" : "Expectation.swift - Line: 87, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "U",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "description"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "notTo",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available",
+      "discardableResult"
+    ],
+    "F_location" : "Expectation.swift - Line: 99, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "U",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "description"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "to",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Expectation.swift - Line: 109, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Predicate<T>",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "description"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "toNot",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Expectation.swift - Line: 117, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Predicate<T>",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "description"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "notTo",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Expectation.swift - Line: 127, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Predicate<T>",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "description"
+    ],
+    "J_returnType" : "-> Self"
+  }
+]

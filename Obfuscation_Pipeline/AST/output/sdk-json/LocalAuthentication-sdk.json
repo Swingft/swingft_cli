@@ -1,0 +1,959 @@
+{
+  "LAAccessControlOperation": {
+    "kind": "Enum",
+    "module": "LocalAuthentication",
+    "usr": "c:@E@LAAccessControlOperation",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So24LAAccessControlOperationV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So24LAAccessControlOperationV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So24LAAccessControlOperationV8RawValuea"
+      },
+      "createItem": {
+        "kind": "EnumElement",
+        "type": "createItem",
+        "usr": "c:@E@LAAccessControlOperation@LAAccessControlOperationCreateItem"
+      },
+      "useItem": {
+        "kind": "EnumElement",
+        "type": "useItem",
+        "usr": "c:@E@LAAccessControlOperation@LAAccessControlOperationUseItem"
+      },
+      "createKey": {
+        "kind": "EnumElement",
+        "type": "createKey",
+        "usr": "c:@E@LAAccessControlOperation@LAAccessControlOperationCreateKey"
+      },
+      "useKeySign": {
+        "kind": "EnumElement",
+        "type": "useKeySign",
+        "usr": "c:@E@LAAccessControlOperation@LAAccessControlOperationUseKeySign"
+      },
+      "useKeyDecrypt": {
+        "kind": "EnumElement",
+        "type": "useKeyDecrypt",
+        "usr": "c:@E@LAAccessControlOperation@LAAccessControlOperationUseKeyDecrypt"
+      },
+      "useKeyKeyExchange": {
+        "kind": "EnumElement",
+        "type": "useKeyKeyExchange",
+        "usr": "c:@E@LAAccessControlOperation@LAAccessControlOperationUseKeyKeyExchange"
+      }
+    }
+  },
+  "LAAuthenticationRequirement": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LAAuthenticationRequirement",
+    "members": {
+      "default": {
+        "kind": "Var",
+        "type": "default",
+        "usr": "c:objc(cs)LAAuthenticationRequirement(cpy)defaultRequirement"
+      },
+      "biometry": {
+        "kind": "Func",
+        "type": "biometry(fallback:)",
+        "usr": "c:objc(cs)LAAuthenticationRequirement(cm)biometryRequirementWithFallback:"
+      },
+      "biometryCurrentSet": {
+        "kind": "Var",
+        "type": "biometryCurrentSet",
+        "usr": "c:objc(cs)LAAuthenticationRequirement(cpy)biometryCurrentSetRequirement"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "LABiometryFallbackRequirement": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LABiometryFallbackRequirement",
+    "members": {
+      "default": {
+        "kind": "Var",
+        "type": "default",
+        "usr": "c:objc(cs)LABiometryFallbackRequirement(cpy)defaultRequirement"
+      },
+      "devicePasscode": {
+        "kind": "Var",
+        "type": "devicePasscode",
+        "usr": "c:objc(cs)LABiometryFallbackRequirement(cpy)devicePasscodeRequirement"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "LABiometryType": {
+    "kind": "Enum",
+    "module": "LocalAuthentication",
+    "usr": "c:@E@LABiometryType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So14LABiometryTypeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So14LABiometryTypeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So14LABiometryTypeV8RawValuea"
+      },
+      "none": {
+        "kind": "EnumElement",
+        "type": "none",
+        "usr": "c:@E@LABiometryType@LABiometryTypeNone"
+      },
+      "LABiometryNone": {
+        "kind": "Var",
+        "type": "LABiometryNone",
+        "usr": "c:@E@LABiometryType@LABiometryNone"
+      },
+      "touchID": {
+        "kind": "EnumElement",
+        "type": "touchID",
+        "usr": "c:@E@LABiometryType@LABiometryTypeTouchID"
+      },
+      "faceID": {
+        "kind": "EnumElement",
+        "type": "faceID",
+        "usr": "c:@E@LABiometryType@LABiometryTypeFaceID"
+      },
+      "opticID": {
+        "kind": "EnumElement",
+        "type": "opticID",
+        "usr": "c:@E@LABiometryType@LABiometryTypeOpticID"
+      }
+    }
+  },
+  "LACompanionType": {
+    "kind": "Enum",
+    "module": "LocalAuthentication",
+    "usr": "c:@E@LACompanionType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So15LACompanionTypeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So15LACompanionTypeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So15LACompanionTypeV8RawValuea"
+      },
+      "mac": {
+        "kind": "EnumElement",
+        "type": "mac",
+        "usr": "c:@E@LACompanionType@LACompanionTypeMac"
+      }
+    }
+  },
+  "LAContext": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LAContext",
+    "members": {
+      "canEvaluatePolicy": {
+        "kind": "Func",
+        "type": "canEvaluatePolicy(_:error:)",
+        "usr": "c:objc(cs)LAContext(im)canEvaluatePolicy:error:"
+      },
+      "evaluatePolicy": {
+        "kind": "Func",
+        "type": "evaluatePolicy(_:localizedReason:)",
+        "usr": "c:objc(cs)LAContext(im)evaluatePolicy:localizedReason:reply:"
+      },
+      "invalidate": {
+        "kind": "Func",
+        "type": "invalidate()",
+        "usr": "c:objc(cs)LAContext(im)invalidate"
+      },
+      "setCredential": {
+        "kind": "Func",
+        "type": "setCredential(_:type:)",
+        "usr": "c:objc(cs)LAContext(im)setCredential:type:"
+      },
+      "isCredentialSet": {
+        "kind": "Func",
+        "type": "isCredentialSet(_:)",
+        "usr": "c:objc(cs)LAContext(im)isCredentialSet:"
+      },
+      "evaluateAccessControl": {
+        "kind": "Func",
+        "type": "evaluateAccessControl(_:operation:localizedReason:)",
+        "usr": "c:objc(cs)LAContext(im)evaluateAccessControl:operation:localizedReason:reply:"
+      },
+      "localizedFallbackTitle": {
+        "kind": "Var",
+        "type": "localizedFallbackTitle",
+        "usr": "c:objc(cs)LAContext(py)localizedFallbackTitle"
+      },
+      "maxBiometryFailures": {
+        "kind": "Var",
+        "type": "maxBiometryFailures",
+        "usr": "c:objc(cs)LAContext(py)maxBiometryFailures"
+      },
+      "localizedCancelTitle": {
+        "kind": "Var",
+        "type": "localizedCancelTitle",
+        "usr": "c:objc(cs)LAContext(py)localizedCancelTitle"
+      },
+      "touchIDAuthenticationAllowableReuseDuration": {
+        "kind": "Var",
+        "type": "touchIDAuthenticationAllowableReuseDuration",
+        "usr": "c:objc(cs)LAContext(py)touchIDAuthenticationAllowableReuseDuration"
+      },
+      "localizedReason": {
+        "kind": "Var",
+        "type": "localizedReason",
+        "usr": "c:objc(cs)LAContext(py)localizedReason"
+      },
+      "interactionNotAllowed": {
+        "kind": "Var",
+        "type": "interactionNotAllowed",
+        "usr": "c:objc(cs)LAContext(py)interactionNotAllowed"
+      },
+      "biometryType": {
+        "kind": "Var",
+        "type": "biometryType",
+        "usr": "c:objc(cs)LAContext(py)biometryType"
+      },
+      "evaluatedPolicyDomainState": {
+        "kind": "Var",
+        "type": "evaluatedPolicyDomainState",
+        "usr": "c:objc(cs)LAContext(py)evaluatedPolicyDomainState"
+      },
+      "domainState": {
+        "kind": "Var",
+        "type": "domainState",
+        "usr": "c:objc(cs)LAContext(py)domainState"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "ObjectWillChangePublisher": {
+        "kind": "TypeAlias",
+        "type": "ObjectWillChangePublisher",
+        "usr": "s:So9LAContextC19LocalAuthenticationE25ObjectWillChangePublishera"
+      }
+    }
+  },
+  "LACredentialType": {
+    "kind": "Enum",
+    "module": "LocalAuthentication",
+    "usr": "c:@E@LACredentialType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So16LACredentialTypeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So16LACredentialTypeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So16LACredentialTypeV8RawValuea"
+      },
+      "applicationPassword": {
+        "kind": "EnumElement",
+        "type": "applicationPassword",
+        "usr": "c:@E@LACredentialType@LACredentialTypeApplicationPassword"
+      },
+      "smartCardPIN": {
+        "kind": "EnumElement",
+        "type": "smartCardPIN",
+        "usr": "c:@E@LACredentialType@LACredentialTypeSmartCardPIN"
+      }
+    }
+  },
+  "LADomainState": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LADomainState",
+    "members": {
+      "biometry": {
+        "kind": "Var",
+        "type": "biometry",
+        "usr": "c:objc(cs)LADomainState(py)biometry"
+      },
+      "companion": {
+        "kind": "Var",
+        "type": "companion",
+        "usr": "c:objc(cs)LADomainState(py)companion"
+      },
+      "stateHash": {
+        "kind": "Var",
+        "type": "stateHash",
+        "usr": "c:objc(cs)LADomainState(py)stateHash"
+      }
+    }
+  },
+  "LADomainStateBiometry": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LADomainStateBiometry",
+    "members": {
+      "biometryType": {
+        "kind": "Var",
+        "type": "biometryType",
+        "usr": "c:objc(cs)LADomainStateBiometry(py)biometryType"
+      },
+      "stateHash": {
+        "kind": "Var",
+        "type": "stateHash",
+        "usr": "c:objc(cs)LADomainStateBiometry(py)stateHash"
+      }
+    }
+  },
+  "LADomainStateCompanion": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LADomainStateCompanion",
+    "members": {
+      "stateHash": {
+        "kind": "Func",
+        "type": "stateHash(for:)",
+        "usr": "c:objc(cs)LADomainStateCompanion(im)stateHashForCompanionType:"
+      },
+      "availableCompanionTypes": {
+        "kind": "Var",
+        "type": "availableCompanionTypes",
+        "usr": "s:So22LADomainStateCompanionC19LocalAuthenticationE09availableC5TypesShySo15LACompanionTypeVGvp"
+      }
+    }
+  },
+  "LAEnvironment": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LAEnvironment",
+    "members": {
+      "addObserver": {
+        "kind": "Func",
+        "type": "addObserver(_:)",
+        "usr": "c:objc(cs)LAEnvironment(im)addObserver:"
+      },
+      "removeObserver": {
+        "kind": "Func",
+        "type": "removeObserver(_:)",
+        "usr": "c:objc(cs)LAEnvironment(im)removeObserver:"
+      },
+      "currentUser": {
+        "kind": "Var",
+        "type": "currentUser",
+        "usr": "c:objc(cs)LAEnvironment(cpy)currentUser"
+      },
+      "state": {
+        "kind": "Var",
+        "type": "state",
+        "usr": "c:objc(cs)LAEnvironment(py)state"
+      }
+    }
+  },
+  "Mechanism": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LAEnvironmentMechanism",
+    "members": {
+      "isUsable": {
+        "kind": "Var",
+        "type": "isUsable",
+        "usr": "c:objc(cs)LAEnvironmentMechanism(py)isUsable"
+      },
+      "localizedName": {
+        "kind": "Var",
+        "type": "localizedName",
+        "usr": "c:objc(cs)LAEnvironmentMechanism(py)localizedName"
+      },
+      "iconSystemName": {
+        "kind": "Var",
+        "type": "iconSystemName",
+        "usr": "c:objc(cs)LAEnvironmentMechanism(py)iconSystemName"
+      }
+    }
+  },
+  "MechanismBiometry": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LAEnvironmentMechanismBiometry",
+    "members": {
+      "biometryType": {
+        "kind": "Var",
+        "type": "biometryType",
+        "usr": "c:objc(cs)LAEnvironmentMechanismBiometry(py)biometryType"
+      },
+      "isEnrolled": {
+        "kind": "Var",
+        "type": "isEnrolled",
+        "usr": "c:objc(cs)LAEnvironmentMechanismBiometry(py)isEnrolled"
+      },
+      "isLockedOut": {
+        "kind": "Var",
+        "type": "isLockedOut",
+        "usr": "c:objc(cs)LAEnvironmentMechanismBiometry(py)isLockedOut"
+      },
+      "stateHash": {
+        "kind": "Var",
+        "type": "stateHash",
+        "usr": "c:objc(cs)LAEnvironmentMechanismBiometry(py)stateHash"
+      },
+      "builtInSensorInaccessible": {
+        "kind": "Var",
+        "type": "builtInSensorInaccessible",
+        "usr": "c:objc(cs)LAEnvironmentMechanismBiometry(py)builtInSensorInaccessible"
+      }
+    }
+  },
+  "MechanismCompanion": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LAEnvironmentMechanismCompanion",
+    "members": {
+      "type": {
+        "kind": "Var",
+        "type": "type",
+        "usr": "c:objc(cs)LAEnvironmentMechanismCompanion(py)type"
+      },
+      "stateHash": {
+        "kind": "Var",
+        "type": "stateHash",
+        "usr": "c:objc(cs)LAEnvironmentMechanismCompanion(py)stateHash"
+      }
+    }
+  },
+  "MechanismUserPassword": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LAEnvironmentMechanismUserPassword",
+    "members": {
+      "isSet": {
+        "kind": "Var",
+        "type": "isSet",
+        "usr": "c:objc(cs)LAEnvironmentMechanismUserPassword(py)isSet"
+      }
+    }
+  },
+  "Observer": {
+    "kind": "Protocol",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(pl)LAEnvironmentObserver",
+    "members": {
+      "environment": {
+        "kind": "Func",
+        "type": "environment(_:stateDidChangeFromOldState:)",
+        "usr": "c:objc(pl)LAEnvironmentObserver(im)environment:stateDidChangeFromOldState:"
+      }
+    }
+  },
+  "State": {
+    "kind": "Enum",
+    "module": "LocalAuthentication",
+    "usr": "c:@E@LARightState",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So12LARightStateV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So12LARightStateV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So12LARightStateV8RawValuea"
+      },
+      "unknown": {
+        "kind": "EnumElement",
+        "type": "unknown",
+        "usr": "c:@E@LARightState@LARightStateUnknown"
+      },
+      "authorizing": {
+        "kind": "EnumElement",
+        "type": "authorizing",
+        "usr": "c:@E@LARightState@LARightStateAuthorizing"
+      },
+      "authorized": {
+        "kind": "EnumElement",
+        "type": "authorized",
+        "usr": "c:@E@LARightState@LARightStateAuthorized"
+      },
+      "notAuthorized": {
+        "kind": "EnumElement",
+        "type": "notAuthorized",
+        "usr": "c:@E@LARightState@LARightStateNotAuthorized"
+      }
+    }
+  },
+  "LAError": {
+    "kind": "Struct",
+    "module": "LocalAuthentication",
+    "usr": "s:SC7LAErrorLeV",
+    "members": {
+      "_nsError": {
+        "kind": "Var",
+        "type": "_nsError",
+        "usr": "s:SC7LAErrorLeV8_nsErrorSo7NSErrorCvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_nsError:)",
+        "usr": "s:SC7LAErrorLeV8_nsErrorABSo7NSErrorC_tcfc"
+      },
+      "errorDomain": {
+        "kind": "Var",
+        "type": "errorDomain",
+        "usr": "s:SC7LAErrorLeV11errorDomainSSvpZ"
+      },
+      "Code": {
+        "kind": "Enum",
+        "type": "Code",
+        "usr": "c:@E@LAError"
+      },
+      "authenticationFailed": {
+        "kind": "Var",
+        "type": "authenticationFailed",
+        "usr": "s:SC7LAErrorLeV20authenticationFailedSoAAVvpZ"
+      },
+      "userCancel": {
+        "kind": "Var",
+        "type": "userCancel",
+        "usr": "s:SC7LAErrorLeV10userCancelSoAAVvpZ"
+      },
+      "userFallback": {
+        "kind": "Var",
+        "type": "userFallback",
+        "usr": "s:SC7LAErrorLeV12userFallbackSoAAVvpZ"
+      },
+      "systemCancel": {
+        "kind": "Var",
+        "type": "systemCancel",
+        "usr": "s:SC7LAErrorLeV12systemCancelSoAAVvpZ"
+      },
+      "passcodeNotSet": {
+        "kind": "Var",
+        "type": "passcodeNotSet",
+        "usr": "s:SC7LAErrorLeV14passcodeNotSetSoAAVvpZ"
+      },
+      "touchIDNotAvailable": {
+        "kind": "Var",
+        "type": "touchIDNotAvailable",
+        "usr": "s:SC7LAErrorLeV19touchIDNotAvailableSoAAVvpZ"
+      },
+      "touchIDNotEnrolled": {
+        "kind": "Var",
+        "type": "touchIDNotEnrolled",
+        "usr": "s:SC7LAErrorLeV18touchIDNotEnrolledSoAAVvpZ"
+      },
+      "touchIDLockout": {
+        "kind": "Var",
+        "type": "touchIDLockout",
+        "usr": "s:SC7LAErrorLeV14touchIDLockoutSoAAVvpZ"
+      },
+      "appCancel": {
+        "kind": "Var",
+        "type": "appCancel",
+        "usr": "s:SC7LAErrorLeV9appCancelSoAAVvpZ"
+      },
+      "invalidContext": {
+        "kind": "Var",
+        "type": "invalidContext",
+        "usr": "s:SC7LAErrorLeV14invalidContextSoAAVvpZ"
+      },
+      "biometryNotAvailable": {
+        "kind": "Var",
+        "type": "biometryNotAvailable",
+        "usr": "s:SC7LAErrorLeV20biometryNotAvailableSoAAVvpZ"
+      },
+      "biometryNotEnrolled": {
+        "kind": "Var",
+        "type": "biometryNotEnrolled",
+        "usr": "s:SC7LAErrorLeV19biometryNotEnrolledSoAAVvpZ"
+      },
+      "biometryLockout": {
+        "kind": "Var",
+        "type": "biometryLockout",
+        "usr": "s:SC7LAErrorLeV15biometryLockoutSoAAVvpZ"
+      },
+      "notInteractive": {
+        "kind": "Var",
+        "type": "notInteractive",
+        "usr": "s:SC7LAErrorLeV14notInteractiveSoAAVvpZ"
+      },
+      "companionNotAvailable": {
+        "kind": "Var",
+        "type": "companionNotAvailable",
+        "usr": "s:SC7LAErrorLeV21companionNotAvailableSoAAVvpZ"
+      }
+    }
+  },
+  "Code": {
+    "kind": "Enum",
+    "module": "LocalAuthentication",
+    "usr": "c:@E@LAError",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So7LAErrorV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So7LAErrorV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So7LAErrorV8RawValuea"
+      },
+      "_ErrorType": {
+        "kind": "TypeAlias",
+        "type": "_ErrorType",
+        "usr": "c:@E@LAError"
+      },
+      "authenticationFailed": {
+        "kind": "EnumElement",
+        "type": "authenticationFailed",
+        "usr": "c:@E@LAError@LAErrorAuthenticationFailed"
+      },
+      "userCancel": {
+        "kind": "EnumElement",
+        "type": "userCancel",
+        "usr": "c:@E@LAError@LAErrorUserCancel"
+      },
+      "userFallback": {
+        "kind": "EnumElement",
+        "type": "userFallback",
+        "usr": "c:@E@LAError@LAErrorUserFallback"
+      },
+      "systemCancel": {
+        "kind": "EnumElement",
+        "type": "systemCancel",
+        "usr": "c:@E@LAError@LAErrorSystemCancel"
+      },
+      "passcodeNotSet": {
+        "kind": "EnumElement",
+        "type": "passcodeNotSet",
+        "usr": "c:@E@LAError@LAErrorPasscodeNotSet"
+      },
+      "touchIDNotAvailable": {
+        "kind": "EnumElement",
+        "type": "touchIDNotAvailable",
+        "usr": "c:@E@LAError@LAErrorTouchIDNotAvailable"
+      },
+      "touchIDNotEnrolled": {
+        "kind": "EnumElement",
+        "type": "touchIDNotEnrolled",
+        "usr": "c:@E@LAError@LAErrorTouchIDNotEnrolled"
+      },
+      "touchIDLockout": {
+        "kind": "EnumElement",
+        "type": "touchIDLockout",
+        "usr": "c:@E@LAError@LAErrorTouchIDLockout"
+      },
+      "appCancel": {
+        "kind": "EnumElement",
+        "type": "appCancel",
+        "usr": "c:@E@LAError@LAErrorAppCancel"
+      },
+      "invalidContext": {
+        "kind": "EnumElement",
+        "type": "invalidContext",
+        "usr": "c:@E@LAError@LAErrorInvalidContext"
+      },
+      "biometryNotAvailable": {
+        "kind": "Var",
+        "type": "biometryNotAvailable",
+        "usr": "s:So7LAErrorV20biometryNotAvailableABvpZ"
+      },
+      "biometryNotEnrolled": {
+        "kind": "Var",
+        "type": "biometryNotEnrolled",
+        "usr": "s:So7LAErrorV19biometryNotEnrolledABvpZ"
+      },
+      "biometryLockout": {
+        "kind": "Var",
+        "type": "biometryLockout",
+        "usr": "s:So7LAErrorV15biometryLockoutABvpZ"
+      },
+      "notInteractive": {
+        "kind": "EnumElement",
+        "type": "notInteractive",
+        "usr": "c:@E@LAError@LAErrorNotInteractive"
+      },
+      "companionNotAvailable": {
+        "kind": "Var",
+        "type": "companionNotAvailable",
+        "usr": "s:So7LAErrorV21companionNotAvailableABvpZ"
+      }
+    }
+  },
+  "LAPersistedRight": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LAPersistedRight",
+    "members": {
+      "key": {
+        "kind": "Var",
+        "type": "key",
+        "usr": "c:objc(cs)LAPersistedRight(py)key"
+      },
+      "secret": {
+        "kind": "Var",
+        "type": "secret",
+        "usr": "c:objc(cs)LAPersistedRight(py)secret"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(requirement:)",
+        "usr": "c:objc(cs)LARight(im)initWithRequirement:"
+      }
+    }
+  },
+  "LAPolicy": {
+    "kind": "Enum",
+    "module": "LocalAuthentication",
+    "usr": "c:@E@LAPolicy",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So8LAPolicyV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So8LAPolicyV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So8LAPolicyV8RawValuea"
+      },
+      "deviceOwnerAuthenticationWithBiometrics": {
+        "kind": "EnumElement",
+        "type": "deviceOwnerAuthenticationWithBiometrics",
+        "usr": "c:@E@LAPolicy@LAPolicyDeviceOwnerAuthenticationWithBiometrics"
+      },
+      "deviceOwnerAuthentication": {
+        "kind": "EnumElement",
+        "type": "deviceOwnerAuthentication",
+        "usr": "c:@E@LAPolicy@LAPolicyDeviceOwnerAuthentication"
+      },
+      "deviceOwnerAuthenticationWithCompanion": {
+        "kind": "Var",
+        "type": "deviceOwnerAuthenticationWithCompanion",
+        "usr": "c:@E@LAPolicy@LAPolicyDeviceOwnerAuthenticationWithCompanion"
+      },
+      "deviceOwnerAuthenticationWithBiometricsOrCompanion": {
+        "kind": "Var",
+        "type": "deviceOwnerAuthenticationWithBiometricsOrCompanion",
+        "usr": "c:@E@LAPolicy@LAPolicyDeviceOwnerAuthenticationWithBiometricsOrCompanion"
+      }
+    }
+  },
+  "LAPrivateKey": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LAPrivateKey",
+    "members": {
+      "publicKey": {
+        "kind": "Var",
+        "type": "publicKey",
+        "usr": "c:objc(cs)LAPrivateKey(py)publicKey"
+      },
+      "sign": {
+        "kind": "Func",
+        "type": "sign(_:algorithm:)",
+        "usr": "c:objc(cs)LAPrivateKey(im)signData:secKeyAlgorithm:completion:"
+      },
+      "canSign": {
+        "kind": "Func",
+        "type": "canSign(using:)",
+        "usr": "c:objc(cs)LAPrivateKey(im)canSignUsingSecKeyAlgorithm:"
+      },
+      "decrypt": {
+        "kind": "Func",
+        "type": "decrypt(_:algorithm:)",
+        "usr": "c:objc(cs)LAPrivateKey(im)decryptData:secKeyAlgorithm:completion:"
+      },
+      "canDecrypt": {
+        "kind": "Func",
+        "type": "canDecrypt(using:)",
+        "usr": "c:objc(cs)LAPrivateKey(im)canDecryptUsingSecKeyAlgorithm:"
+      },
+      "exchangeKeys": {
+        "kind": "Func",
+        "type": "exchangeKeys(publicKey:algorithm:parameters:)",
+        "usr": "c:objc(cs)LAPrivateKey(im)exchangeKeysWithPublicKey:secKeyAlgorithm:secKeyParameters:completion:"
+      },
+      "canExchangeKeys": {
+        "kind": "Func",
+        "type": "canExchangeKeys(using:)",
+        "usr": "c:objc(cs)LAPrivateKey(im)canExchangeKeysUsingSecKeyAlgorithm:"
+      }
+    }
+  },
+  "LAPublicKey": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LAPublicKey",
+    "members": {
+      "exportBytes": {
+        "kind": "Func",
+        "type": "exportBytes(completion:)",
+        "usr": "c:objc(cs)LAPublicKey(im)exportBytesWithCompletion:"
+      },
+      "bytes": {
+        "kind": "Var",
+        "type": "bytes",
+        "usr": "c:objc(cs)LAPublicKey(im)exportBytesWithCompletion:"
+      },
+      "encrypt": {
+        "kind": "Func",
+        "type": "encrypt(_:algorithm:)",
+        "usr": "c:objc(cs)LAPublicKey(im)encryptData:secKeyAlgorithm:completion:"
+      },
+      "canEncrypt": {
+        "kind": "Func",
+        "type": "canEncrypt(using:)",
+        "usr": "c:objc(cs)LAPublicKey(im)canEncryptUsingSecKeyAlgorithm:"
+      },
+      "verify": {
+        "kind": "Func",
+        "type": "verify(_:signature:algorithm:)",
+        "usr": "c:objc(cs)LAPublicKey(im)verifyData:signature:secKeyAlgorithm:completion:"
+      },
+      "canVerify": {
+        "kind": "Func",
+        "type": "canVerify(using:)",
+        "usr": "c:objc(cs)LAPublicKey(im)canVerifyUsingSecKeyAlgorithm:"
+      }
+    }
+  },
+  "LARight": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LARight",
+    "members": {
+      "state": {
+        "kind": "Var",
+        "type": "state",
+        "usr": "c:objc(cs)LARight(py)state"
+      },
+      "tag": {
+        "kind": "Var",
+        "type": "tag",
+        "usr": "c:objc(cs)LARight(py)tag"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(requirement:)",
+        "usr": "c:objc(cs)LARight(im)initWithRequirement:"
+      },
+      "authorize": {
+        "kind": "Func",
+        "type": "authorize(localizedReason:)",
+        "usr": "c:objc(cs)LARight(im)authorizeWithLocalizedReason:completion:"
+      },
+      "checkCanAuthorize": {
+        "kind": "Func",
+        "type": "checkCanAuthorize()",
+        "usr": "c:objc(cs)LARight(im)checkCanAuthorizeWithCompletion:"
+      },
+      "deauthorize": {
+        "kind": "Func",
+        "type": "deauthorize()",
+        "usr": "c:objc(cs)LARight(im)deauthorizeWithCompletion:"
+      },
+      "State": {
+        "kind": "Enum",
+        "type": "State",
+        "usr": "c:@E@LARightState"
+      }
+    }
+  },
+  "LARightStore": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LARightStore",
+    "members": {
+      "shared": {
+        "kind": "Var",
+        "type": "shared",
+        "usr": "c:objc(cs)LARightStore(cpy)sharedStore"
+      },
+      "right": {
+        "kind": "Func",
+        "type": "right(forIdentifier:)",
+        "usr": "c:objc(cs)LARightStore(im)rightForIdentifier:completion:"
+      },
+      "saveRight": {
+        "kind": "Func",
+        "type": "saveRight(_:identifier:secret:)",
+        "usr": "c:objc(cs)LARightStore(im)saveRight:identifier:secret:completion:"
+      },
+      "removeRight": {
+        "kind": "Func",
+        "type": "removeRight(forIdentifier:)",
+        "usr": "c:objc(cs)LARightStore(im)removeRightForIdentifier:completion:"
+      },
+      "removeAllRights": {
+        "kind": "Func",
+        "type": "removeAllRights()",
+        "usr": "c:objc(cs)LARightStore(im)removeAllRightsWithCompletion:"
+      }
+    }
+  },
+  "LASecret": {
+    "kind": "Class",
+    "module": "LocalAuthentication",
+    "usr": "c:objc(cs)LASecret",
+    "members": {
+      "loadData": {
+        "kind": "Func",
+        "type": "loadData(completion:)",
+        "usr": "c:objc(cs)LASecret(im)loadDataWithCompletion:"
+      },
+      "rawData": {
+        "kind": "Var",
+        "type": "rawData",
+        "usr": "c:objc(cs)LASecret(im)loadDataWithCompletion:"
+      }
+    }
+  }
+}

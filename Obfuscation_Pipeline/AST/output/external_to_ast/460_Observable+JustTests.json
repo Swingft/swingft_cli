@@ -1,0 +1,602 @@
+[
+  {
+    "A_name" : "ObservableJustTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 13, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "ObservableJustTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testJust_Immediate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 17, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+JustTests.swift - Line: 18, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+JustTests.swift - Line: 20, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            return Observable.just(42)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testJust_Basic",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 30, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+JustTests.swift - Line: 31, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+JustTests.swift - Line: 33, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            return Observable.just(42, scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testJust_Disposed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 43, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+JustTests.swift - Line: 44, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+JustTests.swift - Line: 46, Column: 9",
+            "H_initialValue" : "scheduler.start(disposed: 200) {\n            return Observable.just(42, scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testJust_DisposeAfterNext",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 54, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+JustTests.swift - Line: 55, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "d",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+JustTests.swift - Line: 57, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+JustTests.swift - Line: 59, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testJust_DefaultScheduler",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 83, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+JustTests.swift - Line: 84, Column: 9",
+            "H_initialValue" : "try! Observable.just(42, scheduler: MainScheduler.instance)\n            .toBlocking()\n            .toArray()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testJust_CompilesInMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 93, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testJust_Immediate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 17, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 18, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 20, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            return Observable.just(42)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 18, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 20, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            return Observable.just(42)\n        }"
+  },
+  {
+    "A_name" : "testJust_Basic",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 30, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 31, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 33, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            return Observable.just(42, scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 31, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 33, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            return Observable.just(42, scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "testJust_Disposed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 43, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 44, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 46, Column: 9",
+        "H_initialValue" : "scheduler.start(disposed: 200) {\n            return Observable.just(42, scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 44, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 46, Column: 9",
+    "H_initialValue" : "scheduler.start(disposed: 200) {\n            return Observable.just(42, scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "testJust_DisposeAfterNext",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 54, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 55, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "d",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 57, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 59, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 55, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "d",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 57, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 59, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 62, Column: 13",
+    "H_initialValue" : "Observable.just(42, scheduler: scheduler).subscribe { e in\n                res.on(e)\n\n                switch e {\n                case .next:\n                    d.dispose()\n                default:\n                    break\n                }\n            }"
+  },
+  {
+    "A_name" : "testJust_DefaultScheduler",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 83, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 84, Column: 9",
+        "H_initialValue" : "try! Observable.just(42, scheduler: MainScheduler.instance)\n            .toBlocking()\n            .toArray()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 84, Column: 9",
+    "H_initialValue" : "try! Observable.just(42, scheduler: MainScheduler.instance)\n            .toBlocking()\n            .toArray()"
+  },
+  {
+    "A_name" : "testJust_CompilesInMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 93, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testJustReleasesResourcesOnComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 98, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testJustSchdedulerReleasesResourcesOnComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 104, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "testScheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+JustTests.swift - Line: 105, Column: 13",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+JustTests.swift - Line: 105, Column: 13",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  }
+]

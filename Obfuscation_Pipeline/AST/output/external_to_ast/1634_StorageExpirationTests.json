@@ -1,0 +1,426 @@
+[
+  {
+    "A_name" : "StorageExpirationTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 30, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testExpirationNever",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StorageExpirationTests.swift - Line: 32, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "e",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StorageExpirationTests.swift - Line: 33, Column: 9",
+            "H_initialValue" : "StorageExpiration.never"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testExpirationSeconds",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StorageExpirationTests.swift - Line: 39, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "e",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StorageExpirationTests.swift - Line: 40, Column: 9",
+            "H_initialValue" : "StorageExpiration.seconds(100)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testExpirationDays",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StorageExpirationTests.swift - Line: 49, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "e",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StorageExpirationTests.swift - Line: 50, Column: 9",
+            "H_initialValue" : "StorageExpiration.days(1)"
+          },
+          {
+            "A_name" : "oneDayInSecond",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StorageExpirationTests.swift - Line: 51, Column: 9",
+            "H_initialValue" : "TimeInterval(TimeConstants.secondsInOneDay)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testExpirationDate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StorageExpirationTests.swift - Line: 60, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "oneDayInSecond",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StorageExpirationTests.swift - Line: 61, Column: 9",
+            "H_initialValue" : "TimeInterval(TimeConstants.secondsInOneDay)"
+          },
+          {
+            "A_name" : "targetDate",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StorageExpirationTests.swift - Line: 62, Column: 9",
+            "H_initialValue" : "Date().addingTimeInterval(oneDayInSecond)"
+          },
+          {
+            "A_name" : "e",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StorageExpirationTests.swift - Line: 63, Column: 9",
+            "H_initialValue" : "StorageExpiration.date(targetDate)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testAlreadyExpired",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StorageExpirationTests.swift - Line: 72, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "e",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "StorageExpirationTests.swift - Line: 73, Column: 9",
+            "H_initialValue" : "StorageExpiration.expired"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testExpirationNever",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 32, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "e",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StorageExpirationTests.swift - Line: 33, Column: 9",
+        "H_initialValue" : "StorageExpiration.never"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "e",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 33, Column: 9",
+    "H_initialValue" : "StorageExpiration.never"
+  },
+  {
+    "A_name" : "testExpirationSeconds",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 39, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "e",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StorageExpirationTests.swift - Line: 40, Column: 9",
+        "H_initialValue" : "StorageExpiration.seconds(100)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "e",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 40, Column: 9",
+    "H_initialValue" : "StorageExpiration.seconds(100)"
+  },
+  {
+    "A_name" : "testExpirationDays",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 49, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "e",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StorageExpirationTests.swift - Line: 50, Column: 9",
+        "H_initialValue" : "StorageExpiration.days(1)"
+      },
+      {
+        "A_name" : "oneDayInSecond",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StorageExpirationTests.swift - Line: 51, Column: 9",
+        "H_initialValue" : "TimeInterval(TimeConstants.secondsInOneDay)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "e",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 50, Column: 9",
+    "H_initialValue" : "StorageExpiration.days(1)"
+  },
+  {
+    "A_name" : "oneDayInSecond",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 51, Column: 9",
+    "H_initialValue" : "TimeInterval(TimeConstants.secondsInOneDay)"
+  },
+  {
+    "A_name" : "testExpirationDate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 60, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "oneDayInSecond",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StorageExpirationTests.swift - Line: 61, Column: 9",
+        "H_initialValue" : "TimeInterval(TimeConstants.secondsInOneDay)"
+      },
+      {
+        "A_name" : "targetDate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StorageExpirationTests.swift - Line: 62, Column: 9",
+        "H_initialValue" : "Date().addingTimeInterval(oneDayInSecond)"
+      },
+      {
+        "A_name" : "e",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StorageExpirationTests.swift - Line: 63, Column: 9",
+        "H_initialValue" : "StorageExpiration.date(targetDate)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "oneDayInSecond",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 61, Column: 9",
+    "H_initialValue" : "TimeInterval(TimeConstants.secondsInOneDay)"
+  },
+  {
+    "A_name" : "targetDate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 62, Column: 9",
+    "H_initialValue" : "Date().addingTimeInterval(oneDayInSecond)"
+  },
+  {
+    "A_name" : "e",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 63, Column: 9",
+    "H_initialValue" : "StorageExpiration.date(targetDate)"
+  },
+  {
+    "A_name" : "testAlreadyExpired",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 72, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "e",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StorageExpirationTests.swift - Line: 73, Column: 9",
+        "H_initialValue" : "StorageExpiration.expired"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "e",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StorageExpirationTests.swift - Line: 73, Column: 9",
+    "H_initialValue" : "StorageExpiration.expired"
+  }
+]

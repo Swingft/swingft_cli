@@ -1,0 +1,490 @@
+[
+  {
+    "A_name" : "LoginViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIViewController<LoginViewModel>"
+    ],
+    "F_location" : "LoginViewController.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "loginView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewController.swift - Line: 17, Column: 5",
+        "H_initialValue" : "LoginView()"
+      },
+      {
+        "A_name" : "hasShownSplash",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "LoginViewController.swift - Line: 18, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "viewWillAppear",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LoginViewController.swift - Line: 23, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LoginViewController.swift - Line: 35, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LoginViewController.swift - Line: 39, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "addTarget",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LoginViewController.swift - Line: 45, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "policyButtonTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "LoginViewController.swift - Line: 50, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "safariVC",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoginViewController.swift - Line: 53, Column: 9",
+            "H_initialValue" : "SFSafariViewController(url: url)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "navigationType",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LoginViewController.swift - Line: 60, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> NavigationType?"
+      },
+      {
+        "A_name" : "bind",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LoginViewController.swift - Line: 66, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "input",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoginViewController.swift - Line: 69, Column: 9",
+            "H_initialValue" : "makeInput()"
+          },
+          {
+            "A_name" : "output",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoginViewController.swift - Line: 70, Column: 9",
+            "H_initialValue" : "viewModel.transform(input: input)"
+          }
+        ],
+        "I_parameterType" : [
+          "LoginViewModel"
+        ],
+        "I_parameters" : [
+          "viewModel"
+        ]
+      },
+      {
+        "A_name" : "makeInput",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewController.swift - Line: 75, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> LoginViewModel.Input"
+      },
+      {
+        "A_name" : "bindOutput",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewController.swift - Line: 81, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LoginViewModel.Output"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "loginView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewController.swift - Line: 17, Column: 5",
+    "H_initialValue" : "LoginView()"
+  },
+  {
+    "A_name" : "hasShownSplash",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "LoginViewController.swift - Line: 18, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "viewWillAppear",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LoginViewController.swift - Line: 23, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LoginViewController.swift - Line: 35, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LoginViewController.swift - Line: 39, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "addTarget",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LoginViewController.swift - Line: 45, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "policyButtonTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "LoginViewController.swift - Line: 50, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "safariVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewController.swift - Line: 53, Column: 9",
+        "H_initialValue" : "SFSafariViewController(url: url)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "safariVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewController.swift - Line: 53, Column: 9",
+    "H_initialValue" : "SFSafariViewController(url: url)"
+  },
+  {
+    "A_name" : "navigationType",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LoginViewController.swift - Line: 60, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> NavigationType?"
+  },
+  {
+    "A_name" : "bind",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LoginViewController.swift - Line: 66, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "input",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewController.swift - Line: 69, Column: 9",
+        "H_initialValue" : "makeInput()"
+      },
+      {
+        "A_name" : "output",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewController.swift - Line: 70, Column: 9",
+        "H_initialValue" : "viewModel.transform(input: input)"
+      }
+    ],
+    "I_parameterType" : [
+      "LoginViewModel"
+    ],
+    "I_parameters" : [
+      "viewModel"
+    ]
+  },
+  {
+    "A_name" : "input",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewController.swift - Line: 69, Column: 9",
+    "H_initialValue" : "makeInput()"
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewController.swift - Line: 70, Column: 9",
+    "H_initialValue" : "viewModel.transform(input: input)"
+  },
+  {
+    "A_name" : "makeInput",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewController.swift - Line: 75, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> LoginViewModel.Input"
+  },
+  {
+    "A_name" : "bindOutput",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewController.swift - Line: 81, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LoginViewModel.Output"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "homeVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewController.swift - Line: 87, Column: 17",
+    "H_initialValue" : "self.diContainer.makeTabBarViewController()"
+  },
+  {
+    "A_name" : "verificationVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewController.swift - Line: 96, Column: 17",
+    "H_initialValue" : "self.diContainer.makeVerificationCodeViewController()"
+  }
+]

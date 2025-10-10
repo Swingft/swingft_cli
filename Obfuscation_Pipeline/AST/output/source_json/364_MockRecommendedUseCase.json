@@ -1,0 +1,138 @@
+[
+  {
+    "A_name" : "MockRecommendedUseCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "RecommendedExpressionUseCase"
+    ],
+    "F_location" : "MockRecommendedUseCase.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "returnEmpty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MockRecommendedUseCase.swift - Line: 12, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MockRecommendedUseCase.swift - Line: 14, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "returnEmpty"
+        ]
+      },
+      {
+        "A_name" : "fetchRecommendedExpression",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MockRecommendedUseCase.swift - Line: 18, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dummyList",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MockRecommendedUseCase.swift - Line: 19, Column: 9",
+            "H_initialValue" : "returnEmpty ? [] : [\n            RecommendedExpressionEntity.Phrase(\n                phraseId: 1,\n                phraseType: [\"동사\", \"일상 표현\"],\n                phrase: \"take a walk\",\n                explanation: \"산책하다\",\n                reason: \"‘산책했다’는 문장에서 자연스럽게 사용할 수 있어요.\",\n                isBookmarked: false\n            ),\n            RecommendedExpressionEntity.Phrase(\n                phraseId: 2,\n                phraseType: [\"형용사\"],\n                phrase: \"exhausted\",\n                explanation: \"지친, 기진맥진한\",\n                reason: \"‘피곤했다’는 표현을 더 생생하게 전달할 수 있어요.\",\n                isBookmarked: true\n            )\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "diaryId"
+        ],
+        "J_returnType" : "-> AnyPublisher<[RecommendedExpressionEntity.Phrase], Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "returnEmpty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MockRecommendedUseCase.swift - Line: 12, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MockRecommendedUseCase.swift - Line: 14, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "returnEmpty"
+    ]
+  },
+  {
+    "A_name" : "fetchRecommendedExpression",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MockRecommendedUseCase.swift - Line: 18, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dummyList",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MockRecommendedUseCase.swift - Line: 19, Column: 9",
+        "H_initialValue" : "returnEmpty ? [] : [\n            RecommendedExpressionEntity.Phrase(\n                phraseId: 1,\n                phraseType: [\"동사\", \"일상 표현\"],\n                phrase: \"take a walk\",\n                explanation: \"산책하다\",\n                reason: \"‘산책했다’는 문장에서 자연스럽게 사용할 수 있어요.\",\n                isBookmarked: false\n            ),\n            RecommendedExpressionEntity.Phrase(\n                phraseId: 2,\n                phraseType: [\"형용사\"],\n                phrase: \"exhausted\",\n                explanation: \"지친, 기진맥진한\",\n                reason: \"‘피곤했다’는 표현을 더 생생하게 전달할 수 있어요.\",\n                isBookmarked: true\n            )\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "diaryId"
+    ],
+    "J_returnType" : "-> AnyPublisher<[RecommendedExpressionEntity.Phrase], Error>"
+  },
+  {
+    "A_name" : "dummyList",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MockRecommendedUseCase.swift - Line: 19, Column: 9",
+    "H_initialValue" : "returnEmpty ? [] : [\n            RecommendedExpressionEntity.Phrase(\n                phraseId: 1,\n                phraseType: [\"동사\", \"일상 표현\"],\n                phrase: \"take a walk\",\n                explanation: \"산책하다\",\n                reason: \"‘산책했다’는 문장에서 자연스럽게 사용할 수 있어요.\",\n                isBookmarked: false\n            ),\n            RecommendedExpressionEntity.Phrase(\n                phraseId: 2,\n                phraseType: [\"형용사\"],\n                phrase: \"exhausted\",\n                explanation: \"지친, 기진맥진한\",\n                reason: \"‘피곤했다’는 표현을 더 생생하게 전달할 수 있어요.\",\n                isBookmarked: true\n            )\n        ]"
+  }
+]

@@ -1,0 +1,334 @@
+[
+  {
+    "A_name" : "GithubSignupViewModel1",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 24, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "validatedUsername",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GithubSignupViewModel1.swift - Line: 27, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "validatedPassword",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GithubSignupViewModel1.swift - Line: 28, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "validatedPasswordRepeated",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GithubSignupViewModel1.swift - Line: 29, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "signupEnabled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GithubSignupViewModel1.swift - Line: 32, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "signedIn",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GithubSignupViewModel1.swift - Line: 35, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "signingIn",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GithubSignupViewModel1.swift - Line: 38, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GithubSignupViewModel1.swift - Line: 42, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "API",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GithubSignupViewModel1.swift - Line: 54, Column: 9",
+            "H_initialValue" : "dependency.API"
+          },
+          {
+            "A_name" : "validationService",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GithubSignupViewModel1.swift - Line: 55, Column: 9",
+            "H_initialValue" : "dependency.validationService"
+          },
+          {
+            "A_name" : "wireframe",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GithubSignupViewModel1.swift - Line: 56, Column: 9",
+            "H_initialValue" : "dependency.wireframe"
+          },
+          {
+            "A_name" : "signingIn",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GithubSignupViewModel1.swift - Line: 82, Column: 9",
+            "H_initialValue" : "ActivityIndicator()"
+          },
+          {
+            "A_name" : "usernameAndPassword",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "GithubSignupViewModel1.swift - Line: 85, Column: 9",
+            "H_initialValue" : "Observable.combineLatest(input.username, input.password) { (username: $0, password: $1) }"
+          }
+        ],
+        "I_parameterType" : [
+          "(\n            username: Observable<String>,\n            password: Observable<String>,\n            repeatedPassword: Observable<String>,\n            loginTaps: Observable<Void>\n        )",
+          "(\n            API: GitHubAPI,\n            validationService: GitHubValidationService,\n            wireframe: Wireframe\n        )"
+        ],
+        "I_parameters" : [
+          "input",
+          "dependency"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "validatedUsername",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 27, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "validatedPassword",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 28, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "validatedPasswordRepeated",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 29, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signupEnabled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 32, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signedIn",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 35, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signingIn",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 38, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 42, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "API",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GithubSignupViewModel1.swift - Line: 54, Column: 9",
+        "H_initialValue" : "dependency.API"
+      },
+      {
+        "A_name" : "validationService",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GithubSignupViewModel1.swift - Line: 55, Column: 9",
+        "H_initialValue" : "dependency.validationService"
+      },
+      {
+        "A_name" : "wireframe",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GithubSignupViewModel1.swift - Line: 56, Column: 9",
+        "H_initialValue" : "dependency.wireframe"
+      },
+      {
+        "A_name" : "signingIn",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GithubSignupViewModel1.swift - Line: 82, Column: 9",
+        "H_initialValue" : "ActivityIndicator()"
+      },
+      {
+        "A_name" : "usernameAndPassword",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GithubSignupViewModel1.swift - Line: 85, Column: 9",
+        "H_initialValue" : "Observable.combineLatest(input.username, input.password) { (username: $0, password: $1) }"
+      }
+    ],
+    "I_parameterType" : [
+      "(\n            username: Observable<String>,\n            password: Observable<String>,\n            repeatedPassword: Observable<String>,\n            loginTaps: Observable<Void>\n        )",
+      "(\n            API: GitHubAPI,\n            validationService: GitHubValidationService,\n            wireframe: Wireframe\n        )"
+    ],
+    "I_parameters" : [
+      "input",
+      "dependency"
+    ]
+  },
+  {
+    "A_name" : "API",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 54, Column: 9",
+    "H_initialValue" : "dependency.API"
+  },
+  {
+    "A_name" : "validationService",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 55, Column: 9",
+    "H_initialValue" : "dependency.validationService"
+  },
+  {
+    "A_name" : "wireframe",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 56, Column: 9",
+    "H_initialValue" : "dependency.wireframe"
+  },
+  {
+    "A_name" : "signingIn",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 82, Column: 9",
+    "H_initialValue" : "ActivityIndicator()"
+  },
+  {
+    "A_name" : "usernameAndPassword",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 85, Column: 9",
+    "H_initialValue" : "Observable.combineLatest(input.username, input.password) { (username: $0, password: $1) }"
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GithubSignupViewModel1.swift - Line: 95, Column: 17",
+    "H_initialValue" : "loggedIn ? \"Mock: Signed in to GitHub.\" : \"Mock: Sign in to GitHub failed\""
+  }
+]

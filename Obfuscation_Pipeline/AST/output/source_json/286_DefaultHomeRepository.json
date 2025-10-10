@@ -1,0 +1,342 @@
+[
+  {
+    "A_name" : "DefaultHomeRepository",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "HomeRepository"
+    ],
+    "F_location" : "DefaultHomeRepository.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "service",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultHomeRepository.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultHomeRepository.swift - Line: 18, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "HomeService"
+        ],
+        "I_parameters" : [
+          "service"
+        ]
+      },
+      {
+        "A_name" : "fetchUserInfo",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultHomeRepository.swift - Line: 22, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> AnyPublisher<UserInfoEntity, Error>"
+      },
+      {
+        "A_name" : "fetchMonthInfo",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultHomeRepository.swift - Line: 40, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "Int"
+        ],
+        "I_parameters" : [
+          "year",
+          "month"
+        ],
+        "J_returnType" : "-> AnyPublisher<MonthInfoEntity, Error>"
+      },
+      {
+        "A_name" : "fetchDiaryInfo",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultHomeRepository.swift - Line: 51, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> AnyPublisher<DiaryInfoEntity?, Error>"
+      },
+      {
+        "A_name" : "fetchTopic",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultHomeRepository.swift - Line: 62, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> AnyPublisher<TopicEntity?, Error>"
+      },
+      {
+        "A_name" : "publishDiary",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultHomeRepository.swift - Line: 73, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "diaryId"
+        ],
+        "J_returnType" : "-> AnyPublisher<Void, Error>"
+      },
+      {
+        "A_name" : "unpublishDiary",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultHomeRepository.swift - Line: 78, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "diaryId"
+        ],
+        "J_returnType" : "-> AnyPublisher<Void, Error>"
+      },
+      {
+        "A_name" : "deleteDiary",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultHomeRepository.swift - Line: 83, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "diaryId"
+        ],
+        "J_returnType" : "-> AnyPublisher<Void, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "service",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultHomeRepository.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultHomeRepository.swift - Line: 18, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "HomeService"
+    ],
+    "I_parameters" : [
+      "service"
+    ]
+  },
+  {
+    "A_name" : "fetchUserInfo",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultHomeRepository.swift - Line: 22, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> AnyPublisher<UserInfoEntity, Error>"
+  },
+  {
+    "A_name" : "fetchMonthInfo",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultHomeRepository.swift - Line: 40, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "Int"
+    ],
+    "I_parameters" : [
+      "year",
+      "month"
+    ],
+    "J_returnType" : "-> AnyPublisher<MonthInfoEntity, Error>"
+  },
+  {
+    "A_name" : "fetchDiaryInfo",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultHomeRepository.swift - Line: 51, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> AnyPublisher<DiaryInfoEntity?, Error>"
+  },
+  {
+    "A_name" : "fetchTopic",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultHomeRepository.swift - Line: 62, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> AnyPublisher<TopicEntity?, Error>"
+  },
+  {
+    "A_name" : "publishDiary",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultHomeRepository.swift - Line: 73, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "diaryId"
+    ],
+    "J_returnType" : "-> AnyPublisher<Void, Error>"
+  },
+  {
+    "A_name" : "unpublishDiary",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultHomeRepository.swift - Line: 78, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "diaryId"
+    ],
+    "J_returnType" : "-> AnyPublisher<Void, Error>"
+  },
+  {
+    "A_name" : "deleteDiary",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultHomeRepository.swift - Line: 83, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "diaryId"
+    ],
+    "J_returnType" : "-> AnyPublisher<Void, Error>"
+  }
+]

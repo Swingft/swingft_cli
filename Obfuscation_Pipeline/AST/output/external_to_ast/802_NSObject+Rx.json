@@ -1,0 +1,1955 @@
+[
+  {
+    "A_name" : "deallocatingSubjectTriggerContext",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 18, Column: 1",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "deallocatingSubjectContext",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 19, Column: 1",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "deallocatedSubjectTriggerContext",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 21, Column: 1",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "deallocatedSubjectContext",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 22, Column: 1",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "Reactive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 46, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "observe",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 66, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element.Type",
+          "String",
+          "KeyValueObservingOptions",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "options",
+          "retainSelf"
+        ],
+        "J_returnType" : "-> Observable<Element?>"
+      },
+      {
+        "A_name" : "observe",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 83, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "KeyPath<Base, Element>",
+          "NSKeyValueObservingOptions"
+        ],
+        "I_parameters" : [
+          "_",
+          "options"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "observe",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 66, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element.Type",
+      "String",
+      "KeyValueObservingOptions",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "options",
+      "retainSelf"
+    ],
+    "J_returnType" : "-> Observable<Element?>"
+  },
+  {
+    "A_name" : "observe",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 83, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KeyPath<Base, Element>",
+      "NSKeyValueObservingOptions"
+    ],
+    "I_parameters" : [
+      "_",
+      "options"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "observation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 86, Column: 13",
+    "H_initialValue" : "base?.observe(keyPath, options: options) { obj, _ in\n                observer.on(.next(obj[keyPath: keyPath]))\n            }"
+  },
+  {
+    "A_name" : "Reactive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 100, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "observeWeakly",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 115, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element.Type",
+          "String",
+          "KeyValueObservingOptions"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "options"
+        ],
+        "J_returnType" : "-> Observable<Element?>"
+      }
+    ]
+  },
+  {
+    "A_name" : "observeWeakly",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 115, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element.Type",
+      "String",
+      "KeyValueObservingOptions"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "options"
+    ],
+    "J_returnType" : "-> Observable<Element?>"
+  },
+  {
+    "A_name" : "Reactive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 125, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "deallocated",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 134, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "deallocated",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 134, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "deallocObservable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 140, Column: 13",
+    "H_initialValue" : "DeallocObservable()"
+  },
+  {
+    "A_name" : "sentMessage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 161, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Selector"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<[Any]>"
+  },
+  {
+    "A_name" : "proxy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 169, Column: 17",
+    "H_initialValue" : "try self.registerMessageInterceptor(selector)"
+  },
+  {
+    "A_name" : "methodInvoked",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 190, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Selector"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<[Any]>"
+  },
+  {
+    "A_name" : "proxy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 199, Column: 17",
+    "H_initialValue" : "try self.registerMessageInterceptor(selector)"
+  },
+  {
+    "A_name" : "deallocating",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 218, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "proxy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 221, Column: 17",
+    "H_initialValue" : "try self.registerMessageInterceptor(deallocSelector)"
+  },
+  {
+    "A_name" : "registerMessageInterceptor",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 230, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "rxSelector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 231, Column: 9",
+        "H_initialValue" : "RX_selector(selector)"
+      },
+      {
+        "A_name" : "selectorReference",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 232, Column: 9",
+        "H_initialValue" : "RX_reference_from_selector(rxSelector)"
+      },
+      {
+        "A_name" : "subject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 234, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 252, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "targetImplementation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 253, Column: 9",
+        "H_initialValue" : "RX_ensure_observing(self.base, selector, &error)"
+      }
+    ],
+    "I_parameterType" : [
+      "Selector"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> T"
+  },
+  {
+    "A_name" : "rxSelector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 231, Column: 9",
+    "H_initialValue" : "RX_selector(selector)"
+  },
+  {
+    "A_name" : "selectorReference",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 232, Column: 9",
+    "H_initialValue" : "RX_reference_from_selector(rxSelector)"
+  },
+  {
+    "A_name" : "subject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 234, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 252, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "targetImplementation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 253, Column: 9",
+    "H_initialValue" : "RX_ensure_observing(self.base, selector, &error)"
+  },
+  {
+    "A_name" : "MessageInterceptorSubject",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyObject"
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 269, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "isActive",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 272, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "targetImplementation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 276, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 270, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "isActive",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 272, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "targetImplementation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 276, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "DeallocatingProxy",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "MessageInterceptorSubject",
+      "RXDeallocatingObserver"
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 279, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "messageSent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 284, Column: 9",
+        "H_initialValue" : "ReplaySubject<()>.create(bufferSize: 1)"
+      },
+      {
+        "A_name" : "targetImplementation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 286, Column: 9",
+        "H_initialValue" : "RX_default_target_implementation()"
+      },
+      {
+        "A_name" : "isActive",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 288, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 292, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "deallocating",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 295, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "messageSent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 284, Column: 9",
+    "H_initialValue" : "ReplaySubject<()>.create(bufferSize: 1)"
+  },
+  {
+    "A_name" : "targetImplementation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 286, Column: 9",
+    "H_initialValue" : "RX_default_target_implementation()"
+  },
+  {
+    "A_name" : "isActive",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 288, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 292, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "deallocating",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 295, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "MessageSentProxy",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "MessageInterceptorSubject",
+      "RXMessageSentObserver"
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 304, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "messageSent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 309, Column: 9",
+        "H_initialValue" : "PublishSubject<[Any]>()"
+      },
+      {
+        "A_name" : "methodInvoked",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 310, Column: 9",
+        "H_initialValue" : "PublishSubject<[Any]>()"
+      },
+      {
+        "A_name" : "targetImplementation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 312, Column: 9",
+        "H_initialValue" : "RX_default_target_implementation()"
+      },
+      {
+        "A_name" : "isActive",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 314, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 318, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "messageSent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 321, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[Any]"
+        ],
+        "I_parameters" : [
+          "withArguments"
+        ]
+      },
+      {
+        "A_name" : "methodInvoked",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 325, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[Any]"
+        ],
+        "I_parameters" : [
+          "withArguments"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "messageSent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 309, Column: 9",
+    "H_initialValue" : "PublishSubject<[Any]>()"
+  },
+  {
+    "A_name" : "methodInvoked",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 310, Column: 9",
+    "H_initialValue" : "PublishSubject<[Any]>()"
+  },
+  {
+    "A_name" : "targetImplementation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 312, Column: 9",
+    "H_initialValue" : "RX_default_target_implementation()"
+  },
+  {
+    "A_name" : "isActive",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 314, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 318, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "messageSent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 321, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[Any]"
+    ],
+    "I_parameters" : [
+      "withArguments"
+    ]
+  },
+  {
+    "A_name" : "methodInvoked",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 325, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[Any]"
+    ],
+    "I_parameters" : [
+      "withArguments"
+    ]
+  },
+  {
+    "A_name" : "DeallocObservable",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 338, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "subject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 339, Column: 5",
+        "H_initialValue" : "ReplaySubject<Void>.create(bufferSize:1)"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 341, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "subject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 339, Column: 5",
+    "H_initialValue" : "ReplaySubject<Void>.create(bufferSize:1)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 341, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "KVOObservableProtocol",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 354, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "target",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 355, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "keyPath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 356, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "retainTarget",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 357, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 358, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "target",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 355, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "keyPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 356, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "retainTarget",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 357, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 358, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KVOObserver",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "_RXKVOObserver",
+      "Disposable"
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 361, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "retainSelf",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 366, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 368, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "KVOObservableProtocol",
+          "@escaping Callback"
+        ],
+        "I_parameters" : [
+          "parent",
+          "callback"
+        ]
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 377, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "retainSelf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 366, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 368, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KVOObservableProtocol",
+      "@escaping Callback"
+    ],
+    "I_parameters" : [
+      "parent",
+      "callback"
+    ]
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 377, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "KVOObservable",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ObservableType",
+      "KVOObservableProtocol"
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 389, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "target",
+        "B_kind" : "variable",
+        "C_accessLevel" : "unowned",
+        "D_attributes" : [
+          "unowned"
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 394, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "strongTarget",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 395, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "keyPath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 397, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 398, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "retainTarget",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 399, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 401, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnyObject",
+          "String",
+          "KeyValueObservingOptions",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "object",
+          "keyPath",
+          "options",
+          "retainTarget"
+        ]
+      },
+      {
+        "A_name" : "subscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 411, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NSObject+Rx.swift - Line: 412, Column: 9",
+            "H_initialValue" : "KVOObserver(parent: self) { value in\n            if value as? NSNull != nil {\n                observer.on(.next(nil))\n                return\n            }\n            observer.on(.next(value as? Element))\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable"
+      }
+    ]
+  },
+  {
+    "A_name" : "target",
+    "B_kind" : "variable",
+    "C_accessLevel" : "unowned",
+    "D_attributes" : [
+      "unowned"
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 394, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "strongTarget",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 395, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "keyPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 397, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 398, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "retainTarget",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 399, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 401, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnyObject",
+      "String",
+      "KeyValueObservingOptions",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "object",
+      "keyPath",
+      "options",
+      "retainTarget"
+    ]
+  },
+  {
+    "A_name" : "subscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 411, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 412, Column: 9",
+        "H_initialValue" : "KVOObserver(parent: self) { value in\n            if value as? NSNull != nil {\n                observer.on(.next(nil))\n                return\n            }\n            observer.on(.next(value as? Element))\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 412, Column: 9",
+    "H_initialValue" : "KVOObserver(parent: self) { value in\n            if value as? NSNull != nil {\n                observer.on(.next(nil))\n                return\n            }\n            observer.on(.next(value as? Element))\n        }"
+  },
+  {
+    "A_name" : "KeyValueObservingOptions",
+    "B_kind" : "extension",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 425, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "nsOptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 426, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "nsOptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 426, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 427, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "observeWeaklyKeyPathFor",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 443, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "components",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 444, Column: 9",
+        "H_initialValue" : "keyPath.components(separatedBy: \".\").filter { $0 != \"self\" }"
+      },
+      {
+        "A_name" : "observable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 446, Column: 9",
+        "H_initialValue" : "observeWeaklyKeyPathFor(target, keyPathSections: components, options: options)\n            .finishWithNilWhenDealloc(target)"
+      }
+    ],
+    "I_parameterType" : [
+      "NSObject",
+      "String",
+      "KeyValueObservingOptions"
+    ],
+    "I_parameters" : [
+      "_",
+      "keyPath",
+      "options"
+    ],
+    "J_returnType" : "-> Observable<AnyObject?>"
+  },
+  {
+    "A_name" : "components",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 444, Column: 9",
+    "H_initialValue" : "keyPath.components(separatedBy: \".\").filter { $0 != \"self\" }"
+  },
+  {
+    "A_name" : "observable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 446, Column: 9",
+    "H_initialValue" : "observeWeaklyKeyPathFor(target, keyPathSections: components, options: options)\n            .finishWithNilWhenDealloc(target)"
+  },
+  {
+    "A_name" : "isWeakProperty",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 462, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 466, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "finishWithNilWhenDealloc",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 467, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "deallocating",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NSObject+Rx.swift - Line: 469, Column: 17",
+            "H_initialValue" : "target.rx.deallocating"
+          }
+        ],
+        "I_parameterType" : [
+          "NSObject"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<AnyObject?>"
+      }
+    ]
+  },
+  {
+    "A_name" : "finishWithNilWhenDealloc",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 467, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "deallocating",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 469, Column: 17",
+        "H_initialValue" : "target.rx.deallocating"
+      }
+    ],
+    "I_parameterType" : [
+      "NSObject"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<AnyObject?>"
+  },
+  {
+    "A_name" : "deallocating",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 469, Column: 17",
+    "H_initialValue" : "target.rx.deallocating"
+  },
+  {
+    "A_name" : "observeWeaklyKeyPathFor",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 480, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "weakTarget",
+        "B_kind" : "variable",
+        "C_accessLevel" : "weak",
+        "D_attributes" : [
+          "weak"
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 486, Column: 9",
+        "H_initialValue" : "target"
+      },
+      {
+        "A_name" : "propertyName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 488, Column: 9",
+        "H_initialValue" : "keyPathSections[0]"
+      },
+      {
+        "A_name" : "remainingPaths",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 489, Column: 9",
+        "H_initialValue" : "Array(keyPathSections[1..<keyPathSections.count])"
+      },
+      {
+        "A_name" : "property",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 491, Column: 9",
+        "H_initialValue" : "class_getProperty(object_getClass(target), propertyName)"
+      },
+      {
+        "A_name" : "propertyAttributes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 495, Column: 9",
+        "H_initialValue" : "property_getAttributes(property!)"
+      },
+      {
+        "A_name" : "isWeak",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 498, Column: 9",
+        "H_initialValue" : "isWeakProperty(propertyAttributes.map(String.init) ?? \"\")"
+      },
+      {
+        "A_name" : "propertyObservable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 499, Column: 9",
+        "H_initialValue" : "KVOObservable(object: target, keyPath: propertyName, options: options.union(.initial), retainTarget: false) as KVOObservable<AnyObject>"
+      }
+    ],
+    "I_parameterType" : [
+      "NSObject",
+      "[String]",
+      "KeyValueObservingOptions"
+    ],
+    "I_parameters" : [
+      "_",
+      "keyPathSections",
+      "options"
+    ],
+    "J_returnType" : "-> Observable<AnyObject?>"
+  },
+  {
+    "A_name" : "weakTarget",
+    "B_kind" : "variable",
+    "C_accessLevel" : "weak",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 486, Column: 9",
+    "H_initialValue" : "target"
+  },
+  {
+    "A_name" : "propertyName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 488, Column: 9",
+    "H_initialValue" : "keyPathSections[0]"
+  },
+  {
+    "A_name" : "remainingPaths",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 489, Column: 9",
+    "H_initialValue" : "Array(keyPathSections[1..<keyPathSections.count])"
+  },
+  {
+    "A_name" : "property",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 491, Column: 9",
+    "H_initialValue" : "class_getProperty(object_getClass(target), propertyName)"
+  },
+  {
+    "A_name" : "propertyAttributes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 495, Column: 9",
+    "H_initialValue" : "property_getAttributes(property!)"
+  },
+  {
+    "A_name" : "isWeak",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 498, Column: 9",
+    "H_initialValue" : "isWeakProperty(propertyAttributes.map(String.init) ?? \"\")"
+  },
+  {
+    "A_name" : "propertyObservable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 499, Column: 9",
+    "H_initialValue" : "KVOObservable(object: target, keyPath: propertyName, options: options.union(.initial), retainTarget: false) as KVOObservable<AnyObject>"
+  },
+  {
+    "A_name" : "nextObject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 507, Column: 17",
+    "H_initialValue" : "nextTarget! as? NSObject"
+  },
+  {
+    "A_name" : "strongTarget",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 509, Column: 17",
+    "H_initialValue" : "weakTarget"
+  },
+  {
+    "A_name" : "nextElementsObservable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 521, Column: 17",
+    "H_initialValue" : "keyPathSections.count == 1\n                    ? Observable.just(nextTarget)\n                    : observeWeaklyKeyPathFor(nextObject!, keyPathSections: remainingPaths, options: options)"
+  },
+  {
+    "A_name" : "deallocSelector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 538, Column: 1",
+    "H_initialValue" : "NSSelectorFromString(\"dealloc\")"
+  },
+  {
+    "A_name" : "Reactive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 542, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "synchronized",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 543, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NSObject+Rx.swift - Line: 545, Column: 9",
+            "H_initialValue" : "action()"
+          }
+        ],
+        "I_parameterType" : [
+          "() -> T"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> T"
+      }
+    ]
+  },
+  {
+    "A_name" : "synchronized",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 543, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 545, Column: 9",
+        "H_initialValue" : "action()"
+      }
+    ],
+    "I_parameterType" : [
+      "() -> T"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> T"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 545, Column: 9",
+    "H_initialValue" : "action()"
+  },
+  {
+    "A_name" : "Reactive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 551, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lazyInstanceObservable",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 556, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NSObject+Rx.swift - Line: 561, Column: 9",
+            "H_initialValue" : "createCachedObservable()"
+          }
+        ],
+        "I_parameterType" : [
+          "UnsafeRawPointer",
+          "() -> T"
+        ],
+        "I_parameters" : [
+          "_",
+          "createCachedObservable"
+        ],
+        "J_returnType" : "-> T"
+      }
+    ]
+  },
+  {
+    "A_name" : "lazyInstanceObservable",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 556, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSObject+Rx.swift - Line: 561, Column: 9",
+        "H_initialValue" : "createCachedObservable()"
+      }
+    ],
+    "I_parameterType" : [
+      "UnsafeRawPointer",
+      "() -> T"
+    ],
+    "I_parameters" : [
+      "_",
+      "createCachedObservable"
+    ],
+    "J_returnType" : "-> T"
+  },
+  {
+    "A_name" : "observable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSObject+Rx.swift - Line: 561, Column: 9",
+    "H_initialValue" : "createCachedObservable()"
+  }
+]

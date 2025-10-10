@@ -1,0 +1,515 @@
+[
+  {
+    "A_name" : "RxCocoaURLError",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Error"
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 17, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "unknown",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 20, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "nonHTTPResponse",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 22, Column: 10",
+        "I_parameterType" : [
+          "URLResponse"
+        ],
+        "I_parameters" : [
+          "response"
+        ]
+      },
+      {
+        "A_name" : "httpRequestFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 24, Column: 10",
+        "I_parameterType" : [
+          "HTTPURLResponse",
+          "Data?"
+        ],
+        "I_parameters" : [
+          "response",
+          "data"
+        ]
+      },
+      {
+        "A_name" : "deserializationError",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 26, Column: 10",
+        "I_parameterType" : [
+          "Swift.Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "RxCocoaURLError",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomDebugStringConvertible"
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 29, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "debugDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 32, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "debugDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 32, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "escapeTerminalString",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 46, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "convertURLRequestToCurlCommand",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 50, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "method",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 51, Column: 5",
+        "H_initialValue" : "request.httpMethod ?? \"GET\""
+      },
+      {
+        "A_name" : "returnValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 52, Column: 5",
+        "H_initialValue" : "\"curl -X \\(method) \""
+      },
+      {
+        "A_name" : "URLString",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 67, Column: 5",
+        "H_initialValue" : "request.url?.absoluteString ?? \"<unknown url>\""
+      }
+    ],
+    "I_parameterType" : [
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "method",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 51, Column: 5",
+    "H_initialValue" : "request.httpMethod ?? \"GET\""
+  },
+  {
+    "A_name" : "returnValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 52, Column: 5",
+    "H_initialValue" : "\"curl -X \\(method) \""
+  },
+  {
+    "A_name" : "maybeBody",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 55, Column: 9",
+    "H_initialValue" : "String(data: httpBody, encoding: String.Encoding.utf8)"
+  },
+  {
+    "A_name" : "escapedKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 62, Column: 9",
+    "H_initialValue" : "escapeTerminalString(key as String)"
+  },
+  {
+    "A_name" : "escapedValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 63, Column: 9",
+    "H_initialValue" : "escapeTerminalString(value as String)"
+  },
+  {
+    "A_name" : "URLString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 67, Column: 5",
+    "H_initialValue" : "request.url?.absoluteString ?? \"<unknown url>\""
+  },
+  {
+    "A_name" : "convertResponseToString",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 76, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "ms",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 77, Column: 5",
+        "H_initialValue" : "Int(interval * 1000)"
+      }
+    ],
+    "I_parameterType" : [
+      "URLResponse?",
+      "NSError?",
+      "TimeInterval"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "ms",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 77, Column: 5",
+    "H_initialValue" : "Int(interval * 1000)"
+  },
+  {
+    "A_name" : "Reactive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 98, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "response",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 111, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "request"
+        ],
+        "J_returnType" : "-> Observable<(response: HTTPURLResponse, data: Data)>"
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 171, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "request"
+        ],
+        "J_returnType" : "-> Observable<Data>"
+      },
+      {
+        "A_name" : "json",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 199, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "JSONSerialization.ReadingOptions"
+        ],
+        "I_parameters" : [
+          "request",
+          "options"
+        ],
+        "J_returnType" : "-> Observable<Any>"
+      },
+      {
+        "A_name" : "json",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 226, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Foundation.URL"
+        ],
+        "I_parameters" : [
+          "url"
+        ],
+        "J_returnType" : "-> Observable<Any>"
+      }
+    ]
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 111, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "request"
+    ],
+    "J_returnType" : "-> Observable<(response: HTTPURLResponse, data: Data)>"
+  },
+  {
+    "A_name" : "d",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 115, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 124, Column: 13",
+    "H_initialValue" : "self.base.dataTask(with: request) { data, response, error in\n\n                if URLSession.rx.shouldLogRequest(request) {\n                    let interval = Date().timeIntervalSince(d ?? Date())\n                    print(convertURLRequestToCurlCommand(request))\n                    #if os(Linux)\n                        print(convertResponseToString(response, error.flatMap { $0 as NSError }, interval))\n                    #else\n                        print(convertResponseToString(response, error.map { $0 as NSError }, interval))\n                    #endif\n                }\n                \n                guard let response = response, let data = data else {\n                    observer.on(.error(error ?? RxCocoaURLError.unknown))\n                    return\n                }\n\n                guard let httpResponse = response as? HTTPURLResponse else {\n                    observer.on(.error(RxCocoaURLError.nonHTTPResponse(response: response)))\n                    return\n                }\n\n                observer.on(.next((httpResponse, data)))\n                observer.on(.completed)\n            }"
+  },
+  {
+    "A_name" : "interval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 127, Column: 21",
+    "H_initialValue" : "Date().timeIntervalSince(d ?? Date())"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 171, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "request"
+    ],
+    "J_returnType" : "-> Observable<Data>"
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 199, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "JSONSerialization.ReadingOptions"
+    ],
+    "I_parameters" : [
+      "request",
+      "options"
+    ],
+    "J_returnType" : "-> Observable<Any>"
+  },
+  {
+    "A_name" : "json",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 226, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Foundation.URL"
+    ],
+    "I_parameters" : [
+      "url"
+    ],
+    "J_returnType" : "-> Observable<Any>"
+  },
+  {
+    "A_name" : "Reactive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 231, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "shouldLogRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "URLSession+Rx.swift - Line: 233, Column: 5",
+        "H_initialValue" : "{ _ in\n        #if DEBUG\n            return true\n        #else\n            return false\n        #endif\n    }"
+      }
+    ]
+  },
+  {
+    "A_name" : "shouldLogRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "URLSession+Rx.swift - Line: 233, Column: 5",
+    "H_initialValue" : "{ _ in\n        #if DEBUG\n            return true\n        #else\n            return false\n        #endif\n    }"
+  }
+]

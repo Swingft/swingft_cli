@@ -1,0 +1,121 @@
+[
+  {
+    "A_name" : "ExampleTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "ExampleTests.swift - Line: 13, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "Repository",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ExampleTests.swift - Line: 15, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "ExampleTests",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ExampleTests.swift - Line: 19, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testWelcomePage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ExampleTests.swift - Line: 20, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testWelcomePage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ExampleTests.swift - Line: 20, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "searchBar",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ExampleTests.swift - Line: 23, Column: 13",
+    "H_initialValue" : "UISearchBar()"
+  },
+  {
+    "A_name" : "searchGitHub",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ExampleTests.swift - Line: 24, Column: 13",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<[Repository]>"
+  },
+  {
+    "A_name" : "searchResults",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ExampleTests.swift - Line: 28, Column: 13",
+    "H_initialValue" : "searchBar.rx.text.orEmpty\n                .throttle(.milliseconds(300), scheduler: MainScheduler.instance)\n                .distinctUntilChanged()\n                .flatMapLatest { query -> Observable<[Repository]> in\n                    if query.isEmpty {\n                        return .just([])\n                    }\n                    return searchGitHub(query)\n                        .catchAndReturn([])\n                }\n                .observe(on:MainScheduler.instance)"
+  }
+]

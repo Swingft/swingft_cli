@@ -1,0 +1,710 @@
+[
+  {
+    "A_name" : "LivePhotoLoadingInfoResult",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 31, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "fileURLs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 34, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cacheType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 41, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 45, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "originalSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 50, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 60, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "fileURLs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 34, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cacheType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 41, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 45, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "originalSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 50, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 60, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KingfisherManager",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 63, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "retrieveLivePhoto",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 86, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fullOptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KingfisherManager+LivePhoto.swift - Line: 92, Column: 9",
+            "H_initialValue" : "currentDefaultOptions + (options ?? .empty)"
+          },
+          {
+            "A_name" : "checkedOptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KingfisherManager+LivePhoto.swift - Line: 93, Column: 9",
+            "H_initialValue" : "KingfisherParsedOptionsInfo(fullOptions)"
+          },
+          {
+            "A_name" : "missingResources",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KingfisherManager+LivePhoto.swift - Line: 112, Column: 9",
+            "H_initialValue" : "missingResources(source, options: checkedOptions)"
+          },
+          {
+            "A_name" : "resourcesResult",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KingfisherManager+LivePhoto.swift - Line: 113, Column: 9",
+            "H_initialValue" : "try await downloadAndCache(resources: missingResources, options: checkedOptions)"
+          },
+          {
+            "A_name" : "targetCache",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KingfisherManager+LivePhoto.swift - Line: 115, Column: 9",
+            "H_initialValue" : "checkedOptions.targetCache ?? cache"
+          },
+          {
+            "A_name" : "fileURLs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KingfisherManager+LivePhoto.swift - Line: 116, Column: 9",
+            "H_initialValue" : "[URL]()"
+          }
+        ],
+        "I_parameterType" : [
+          "LivePhotoSource",
+          "KingfisherOptionsInfo?",
+          "DownloadProgressBlock?",
+          "(() -> Bool)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "options",
+          "progressBlock",
+          "referenceTaskIdentifierChecker"
+        ],
+        "J_returnType" : "-> LivePhotoLoadingInfoResult"
+      },
+      {
+        "A_name" : "missingResources",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 138, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "missingResources",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KingfisherManager+LivePhoto.swift - Line: 139, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "LivePhotoSource",
+          "KingfisherParsedOptionsInfo"
+        ],
+        "I_parameters" : [
+          "_",
+          "options"
+        ],
+        "J_returnType" : "-> [LivePhotoResource]"
+      },
+      {
+        "A_name" : "downloadAndCache",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 160, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "downloader",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KingfisherManager+LivePhoto.swift - Line: 167, Column: 9",
+            "H_initialValue" : "options.downloader ?? downloader"
+          },
+          {
+            "A_name" : "cache",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KingfisherManager+LivePhoto.swift - Line: 168, Column: 9",
+            "H_initialValue" : "options.targetCache ?? cache"
+          }
+        ],
+        "I_parameterType" : [
+          "[LivePhotoResource]",
+          "KingfisherParsedOptionsInfo"
+        ],
+        "I_parameters" : [
+          "resources",
+          "options"
+        ],
+        "J_returnType" : "-> [LivePhotoResourceDownloadingResult]"
+      }
+    ]
+  },
+  {
+    "A_name" : "retrieveLivePhoto",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 86, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fullOptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 92, Column: 9",
+        "H_initialValue" : "currentDefaultOptions + (options ?? .empty)"
+      },
+      {
+        "A_name" : "checkedOptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 93, Column: 9",
+        "H_initialValue" : "KingfisherParsedOptionsInfo(fullOptions)"
+      },
+      {
+        "A_name" : "missingResources",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 112, Column: 9",
+        "H_initialValue" : "missingResources(source, options: checkedOptions)"
+      },
+      {
+        "A_name" : "resourcesResult",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 113, Column: 9",
+        "H_initialValue" : "try await downloadAndCache(resources: missingResources, options: checkedOptions)"
+      },
+      {
+        "A_name" : "targetCache",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 115, Column: 9",
+        "H_initialValue" : "checkedOptions.targetCache ?? cache"
+      },
+      {
+        "A_name" : "fileURLs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 116, Column: 9",
+        "H_initialValue" : "[URL]()"
+      }
+    ],
+    "I_parameterType" : [
+      "LivePhotoSource",
+      "KingfisherOptionsInfo?",
+      "DownloadProgressBlock?",
+      "(() -> Bool)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "options",
+      "progressBlock",
+      "referenceTaskIdentifierChecker"
+    ],
+    "J_returnType" : "-> LivePhotoLoadingInfoResult"
+  },
+  {
+    "A_name" : "fullOptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 92, Column: 9",
+    "H_initialValue" : "currentDefaultOptions + (options ?? .empty)"
+  },
+  {
+    "A_name" : "checkedOptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 93, Column: 9",
+    "H_initialValue" : "KingfisherParsedOptionsInfo(fullOptions)"
+  },
+  {
+    "A_name" : "missingResources",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 112, Column: 9",
+    "H_initialValue" : "missingResources(source, options: checkedOptions)"
+  },
+  {
+    "A_name" : "resourcesResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 113, Column: 9",
+    "H_initialValue" : "try await downloadAndCache(resources: missingResources, options: checkedOptions)"
+  },
+  {
+    "A_name" : "targetCache",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 115, Column: 9",
+    "H_initialValue" : "checkedOptions.targetCache ?? cache"
+  },
+  {
+    "A_name" : "fileURLs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 116, Column: 9",
+    "H_initialValue" : "[URL]()"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 118, Column: 13",
+    "H_initialValue" : "targetCache.possibleCacheFileURLIfOnDisk(resource: resource, options: checkedOptions)"
+  },
+  {
+    "A_name" : "missingResources",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 138, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "missingResources",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 139, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "LivePhotoSource",
+      "KingfisherParsedOptionsInfo"
+    ],
+    "I_parameters" : [
+      "_",
+      "options"
+    ],
+    "J_returnType" : "-> [LivePhotoResource]"
+  },
+  {
+    "A_name" : "missingResources",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 139, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "targetCache",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 143, Column: 13",
+    "H_initialValue" : "options.targetCache ?? cache"
+  },
+  {
+    "A_name" : "cachedFileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 146, Column: 17",
+    "H_initialValue" : "targetCache.possibleCacheFileURLIfOnDisk(resource: resource, options: options)"
+  },
+  {
+    "A_name" : "downloadAndCache",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 160, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "downloader",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 167, Column: 9",
+        "H_initialValue" : "options.downloader ?? downloader"
+      },
+      {
+        "A_name" : "cache",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 168, Column: 9",
+        "H_initialValue" : "options.targetCache ?? cache"
+      }
+    ],
+    "I_parameterType" : [
+      "[LivePhotoResource]",
+      "KingfisherParsedOptionsInfo"
+    ],
+    "I_parameters" : [
+      "resources",
+      "options"
+    ],
+    "J_returnType" : "-> [LivePhotoResourceDownloadingResult]"
+  },
+  {
+    "A_name" : "downloader",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 167, Column: 9",
+    "H_initialValue" : "options.downloader ?? downloader"
+  },
+  {
+    "A_name" : "cache",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 168, Column: 9",
+    "H_initialValue" : "options.targetCache ?? cache"
+  },
+  {
+    "A_name" : "downloadedResource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 177, Column: 21",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "fileExtension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 195, Column: 21",
+    "H_initialValue" : "resource.referenceFileType\n                        .determinedFileExtension(downloadedResource.originalData)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 208, Column: 13",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "ImageCache",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 217, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "possibleCacheFileURLIfOnDisk",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 219, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "LivePhotoResource",
+          "KingfisherParsedOptionsInfo"
+        ],
+        "I_parameters" : [
+          "resource",
+          "options"
+        ],
+        "J_returnType" : "-> URL?"
+      },
+      {
+        "A_name" : "possibleCacheFileURLIfOnDisk",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KingfisherManager+LivePhoto.swift - Line: 237, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "LivePhotoResource.FileType"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "processorIdentifier",
+          "referenceFileType"
+        ],
+        "J_returnType" : "-> URL?"
+      }
+    ]
+  },
+  {
+    "A_name" : "possibleCacheFileURLIfOnDisk",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 219, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "LivePhotoResource",
+      "KingfisherParsedOptionsInfo"
+    ],
+    "I_parameters" : [
+      "resource",
+      "options"
+    ],
+    "J_returnType" : "-> URL?"
+  },
+  {
+    "A_name" : "possibleCacheFileURLIfOnDisk",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 237, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "LivePhotoResource.FileType"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "processorIdentifier",
+      "referenceFileType"
+    ],
+    "J_returnType" : "-> URL?"
+  },
+  {
+    "A_name" : "possibleFileTypes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 251, Column: 17",
+    "H_initialValue" : "[.heic, .mov]"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KingfisherManager+LivePhoto.swift - Line: 253, Column: 21",
+    "H_initialValue" : "cacheFileURLIfOnDisk(\n                        forKey: key, processorIdentifier: identifier, forcedExtension: fileType.fileExtension\n                    )"
+  }
+]

@@ -1,0 +1,677 @@
+{
+  "DistributedActor": {
+    "kind": "Protocol",
+    "module": "Distributed",
+    "usr": "s:11Distributed0A5ActorP",
+    "members": {
+      "ActorSystem": {
+        "kind": "AssociatedType",
+        "type": "ActorSystem",
+        "usr": "s:11Distributed0A5ActorP0B6SystemQa"
+      },
+      "SerializationRequirement": {
+        "kind": "AssociatedType",
+        "type": "SerializationRequirement",
+        "usr": "s:11Distributed0A5ActorP24SerializationRequirementQa"
+      },
+      "id": {
+        "kind": "Var",
+        "type": "id",
+        "usr": "s:11Distributed0A5ActorP2id2IDQzvp"
+      },
+      "actorSystem": {
+        "kind": "Var",
+        "type": "actorSystem",
+        "usr": "s:11Distributed0A5ActorP11actorSystem0bD0Qzvp"
+      },
+      "unownedExecutor": {
+        "kind": "Var",
+        "type": "unownedExecutor",
+        "usr": "s:11Distributed0A5ActorP15unownedExecutorScevp"
+      },
+      "resolve": {
+        "kind": "Func",
+        "type": "resolve(id:using:)",
+        "usr": "s:11Distributed0A5ActorP7resolve2id5usingx2IDQz_0B6SystemQztKFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:11Distributed0A5ActorPAAE4hash4intoys6HasherVz_tF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:11Distributed0A5ActorPAAE2eeoiySbx_xtFZ"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:11Distributed0A5ActorPAASe2IDRpzrlE4fromxs7Decoder_p_tKcfc"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:11Distributed0A5ActorPAASE2IDRpzrlE6encode2toys7Encoder_p_tKF"
+      },
+      "whenLocal": {
+        "kind": "Func",
+        "type": "whenLocal(_:)",
+        "usr": "s:11Distributed0A5ActorPAAE9whenLocalyqd__Sgqd__xYiYaYbqd_0_YKXEYaqd_0_YKs8SendableRd__s5ErrorRd_0_r0_lF"
+      },
+      "asLocalActor": {
+        "kind": "Var",
+        "type": "asLocalActor",
+        "usr": "s:11Distributed0A5ActorPAAE07asLocalB0ScA_pvp"
+      },
+      "preconditionIsolated": {
+        "kind": "Func",
+        "type": "preconditionIsolated(_:file:line:)",
+        "usr": "s:11Distributed0A5ActorPAAE20preconditionIsolated_4file4lineySSyXK_s12StaticStringVSutF"
+      },
+      "assertIsolated": {
+        "kind": "Func",
+        "type": "assertIsolated(_:file:line:)",
+        "usr": "s:11Distributed0A5ActorPAAE14assertIsolated_4file4lineySSyXK_s12StaticStringVSutF"
+      },
+      "assumeIsolated": {
+        "kind": "Func",
+        "type": "assumeIsolated(_:file:line:)",
+        "usr": "s:11Distributed0A5ActorPAAE14assumeIsolated_4file4lineqd__qd__xYiKXE_s12StaticStringVSutKs8SendableRd__lF"
+      }
+    }
+  },
+  "DistributedActorSystem": {
+    "kind": "Protocol",
+    "module": "Distributed",
+    "usr": "s:11Distributed0A11ActorSystemP",
+    "members": {
+      "ActorID": {
+        "kind": "AssociatedType",
+        "type": "ActorID",
+        "usr": "s:11Distributed0A11ActorSystemP0B2IDQa"
+      },
+      "InvocationEncoder": {
+        "kind": "AssociatedType",
+        "type": "InvocationEncoder",
+        "usr": "s:11Distributed0A11ActorSystemP17InvocationEncoderQa"
+      },
+      "InvocationDecoder": {
+        "kind": "AssociatedType",
+        "type": "InvocationDecoder",
+        "usr": "s:11Distributed0A11ActorSystemP17InvocationDecoderQa"
+      },
+      "ResultHandler": {
+        "kind": "AssociatedType",
+        "type": "ResultHandler",
+        "usr": "s:11Distributed0A11ActorSystemP13ResultHandlerQa"
+      },
+      "SerializationRequirement": {
+        "kind": "AssociatedType",
+        "type": "SerializationRequirement",
+        "usr": "s:11Distributed0A11ActorSystemP24SerializationRequirementQa"
+      },
+      "resolve": {
+        "kind": "Func",
+        "type": "resolve(id:as:)",
+        "usr": "s:11Distributed0A11ActorSystemP7resolve2id2asqd__Sg0B2IDQz_qd__mtKAA0aB0Rd__0G0Qyd__AIRSlF"
+      },
+      "assignID": {
+        "kind": "Func",
+        "type": "assignID(_:)",
+        "usr": "s:11Distributed0A11ActorSystemP8assignIDy0bE0Qzqd__mAA0aB0Rd__0E0Qyd__AFRSlF"
+      },
+      "actorReady": {
+        "kind": "Func",
+        "type": "actorReady(_:)",
+        "usr": "s:11Distributed0A11ActorSystemP10actorReadyyyqd__AA0aB0Rd__2IDQyd__0bF0RtzlF"
+      },
+      "resignID": {
+        "kind": "Func",
+        "type": "resignID(_:)",
+        "usr": "s:11Distributed0A11ActorSystemP8resignIDyy0bE0QzF"
+      },
+      "makeInvocationEncoder": {
+        "kind": "Func",
+        "type": "makeInvocationEncoder()",
+        "usr": "s:11Distributed0A11ActorSystemP21makeInvocationEncoder0eF0QzyF"
+      },
+      "remoteCall": {
+        "kind": "Func",
+        "type": "remoteCall(on:target:invocation:throwing:returning:)",
+        "usr": "s:11Distributed0A11ActorSystemP10remoteCall2on6target10invocation8throwing9returningqd_1_qd___AA06RemoteE6TargetV17InvocationEncoderQzzqd_0_mqd_1_mtYaKAA0aB0Rd__s5ErrorRd_0_2IDQyd__0bP0Rtzr1_lF"
+      },
+      "remoteCallVoid": {
+        "kind": "Func",
+        "type": "remoteCallVoid(on:target:invocation:throwing:)",
+        "usr": "s:11Distributed0A11ActorSystemP14remoteCallVoid2on6target10invocation8throwingyqd___AA06RemoteE6TargetV17InvocationEncoderQzzqd_0_mtYaKAA0aB0Rd__s5ErrorRd_0_2IDQyd__0bP0Rtzr0_lF"
+      },
+      "invokeHandlerOnReturn": {
+        "kind": "Func",
+        "type": "invokeHandlerOnReturn(handler:resultBuffer:metatype:)",
+        "usr": "s:11Distributed0A11ActorSystemP21invokeHandlerOnReturn7handler12resultBuffer8metatypey06ResultE0Qz_SVypXptYaKF"
+      },
+      "executeDistributedTarget": {
+        "kind": "Func",
+        "type": "executeDistributedTarget(on:target:invocationDecoder:handler:)",
+        "usr": "s:11Distributed0A11ActorSystemPAAE07executeA6Target2on6target17invocationDecoder7handleryqd___AA010RemoteCallE0V010InvocationI0Qzz13ResultHandlerQztYaKAA0aB0Rd__lF"
+      }
+    }
+  },
+  "RemoteCallTarget": {
+    "kind": "Struct",
+    "module": "Distributed",
+    "usr": "s:11Distributed16RemoteCallTargetV",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_:)",
+        "usr": "s:11Distributed16RemoteCallTargetVyACSScfc"
+      },
+      "identifier": {
+        "kind": "Var",
+        "type": "identifier",
+        "usr": "s:11Distributed16RemoteCallTargetV10identifierSSvp"
+      },
+      "description": {
+        "kind": "Var",
+        "type": "description",
+        "usr": "s:11Distributed16RemoteCallTargetV11descriptionSSvp"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:11Distributed16RemoteCallTargetV2eeoiySbAC_ACtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:11Distributed16RemoteCallTargetV4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:11Distributed16RemoteCallTargetV9hashValueSivp"
+      }
+    }
+  },
+  "DistributedTargetInvocationEncoder": {
+    "kind": "Protocol",
+    "module": "Distributed",
+    "usr": "s:11Distributed0A23TargetInvocationEncoderP",
+    "members": {
+      "SerializationRequirement": {
+        "kind": "AssociatedType",
+        "type": "SerializationRequirement",
+        "usr": "s:11Distributed0A23TargetInvocationEncoderP24SerializationRequirementQa"
+      },
+      "recordGenericSubstitution": {
+        "kind": "Func",
+        "type": "recordGenericSubstitution(_:)",
+        "usr": "s:11Distributed0A23TargetInvocationEncoderP25recordGenericSubstitutionyyqd__mKlF"
+      },
+      "recordArgument": {
+        "kind": "Func",
+        "type": "recordArgument(_:)",
+        "usr": "s:11Distributed0A23TargetInvocationEncoderP14recordArgumentyyAA010RemoteCallF0Vyqd__GKlF"
+      },
+      "recordErrorType": {
+        "kind": "Func",
+        "type": "recordErrorType(_:)",
+        "usr": "s:11Distributed0A23TargetInvocationEncoderP15recordErrorTypeyyqd__mKs0F0Rd__lF"
+      },
+      "recordReturnType": {
+        "kind": "Func",
+        "type": "recordReturnType(_:)",
+        "usr": "s:11Distributed0A23TargetInvocationEncoderP16recordReturnTypeyyqd__mKlF"
+      },
+      "doneRecording": {
+        "kind": "Func",
+        "type": "doneRecording()",
+        "usr": "s:11Distributed0A23TargetInvocationEncoderP13doneRecordingyyKF"
+      }
+    }
+  },
+  "RemoteCallArgument": {
+    "kind": "Struct",
+    "module": "Distributed",
+    "usr": "s:11Distributed18RemoteCallArgumentV",
+    "members": {
+      "label": {
+        "kind": "Var",
+        "type": "label",
+        "usr": "s:11Distributed18RemoteCallArgumentV5labelSSSgvp"
+      },
+      "effectiveLabel": {
+        "kind": "Var",
+        "type": "effectiveLabel",
+        "usr": "s:11Distributed18RemoteCallArgumentV14effectiveLabelSSvp"
+      },
+      "name": {
+        "kind": "Var",
+        "type": "name",
+        "usr": "s:11Distributed18RemoteCallArgumentV4nameSSvp"
+      },
+      "value": {
+        "kind": "Var",
+        "type": "value",
+        "usr": "s:11Distributed18RemoteCallArgumentV5valuexvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(label:name:value:)",
+        "usr": "s:11Distributed18RemoteCallArgumentV5label4name5valueACyxGSSSg_SSxtcfc"
+      }
+    }
+  },
+  "DistributedTargetInvocationDecoder": {
+    "kind": "Protocol",
+    "module": "Distributed",
+    "usr": "s:11Distributed0A23TargetInvocationDecoderP",
+    "members": {
+      "SerializationRequirement": {
+        "kind": "AssociatedType",
+        "type": "SerializationRequirement",
+        "usr": "s:11Distributed0A23TargetInvocationDecoderP24SerializationRequirementQa"
+      },
+      "decodeGenericSubstitutions": {
+        "kind": "Func",
+        "type": "decodeGenericSubstitutions()",
+        "usr": "s:11Distributed0A23TargetInvocationDecoderP26decodeGenericSubstitutionsSayypXpGyKF"
+      },
+      "decodeNextArgument": {
+        "kind": "Func",
+        "type": "decodeNextArgument()",
+        "usr": "s:11Distributed0A23TargetInvocationDecoderP18decodeNextArgumentqd__yKlF"
+      },
+      "decodeErrorType": {
+        "kind": "Func",
+        "type": "decodeErrorType()",
+        "usr": "s:11Distributed0A23TargetInvocationDecoderP15decodeErrorTypeypXpSgyKF"
+      },
+      "decodeReturnType": {
+        "kind": "Func",
+        "type": "decodeReturnType()",
+        "usr": "s:11Distributed0A23TargetInvocationDecoderP16decodeReturnTypeypXpSgyKF"
+      }
+    }
+  },
+  "DistributedTargetInvocationResultHandler": {
+    "kind": "Protocol",
+    "module": "Distributed",
+    "usr": "s:11Distributed0A29TargetInvocationResultHandlerP",
+    "members": {
+      "SerializationRequirement": {
+        "kind": "AssociatedType",
+        "type": "SerializationRequirement",
+        "usr": "s:11Distributed0A29TargetInvocationResultHandlerP24SerializationRequirementQa"
+      },
+      "onReturn": {
+        "kind": "Func",
+        "type": "onReturn(value:)",
+        "usr": "s:11Distributed0A29TargetInvocationResultHandlerP8onReturn5valueyqd___tYaKlF"
+      },
+      "onReturnVoid": {
+        "kind": "Func",
+        "type": "onReturnVoid()",
+        "usr": "s:11Distributed0A29TargetInvocationResultHandlerP12onReturnVoidyyYaKF"
+      },
+      "onThrow": {
+        "kind": "Func",
+        "type": "onThrow(error:)",
+        "usr": "s:11Distributed0A29TargetInvocationResultHandlerP7onThrow5erroryqd___tYaKs5ErrorRd__lF"
+      }
+    }
+  },
+  "DistributedActorSystemError": {
+    "kind": "Protocol",
+    "module": "Distributed",
+    "usr": "s:11Distributed0A16ActorSystemErrorP",
+    "members": {}
+  },
+  "ExecuteDistributedTargetError": {
+    "kind": "Struct",
+    "module": "Distributed",
+    "usr": "s:11Distributed07ExecuteA11TargetErrorV",
+    "members": {
+      "errorCode": {
+        "kind": "Var",
+        "type": "errorCode",
+        "usr": "s:11Distributed07ExecuteA11TargetErrorV9errorCodeAC0dF0Ovp"
+      },
+      "message": {
+        "kind": "Var",
+        "type": "message",
+        "usr": "s:11Distributed07ExecuteA11TargetErrorV7messageSSvp"
+      },
+      "ErrorCode": {
+        "kind": "Enum",
+        "type": "ErrorCode",
+        "usr": "s:11Distributed07ExecuteA11TargetErrorV0D4CodeO"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(message:errorCode:)",
+        "usr": "s:11Distributed07ExecuteA11TargetErrorV7message9errorCodeACSS_AC0dG0Otcfc"
+      }
+    }
+  },
+  "ErrorCode": {
+    "kind": "Enum",
+    "module": "Distributed",
+    "usr": "s:11Distributed07ExecuteA11TargetErrorV0D4CodeO",
+    "members": {
+      "targetAccessorNotFound": {
+        "kind": "EnumElement",
+        "type": "targetAccessorNotFound",
+        "usr": "s:11Distributed07ExecuteA11TargetErrorV0D4CodeO22targetAccessorNotFoundyA2EmF"
+      },
+      "invalidParameterCount": {
+        "kind": "EnumElement",
+        "type": "invalidParameterCount",
+        "usr": "s:11Distributed07ExecuteA11TargetErrorV0D4CodeO21invalidParameterCountyA2EmF"
+      },
+      "missingGenericSubstitutions": {
+        "kind": "EnumElement",
+        "type": "missingGenericSubstitutions",
+        "usr": "s:11Distributed07ExecuteA11TargetErrorV0D4CodeO27missingGenericSubstitutionsyA2EmF"
+      },
+      "invalidGenericSubstitutions": {
+        "kind": "EnumElement",
+        "type": "invalidGenericSubstitutions",
+        "usr": "s:11Distributed07ExecuteA11TargetErrorV0D4CodeO27invalidGenericSubstitutionsyA2EmF"
+      },
+      "typeDeserializationFailure": {
+        "kind": "EnumElement",
+        "type": "typeDeserializationFailure",
+        "usr": "s:11Distributed07ExecuteA11TargetErrorV0D4CodeO26typeDeserializationFailureyA2EmF"
+      },
+      "other": {
+        "kind": "EnumElement",
+        "type": "other",
+        "usr": "s:11Distributed07ExecuteA11TargetErrorV0D4CodeO5otheryA2EmF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:11Distributed07ExecuteA11TargetErrorV0D4CodeO2eeoiySbAE_AEtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:11Distributed07ExecuteA11TargetErrorV0D4CodeO4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:11Distributed07ExecuteA11TargetErrorV0D4CodeO9hashValueSivp"
+      }
+    }
+  },
+  "DistributedActorCodingError": {
+    "kind": "Struct",
+    "module": "Distributed",
+    "usr": "s:11Distributed0A16ActorCodingErrorV",
+    "members": {
+      "message": {
+        "kind": "Var",
+        "type": "message",
+        "usr": "s:11Distributed0A16ActorCodingErrorV7messageSSvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(message:)",
+        "usr": "s:11Distributed0A16ActorCodingErrorV7messageACSS_tcfc"
+      },
+      "missingActorSystemUserInfo": {
+        "kind": "Func",
+        "type": "missingActorSystemUserInfo(_:)",
+        "usr": "s:11Distributed0A16ActorCodingErrorV07missingB14SystemUserInfoyACxmAA0aB0RzlFZ"
+      }
+    }
+  },
+  "LocalTestingDistributedActorSystem": {
+    "kind": "Class",
+    "module": "Distributed",
+    "usr": "s:11Distributed012LocalTestingA11ActorSystemC",
+    "members": {
+      "ActorID": {
+        "kind": "TypeAlias",
+        "type": "ActorID",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemC0D2IDa"
+      },
+      "ResultHandler": {
+        "kind": "TypeAlias",
+        "type": "ResultHandler",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemC13ResultHandlera"
+      },
+      "InvocationEncoder": {
+        "kind": "TypeAlias",
+        "type": "InvocationEncoder",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemC17InvocationEncodera"
+      },
+      "InvocationDecoder": {
+        "kind": "TypeAlias",
+        "type": "InvocationDecoder",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemC17InvocationDecodera"
+      },
+      "SerializationRequirement": {
+        "kind": "TypeAlias",
+        "type": "SerializationRequirement",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemC24SerializationRequirementa"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemCACycfc"
+      },
+      "resolve": {
+        "kind": "Func",
+        "type": "resolve(id:as:)",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemC7resolve2id2asxSgAA0bcD2IDV_xmtKAA0aD0RzlF"
+      },
+      "assignID": {
+        "kind": "Func",
+        "type": "assignID(_:)",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemC8assignIDyAA0bcdG0VxmAA0aD0RzlF"
+      },
+      "actorReady": {
+        "kind": "Func",
+        "type": "actorReady(_:)",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemC10actorReadyyyxAA0aD0RzAA0bcD2IDV0H0RtzlF"
+      },
+      "resignID": {
+        "kind": "Func",
+        "type": "resignID(_:)",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemC8resignIDyyAA0bcdG0VF"
+      },
+      "makeInvocationEncoder": {
+        "kind": "Func",
+        "type": "makeInvocationEncoder()",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemC21makeInvocationEncoderAA0bcgH0VyF"
+      },
+      "remoteCall": {
+        "kind": "Func",
+        "type": "remoteCall(on:target:invocation:throwing:returning:)",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemC10remoteCall2on6target10invocation8throwing9returningq0_x_AA06RemoteG6TargetVAA0bC17InvocationEncoderVzq_mq0_mtYaKAA0aD0Rzs5ErrorR_SeR0_SER0_AA0bcD2IDV0R0Rtzr1_lF"
+      },
+      "remoteCallVoid": {
+        "kind": "Func",
+        "type": "remoteCallVoid(on:target:invocation:throwing:)",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemC14remoteCallVoid2on6target10invocation8throwingyx_AA06RemoteG6TargetVAA0bC17InvocationEncoderVzq_mtYaKAA0aD0Rzs5ErrorR_AA0bcD2IDV0R0Rtzr0_lF"
+      },
+      "invokeHandlerOnReturn": {
+        "kind": "Func",
+        "type": "invokeHandlerOnReturn(handler:resultBuffer:metatype:)",
+        "usr": "s:11Distributed012LocalTestingA11ActorSystemC21invokeHandlerOnReturn7handler12resultBuffer8metatypeyAA0bc16InvocationResultG0V_SVypXptYaKF"
+      }
+    }
+  },
+  "LocalTestingActorID": {
+    "kind": "Struct",
+    "module": "Distributed",
+    "usr": "s:11Distributed19LocalTestingActorIDV",
+    "members": {
+      "address": {
+        "kind": "Var",
+        "type": "address",
+        "usr": "s:11Distributed19LocalTestingActorIDV7addressSSvp"
+      },
+      "id": {
+        "kind": "Var",
+        "type": "id",
+        "usr": "s:11Distributed19LocalTestingActorIDV2idSSvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:11Distributed19LocalTestingActorIDV4fromACs7Decoder_p_tKcfc"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:11Distributed19LocalTestingActorIDV6encode2toys7Encoder_p_tKF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:11Distributed19LocalTestingActorIDV2eeoiySbAC_ACtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:11Distributed19LocalTestingActorIDV4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:11Distributed19LocalTestingActorIDV9hashValueSivp"
+      }
+    }
+  },
+  "LocalTestingInvocationEncoder": {
+    "kind": "Struct",
+    "module": "Distributed",
+    "usr": "s:11Distributed29LocalTestingInvocationEncoderV",
+    "members": {
+      "SerializationRequirement": {
+        "kind": "TypeAlias",
+        "type": "SerializationRequirement",
+        "usr": "s:11Distributed29LocalTestingInvocationEncoderV24SerializationRequirementa"
+      },
+      "recordGenericSubstitution": {
+        "kind": "Func",
+        "type": "recordGenericSubstitution(_:)",
+        "usr": "s:11Distributed29LocalTestingInvocationEncoderV25recordGenericSubstitutionyyxmKlF"
+      },
+      "recordArgument": {
+        "kind": "Func",
+        "type": "recordArgument(_:)",
+        "usr": "s:11Distributed29LocalTestingInvocationEncoderV14recordArgumentyyAA010RemoteCallG0VyxGKSeRzSERzlF"
+      },
+      "recordErrorType": {
+        "kind": "Func",
+        "type": "recordErrorType(_:)",
+        "usr": "s:11Distributed29LocalTestingInvocationEncoderV15recordErrorTypeyyxmKs0G0RzlF"
+      },
+      "recordReturnType": {
+        "kind": "Func",
+        "type": "recordReturnType(_:)",
+        "usr": "s:11Distributed29LocalTestingInvocationEncoderV16recordReturnTypeyyxmKSeRzSERzlF"
+      },
+      "doneRecording": {
+        "kind": "Func",
+        "type": "doneRecording()",
+        "usr": "s:11Distributed29LocalTestingInvocationEncoderV13doneRecordingyyKF"
+      }
+    }
+  },
+  "LocalTestingInvocationDecoder": {
+    "kind": "Class",
+    "module": "Distributed",
+    "usr": "s:11Distributed29LocalTestingInvocationDecoderC",
+    "members": {
+      "SerializationRequirement": {
+        "kind": "TypeAlias",
+        "type": "SerializationRequirement",
+        "usr": "s:11Distributed29LocalTestingInvocationDecoderC24SerializationRequirementa"
+      },
+      "decodeGenericSubstitutions": {
+        "kind": "Func",
+        "type": "decodeGenericSubstitutions()",
+        "usr": "s:11Distributed29LocalTestingInvocationDecoderC26decodeGenericSubstitutionsSayypXpGyKF"
+      },
+      "decodeNextArgument": {
+        "kind": "Func",
+        "type": "decodeNextArgument()",
+        "usr": "s:11Distributed29LocalTestingInvocationDecoderC18decodeNextArgumentxyKSeRzSERzlF"
+      },
+      "decodeErrorType": {
+        "kind": "Func",
+        "type": "decodeErrorType()",
+        "usr": "s:11Distributed29LocalTestingInvocationDecoderC15decodeErrorTypeypXpSgyKF"
+      },
+      "decodeReturnType": {
+        "kind": "Func",
+        "type": "decodeReturnType()",
+        "usr": "s:11Distributed29LocalTestingInvocationDecoderC16decodeReturnTypeypXpSgyKF"
+      }
+    }
+  },
+  "LocalTestingInvocationResultHandler": {
+    "kind": "Struct",
+    "module": "Distributed",
+    "usr": "s:11Distributed35LocalTestingInvocationResultHandlerV",
+    "members": {
+      "SerializationRequirement": {
+        "kind": "TypeAlias",
+        "type": "SerializationRequirement",
+        "usr": "s:11Distributed35LocalTestingInvocationResultHandlerV24SerializationRequirementa"
+      },
+      "onReturn": {
+        "kind": "Func",
+        "type": "onReturn(value:)",
+        "usr": "s:11Distributed35LocalTestingInvocationResultHandlerV8onReturn5valueyx_tYaKSeRzSERzlF"
+      },
+      "onReturnVoid": {
+        "kind": "Func",
+        "type": "onReturnVoid()",
+        "usr": "s:11Distributed35LocalTestingInvocationResultHandlerV12onReturnVoidyyYaKF"
+      },
+      "onThrow": {
+        "kind": "Func",
+        "type": "onThrow(error:)",
+        "usr": "s:11Distributed35LocalTestingInvocationResultHandlerV7onThrow5erroryx_tYaKs5ErrorRzlF"
+      }
+    }
+  },
+  "LocalTestingDistributedActorSystemError": {
+    "kind": "Struct",
+    "module": "Distributed",
+    "usr": "s:11Distributed012LocalTestingA16ActorSystemErrorV",
+    "members": {
+      "message": {
+        "kind": "Var",
+        "type": "message",
+        "usr": "s:11Distributed012LocalTestingA16ActorSystemErrorV7messageSSvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(message:)",
+        "usr": "s:11Distributed012LocalTestingA16ActorSystemErrorV7messageACSS_tcfc"
+      }
+    }
+  },
+  "CodingUserInfoKey": {
+    "kind": "Struct",
+    "module": "Swift",
+    "usr": "s:s17CodingUserInfoKeyV",
+    "members": {
+      "actorSystemKey": {
+        "kind": "Var",
+        "type": "actorSystemKey",
+        "usr": "s:s17CodingUserInfoKeyV11DistributedE011actorSystemD0ABvpZ"
+      }
+    }
+  }
+}

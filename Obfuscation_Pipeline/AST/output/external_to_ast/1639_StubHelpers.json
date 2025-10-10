@@ -1,0 +1,153 @@
+[
+  {
+    "A_name" : "stub",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "StubHelpers.swift - Line: 29, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "stubResult",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StubHelpers.swift - Line: 36, Column: 5",
+        "H_initialValue" : "stubRequest(\"GET\", url.absoluteString as NSString)\n        .andReturn(statusCode)?\n        .withHeaders(headers)?\n        .withBody(data as NSData)"
+      }
+    ],
+    "I_parameterType" : [
+      "URL",
+      "Data",
+      "Int",
+      "Int?",
+      "[String: String]"
+    ],
+    "I_parameters" : [
+      "_",
+      "data",
+      "statusCode",
+      "length",
+      "headers"
+    ],
+    "J_returnType" : "-> LSStubResponseDSL"
+  },
+  {
+    "A_name" : "stubResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StubHelpers.swift - Line: 36, Column: 5",
+    "H_initialValue" : "stubRequest(\"GET\", url.absoluteString as NSString)\n        .andReturn(statusCode)?\n        .withHeaders(headers)?\n        .withBody(data as NSData)"
+  },
+  {
+    "A_name" : "delayedStub",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StubHelpers.swift - Line: 46, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StubHelpers.swift - Line: 52, Column: 5",
+        "H_initialValue" : "stub(url, data: data, statusCode: statusCode, length: length, headers: headers)"
+      }
+    ],
+    "I_parameterType" : [
+      "URL",
+      "Data",
+      "Int",
+      "Int?",
+      "[String: String]"
+    ],
+    "I_parameters" : [
+      "_",
+      "data",
+      "statusCode",
+      "length",
+      "headers"
+    ],
+    "J_returnType" : "-> LSStubResponseDSL"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StubHelpers.swift - Line: 52, Column: 5",
+    "H_initialValue" : "stub(url, data: data, statusCode: statusCode, length: length, headers: headers)"
+  },
+  {
+    "A_name" : "stub",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StubHelpers.swift - Line: 56, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "StubHelpers.swift - Line: 57, Column: 5",
+        "H_initialValue" : "NSError(domain: \"stubError\", code: errorCode, userInfo: nil)"
+      }
+    ],
+    "I_parameterType" : [
+      "URL",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "errorCode"
+    ]
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StubHelpers.swift - Line: 57, Column: 5",
+    "H_initialValue" : "NSError(domain: \"stubError\", code: errorCode, userInfo: nil)"
+  },
+  {
+    "A_name" : "stub",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "StubHelpers.swift - Line: 61, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL",
+      "any Error"
+    ],
+    "I_parameters" : [
+      "_",
+      "error"
+    ]
+  }
+]

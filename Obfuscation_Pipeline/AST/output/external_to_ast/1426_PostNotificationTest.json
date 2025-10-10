@@ -1,0 +1,683 @@
+[
+  {
+    "A_name" : "PostNotificationTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 5, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "notificationCenter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 6, Column: 5",
+        "H_initialValue" : "NotificationCenter()"
+      },
+      {
+        "A_name" : "testPassesWhenNoNotificationsArePosted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 8, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testPassesWhenExpectedNotificationIsPosted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 14, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "testNotification",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PostNotificationTest.swift - Line: 15, Column: 9",
+            "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testPassesWhenAllExpectedNotificationsArePosted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 21, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "foo",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PostNotificationTest.swift - Line: 22, Column: 9",
+            "H_initialValue" : "1 as NSNumber"
+          },
+          {
+            "A_name" : "bar",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PostNotificationTest.swift - Line: 23, Column: 9",
+            "H_initialValue" : "2 as NSNumber"
+          },
+          {
+            "A_name" : "n1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PostNotificationTest.swift - Line: 24, Column: 9",
+            "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: foo)"
+          },
+          {
+            "A_name" : "n2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PostNotificationTest.swift - Line: 25, Column: 9",
+            "H_initialValue" : "Notification(name: Notification.Name(\"Bar\"), object: bar)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testFailsWhenNoNotificationsArePosted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 32, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "testNotification",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PostNotificationTest.swift - Line: 33, Column: 9",
+            "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testFailsWhenNotificationWithWrongNameIsPosted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 41, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "n1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PostNotificationTest.swift - Line: 42, Column: 9",
+            "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+          },
+          {
+            "A_name" : "n2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PostNotificationTest.swift - Line: 43, Column: 9",
+            "H_initialValue" : "Notification(name: Notification.Name(n1.name.rawValue + \"a\"), object: nil)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testFailsWhenNotificationWithWrongObjectIsPosted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 51, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "n1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PostNotificationTest.swift - Line: 52, Column: 9",
+            "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+          },
+          {
+            "A_name" : "n2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PostNotificationTest.swift - Line: 53, Column: 9",
+            "H_initialValue" : "Notification(name: n1.name, object: NSObject())"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testPassesWhenExpectedNotificationEventuallyIsPosted",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 61, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "testNotification",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PostNotificationTest.swift - Line: 62, Column: 9",
+            "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "notificationCenter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 6, Column: 5",
+    "H_initialValue" : "NotificationCenter()"
+  },
+  {
+    "A_name" : "testPassesWhenNoNotificationsArePosted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 8, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testPassesWhenExpectedNotificationIsPosted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 14, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "testNotification",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 15, Column: 9",
+        "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testNotification",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 15, Column: 9",
+    "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+  },
+  {
+    "A_name" : "testPassesWhenAllExpectedNotificationsArePosted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 21, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "foo",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 22, Column: 9",
+        "H_initialValue" : "1 as NSNumber"
+      },
+      {
+        "A_name" : "bar",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 23, Column: 9",
+        "H_initialValue" : "2 as NSNumber"
+      },
+      {
+        "A_name" : "n1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 24, Column: 9",
+        "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: foo)"
+      },
+      {
+        "A_name" : "n2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 25, Column: 9",
+        "H_initialValue" : "Notification(name: Notification.Name(\"Bar\"), object: bar)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "foo",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 22, Column: 9",
+    "H_initialValue" : "1 as NSNumber"
+  },
+  {
+    "A_name" : "bar",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 23, Column: 9",
+    "H_initialValue" : "2 as NSNumber"
+  },
+  {
+    "A_name" : "n1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 24, Column: 9",
+    "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: foo)"
+  },
+  {
+    "A_name" : "n2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 25, Column: 9",
+    "H_initialValue" : "Notification(name: Notification.Name(\"Bar\"), object: bar)"
+  },
+  {
+    "A_name" : "testFailsWhenNoNotificationsArePosted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 32, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "testNotification",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 33, Column: 9",
+        "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testNotification",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 33, Column: 9",
+    "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+  },
+  {
+    "A_name" : "testFailsWhenNotificationWithWrongNameIsPosted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 41, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "n1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 42, Column: 9",
+        "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+      },
+      {
+        "A_name" : "n2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 43, Column: 9",
+        "H_initialValue" : "Notification(name: Notification.Name(n1.name.rawValue + \"a\"), object: nil)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "n1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 42, Column: 9",
+    "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+  },
+  {
+    "A_name" : "n2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 43, Column: 9",
+    "H_initialValue" : "Notification(name: Notification.Name(n1.name.rawValue + \"a\"), object: nil)"
+  },
+  {
+    "A_name" : "testFailsWhenNotificationWithWrongObjectIsPosted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 51, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "n1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 52, Column: 9",
+        "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+      },
+      {
+        "A_name" : "n2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 53, Column: 9",
+        "H_initialValue" : "Notification(name: n1.name, object: NSObject())"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "n1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 52, Column: 9",
+    "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+  },
+  {
+    "A_name" : "n2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 53, Column: 9",
+    "H_initialValue" : "Notification(name: n1.name, object: NSObject())"
+  },
+  {
+    "A_name" : "testPassesWhenExpectedNotificationEventuallyIsPosted",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 61, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "testNotification",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 62, Column: 9",
+        "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testNotification",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 62, Column: 9",
+    "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: nil)"
+  },
+  {
+    "A_name" : "testPassesWhenAllExpectedNotificationsarePostedInDistributedNotificationCenter",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 71, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "center",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 72, Column: 9",
+        "H_initialValue" : "DistributedNotificationCenter()"
+      },
+      {
+        "A_name" : "n1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 73, Column: 9",
+        "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: \"1\")"
+      },
+      {
+        "A_name" : "n2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PostNotificationTest.swift - Line: 74, Column: 9",
+        "H_initialValue" : "Notification(name: Notification.Name(\"Bar\"), object: \"2\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "center",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 72, Column: 9",
+    "H_initialValue" : "DistributedNotificationCenter()"
+  },
+  {
+    "A_name" : "n1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 73, Column: 9",
+    "H_initialValue" : "Notification(name: Notification.Name(\"Foo\"), object: \"1\")"
+  },
+  {
+    "A_name" : "n2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PostNotificationTest.swift - Line: 74, Column: 9",
+    "H_initialValue" : "Notification(name: Notification.Name(\"Bar\"), object: \"2\")"
+  }
+]

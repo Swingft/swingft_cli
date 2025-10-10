@@ -1,0 +1,416 @@
+[
+  {
+    "A_name" : "MonthPickerModal",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIView"
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "onDateSelected",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MonthPickerModal.swift - Line: 15, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "initialDate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MonthPickerModal.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "modalSheetView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MonthPickerModal.swift - Line: 24, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 12\n        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]\n        view.clipsToBounds = true\n        return view\n    }()"
+      },
+      {
+        "A_name" : "datePicker",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MonthPickerModal.swift - Line: 33, Column: 5",
+        "H_initialValue" : "{\n        let picker = UIDatePicker()\n        picker.locale = Locale(identifier: \"ko_KR\")\n        if #available(iOS 17.4, *) {\n            picker.datePickerMode = .yearAndMonth\n        } else {\n            picker.datePickerMode = .date\n        }\n        return picker\n    }()"
+      },
+      {
+        "A_name" : "applyButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MonthPickerModal.swift - Line: 44, Column: 5",
+        "H_initialValue" : "CTAButton(style: .TextButton(\"적용하기\"), autoBackground: false)"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MonthPickerModal.swift - Line: 48, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "MonthPickerModal.swift - Line: 55, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "setupUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MonthPickerModal.swift - Line: 61, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tapGesture",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MonthPickerModal.swift - Line: 65, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismiss))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setupLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MonthPickerModal.swift - Line: 69, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setupAction",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MonthPickerModal.swift - Line: 86, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "show",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MonthPickerModal.swift - Line: 96, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UIView"
+        ],
+        "I_parameters" : [
+          "in"
+        ]
+      },
+      {
+        "A_name" : "dismiss",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "MonthPickerModal.swift - Line: 110, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "onDateSelected",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 15, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "initialDate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "modalSheetView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 24, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .white\n        view.layer.cornerRadius = 12\n        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]\n        view.clipsToBounds = true\n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 25, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "datePicker",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 33, Column: 5",
+    "H_initialValue" : "{\n        let picker = UIDatePicker()\n        picker.locale = Locale(identifier: \"ko_KR\")\n        if #available(iOS 17.4, *) {\n            picker.datePickerMode = .yearAndMonth\n        } else {\n            picker.datePickerMode = .date\n        }\n        return picker\n    }()"
+  },
+  {
+    "A_name" : "picker",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 34, Column: 9",
+    "H_initialValue" : "UIDatePicker()"
+  },
+  {
+    "A_name" : "applyButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 44, Column: 5",
+    "H_initialValue" : "CTAButton(style: .TextButton(\"적용하기\"), autoBackground: false)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 48, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 55, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "setupUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 61, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tapGesture",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MonthPickerModal.swift - Line: 65, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismiss))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tapGesture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 65, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(dismiss))"
+  },
+  {
+    "A_name" : "setupLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 69, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setupAction",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 86, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "show",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 96, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UIView"
+    ],
+    "I_parameters" : [
+      "in"
+    ]
+  },
+  {
+    "A_name" : "dismiss",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "MonthPickerModal.swift - Line: 110, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

@@ -1,0 +1,466 @@
+[
+  {
+    "A_name" : "NotificationSettingViewModel",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseViewModel"
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Input",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 16, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "viewDidLoad",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NotificationSettingViewModel.swift - Line: 17, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "marketingToggled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NotificationSettingViewModel.swift - Line: 18, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "feedToggled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NotificationSettingViewModel.swift - Line: 19, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "Output",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 24, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "isMarketingOn",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NotificationSettingViewModel.swift - Line: 25, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "isFeedOn",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NotificationSettingViewModel.swift - Line: 26, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "settingUpdateError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NotificationSettingViewModel.swift - Line: 27, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "marketingSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 32, Column: 5",
+        "H_initialValue" : "CurrentValueSubject<Bool, Never>(false)"
+      },
+      {
+        "A_name" : "feedSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 33, Column: 5",
+        "H_initialValue" : "CurrentValueSubject<Bool, Never>(false)"
+      },
+      {
+        "A_name" : "errorSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 34, Column: 5",
+        "H_initialValue" : "PassthroughSubject<Error, Never>()"
+      },
+      {
+        "A_name" : "useCase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 38, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 42, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AlarmSettingUseCase"
+        ],
+        "I_parameters" : [
+          "useCase"
+        ]
+      },
+      {
+        "A_name" : "transform",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 48, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Input"
+        ],
+        "I_parameters" : [
+          "input"
+        ],
+        "J_returnType" : "-> Output"
+      },
+      {
+        "A_name" : "toggleSetting",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 92, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "for",
+          "isOn"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Input",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 16, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 17, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "marketingToggled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 18, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "feedToggled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 19, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 17, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "marketingToggled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 18, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "feedToggled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 19, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Output",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 24, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "isMarketingOn",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 25, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isFeedOn",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 26, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "settingUpdateError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationSettingViewModel.swift - Line: 27, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "isMarketingOn",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 25, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isFeedOn",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 26, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "settingUpdateError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 27, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "marketingSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 32, Column: 5",
+    "H_initialValue" : "CurrentValueSubject<Bool, Never>(false)"
+  },
+  {
+    "A_name" : "feedSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 33, Column: 5",
+    "H_initialValue" : "CurrentValueSubject<Bool, Never>(false)"
+  },
+  {
+    "A_name" : "errorSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 34, Column: 5",
+    "H_initialValue" : "PassthroughSubject<Error, Never>()"
+  },
+  {
+    "A_name" : "useCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 38, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 42, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AlarmSettingUseCase"
+    ],
+    "I_parameters" : [
+      "useCase"
+    ]
+  },
+  {
+    "A_name" : "transform",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 48, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Input"
+    ],
+    "I_parameters" : [
+      "input"
+    ],
+    "J_returnType" : "-> Output"
+  },
+  {
+    "A_name" : "newValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 70, Column: 17",
+    "H_initialValue" : "!self.marketingSubject.value"
+  },
+  {
+    "A_name" : "newValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 78, Column: 17",
+    "H_initialValue" : "!self.feedSubject.value"
+  },
+  {
+    "A_name" : "toggleSetting",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationSettingViewModel.swift - Line: 92, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "for",
+      "isOn"
+    ]
+  }
+]

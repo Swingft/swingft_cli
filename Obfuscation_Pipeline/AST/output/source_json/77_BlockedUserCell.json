@@ -1,0 +1,526 @@
+[
+  {
+    "A_name" : "BlockedUserCell",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UITableViewCell"
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "identifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 13, Column: 5",
+        "H_initialValue" : "\"BlockedUserCell\""
+      },
+      {
+        "A_name" : "onUnblockTapped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 15, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onProfileTapped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "profileImageView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 18, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.backgroundColor = .gray100\n        imageView.layer.cornerRadius = 20\n        imageView.clipsToBounds = true\n        imageView.isUserInteractionEnabled = true\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "nicknameLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 27, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.head_b_16)\n        label.textColor = .black\n        label.isUserInteractionEnabled = true\n        return label\n    }()"
+      },
+      {
+        "A_name" : "unblockButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 35, Column: 5",
+        "H_initialValue" : "FollowButton()"
+      },
+      {
+        "A_name" : "userId",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 36, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 38, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableViewCell.CellStyle",
+          "String?"
+        ],
+        "I_parameters" : [
+          "style",
+          "reuseIdentifier"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 47, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 51, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "BlockedUserModel"
+        ],
+        "I_parameters" : [
+          "with"
+        ]
+      },
+      {
+        "A_name" : "didTapButton",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 60, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "didTapProfile",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 65, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "addTapGestures",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 70, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tapImage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BlockedUserCell.swift - Line: 71, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(didTapProfile))"
+          },
+          {
+            "A_name" : "tapLabel",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BlockedUserCell.swift - Line: 74, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(didTapProfile))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 78, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 82, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "identifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 13, Column: 5",
+    "H_initialValue" : "\"BlockedUserCell\""
+  },
+  {
+    "A_name" : "onUnblockTapped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 15, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onProfileTapped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "profileImageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 18, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.backgroundColor = .gray100\n        imageView.layer.cornerRadius = 20\n        imageView.clipsToBounds = true\n        imageView.isUserInteractionEnabled = true\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 19, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "nicknameLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 27, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.head_b_16)\n        label.textColor = .black\n        label.isUserInteractionEnabled = true\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 28, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "unblockButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 35, Column: 5",
+    "H_initialValue" : "FollowButton()"
+  },
+  {
+    "A_name" : "userId",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 36, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 38, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableViewCell.CellStyle",
+      "String?"
+    ],
+    "I_parameters" : [
+      "style",
+      "reuseIdentifier"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 47, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 51, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "BlockedUserModel"
+    ],
+    "I_parameters" : [
+      "with"
+    ]
+  },
+  {
+    "A_name" : "didTapButton",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 60, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didTapProfile",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 65, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "addTapGestures",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 70, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tapImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 71, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(didTapProfile))"
+      },
+      {
+        "A_name" : "tapLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BlockedUserCell.swift - Line: 74, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(didTapProfile))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tapImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 71, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(didTapProfile))"
+  },
+  {
+    "A_name" : "tapLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 74, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(didTapProfile))"
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 78, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BlockedUserCell.swift - Line: 82, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

@@ -1,0 +1,502 @@
+[
+  {
+    "A_name" : "RecommendedExpressionViewModel",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseViewModel"
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "diaryId",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 13, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "Input",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 17, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "viewDidLoad",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VocaViewModel.swift - Line: 18, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "bookmarkToggled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VocaViewModel.swift - Line: 19, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "Output",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 24, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fetchExpression",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VocaViewModel.swift - Line: 25, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "errorMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VocaViewModel.swift - Line: 26, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "recommendedExpressionUseCase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 31, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "toggleBookmarkUseCase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 32, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "recommendecExpressionSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 34, Column: 5",
+        "H_initialValue" : "PassthroughSubject<[RecommendedExpressionEntity.Phrase], Never>()"
+      },
+      {
+        "A_name" : "bookmarkToggledSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 35, Column: 5",
+        "H_initialValue" : "PassthroughSubject<(Int, Bool), Never>()"
+      },
+      {
+        "A_name" : "errorSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 37, Column: 5",
+        "H_initialValue" : "PassthroughSubject<String, Never>()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 39, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "RecommendedExpressionUseCase",
+          "ToggleBookmarkUseCase"
+        ],
+        "I_parameters" : [
+          "diaryId",
+          "recommendedExpressionUseCase",
+          "toggleBookmarkUseCase"
+        ]
+      },
+      {
+        "A_name" : "transform",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 45, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Input"
+        ],
+        "I_parameters" : [
+          "input"
+        ],
+        "J_returnType" : "-> Output"
+      },
+      {
+        "A_name" : "toggleBookmark",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 76, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "phraseId",
+          "isBookmarked"
+        ]
+      },
+      {
+        "A_name" : "updateBookmarkState",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 89, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "updated",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "VocaViewModel.swift - Line: 90, Column: 9",
+            "H_initialValue" : "recommendecExpressionSubject.map { items -> [RecommendedExpressionEntity.Phrase] in\n            items.map { item in\n                if item.phraseId == phraseId {\n                    return RecommendedExpressionEntity.Phrase(\n                        phraseId: item.phraseId,\n                        phraseType: item.phraseType,\n                        phrase: item.phrase,\n                        explanation: item.explanation,\n                        reason: item.reason,\n                        isBookmarked: isBookmarked\n                    )\n                } else {\n                    return item\n                }\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "Int",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "phraseId",
+          "isBookmarked"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "diaryId",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 13, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Input",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 17, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 18, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "bookmarkToggled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 19, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 18, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "bookmarkToggled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 19, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Output",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 24, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fetchExpression",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 25, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "errorMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 26, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "fetchExpression",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 25, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "errorMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 26, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "recommendedExpressionUseCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 31, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "toggleBookmarkUseCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 32, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "recommendecExpressionSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 34, Column: 5",
+    "H_initialValue" : "PassthroughSubject<[RecommendedExpressionEntity.Phrase], Never>()"
+  },
+  {
+    "A_name" : "bookmarkToggledSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 35, Column: 5",
+    "H_initialValue" : "PassthroughSubject<(Int, Bool), Never>()"
+  },
+  {
+    "A_name" : "errorSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 37, Column: 5",
+    "H_initialValue" : "PassthroughSubject<String, Never>()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 39, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "RecommendedExpressionUseCase",
+      "ToggleBookmarkUseCase"
+    ],
+    "I_parameters" : [
+      "diaryId",
+      "recommendedExpressionUseCase",
+      "toggleBookmarkUseCase"
+    ]
+  },
+  {
+    "A_name" : "transform",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 45, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Input"
+    ],
+    "I_parameters" : [
+      "input"
+    ],
+    "J_returnType" : "-> Output"
+  },
+  {
+    "A_name" : "toggleBookmark",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 76, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "phraseId",
+      "isBookmarked"
+    ]
+  },
+  {
+    "A_name" : "updateBookmarkState",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 89, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "updated",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VocaViewModel.swift - Line: 90, Column: 9",
+        "H_initialValue" : "recommendecExpressionSubject.map { items -> [RecommendedExpressionEntity.Phrase] in\n            items.map { item in\n                if item.phraseId == phraseId {\n                    return RecommendedExpressionEntity.Phrase(\n                        phraseId: item.phraseId,\n                        phraseType: item.phraseType,\n                        phrase: item.phrase,\n                        explanation: item.explanation,\n                        reason: item.reason,\n                        isBookmarked: isBookmarked\n                    )\n                } else {\n                    return item\n                }\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "Int",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "phraseId",
+      "isBookmarked"
+    ]
+  },
+  {
+    "A_name" : "updated",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VocaViewModel.swift - Line: 90, Column: 9",
+    "H_initialValue" : "recommendecExpressionSubject.map { items -> [RecommendedExpressionEntity.Phrase] in\n            items.map { item in\n                if item.phraseId == phraseId {\n                    return RecommendedExpressionEntity.Phrase(\n                        phraseId: item.phraseId,\n                        phraseType: item.phraseType,\n                        phrase: item.phrase,\n                        explanation: item.explanation,\n                        reason: item.reason,\n                        isBookmarked: isBookmarked\n                    )\n                } else {\n                    return item\n                }\n            }\n        }"
+  }
+]

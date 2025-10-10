@@ -1,0 +1,664 @@
+[
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "zip",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 18, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Collection",
+          "@escaping ([Collection.Element.Element]) throws -> Element"
+        ],
+        "I_parameters" : [
+          "_",
+          "resultSelector"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      },
+      {
+        "A_name" : "zip",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 30, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Collection"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<[Element]>"
+      }
+    ]
+  },
+  {
+    "A_name" : "zip",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 18, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Collection",
+      "@escaping ([Collection.Element.Element]) throws -> Element"
+    ],
+    "I_parameters" : [
+      "_",
+      "resultSelector"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "zip",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 30, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Collection"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<[Element]>"
+  },
+  {
+    "A_name" : "ZipCollectionTypeSink",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sink<Observer>"
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 37, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 43, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 45, Column: 5",
+        "H_initialValue" : "RecursiveLock()"
+      },
+      {
+        "A_name" : "numberOfValues",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 48, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "values",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 49, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isDone",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 50, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "numberOfDone",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 51, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "subscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 52, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 54, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 68, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<SourceElement>",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "atIndex"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 129, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "j",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Zip+Collection.swift - Line: 130, Column: 9",
+            "H_initialValue" : "0"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 43, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 45, Column: 5",
+    "H_initialValue" : "RecursiveLock()"
+  },
+  {
+    "A_name" : "numberOfValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 48, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 49, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isDone",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 50, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "numberOfDone",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 51, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "subscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 52, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 54, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 68, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<SourceElement>",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "atIndex"
+    ]
+  },
+  {
+    "A_name" : "arguments",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 87, Column: 17",
+    "H_initialValue" : "[SourceElement]()"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 100, Column: 17",
+    "H_initialValue" : "try self.parent.resultSelector(arguments)"
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 129, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "j",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 130, Column: 9",
+        "H_initialValue" : "0"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "j",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 130, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 132, Column: 13",
+    "H_initialValue" : "j"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 133, Column: 13",
+    "H_initialValue" : "i.asObservable()"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 135, Column: 13",
+    "H_initialValue" : "source.subscribe(AnyObserver { event in\n                self.on(event, atIndex: index)\n                })"
+  },
+  {
+    "A_name" : "ZipCollectionType",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Result>"
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 150, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "sources",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 153, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "resultSelector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 154, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "count",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 155, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 157, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Collection",
+          "@escaping ResultSelector"
+        ],
+        "I_parameters" : [
+          "sources",
+          "resultSelector"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 163, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Zip+Collection.swift - Line: 164, Column: 9",
+            "H_initialValue" : "ZipCollectionTypeSink(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Zip+Collection.swift - Line: 165, Column: 9",
+            "H_initialValue" : "sink.run()"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "sources",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 153, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "resultSelector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 154, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "count",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 155, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 157, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Collection",
+      "@escaping ResultSelector"
+    ],
+    "I_parameters" : [
+      "sources",
+      "resultSelector"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 163, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 164, Column: 9",
+        "H_initialValue" : "ZipCollectionTypeSink(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Zip+Collection.swift - Line: 165, Column: 9",
+        "H_initialValue" : "sink.run()"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 164, Column: 9",
+    "H_initialValue" : "ZipCollectionTypeSink(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Zip+Collection.swift - Line: 165, Column: 9",
+    "H_initialValue" : "sink.run()"
+  }
+]

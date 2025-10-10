@@ -1,0 +1,696 @@
+[
+  {
+    "A_name" : "FollowListCellDelegate",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyObject"
+    ],
+    "F_location" : "FollowListCell.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "followButtonTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListCell.swift - Line: 12, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FollowListCell"
+        ],
+        "I_parameters" : [
+          "cell"
+        ]
+      },
+      {
+        "A_name" : "profileTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListCell.swift - Line: 13, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FollowListCell"
+        ],
+        "I_parameters" : [
+          "cell"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "followButtonTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 12, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FollowListCell"
+    ],
+    "I_parameters" : [
+      "cell"
+    ]
+  },
+  {
+    "A_name" : "profileTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 13, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FollowListCell"
+    ],
+    "I_parameters" : [
+      "cell"
+    ]
+  },
+  {
+    "A_name" : "FollowListCell",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UITableViewCell"
+    ],
+    "F_location" : "FollowListCell.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "identifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "FollowListCell.swift - Line: 20, Column: 5",
+        "H_initialValue" : "\"FollowListCell\""
+      },
+      {
+        "A_name" : "delegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "weak",
+        "D_attributes" : [
+          "weak"
+        ],
+        "F_location" : "FollowListCell.swift - Line: 22, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "leftStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "FollowListCell.swift - Line: 26, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView(arrangedSubviews: [profileImg, nickname])\n        stack.axis = .horizontal\n        stack.spacing = 8\n        stack.alignment = .center\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "mainStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "FollowListCell.swift - Line: 34, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView(arrangedSubviews: [leftStack, button])\n        stack.axis = .horizontal\n        stack.alignment = .center\n        stack.distribution = .equalSpacing\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "profileImg",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListCell.swift - Line: 42, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView(image: UIImage(resource: .imgProfileNormalIos))\n        imageView.layer.borderWidth = 1\n        imageView.layer.borderColor = UIColor.gray200.cgColor\n        imageView.contentMode = .scaleAspectFill\n        imageView.clipsToBounds = true\n        imageView.layer.cornerRadius = 21\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "nickname",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListCell.swift - Line: 52, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.head_b_16)\n        label.text = \"닉네임\"\n        label.textColor = .black\n        label.textAlignment = .left\n        label.numberOfLines = 1\n        return label\n    }()"
+      },
+      {
+        "A_name" : "button",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListCell.swift - Line: 62, Column: 5",
+        "H_initialValue" : "FollowButton()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FollowListCell.swift - Line: 66, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableViewCell.CellStyle",
+          "String?"
+        ],
+        "I_parameters" : [
+          "style",
+          "reuseIdentifier"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "FollowListCell.swift - Line: 76, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "setStyle",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListCell.swift - Line: 82, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListCell.swift - Line: 88, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListCell.swift - Line: 92, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setGestureRecognizers",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListCell.swift - Line: 108, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "profileTap",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FollowListCell.swift - Line: 112, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(profileTapped))"
+          },
+          {
+            "A_name" : "nameTap",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FollowListCell.swift - Line: 115, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(profileTapped))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListCell.swift - Line: 121, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "trimmed",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FollowListCell.swift - Line: 122, Column: 9",
+            "H_initialValue" : "user.profileImg.trimmingCharacters(in: .whitespacesAndNewlines)"
+          }
+        ],
+        "I_parameterType" : [
+          "UserDisplayable"
+        ],
+        "I_parameters" : [
+          "with"
+        ]
+      },
+      {
+        "A_name" : "buttonTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "FollowListCell.swift - Line: 134, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "profileTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "FollowListCell.swift - Line: 138, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "identifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "FollowListCell.swift - Line: 20, Column: 5",
+    "H_initialValue" : "\"FollowListCell\""
+  },
+  {
+    "A_name" : "delegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "weak",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "FollowListCell.swift - Line: 22, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "leftStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "FollowListCell.swift - Line: 26, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView(arrangedSubviews: [profileImg, nickname])\n        stack.axis = .horizontal\n        stack.spacing = 8\n        stack.alignment = .center\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 27, Column: 9",
+    "H_initialValue" : "UIStackView(arrangedSubviews: [profileImg, nickname])"
+  },
+  {
+    "A_name" : "mainStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "FollowListCell.swift - Line: 34, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView(arrangedSubviews: [leftStack, button])\n        stack.axis = .horizontal\n        stack.alignment = .center\n        stack.distribution = .equalSpacing\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 35, Column: 9",
+    "H_initialValue" : "UIStackView(arrangedSubviews: [leftStack, button])"
+  },
+  {
+    "A_name" : "profileImg",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 42, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView(image: UIImage(resource: .imgProfileNormalIos))\n        imageView.layer.borderWidth = 1\n        imageView.layer.borderColor = UIColor.gray200.cgColor\n        imageView.contentMode = .scaleAspectFill\n        imageView.clipsToBounds = true\n        imageView.layer.cornerRadius = 21\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 43, Column: 9",
+    "H_initialValue" : "UIImageView(image: UIImage(resource: .imgProfileNormalIos))"
+  },
+  {
+    "A_name" : "nickname",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 52, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.head_b_16)\n        label.text = \"닉네임\"\n        label.textColor = .black\n        label.textAlignment = .left\n        label.numberOfLines = 1\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 53, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 62, Column: 5",
+    "H_initialValue" : "FollowButton()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FollowListCell.swift - Line: 66, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableViewCell.CellStyle",
+      "String?"
+    ],
+    "I_parameters" : [
+      "style",
+      "reuseIdentifier"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "FollowListCell.swift - Line: 76, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "setStyle",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 82, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 88, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 92, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setGestureRecognizers",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 108, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "profileTap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListCell.swift - Line: 112, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(profileTapped))"
+      },
+      {
+        "A_name" : "nameTap",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListCell.swift - Line: 115, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(profileTapped))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "profileTap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 112, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(profileTapped))"
+  },
+  {
+    "A_name" : "nameTap",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 115, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(profileTapped))"
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 121, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "trimmed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FollowListCell.swift - Line: 122, Column: 9",
+        "H_initialValue" : "user.profileImg.trimmingCharacters(in: .whitespacesAndNewlines)"
+      }
+    ],
+    "I_parameterType" : [
+      "UserDisplayable"
+    ],
+    "I_parameters" : [
+      "with"
+    ]
+  },
+  {
+    "A_name" : "trimmed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FollowListCell.swift - Line: 122, Column: 9",
+    "H_initialValue" : "user.profileImg.trimmingCharacters(in: .whitespacesAndNewlines)"
+  },
+  {
+    "A_name" : "buttonTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "FollowListCell.swift - Line: 134, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "profileTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "FollowListCell.swift - Line: 138, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

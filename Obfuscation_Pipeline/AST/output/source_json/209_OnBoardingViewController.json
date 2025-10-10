@@ -1,0 +1,684 @@
+[
+  {
+    "A_name" : "OnBoardingViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIViewController<OnBoardingViewModel>"
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "onBoardingView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 16, Column: 5",
+        "H_initialValue" : "OnBoardingView()"
+      },
+      {
+        "A_name" : "nicknameSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 17, Column: 5",
+        "H_initialValue" : "PassthroughSubject<String, Never>()"
+      },
+      {
+        "A_name" : "startTappedSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 18, Column: 5",
+        "H_initialValue" : "PassthroughSubject<Bool, Never>()"
+      },
+      {
+        "A_name" : "agreementModal",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 19, Column: 5",
+        "H_initialValue" : "AgreementModalView()"
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 23, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 27, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 31, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "navigationType",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 42, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> NavigationType?"
+      },
+      {
+        "A_name" : "addTarget",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 46, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "bind",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 54, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "input",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewController.swift - Line: 56, Column: 9",
+            "H_initialValue" : "OnBoardingViewModel.Input(\n            nicknameChanged: nicknameSubject.eraseToAnyPublisher(),\n            startTapped: startTappedSubject.eraseToAnyPublisher()\n        )"
+          },
+          {
+            "A_name" : "output",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewController.swift - Line: 61, Column: 9",
+            "H_initialValue" : "viewModel.transform(input: input)"
+          }
+        ],
+        "I_parameterType" : [
+          "OnBoardingViewModel"
+        ],
+        "I_parameters" : [
+          "viewModel"
+        ]
+      },
+      {
+        "A_name" : "bindModalCallbacks",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 89, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "nicknameDidChange",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 102, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "showAgreementModal",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 106, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "profileTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 116, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "onBoardingView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 16, Column: 5",
+    "H_initialValue" : "OnBoardingView()"
+  },
+  {
+    "A_name" : "nicknameSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 17, Column: 5",
+    "H_initialValue" : "PassthroughSubject<String, Never>()"
+  },
+  {
+    "A_name" : "startTappedSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 18, Column: 5",
+    "H_initialValue" : "PassthroughSubject<Bool, Never>()"
+  },
+  {
+    "A_name" : "agreementModal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 19, Column: 5",
+    "H_initialValue" : "AgreementModalView()"
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 23, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 27, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 31, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "navigationType",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 42, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> NavigationType?"
+  },
+  {
+    "A_name" : "addTarget",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 46, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "bind",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 54, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "input",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 56, Column: 9",
+        "H_initialValue" : "OnBoardingViewModel.Input(\n            nicknameChanged: nicknameSubject.eraseToAnyPublisher(),\n            startTapped: startTappedSubject.eraseToAnyPublisher()\n        )"
+      },
+      {
+        "A_name" : "output",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 61, Column: 9",
+        "H_initialValue" : "viewModel.transform(input: input)"
+      }
+    ],
+    "I_parameterType" : [
+      "OnBoardingViewModel"
+    ],
+    "I_parameters" : [
+      "viewModel"
+    ]
+  },
+  {
+    "A_name" : "input",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 56, Column: 9",
+    "H_initialValue" : "OnBoardingViewModel.Input(\n            nicknameChanged: nicknameSubject.eraseToAnyPublisher(),\n            startTapped: startTappedSubject.eraseToAnyPublisher()\n        )"
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 61, Column: 9",
+    "H_initialValue" : "viewModel.transform(input: input)"
+  },
+  {
+    "A_name" : "homeVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 81, Column: 17",
+    "H_initialValue" : "diContainer.makeTabBarViewController()"
+  },
+  {
+    "A_name" : "bindModalCallbacks",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 89, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "nicknameDidChange",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 102, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "showAgreementModal",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 106, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "adAgree",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 109, Column: 13",
+    "H_initialValue" : "self.agreementModal.isAdAgreeSelected"
+  },
+  {
+    "A_name" : "profileTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 116, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "OnBoardingViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "PHPickerViewControllerDelegate"
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 122, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "presentImagePicker",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 124, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "config",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewController.swift - Line: 125, Column: 9",
+            "H_initialValue" : "PHPickerConfiguration()"
+          },
+          {
+            "A_name" : "picker",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "OnBoardingViewController.swift - Line: 129, Column: 9",
+            "H_initialValue" : "PHPickerViewController(configuration: config)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "picker",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 134, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "PHPickerViewController",
+          "[PHPickerResult]"
+        ],
+        "I_parameters" : [
+          "_",
+          "didFinishPicking"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "presentImagePicker",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 124, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "config",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 125, Column: 9",
+        "H_initialValue" : "PHPickerConfiguration()"
+      },
+      {
+        "A_name" : "picker",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "OnBoardingViewController.swift - Line: 129, Column: 9",
+        "H_initialValue" : "PHPickerViewController(configuration: config)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "config",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 125, Column: 9",
+    "H_initialValue" : "PHPickerConfiguration()"
+  },
+  {
+    "A_name" : "picker",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 129, Column: 9",
+    "H_initialValue" : "PHPickerViewController(configuration: config)"
+  },
+  {
+    "A_name" : "picker",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "OnBoardingViewController.swift - Line: 134, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "PHPickerViewController",
+      "[PHPickerResult]"
+    ],
+    "I_parameters" : [
+      "_",
+      "didFinishPicking"
+    ]
+  }
+]
