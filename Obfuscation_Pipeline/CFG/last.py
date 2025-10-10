@@ -44,6 +44,7 @@ def build_arg_parser() -> argparse.ArgumentParser:
     ap.add_argument("--dst", required=True, help="Output project root.")
     ap.add_argument("--exceptions", nargs='+', help="JSON exception files.")
     ap.add_argument("--overwrite", action="store_true", help="Overwrite existing destination.")
+    ap.add_argument("--config", help="Swingft_config.json path (optional)")
     ap.add_argument("--debug", action="store_true", help="Verbose logging.")
     ap.add_argument("--perfile-inject", action="store_true", help="Enable code injection.")
     ap.add_argument("--dry-run", action="store_true", help="Scan only, no file edits.")
@@ -1218,6 +1219,9 @@ def main() -> None:
     else:
         copy_project_tree(args.src, args.dst, overwrite=args.overwrite)
     
+    # 구성 파일을 읽어 CFG 자체 스킵 여부 결정
+    # run_pipeline에서 이미 게이트됨. last.py에서는 별도 스킵 게이트를 두지 않음
+
     # StringSecurity 폴더 복사 (암호화 기능과 동일)
     log("[CFG] StringSecurity 폴더 복사 중...")
     copy_StringSecurity_folder(args.dst)

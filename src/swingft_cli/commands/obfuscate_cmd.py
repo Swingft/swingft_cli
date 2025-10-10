@@ -78,13 +78,17 @@ def handle_obfuscate(args):
     # 1단계: 전처리 (exception_list.json 생성)
     print(f"[pipeline] 1단계: 전처리 시작")
     try:
+        # Stage 1에도 작업용 설정을 환경변수로 전달
+        env1 = os.environ.copy()
+        if working_config_path:
+            env1["SWINGFT_WORKING_CONFIG"] = os.path.abspath(working_config_path)
         result = subprocess.run([
             "python3", pipeline_path, 
             args.input, 
             args.output,
             "--stage", "preprocessing"
         ], cwd=os.path.join(os.getcwd(), "Obfuscation_Pipeline"), 
-           text=True, timeout=600)
+           text=True, timeout=600, env=env1)
         
         if result.returncode != 0:
             print(f"[pipeline] 1단계 실행 실패 (exit code: {result.returncode})")
