@@ -35,6 +35,7 @@ def main() -> None:
     # Core arguments
     ap.add_argument("--src", required=True, help="Swift project root to scan")
     ap.add_argument("--dst", required=True, help="Output directory for obfuscated project")
+    ap.add_argument("--config", help="Swingft_config.json path (optional)")
     
     
     # Exception handling
@@ -69,6 +70,25 @@ def main() -> None:
                    help="All args after '--' are forwarded verbatim to last.py.")
     
     args = ap.parse_args()
+
+    # Early gate: read config (options block preferred) and skip entire CFG if disabled
+    cfg_path = args.config or os.environ.get("SWINGFT_WORKING_CONFIG")
+    if cfg_path and os.path.exists(cfg_path):
+        try:
+            with open(cfg_path, "r", encoding="utf-8") as f:
+                cfg = json.load(f)
+            src = cfg.get("options") if isinstance(cfg.get("options"), dict) else cfg
+            val = src.get("Obfuscation_controlFlow") if isinstance(src, dict) else None
+            def _to_bool(v, default=True):
+                if isinstance(v, bool): return v
+                if isinstance(v, str): return v.strip().lower() in {"1","true","yes","y","on"}
+                if isinstance(v, (int, float)): return bool(v)
+                return default
+            if not _to_bool(val, True):
+                print("[dyn_pipeline] Obfuscation_controlFlow=false → skip CFG pipeline")
+                return
+        except Exception:
+            pass
 
     gen_py = str(ROOT / "generate_exceptions.py")
     main_py = str(ROOT / "main.py")
@@ -110,6 +130,8 @@ def main() -> None:
         "--dst", args.dst,
         "--exceptions", exceptions_file,
     ]
+    if args.config:
+        step2.extend(["--config", args.config])
 
     # Add last.py options
     if args.perfile_inject:

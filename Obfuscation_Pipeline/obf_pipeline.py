@@ -1,4 +1,4 @@
-import os, sys, subprocess, shutil
+import os, sys, subprocess, shutil, json
 import time
 import argparse
 
@@ -45,6 +45,31 @@ def stage1_ast_analysis(original_project_dir, obf_project_dir):
     
     start = time.time()
     
+    # 구성 확인: Obfuscation_identifiers=false면 전체 Stage 1 스킵
+    try:
+        cfg_path = os.environ.get("SWINGFT_WORKING_CONFIG")
+        if not cfg_path:
+            SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+            cfg_path = os.path.join(SCRIPT_DIR, "Swingft_config.json")
+        cfg_json = {}
+        if os.path.exists(cfg_path):
+            with open(cfg_path, "r", encoding="utf-8") as f:
+                cfg_json = json.load(f)
+        def _to_bool(v, default=True):
+            if isinstance(v, bool):
+                return v
+            if isinstance(v, str):
+                return v.strip().lower() in {"1","true","yes","y","on"}
+            if isinstance(v, (int, float)):
+                return bool(v)
+            return default
+        opt_map = cfg_json.get("options") if isinstance(cfg_json.get("options"), dict) else cfg_json
+        if not _to_bool((opt_map or {}).get("Obfuscation_identifiers", True), True):
+            print("[INFO] Obfuscation_identifiers=false → Stage 1(AST) 스킵")
+            return
+    except Exception:
+        pass
+    
     # 1차 룰베이스 제외 대상 식별 & AST 분석
     run_ast(obf_project_dir)
     
@@ -68,76 +93,116 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
     
     start = time.time()
 
-    # 식별자 매핑
-    mapping()
-    
-    mapping_end = time.time()
-    print("mapping: ", mapping_end - start)
+    # 구성 파일 로드 (암호화와 동일한 기본 경로 정책)
+    working_cfg = os.environ.get("SWINGFT_WORKING_CONFIG")
+    if working_cfg:
+        cfg_path = working_cfg
+    else:
+        cfg_path = os.path.join(OBFUSCATION_ROOT, "Swingft_config.json")
+    cfg_json = {}
+    try:
+        if os.path.exists(cfg_path):
+            with open(cfg_path, "r", encoding="utf-8") as f:
+                cfg_json = json.load(f)
+    except Exception as e:
+        print(f"[WARN] 구성 파일 파싱 실패: {cfg_path} ({e}) → 기본값으로 진행")
 
-    # 식별자 난독화
-    swift_list_dir = os.path.join(OBFUSCATION_ROOT, "swift_file_list.txt")
-    mapping_result_dir = os.path.join(OBFUSCATION_ROOT, "mapping_result_s.json")    
+    # options 블록 우선
+    def get_bool(key: str, default: bool) -> bool:
+        try:
+            src = cfg_json.get("options") if isinstance(cfg_json.get("options"), dict) else cfg_json
+            v = (src or {}).get(key)
+            if isinstance(v, bool):
+                return v
+            if isinstance(v, str):
+                return v.strip().lower() in {"1","true","yes","y","on"}
+            if isinstance(v, (int, float)):
+                return bool(v)
+        except Exception:
+            pass
+        return default
 
-    target_project_dir = os.path.join(OBFUSCATION_ROOT, "ID_Obf")
-    target_name = "IDOBF"
+    flag_ident = get_bool("Obfuscation_identifiers", True)
 
-    os.chdir(target_project_dir)
-    build_marker_file = ".build/build_path.txt"
-    previous_build_path = ""
-    if os.path.exists(build_marker_file):
-        with open(build_marker_file, "r") as f:
-            previous_build_path = f.read().strip()
-    
-    current_build_path = os.path.abspath(".build")
-    if previous_build_path != current_build_path or previous_build_path == "":
-        run_command(["swift", "package", "clean"])
-        shutil.rmtree(".build", ignore_errors=True)
-        run_command(["swift", "build"])
-        with open(build_marker_file, "w") as f:
-            f.write(current_build_path)
-    run_command(["swift", "run", target_name, mapping_result_dir, swift_list_dir])
+    if flag_ident:
+        # 식별자 매핑
+        mapping()
+        mapping_end = time.time()
+        print("mapping: ", mapping_end - start)
 
-    # 식별자 난독화 덤프파일 생성
-    os.chdir(original_dir)
-    make_dump_file_id(original_project_dir, obf_project_dir)
+        # 식별자 난독화
+        swift_list_dir = os.path.join(OBFUSCATION_ROOT, "swift_file_list.txt")
+        mapping_result_dir = os.path.join(OBFUSCATION_ROOT, "mapping_result_s.json")
 
-    id_end = time.time()
-    print("id-obf: ", id_end - mapping_end)
+        target_project_dir = os.path.join(OBFUSCATION_ROOT, "ID_Obf")
+        target_name = "IDOBF"
+
+        os.chdir(target_project_dir)
+        build_marker_file = ".build/build_path.txt"
+        previous_build_path = ""
+        if os.path.exists(build_marker_file):
+            with open(build_marker_file, "r") as f:
+                previous_build_path = f.read().strip()
+        current_build_path = os.path.abspath(".build")
+        if previous_build_path != current_build_path or previous_build_path == "":
+            run_command(["swift", "package", "clean"])
+            shutil.rmtree(".build", ignore_errors=True)
+            run_command(["swift", "build"])
+            with open(build_marker_file, "w") as f:
+                f.write(current_build_path)
+        run_command(["swift", "run", target_name, mapping_result_dir, swift_list_dir])
+
+        # 식별자 난독화 덤프파일 생성
+        os.chdir(original_dir)
+        make_dump_file_id(original_project_dir, obf_project_dir)
+
+        id_end = time.time()
+        print("id-obf: ", id_end - mapping_end)
+    else:
+        print("[INFO] Obfuscation_identifiers=false → 매핑/식별자 난독화 단계 건너뜀")
+        id_end = start
 
     # 제어흐름 평탄화
-    cff_path = os.path.join(OBFUSCATION_ROOT, "CFF")
-    os.chdir(cff_path)
-    build_marker_file = ".build/build_path.txt"
-    previous_build_path = ""
-    if os.path.exists(build_marker_file):
-        with open(build_marker_file, "r") as f:
-            previous_build_path = f.read().strip()
-    
-    current_build_path = os.path.abspath(".build")
-    if previous_build_path != current_build_path or previous_build_path == "":
-        run_command(["swift", "package", "clean"])
-        shutil.rmtree(".build", ignore_errors=True)
-        run_command(["swift", "build"])
-        with open(build_marker_file, "w") as f:
-            f.write(current_build_path)
-    cmd = ["swift", "run", "Swingft_CFF", obf_project_dir]
-    run_command(cmd)
-    os.chdir(original_dir)
+    flag_cff = get_bool("Obfuscation_controlFlow", True)
+    if flag_cff:
+        cff_path = os.path.join(OBFUSCATION_ROOT, "CFF")
+        os.chdir(cff_path)
+        build_marker_file = ".build/build_path.txt"
+        previous_build_path = ""
+        if os.path.exists(build_marker_file):
+            with open(build_marker_file, "r") as f:
+                previous_build_path = f.read().strip()
+        current_build_path = os.path.abspath(".build")
+        if previous_build_path != current_build_path or previous_build_path == "":
+            run_command(["swift", "package", "clean"])
+            shutil.rmtree(".build", ignore_errors=True)
+            run_command(["swift", "build"])
+            with open(build_marker_file, "w") as f:
+                f.write(current_build_path)
+        cmd = ["swift", "run", "Swingft_CFF", obf_project_dir]
+        run_command(cmd)
+        os.chdir(original_dir)
 
-    cff_end = time.time()
-    print("cff: ", cff_end - id_end)
+        cff_end = time.time()
+        print("cff: ", cff_end - id_end)
+    else:
+        print("[INFO] Obfuscation_controlFlow=false → CFF 단계 건너뜀")
+        cff_end = id_end
 
-    # 불투명한 술어 삽입
-    run_opaque(obf_project_dir)
+    # 불투명한 술어 + 데드코드 (Obfuscation_controlFlow와 동일 플래그로 제어)
+    if flag_cff:
+        # 불투명한 술어
+        run_opaque(obf_project_dir)
+        opaq_end = time.time()
+        print("opaq: ", opaq_end - cff_end)
 
-    opaq_end = time.time()
-    print("opaq: ", opaq_end - cff_end)
-
-    # 데드코드 삽입
-    deadcode()
-    
-    deadcode_end = time.time()
-    print("deadcode: ", deadcode_end - opaq_end)
+        # 데드코드
+        deadcode()
+        deadcode_end = time.time()
+        print("deadcode: ", deadcode_end - opaq_end)
+    else:
+        print("[INFO] Obfuscation_controlFlow=false → Opaque/DeadCode 단계 건너뜀")
+        deadcode_end = cff_end
 
     # 문자열 암호화
     enc_path = os.path.join(OBFUSCATION_ROOT, "String_Encryption")
@@ -156,25 +221,37 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
 
     # 동적 함수 호출 (인플레이스 실행)
     if not skip_cfg:
-        cfg_path = os.path.join(OBFUSCATION_ROOT, "CFG")
-        os.chdir(cfg_path)
-        # src와 dst 모두 obf_project_dir로 동일 설정하여 인플레이스 적용
-        cmd = ["python3", "run_pipeline.py", "--src", obf_project_dir, "--dst", obf_project_dir, 
-               "--perfile-inject", "--overwrite", "--debug", "--include-packages", "--no-skip-ui"]
-        run_command(cmd)
-        os.chdir(original_dir)
+        if not flag_cff:
+            print("[INFO] Obfuscation_controlFlow=false → CFG 단계 건너뜀")
+            cfg_end = enc_end
+        else:
+            cfg_path = os.path.join(OBFUSCATION_ROOT, "CFG")
+            os.chdir(cfg_path)
+            # src와 dst 모두 obf_project_dir로 동일 설정하여 인플레이스 적용
+            # 구성 파일 경로 추출 (Stage 2에서 사용하던 정책과 동일)
+            working_cfg = os.environ.get("SWINGFT_WORKING_CONFIG")
+            cfg_arg = working_cfg if working_cfg else os.path.join(OBFUSCATION_ROOT, "Swingft_config.json")
+            cmd = ["python3", "run_pipeline.py", "--src", obf_project_dir, "--dst", obf_project_dir, 
+                   "--perfile-inject", "--overwrite", "--debug", "--include-packages", "--no-skip-ui", "--config", cfg_arg]
+            run_command(cmd)
+            os.chdir(original_dir)
 
-        cfg_end = time.time()
-        print("cfg: ", cfg_end - enc_end)
+            cfg_end = time.time()
+            print("cfg: ", cfg_end - enc_end)
     else:
         print("CFG (동적 함수) 단계가 건너뜀")
         cfg_end = enc_end
 
     # 디버깅용 코드 제거
-    remove_debug_symbol(obf_project_dir)
-
-    debug_end = time.time()
-    print("debug: ", debug_end - cfg_end)
+    flag_dbg = get_bool("Delete_debug_symbols", True)
+    if flag_dbg:
+        start_dbg = time.time()
+        remove_debug_symbol(obf_project_dir)
+        debug_end = time.time()
+        print("debug: ", debug_end - start_dbg)
+    else:
+        print("[INFO] Delete_debug_symbols=false → 디버깅 코드 제거 단계 건너뜀")
+        debug_end = cfg_end
 
     print("total: ", debug_end - start)
     print((debug_end - start) / 60)
