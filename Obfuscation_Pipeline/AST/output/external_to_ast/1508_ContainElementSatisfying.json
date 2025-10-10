@@ -1,0 +1,127 @@
+[
+  {
+    "A_name" : "containElementSatisfying",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ContainElementSatisfying.swift - Line: 1, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping ((S.Element) -> Bool)",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Predicate<S>"
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ContainElementSatisfying.swift - Line: 5, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "NMBPredicate",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ContainElementSatisfying.swift - Line: 31, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "containElementSatisfyingMatcher",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "class"
+        ],
+        "F_location" : "ContainElementSatisfying.swift - Line: 32, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping ((NSObject) -> Bool)"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> NMBPredicate"
+      }
+    ]
+  },
+  {
+    "A_name" : "containElementSatisfyingMatcher",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "class"
+    ],
+    "F_location" : "ContainElementSatisfying.swift - Line: 32, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping ((NSObject) -> Bool)"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> NMBPredicate"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ContainElementSatisfying.swift - Line: 34, Column: 13",
+    "H_initialValue" : "try actualExpression.evaluate()"
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ContainElementSatisfying.swift - Line: 36, Column: 17",
+    "H_initialValue" : "ExpectationMessage.fail(\n                    \"containElementSatisfying must be provided an NSFastEnumeration object\"\n                )"
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ContainElementSatisfying.swift - Line: 42, Column: 13",
+    "H_initialValue" : "ExpectationMessage\n                .expectedTo(\"find object in collection that satisfies predicate\")\n                .toObjectiveC()"
+  },
+  {
+    "A_name" : "iterator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ContainElementSatisfying.swift - Line: 46, Column: 13",
+    "H_initialValue" : "NSFastEnumerationIterator(enumeration)"
+  }
+]

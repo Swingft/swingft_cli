@@ -1,0 +1,237 @@
+[
+  {
+    "A_name" : "AnonymousDisposable",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "DisposeBase",
+      "Cancelable"
+    ],
+    "F_location" : "AnonymousDisposable.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "disposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnonymousDisposable.swift - Line: 15, Column: 5",
+        "H_initialValue" : "AtomicInt(0)"
+      },
+      {
+        "A_name" : "disposeAction",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnonymousDisposable.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnonymousDisposable.swift - Line: 19, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnonymousDisposable.swift - Line: 26, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping DisposeAction"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnonymousDisposable.swift - Line: 32, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping DisposeAction"
+        ],
+        "I_parameters" : [
+          "disposeAction"
+        ]
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AnonymousDisposable.swift - Line: 40, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "disposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnonymousDisposable.swift - Line: 15, Column: 5",
+    "H_initialValue" : "AtomicInt(0)"
+  },
+  {
+    "A_name" : "disposeAction",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnonymousDisposable.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnonymousDisposable.swift - Line: 19, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnonymousDisposable.swift - Line: 26, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping DisposeAction"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnonymousDisposable.swift - Line: 32, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping DisposeAction"
+    ],
+    "I_parameters" : [
+      "disposeAction"
+    ]
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AnonymousDisposable.swift - Line: 40, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "Disposables",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AnonymousDisposable.swift - Line: 50, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "create",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "AnonymousDisposable.swift - Line: 55, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping () -> Void"
+        ],
+        "I_parameters" : [
+          "with"
+        ],
+        "J_returnType" : "-> Cancelable"
+      }
+    ]
+  },
+  {
+    "A_name" : "create",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "AnonymousDisposable.swift - Line: 55, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping () -> Void"
+    ],
+    "I_parameters" : [
+      "with"
+    ],
+    "J_returnType" : "-> Cancelable"
+  }
+]

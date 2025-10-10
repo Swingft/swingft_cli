@@ -1,0 +1,694 @@
+[
+  {
+    "A_name" : "MyFeedProfileViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIViewController<FeedProfileViewModel>"
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "input",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 17, Column: 5",
+        "H_initialValue" : "FeedProfileViewModel.Input()"
+      },
+      {
+        "A_name" : "myFeedProfileView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 18, Column: 5",
+        "H_initialValue" : "MyFeedProfileView()"
+      },
+      {
+        "A_name" : "likedVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 19, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "sharedVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 20, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dialog",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 21, Column: 5",
+        "H_initialValue" : "Dialog()"
+      },
+      {
+        "A_name" : "pendingDeleteRow",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 22, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "initialSelectedIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 23, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 27, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FeedProfileViewModel",
+          "any ViewControllerFactory",
+          "FeedProfileViewController",
+          "FeedProfileViewController"
+        ],
+        "I_parameters" : [
+          "viewModel",
+          "diContainer",
+          "likedVC",
+          "sharedVC"
+        ]
+      },
+      {
+        "A_name" : "loadView",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 40, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 44, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "navigationType",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 107, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> NavigationType?"
+      },
+      {
+        "A_name" : "viewWillAppear",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 111, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "viewDidAppear",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 117, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "bind",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 126, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "input",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MyFeedProfileViewController.swift - Line: 127, Column: 9",
+            "H_initialValue" : "FeedProfileViewModel.Input()"
+          },
+          {
+            "A_name" : "output",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MyFeedProfileViewController.swift - Line: 128, Column: 9",
+            "H_initialValue" : "viewModel.transform(input: input)"
+          }
+        ],
+        "I_parameterType" : [
+          "FeedProfileViewModel"
+        ],
+        "I_parameters" : [
+          "viewModel"
+        ]
+      },
+      {
+        "A_name" : "showHideDialog",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 147, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FeedProfileViewController?",
+          "Int"
+        ],
+        "I_parameters" : [
+          "listVC",
+          "row"
+        ]
+      },
+      {
+        "A_name" : "showReportDialog",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 175, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "openReportPage",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 195, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "safariVC",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MyFeedProfileViewController.swift - Line: 199, Column: 9",
+            "H_initialValue" : "SFSafariViewController(url: url)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "pushFollowListViewController",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 203, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "followVC",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MyFeedProfileViewController.swift - Line: 206, Column: 9",
+            "H_initialValue" : "self.diContainer.makeFollowListViewController(targetUserId: Int(viewModel.targetUserId))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "input",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 17, Column: 5",
+    "H_initialValue" : "FeedProfileViewModel.Input()"
+  },
+  {
+    "A_name" : "myFeedProfileView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 18, Column: 5",
+    "H_initialValue" : "MyFeedProfileView()"
+  },
+  {
+    "A_name" : "likedVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 19, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sharedVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 20, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dialog",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 21, Column: 5",
+    "H_initialValue" : "Dialog()"
+  },
+  {
+    "A_name" : "pendingDeleteRow",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 22, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "initialSelectedIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 23, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 27, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FeedProfileViewModel",
+      "any ViewControllerFactory",
+      "FeedProfileViewController",
+      "FeedProfileViewController"
+    ],
+    "I_parameters" : [
+      "viewModel",
+      "diContainer",
+      "likedVC",
+      "sharedVC"
+    ]
+  },
+  {
+    "A_name" : "loadView",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 40, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 44, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "navigationType",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 107, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> NavigationType?"
+  },
+  {
+    "A_name" : "viewWillAppear",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 111, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "viewDidAppear",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 117, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "bind",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 126, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "input",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 127, Column: 9",
+        "H_initialValue" : "FeedProfileViewModel.Input()"
+      },
+      {
+        "A_name" : "output",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 128, Column: 9",
+        "H_initialValue" : "viewModel.transform(input: input)"
+      }
+    ],
+    "I_parameterType" : [
+      "FeedProfileViewModel"
+    ],
+    "I_parameters" : [
+      "viewModel"
+    ]
+  },
+  {
+    "A_name" : "input",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 127, Column: 9",
+    "H_initialValue" : "FeedProfileViewModel.Input()"
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 128, Column: 9",
+    "H_initialValue" : "viewModel.transform(input: input)"
+  },
+  {
+    "A_name" : "showHideDialog",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 147, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FeedProfileViewController?",
+      "Int"
+    ],
+    "I_parameters" : [
+      "listVC",
+      "row"
+    ]
+  },
+  {
+    "A_name" : "diaryId",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 165, Column: 17",
+    "H_initialValue" : "listVC.feedCellView.feeds[row].diaryID"
+  },
+  {
+    "A_name" : "showReportDialog",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 175, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "openReportPage",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 195, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "safariVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 199, Column: 9",
+        "H_initialValue" : "SFSafariViewController(url: url)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "safariVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 199, Column: 9",
+    "H_initialValue" : "SFSafariViewController(url: url)"
+  },
+  {
+    "A_name" : "pushFollowListViewController",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 203, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "followVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MyFeedProfileViewController.swift - Line: 206, Column: 9",
+        "H_initialValue" : "self.diContainer.makeFollowListViewController(targetUserId: Int(viewModel.targetUserId))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "followVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MyFeedProfileViewController.swift - Line: 206, Column: 9",
+    "H_initialValue" : "self.diContainer.makeFollowListViewController(targetUserId: Int(viewModel.targetUserId))"
+  }
+]

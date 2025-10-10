@@ -1,0 +1,72 @@
+[
+  {
+    "A_name" : "disposeBag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Contents.swift - Line: 18, Column: 5",
+    "H_initialValue" : "DisposeBag()"
+  },
+  {
+    "A_name" : "count",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Contents.swift - Line: 19, Column: 5",
+    "H_initialValue" : "1"
+  },
+  {
+    "A_name" : "sequenceThatErrors",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Contents.swift - Line: 21, Column: 5",
+    "H_initialValue" : "Observable<String>.create { observer in\n        observer.onNext(\"🍎\")\n        observer.onNext(\"🍐\")\n        observer.onNext(\"🍊\")\n        \n        if count < 5 {\n            observer.onError(TestError.test)\n            print(\"Error encountered\")\n            count += 1\n        }\n        \n        observer.onNext(\"🐶\")\n        observer.onNext(\"🐱\")\n        observer.onNext(\"🐭\")\n        observer.onCompleted()\n        \n        return Disposables.create()\n    }"
+  },
+  {
+    "A_name" : "disposeBag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Contents.swift - Line: 56, Column: 5",
+    "H_initialValue" : "DisposeBag()"
+  },
+  {
+    "A_name" : "subject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Contents.swift - Line: 60, Column: 5",
+    "H_initialValue" : "BehaviorSubject(value: \"🍎\")"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Contents.swift - Line: 62, Column: 5",
+    "H_initialValue" : "subject.subscribe(onNext: { print($0) })"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Contents.swift - Line: 66, Column: 5",
+    "H_initialValue" : "subject.subscribe(onNext: { print($0) })"
+  }
+]

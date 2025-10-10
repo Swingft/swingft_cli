@@ -1,0 +1,486 @@
+[
+  {
+    "A_name" : "Producer",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Observable<Element>"
+    ],
+    "F_location" : "Producer.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Producer.swift - Line: 10, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "subscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Producer.swift - Line: 14, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Producer.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Producer.swift - Line: 10, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "subscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Producer.swift - Line: 14, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "disposer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Producer.swift - Line: 17, Column: 13",
+    "H_initialValue" : "SinkDisposer()"
+  },
+  {
+    "A_name" : "sinkAndSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Producer.swift - Line: 18, Column: 13",
+    "H_initialValue" : "self.run(observer, cancel: disposer)"
+  },
+  {
+    "A_name" : "disposer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Producer.swift - Line: 25, Column: 17",
+    "H_initialValue" : "SinkDisposer()"
+  },
+  {
+    "A_name" : "sinkAndSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Producer.swift - Line: 26, Column: 17",
+    "H_initialValue" : "self.run(observer, cancel: disposer)"
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Producer.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "SinkDisposer",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Cancelable"
+    ],
+    "F_location" : "Producer.swift - Line: 39, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "DisposeState",
+        "B_kind" : "enum",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Int32"
+        ],
+        "F_location" : "Producer.swift - Line: 40, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "disposed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Producer.swift - Line: 41, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "sinkAndSubscriptionSet",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Producer.swift - Line: 42, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "state",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Producer.swift - Line: 45, Column: 5",
+        "H_initialValue" : "AtomicInt(0)"
+      },
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Producer.swift - Line: 46, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Producer.swift - Line: 47, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Producer.swift - Line: 49, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setSinkAndSubscription",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Producer.swift - Line: 53, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "previousState",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Producer.swift - Line: 57, Column: 9",
+            "H_initialValue" : "fetchOr(self.state, DisposeState.sinkAndSubscriptionSet.rawValue)"
+          }
+        ],
+        "I_parameterType" : [
+          "Disposable",
+          "Disposable"
+        ],
+        "I_parameters" : [
+          "sink",
+          "subscription"
+        ]
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Producer.swift - Line: 70, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "previousState",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Producer.swift - Line: 71, Column: 9",
+            "H_initialValue" : "fetchOr(self.state, DisposeState.disposed.rawValue)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "DisposeState",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Int32"
+    ],
+    "F_location" : "Producer.swift - Line: 40, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "disposed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Producer.swift - Line: 41, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "sinkAndSubscriptionSet",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Producer.swift - Line: 42, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Producer.swift - Line: 45, Column: 5",
+    "H_initialValue" : "AtomicInt(0)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Producer.swift - Line: 46, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Producer.swift - Line: 47, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Producer.swift - Line: 49, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setSinkAndSubscription",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Producer.swift - Line: 53, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "previousState",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Producer.swift - Line: 57, Column: 9",
+        "H_initialValue" : "fetchOr(self.state, DisposeState.sinkAndSubscriptionSet.rawValue)"
+      }
+    ],
+    "I_parameterType" : [
+      "Disposable",
+      "Disposable"
+    ],
+    "I_parameters" : [
+      "sink",
+      "subscription"
+    ]
+  },
+  {
+    "A_name" : "previousState",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Producer.swift - Line: 57, Column: 9",
+    "H_initialValue" : "fetchOr(self.state, DisposeState.sinkAndSubscriptionSet.rawValue)"
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Producer.swift - Line: 70, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "previousState",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Producer.swift - Line: 71, Column: 9",
+        "H_initialValue" : "fetchOr(self.state, DisposeState.disposed.rawValue)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "previousState",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Producer.swift - Line: 71, Column: 9",
+    "H_initialValue" : "fetchOr(self.state, DisposeState.disposed.rawValue)"
+  }
+]

@@ -1,0 +1,370 @@
+[
+  {
+    "A_name" : "LoginViewModel",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseViewModel"
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Input",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "LoginViewModel.swift - Line: 14, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "loginTapped",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoginViewModel.swift - Line: 15, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "Output",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "LoginViewModel.swift - Line: 18, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "navigateToHome",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoginViewModel.swift - Line: 19, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "navigateToOnboarding",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoginViewModel.swift - Line: 20, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "error",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LoginViewModel.swift - Line: 21, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "socialLoginUseCase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewModel.swift - Line: 24, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "tokenStore",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewModel.swift - Line: 25, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "homeSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewModel.swift - Line: 27, Column: 5",
+        "H_initialValue" : "PassthroughSubject<Void, Never>()"
+      },
+      {
+        "A_name" : "onboardingSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewModel.swift - Line: 28, Column: 5",
+        "H_initialValue" : "PassthroughSubject<Void, Never>()"
+      },
+      {
+        "A_name" : "errorSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewModel.swift - Line: 29, Column: 5",
+        "H_initialValue" : "PassthroughSubject<Error, Never>()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewModel.swift - Line: 31, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SocialLoginUseCase",
+          "TokenStoreUseCase"
+        ],
+        "I_parameters" : [
+          "socialLoginUseCase",
+          "tokenStore"
+        ]
+      },
+      {
+        "A_name" : "transform",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewModel.swift - Line: 39, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Input"
+        ],
+        "I_parameters" : [
+          "input"
+        ],
+        "J_returnType" : "-> Output"
+      }
+    ]
+  },
+  {
+    "A_name" : "Input",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 14, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "loginTapped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewModel.swift - Line: 15, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "loginTapped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 15, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Output",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 18, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "navigateToHome",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewModel.swift - Line: 19, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "navigateToOnboarding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewModel.swift - Line: 20, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginViewModel.swift - Line: 21, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "navigateToHome",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 19, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "navigateToOnboarding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 20, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 21, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "socialLoginUseCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 24, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "tokenStore",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 25, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "homeSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 27, Column: 5",
+    "H_initialValue" : "PassthroughSubject<Void, Never>()"
+  },
+  {
+    "A_name" : "onboardingSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 28, Column: 5",
+    "H_initialValue" : "PassthroughSubject<Void, Never>()"
+  },
+  {
+    "A_name" : "errorSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 29, Column: 5",
+    "H_initialValue" : "PassthroughSubject<Error, Never>()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 31, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SocialLoginUseCase",
+      "TokenStoreUseCase"
+    ],
+    "I_parameters" : [
+      "socialLoginUseCase",
+      "tokenStore"
+    ]
+  },
+  {
+    "A_name" : "transform",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginViewModel.swift - Line: 39, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Input"
+    ],
+    "I_parameters" : [
+      "input"
+    ],
+    "J_returnType" : "-> Output"
+  }
+]

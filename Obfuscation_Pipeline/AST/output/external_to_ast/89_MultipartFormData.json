@@ -1,0 +1,2837 @@
+[
+  {
+    "A_name" : "MultipartFormData",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 45, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "EncodingCharacters",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 48, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "crlf",
+            "B_kind" : "variable",
+            "C_accessLevel" : "static",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 49, Column: 9",
+            "H_initialValue" : "\"\\r\\n\""
+          }
+        ]
+      },
+      {
+        "A_name" : "BoundaryGenerator",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 52, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "BoundaryType",
+            "B_kind" : "enum",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "E_adoptedClassProtocols" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 53, Column: 9",
+            "G_members" : [
+              {
+                "A_name" : "initial",
+                "B_kind" : "case",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "MultipartFormData.swift - Line: 54, Column: 18",
+                "I_parameterType" : [
+
+                ],
+                "I_parameters" : [
+
+                ]
+              },
+              {
+                "A_name" : "encapsulated",
+                "B_kind" : "case",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "MultipartFormData.swift - Line: 54, Column: 27",
+                "I_parameterType" : [
+
+                ],
+                "I_parameters" : [
+
+                ]
+              },
+              {
+                "A_name" : "final",
+                "B_kind" : "case",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "MultipartFormData.swift - Line: 54, Column: 41",
+                "I_parameterType" : [
+
+                ],
+                "I_parameters" : [
+
+                ]
+              }
+            ]
+          },
+          {
+            "A_name" : "randomBoundary",
+            "B_kind" : "function",
+            "C_accessLevel" : "static",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 57, Column: 9",
+            "G_members" : [
+              {
+                "A_name" : "first",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "MultipartFormData.swift - Line: 58, Column: 13",
+                "H_initialValue" : "UInt32.random(in: UInt32.min...UInt32.max)"
+              },
+              {
+                "A_name" : "second",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "MultipartFormData.swift - Line: 59, Column: 13",
+                "H_initialValue" : "UInt32.random(in: UInt32.min...UInt32.max)"
+              }
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ],
+            "J_returnType" : "-> String"
+          },
+          {
+            "A_name" : "boundaryData",
+            "B_kind" : "function",
+            "C_accessLevel" : "static",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 64, Column: 9",
+            "G_members" : [
+              {
+                "A_name" : "boundaryText",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "MultipartFormData.swift - Line: 65, Column: 13",
+                "H_initialValue" : "switch boundaryType {\n            case .initial:\n                \"--\\(boundary)\\(EncodingCharacters.crlf)\"\n            case .encapsulated:\n                \"\\(EncodingCharacters.crlf)--\\(boundary)\\(EncodingCharacters.crlf)\"\n            case .final:\n                \"\\(EncodingCharacters.crlf)--\\(boundary)--\\(EncodingCharacters.crlf)\"\n            }"
+              }
+            ],
+            "I_parameterType" : [
+              "BoundaryType",
+              "String"
+            ],
+            "I_parameters" : [
+              "forBoundaryType",
+              "boundary"
+            ],
+            "J_returnType" : "-> Data"
+          }
+        ]
+      },
+      {
+        "A_name" : "BodyPart",
+        "B_kind" : "class",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 78, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 79, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "bodyStream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 80, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "bodyContentLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 81, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "hasInitialBoundary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 82, Column: 9",
+            "H_initialValue" : "false"
+          },
+          {
+            "A_name" : "hasFinalBoundary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 83, Column: 9",
+            "H_initialValue" : "false"
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 85, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "HTTPHeaders",
+              "InputStream",
+              "UInt64"
+            ],
+            "I_parameters" : [
+              "headers",
+              "bodyStream",
+              "bodyContentLength"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "encodingMemoryThreshold",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 95, Column: 5",
+        "H_initialValue" : "10_000_000"
+      },
+      {
+        "A_name" : "contentType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 98, Column: 5",
+        "H_initialValue" : "\"multipart\/form-data; boundary=\\(self.boundary)\""
+      },
+      {
+        "A_name" : "contentLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 101, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "boundary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 104, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "fileManager",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 106, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "bodyParts",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 108, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "bodyPartError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 109, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "streamBufferSize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 110, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 119, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FileManager",
+          "String?"
+        ],
+        "I_parameters" : [
+          "fileManager",
+          "boundary"
+        ]
+      },
+      {
+        "A_name" : "append",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 148, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 149, Column: 9",
+            "H_initialValue" : "contentHeaders(withName: name, fileName: fileName, mimeType: mimeType)"
+          },
+          {
+            "A_name" : "stream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 150, Column: 9",
+            "H_initialValue" : "InputStream(data: data)"
+          },
+          {
+            "A_name" : "length",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 151, Column: 9",
+            "H_initialValue" : "UInt64(data.count)"
+          }
+        ],
+        "I_parameterType" : [
+          "Data",
+          "String",
+          "String?",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "withName",
+          "fileName",
+          "mimeType"
+        ]
+      },
+      {
+        "A_name" : "append",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 172, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fileName",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 173, Column: 9",
+            "H_initialValue" : "fileURL.lastPathComponent"
+          },
+          {
+            "A_name" : "pathExtension",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 174, Column: 9",
+            "H_initialValue" : "fileURL.pathExtension"
+          }
+        ],
+        "I_parameterType" : [
+          "URL",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "withName"
+        ]
+      },
+      {
+        "A_name" : "append",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 198, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 199, Column: 9",
+            "H_initialValue" : "contentHeaders(withName: name, fileName: fileName, mimeType: mimeType)"
+          },
+          {
+            "A_name" : "isDirectory",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 231, Column: 9",
+            "H_initialValue" : "false"
+          },
+          {
+            "A_name" : "path",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 232, Column: 9",
+            "H_initialValue" : "fileURL.path"
+          },
+          {
+            "A_name" : "bodyContentLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 243, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "URL",
+          "String",
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "withName",
+          "fileName",
+          "mimeType"
+        ]
+      },
+      {
+        "A_name" : "append",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 284, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 289, Column: 9",
+            "H_initialValue" : "contentHeaders(withName: name, fileName: fileName, mimeType: mimeType)"
+          }
+        ],
+        "I_parameterType" : [
+          "InputStream",
+          "UInt64",
+          "String",
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "withLength",
+          "name",
+          "fileName",
+          "mimeType"
+        ]
+      },
+      {
+        "A_name" : "append",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 305, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "bodyPart",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 306, Column: 9",
+            "H_initialValue" : "BodyPart(headers: headers, bodyStream: stream, bodyContentLength: length)"
+          }
+        ],
+        "I_parameterType" : [
+          "InputStream",
+          "UInt64",
+          "HTTPHeaders"
+        ],
+        "I_parameters" : [
+          "_",
+          "withLength",
+          "headers"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 320, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "encoded",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 325, Column: 9",
+            "H_initialValue" : "Data()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Data"
+      },
+      {
+        "A_name" : "writeEncodedData",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 345, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "to"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 373, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "encoded",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 374, Column: 9",
+            "H_initialValue" : "Data()"
+          },
+          {
+            "A_name" : "initialData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 376, Column: 9",
+            "H_initialValue" : "bodyPart.hasInitialBoundary ? initialBoundaryData() : encapsulatedBoundaryData()"
+          },
+          {
+            "A_name" : "headerData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 379, Column: 9",
+            "H_initialValue" : "encodeHeaders(for: bodyPart)"
+          },
+          {
+            "A_name" : "bodyStreamData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 382, Column: 9",
+            "H_initialValue" : "try encodeBodyStream(for: bodyPart)"
+          }
+        ],
+        "I_parameterType" : [
+          "BodyPart"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Data"
+      },
+      {
+        "A_name" : "encodeHeaders",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 392, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headerText",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 393, Column: 9",
+            "H_initialValue" : "bodyPart.headers.map { \"\\($0.name): \\($0.value)\\(EncodingCharacters.crlf)\" }\n            .joined()\n            + EncodingCharacters.crlf"
+          }
+        ],
+        "I_parameterType" : [
+          "BodyPart"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> Data"
+      },
+      {
+        "A_name" : "encodeBodyStream",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 400, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "inputStream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 401, Column: 9",
+            "H_initialValue" : "bodyPart.bodyStream"
+          },
+          {
+            "A_name" : "encoded",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 405, Column: 9",
+            "H_initialValue" : "Data()"
+          }
+        ],
+        "I_parameterType" : [
+          "BodyPart"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> Data"
+      },
+      {
+        "A_name" : "write",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 433, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "BodyPart",
+          "OutputStream"
+        ],
+        "I_parameters" : [
+          "_",
+          "to"
+        ]
+      },
+      {
+        "A_name" : "writeInitialBoundaryData",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 440, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "initialData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 441, Column: 9",
+            "H_initialValue" : "bodyPart.hasInitialBoundary ? initialBoundaryData() : encapsulatedBoundaryData()"
+          }
+        ],
+        "I_parameterType" : [
+          "BodyPart",
+          "OutputStream"
+        ],
+        "I_parameters" : [
+          "for",
+          "to"
+        ]
+      },
+      {
+        "A_name" : "writeHeaderData",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 445, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headerData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 446, Column: 9",
+            "H_initialValue" : "encodeHeaders(for: bodyPart)"
+          }
+        ],
+        "I_parameterType" : [
+          "BodyPart",
+          "OutputStream"
+        ],
+        "I_parameters" : [
+          "for",
+          "to"
+        ]
+      },
+      {
+        "A_name" : "writeBodyStream",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 450, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "inputStream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 451, Column: 9",
+            "H_initialValue" : "bodyPart.bodyStream"
+          },
+          {
+            "A_name" : "bytesLeftToRead",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 456, Column: 9",
+            "H_initialValue" : "bodyPart.bodyContentLength"
+          }
+        ],
+        "I_parameterType" : [
+          "BodyPart",
+          "OutputStream"
+        ],
+        "I_parameters" : [
+          "for",
+          "to"
+        ]
+      },
+      {
+        "A_name" : "writeFinalBoundaryData",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 479, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "BodyPart",
+          "OutputStream"
+        ],
+        "I_parameters" : [
+          "for",
+          "to"
+        ]
+      },
+      {
+        "A_name" : "write",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 487, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "buffer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 488, Column: 9",
+            "H_initialValue" : "[UInt8](repeating: 0, count: data.count)"
+          }
+        ],
+        "I_parameterType" : [
+          "Data",
+          "OutputStream"
+        ],
+        "I_parameters" : [
+          "_",
+          "to"
+        ]
+      },
+      {
+        "A_name" : "write",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 494, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "bytesToWrite",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 495, Column: 9",
+            "H_initialValue" : "buffer.count"
+          }
+        ],
+        "I_parameterType" : [
+          "inout [UInt8]",
+          "OutputStream"
+        ],
+        "I_parameters" : [
+          "_",
+          "to"
+        ]
+      },
+      {
+        "A_name" : "contentHeaders",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 514, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "disposition",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 515, Column: 9",
+            "H_initialValue" : "\"form-data; name=\\\"\\(name)\\\"\""
+          },
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 518, Column: 9",
+            "H_initialValue" : "[.contentDisposition(disposition)]"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String?",
+          "String?"
+        ],
+        "I_parameters" : [
+          "withName",
+          "fileName",
+          "mimeType"
+        ],
+        "J_returnType" : "-> HTTPHeaders"
+      },
+      {
+        "A_name" : "initialBoundaryData",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 526, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Data"
+      },
+      {
+        "A_name" : "encapsulatedBoundaryData",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 530, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Data"
+      },
+      {
+        "A_name" : "finalBoundaryData",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 534, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Data"
+      },
+      {
+        "A_name" : "setBodyPartError",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 540, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AFError.MultipartEncodingFailureReason"
+        ],
+        "I_parameters" : [
+          "withReason"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "EncodingCharacters",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 48, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "crlf",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 49, Column: 9",
+        "H_initialValue" : "\"\\r\\n\""
+      }
+    ]
+  },
+  {
+    "A_name" : "crlf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 49, Column: 9",
+    "H_initialValue" : "\"\\r\\n\""
+  },
+  {
+    "A_name" : "BoundaryGenerator",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 52, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "BoundaryType",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 53, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "initial",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 54, Column: 18",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "encapsulated",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 54, Column: 27",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "final",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 54, Column: 41",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "randomBoundary",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 57, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "first",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 58, Column: 13",
+            "H_initialValue" : "UInt32.random(in: UInt32.min...UInt32.max)"
+          },
+          {
+            "A_name" : "second",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 59, Column: 13",
+            "H_initialValue" : "UInt32.random(in: UInt32.min...UInt32.max)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "boundaryData",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 64, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "boundaryText",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormData.swift - Line: 65, Column: 13",
+            "H_initialValue" : "switch boundaryType {\n            case .initial:\n                \"--\\(boundary)\\(EncodingCharacters.crlf)\"\n            case .encapsulated:\n                \"\\(EncodingCharacters.crlf)--\\(boundary)\\(EncodingCharacters.crlf)\"\n            case .final:\n                \"\\(EncodingCharacters.crlf)--\\(boundary)--\\(EncodingCharacters.crlf)\"\n            }"
+          }
+        ],
+        "I_parameterType" : [
+          "BoundaryType",
+          "String"
+        ],
+        "I_parameters" : [
+          "forBoundaryType",
+          "boundary"
+        ],
+        "J_returnType" : "-> Data"
+      }
+    ]
+  },
+  {
+    "A_name" : "BoundaryType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 53, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "initial",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 54, Column: 18",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "encapsulated",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 54, Column: 27",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "final",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 54, Column: 41",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "randomBoundary",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 57, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "first",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 58, Column: 13",
+        "H_initialValue" : "UInt32.random(in: UInt32.min...UInt32.max)"
+      },
+      {
+        "A_name" : "second",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 59, Column: 13",
+        "H_initialValue" : "UInt32.random(in: UInt32.min...UInt32.max)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "first",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 58, Column: 13",
+    "H_initialValue" : "UInt32.random(in: UInt32.min...UInt32.max)"
+  },
+  {
+    "A_name" : "second",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 59, Column: 13",
+    "H_initialValue" : "UInt32.random(in: UInt32.min...UInt32.max)"
+  },
+  {
+    "A_name" : "boundaryData",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 64, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "boundaryText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 65, Column: 13",
+        "H_initialValue" : "switch boundaryType {\n            case .initial:\n                \"--\\(boundary)\\(EncodingCharacters.crlf)\"\n            case .encapsulated:\n                \"\\(EncodingCharacters.crlf)--\\(boundary)\\(EncodingCharacters.crlf)\"\n            case .final:\n                \"\\(EncodingCharacters.crlf)--\\(boundary)--\\(EncodingCharacters.crlf)\"\n            }"
+      }
+    ],
+    "I_parameterType" : [
+      "BoundaryType",
+      "String"
+    ],
+    "I_parameters" : [
+      "forBoundaryType",
+      "boundary"
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "boundaryText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 65, Column: 13",
+    "H_initialValue" : "switch boundaryType {\n            case .initial:\n                \"--\\(boundary)\\(EncodingCharacters.crlf)\"\n            case .encapsulated:\n                \"\\(EncodingCharacters.crlf)--\\(boundary)\\(EncodingCharacters.crlf)\"\n            case .final:\n                \"\\(EncodingCharacters.crlf)--\\(boundary)--\\(EncodingCharacters.crlf)\"\n            }"
+  },
+  {
+    "A_name" : "BodyPart",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 78, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 79, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "bodyStream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 80, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "bodyContentLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 81, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "hasInitialBoundary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 82, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "hasFinalBoundary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 83, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 85, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "HTTPHeaders",
+          "InputStream",
+          "UInt64"
+        ],
+        "I_parameters" : [
+          "headers",
+          "bodyStream",
+          "bodyContentLength"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 79, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "bodyStream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 80, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "bodyContentLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 81, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "hasInitialBoundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 82, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "hasFinalBoundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 83, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 85, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "HTTPHeaders",
+      "InputStream",
+      "UInt64"
+    ],
+    "I_parameters" : [
+      "headers",
+      "bodyStream",
+      "bodyContentLength"
+    ]
+  },
+  {
+    "A_name" : "encodingMemoryThreshold",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 95, Column: 5",
+    "H_initialValue" : "10_000_000"
+  },
+  {
+    "A_name" : "contentType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 98, Column: 5",
+    "H_initialValue" : "\"multipart\/form-data; boundary=\\(self.boundary)\""
+  },
+  {
+    "A_name" : "contentLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 101, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 104, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "fileManager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 106, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "bodyParts",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 108, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "bodyPartError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 109, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "streamBufferSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 110, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 119, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FileManager",
+      "String?"
+    ],
+    "I_parameters" : [
+      "fileManager",
+      "boundary"
+    ]
+  },
+  {
+    "A_name" : "append",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 148, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 149, Column: 9",
+        "H_initialValue" : "contentHeaders(withName: name, fileName: fileName, mimeType: mimeType)"
+      },
+      {
+        "A_name" : "stream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 150, Column: 9",
+        "H_initialValue" : "InputStream(data: data)"
+      },
+      {
+        "A_name" : "length",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 151, Column: 9",
+        "H_initialValue" : "UInt64(data.count)"
+      }
+    ],
+    "I_parameterType" : [
+      "Data",
+      "String",
+      "String?",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "withName",
+      "fileName",
+      "mimeType"
+    ]
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 149, Column: 9",
+    "H_initialValue" : "contentHeaders(withName: name, fileName: fileName, mimeType: mimeType)"
+  },
+  {
+    "A_name" : "stream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 150, Column: 9",
+    "H_initialValue" : "InputStream(data: data)"
+  },
+  {
+    "A_name" : "length",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 151, Column: 9",
+    "H_initialValue" : "UInt64(data.count)"
+  },
+  {
+    "A_name" : "append",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 172, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fileName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 173, Column: 9",
+        "H_initialValue" : "fileURL.lastPathComponent"
+      },
+      {
+        "A_name" : "pathExtension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 174, Column: 9",
+        "H_initialValue" : "fileURL.pathExtension"
+      }
+    ],
+    "I_parameterType" : [
+      "URL",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "withName"
+    ]
+  },
+  {
+    "A_name" : "fileName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 173, Column: 9",
+    "H_initialValue" : "fileURL.lastPathComponent"
+  },
+  {
+    "A_name" : "pathExtension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 174, Column: 9",
+    "H_initialValue" : "fileURL.pathExtension"
+  },
+  {
+    "A_name" : "mime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 177, Column: 13",
+    "H_initialValue" : "mimeType(forPathExtension: pathExtension)"
+  },
+  {
+    "A_name" : "append",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 198, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 199, Column: 9",
+        "H_initialValue" : "contentHeaders(withName: name, fileName: fileName, mimeType: mimeType)"
+      },
+      {
+        "A_name" : "isDirectory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 231, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "path",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 232, Column: 9",
+        "H_initialValue" : "fileURL.path"
+      },
+      {
+        "A_name" : "bodyContentLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 243, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "URL",
+      "String",
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "withName",
+      "fileName",
+      "mimeType"
+    ]
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 199, Column: 9",
+    "H_initialValue" : "contentHeaders(withName: name, fileName: fileName, mimeType: mimeType)"
+  },
+  {
+    "A_name" : "isReachable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 216, Column: 13",
+    "H_initialValue" : "try fileURL.checkPromisedItemIsReachable()"
+  },
+  {
+    "A_name" : "isDirectory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 231, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "path",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 232, Column: 9",
+    "H_initialValue" : "fileURL.path"
+  },
+  {
+    "A_name" : "bodyContentLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 243, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "append",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 284, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 289, Column: 9",
+        "H_initialValue" : "contentHeaders(withName: name, fileName: fileName, mimeType: mimeType)"
+      }
+    ],
+    "I_parameterType" : [
+      "InputStream",
+      "UInt64",
+      "String",
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "withLength",
+      "name",
+      "fileName",
+      "mimeType"
+    ]
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 289, Column: 9",
+    "H_initialValue" : "contentHeaders(withName: name, fileName: fileName, mimeType: mimeType)"
+  },
+  {
+    "A_name" : "append",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 305, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "bodyPart",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 306, Column: 9",
+        "H_initialValue" : "BodyPart(headers: headers, bodyStream: stream, bodyContentLength: length)"
+      }
+    ],
+    "I_parameterType" : [
+      "InputStream",
+      "UInt64",
+      "HTTPHeaders"
+    ],
+    "I_parameters" : [
+      "_",
+      "withLength",
+      "headers"
+    ]
+  },
+  {
+    "A_name" : "bodyPart",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 306, Column: 9",
+    "H_initialValue" : "BodyPart(headers: headers, bodyStream: stream, bodyContentLength: length)"
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 320, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "encoded",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 325, Column: 9",
+        "H_initialValue" : "Data()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "encoded",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 325, Column: 9",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "encodedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 331, Column: 13",
+    "H_initialValue" : "try encode(bodyPart)"
+  },
+  {
+    "A_name" : "writeEncodedData",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 345, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL"
+    ],
+    "I_parameters" : [
+      "to"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 373, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "encoded",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 374, Column: 9",
+        "H_initialValue" : "Data()"
+      },
+      {
+        "A_name" : "initialData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 376, Column: 9",
+        "H_initialValue" : "bodyPart.hasInitialBoundary ? initialBoundaryData() : encapsulatedBoundaryData()"
+      },
+      {
+        "A_name" : "headerData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 379, Column: 9",
+        "H_initialValue" : "encodeHeaders(for: bodyPart)"
+      },
+      {
+        "A_name" : "bodyStreamData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 382, Column: 9",
+        "H_initialValue" : "try encodeBodyStream(for: bodyPart)"
+      }
+    ],
+    "I_parameterType" : [
+      "BodyPart"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "encoded",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 374, Column: 9",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "initialData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 376, Column: 9",
+    "H_initialValue" : "bodyPart.hasInitialBoundary ? initialBoundaryData() : encapsulatedBoundaryData()"
+  },
+  {
+    "A_name" : "headerData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 379, Column: 9",
+    "H_initialValue" : "encodeHeaders(for: bodyPart)"
+  },
+  {
+    "A_name" : "bodyStreamData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 382, Column: 9",
+    "H_initialValue" : "try encodeBodyStream(for: bodyPart)"
+  },
+  {
+    "A_name" : "encodeHeaders",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 392, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headerText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 393, Column: 9",
+        "H_initialValue" : "bodyPart.headers.map { \"\\($0.name): \\($0.value)\\(EncodingCharacters.crlf)\" }\n            .joined()\n            + EncodingCharacters.crlf"
+      }
+    ],
+    "I_parameterType" : [
+      "BodyPart"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "headerText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 393, Column: 9",
+    "H_initialValue" : "bodyPart.headers.map { \"\\($0.name): \\($0.value)\\(EncodingCharacters.crlf)\" }\n            .joined()\n            + EncodingCharacters.crlf"
+  },
+  {
+    "A_name" : "encodeBodyStream",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 400, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "inputStream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 401, Column: 9",
+        "H_initialValue" : "bodyPart.bodyStream"
+      },
+      {
+        "A_name" : "encoded",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 405, Column: 9",
+        "H_initialValue" : "Data()"
+      }
+    ],
+    "I_parameterType" : [
+      "BodyPart"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "inputStream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 401, Column: 9",
+    "H_initialValue" : "bodyPart.bodyStream"
+  },
+  {
+    "A_name" : "encoded",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 405, Column: 9",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "buffer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 408, Column: 13",
+    "H_initialValue" : "[UInt8](repeating: 0, count: streamBufferSize)"
+  },
+  {
+    "A_name" : "bytesRead",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 409, Column: 13",
+    "H_initialValue" : "inputStream.read(&buffer, maxLength: streamBufferSize)"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 423, Column: 13",
+    "H_initialValue" : "AFError.UnexpectedInputStreamLength(bytesExpected: bodyPart.bodyContentLength,\n                                                            bytesRead: UInt64(encoded.count))"
+  },
+  {
+    "A_name" : "write",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 433, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "BodyPart",
+      "OutputStream"
+    ],
+    "I_parameters" : [
+      "_",
+      "to"
+    ]
+  },
+  {
+    "A_name" : "writeInitialBoundaryData",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 440, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "initialData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 441, Column: 9",
+        "H_initialValue" : "bodyPart.hasInitialBoundary ? initialBoundaryData() : encapsulatedBoundaryData()"
+      }
+    ],
+    "I_parameterType" : [
+      "BodyPart",
+      "OutputStream"
+    ],
+    "I_parameters" : [
+      "for",
+      "to"
+    ]
+  },
+  {
+    "A_name" : "initialData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 441, Column: 9",
+    "H_initialValue" : "bodyPart.hasInitialBoundary ? initialBoundaryData() : encapsulatedBoundaryData()"
+  },
+  {
+    "A_name" : "writeHeaderData",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 445, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headerData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 446, Column: 9",
+        "H_initialValue" : "encodeHeaders(for: bodyPart)"
+      }
+    ],
+    "I_parameterType" : [
+      "BodyPart",
+      "OutputStream"
+    ],
+    "I_parameters" : [
+      "for",
+      "to"
+    ]
+  },
+  {
+    "A_name" : "headerData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 446, Column: 9",
+    "H_initialValue" : "encodeHeaders(for: bodyPart)"
+  },
+  {
+    "A_name" : "writeBodyStream",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 450, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "inputStream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 451, Column: 9",
+        "H_initialValue" : "bodyPart.bodyStream"
+      },
+      {
+        "A_name" : "bytesLeftToRead",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 456, Column: 9",
+        "H_initialValue" : "bodyPart.bodyContentLength"
+      }
+    ],
+    "I_parameterType" : [
+      "BodyPart",
+      "OutputStream"
+    ],
+    "I_parameters" : [
+      "for",
+      "to"
+    ]
+  },
+  {
+    "A_name" : "inputStream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 451, Column: 9",
+    "H_initialValue" : "bodyPart.bodyStream"
+  },
+  {
+    "A_name" : "bytesLeftToRead",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 456, Column: 9",
+    "H_initialValue" : "bodyPart.bodyContentLength"
+  },
+  {
+    "A_name" : "bufferSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 458, Column: 13",
+    "H_initialValue" : "min(streamBufferSize, Int(bytesLeftToRead))"
+  },
+  {
+    "A_name" : "buffer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 459, Column: 13",
+    "H_initialValue" : "[UInt8](repeating: 0, count: bufferSize)"
+  },
+  {
+    "A_name" : "bytesRead",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 460, Column: 13",
+    "H_initialValue" : "inputStream.read(&buffer, maxLength: bufferSize)"
+  },
+  {
+    "A_name" : "writeFinalBoundaryData",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 479, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "BodyPart",
+      "OutputStream"
+    ],
+    "I_parameters" : [
+      "for",
+      "to"
+    ]
+  },
+  {
+    "A_name" : "write",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 487, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "buffer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 488, Column: 9",
+        "H_initialValue" : "[UInt8](repeating: 0, count: data.count)"
+      }
+    ],
+    "I_parameterType" : [
+      "Data",
+      "OutputStream"
+    ],
+    "I_parameters" : [
+      "_",
+      "to"
+    ]
+  },
+  {
+    "A_name" : "buffer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 488, Column: 9",
+    "H_initialValue" : "[UInt8](repeating: 0, count: data.count)"
+  },
+  {
+    "A_name" : "write",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 494, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "bytesToWrite",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 495, Column: 9",
+        "H_initialValue" : "buffer.count"
+      }
+    ],
+    "I_parameterType" : [
+      "inout [UInt8]",
+      "OutputStream"
+    ],
+    "I_parameters" : [
+      "_",
+      "to"
+    ]
+  },
+  {
+    "A_name" : "bytesToWrite",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 495, Column: 9",
+    "H_initialValue" : "buffer.count"
+  },
+  {
+    "A_name" : "bytesWritten",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 498, Column: 13",
+    "H_initialValue" : "outputStream.write(buffer, maxLength: bytesToWrite)"
+  },
+  {
+    "A_name" : "contentHeaders",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 514, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "disposition",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 515, Column: 9",
+        "H_initialValue" : "\"form-data; name=\\\"\\(name)\\\"\""
+      },
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 518, Column: 9",
+        "H_initialValue" : "[.contentDisposition(disposition)]"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String?",
+      "String?"
+    ],
+    "I_parameters" : [
+      "withName",
+      "fileName",
+      "mimeType"
+    ],
+    "J_returnType" : "-> HTTPHeaders"
+  },
+  {
+    "A_name" : "disposition",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 515, Column: 9",
+    "H_initialValue" : "\"form-data; name=\\\"\\(name)\\\"\""
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 518, Column: 9",
+    "H_initialValue" : "[.contentDisposition(disposition)]"
+  },
+  {
+    "A_name" : "initialBoundaryData",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 526, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "encapsulatedBoundaryData",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 530, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "finalBoundaryData",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 534, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "setBodyPartError",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 540, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AFError.MultipartEncodingFailureReason"
+    ],
+    "I_parameters" : [
+      "withReason"
+    ]
+  },
+  {
+    "A_name" : "MultipartFormData",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 549, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "mimeType",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 552, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forPathExtension"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "mimeType",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 552, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forPathExtension"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "MultipartFormData",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 569, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "mimeType",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormData.swift - Line: 572, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forPathExtension"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "mimeType",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormData.swift - Line: 572, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forPathExtension"
+    ],
+    "J_returnType" : "-> String"
+  }
+]

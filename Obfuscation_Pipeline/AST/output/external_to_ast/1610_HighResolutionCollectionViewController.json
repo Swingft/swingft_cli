@@ -1,0 +1,418 @@
+[
+  {
+    "A_name" : "reuseIdentifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 30, Column: 1",
+    "H_initialValue" : "\"HighResolution\""
+  },
+  {
+    "A_name" : "HighResolutionCollectionViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UICollectionViewController"
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 32, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "HighResolutionCollectionViewController.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "numberOfSections",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "HighResolutionCollectionViewController.swift - Line: 40, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UICollectionView"
+        ],
+        "I_parameters" : [
+          "in"
+        ],
+        "J_returnType" : "-> Int"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "HighResolutionCollectionViewController.swift - Line: 45, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "numberOfItemsInSection"
+        ],
+        "J_returnType" : "-> Int"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "HighResolutionCollectionViewController.swift - Line: 49, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "UICollectionViewCell",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "didEndDisplaying",
+          "forItemAt"
+        ]
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "HighResolutionCollectionViewController.swift - Line: 54, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "imageView",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HighResolutionCollectionViewController.swift - Line: 59, Column: 9",
+            "H_initialValue" : "(cell as! ImageCollectionViewCell).cellImageView!"
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HighResolutionCollectionViewController.swift - Line: 60, Column: 9",
+            "H_initialValue" : "ImageLoader.highResolutionImageURLs[indexPath.row % ImageLoader.highResolutionImageURLs.count]"
+          }
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "UICollectionViewCell",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "willDisplay",
+          "forItemAt"
+        ]
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "HighResolutionCollectionViewController.swift - Line: 75, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "cell",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HighResolutionCollectionViewController.swift - Line: 76, Column: 9",
+            "H_initialValue" : "collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)"
+          }
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "cellForItemAt"
+        ],
+        "J_returnType" : "-> UICollectionViewCell"
+      },
+      {
+        "A_name" : "prepare",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "HighResolutionCollectionViewController.swift - Line: 80, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UIStoryboardSegue",
+          "Any?"
+        ],
+        "I_parameters" : [
+          "for",
+          "sender"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "numberOfSections",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 40, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UICollectionView"
+    ],
+    "I_parameters" : [
+      "in"
+    ],
+    "J_returnType" : "-> Int"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 45, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "numberOfItemsInSection"
+    ],
+    "J_returnType" : "-> Int"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 49, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "UICollectionViewCell",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "didEndDisplaying",
+      "forItemAt"
+    ]
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 54, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "imageView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HighResolutionCollectionViewController.swift - Line: 59, Column: 9",
+        "H_initialValue" : "(cell as! ImageCollectionViewCell).cellImageView!"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HighResolutionCollectionViewController.swift - Line: 60, Column: 9",
+        "H_initialValue" : "ImageLoader.highResolutionImageURLs[indexPath.row % ImageLoader.highResolutionImageURLs.count]"
+      }
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "UICollectionViewCell",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "willDisplay",
+      "forItemAt"
+    ]
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 59, Column: 9",
+    "H_initialValue" : "(cell as! ImageCollectionViewCell).cellImageView!"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 60, Column: 9",
+    "H_initialValue" : "ImageLoader.highResolutionImageURLs[indexPath.row % ImageLoader.highResolutionImageURLs.count]"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 75, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "cell",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HighResolutionCollectionViewController.swift - Line: 76, Column: 9",
+        "H_initialValue" : "collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)"
+      }
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "cellForItemAt"
+    ],
+    "J_returnType" : "-> UICollectionViewCell"
+  },
+  {
+    "A_name" : "cell",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 76, Column: 9",
+    "H_initialValue" : "collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)"
+  },
+  {
+    "A_name" : "prepare",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 80, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UIStoryboardSegue",
+      "Any?"
+    ],
+    "I_parameters" : [
+      "for",
+      "sender"
+    ]
+  },
+  {
+    "A_name" : "vc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 82, Column: 13",
+    "H_initialValue" : "segue.destination as! DetailImageViewController"
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HighResolutionCollectionViewController.swift - Line: 83, Column: 13",
+    "H_initialValue" : "collectionView.indexPathsForSelectedItems![0].row"
+  }
+]

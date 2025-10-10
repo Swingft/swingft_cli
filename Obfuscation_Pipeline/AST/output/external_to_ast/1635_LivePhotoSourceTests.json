@@ -1,0 +1,1996 @@
+[
+  {
+    "A_name" : "LivePhotoSourceTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 30, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testLivePhotoResourceInitialization",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 32, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 33, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.heic\")!"
+          },
+          {
+            "A_name" : "resource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 34, Column: 9",
+            "H_initialValue" : "LivePhotoResource(downloadURL: url)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoResourceInitializationWithResource",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 40, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 41, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.mov\")!"
+          },
+          {
+            "A_name" : "imageResource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 42, Column: 9",
+            "H_initialValue" : "KF.ImageResource(downloadURL: url)"
+          },
+          {
+            "A_name" : "resource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 43, Column: 9",
+            "H_initialValue" : "LivePhotoResource(resource: imageResource)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoResourceFileExtensionByType",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 49, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "mov",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 50, Column: 9",
+            "H_initialValue" : "LivePhotoResource.FileType.mov"
+          },
+          {
+            "A_name" : "heic",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 54, Column: 9",
+            "H_initialValue" : "LivePhotoResource.FileType.heic"
+          },
+          {
+            "A_name" : "other",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 58, Column: 9",
+            "H_initialValue" : "LivePhotoResource.FileType.other(\"exe\")"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoResourceFileTypeDeterminationForHEIC",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 62, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 63, Column: 9",
+            "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x66, 0x74, 0x79, 0x70, 0x68, 0x65, 0x69, 0x63])"
+          },
+          {
+            "A_name" : "fileType",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 64, Column: 9",
+            "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+          },
+          {
+            "A_name" : "determinedExtension",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 65, Column: 9",
+            "H_initialValue" : "fileType.determinedFileExtension(data)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoResourceFileTypeDeterminationForQT",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 70, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 71, Column: 9",
+            "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x66, 0x74, 0x79, 0x70, 0x71, 0x74, 0x20, 0x20])"
+          },
+          {
+            "A_name" : "fileType",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 72, Column: 9",
+            "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+          },
+          {
+            "A_name" : "determinedExtension",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 73, Column: 9",
+            "H_initialValue" : "fileType.determinedFileExtension(data)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoResourceFileTypeDeterminationForExplicitFileType",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 78, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 79, Column: 9",
+            "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x66, 0x74, 0x79, 0x70, 0x71, 0x74, 0x20, 0x20])"
+          },
+          {
+            "A_name" : "fileType",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 80, Column: 9",
+            "H_initialValue" : "LivePhotoResource.FileType.other(\"ext\")"
+          },
+          {
+            "A_name" : "determinedExtension",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 81, Column: 9",
+            "H_initialValue" : "fileType.determinedFileExtension(data)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoResourceFileTypeDeterminationForUnknown",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 86, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 87, Column: 9",
+            "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x66, 0x74, 0x79, 0x70, 0x71, 0x74, 0x20, 0x22])"
+          },
+          {
+            "A_name" : "fileType",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 88, Column: 9",
+            "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+          },
+          {
+            "A_name" : "determinedExtension",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 89, Column: 9",
+            "H_initialValue" : "fileType.determinedFileExtension(data)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoResourceFileTypeDeterminationForNonFYTP",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 94, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 95, Column: 9",
+            "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x12, 0x34, 0x56, 0x78, 0x71, 0x74, 0x20, 0x20])"
+          },
+          {
+            "A_name" : "fileType",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 96, Column: 9",
+            "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+          },
+          {
+            "A_name" : "determinedExtension",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 97, Column: 9",
+            "H_initialValue" : "fileType.determinedFileExtension(data)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoResourceFileTypeDeterminationForNotEnoughData",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 102, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 103, Column: 9",
+            "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00])"
+          },
+          {
+            "A_name" : "fileType",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 104, Column: 9",
+            "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+          },
+          {
+            "A_name" : "determinedExtension",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 105, Column: 9",
+            "H_initialValue" : "fileType.determinedFileExtension(data)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoSourceInitializationWithResources",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 110, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "url1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 111, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo1.heic\")!"
+          },
+          {
+            "A_name" : "url2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 112, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo2.mov\")!"
+          },
+          {
+            "A_name" : "resources",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 113, Column: 9",
+            "H_initialValue" : "[KF.ImageResource(downloadURL: url1), KF.ImageResource(downloadURL: url2)]"
+          },
+          {
+            "A_name" : "livePhotoSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 114, Column: 9",
+            "H_initialValue" : "LivePhotoSource(resources: resources)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoSourceInitializationWithURLs",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 121, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "url1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 122, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo1.heic\")!"
+          },
+          {
+            "A_name" : "url2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 123, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo2.mov\")!"
+          },
+          {
+            "A_name" : "livePhotoSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 124, Column: 9",
+            "H_initialValue" : "LivePhotoSource(urls: [url1, url2])"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoResourceInitializationWithCacheKey",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 131, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 132, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.heic\")!"
+          },
+          {
+            "A_name" : "cacheKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 133, Column: 9",
+            "H_initialValue" : "\"customCacheKey\""
+          },
+          {
+            "A_name" : "resource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 134, Column: 9",
+            "H_initialValue" : "LivePhotoResource(downloadURL: url, cacheKey: cacheKey)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoResourceInitializationWithFileType",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 141, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 142, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.unknown\")!"
+          },
+          {
+            "A_name" : "resource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 143, Column: 9",
+            "H_initialValue" : "LivePhotoResource(downloadURL: url, fileType: .other(\"unknown\"))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoResourceGuessedFileType",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 149, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "url1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 150, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.heic\")!"
+          },
+          {
+            "A_name" : "url2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 151, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.mov\")!"
+          },
+          {
+            "A_name" : "url3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 152, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.unknown\")!"
+          },
+          {
+            "A_name" : "resource1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 154, Column: 9",
+            "H_initialValue" : "KF.ImageResource(downloadURL: url1)"
+          },
+          {
+            "A_name" : "resource2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 155, Column: 9",
+            "H_initialValue" : "KF.ImageResource(downloadURL: url2)"
+          },
+          {
+            "A_name" : "resource3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 156, Column: 9",
+            "H_initialValue" : "KF.ImageResource(downloadURL: url3)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testLivePhotoSourceInitializationWithMixedResources",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 163, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "url1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 164, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo1.heic\")!"
+          },
+          {
+            "A_name" : "url2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 165, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo2.mov\")!"
+          },
+          {
+            "A_name" : "url3",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 166, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo3.unknown\")!"
+          },
+          {
+            "A_name" : "resources",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 167, Column: 9",
+            "H_initialValue" : "[\n            KF.ImageResource(downloadURL: url1),\n            KF.ImageResource(downloadURL: url2),\n            KF.ImageResource(downloadURL: url3)\n        ]"
+          },
+          {
+            "A_name" : "livePhotoSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "LivePhotoSourceTests.swift - Line: 172, Column: 9",
+            "H_initialValue" : "LivePhotoSource(resources: resources)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testLivePhotoResourceInitialization",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 32, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 33, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.heic\")!"
+      },
+      {
+        "A_name" : "resource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 34, Column: 9",
+        "H_initialValue" : "LivePhotoResource(downloadURL: url)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 33, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.heic\")!"
+  },
+  {
+    "A_name" : "resource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 34, Column: 9",
+    "H_initialValue" : "LivePhotoResource(downloadURL: url)"
+  },
+  {
+    "A_name" : "testLivePhotoResourceInitializationWithResource",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 40, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 41, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.mov\")!"
+      },
+      {
+        "A_name" : "imageResource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 42, Column: 9",
+        "H_initialValue" : "KF.ImageResource(downloadURL: url)"
+      },
+      {
+        "A_name" : "resource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 43, Column: 9",
+        "H_initialValue" : "LivePhotoResource(resource: imageResource)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 41, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.mov\")!"
+  },
+  {
+    "A_name" : "imageResource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 42, Column: 9",
+    "H_initialValue" : "KF.ImageResource(downloadURL: url)"
+  },
+  {
+    "A_name" : "resource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 43, Column: 9",
+    "H_initialValue" : "LivePhotoResource(resource: imageResource)"
+  },
+  {
+    "A_name" : "testLivePhotoResourceFileExtensionByType",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 49, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "mov",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 50, Column: 9",
+        "H_initialValue" : "LivePhotoResource.FileType.mov"
+      },
+      {
+        "A_name" : "heic",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 54, Column: 9",
+        "H_initialValue" : "LivePhotoResource.FileType.heic"
+      },
+      {
+        "A_name" : "other",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 58, Column: 9",
+        "H_initialValue" : "LivePhotoResource.FileType.other(\"exe\")"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "mov",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 50, Column: 9",
+    "H_initialValue" : "LivePhotoResource.FileType.mov"
+  },
+  {
+    "A_name" : "heic",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 54, Column: 9",
+    "H_initialValue" : "LivePhotoResource.FileType.heic"
+  },
+  {
+    "A_name" : "other",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 58, Column: 9",
+    "H_initialValue" : "LivePhotoResource.FileType.other(\"exe\")"
+  },
+  {
+    "A_name" : "testLivePhotoResourceFileTypeDeterminationForHEIC",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 62, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 63, Column: 9",
+        "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x66, 0x74, 0x79, 0x70, 0x68, 0x65, 0x69, 0x63])"
+      },
+      {
+        "A_name" : "fileType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 64, Column: 9",
+        "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+      },
+      {
+        "A_name" : "determinedExtension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 65, Column: 9",
+        "H_initialValue" : "fileType.determinedFileExtension(data)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 63, Column: 9",
+    "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x66, 0x74, 0x79, 0x70, 0x68, 0x65, 0x69, 0x63])"
+  },
+  {
+    "A_name" : "fileType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 64, Column: 9",
+    "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+  },
+  {
+    "A_name" : "determinedExtension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 65, Column: 9",
+    "H_initialValue" : "fileType.determinedFileExtension(data)"
+  },
+  {
+    "A_name" : "testLivePhotoResourceFileTypeDeterminationForQT",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 70, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 71, Column: 9",
+        "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x66, 0x74, 0x79, 0x70, 0x71, 0x74, 0x20, 0x20])"
+      },
+      {
+        "A_name" : "fileType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 72, Column: 9",
+        "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+      },
+      {
+        "A_name" : "determinedExtension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 73, Column: 9",
+        "H_initialValue" : "fileType.determinedFileExtension(data)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 71, Column: 9",
+    "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x66, 0x74, 0x79, 0x70, 0x71, 0x74, 0x20, 0x20])"
+  },
+  {
+    "A_name" : "fileType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 72, Column: 9",
+    "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+  },
+  {
+    "A_name" : "determinedExtension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 73, Column: 9",
+    "H_initialValue" : "fileType.determinedFileExtension(data)"
+  },
+  {
+    "A_name" : "testLivePhotoResourceFileTypeDeterminationForExplicitFileType",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 78, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 79, Column: 9",
+        "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x66, 0x74, 0x79, 0x70, 0x71, 0x74, 0x20, 0x20])"
+      },
+      {
+        "A_name" : "fileType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 80, Column: 9",
+        "H_initialValue" : "LivePhotoResource.FileType.other(\"ext\")"
+      },
+      {
+        "A_name" : "determinedExtension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 81, Column: 9",
+        "H_initialValue" : "fileType.determinedFileExtension(data)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 79, Column: 9",
+    "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x66, 0x74, 0x79, 0x70, 0x71, 0x74, 0x20, 0x20])"
+  },
+  {
+    "A_name" : "fileType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 80, Column: 9",
+    "H_initialValue" : "LivePhotoResource.FileType.other(\"ext\")"
+  },
+  {
+    "A_name" : "determinedExtension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 81, Column: 9",
+    "H_initialValue" : "fileType.determinedFileExtension(data)"
+  },
+  {
+    "A_name" : "testLivePhotoResourceFileTypeDeterminationForUnknown",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 86, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 87, Column: 9",
+        "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x66, 0x74, 0x79, 0x70, 0x71, 0x74, 0x20, 0x22])"
+      },
+      {
+        "A_name" : "fileType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 88, Column: 9",
+        "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+      },
+      {
+        "A_name" : "determinedExtension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 89, Column: 9",
+        "H_initialValue" : "fileType.determinedFileExtension(data)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 87, Column: 9",
+    "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x66, 0x74, 0x79, 0x70, 0x71, 0x74, 0x20, 0x22])"
+  },
+  {
+    "A_name" : "fileType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 88, Column: 9",
+    "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+  },
+  {
+    "A_name" : "determinedExtension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 89, Column: 9",
+    "H_initialValue" : "fileType.determinedFileExtension(data)"
+  },
+  {
+    "A_name" : "testLivePhotoResourceFileTypeDeterminationForNonFYTP",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 94, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 95, Column: 9",
+        "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x12, 0x34, 0x56, 0x78, 0x71, 0x74, 0x20, 0x20])"
+      },
+      {
+        "A_name" : "fileType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 96, Column: 9",
+        "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+      },
+      {
+        "A_name" : "determinedExtension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 97, Column: 9",
+        "H_initialValue" : "fileType.determinedFileExtension(data)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 95, Column: 9",
+    "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00, 0x12, 0x34, 0x56, 0x78, 0x71, 0x74, 0x20, 0x20])"
+  },
+  {
+    "A_name" : "fileType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 96, Column: 9",
+    "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+  },
+  {
+    "A_name" : "determinedExtension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 97, Column: 9",
+    "H_initialValue" : "fileType.determinedFileExtension(data)"
+  },
+  {
+    "A_name" : "testLivePhotoResourceFileTypeDeterminationForNotEnoughData",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 102, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 103, Column: 9",
+        "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00])"
+      },
+      {
+        "A_name" : "fileType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 104, Column: 9",
+        "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+      },
+      {
+        "A_name" : "determinedExtension",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 105, Column: 9",
+        "H_initialValue" : "fileType.determinedFileExtension(data)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 103, Column: 9",
+    "H_initialValue" : "Data([0x00, 0x00, 0x00, 0x00])"
+  },
+  {
+    "A_name" : "fileType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 104, Column: 9",
+    "H_initialValue" : "LivePhotoResource.FileType.other(\"\")"
+  },
+  {
+    "A_name" : "determinedExtension",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 105, Column: 9",
+    "H_initialValue" : "fileType.determinedFileExtension(data)"
+  },
+  {
+    "A_name" : "testLivePhotoSourceInitializationWithResources",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 110, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "url1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 111, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo1.heic\")!"
+      },
+      {
+        "A_name" : "url2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 112, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo2.mov\")!"
+      },
+      {
+        "A_name" : "resources",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 113, Column: 9",
+        "H_initialValue" : "[KF.ImageResource(downloadURL: url1), KF.ImageResource(downloadURL: url2)]"
+      },
+      {
+        "A_name" : "livePhotoSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 114, Column: 9",
+        "H_initialValue" : "LivePhotoSource(resources: resources)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "url1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 111, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo1.heic\")!"
+  },
+  {
+    "A_name" : "url2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 112, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo2.mov\")!"
+  },
+  {
+    "A_name" : "resources",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 113, Column: 9",
+    "H_initialValue" : "[KF.ImageResource(downloadURL: url1), KF.ImageResource(downloadURL: url2)]"
+  },
+  {
+    "A_name" : "livePhotoSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 114, Column: 9",
+    "H_initialValue" : "LivePhotoSource(resources: resources)"
+  },
+  {
+    "A_name" : "testLivePhotoSourceInitializationWithURLs",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 121, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "url1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 122, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo1.heic\")!"
+      },
+      {
+        "A_name" : "url2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 123, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo2.mov\")!"
+      },
+      {
+        "A_name" : "livePhotoSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 124, Column: 9",
+        "H_initialValue" : "LivePhotoSource(urls: [url1, url2])"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "url1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 122, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo1.heic\")!"
+  },
+  {
+    "A_name" : "url2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 123, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo2.mov\")!"
+  },
+  {
+    "A_name" : "livePhotoSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 124, Column: 9",
+    "H_initialValue" : "LivePhotoSource(urls: [url1, url2])"
+  },
+  {
+    "A_name" : "testLivePhotoResourceInitializationWithCacheKey",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 131, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 132, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.heic\")!"
+      },
+      {
+        "A_name" : "cacheKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 133, Column: 9",
+        "H_initialValue" : "\"customCacheKey\""
+      },
+      {
+        "A_name" : "resource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 134, Column: 9",
+        "H_initialValue" : "LivePhotoResource(downloadURL: url, cacheKey: cacheKey)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 132, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.heic\")!"
+  },
+  {
+    "A_name" : "cacheKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 133, Column: 9",
+    "H_initialValue" : "\"customCacheKey\""
+  },
+  {
+    "A_name" : "resource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 134, Column: 9",
+    "H_initialValue" : "LivePhotoResource(downloadURL: url, cacheKey: cacheKey)"
+  },
+  {
+    "A_name" : "testLivePhotoResourceInitializationWithFileType",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 141, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 142, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.unknown\")!"
+      },
+      {
+        "A_name" : "resource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 143, Column: 9",
+        "H_initialValue" : "LivePhotoResource(downloadURL: url, fileType: .other(\"unknown\"))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 142, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.unknown\")!"
+  },
+  {
+    "A_name" : "resource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 143, Column: 9",
+    "H_initialValue" : "LivePhotoResource(downloadURL: url, fileType: .other(\"unknown\"))"
+  },
+  {
+    "A_name" : "testLivePhotoResourceGuessedFileType",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 149, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "url1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 150, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.heic\")!"
+      },
+      {
+        "A_name" : "url2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 151, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.mov\")!"
+      },
+      {
+        "A_name" : "url3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 152, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.unknown\")!"
+      },
+      {
+        "A_name" : "resource1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 154, Column: 9",
+        "H_initialValue" : "KF.ImageResource(downloadURL: url1)"
+      },
+      {
+        "A_name" : "resource2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 155, Column: 9",
+        "H_initialValue" : "KF.ImageResource(downloadURL: url2)"
+      },
+      {
+        "A_name" : "resource3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 156, Column: 9",
+        "H_initialValue" : "KF.ImageResource(downloadURL: url3)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "url1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 150, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.heic\")!"
+  },
+  {
+    "A_name" : "url2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 151, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.mov\")!"
+  },
+  {
+    "A_name" : "url3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 152, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo.unknown\")!"
+  },
+  {
+    "A_name" : "resource1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 154, Column: 9",
+    "H_initialValue" : "KF.ImageResource(downloadURL: url1)"
+  },
+  {
+    "A_name" : "resource2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 155, Column: 9",
+    "H_initialValue" : "KF.ImageResource(downloadURL: url2)"
+  },
+  {
+    "A_name" : "resource3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 156, Column: 9",
+    "H_initialValue" : "KF.ImageResource(downloadURL: url3)"
+  },
+  {
+    "A_name" : "testLivePhotoSourceInitializationWithMixedResources",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 163, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "url1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 164, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo1.heic\")!"
+      },
+      {
+        "A_name" : "url2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 165, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo2.mov\")!"
+      },
+      {
+        "A_name" : "url3",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 166, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo3.unknown\")!"
+      },
+      {
+        "A_name" : "resources",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 167, Column: 9",
+        "H_initialValue" : "[\n            KF.ImageResource(downloadURL: url1),\n            KF.ImageResource(downloadURL: url2),\n            KF.ImageResource(downloadURL: url3)\n        ]"
+      },
+      {
+        "A_name" : "livePhotoSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LivePhotoSourceTests.swift - Line: 172, Column: 9",
+        "H_initialValue" : "LivePhotoSource(resources: resources)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "url1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 164, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo1.heic\")!"
+  },
+  {
+    "A_name" : "url2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 165, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo2.mov\")!"
+  },
+  {
+    "A_name" : "url3",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 166, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/photo3.unknown\")!"
+  },
+  {
+    "A_name" : "resources",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 167, Column: 9",
+    "H_initialValue" : "[\n            KF.ImageResource(downloadURL: url1),\n            KF.ImageResource(downloadURL: url2),\n            KF.ImageResource(downloadURL: url3)\n        ]"
+  },
+  {
+    "A_name" : "livePhotoSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LivePhotoSourceTests.swift - Line: 172, Column: 9",
+    "H_initialValue" : "LivePhotoSource(resources: resources)"
+  }
+]

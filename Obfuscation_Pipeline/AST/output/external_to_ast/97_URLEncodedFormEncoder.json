@@ -1,0 +1,7135 @@
+[
+  {
+    "A_name" : "URLEncodedFormEncoder",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 54, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "ArrayEncoding",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 56, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "brackets",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 58, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "noBrackets",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 60, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "indexInBrackets",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 62, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "custom",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 64, Column: 14",
+            "I_parameterType" : [
+              "(_ key: String, _ index: Int) -> String"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "encode",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 73, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "String",
+              "Int"
+            ],
+            "I_parameters" : [
+              "_",
+              "atIndex"
+            ],
+            "J_returnType" : "-> String"
+          }
+        ]
+      },
+      {
+        "A_name" : "BoolEncoding",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 84, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "numeric",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 86, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "literal",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 88, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "encode",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 95, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "Bool"
+            ],
+            "I_parameters" : [
+              "_"
+            ],
+            "J_returnType" : "-> String"
+          }
+        ]
+      },
+      {
+        "A_name" : "DataEncoding",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 104, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "deferredToData",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 106, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "base64",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 108, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "custom",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 110, Column: 14",
+            "I_parameterType" : [
+              "(Data) throws -> String"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "encode",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 118, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "Data"
+            ],
+            "I_parameters" : [
+              "_"
+            ],
+            "J_returnType" : "-> String?"
+          }
+        ]
+      },
+      {
+        "A_name" : "DateEncoding",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 128, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "iso8601Formatter",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 130, Column: 9",
+            "H_initialValue" : "Protected<ISO8601DateFormatter>({\n            let formatter = ISO8601DateFormatter()\n            formatter.formatOptions = .withInternetDateTime\n            return formatter\n        }())"
+          },
+          {
+            "A_name" : "deferredToDate",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 137, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "secondsSince1970",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 139, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "millisecondsSince1970",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 141, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "iso8601",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 143, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "formatted",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 145, Column: 14",
+            "I_parameterType" : [
+              "DateFormatter"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "custom",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 147, Column: 14",
+            "I_parameterType" : [
+              "(Date) throws -> String"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "encode",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 155, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "Date"
+            ],
+            "I_parameters" : [
+              "_"
+            ],
+            "J_returnType" : "-> String?"
+          }
+        ]
+      },
+      {
+        "A_name" : "KeyEncoding",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 177, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "useDefaultKeys",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 179, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "convertToSnakeCase",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 198, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "convertToKebabCase",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 201, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "capitalized",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 204, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "uppercased",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 207, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "lowercased",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 210, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "custom",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 212, Column: 14",
+            "I_parameterType" : [
+              "(String) -> String"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "encode",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 214, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "String"
+            ],
+            "I_parameters" : [
+              "_"
+            ],
+            "J_returnType" : "-> String"
+          },
+          {
+            "A_name" : "convertToSnakeCase",
+            "B_kind" : "function",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 226, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "String"
+            ],
+            "I_parameters" : [
+              "_"
+            ],
+            "J_returnType" : "-> String"
+          },
+          {
+            "A_name" : "convertToKebabCase",
+            "B_kind" : "function",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 230, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "String"
+            ],
+            "I_parameters" : [
+              "_"
+            ],
+            "J_returnType" : "-> String"
+          },
+          {
+            "A_name" : "convert",
+            "B_kind" : "function",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 234, Column: 9",
+            "G_members" : [
+              {
+                "A_name" : "words",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "URLEncodedFormEncoder.swift - Line: 237, Column: 13",
+                "H_initialValue" : "[]"
+              },
+              {
+                "A_name" : "wordStart",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "URLEncodedFormEncoder.swift - Line: 246, Column: 13",
+                "H_initialValue" : "key.startIndex"
+              },
+              {
+                "A_name" : "searchRange",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "URLEncodedFormEncoder.swift - Line: 247, Column: 13",
+                "H_initialValue" : "key.index(after: wordStart)..<key.endIndex"
+              },
+              {
+                "A_name" : "result",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "URLEncodedFormEncoder.swift - Line: 282, Column: 13",
+                "H_initialValue" : "words.map { range in\n                key[range].lowercased()\n            }.joined(separator: separator)"
+              }
+            ],
+            "I_parameterType" : [
+              "String",
+              "String"
+            ],
+            "I_parameters" : [
+              "_",
+              "usingSeparator"
+            ],
+            "J_returnType" : "-> String"
+          }
+        ]
+      },
+      {
+        "A_name" : "KeyPathEncoding",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 298, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "brackets",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 300, Column: 9",
+            "H_initialValue" : "KeyPathEncoding { \"[\\($0)]\" }"
+          },
+          {
+            "A_name" : "dots",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 302, Column: 9",
+            "H_initialValue" : "KeyPathEncoding { \".\\($0)\" }"
+          },
+          {
+            "A_name" : "encoding",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 304, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 309, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "@escaping @Sendable (_ subkey: String) -> String"
+            ],
+            "I_parameters" : [
+              "encoding"
+            ]
+          },
+          {
+            "A_name" : "encodeKeyPath",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 313, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "String"
+            ],
+            "I_parameters" : [
+              "_"
+            ],
+            "J_returnType" : "-> String"
+          }
+        ]
+      },
+      {
+        "A_name" : "NilEncoding",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 319, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dropKey",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 321, Column: 9",
+            "H_initialValue" : "NilEncoding { nil }"
+          },
+          {
+            "A_name" : "dropValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 323, Column: 9",
+            "H_initialValue" : "NilEncoding { \"\" }"
+          },
+          {
+            "A_name" : "null",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 325, Column: 9",
+            "H_initialValue" : "NilEncoding { \"null\" }"
+          },
+          {
+            "A_name" : "encoding",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 327, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 332, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "@escaping @Sendable () -> String?"
+            ],
+            "I_parameters" : [
+              "encoding"
+            ]
+          },
+          {
+            "A_name" : "encodeNil",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 336, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ],
+            "J_returnType" : "-> String?"
+          }
+        ]
+      },
+      {
+        "A_name" : "SpaceEncoding",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 342, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "percentEscaped",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 344, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "plusReplaced",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 346, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "encode",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 353, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "String"
+            ],
+            "I_parameters" : [
+              "_"
+            ],
+            "J_returnType" : "-> String"
+          }
+        ]
+      },
+      {
+        "A_name" : "Error",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Swift.Error"
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 362, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "invalidRootObject",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 364, Column: 14",
+            "I_parameterType" : [
+              "String"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "localizedDescription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 366, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "alphabetizeKeyValuePairs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 379, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "arrayEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 381, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "boolEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 383, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dataEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 385, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dateEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 387, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "keyEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 389, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "keyPathEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 391, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "nilEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 393, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "spaceEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 395, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "allowedCharacters",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 397, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 412, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool",
+          "ArrayEncoding",
+          "BoolEncoding",
+          "DataEncoding",
+          "DateEncoding",
+          "KeyEncoding",
+          "KeyPathEncoding",
+          "NilEncoding",
+          "SpaceEncoding",
+          "CharacterSet"
+        ],
+        "I_parameters" : [
+          "alphabetizeKeyValuePairs",
+          "arrayEncoding",
+          "boolEncoding",
+          "dataEncoding",
+          "dateEncoding",
+          "keyEncoding",
+          "keyPathEncoding",
+          "nilEncoding",
+          "spaceEncoding",
+          "allowedCharacters"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 434, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "context",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 435, Column: 9",
+            "H_initialValue" : "URLEncodedFormContext(.object([]))"
+          },
+          {
+            "A_name" : "encoder",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 436, Column: 9",
+            "H_initialValue" : "_URLEncodedFormEncoder(context: context,\n                                             boolEncoding: boolEncoding,\n                                             dataEncoding: dataEncoding,\n                                             dateEncoding: dateEncoding,\n                                             nilEncoding: nilEncoding)"
+          }
+        ],
+        "I_parameterType" : [
+          "any Encodable"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> URLEncodedFormComponent"
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 452, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "component",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 453, Column: 9",
+            "H_initialValue" : "try encode(value)"
+          },
+          {
+            "A_name" : "serializer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 459, Column: 9",
+            "H_initialValue" : "URLEncodedFormSerializer(alphabetizeKeyValuePairs: alphabetizeKeyValuePairs,\n                                                  arrayEncoding: arrayEncoding,\n                                                  keyEncoding: keyEncoding,\n                                                  keyPathEncoding: keyPathEncoding,\n                                                  spaceEncoding: spaceEncoding,\n                                                  allowedCharacters: allowedCharacters)"
+          },
+          {
+            "A_name" : "query",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 465, Column: 9",
+            "H_initialValue" : "serializer.serialize(object)"
+          }
+        ],
+        "I_parameterType" : [
+          "any Encodable"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 478, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "string",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 479, Column: 9",
+            "H_initialValue" : "try encode(value)"
+          }
+        ],
+        "I_parameterType" : [
+          "any Encodable"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Data"
+      }
+    ]
+  },
+  {
+    "A_name" : "ArrayEncoding",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 56, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "brackets",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 58, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "noBrackets",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 60, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "indexInBrackets",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 62, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "custom",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 64, Column: 14",
+        "I_parameterType" : [
+          "(_ key: String, _ index: Int) -> String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 73, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "atIndex"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 73, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "atIndex"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "BoolEncoding",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 84, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "numeric",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 86, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "literal",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 88, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 95, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 95, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "DataEncoding",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 104, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "deferredToData",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 106, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "base64",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 108, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "custom",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 110, Column: 14",
+        "I_parameterType" : [
+          "(Data) throws -> String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 118, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String?"
+      }
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 118, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String?"
+  },
+  {
+    "A_name" : "DateEncoding",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 128, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "iso8601Formatter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 130, Column: 9",
+        "H_initialValue" : "Protected<ISO8601DateFormatter>({\n            let formatter = ISO8601DateFormatter()\n            formatter.formatOptions = .withInternetDateTime\n            return formatter\n        }())"
+      },
+      {
+        "A_name" : "deferredToDate",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 137, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "secondsSince1970",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 139, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "millisecondsSince1970",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 141, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "iso8601",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 143, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "formatted",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 145, Column: 14",
+        "I_parameterType" : [
+          "DateFormatter"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "custom",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 147, Column: 14",
+        "I_parameterType" : [
+          "(Date) throws -> String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 155, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Date"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String?"
+      }
+    ]
+  },
+  {
+    "A_name" : "iso8601Formatter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 130, Column: 9",
+    "H_initialValue" : "Protected<ISO8601DateFormatter>({\n            let formatter = ISO8601DateFormatter()\n            formatter.formatOptions = .withInternetDateTime\n            return formatter\n        }())"
+  },
+  {
+    "A_name" : "formatter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 131, Column: 13",
+    "H_initialValue" : "ISO8601DateFormatter()"
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 155, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Date"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String?"
+  },
+  {
+    "A_name" : "KeyEncoding",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 177, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "useDefaultKeys",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 179, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "convertToSnakeCase",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 198, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "convertToKebabCase",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 201, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "capitalized",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 204, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "uppercased",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 207, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "lowercased",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 210, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "custom",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 212, Column: 14",
+        "I_parameterType" : [
+          "(String) -> String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 214, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "convertToSnakeCase",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 226, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "convertToKebabCase",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 230, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "convert",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 234, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "words",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 237, Column: 13",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "wordStart",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 246, Column: 13",
+            "H_initialValue" : "key.startIndex"
+          },
+          {
+            "A_name" : "searchRange",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 247, Column: 13",
+            "H_initialValue" : "key.index(after: wordStart)..<key.endIndex"
+          },
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 282, Column: 13",
+            "H_initialValue" : "words.map { range in\n                key[range].lowercased()\n            }.joined(separator: separator)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "usingSeparator"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 214, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "convertToSnakeCase",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 226, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "convertToKebabCase",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 230, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "convert",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 234, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "words",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 237, Column: 13",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "wordStart",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 246, Column: 13",
+        "H_initialValue" : "key.startIndex"
+      },
+      {
+        "A_name" : "searchRange",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 247, Column: 13",
+        "H_initialValue" : "key.index(after: wordStart)..<key.endIndex"
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 282, Column: 13",
+        "H_initialValue" : "words.map { range in\n                key[range].lowercased()\n            }.joined(separator: separator)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "usingSeparator"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "words",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 237, Column: 13",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "wordStart",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 246, Column: 13",
+    "H_initialValue" : "key.startIndex"
+  },
+  {
+    "A_name" : "searchRange",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 247, Column: 13",
+    "H_initialValue" : "key.index(after: wordStart)..<key.endIndex"
+  },
+  {
+    "A_name" : "untilUpperCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 251, Column: 17",
+    "H_initialValue" : "wordStart..<upperCaseRange.lowerBound"
+  },
+  {
+    "A_name" : "nextCharacterAfterCapital",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 265, Column: 17",
+    "H_initialValue" : "key.index(after: upperCaseRange.lowerBound)"
+  },
+  {
+    "A_name" : "beforeLowerIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 273, Column: 21",
+    "H_initialValue" : "key.index(before: lowerCaseRange.lowerBound)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 282, Column: 13",
+    "H_initialValue" : "words.map { range in\n                key[range].lowercased()\n            }.joined(separator: separator)"
+  },
+  {
+    "A_name" : "KeyPathEncoding",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 298, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "brackets",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 300, Column: 9",
+        "H_initialValue" : "KeyPathEncoding { \"[\\($0)]\" }"
+      },
+      {
+        "A_name" : "dots",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 302, Column: 9",
+        "H_initialValue" : "KeyPathEncoding { \".\\($0)\" }"
+      },
+      {
+        "A_name" : "encoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 304, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 309, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping @Sendable (_ subkey: String) -> String"
+        ],
+        "I_parameters" : [
+          "encoding"
+        ]
+      },
+      {
+        "A_name" : "encodeKeyPath",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 313, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "brackets",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 300, Column: 9",
+    "H_initialValue" : "KeyPathEncoding { \"[\\($0)]\" }"
+  },
+  {
+    "A_name" : "dots",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 302, Column: 9",
+    "H_initialValue" : "KeyPathEncoding { \".\\($0)\" }"
+  },
+  {
+    "A_name" : "encoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 304, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 309, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping @Sendable (_ subkey: String) -> String"
+    ],
+    "I_parameters" : [
+      "encoding"
+    ]
+  },
+  {
+    "A_name" : "encodeKeyPath",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 313, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "NilEncoding",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 319, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dropKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 321, Column: 9",
+        "H_initialValue" : "NilEncoding { nil }"
+      },
+      {
+        "A_name" : "dropValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 323, Column: 9",
+        "H_initialValue" : "NilEncoding { \"\" }"
+      },
+      {
+        "A_name" : "null",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 325, Column: 9",
+        "H_initialValue" : "NilEncoding { \"null\" }"
+      },
+      {
+        "A_name" : "encoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 327, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 332, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping @Sendable () -> String?"
+        ],
+        "I_parameters" : [
+          "encoding"
+        ]
+      },
+      {
+        "A_name" : "encodeNil",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 336, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String?"
+      }
+    ]
+  },
+  {
+    "A_name" : "dropKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 321, Column: 9",
+    "H_initialValue" : "NilEncoding { nil }"
+  },
+  {
+    "A_name" : "dropValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 323, Column: 9",
+    "H_initialValue" : "NilEncoding { \"\" }"
+  },
+  {
+    "A_name" : "null",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 325, Column: 9",
+    "H_initialValue" : "NilEncoding { \"null\" }"
+  },
+  {
+    "A_name" : "encoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 327, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 332, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping @Sendable () -> String?"
+    ],
+    "I_parameters" : [
+      "encoding"
+    ]
+  },
+  {
+    "A_name" : "encodeNil",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 336, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String?"
+  },
+  {
+    "A_name" : "SpaceEncoding",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 342, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "percentEscaped",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 344, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "plusReplaced",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 346, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 353, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 353, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "Error",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Error"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 362, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "invalidRootObject",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 364, Column: 14",
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "localizedDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 366, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "localizedDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 366, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "alphabetizeKeyValuePairs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 379, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "arrayEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 381, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boolEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 383, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dataEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 385, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dateEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 387, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "keyEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 389, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "keyPathEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 391, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "nilEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 393, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "spaceEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 395, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "allowedCharacters",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 397, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 412, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool",
+      "ArrayEncoding",
+      "BoolEncoding",
+      "DataEncoding",
+      "DateEncoding",
+      "KeyEncoding",
+      "KeyPathEncoding",
+      "NilEncoding",
+      "SpaceEncoding",
+      "CharacterSet"
+    ],
+    "I_parameters" : [
+      "alphabetizeKeyValuePairs",
+      "arrayEncoding",
+      "boolEncoding",
+      "dataEncoding",
+      "dateEncoding",
+      "keyEncoding",
+      "keyPathEncoding",
+      "nilEncoding",
+      "spaceEncoding",
+      "allowedCharacters"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 434, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "context",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 435, Column: 9",
+        "H_initialValue" : "URLEncodedFormContext(.object([]))"
+      },
+      {
+        "A_name" : "encoder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 436, Column: 9",
+        "H_initialValue" : "_URLEncodedFormEncoder(context: context,\n                                             boolEncoding: boolEncoding,\n                                             dataEncoding: dataEncoding,\n                                             dateEncoding: dateEncoding,\n                                             nilEncoding: nilEncoding)"
+      }
+    ],
+    "I_parameterType" : [
+      "any Encodable"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> URLEncodedFormComponent"
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 435, Column: 9",
+    "H_initialValue" : "URLEncodedFormContext(.object([]))"
+  },
+  {
+    "A_name" : "encoder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 436, Column: 9",
+    "H_initialValue" : "_URLEncodedFormEncoder(context: context,\n                                             boolEncoding: boolEncoding,\n                                             dataEncoding: dataEncoding,\n                                             dateEncoding: dateEncoding,\n                                             nilEncoding: nilEncoding)"
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 452, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "component",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 453, Column: 9",
+        "H_initialValue" : "try encode(value)"
+      },
+      {
+        "A_name" : "serializer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 459, Column: 9",
+        "H_initialValue" : "URLEncodedFormSerializer(alphabetizeKeyValuePairs: alphabetizeKeyValuePairs,\n                                                  arrayEncoding: arrayEncoding,\n                                                  keyEncoding: keyEncoding,\n                                                  keyPathEncoding: keyPathEncoding,\n                                                  spaceEncoding: spaceEncoding,\n                                                  allowedCharacters: allowedCharacters)"
+      },
+      {
+        "A_name" : "query",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 465, Column: 9",
+        "H_initialValue" : "serializer.serialize(object)"
+      }
+    ],
+    "I_parameterType" : [
+      "any Encodable"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "component",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 453, Column: 9",
+    "H_initialValue" : "try encode(value)"
+  },
+  {
+    "A_name" : "serializer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 459, Column: 9",
+    "H_initialValue" : "URLEncodedFormSerializer(alphabetizeKeyValuePairs: alphabetizeKeyValuePairs,\n                                                  arrayEncoding: arrayEncoding,\n                                                  keyEncoding: keyEncoding,\n                                                  keyPathEncoding: keyPathEncoding,\n                                                  spaceEncoding: spaceEncoding,\n                                                  allowedCharacters: allowedCharacters)"
+  },
+  {
+    "A_name" : "query",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 465, Column: 9",
+    "H_initialValue" : "serializer.serialize(object)"
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 478, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "string",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 479, Column: 9",
+        "H_initialValue" : "try encode(value)"
+      }
+    ],
+    "I_parameterType" : [
+      "any Encodable"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "string",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 479, Column: 9",
+    "H_initialValue" : "try encode(value)"
+  },
+  {
+    "A_name" : "_URLEncodedFormEncoder",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 485, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "codingPath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 486, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "userInfo",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 488, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "context",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 490, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "boolEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 492, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dataEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 493, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dateEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 494, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "nilEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 495, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 497, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLEncodedFormContext",
+          "[any CodingKey]",
+          "URLEncodedFormEncoder.BoolEncoding",
+          "URLEncodedFormEncoder.DataEncoding",
+          "URLEncodedFormEncoder.DateEncoding",
+          "URLEncodedFormEncoder.NilEncoding"
+        ],
+        "I_parameters" : [
+          "context",
+          "codingPath",
+          "boolEncoding",
+          "dataEncoding",
+          "dateEncoding",
+          "nilEncoding"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "codingPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 486, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "userInfo",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 488, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 490, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boolEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 492, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dataEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 493, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dateEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 494, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "nilEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 495, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 497, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLEncodedFormContext",
+      "[any CodingKey]",
+      "URLEncodedFormEncoder.BoolEncoding",
+      "URLEncodedFormEncoder.DataEncoding",
+      "URLEncodedFormEncoder.DateEncoding",
+      "URLEncodedFormEncoder.NilEncoding"
+    ],
+    "I_parameters" : [
+      "context",
+      "codingPath",
+      "boolEncoding",
+      "dataEncoding",
+      "dateEncoding",
+      "nilEncoding"
+    ]
+  },
+  {
+    "A_name" : "_URLEncodedFormEncoder",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Encoder"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 512, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 513, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 514, Column: 9",
+            "H_initialValue" : "_URLEncodedFormEncoder.KeyedContainer<Key>(context: context,\n                                                                   codingPath: codingPath,\n                                                                   boolEncoding: boolEncoding,\n                                                                   dataEncoding: dataEncoding,\n                                                                   dateEncoding: dateEncoding,\n                                                                   nilEncoding: nilEncoding)"
+          }
+        ],
+        "I_parameterType" : [
+          "Key.Type"
+        ],
+        "I_parameters" : [
+          "keyedBy"
+        ],
+        "J_returnType" : "-> KeyedEncodingContainer<Key>"
+      },
+      {
+        "A_name" : "unkeyedContainer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 523, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> any UnkeyedEncodingContainer"
+      },
+      {
+        "A_name" : "singleValueContainer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 532, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> any SingleValueEncodingContainer"
+      }
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 513, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 514, Column: 9",
+        "H_initialValue" : "_URLEncodedFormEncoder.KeyedContainer<Key>(context: context,\n                                                                   codingPath: codingPath,\n                                                                   boolEncoding: boolEncoding,\n                                                                   dataEncoding: dataEncoding,\n                                                                   dateEncoding: dateEncoding,\n                                                                   nilEncoding: nilEncoding)"
+      }
+    ],
+    "I_parameterType" : [
+      "Key.Type"
+    ],
+    "I_parameters" : [
+      "keyedBy"
+    ],
+    "J_returnType" : "-> KeyedEncodingContainer<Key>"
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 514, Column: 9",
+    "H_initialValue" : "_URLEncodedFormEncoder.KeyedContainer<Key>(context: context,\n                                                                   codingPath: codingPath,\n                                                                   boolEncoding: boolEncoding,\n                                                                   dataEncoding: dataEncoding,\n                                                                   dateEncoding: dateEncoding,\n                                                                   nilEncoding: nilEncoding)"
+  },
+  {
+    "A_name" : "unkeyedContainer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 523, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> any UnkeyedEncodingContainer"
+  },
+  {
+    "A_name" : "singleValueContainer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 532, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> any SingleValueEncodingContainer"
+  },
+  {
+    "A_name" : "URLEncodedFormContext",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 542, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "component",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 543, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 545, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLEncodedFormComponent"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "component",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 543, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 545, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLEncodedFormComponent"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "URLEncodedFormComponent",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 550, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "string",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 553, Column: 10",
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "array",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 554, Column: 10",
+        "I_parameterType" : [
+          "[URLEncodedFormComponent]"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "object",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 555, Column: 10",
+        "I_parameterType" : [
+          "Object"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "array",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 558, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "object",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 566, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "set",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 580, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLEncodedFormComponent",
+          "[any CodingKey]"
+        ],
+        "I_parameters" : [
+          "to",
+          "at"
+        ]
+      },
+      {
+        "A_name" : "set",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 585, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "end",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 591, Column: 9",
+            "H_initialValue" : "path[0]"
+          },
+          {
+            "A_name" : "child",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 592, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "inout URLEncodedFormComponent",
+          "URLEncodedFormComponent",
+          "[any CodingKey]"
+        ],
+        "I_parameters" : [
+          "_",
+          "to",
+          "at"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "array",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 558, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "object",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 566, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "set",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 580, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLEncodedFormComponent",
+      "[any CodingKey]"
+    ],
+    "I_parameters" : [
+      "to",
+      "at"
+    ]
+  },
+  {
+    "A_name" : "set",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 585, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "end",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 591, Column: 9",
+        "H_initialValue" : "path[0]"
+      },
+      {
+        "A_name" : "child",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 592, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "inout URLEncodedFormComponent",
+      "URLEncodedFormComponent",
+      "[any CodingKey]"
+    ],
+    "I_parameters" : [
+      "_",
+      "to",
+      "at"
+    ]
+  },
+  {
+    "A_name" : "end",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 591, Column: 9",
+    "H_initialValue" : "path[0]"
+  },
+  {
+    "A_name" : "child",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 592, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "array",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 598, Column: 17",
+    "H_initialValue" : "context.array ?? []"
+  },
+  {
+    "A_name" : "AnyCodingKey",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CodingKey",
+      "Hashable"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 638, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "stringValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 639, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "intValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 640, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 642, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "stringValue"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 647, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "intValue"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 652, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Key"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "stringValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 639, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "intValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 640, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 642, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "stringValue"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 647, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "intValue"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 652, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Key"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "_URLEncodedFormEncoder",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 661, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "KeyedContainer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 662, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "codingPath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 663, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "context",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 665, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "boolEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 666, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dataEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 667, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dateEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 668, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "nilEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 669, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 671, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLEncodedFormContext",
+          "[any CodingKey]",
+          "URLEncodedFormEncoder.BoolEncoding",
+          "URLEncodedFormEncoder.DataEncoding",
+          "URLEncodedFormEncoder.DateEncoding",
+          "URLEncodedFormEncoder.NilEncoding"
+        ],
+        "I_parameters" : [
+          "context",
+          "codingPath",
+          "boolEncoding",
+          "dataEncoding",
+          "dateEncoding",
+          "nilEncoding"
+        ]
+      },
+      {
+        "A_name" : "nestedCodingPath",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 685, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any CodingKey"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> [any CodingKey]"
+      }
+    ]
+  },
+  {
+    "A_name" : "codingPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 663, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 665, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boolEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 666, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dataEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 667, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dateEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 668, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "nilEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 669, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 671, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLEncodedFormContext",
+      "[any CodingKey]",
+      "URLEncodedFormEncoder.BoolEncoding",
+      "URLEncodedFormEncoder.DataEncoding",
+      "URLEncodedFormEncoder.DateEncoding",
+      "URLEncodedFormEncoder.NilEncoding"
+    ],
+    "I_parameters" : [
+      "context",
+      "codingPath",
+      "boolEncoding",
+      "dataEncoding",
+      "dateEncoding",
+      "nilEncoding"
+    ]
+  },
+  {
+    "A_name" : "nestedCodingPath",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 685, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any CodingKey"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> [any CodingKey]"
+  },
+  {
+    "A_name" : "_URLEncodedFormEncoder.KeyedContainer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "KeyedEncodingContainerProtocol"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 691, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "encodeNil",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 692, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Key"
+        ],
+        "I_parameters" : [
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 698, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 702, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 706, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Double?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 710, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Float?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 714, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 718, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int8?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 722, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int16?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 726, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int32?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 730, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int64?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 734, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UInt?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 738, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UInt8?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 742, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UInt16?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 746, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UInt32?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 750, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UInt64?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 754, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Value?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "_encodeIfPresent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 758, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Value?",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 766, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 767, Column: 9",
+            "H_initialValue" : "nestedSingleValueEncoder(for: key)"
+          }
+        ],
+        "I_parameterType" : [
+          "T",
+          "Key"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "nestedSingleValueEncoder",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 771, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 772, Column: 9",
+            "H_initialValue" : "_URLEncodedFormEncoder.SingleValueContainer(context: context,\n                                                                    codingPath: nestedCodingPath(for: key),\n                                                                    boolEncoding: boolEncoding,\n                                                                    dataEncoding: dataEncoding,\n                                                                    dateEncoding: dateEncoding,\n                                                                    nilEncoding: nilEncoding)"
+          }
+        ],
+        "I_parameterType" : [
+          "Key"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> any SingleValueEncodingContainer"
+      },
+      {
+        "A_name" : "nestedUnkeyedContainer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 782, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 783, Column: 9",
+            "H_initialValue" : "_URLEncodedFormEncoder.UnkeyedContainer(context: context,\n                                                                codingPath: nestedCodingPath(for: key),\n                                                                boolEncoding: boolEncoding,\n                                                                dataEncoding: dataEncoding,\n                                                                dateEncoding: dateEncoding,\n                                                                nilEncoding: nilEncoding)"
+          }
+        ],
+        "I_parameterType" : [
+          "Key"
+        ],
+        "I_parameters" : [
+          "forKey"
+        ],
+        "J_returnType" : "-> any UnkeyedEncodingContainer"
+      },
+      {
+        "A_name" : "nestedContainer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 793, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 794, Column: 9",
+            "H_initialValue" : "_URLEncodedFormEncoder.KeyedContainer<NestedKey>(context: context,\n                                                                         codingPath: nestedCodingPath(for: key),\n                                                                         boolEncoding: boolEncoding,\n                                                                         dataEncoding: dataEncoding,\n                                                                         dateEncoding: dateEncoding,\n                                                                         nilEncoding: nilEncoding)"
+          }
+        ],
+        "I_parameterType" : [
+          "NestedKey.Type",
+          "Key"
+        ],
+        "I_parameters" : [
+          "keyedBy",
+          "forKey"
+        ],
+        "J_returnType" : "-> KeyedEncodingContainer<NestedKey>"
+      },
+      {
+        "A_name" : "superEncoder",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 804, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> any Encoder"
+      },
+      {
+        "A_name" : "superEncoder",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 813, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Key"
+        ],
+        "I_parameters" : [
+          "forKey"
+        ],
+        "J_returnType" : "-> any Encoder"
+      }
+    ]
+  },
+  {
+    "A_name" : "encodeNil",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 692, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Key"
+    ],
+    "I_parameters" : [
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 698, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 702, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 706, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Double?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 710, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Float?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 714, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 718, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int8?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 722, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int16?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 726, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int32?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 730, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int64?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 734, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UInt?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 738, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UInt8?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 742, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UInt16?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 746, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UInt32?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 750, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UInt64?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 754, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Value?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "_encodeIfPresent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 758, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Value?",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 766, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 767, Column: 9",
+        "H_initialValue" : "nestedSingleValueEncoder(for: key)"
+      }
+    ],
+    "I_parameterType" : [
+      "T",
+      "Key"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 767, Column: 9",
+    "H_initialValue" : "nestedSingleValueEncoder(for: key)"
+  },
+  {
+    "A_name" : "nestedSingleValueEncoder",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 771, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 772, Column: 9",
+        "H_initialValue" : "_URLEncodedFormEncoder.SingleValueContainer(context: context,\n                                                                    codingPath: nestedCodingPath(for: key),\n                                                                    boolEncoding: boolEncoding,\n                                                                    dataEncoding: dataEncoding,\n                                                                    dateEncoding: dateEncoding,\n                                                                    nilEncoding: nilEncoding)"
+      }
+    ],
+    "I_parameterType" : [
+      "Key"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> any SingleValueEncodingContainer"
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 772, Column: 9",
+    "H_initialValue" : "_URLEncodedFormEncoder.SingleValueContainer(context: context,\n                                                                    codingPath: nestedCodingPath(for: key),\n                                                                    boolEncoding: boolEncoding,\n                                                                    dataEncoding: dataEncoding,\n                                                                    dateEncoding: dateEncoding,\n                                                                    nilEncoding: nilEncoding)"
+  },
+  {
+    "A_name" : "nestedUnkeyedContainer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 782, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 783, Column: 9",
+        "H_initialValue" : "_URLEncodedFormEncoder.UnkeyedContainer(context: context,\n                                                                codingPath: nestedCodingPath(for: key),\n                                                                boolEncoding: boolEncoding,\n                                                                dataEncoding: dataEncoding,\n                                                                dateEncoding: dateEncoding,\n                                                                nilEncoding: nilEncoding)"
+      }
+    ],
+    "I_parameterType" : [
+      "Key"
+    ],
+    "I_parameters" : [
+      "forKey"
+    ],
+    "J_returnType" : "-> any UnkeyedEncodingContainer"
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 783, Column: 9",
+    "H_initialValue" : "_URLEncodedFormEncoder.UnkeyedContainer(context: context,\n                                                                codingPath: nestedCodingPath(for: key),\n                                                                boolEncoding: boolEncoding,\n                                                                dataEncoding: dataEncoding,\n                                                                dateEncoding: dateEncoding,\n                                                                nilEncoding: nilEncoding)"
+  },
+  {
+    "A_name" : "nestedContainer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 793, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 794, Column: 9",
+        "H_initialValue" : "_URLEncodedFormEncoder.KeyedContainer<NestedKey>(context: context,\n                                                                         codingPath: nestedCodingPath(for: key),\n                                                                         boolEncoding: boolEncoding,\n                                                                         dataEncoding: dataEncoding,\n                                                                         dateEncoding: dateEncoding,\n                                                                         nilEncoding: nilEncoding)"
+      }
+    ],
+    "I_parameterType" : [
+      "NestedKey.Type",
+      "Key"
+    ],
+    "I_parameters" : [
+      "keyedBy",
+      "forKey"
+    ],
+    "J_returnType" : "-> KeyedEncodingContainer<NestedKey>"
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 794, Column: 9",
+    "H_initialValue" : "_URLEncodedFormEncoder.KeyedContainer<NestedKey>(context: context,\n                                                                         codingPath: nestedCodingPath(for: key),\n                                                                         boolEncoding: boolEncoding,\n                                                                         dataEncoding: dataEncoding,\n                                                                         dateEncoding: dateEncoding,\n                                                                         nilEncoding: nilEncoding)"
+  },
+  {
+    "A_name" : "superEncoder",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 804, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> any Encoder"
+  },
+  {
+    "A_name" : "superEncoder",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 813, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Key"
+    ],
+    "I_parameters" : [
+      "forKey"
+    ],
+    "J_returnType" : "-> any Encoder"
+  },
+  {
+    "A_name" : "_URLEncodedFormEncoder",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 823, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "SingleValueContainer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 824, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "codingPath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 825, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "canEncodeNewValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 827, Column: 9",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "context",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 829, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "boolEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 830, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dataEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 831, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dateEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 832, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "nilEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 833, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 835, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLEncodedFormContext",
+          "[any CodingKey]",
+          "URLEncodedFormEncoder.BoolEncoding",
+          "URLEncodedFormEncoder.DataEncoding",
+          "URLEncodedFormEncoder.DateEncoding",
+          "URLEncodedFormEncoder.NilEncoding"
+        ],
+        "I_parameters" : [
+          "context",
+          "codingPath",
+          "boolEncoding",
+          "dataEncoding",
+          "dateEncoding",
+          "nilEncoding"
+        ]
+      },
+      {
+        "A_name" : "checkCanEncode",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 849, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Any?"
+        ],
+        "I_parameters" : [
+          "value"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "codingPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 825, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "canEncodeNewValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 827, Column: 9",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 829, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boolEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 830, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dataEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 831, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dateEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 832, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "nilEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 833, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 835, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLEncodedFormContext",
+      "[any CodingKey]",
+      "URLEncodedFormEncoder.BoolEncoding",
+      "URLEncodedFormEncoder.DataEncoding",
+      "URLEncodedFormEncoder.DateEncoding",
+      "URLEncodedFormEncoder.NilEncoding"
+    ],
+    "I_parameters" : [
+      "context",
+      "codingPath",
+      "boolEncoding",
+      "dataEncoding",
+      "dateEncoding",
+      "nilEncoding"
+    ]
+  },
+  {
+    "A_name" : "checkCanEncode",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 849, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Any?"
+    ],
+    "I_parameters" : [
+      "value"
+    ]
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 851, Column: 17",
+    "H_initialValue" : "EncodingError.Context(codingPath: codingPath,\n                                                    debugDescription: \"Attempt to encode value through single value container when previously value already encoded.\")"
+  },
+  {
+    "A_name" : "_URLEncodedFormEncoder.SingleValueContainer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "SingleValueEncodingContainer"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 859, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "encodeNil",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 860, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 866, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 870, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 874, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Double"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 878, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Float"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 882, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 886, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int8"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 890, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int16"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 894, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int32"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 898, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int64"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 902, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UInt"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 906, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UInt8"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 910, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UInt16"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 914, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UInt32"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 918, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UInt64"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 922, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "as"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 929, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "attemptToEncode",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 953, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "encoder",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 957, Column: 9",
+            "H_initialValue" : "_URLEncodedFormEncoder(context: context,\n                                             codingPath: codingPath,\n                                             boolEncoding: boolEncoding,\n                                             dataEncoding: dataEncoding,\n                                             dateEncoding: dateEncoding,\n                                             nilEncoding: nilEncoding)"
+          }
+        ],
+        "I_parameterType" : [
+          "T"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "encodeNil",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 860, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 866, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 870, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 874, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Double"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 878, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Float"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 882, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 886, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int8"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 890, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int16"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 894, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int32"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 898, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int64"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 902, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UInt"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 906, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UInt8"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 910, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UInt16"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 914, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UInt32"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 918, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UInt64"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 922, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "as"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 929, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "attemptToEncode",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 953, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "encoder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 957, Column: 9",
+        "H_initialValue" : "_URLEncodedFormEncoder(context: context,\n                                             codingPath: codingPath,\n                                             boolEncoding: boolEncoding,\n                                             dataEncoding: dataEncoding,\n                                             dateEncoding: dateEncoding,\n                                             nilEncoding: nilEncoding)"
+      }
+    ],
+    "I_parameterType" : [
+      "T"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "encoder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 957, Column: 9",
+    "H_initialValue" : "_URLEncodedFormEncoder(context: context,\n                                             codingPath: codingPath,\n                                             boolEncoding: boolEncoding,\n                                             dataEncoding: dataEncoding,\n                                             dateEncoding: dateEncoding,\n                                             nilEncoding: nilEncoding)"
+  },
+  {
+    "A_name" : "_URLEncodedFormEncoder",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 967, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "UnkeyedContainer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 968, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "codingPath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 969, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "count",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 971, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "nestedCodingPath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 972, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "context",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 976, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "boolEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 977, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dataEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 978, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dateEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 979, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "nilEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 980, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 982, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLEncodedFormContext",
+          "[any CodingKey]",
+          "URLEncodedFormEncoder.BoolEncoding",
+          "URLEncodedFormEncoder.DataEncoding",
+          "URLEncodedFormEncoder.DateEncoding",
+          "URLEncodedFormEncoder.NilEncoding"
+        ],
+        "I_parameters" : [
+          "context",
+          "codingPath",
+          "boolEncoding",
+          "dataEncoding",
+          "dateEncoding",
+          "nilEncoding"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "codingPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 969, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "count",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 971, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "nestedCodingPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 972, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 976, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boolEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 977, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dataEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 978, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dateEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 979, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "nilEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 980, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 982, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLEncodedFormContext",
+      "[any CodingKey]",
+      "URLEncodedFormEncoder.BoolEncoding",
+      "URLEncodedFormEncoder.DataEncoding",
+      "URLEncodedFormEncoder.DateEncoding",
+      "URLEncodedFormEncoder.NilEncoding"
+    ],
+    "I_parameters" : [
+      "context",
+      "codingPath",
+      "boolEncoding",
+      "dataEncoding",
+      "dateEncoding",
+      "nilEncoding"
+    ]
+  },
+  {
+    "A_name" : "_URLEncodedFormEncoder.UnkeyedContainer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UnkeyedEncodingContainer"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 998, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "encodeNil",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 999, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1005, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 1006, Column: 9",
+            "H_initialValue" : "nestedSingleValueContainer()"
+          }
+        ],
+        "I_parameterType" : [
+          "T"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "nestedSingleValueContainer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1010, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> any SingleValueEncodingContainer"
+      },
+      {
+        "A_name" : "nestedContainer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1021, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "container",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 1023, Column: 9",
+            "H_initialValue" : "_URLEncodedFormEncoder.KeyedContainer<NestedKey>(context: context,\n                                                                         codingPath: nestedCodingPath,\n                                                                         boolEncoding: boolEncoding,\n                                                                         dataEncoding: dataEncoding,\n                                                                         dateEncoding: dateEncoding,\n                                                                         nilEncoding: nilEncoding)"
+          }
+        ],
+        "I_parameterType" : [
+          "NestedKey.Type"
+        ],
+        "I_parameters" : [
+          "keyedBy"
+        ],
+        "J_returnType" : "-> KeyedEncodingContainer<NestedKey>"
+      },
+      {
+        "A_name" : "nestedUnkeyedContainer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1033, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> any UnkeyedEncodingContainer"
+      },
+      {
+        "A_name" : "superEncoder",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1044, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> any Encoder"
+      }
+    ]
+  },
+  {
+    "A_name" : "encodeNil",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 999, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1005, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1006, Column: 9",
+        "H_initialValue" : "nestedSingleValueContainer()"
+      }
+    ],
+    "I_parameterType" : [
+      "T"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1006, Column: 9",
+    "H_initialValue" : "nestedSingleValueContainer()"
+  },
+  {
+    "A_name" : "nestedSingleValueContainer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1010, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> any SingleValueEncodingContainer"
+  },
+  {
+    "A_name" : "nestedContainer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1021, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "container",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1023, Column: 9",
+        "H_initialValue" : "_URLEncodedFormEncoder.KeyedContainer<NestedKey>(context: context,\n                                                                         codingPath: nestedCodingPath,\n                                                                         boolEncoding: boolEncoding,\n                                                                         dataEncoding: dataEncoding,\n                                                                         dateEncoding: dateEncoding,\n                                                                         nilEncoding: nilEncoding)"
+      }
+    ],
+    "I_parameterType" : [
+      "NestedKey.Type"
+    ],
+    "I_parameters" : [
+      "keyedBy"
+    ],
+    "J_returnType" : "-> KeyedEncodingContainer<NestedKey>"
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1023, Column: 9",
+    "H_initialValue" : "_URLEncodedFormEncoder.KeyedContainer<NestedKey>(context: context,\n                                                                         codingPath: nestedCodingPath,\n                                                                         boolEncoding: boolEncoding,\n                                                                         dataEncoding: dataEncoding,\n                                                                         dateEncoding: dateEncoding,\n                                                                         nilEncoding: nilEncoding)"
+  },
+  {
+    "A_name" : "nestedUnkeyedContainer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1033, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> any UnkeyedEncodingContainer"
+  },
+  {
+    "A_name" : "superEncoder",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1044, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> any Encoder"
+  },
+  {
+    "A_name" : "URLEncodedFormSerializer",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1056, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "alphabetizeKeyValuePairs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1057, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "arrayEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1058, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "keyEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1059, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "keyPathEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1060, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "spaceEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1061, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "allowedCharacters",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1062, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1064, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool",
+          "URLEncodedFormEncoder.ArrayEncoding",
+          "URLEncodedFormEncoder.KeyEncoding",
+          "URLEncodedFormEncoder.KeyPathEncoding",
+          "URLEncodedFormEncoder.SpaceEncoding",
+          "CharacterSet"
+        ],
+        "I_parameters" : [
+          "alphabetizeKeyValuePairs",
+          "arrayEncoding",
+          "keyEncoding",
+          "keyPathEncoding",
+          "spaceEncoding",
+          "allowedCharacters"
+        ]
+      },
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1078, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "output",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 1079, Column: 9",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+          "URLEncodedFormComponent.Object"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1089, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLEncodedFormComponent",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1097, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "segments",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 1098, Column: 9",
+            "H_initialValue" : "object.map { subKey, value in\n            let keyPath = keyPathEncoding.encodeKeyPath(subKey)\n            return serialize(value, forKey: key + keyPath)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "URLEncodedFormComponent.Object",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1107, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "segments",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 1108, Column: 9",
+            "H_initialValue" : "array.enumerated().map { index, component in\n            let keyPath = arrayEncoding.encode(key, atIndex: index)\n            return serialize(component, forKey: keyPath)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "[URLEncodedFormComponent]",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "forKey"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "escape",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1117, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "allowedCharactersWithSpace",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 1118, Column: 9",
+            "H_initialValue" : "allowedCharacters"
+          },
+          {
+            "A_name" : "escapedQuery",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 1120, Column: 9",
+            "H_initialValue" : "query.addingPercentEncoding(withAllowedCharacters: allowedCharactersWithSpace) ?? query"
+          },
+          {
+            "A_name" : "spaceEncodedQuery",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "URLEncodedFormEncoder.swift - Line: 1121, Column: 9",
+            "H_initialValue" : "spaceEncoding.encode(escapedQuery)"
+          }
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "alphabetizeKeyValuePairs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1057, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "arrayEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1058, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "keyEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1059, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "keyPathEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1060, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "spaceEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1061, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "allowedCharacters",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1062, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1064, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool",
+      "URLEncodedFormEncoder.ArrayEncoding",
+      "URLEncodedFormEncoder.KeyEncoding",
+      "URLEncodedFormEncoder.KeyPathEncoding",
+      "URLEncodedFormEncoder.SpaceEncoding",
+      "CharacterSet"
+    ],
+    "I_parameters" : [
+      "alphabetizeKeyValuePairs",
+      "arrayEncoding",
+      "keyEncoding",
+      "keyPathEncoding",
+      "spaceEncoding",
+      "allowedCharacters"
+    ]
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1078, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "output",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1079, Column: 9",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+      "URLEncodedFormComponent.Object"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1079, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1081, Column: 13",
+    "H_initialValue" : "serialize(component, forKey: key)"
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1089, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLEncodedFormComponent",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1097, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "segments",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1098, Column: 9",
+        "H_initialValue" : "object.map { subKey, value in\n            let keyPath = keyPathEncoding.encodeKeyPath(subKey)\n            return serialize(value, forKey: key + keyPath)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "URLEncodedFormComponent.Object",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "segments",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1098, Column: 9",
+    "H_initialValue" : "object.map { subKey, value in\n            let keyPath = keyPathEncoding.encodeKeyPath(subKey)\n            return serialize(value, forKey: key + keyPath)\n        }"
+  },
+  {
+    "A_name" : "keyPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1099, Column: 13",
+    "H_initialValue" : "keyPathEncoding.encodeKeyPath(subKey)"
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1107, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "segments",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1108, Column: 9",
+        "H_initialValue" : "array.enumerated().map { index, component in\n            let keyPath = arrayEncoding.encode(key, atIndex: index)\n            return serialize(component, forKey: keyPath)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "[URLEncodedFormComponent]",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "forKey"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "segments",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1108, Column: 9",
+    "H_initialValue" : "array.enumerated().map { index, component in\n            let keyPath = arrayEncoding.encode(key, atIndex: index)\n            return serialize(component, forKey: keyPath)\n        }"
+  },
+  {
+    "A_name" : "keyPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1109, Column: 13",
+    "H_initialValue" : "arrayEncoding.encode(key, atIndex: index)"
+  },
+  {
+    "A_name" : "escape",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1117, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "allowedCharactersWithSpace",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1118, Column: 9",
+        "H_initialValue" : "allowedCharacters"
+      },
+      {
+        "A_name" : "escapedQuery",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1120, Column: 9",
+        "H_initialValue" : "query.addingPercentEncoding(withAllowedCharacters: allowedCharactersWithSpace) ?? query"
+      },
+      {
+        "A_name" : "spaceEncodedQuery",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1121, Column: 9",
+        "H_initialValue" : "spaceEncoding.encode(escapedQuery)"
+      }
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "allowedCharactersWithSpace",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1118, Column: 9",
+    "H_initialValue" : "allowedCharacters"
+  },
+  {
+    "A_name" : "escapedQuery",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1120, Column: 9",
+    "H_initialValue" : "query.addingPercentEncoding(withAllowedCharacters: allowedCharactersWithSpace) ?? query"
+  },
+  {
+    "A_name" : "spaceEncodedQuery",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1121, Column: 9",
+    "H_initialValue" : "spaceEncoding.encode(escapedQuery)"
+  },
+  {
+    "A_name" : "[String]",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1127, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "joinedWithAmpersands",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1128, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "joinedWithAmpersands",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1128, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "CharacterSet",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1133, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "afURLQueryAllowed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "URLEncodedFormEncoder.swift - Line: 1144, Column: 5",
+        "H_initialValue" : "{\n        let generalDelimitersToEncode = \":#[]@\" \/\/ does not include \"?\" or \"\/\" due to RFC 3986 - Section 3.4\n        let subDelimitersToEncode = \"!$&'()*+,;=\"\n        let encodableDelimiters = CharacterSet(charactersIn: \"\\(generalDelimitersToEncode)\\(subDelimitersToEncode)\")\n\n        return CharacterSet.urlQueryAllowed.subtracting(encodableDelimiters)\n    }()"
+      }
+    ]
+  },
+  {
+    "A_name" : "afURLQueryAllowed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1144, Column: 5",
+    "H_initialValue" : "{\n        let generalDelimitersToEncode = \":#[]@\" \/\/ does not include \"?\" or \"\/\" due to RFC 3986 - Section 3.4\n        let subDelimitersToEncode = \"!$&'()*+,;=\"\n        let encodableDelimiters = CharacterSet(charactersIn: \"\\(generalDelimitersToEncode)\\(subDelimitersToEncode)\")\n\n        return CharacterSet.urlQueryAllowed.subtracting(encodableDelimiters)\n    }()"
+  },
+  {
+    "A_name" : "generalDelimitersToEncode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1145, Column: 9",
+    "H_initialValue" : "\":#[]@\" \/\/ does not include \"?\" or \"\/\" due to RFC 3986 - Section 3.4"
+  },
+  {
+    "A_name" : "subDelimitersToEncode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1146, Column: 9",
+    "H_initialValue" : "\"!$&'()*+,;=\""
+  },
+  {
+    "A_name" : "encodableDelimiters",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "URLEncodedFormEncoder.swift - Line: 1147, Column: 9",
+    "H_initialValue" : "CharacterSet(charactersIn: \"\\(generalDelimitersToEncode)\\(subDelimitersToEncode)\")"
+  }
+]

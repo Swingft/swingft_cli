@@ -1,0 +1,265 @@
+[
+  {
+    "A_name" : "AfterEachType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AfterEachTests.swift - Line: 5, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "outerOne",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AfterEachTests.swift - Line: 6, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "outerTwo",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AfterEachTests.swift - Line: 7, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "outerThree",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AfterEachTests.swift - Line: 8, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "innerOne",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AfterEachTests.swift - Line: 9, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "innerTwo",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AfterEachTests.swift - Line: 10, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "noExamples",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AfterEachTests.swift - Line: 11, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "afterEachOrder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AfterEachTests.swift - Line: 14, Column: 1",
+    "H_initialValue" : "[AfterEachType]()"
+  },
+  {
+    "A_name" : "FunctionalTests_AfterEachSpec",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "QuickSpec"
+    ],
+    "F_location" : "AfterEachTests.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "spec",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "AfterEachTests.swift - Line: 17, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "spec",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "AfterEachTests.swift - Line: 17, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "AfterEachTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase",
+      "XCTestCaseProvider"
+    ],
+    "F_location" : "AfterEachTests.swift - Line: 68, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "allTests",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "AfterEachTests.swift - Line: 69, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "testAfterEachIsExecutedInTheCorrectOrder",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AfterEachTests.swift - Line: 75, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "expectedOrder",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AfterEachTests.swift - Line: 79, Column: 9",
+            "H_initialValue" : "[\n            \/\/ [1] The outer afterEach closures are executed from top to bottom.\n            .outerOne, .outerTwo, .outerThree,\n            \/\/ [2] The outer afterEach closures are executed from top to bottom.\n            .outerOne, .outerTwo, .outerThree,\n            \/\/ [3] The inner afterEach closures are executed from top to bottom,\n            \/\/     then the outer afterEach closures are executed from top to bottom.\n            .innerOne, .innerTwo, .outerOne, .outerTwo, .outerThree,\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "allTests",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "AfterEachTests.swift - Line: 69, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testAfterEachIsExecutedInTheCorrectOrder",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AfterEachTests.swift - Line: 75, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "expectedOrder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AfterEachTests.swift - Line: 79, Column: 9",
+        "H_initialValue" : "[\n            \/\/ [1] The outer afterEach closures are executed from top to bottom.\n            .outerOne, .outerTwo, .outerThree,\n            \/\/ [2] The outer afterEach closures are executed from top to bottom.\n            .outerOne, .outerTwo, .outerThree,\n            \/\/ [3] The inner afterEach closures are executed from top to bottom,\n            \/\/     then the outer afterEach closures are executed from top to bottom.\n            .innerOne, .innerTwo, .outerOne, .outerTwo, .outerThree,\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "expectedOrder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AfterEachTests.swift - Line: 79, Column: 9",
+    "H_initialValue" : "[\n            \/\/ [1] The outer afterEach closures are executed from top to bottom.\n            .outerOne, .outerTwo, .outerThree,\n            \/\/ [2] The outer afterEach closures are executed from top to bottom.\n            .outerOne, .outerTwo, .outerThree,\n            \/\/ [3] The inner afterEach closures are executed from top to bottom,\n            \/\/     then the outer afterEach closures are executed from top to bottom.\n            .innerOne, .innerTwo, .outerOne, .outerTwo, .outerThree,\n        ]"
+  }
+]

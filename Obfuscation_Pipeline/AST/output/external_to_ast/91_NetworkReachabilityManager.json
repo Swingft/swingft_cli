@@ -1,0 +1,1544 @@
+[
+  {
+    "A_name" : "NetworkReachabilityManager",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 36, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "NetworkReachabilityStatus",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 38, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "unknown",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 40, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "notReachable",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 42, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "reachable",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 44, Column: 14",
+            "I_parameterType" : [
+              "ConnectionType"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 46, Column: 9",
+            "G_members" : [
+              {
+                "A_name" : "networkStatus",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "NetworkReachabilityManager.swift - Line: 49, Column: 13",
+                "H_initialValue" : ".reachable(.ethernetOrWiFi)"
+              }
+            ],
+            "I_parameterType" : [
+              "SCNetworkReachabilityFlags"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "ConnectionType",
+            "B_kind" : "enum",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "E_adoptedClassProtocols" : [
+              "Sendable"
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 57, Column: 9",
+            "G_members" : [
+              {
+                "A_name" : "ethernetOrWiFi",
+                "B_kind" : "case",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "NetworkReachabilityManager.swift - Line: 59, Column: 18",
+                "I_parameterType" : [
+
+                ],
+                "I_parameters" : [
+
+                ]
+              },
+              {
+                "A_name" : "cellular",
+                "B_kind" : "case",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "NetworkReachabilityManager.swift - Line: 61, Column: 18",
+                "I_parameterType" : [
+
+                ],
+                "I_parameters" : [
+
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "`default`",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 70, Column: 5",
+        "H_initialValue" : "NetworkReachabilityManager()"
+      },
+      {
+        "A_name" : "isReachable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 75, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isReachableOnCellular",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 82, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isReachableOnEthernetOrWiFi",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 85, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "reachabilityQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 88, Column: 5",
+        "H_initialValue" : "DispatchQueue(label: \"org.alamofire.reachabilityQueue\")"
+      },
+      {
+        "A_name" : "flags",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 91, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "status",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 98, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "MutableState",
+        "B_kind" : "struct",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 103, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "listener",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 105, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "listenerQueue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 107, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "previousStatus",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 109, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "reachability",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 113, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "mutableState",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 116, Column: 5",
+        "H_initialValue" : "Protected(MutableState())"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 126, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "host"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 136, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "zero",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 137, Column: 9",
+            "H_initialValue" : "sockaddr()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 146, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SCNetworkReachability"
+        ],
+        "I_parameters" : [
+          "reachability"
+        ]
+      },
+      {
+        "A_name" : "startListening",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 165, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "weakManager",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 176, Column: 9",
+            "H_initialValue" : "WeakManager(manager: self)"
+          },
+          {
+            "A_name" : "context",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 178, Column: 9",
+            "H_initialValue" : "SCNetworkReachabilityContext(\n            version: 0,\n            info: Unmanaged.passUnretained(weakManager).toOpaque(),\n            retain: { info in\n                let unmanaged = Unmanaged<WeakManager>.fromOpaque(info)\n                _ = unmanaged.retain()\n\n                return UnsafeRawPointer(unmanaged.toOpaque())\n            },\n            release: { info in\n                let unmanaged = Unmanaged<WeakManager>.fromOpaque(info)\n                unmanaged.release()\n            },\n            copyDescription: { info in\n                let unmanaged = Unmanaged<WeakManager>.fromOpaque(info)\n                let weakManager = unmanaged.takeUnretainedValue()\n                let description = weakManager.manager?.flags?.readableDescription ?? \"nil\"\n\n                return Unmanaged.passRetained(description as CFString)\n            }\n        )"
+          },
+          {
+            "A_name" : "callback",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 199, Column: 9",
+            "H_initialValue" : "{ _, flags, info in\n            guard let info else { return }\n\n            let weakManager = Unmanaged<WeakManager>.fromOpaque(info).takeUnretainedValue()\n            weakManager.manager?.notifyListener(flags)\n        }"
+          },
+          {
+            "A_name" : "queueAdded",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 206, Column: 9",
+            "H_initialValue" : "SCNetworkReachabilitySetDispatchQueue(reachability, reachabilityQueue)"
+          },
+          {
+            "A_name" : "callbackAdded",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 207, Column: 9",
+            "H_initialValue" : "SCNetworkReachabilitySetCallback(reachability, callback, &context)"
+          }
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping Listener"
+        ],
+        "I_parameters" : [
+          "onQueue",
+          "onUpdatePerforming"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "stopListening",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 220, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "notifyListener",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 237, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "newStatus",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 238, Column: 9",
+            "H_initialValue" : "NetworkReachabilityStatus(flags)"
+          }
+        ],
+        "I_parameterType" : [
+          "SCNetworkReachabilityFlags"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "WeakManager",
+        "B_kind" : "class",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "final"
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 250, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "manager",
+            "B_kind" : "variable",
+            "C_accessLevel" : "weak",
+            "D_attributes" : [
+              "weak"
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 251, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 253, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "NetworkReachabilityManager?"
+            ],
+            "I_parameters" : [
+              "manager"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "NetworkReachabilityStatus",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 38, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "unknown",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 40, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "notReachable",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 42, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "reachable",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 44, Column: 14",
+        "I_parameterType" : [
+          "ConnectionType"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 46, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "networkStatus",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 49, Column: 13",
+            "H_initialValue" : ".reachable(.ethernetOrWiFi)"
+          }
+        ],
+        "I_parameterType" : [
+          "SCNetworkReachabilityFlags"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "ConnectionType",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 57, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "ethernetOrWiFi",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 59, Column: 18",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "cellular",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NetworkReachabilityManager.swift - Line: 61, Column: 18",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 46, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "networkStatus",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 49, Column: 13",
+        "H_initialValue" : ".reachable(.ethernetOrWiFi)"
+      }
+    ],
+    "I_parameterType" : [
+      "SCNetworkReachabilityFlags"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "networkStatus",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 49, Column: 13",
+    "H_initialValue" : ".reachable(.ethernetOrWiFi)"
+  },
+  {
+    "A_name" : "ConnectionType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 57, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "ethernetOrWiFi",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 59, Column: 18",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "cellular",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 61, Column: 18",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "`default`",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 70, Column: 5",
+    "H_initialValue" : "NetworkReachabilityManager()"
+  },
+  {
+    "A_name" : "isReachable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 75, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isReachableOnCellular",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 82, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isReachableOnEthernetOrWiFi",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 85, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "reachabilityQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 88, Column: 5",
+    "H_initialValue" : "DispatchQueue(label: \"org.alamofire.reachabilityQueue\")"
+  },
+  {
+    "A_name" : "flags",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 91, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "flags",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 92, Column: 9",
+    "H_initialValue" : "SCNetworkReachabilityFlags()"
+  },
+  {
+    "A_name" : "status",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 98, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "MutableState",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 103, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "listener",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 105, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "listenerQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 107, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "previousStatus",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 109, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "listener",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 105, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "listenerQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 107, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "previousStatus",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 109, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "reachability",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 113, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mutableState",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 116, Column: 5",
+    "H_initialValue" : "Protected(MutableState())"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 126, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "host"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 136, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "zero",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 137, Column: 9",
+        "H_initialValue" : "sockaddr()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "zero",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 137, Column: 9",
+    "H_initialValue" : "sockaddr()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 146, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SCNetworkReachability"
+    ],
+    "I_parameters" : [
+      "reachability"
+    ]
+  },
+  {
+    "A_name" : "startListening",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 165, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "weakManager",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 176, Column: 9",
+        "H_initialValue" : "WeakManager(manager: self)"
+      },
+      {
+        "A_name" : "context",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 178, Column: 9",
+        "H_initialValue" : "SCNetworkReachabilityContext(\n            version: 0,\n            info: Unmanaged.passUnretained(weakManager).toOpaque(),\n            retain: { info in\n                let unmanaged = Unmanaged<WeakManager>.fromOpaque(info)\n                _ = unmanaged.retain()\n\n                return UnsafeRawPointer(unmanaged.toOpaque())\n            },\n            release: { info in\n                let unmanaged = Unmanaged<WeakManager>.fromOpaque(info)\n                unmanaged.release()\n            },\n            copyDescription: { info in\n                let unmanaged = Unmanaged<WeakManager>.fromOpaque(info)\n                let weakManager = unmanaged.takeUnretainedValue()\n                let description = weakManager.manager?.flags?.readableDescription ?? \"nil\"\n\n                return Unmanaged.passRetained(description as CFString)\n            }\n        )"
+      },
+      {
+        "A_name" : "callback",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 199, Column: 9",
+        "H_initialValue" : "{ _, flags, info in\n            guard let info else { return }\n\n            let weakManager = Unmanaged<WeakManager>.fromOpaque(info).takeUnretainedValue()\n            weakManager.manager?.notifyListener(flags)\n        }"
+      },
+      {
+        "A_name" : "queueAdded",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 206, Column: 9",
+        "H_initialValue" : "SCNetworkReachabilitySetDispatchQueue(reachability, reachabilityQueue)"
+      },
+      {
+        "A_name" : "callbackAdded",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 207, Column: 9",
+        "H_initialValue" : "SCNetworkReachabilitySetCallback(reachability, callback, &context)"
+      }
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping Listener"
+    ],
+    "I_parameters" : [
+      "onQueue",
+      "onUpdatePerforming"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "weakManager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 176, Column: 9",
+    "H_initialValue" : "WeakManager(manager: self)"
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 178, Column: 9",
+    "H_initialValue" : "SCNetworkReachabilityContext(\n            version: 0,\n            info: Unmanaged.passUnretained(weakManager).toOpaque(),\n            retain: { info in\n                let unmanaged = Unmanaged<WeakManager>.fromOpaque(info)\n                _ = unmanaged.retain()\n\n                return UnsafeRawPointer(unmanaged.toOpaque())\n            },\n            release: { info in\n                let unmanaged = Unmanaged<WeakManager>.fromOpaque(info)\n                unmanaged.release()\n            },\n            copyDescription: { info in\n                let unmanaged = Unmanaged<WeakManager>.fromOpaque(info)\n                let weakManager = unmanaged.takeUnretainedValue()\n                let description = weakManager.manager?.flags?.readableDescription ?? \"nil\"\n\n                return Unmanaged.passRetained(description as CFString)\n            }\n        )"
+  },
+  {
+    "A_name" : "unmanaged",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 182, Column: 17",
+    "H_initialValue" : "Unmanaged<WeakManager>.fromOpaque(info)"
+  },
+  {
+    "A_name" : "unmanaged",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 188, Column: 17",
+    "H_initialValue" : "Unmanaged<WeakManager>.fromOpaque(info)"
+  },
+  {
+    "A_name" : "unmanaged",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 192, Column: 17",
+    "H_initialValue" : "Unmanaged<WeakManager>.fromOpaque(info)"
+  },
+  {
+    "A_name" : "weakManager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 193, Column: 17",
+    "H_initialValue" : "unmanaged.takeUnretainedValue()"
+  },
+  {
+    "A_name" : "description",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 194, Column: 17",
+    "H_initialValue" : "weakManager.manager?.flags?.readableDescription ?? \"nil\""
+  },
+  {
+    "A_name" : "callback",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 199, Column: 9",
+    "H_initialValue" : "{ _, flags, info in\n            guard let info else { return }\n\n            let weakManager = Unmanaged<WeakManager>.fromOpaque(info).takeUnretainedValue()\n            weakManager.manager?.notifyListener(flags)\n        }"
+  },
+  {
+    "A_name" : "weakManager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 202, Column: 13",
+    "H_initialValue" : "Unmanaged<WeakManager>.fromOpaque(info).takeUnretainedValue()"
+  },
+  {
+    "A_name" : "queueAdded",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 206, Column: 9",
+    "H_initialValue" : "SCNetworkReachabilitySetDispatchQueue(reachability, reachabilityQueue)"
+  },
+  {
+    "A_name" : "callbackAdded",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 207, Column: 9",
+    "H_initialValue" : "SCNetworkReachabilitySetCallback(reachability, callback, &context)"
+  },
+  {
+    "A_name" : "stopListening",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 220, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "notifyListener",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 237, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "newStatus",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 238, Column: 9",
+        "H_initialValue" : "NetworkReachabilityStatus(flags)"
+      }
+    ],
+    "I_parameterType" : [
+      "SCNetworkReachabilityFlags"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "newStatus",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 238, Column: 9",
+    "H_initialValue" : "NetworkReachabilityStatus(flags)"
+  },
+  {
+    "A_name" : "listener",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 245, Column: 13",
+    "H_initialValue" : "state.listener"
+  },
+  {
+    "A_name" : "WeakManager",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 250, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "manager",
+        "B_kind" : "variable",
+        "C_accessLevel" : "weak",
+        "D_attributes" : [
+          "weak"
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 251, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 253, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NetworkReachabilityManager?"
+        ],
+        "I_parameters" : [
+          "manager"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "manager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "weak",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 251, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 253, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NetworkReachabilityManager?"
+    ],
+    "I_parameters" : [
+      "manager"
+    ]
+  },
+  {
+    "A_name" : "NetworkReachabilityManager.NetworkReachabilityStatus",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Equatable"
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 261, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "SCNetworkReachabilityFlags",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 263, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isReachable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 264, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isConnectionRequired",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 265, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "canConnectAutomatically",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 266, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "canConnectWithoutUserInteraction",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 267, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isActuallyReachable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 268, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isCellular",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 269, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "readableDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NetworkReachabilityManager.swift - Line: 278, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "isReachable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 264, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isConnectionRequired",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 265, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "canConnectAutomatically",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 266, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "canConnectWithoutUserInteraction",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 267, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isActuallyReachable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 268, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isCellular",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 269, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "readableDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 278, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "W",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 279, Column: 9",
+    "H_initialValue" : "isCellular ? \"W\" : \"-\""
+  },
+  {
+    "A_name" : "R",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 280, Column: 9",
+    "H_initialValue" : "isReachable ? \"R\" : \"-\""
+  },
+  {
+    "A_name" : "c",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 281, Column: 9",
+    "H_initialValue" : "isConnectionRequired ? \"c\" : \"-\""
+  },
+  {
+    "A_name" : "t",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 282, Column: 9",
+    "H_initialValue" : "contains(.transientConnection) ? \"t\" : \"-\""
+  },
+  {
+    "A_name" : "i",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 283, Column: 9",
+    "H_initialValue" : "contains(.interventionRequired) ? \"i\" : \"-\""
+  },
+  {
+    "A_name" : "C",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 284, Column: 9",
+    "H_initialValue" : "contains(.connectionOnTraffic) ? \"C\" : \"-\""
+  },
+  {
+    "A_name" : "D",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 285, Column: 9",
+    "H_initialValue" : "contains(.connectionOnDemand) ? \"D\" : \"-\""
+  },
+  {
+    "A_name" : "l",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 286, Column: 9",
+    "H_initialValue" : "contains(.isLocalAddress) ? \"l\" : \"-\""
+  },
+  {
+    "A_name" : "d",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 287, Column: 9",
+    "H_initialValue" : "contains(.isDirect) ? \"d\" : \"-\""
+  },
+  {
+    "A_name" : "a",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NetworkReachabilityManager.swift - Line: 288, Column: 9",
+    "H_initialValue" : "contains(.connectionAutomatic) ? \"a\" : \"-\""
+  }
+]

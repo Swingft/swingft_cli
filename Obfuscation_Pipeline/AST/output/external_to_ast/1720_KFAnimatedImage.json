@@ -1,0 +1,422 @@
+[
+  {
+    "A_name" : "KFAnimatedImage",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "KFImageProtocol"
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 31, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "context",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFAnimatedImage.swift - Line: 34, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFAnimatedImage.swift - Line: 35, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "KFImage.Context<HoldingView>"
+        ],
+        "I_parameters" : [
+          "context"
+        ]
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFAnimatedImage.swift - Line: 44, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (HoldingView.RenderingView) -> Void"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 34, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 35, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KFImage.Context<HoldingView>"
+    ],
+    "I_parameters" : [
+      "context"
+    ]
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 44, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (HoldingView.RenderingView) -> Void"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "KFAnimatedImageViewRepresenter",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "KFCrossPlatformViewRepresentable",
+      "KFImageHoldingView",
+      "Sendable"
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 59, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "created",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "KFAnimatedImage.swift - Line: 62, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "KFCrossPlatformImage?",
+          "KFImage.Context<Self>"
+        ],
+        "I_parameters" : [
+          "from",
+          "context"
+        ],
+        "J_returnType" : "-> KFAnimatedImageViewRepresenter"
+      },
+      {
+        "A_name" : "image",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFAnimatedImage.swift - Line: 66, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "context",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFAnimatedImage.swift - Line: 67, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "makeImageView",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "KFAnimatedImage.swift - Line: 87, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "view",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "KFAnimatedImage.swift - Line: 89, Column: 9",
+            "H_initialValue" : "AnimatedImageView()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> AnimatedImageView"
+      },
+      {
+        "A_name" : "updateImageView",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "KFAnimatedImage.swift - Line: 105, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnimatedImageView"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "created",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 62, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "KFCrossPlatformImage?",
+      "KFImage.Context<Self>"
+    ],
+    "I_parameters" : [
+      "from",
+      "context"
+    ],
+    "J_returnType" : "-> KFAnimatedImageViewRepresenter"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 66, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "context",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 67, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "makeNSView",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 70, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Context"
+    ],
+    "I_parameters" : [
+      "context"
+    ],
+    "J_returnType" : "-> AnimatedImageView"
+  },
+  {
+    "A_name" : "updateNSView",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 74, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimatedImageView",
+      "Context"
+    ],
+    "I_parameters" : [
+      "_",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "makeUIView",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 78, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Context"
+    ],
+    "I_parameters" : [
+      "context"
+    ],
+    "J_returnType" : "-> AnimatedImageView"
+  },
+  {
+    "A_name" : "updateUIView",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 82, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimatedImageView",
+      "Context"
+    ],
+    "I_parameters" : [
+      "_",
+      "context"
+    ]
+  },
+  {
+    "A_name" : "makeImageView",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 87, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "view",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "KFAnimatedImage.swift - Line: 89, Column: 9",
+        "H_initialValue" : "AnimatedImageView()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> AnimatedImageView"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 89, Column: 9",
+    "H_initialValue" : "AnimatedImageView()"
+  },
+  {
+    "A_name" : "updateImageView",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 105, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimatedImageView"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "KFAnimatedImage_Previews",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "PreviewProvider"
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 112, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "previews",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "KFAnimatedImage.swift - Line: 114, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "previews",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "KFAnimatedImage.swift - Line: 114, Column: 5",
+    "H_initialValue" : ""
+  }
+]

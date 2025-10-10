@@ -1,0 +1,692 @@
+[
+  {
+    "A_name" : "FeedView",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIView"
+    ],
+    "F_location" : "FeedView.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "onProfileTapped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 16, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onSegmentChanged",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 17, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onToastAction",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 18, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "segmentedControl",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 22, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "toast",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 23, Column: 5",
+        "H_initialValue" : "ToastMessage()"
+      },
+      {
+        "A_name" : "headerStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 25, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.alignment = .center\n        stack.distribution = .equalSpacing\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "titleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 33, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.head_b_18)\n        label.text = \"피드\"\n        return label\n    }()"
+      },
+      {
+        "A_name" : "searchStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 40, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.spacing = 14\n        stack.alignment = .center\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "searchButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 48, Column: 5",
+        "H_initialValue" : "{\n        let button = UIButton(type: .system)\n        let image = UIImage(named: \"ic_search_24_ios\", in: .module, compatibleWith: nil)\n        button.setImage(image, for: .normal)\n        button.tintColor = .gray400\n        button.contentMode = .scaleAspectFit\n        return button\n    }()"
+      },
+      {
+        "A_name" : "profileImageView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 57, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.contentMode = .scaleAspectFill\n        imageView.layer.cornerRadius = 18\n        imageView.clipsToBounds = true\n        imageView.layer.borderWidth = 1\n        imageView.layer.borderColor = UIColor.gray200.cgColor\n        imageView.isUserInteractionEnabled = true\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedView.swift - Line: 70, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tapGesture",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedView.swift - Line: 77, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(didTapProfileImage))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedView.swift - Line: 81, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "configureSegmentedControl",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 99, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "control",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedView.swift - Line: 104, Column: 9",
+            "H_initialValue" : "SegmentedControl(\n            viewControllers: viewControllers,\n            titles: titles,\n            parentViewController: parentVC\n        )"
+          }
+        ],
+        "I_parameterType" : [
+          "UIViewController",
+          "[UIViewController]",
+          "[String]"
+        ],
+        "I_parameters" : [
+          "parentVC",
+          "viewControllers",
+          "titles"
+        ]
+      },
+      {
+        "A_name" : "showToast",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 123, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "message"
+        ]
+      },
+      {
+        "A_name" : "showToastMessage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 146, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "message"
+        ]
+      },
+      {
+        "A_name" : "updateProfileImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 170, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String?"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "setSelectedIndex",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 192, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "setSelectedIndexUIOnly",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 197, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "original",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedView.swift - Line: 200, Column: 9",
+            "H_initialValue" : "control.onIndexChanged"
+          }
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "didTapProfileImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "FeedView.swift - Line: 208, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "onProfileTapped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 16, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onSegmentChanged",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 17, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onToastAction",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 18, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "segmentedControl",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 22, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "toast",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 23, Column: 5",
+    "H_initialValue" : "ToastMessage()"
+  },
+  {
+    "A_name" : "headerStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 25, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.alignment = .center\n        stack.distribution = .equalSpacing\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 26, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "titleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 33, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.head_b_18)\n        label.text = \"피드\"\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 34, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "searchStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 40, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.spacing = 14\n        stack.alignment = .center\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 41, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "searchButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 48, Column: 5",
+    "H_initialValue" : "{\n        let button = UIButton(type: .system)\n        let image = UIImage(named: \"ic_search_24_ios\", in: .module, compatibleWith: nil)\n        button.setImage(image, for: .normal)\n        button.tintColor = .gray400\n        button.contentMode = .scaleAspectFit\n        return button\n    }()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 49, Column: 9",
+    "H_initialValue" : "UIButton(type: .system)"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 50, Column: 9",
+    "H_initialValue" : "UIImage(named: \"ic_search_24_ios\", in: .module, compatibleWith: nil)"
+  },
+  {
+    "A_name" : "profileImageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 57, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.contentMode = .scaleAspectFill\n        imageView.layer.cornerRadius = 18\n        imageView.clipsToBounds = true\n        imageView.layer.borderWidth = 1\n        imageView.layer.borderColor = UIColor.gray200.cgColor\n        imageView.isUserInteractionEnabled = true\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 58, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedView.swift - Line: 70, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tapGesture",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 77, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(didTapProfileImage))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tapGesture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 77, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(didTapProfileImage))"
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedView.swift - Line: 81, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "configureSegmentedControl",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 99, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "control",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 104, Column: 9",
+        "H_initialValue" : "SegmentedControl(\n            viewControllers: viewControllers,\n            titles: titles,\n            parentViewController: parentVC\n        )"
+      }
+    ],
+    "I_parameterType" : [
+      "UIViewController",
+      "[UIViewController]",
+      "[String]"
+    ],
+    "I_parameters" : [
+      "parentVC",
+      "viewControllers",
+      "titles"
+    ]
+  },
+  {
+    "A_name" : "control",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 104, Column: 9",
+    "H_initialValue" : "SegmentedControl(\n            viewControllers: viewControllers,\n            titles: titles,\n            parentViewController: parentVC\n        )"
+  },
+  {
+    "A_name" : "showToast",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 123, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "message"
+    ]
+  },
+  {
+    "A_name" : "showToastMessage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 146, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "message"
+    ]
+  },
+  {
+    "A_name" : "updateProfileImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 170, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String?"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "setSelectedIndex",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 192, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "setSelectedIndexUIOnly",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 197, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "original",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedView.swift - Line: 200, Column: 9",
+        "H_initialValue" : "control.onIndexChanged"
+      }
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "original",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedView.swift - Line: 200, Column: 9",
+    "H_initialValue" : "control.onIndexChanged"
+  },
+  {
+    "A_name" : "didTapProfileImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "FeedView.swift - Line: 208, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

@@ -1,0 +1,601 @@
+[
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "debug",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 22, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String?",
+          "Bool",
+          "String",
+          "UInt",
+          "String"
+        ],
+        "I_parameters" : [
+          "_",
+          "trimOutput",
+          "file",
+          "line",
+          "function"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "debug",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 22, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String?",
+      "Bool",
+      "String",
+      "UInt",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "trimOutput",
+      "file",
+      "line",
+      "function"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "dateFormat",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 28, Column: 1",
+    "H_initialValue" : "\"yyyy-MM-dd HH:mm:ss.SSS\""
+  },
+  {
+    "A_name" : "logEvent",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 30, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "DateFormatter",
+      "String"
+    ],
+    "I_parameters" : [
+      "_",
+      "dateFormat",
+      "content"
+    ]
+  },
+  {
+    "A_name" : "DebugSink",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sink<Observer>",
+      "ObserverType"
+    ],
+    "F_location" : "Debug.swift - Line: 34, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 38, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "timestampFormatter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 39, Column: 5",
+        "H_initialValue" : "DateFormatter()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 41, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 50, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "maxEventTextLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Debug.swift - Line: 51, Column: 9",
+            "H_initialValue" : "40"
+          },
+          {
+            "A_name" : "eventText",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Debug.swift - Line: 52, Column: 9",
+            "H_initialValue" : "\"\\(event)\""
+          },
+          {
+            "A_name" : "eventNormalized",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Debug.swift - Line: 54, Column: 9",
+            "H_initialValue" : "(eventText.count > maxEventTextLength) && self.parent.trimOutput\n            ? String(eventText.prefix(maxEventTextLength \/ 2)) + \"...\" + String(eventText.suffix(maxEventTextLength \/ 2))\n            : eventText"
+          }
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Debug.swift - Line: 66, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 38, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "timestampFormatter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 39, Column: 5",
+    "H_initialValue" : "DateFormatter()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 41, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 50, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "maxEventTextLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 51, Column: 9",
+        "H_initialValue" : "40"
+      },
+      {
+        "A_name" : "eventText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 52, Column: 9",
+        "H_initialValue" : "\"\\(event)\""
+      },
+      {
+        "A_name" : "eventNormalized",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 54, Column: 9",
+        "H_initialValue" : "(eventText.count > maxEventTextLength) && self.parent.trimOutput\n            ? String(eventText.prefix(maxEventTextLength \/ 2)) + \"...\" + String(eventText.suffix(maxEventTextLength \/ 2))\n            : eventText"
+      }
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "maxEventTextLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 51, Column: 9",
+    "H_initialValue" : "40"
+  },
+  {
+    "A_name" : "eventText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 52, Column: 9",
+    "H_initialValue" : "\"\\(event)\""
+  },
+  {
+    "A_name" : "eventNormalized",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 54, Column: 9",
+    "H_initialValue" : "(eventText.count > maxEventTextLength) && self.parent.trimOutput\n            ? String(eventText.prefix(maxEventTextLength \/ 2)) + \"...\" + String(eventText.suffix(maxEventTextLength \/ 2))\n            : eventText"
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Debug.swift - Line: 66, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "Debug",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Source.Element>"
+    ],
+    "F_location" : "Debug.swift - Line: 74, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "identifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 75, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "trimOutput",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 76, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 77, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 79, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source",
+          "String?",
+          "Bool",
+          "String",
+          "UInt",
+          "String"
+        ],
+        "I_parameters" : [
+          "source",
+          "identifier",
+          "trimOutput",
+          "file",
+          "line",
+          "function"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Debug.swift - Line: 97, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Debug.swift - Line: 98, Column: 9",
+            "H_initialValue" : "DebugSink(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Debug.swift - Line: 99, Column: 9",
+            "H_initialValue" : "self.source.subscribe(sink)"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "identifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 75, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "trimOutput",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 76, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 77, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 79, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source",
+      "String?",
+      "Bool",
+      "String",
+      "UInt",
+      "String"
+    ],
+    "I_parameters" : [
+      "source",
+      "identifier",
+      "trimOutput",
+      "file",
+      "line",
+      "function"
+    ]
+  },
+  {
+    "A_name" : "trimmedFile",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 85, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Debug.swift - Line: 97, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 98, Column: 9",
+        "H_initialValue" : "DebugSink(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debug.swift - Line: 99, Column: 9",
+        "H_initialValue" : "self.source.subscribe(sink)"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 98, Column: 9",
+    "H_initialValue" : "DebugSink(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debug.swift - Line: 99, Column: 9",
+    "H_initialValue" : "self.source.subscribe(sink)"
+  }
+]

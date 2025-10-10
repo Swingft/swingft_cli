@@ -1,0 +1,4989 @@
+[
+  {
+    "A_name" : "MaybeTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "MaybeTest.swift - Line: 13, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "MaybeTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 18, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testMaybe_Subscription_success",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 19, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 20, Column: 9",
+            "H_initialValue" : "Maybe.just(1)"
+          },
+          {
+            "A_name" : "events",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 22, Column: 9",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMaybe_Subscription_completed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 31, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 32, Column: 9",
+            "H_initialValue" : "Maybe<Int>.empty()"
+          },
+          {
+            "A_name" : "events",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 34, Column: 9",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMaybe_Subscription_error",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 43, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 44, Column: 9",
+            "H_initialValue" : "Maybe<Int>.error(testError)"
+          },
+          {
+            "A_name" : "events",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 46, Column: 9",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMaybe_Subscription_onDisposed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 55, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 57, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 58, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 59, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 60, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "onDisposesCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 61, Column: 9",
+            "H_initialValue" : "0"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMaybe_Subscription_onDisposed_success",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 82, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "maybe",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 84, Column: 9",
+            "H_initialValue" : "Maybe.just(1)"
+          },
+          {
+            "A_name" : "onDisposedCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 85, Column: 9",
+            "H_initialValue" : "0"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMaybe_Subscription_onDisposed_completed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 94, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "maybe",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 96, Column: 9",
+            "H_initialValue" : "Maybe<Int>.empty()"
+          },
+          {
+            "A_name" : "onDisposedCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 97, Column: 9",
+            "H_initialValue" : "0"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMaybe_Subscription_onDisposed_error",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 106, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "single",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 108, Column: 9",
+            "H_initialValue" : "Maybe<Int>.error(testError)"
+          },
+          {
+            "A_name" : "onDisposedCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 109, Column: 9",
+            "H_initialValue" : "0"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMaybe_create_success",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 118, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 119, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 121, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "disposedTime",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 123, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 138, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMaybe_create_completed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 155, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 156, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 158, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "disposedTime",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 160, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 175, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMaybe_create_error",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 191, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 192, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 194, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "disposedTime",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 196, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 208, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testMaybe_create_disposing",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 224, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 225, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 227, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "disposedTime",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 228, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 229, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 230, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testMaybe_Subscription_success",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 19, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 20, Column: 9",
+        "H_initialValue" : "Maybe.just(1)"
+      },
+      {
+        "A_name" : "events",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 22, Column: 9",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 20, Column: 9",
+    "H_initialValue" : "Maybe.just(1)"
+  },
+  {
+    "A_name" : "events",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 22, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "testMaybe_Subscription_completed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 31, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 32, Column: 9",
+        "H_initialValue" : "Maybe<Int>.empty()"
+      },
+      {
+        "A_name" : "events",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 34, Column: 9",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 32, Column: 9",
+    "H_initialValue" : "Maybe<Int>.empty()"
+  },
+  {
+    "A_name" : "events",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 34, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "testMaybe_Subscription_error",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 43, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 44, Column: 9",
+        "H_initialValue" : "Maybe<Int>.error(testError)"
+      },
+      {
+        "A_name" : "events",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 46, Column: 9",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 44, Column: 9",
+    "H_initialValue" : "Maybe<Int>.error(testError)"
+  },
+  {
+    "A_name" : "events",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 46, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "testMaybe_Subscription_onDisposed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 55, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 57, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 58, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 59, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 60, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onDisposesCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 61, Column: 9",
+        "H_initialValue" : "0"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 57, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 58, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 59, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 60, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onDisposesCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 61, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "testMaybe_Subscription_onDisposed_success",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 82, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "maybe",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 84, Column: 9",
+        "H_initialValue" : "Maybe.just(1)"
+      },
+      {
+        "A_name" : "onDisposedCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 85, Column: 9",
+        "H_initialValue" : "0"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "maybe",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 84, Column: 9",
+    "H_initialValue" : "Maybe.just(1)"
+  },
+  {
+    "A_name" : "onDisposedCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 85, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "testMaybe_Subscription_onDisposed_completed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 94, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "maybe",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 96, Column: 9",
+        "H_initialValue" : "Maybe<Int>.empty()"
+      },
+      {
+        "A_name" : "onDisposedCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 97, Column: 9",
+        "H_initialValue" : "0"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "maybe",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 96, Column: 9",
+    "H_initialValue" : "Maybe<Int>.empty()"
+  },
+  {
+    "A_name" : "onDisposedCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 97, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "testMaybe_Subscription_onDisposed_error",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 106, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "single",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 108, Column: 9",
+        "H_initialValue" : "Maybe<Int>.error(testError)"
+      },
+      {
+        "A_name" : "onDisposedCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 109, Column: 9",
+        "H_initialValue" : "0"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "single",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 108, Column: 9",
+    "H_initialValue" : "Maybe<Int>.error(testError)"
+  },
+  {
+    "A_name" : "onDisposedCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 109, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "testMaybe_create_success",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 118, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 119, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 121, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "disposedTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 123, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 138, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 119, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 121, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "disposedTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 123, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 138, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n            }\n        }"
+  },
+  {
+    "A_name" : "testMaybe_create_completed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 155, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 156, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 158, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "disposedTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 160, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 175, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 156, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 158, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "disposedTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 160, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 175, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n            }\n        }"
+  },
+  {
+    "A_name" : "testMaybe_create_error",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 191, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 192, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 194, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "disposedTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 196, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 208, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 192, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 194, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "disposedTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 196, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 208, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n            }\n        }"
+  },
+  {
+    "A_name" : "testMaybe_create_disposing",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 224, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 225, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 227, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "disposedTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 228, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 229, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 230, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 225, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 227, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "disposedTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 228, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 229, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 230, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "MaybeTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 261, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "test_just_producesElement",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 262, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 263, Column: 9",
+            "H_initialValue" : "try! (Maybe.just(1) as Maybe<Int>).toBlocking().first()!"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_just2_producesElement",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 267, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 268, Column: 9",
+            "H_initialValue" : "try! (Maybe.just(1, scheduler: CurrentThreadScheduler.instance) as Maybe<Int>).toBlocking().first()!"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_error_fails",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 272, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_never_producesElement",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 282, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "event",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 283, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 284, Column: 9",
+            "H_initialValue" : "(Maybe<Int>.never() as Maybe<Int>).subscribe { _event in\n            event = _event\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_deferred",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 292, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 293, Column: 9",
+            "H_initialValue" : "try! (Maybe.deferred { Maybe.just(1) } as Maybe<Int>).toBlocking().toArray()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_delaySubscription",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 297, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 298, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 300, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe.just(1).delaySubscription(.seconds(2), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_delay",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 310, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 311, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 313, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe.just(1).delay(.seconds(2), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_observeOn",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 323, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 324, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 326, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe.just(1).observe(on:scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_subscribeOn",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 336, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 337, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 339, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe.just(1).subscribe(on: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_catchError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 349, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 350, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 352, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe.error(testError).catch { _ in Maybe.just(2) }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_catchAndReturn",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 362, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 363, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 365, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe.error(testError).catchAndReturn(2)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_retry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 375, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 376, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "isFirst",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 378, Column: 9",
+            "H_initialValue" : "true"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 379, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Maybe.error(e)\n                    }\n\n                    return Maybe.just(2)\n                }\n                .retry(2) as Maybe<Int>\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_retryWhen1",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 400, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 401, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "isFirst",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 403, Column: 9",
+            "H_initialValue" : "true"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 404, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Maybe.error(e)\n                    }\n\n                    return Maybe.just(2)\n                }\n                .retry { (e: Observable<Error>) in\n                    return e\n                } as Maybe<Int>\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_retryWhen2",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 427, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 428, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "isFirst",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 430, Column: 9",
+            "H_initialValue" : "true"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 431, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Maybe.error(e)\n                    }\n\n                    return Maybe.just(2)\n                }\n                .retry { e in\n                    return e\n                } as Maybe<Int>\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_debug",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 454, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 455, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 457, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe.just(1).debug()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_using",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 467, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 468, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "disposeInvoked",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 470, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "createInvoked",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 471, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "disposable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 473, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 474, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "_d",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 475, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 477, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe.using({ () -> MockDisposable in\n                disposeInvoked += 1\n                disposable = MockDisposable(scheduler: scheduler)\n                return disposable\n            }, primitiveSequenceFactory: { (d: MockDisposable) -> Maybe<Int> in\n                _d = d\n                createInvoked += 1\n                xs = scheduler.createColdObservable([\n                    .next(100, scheduler.clock),\n                    .completed(100)\n                    ])\n                return xs.asObservable().asMaybe()\n            })\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_timeout",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 513, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 514, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 516, Column: 9",
+            "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n            ]).asMaybe()"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 521, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(5), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_timeout_other",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 530, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 531, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 533, Column: 9",
+            "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n        ]).asMaybe()"
+          },
+          {
+            "A_name" : "xs2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 538, Column: 9",
+            "H_initialValue" : "scheduler.createColdObservable([\n            .next(20, 2),\n            .completed(20)\n        ]).asMaybe()"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 543, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(5), other: xs2, scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_timeout_succeeds",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 553, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 554, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 556, Column: 9",
+            "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n        ]).asMaybe()"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 561, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(30), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_timeout_other_succeeds",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 571, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 572, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 574, Column: 9",
+            "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n        ]).asMaybe()"
+          },
+          {
+            "A_name" : "xs2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 579, Column: 9",
+            "H_initialValue" : "scheduler.createColdObservable([\n            .next(20, 2),\n            .completed(20)\n        ]).asMaybe()"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 584, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(30), other: xs2, scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "test_just_producesElement",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 262, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 263, Column: 9",
+        "H_initialValue" : "try! (Maybe.just(1) as Maybe<Int>).toBlocking().first()!"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 263, Column: 9",
+    "H_initialValue" : "try! (Maybe.just(1) as Maybe<Int>).toBlocking().first()!"
+  },
+  {
+    "A_name" : "test_just2_producesElement",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 267, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 268, Column: 9",
+        "H_initialValue" : "try! (Maybe.just(1, scheduler: CurrentThreadScheduler.instance) as Maybe<Int>).toBlocking().first()!"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 268, Column: 9",
+    "H_initialValue" : "try! (Maybe.just(1, scheduler: CurrentThreadScheduler.instance) as Maybe<Int>).toBlocking().first()!"
+  },
+  {
+    "A_name" : "test_error_fails",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 272, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "test_never_producesElement",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 282, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "event",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 283, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 284, Column: 9",
+        "H_initialValue" : "(Maybe<Int>.never() as Maybe<Int>).subscribe { _event in\n            event = _event\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "event",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 283, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 284, Column: 9",
+    "H_initialValue" : "(Maybe<Int>.never() as Maybe<Int>).subscribe { _event in\n            event = _event\n        }"
+  },
+  {
+    "A_name" : "test_deferred",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 292, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 293, Column: 9",
+        "H_initialValue" : "try! (Maybe.deferred { Maybe.just(1) } as Maybe<Int>).toBlocking().toArray()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 293, Column: 9",
+    "H_initialValue" : "try! (Maybe.deferred { Maybe.just(1) } as Maybe<Int>).toBlocking().toArray()"
+  },
+  {
+    "A_name" : "test_delaySubscription",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 297, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 298, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 300, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe.just(1).delaySubscription(.seconds(2), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 298, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 300, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe.just(1).delaySubscription(.seconds(2), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_delay",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 310, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 311, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 313, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe.just(1).delay(.seconds(2), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 311, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 313, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe.just(1).delay(.seconds(2), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_observeOn",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 323, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 324, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 326, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe.just(1).observe(on:scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 324, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 326, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe.just(1).observe(on:scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_subscribeOn",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 336, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 337, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 339, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe.just(1).subscribe(on: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 337, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 339, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe.just(1).subscribe(on: scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_catchError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 349, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 350, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 352, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe.error(testError).catch { _ in Maybe.just(2) }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 350, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 352, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe.error(testError).catch { _ in Maybe.just(2) }\n        }"
+  },
+  {
+    "A_name" : "test_catchAndReturn",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 362, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 363, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 365, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe.error(testError).catchAndReturn(2)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 363, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 365, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe.error(testError).catchAndReturn(2)\n        }"
+  },
+  {
+    "A_name" : "test_retry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 375, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 376, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "isFirst",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 378, Column: 9",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 379, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Maybe.error(e)\n                    }\n\n                    return Maybe.just(2)\n                }\n                .retry(2) as Maybe<Int>\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 376, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "isFirst",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 378, Column: 9",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 379, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Maybe.error(e)\n                    }\n\n                    return Maybe.just(2)\n                }\n                .retry(2) as Maybe<Int>\n        }"
+  },
+  {
+    "A_name" : "test_retryWhen1",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 400, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 401, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "isFirst",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 403, Column: 9",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 404, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Maybe.error(e)\n                    }\n\n                    return Maybe.just(2)\n                }\n                .retry { (e: Observable<Error>) in\n                    return e\n                } as Maybe<Int>\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 401, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "isFirst",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 403, Column: 9",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 404, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Maybe.error(e)\n                    }\n\n                    return Maybe.just(2)\n                }\n                .retry { (e: Observable<Error>) in\n                    return e\n                } as Maybe<Int>\n        }"
+  },
+  {
+    "A_name" : "test_retryWhen2",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 427, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 428, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "isFirst",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 430, Column: 9",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 431, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Maybe.error(e)\n                    }\n\n                    return Maybe.just(2)\n                }\n                .retry { e in\n                    return e\n                } as Maybe<Int>\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 428, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "isFirst",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 430, Column: 9",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 431, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Maybe.error(e)\n                    }\n\n                    return Maybe.just(2)\n                }\n                .retry { e in\n                    return e\n                } as Maybe<Int>\n        }"
+  },
+  {
+    "A_name" : "test_debug",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 454, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 455, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 457, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe.just(1).debug()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 455, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 457, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe.just(1).debug()\n        }"
+  },
+  {
+    "A_name" : "test_using",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 467, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 468, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "disposeInvoked",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 470, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "createInvoked",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 471, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "disposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 473, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 474, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_d",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 475, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 477, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe.using({ () -> MockDisposable in\n                disposeInvoked += 1\n                disposable = MockDisposable(scheduler: scheduler)\n                return disposable\n            }, primitiveSequenceFactory: { (d: MockDisposable) -> Maybe<Int> in\n                _d = d\n                createInvoked += 1\n                xs = scheduler.createColdObservable([\n                    .next(100, scheduler.clock),\n                    .completed(100)\n                    ])\n                return xs.asObservable().asMaybe()\n            })\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 468, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "disposeInvoked",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 470, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "createInvoked",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 471, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 473, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 474, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_d",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 475, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 477, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe.using({ () -> MockDisposable in\n                disposeInvoked += 1\n                disposable = MockDisposable(scheduler: scheduler)\n                return disposable\n            }, primitiveSequenceFactory: { (d: MockDisposable) -> Maybe<Int> in\n                _d = d\n                createInvoked += 1\n                xs = scheduler.createColdObservable([\n                    .next(100, scheduler.clock),\n                    .completed(100)\n                    ])\n                return xs.asObservable().asMaybe()\n            })\n        }"
+  },
+  {
+    "A_name" : "test_timeout",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 513, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 514, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 516, Column: 9",
+        "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n            ]).asMaybe()"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 521, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(5), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 514, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 516, Column: 9",
+    "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n            ]).asMaybe()"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 521, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(5), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_timeout_other",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 530, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 531, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 533, Column: 9",
+        "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n        ]).asMaybe()"
+      },
+      {
+        "A_name" : "xs2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 538, Column: 9",
+        "H_initialValue" : "scheduler.createColdObservable([\n            .next(20, 2),\n            .completed(20)\n        ]).asMaybe()"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 543, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(5), other: xs2, scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 531, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 533, Column: 9",
+    "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n        ]).asMaybe()"
+  },
+  {
+    "A_name" : "xs2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 538, Column: 9",
+    "H_initialValue" : "scheduler.createColdObservable([\n            .next(20, 2),\n            .completed(20)\n        ]).asMaybe()"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 543, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(5), other: xs2, scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_timeout_succeeds",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 553, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 554, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 556, Column: 9",
+        "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n        ]).asMaybe()"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 561, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(30), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 554, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 556, Column: 9",
+    "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n        ]).asMaybe()"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 561, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(30), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_timeout_other_succeeds",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 571, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 572, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 574, Column: 9",
+        "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n        ]).asMaybe()"
+      },
+      {
+        "A_name" : "xs2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 579, Column: 9",
+        "H_initialValue" : "scheduler.createColdObservable([\n            .next(20, 2),\n            .completed(20)\n        ]).asMaybe()"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 584, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(30), other: xs2, scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 572, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 574, Column: 9",
+    "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n        ]).asMaybe()"
+  },
+  {
+    "A_name" : "xs2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 579, Column: 9",
+    "H_initialValue" : "scheduler.createColdObservable([\n            .next(20, 2),\n            .completed(20)\n        ]).asMaybe()"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 584, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(30), other: xs2, scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "MaybeTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 595, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "test_timer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 596, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 597, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 599, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe<Int>.timer(.seconds(2), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "test_timer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 596, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 597, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 599, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe<Int>.timer(.seconds(2), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 597, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 599, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe<Int>.timer(.seconds(2), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "MaybeTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 610, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "test_do",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 611, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 612, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 614, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe<Int>.just(1).do(onNext: { _ in () }, afterNext: { _ in () }, onError: { _ in () }, afterError: { _ in }, onSubscribe: { () in () }, onSubscribed: { () in () }, onDispose: { () in () })\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_filter",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 624, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 625, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 627, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe<Int>.just(1).filter { _ in false }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_map",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 636, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 637, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 639, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe<Int>.just(1).map { $0 * 2 }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_compactMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 649, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 650, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 652, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            (Maybe<String>.just(\"1\").compactMap(Int.init) as Maybe<Int>).asObservable()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_compactMapNil",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 662, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 663, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 665, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            (Maybe<String>.just(\"a\").compactMap(Int.init) as Maybe<Int>).asObservable()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_flatMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 674, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 675, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 677, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe<Int>.just(1).flatMap { .just($0 * 2) }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ifEmptyDefault",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 687, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 688, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 690, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe<Int>.empty().ifEmpty(default: 5) as Single<Int>\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ifEmptySwitchToMaybe",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 700, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 701, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "source",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 702, Column: 9",
+            "H_initialValue" : "Maybe<Int>.empty()"
+          },
+          {
+            "A_name" : "switchSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 703, Column: 9",
+            "H_initialValue" : "Maybe.just(10)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 705, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            source.ifEmpty(switchTo: switchSource) as Maybe<Int>\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ifEmptySwitchToSingle",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 715, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 716, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "source",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 717, Column: 9",
+            "H_initialValue" : "Maybe<Int>.empty()"
+          },
+          {
+            "A_name" : "switchSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 718, Column: 9",
+            "H_initialValue" : "Single.just(10)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 720, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            source.ifEmpty(switchTo: switchSource)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "test_do",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 611, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 612, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 614, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe<Int>.just(1).do(onNext: { _ in () }, afterNext: { _ in () }, onError: { _ in () }, afterError: { _ in }, onSubscribe: { () in () }, onSubscribed: { () in () }, onDispose: { () in () })\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 612, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 614, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe<Int>.just(1).do(onNext: { _ in () }, afterNext: { _ in () }, onError: { _ in () }, afterError: { _ in }, onSubscribe: { () in () }, onSubscribed: { () in () }, onDispose: { () in () })\n        }"
+  },
+  {
+    "A_name" : "test_filter",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 624, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 625, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 627, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe<Int>.just(1).filter { _ in false }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 625, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 627, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe<Int>.just(1).filter { _ in false }\n        }"
+  },
+  {
+    "A_name" : "test_map",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 636, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 637, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 639, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe<Int>.just(1).map { $0 * 2 }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 637, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 639, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe<Int>.just(1).map { $0 * 2 }\n        }"
+  },
+  {
+    "A_name" : "test_compactMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 649, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 650, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 652, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            (Maybe<String>.just(\"1\").compactMap(Int.init) as Maybe<Int>).asObservable()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 650, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 652, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            (Maybe<String>.just(\"1\").compactMap(Int.init) as Maybe<Int>).asObservable()\n        }"
+  },
+  {
+    "A_name" : "test_compactMapNil",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 662, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 663, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 665, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            (Maybe<String>.just(\"a\").compactMap(Int.init) as Maybe<Int>).asObservable()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 663, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 665, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            (Maybe<String>.just(\"a\").compactMap(Int.init) as Maybe<Int>).asObservable()\n        }"
+  },
+  {
+    "A_name" : "test_flatMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 674, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 675, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 677, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe<Int>.just(1).flatMap { .just($0 * 2) }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 675, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 677, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe<Int>.just(1).flatMap { .just($0 * 2) }\n        }"
+  },
+  {
+    "A_name" : "test_ifEmptyDefault",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 687, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 688, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 690, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe<Int>.empty().ifEmpty(default: 5) as Single<Int>\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 688, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 690, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe<Int>.empty().ifEmpty(default: 5) as Single<Int>\n        }"
+  },
+  {
+    "A_name" : "test_ifEmptySwitchToMaybe",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 700, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 701, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 702, Column: 9",
+        "H_initialValue" : "Maybe<Int>.empty()"
+      },
+      {
+        "A_name" : "switchSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 703, Column: 9",
+        "H_initialValue" : "Maybe.just(10)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 705, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            source.ifEmpty(switchTo: switchSource) as Maybe<Int>\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 701, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 702, Column: 9",
+    "H_initialValue" : "Maybe<Int>.empty()"
+  },
+  {
+    "A_name" : "switchSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 703, Column: 9",
+    "H_initialValue" : "Maybe.just(10)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 705, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            source.ifEmpty(switchTo: switchSource) as Maybe<Int>\n        }"
+  },
+  {
+    "A_name" : "test_ifEmptySwitchToSingle",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 715, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 716, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 717, Column: 9",
+        "H_initialValue" : "Maybe<Int>.empty()"
+      },
+      {
+        "A_name" : "switchSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 718, Column: 9",
+        "H_initialValue" : "Single.just(10)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 720, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            source.ifEmpty(switchTo: switchSource)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 716, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 717, Column: 9",
+    "H_initialValue" : "Maybe<Int>.empty()"
+  },
+  {
+    "A_name" : "switchSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 718, Column: 9",
+    "H_initialValue" : "Single.just(10)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 720, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            source.ifEmpty(switchTo: switchSource)\n        }"
+  },
+  {
+    "A_name" : "MaybeTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 731, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "test_zip_tuple",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 732, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 733, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 735, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            (Maybe.zip(Maybe.just(1), Maybe.just(2)) as Maybe<(Int, Int)>).map { $0.0 + $0.1 }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_zip_resultSelector",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 745, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 746, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 748, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Maybe.zip(Maybe.just(1), Maybe.just(2)) { $0 + $1 }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "test_zip_tuple",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 732, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 733, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 735, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            (Maybe.zip(Maybe.just(1), Maybe.just(2)) as Maybe<(Int, Int)>).map { $0.0 + $0.1 }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 733, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 735, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            (Maybe.zip(Maybe.just(1), Maybe.just(2)) as Maybe<(Int, Int)>).map { $0.0 + $0.1 }\n        }"
+  },
+  {
+    "A_name" : "test_zip_resultSelector",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 745, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 746, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 748, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Maybe.zip(Maybe.just(1), Maybe.just(2)) { $0 + $1 }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 746, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 748, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Maybe.zip(Maybe.just(1), Maybe.just(2)) { $0 + $1 }\n        }"
+  },
+  {
+    "A_name" : "MaybeTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 759, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testDefaultErrorHandler",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 760, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "loggedErrors",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 761, Column: 9",
+            "H_initialValue" : "[TestError]()"
+          },
+          {
+            "A_name" : "originalErrorHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MaybeTest.swift - Line: 766, Column: 9",
+            "H_initialValue" : "Hooks.defaultErrorHandler"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testDefaultErrorHandler",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 760, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "loggedErrors",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 761, Column: 9",
+        "H_initialValue" : "[TestError]()"
+      },
+      {
+        "A_name" : "originalErrorHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MaybeTest.swift - Line: 766, Column: 9",
+        "H_initialValue" : "Hooks.defaultErrorHandler"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "loggedErrors",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 761, Column: 9",
+    "H_initialValue" : "[TestError]()"
+  },
+  {
+    "A_name" : "originalErrorHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MaybeTest.swift - Line: 766, Column: 9",
+    "H_initialValue" : "Hooks.defaultErrorHandler"
+  }
+]

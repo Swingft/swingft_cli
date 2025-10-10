@@ -1,0 +1,315 @@
+[
+  {
+    "A_name" : "BlockUserService",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DefaultBlockUserService.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "fetchBlockedUsers",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultBlockUserService.swift - Line: 12, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> AnyPublisher<BlockedUserListResponseDTO, Error>"
+      },
+      {
+        "A_name" : "unblockUser",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultBlockUserService.swift - Line: 13, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "id"
+        ],
+        "J_returnType" : "-> AnyPublisher<Void, Error>"
+      },
+      {
+        "A_name" : "blockUser",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultBlockUserService.swift - Line: 14, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "id"
+        ],
+        "J_returnType" : "-> AnyPublisher<Void, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "fetchBlockedUsers",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultBlockUserService.swift - Line: 12, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> AnyPublisher<BlockedUserListResponseDTO, Error>"
+  },
+  {
+    "A_name" : "unblockUser",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultBlockUserService.swift - Line: 13, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "id"
+    ],
+    "J_returnType" : "-> AnyPublisher<Void, Error>"
+  },
+  {
+    "A_name" : "blockUser",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultBlockUserService.swift - Line: 14, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "id"
+    ],
+    "J_returnType" : "-> AnyPublisher<Void, Error>"
+  },
+  {
+    "A_name" : "MockBlockUserService",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseService<BlockUserAPI>",
+      "BlockUserService"
+    ],
+    "F_location" : "DefaultBlockUserService.swift - Line: 18, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "mockDTOs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultBlockUserService.swift - Line: 20, Column: 5",
+        "H_initialValue" : "BlockedUserListResponseDTO.sampleData.blockList"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultBlockUserService.swift - Line: 22, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "fetchBlockedUsers",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultBlockUserService.swift - Line: 24, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> AnyPublisher<BlockedUserListResponseDTO, Error>"
+      },
+      {
+        "A_name" : "unblockUser",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultBlockUserService.swift - Line: 31, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "id"
+        ],
+        "J_returnType" : "-> AnyPublisher<Void, Error>"
+      },
+      {
+        "A_name" : "blockUser",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultBlockUserService.swift - Line: 37, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "id"
+        ],
+        "J_returnType" : "-> AnyPublisher<Void, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "mockDTOs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultBlockUserService.swift - Line: 20, Column: 5",
+    "H_initialValue" : "BlockedUserListResponseDTO.sampleData.blockList"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultBlockUserService.swift - Line: 22, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fetchBlockedUsers",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultBlockUserService.swift - Line: 24, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> AnyPublisher<BlockedUserListResponseDTO, Error>"
+  },
+  {
+    "A_name" : "unblockUser",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultBlockUserService.swift - Line: 31, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "id"
+    ],
+    "J_returnType" : "-> AnyPublisher<Void, Error>"
+  },
+  {
+    "A_name" : "blockUser",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultBlockUserService.swift - Line: 37, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "id"
+    ],
+    "J_returnType" : "-> AnyPublisher<Void, Error>"
+  }
+]

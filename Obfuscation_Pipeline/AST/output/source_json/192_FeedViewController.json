@@ -1,0 +1,886 @@
+[
+  {
+    "A_name" : "FeedViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIViewController<FeedViewModel>"
+    ],
+    "F_location" : "FeedViewController.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "onLikeTapped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 14, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "input",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 18, Column: 5",
+        "H_initialValue" : "FeedViewModel.Input()"
+      },
+      {
+        "A_name" : "feedView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 19, Column: 5",
+        "H_initialValue" : "FeedView()"
+      },
+      {
+        "A_name" : "dialog",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 20, Column: 5",
+        "H_initialValue" : "Dialog()"
+      },
+      {
+        "A_name" : "recommendFeedVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "FeedViewController.swift - Line: 22, Column: 5",
+        "H_initialValue" : "{\n        let vc = diContainer.makeFeedListViewController(type: .recommended)\n        vc.onHideTapped = { [weak self] row in\n            self?.showHideDialog(listVC: vc, row: row)\n        }\n        vc.onReportTapped = { [weak self] in\n            self?.showReportDialog()\n        }\n        vc.onRefresh = { [weak self] in\n            self?.showToast(message: \"피드의 일기를 모두 확인했어요.\")\n        }\n        vc.onLikeTapped = { [weak self] diaryId, isLiked in\n            guard let self else { return }\n            self.input.likeTapped.send((diaryId, isLiked))\n\n            if isLiked {\n                self.showToastMessage(message: \"공감한 일기에 추가되었어요.\", diaryId: diaryId)\n            }\n        }\n        return vc\n    }()"
+      },
+      {
+        "A_name" : "followingFeedVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "FeedViewController.swift - Line: 44, Column: 5",
+        "H_initialValue" : "{\n        let vc = diContainer.makeFeedListViewController(type: .following)\n        vc.onHideTapped = { [weak self] row in\n            self?.showHideDialog(listVC: vc, row: row)\n        }\n        vc.onReportTapped = { [weak self] in\n            self?.showReportDialog()\n        }\n        vc.onRefresh = { [weak self] in\n            self?.showToast(message: \"피드의 일기를 모두 확인했어요.\")\n        }\n        vc.onLikeTapped = { [weak self] diaryId, isLiked in\n            guard let self else { return }\n            self.input.likeTapped.send((diaryId, isLiked))\n\n            if isLiked {\n                self.showToastMessage(message: \"공감한 일기에 추가되었어요.\", diaryId: diaryId)\n            }\n        }\n        return vc\n    }()"
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedViewController.swift - Line: 68, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "loadView",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedViewController.swift - Line: 76, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "viewWillAppear",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedViewController.swift - Line: 80, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "viewDidAppear",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedViewController.swift - Line: 86, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "bind",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedViewController.swift - Line: 94, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "output",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedViewController.swift - Line: 95, Column: 9",
+            "H_initialValue" : "viewModel.transform(input: input)"
+          }
+        ],
+        "I_parameterType" : [
+          "FeedViewModel"
+        ],
+        "I_parameters" : [
+          "viewModel"
+        ]
+      },
+      {
+        "A_name" : "addTarget",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "FeedViewController.swift - Line: 107, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "didTapSearch",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "FeedViewController.swift - Line: 124, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "feedSearchVC",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedViewController.swift - Line: 125, Column: 9",
+            "H_initialValue" : "self.diContainer.makeFeedSearchViewController()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "navigateToMyProfile",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 130, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "myProfileVC",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedViewController.swift - Line: 131, Column: 9",
+            "H_initialValue" : "diContainer.makeMyFeedProfileViewController()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "showToast",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 138, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "message"
+        ]
+      },
+      {
+        "A_name" : "showToastMessage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 142, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "Int"
+        ],
+        "I_parameters" : [
+          "message",
+          "diaryId"
+        ]
+      },
+      {
+        "A_name" : "showHideDialog",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 153, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FeedListViewController",
+          "Int"
+        ],
+        "I_parameters" : [
+          "listVC",
+          "row"
+        ]
+      },
+      {
+        "A_name" : "showReportDialog",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 181, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "openReportPage",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 206, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "safariVC",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedViewController.swift - Line: 210, Column: 9",
+            "H_initialValue" : "SFSafariViewController(url: url)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "onLikeTapped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 14, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "input",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 18, Column: 5",
+    "H_initialValue" : "FeedViewModel.Input()"
+  },
+  {
+    "A_name" : "feedView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 19, Column: 5",
+    "H_initialValue" : "FeedView()"
+  },
+  {
+    "A_name" : "dialog",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 20, Column: 5",
+    "H_initialValue" : "Dialog()"
+  },
+  {
+    "A_name" : "recommendFeedVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "FeedViewController.swift - Line: 22, Column: 5",
+    "H_initialValue" : "{\n        let vc = diContainer.makeFeedListViewController(type: .recommended)\n        vc.onHideTapped = { [weak self] row in\n            self?.showHideDialog(listVC: vc, row: row)\n        }\n        vc.onReportTapped = { [weak self] in\n            self?.showReportDialog()\n        }\n        vc.onRefresh = { [weak self] in\n            self?.showToast(message: \"피드의 일기를 모두 확인했어요.\")\n        }\n        vc.onLikeTapped = { [weak self] diaryId, isLiked in\n            guard let self else { return }\n            self.input.likeTapped.send((diaryId, isLiked))\n\n            if isLiked {\n                self.showToastMessage(message: \"공감한 일기에 추가되었어요.\", diaryId: diaryId)\n            }\n        }\n        return vc\n    }()"
+  },
+  {
+    "A_name" : "vc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 23, Column: 9",
+    "H_initialValue" : "diContainer.makeFeedListViewController(type: .recommended)"
+  },
+  {
+    "A_name" : "followingFeedVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "FeedViewController.swift - Line: 44, Column: 5",
+    "H_initialValue" : "{\n        let vc = diContainer.makeFeedListViewController(type: .following)\n        vc.onHideTapped = { [weak self] row in\n            self?.showHideDialog(listVC: vc, row: row)\n        }\n        vc.onReportTapped = { [weak self] in\n            self?.showReportDialog()\n        }\n        vc.onRefresh = { [weak self] in\n            self?.showToast(message: \"피드의 일기를 모두 확인했어요.\")\n        }\n        vc.onLikeTapped = { [weak self] diaryId, isLiked in\n            guard let self else { return }\n            self.input.likeTapped.send((diaryId, isLiked))\n\n            if isLiked {\n                self.showToastMessage(message: \"공감한 일기에 추가되었어요.\", diaryId: diaryId)\n            }\n        }\n        return vc\n    }()"
+  },
+  {
+    "A_name" : "vc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 45, Column: 9",
+    "H_initialValue" : "diContainer.makeFeedListViewController(type: .following)"
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedViewController.swift - Line: 68, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "loadView",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedViewController.swift - Line: 76, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "viewWillAppear",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedViewController.swift - Line: 80, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "viewDidAppear",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedViewController.swift - Line: 86, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "bind",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedViewController.swift - Line: 94, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "output",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 95, Column: 9",
+        "H_initialValue" : "viewModel.transform(input: input)"
+      }
+    ],
+    "I_parameterType" : [
+      "FeedViewModel"
+    ],
+    "I_parameters" : [
+      "viewModel"
+    ]
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 95, Column: 9",
+    "H_initialValue" : "viewModel.transform(input: input)"
+  },
+  {
+    "A_name" : "addTarget",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "FeedViewController.swift - Line: 107, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didTapSearch",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "FeedViewController.swift - Line: 124, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "feedSearchVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 125, Column: 9",
+        "H_initialValue" : "self.diContainer.makeFeedSearchViewController()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "feedSearchVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 125, Column: 9",
+    "H_initialValue" : "self.diContainer.makeFeedSearchViewController()"
+  },
+  {
+    "A_name" : "navigateToMyProfile",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 130, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "myProfileVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 131, Column: 9",
+        "H_initialValue" : "diContainer.makeMyFeedProfileViewController()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "myProfileVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 131, Column: 9",
+    "H_initialValue" : "diContainer.makeMyFeedProfileViewController()"
+  },
+  {
+    "A_name" : "showToast",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 138, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "message"
+    ]
+  },
+  {
+    "A_name" : "showToastMessage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 142, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Int"
+    ],
+    "I_parameters" : [
+      "message",
+      "diaryId"
+    ]
+  },
+  {
+    "A_name" : "myVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 145, Column: 13",
+    "H_initialValue" : "self.diContainer.makeMyFeedProfileViewController()"
+  },
+  {
+    "A_name" : "showHideDialog",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 153, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FeedListViewController",
+      "Int"
+    ],
+    "I_parameters" : [
+      "listVC",
+      "row"
+    ]
+  },
+  {
+    "A_name" : "diaryId",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 171, Column: 17",
+    "H_initialValue" : "listVC.feedCellView.feeds[row].diaryID"
+  },
+  {
+    "A_name" : "showReportDialog",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 181, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "openReportPage",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 206, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "safariVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 210, Column: 9",
+        "H_initialValue" : "SFSafariViewController(url: url)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "safariVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 210, Column: 9",
+    "H_initialValue" : "SFSafariViewController(url: url)"
+  },
+  {
+    "A_name" : "FeedViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 217, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "resetRecommendFeed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 218, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "resetFollowingFeed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 223, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "handleFeedTabSelected",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedViewController.swift - Line: 228, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "isReSelected"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "resetRecommendFeed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 218, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "resetFollowingFeed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 223, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "handleFeedTabSelected",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedViewController.swift - Line: 228, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "isReSelected"
+    ]
+  }
+]

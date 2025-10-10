@@ -1,0 +1,1604 @@
+[
+  {
+    "A_name" : "UnsafeAtomicState",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 17, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 20, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 26, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "State"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "deinitialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 32, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "`is`",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 44, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "State"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "tryTransition",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 56, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "State",
+      "State"
+    ],
+    "I_parameters" : [
+      "from",
+      "to"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 62, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 68, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "State"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "deinitialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 73, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "`is`",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 82, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "State"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "tryTransition",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 93, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "State",
+      "State"
+    ],
+    "I_parameters" : [
+      "from",
+      "to"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "Lock",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "LockProtocol"
+    ],
+    "F_location" : "Atomic.swift - Line: 107, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "PthreadLock",
+        "B_kind" : "class",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "final"
+        ],
+        "E_adoptedClassProtocols" : [
+          "Lock"
+        ],
+        "F_location" : "Atomic.swift - Line: 141, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "_lock",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Atomic.swift - Line: 142, Column: 3",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Atomic.swift - Line: 144, Column: 3",
+            "G_members" : [
+              {
+                "A_name" : "attr",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "Atomic.swift - Line: 148, Column: 4",
+                "H_initialValue" : "UnsafeMutablePointer<pthread_mutexattr_t>.allocate(capacity: 1)"
+              },
+              {
+                "A_name" : "status",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "Atomic.swift - Line: 160, Column: 4",
+                "H_initialValue" : "pthread_mutex_init(_lock, attr)"
+              }
+            ],
+            "I_parameterType" : [
+              "Bool"
+            ],
+            "I_parameters" : [
+              "recursive"
+            ]
+          },
+          {
+            "A_name" : "lock",
+            "B_kind" : "function",
+            "C_accessLevel" : "override",
+            "D_attributes" : [
+              "override"
+            ],
+            "F_location" : "Atomic.swift - Line: 166, Column: 3",
+            "G_members" : [
+              {
+                "A_name" : "status",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "Atomic.swift - Line: 167, Column: 4",
+                "H_initialValue" : "pthread_mutex_lock(_lock)"
+              }
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "unlock",
+            "B_kind" : "function",
+            "C_accessLevel" : "override",
+            "D_attributes" : [
+              "override"
+            ],
+            "F_location" : "Atomic.swift - Line: 171, Column: 3",
+            "G_members" : [
+              {
+                "A_name" : "status",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "Atomic.swift - Line: 172, Column: 4",
+                "H_initialValue" : "pthread_mutex_unlock(_lock)"
+              }
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "`try`",
+            "B_kind" : "function",
+            "C_accessLevel" : "override",
+            "D_attributes" : [
+              "override"
+            ],
+            "F_location" : "Atomic.swift - Line: 176, Column: 3",
+            "G_members" : [
+              {
+                "A_name" : "status",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "Atomic.swift - Line: 177, Column: 4",
+                "H_initialValue" : "pthread_mutex_trylock(_lock)"
+              }
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ],
+            "J_returnType" : "-> Bool"
+          }
+        ]
+      },
+      {
+        "A_name" : "make",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Atomic.swift - Line: 198, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 208, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 210, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "unlock",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 211, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "`try`",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 212, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "UnfairLock",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available",
+      "available",
+      "available",
+      "available",
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Lock"
+    ],
+    "F_location" : "Atomic.swift - Line: 109, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "_lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 114, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Atomic.swift - Line: 116, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Atomic.swift - Line: 122, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "unlock",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Atomic.swift - Line: 126, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "`try`",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Atomic.swift - Line: 130, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "_lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 114, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Atomic.swift - Line: 116, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Atomic.swift - Line: 122, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "unlock",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Atomic.swift - Line: 126, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "`try`",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Atomic.swift - Line: 130, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "PthreadLock",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Lock"
+    ],
+    "F_location" : "Atomic.swift - Line: 141, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "_lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 142, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 144, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "attr",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Atomic.swift - Line: 148, Column: 4",
+            "H_initialValue" : "UnsafeMutablePointer<pthread_mutexattr_t>.allocate(capacity: 1)"
+          },
+          {
+            "A_name" : "status",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Atomic.swift - Line: 160, Column: 4",
+            "H_initialValue" : "pthread_mutex_init(_lock, attr)"
+          }
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "recursive"
+        ]
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Atomic.swift - Line: 166, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "status",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Atomic.swift - Line: 167, Column: 4",
+            "H_initialValue" : "pthread_mutex_lock(_lock)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "unlock",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Atomic.swift - Line: 171, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "status",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Atomic.swift - Line: 172, Column: 4",
+            "H_initialValue" : "pthread_mutex_unlock(_lock)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "`try`",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Atomic.swift - Line: 176, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "status",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Atomic.swift - Line: 177, Column: 4",
+            "H_initialValue" : "pthread_mutex_trylock(_lock)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "_lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 142, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 144, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "attr",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 148, Column: 4",
+        "H_initialValue" : "UnsafeMutablePointer<pthread_mutexattr_t>.allocate(capacity: 1)"
+      },
+      {
+        "A_name" : "status",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 160, Column: 4",
+        "H_initialValue" : "pthread_mutex_init(_lock, attr)"
+      }
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "recursive"
+    ]
+  },
+  {
+    "A_name" : "attr",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 148, Column: 4",
+    "H_initialValue" : "UnsafeMutablePointer<pthread_mutexattr_t>.allocate(capacity: 1)"
+  },
+  {
+    "A_name" : "status",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 160, Column: 4",
+    "H_initialValue" : "pthread_mutex_init(_lock, attr)"
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Atomic.swift - Line: 166, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "status",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 167, Column: 4",
+        "H_initialValue" : "pthread_mutex_lock(_lock)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "status",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 167, Column: 4",
+    "H_initialValue" : "pthread_mutex_lock(_lock)"
+  },
+  {
+    "A_name" : "unlock",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Atomic.swift - Line: 171, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "status",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 172, Column: 4",
+        "H_initialValue" : "pthread_mutex_unlock(_lock)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "status",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 172, Column: 4",
+    "H_initialValue" : "pthread_mutex_unlock(_lock)"
+  },
+  {
+    "A_name" : "`try`",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Atomic.swift - Line: 176, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "status",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 177, Column: 4",
+        "H_initialValue" : "pthread_mutex_trylock(_lock)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "status",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 177, Column: 4",
+    "H_initialValue" : "pthread_mutex_trylock(_lock)"
+  },
+  {
+    "A_name" : "status",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 190, Column: 4",
+    "H_initialValue" : "pthread_mutex_destroy(_lock)"
+  },
+  {
+    "A_name" : "make",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Atomic.swift - Line: 198, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 208, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 210, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "unlock",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 211, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "`try`",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 212, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "LockProtocol",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 215, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "make",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Atomic.swift - Line: 216, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 218, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "unlock",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 219, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "`try`",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 220, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "make",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Atomic.swift - Line: 216, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 218, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "unlock",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 219, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "`try`",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 220, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "NoLock",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "LockProtocol"
+    ],
+    "F_location" : "Atomic.swift - Line: 223, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "make",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Atomic.swift - Line: 224, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> NoLock"
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 226, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "unlock",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 227, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "`try`",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 228, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "make",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Atomic.swift - Line: 224, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> NoLock"
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 226, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "unlock",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 227, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "`try`",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 228, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "Atomic",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 232, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 233, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 234, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 237, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Atomic.swift - Line: 251, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Value"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "modify",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Atomic.swift - Line: 262, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(inout Value) throws -> Result"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Result"
+      },
+      {
+        "A_name" : "withValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Atomic.swift - Line: 277, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(Value) throws -> Result"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Result"
+      },
+      {
+        "A_name" : "swap",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Atomic.swift - Line: 291, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Value"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Value"
+      }
+    ]
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 233, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 234, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 237, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 251, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Value"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "modify",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Atomic.swift - Line: 262, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(inout Value) throws -> Result"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Result"
+  },
+  {
+    "A_name" : "withValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Atomic.swift - Line: 277, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(Value) throws -> Result"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Result"
+  },
+  {
+    "A_name" : "swap",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Atomic.swift - Line: 291, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Value"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Value"
+  },
+  {
+    "A_name" : "oldValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Atomic.swift - Line: 294, Column: 4",
+    "H_initialValue" : "value"
+  }
+]

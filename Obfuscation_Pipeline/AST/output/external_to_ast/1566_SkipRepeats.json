@@ -1,0 +1,231 @@
+[
+  {
+    "A_name" : "Operators",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SkipRepeats.swift - Line: 1, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "SkipRepeats",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Observer<Value, Error>"
+    ],
+    "F_location" : "SkipRepeats.swift - Line: 2, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "downstream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SkipRepeats.swift - Line: 3, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isEquivalent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SkipRepeats.swift - Line: 4, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "previous",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SkipRepeats.swift - Line: 6, Column: 3",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SkipRepeats.swift - Line: 8, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer<Value, Error>",
+          "@escaping (Value, Value) -> Bool"
+        ],
+        "I_parameters" : [
+          "downstream",
+          "isEquivalent"
+        ]
+      },
+      {
+        "A_name" : "receive",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SkipRepeats.swift - Line: 13, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "isRepeating",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SkipRepeats.swift - Line: 14, Column: 4",
+            "H_initialValue" : "previous.map { isEquivalent($0, value) } ?? false"
+          }
+        ],
+        "I_parameterType" : [
+          "Value"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "terminate",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SkipRepeats.swift - Line: 22, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Termination<Error>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "downstream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SkipRepeats.swift - Line: 3, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isEquivalent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SkipRepeats.swift - Line: 4, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "previous",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SkipRepeats.swift - Line: 6, Column: 3",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SkipRepeats.swift - Line: 8, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer<Value, Error>",
+      "@escaping (Value, Value) -> Bool"
+    ],
+    "I_parameters" : [
+      "downstream",
+      "isEquivalent"
+    ]
+  },
+  {
+    "A_name" : "receive",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SkipRepeats.swift - Line: 13, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "isRepeating",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SkipRepeats.swift - Line: 14, Column: 4",
+        "H_initialValue" : "previous.map { isEquivalent($0, value) } ?? false"
+      }
+    ],
+    "I_parameterType" : [
+      "Value"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "isRepeating",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SkipRepeats.swift - Line: 14, Column: 4",
+    "H_initialValue" : "previous.map { isEquivalent($0, value) } ?? false"
+  },
+  {
+    "A_name" : "terminate",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SkipRepeats.swift - Line: 22, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Termination<Error>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  }
+]

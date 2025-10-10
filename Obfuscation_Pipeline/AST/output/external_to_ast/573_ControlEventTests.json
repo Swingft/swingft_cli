@@ -1,0 +1,190 @@
+[
+  {
+    "A_name" : "ControlEventTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "ControlEventTests.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testObservingIsAlwaysHappeningOnMainQueue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ControlEventTests.swift - Line: 14, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "hotObservable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ControlEventTests.swift - Line: 15, Column: 9",
+            "H_initialValue" : "MainThreadPrimitiveHotObservable<Int>()"
+          },
+          {
+            "A_name" : "observedOnMainQueue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ControlEventTests.swift - Line: 17, Column: 9",
+            "H_initialValue" : "false"
+          },
+          {
+            "A_name" : "expectSubscribeOffMainQueue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ControlEventTests.swift - Line: 19, Column: 9",
+            "H_initialValue" : "expectation(description: \"Did subscribe off main thread\")"
+          },
+          {
+            "A_name" : "controlProperty",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ControlEventTests.swift - Line: 21, Column: 9",
+            "H_initialValue" : "ControlEvent(events: Observable.deferred { () -> Observable<Int> in\n            XCTAssertTrue(DispatchQueue.isMain)\n            observedOnMainQueue = true\n            return hotObservable.asObservable()\n        })"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testObservingIsAlwaysHappeningOnMainQueue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ControlEventTests.swift - Line: 14, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "hotObservable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ControlEventTests.swift - Line: 15, Column: 9",
+        "H_initialValue" : "MainThreadPrimitiveHotObservable<Int>()"
+      },
+      {
+        "A_name" : "observedOnMainQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ControlEventTests.swift - Line: 17, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "expectSubscribeOffMainQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ControlEventTests.swift - Line: 19, Column: 9",
+        "H_initialValue" : "expectation(description: \"Did subscribe off main thread\")"
+      },
+      {
+        "A_name" : "controlProperty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ControlEventTests.swift - Line: 21, Column: 9",
+        "H_initialValue" : "ControlEvent(events: Observable.deferred { () -> Observable<Int> in\n            XCTAssertTrue(DispatchQueue.isMain)\n            observedOnMainQueue = true\n            return hotObservable.asObservable()\n        })"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "hotObservable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ControlEventTests.swift - Line: 15, Column: 9",
+    "H_initialValue" : "MainThreadPrimitiveHotObservable<Int>()"
+  },
+  {
+    "A_name" : "observedOnMainQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ControlEventTests.swift - Line: 17, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "expectSubscribeOffMainQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ControlEventTests.swift - Line: 19, Column: 9",
+    "H_initialValue" : "expectation(description: \"Did subscribe off main thread\")"
+  },
+  {
+    "A_name" : "controlProperty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ControlEventTests.swift - Line: 21, Column: 9",
+    "H_initialValue" : "ControlEvent(events: Observable.deferred { () -> Observable<Int> in\n            XCTAssertTrue(DispatchQueue.isMain)\n            observedOnMainQueue = true\n            return hotObservable.asObservable()\n        })"
+  },
+  {
+    "A_name" : "d",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ControlEventTests.swift - Line: 28, Column: 13",
+    "H_initialValue" : "controlProperty.asObservable().subscribe { n in\n\n            }"
+  },
+  {
+    "A_name" : "d2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ControlEventTests.swift - Line: 31, Column: 13",
+    "H_initialValue" : "controlProperty.subscribe { n in\n\n            }"
+  }
+]

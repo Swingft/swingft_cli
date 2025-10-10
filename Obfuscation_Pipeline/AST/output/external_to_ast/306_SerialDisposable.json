@@ -1,0 +1,257 @@
+[
+  {
+    "A_name" : "SerialDisposable",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "DisposeBase",
+      "Cancelable"
+    ],
+    "F_location" : "SerialDisposable.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDisposable.swift - Line: 11, Column: 5",
+        "H_initialValue" : "SpinLock()"
+      },
+      {
+        "A_name" : "current",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDisposable.swift - Line: 14, Column: 5",
+        "H_initialValue" : "nil as Disposable?"
+      },
+      {
+        "A_name" : "disposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDisposable.swift - Line: 15, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDisposable.swift - Line: 18, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SerialDisposable.swift - Line: 23, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "disposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDisposable.swift - Line: 34, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDisposable.swift - Line: 59, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "_dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDisposable.swift - Line: 63, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable?"
+      }
+    ]
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDisposable.swift - Line: 11, Column: 5",
+    "H_initialValue" : "SpinLock()"
+  },
+  {
+    "A_name" : "current",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDisposable.swift - Line: 14, Column: 5",
+    "H_initialValue" : "nil as Disposable?"
+  },
+  {
+    "A_name" : "disposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDisposable.swift - Line: 15, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDisposable.swift - Line: 18, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SerialDisposable.swift - Line: 23, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDisposable.swift - Line: 34, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDisposable.swift - Line: 41, Column: 13",
+    "H_initialValue" : "self.lock.performLocked {\n                if self.isDisposed {\n                    return newDisposable\n                }\n                else {\n                    let toDispose = self.current\n                    self.current = newDisposable\n                    return toDispose\n                }\n            }"
+  },
+  {
+    "A_name" : "toDispose",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDisposable.swift - Line: 46, Column: 21",
+    "H_initialValue" : "self.current"
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDisposable.swift - Line: 59, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "_dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDisposable.swift - Line: 63, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable?"
+  },
+  {
+    "A_name" : "current",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDisposable.swift - Line: 68, Column: 13",
+    "H_initialValue" : "self.current"
+  }
+]

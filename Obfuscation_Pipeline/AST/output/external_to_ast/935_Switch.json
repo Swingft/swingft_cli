@@ -1,0 +1,1323 @@
+[
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "flatMapLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 22, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Element) throws -> Source"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<Source.Element>"
+      },
+      {
+        "A_name" : "flatMapLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 39, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Element) throws -> Source"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Infallible<Source.Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "flatMapLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 22, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Element) throws -> Source"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<Source.Element>"
+  },
+  {
+    "A_name" : "flatMapLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 39, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Element) throws -> Source"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Infallible<Source.Element>"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 45, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "switchLatest",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 58, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Observable<Element.Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "switchLatest",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 58, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Observable<Element.Element>"
+  },
+  {
+    "A_name" : "SwitchSink",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sink<Observer>",
+      "ObserverType"
+    ],
+    "F_location" : "Switch.swift - Line: 63, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "subscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 68, Column: 5",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "innerSubscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 69, Column: 5",
+        "H_initialValue" : "SerialDisposable()"
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 71, Column: 5",
+        "H_initialValue" : "RecursiveLock()"
+      },
+      {
+        "A_name" : "stopped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 74, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "latest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 75, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "hasLatest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 76, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Switch.swift - Line: 78, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 82, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Switch.swift - Line: 83, Column: 9",
+            "H_initialValue" : "source.subscribe(self)"
+          }
+        ],
+        "I_parameterType" : [
+          "Observable<SourceType>"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "performMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 88, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SourceType"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Source"
+      },
+      {
+        "A_name" : "nextElementArrived",
+        "B_kind" : "function",
+        "C_accessLevel" : "final",
+        "D_attributes" : [
+          "inline",
+          "final"
+        ],
+        "F_location" : "Switch.swift - Line: 92, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element"
+        ],
+        "I_parameters" : [
+          "element"
+        ],
+        "J_returnType" : "-> (Int, Observable<Source.Element>)?"
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 110, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "subscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 68, Column: 5",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "innerSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 69, Column: 5",
+    "H_initialValue" : "SerialDisposable()"
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 71, Column: 5",
+    "H_initialValue" : "RecursiveLock()"
+  },
+  {
+    "A_name" : "stopped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 74, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "latest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 75, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "hasLatest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 76, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Switch.swift - Line: 78, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 82, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 83, Column: 9",
+        "H_initialValue" : "source.subscribe(self)"
+      }
+    ],
+    "I_parameterType" : [
+      "Observable<SourceType>"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 83, Column: 9",
+    "H_initialValue" : "source.subscribe(self)"
+  },
+  {
+    "A_name" : "performMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 88, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SourceType"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Source"
+  },
+  {
+    "A_name" : "nextElementArrived",
+    "B_kind" : "function",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "inline",
+      "final"
+    ],
+    "F_location" : "Switch.swift - Line: 92, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element"
+    ],
+    "I_parameters" : [
+      "element"
+    ],
+    "J_returnType" : "-> (Int, Observable<Source.Element>)?"
+  },
+  {
+    "A_name" : "observable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 97, Column: 13",
+    "H_initialValue" : "try self.performMap(element).asObservable()"
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 110, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "d",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 114, Column: 17",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 117, Column: 17",
+    "H_initialValue" : "SwitchSinkIter(parent: self, id: latest, this: d)"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 118, Column: 17",
+    "H_initialValue" : "observable.subscribe(observer)"
+  },
+  {
+    "A_name" : "SwitchSinkIter",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ObserverType",
+      "LockOwnerType",
+      "SynchronizedOnType"
+    ],
+    "F_location" : "Switch.swift - Line: 139, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 146, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "id",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 147, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "this",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 148, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 150, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 154, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Int",
+          "Disposable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "id",
+          "this"
+        ]
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 160, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "synchronized_on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 164, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 146, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "id",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 147, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "this",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 148, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 150, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 154, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Int",
+      "Disposable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "id",
+      "this"
+    ]
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 160, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "synchronized_on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 164, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "SwitchIdentitySink",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "SwitchSink<Source, Source, Observer>"
+    ],
+    "F_location" : "Switch.swift - Line: 193, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Switch.swift - Line: 195, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "performMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Switch.swift - Line: 199, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Source"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Switch.swift - Line: 195, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "performMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Switch.swift - Line: 199, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Source"
+  },
+  {
+    "A_name" : "MapSwitchSink",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "SwitchSink<SourceType, Source, Observer>"
+    ],
+    "F_location" : "Switch.swift - Line: 204, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "selector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 207, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 209, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping Selector",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "selector",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "performMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Switch.swift - Line: 214, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SourceType"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Source"
+      }
+    ]
+  },
+  {
+    "A_name" : "selector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 207, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 209, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping Selector",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "selector",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "performMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Switch.swift - Line: 214, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SourceType"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Source"
+  },
+  {
+    "A_name" : "Switch",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Source.Element>"
+    ],
+    "F_location" : "Switch.swift - Line: 221, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 222, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 224, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<Source>"
+        ],
+        "I_parameters" : [
+          "source"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Switch.swift - Line: 228, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Switch.swift - Line: 229, Column: 9",
+            "H_initialValue" : "SwitchIdentitySink<Source, Observer>(observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Switch.swift - Line: 230, Column: 9",
+            "H_initialValue" : "sink.run(self.source)"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 222, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 224, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<Source>"
+    ],
+    "I_parameters" : [
+      "source"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Switch.swift - Line: 228, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 229, Column: 9",
+        "H_initialValue" : "SwitchIdentitySink<Source, Observer>(observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 230, Column: 9",
+        "H_initialValue" : "sink.run(self.source)"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 229, Column: 9",
+    "H_initialValue" : "SwitchIdentitySink<Source, Observer>(observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 230, Column: 9",
+    "H_initialValue" : "sink.run(self.source)"
+  },
+  {
+    "A_name" : "FlatMapLatest",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Source.Element>"
+    ],
+    "F_location" : "Switch.swift - Line: 235, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 238, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "selector",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 239, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 241, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<SourceType>",
+          "@escaping Selector"
+        ],
+        "I_parameters" : [
+          "source",
+          "selector"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Switch.swift - Line: 246, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Switch.swift - Line: 247, Column: 9",
+            "H_initialValue" : "MapSwitchSink<SourceType, Source, Observer>(selector: self.selector, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Switch.swift - Line: 248, Column: 9",
+            "H_initialValue" : "sink.run(self.source)"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 238, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "selector",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 239, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 241, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<SourceType>",
+      "@escaping Selector"
+    ],
+    "I_parameters" : [
+      "source",
+      "selector"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Switch.swift - Line: 246, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 247, Column: 9",
+        "H_initialValue" : "MapSwitchSink<SourceType, Source, Observer>(selector: self.selector, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Switch.swift - Line: 248, Column: 9",
+        "H_initialValue" : "sink.run(self.source)"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 247, Column: 9",
+    "H_initialValue" : "MapSwitchSink<SourceType, Source, Observer>(selector: self.selector, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Switch.swift - Line: 248, Column: 9",
+    "H_initialValue" : "sink.run(self.source)"
+  }
+]

@@ -1,0 +1,582 @@
+[
+  {
+    "A_name" : "reuseIdentifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 30, Column: 1",
+    "H_initialValue" : "\"ImageDataProviderCell\""
+  },
+  {
+    "A_name" : "ImageDataProviderCollectionViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UICollectionViewController"
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 32, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "model",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 34, Column: 5",
+        "H_initialValue" : "[\n        (\"A\", .red), (\"B\", .green), (\"C\", .blue), (\"D\", .yellow), (\"赵\", .purple), (\"钱\", .orange),\n        (\"孙\", .black), (\"李\", .brown), (\"ア\", .darkGray), (\"イ\", .cyan), (\"ウ\", .magenta)]"
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 38, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 44, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "numberOfItemsInSection"
+        ],
+        "J_returnType" : "-> Int"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 48, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "cell",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 49, Column: 9",
+            "H_initialValue" : "collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell"
+          },
+          {
+            "A_name" : "pair",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 51, Column: 9",
+            "H_initialValue" : "model[indexPath.row]"
+          },
+          {
+            "A_name" : "provider",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 52, Column: 9",
+            "H_initialValue" : "UserNameLetterIconImageProvider(userNameFirstLetter: pair.0, backgroundColor: pair.1)"
+          }
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "cellForItemAt"
+        ],
+        "J_returnType" : "-> UICollectionViewCell"
+      }
+    ]
+  },
+  {
+    "A_name" : "model",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 34, Column: 5",
+    "H_initialValue" : "[\n        (\"A\", .red), (\"B\", .green), (\"C\", .blue), (\"D\", .yellow), (\"赵\", .purple), (\"钱\", .orange),\n        (\"孙\", .black), (\"李\", .brown), (\"ア\", .darkGray), (\"イ\", .cyan), (\"ウ\", .magenta)]"
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 38, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 44, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "numberOfItemsInSection"
+    ],
+    "J_returnType" : "-> Int"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 48, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "cell",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 49, Column: 9",
+        "H_initialValue" : "collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell"
+      },
+      {
+        "A_name" : "pair",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 51, Column: 9",
+        "H_initialValue" : "model[indexPath.row]"
+      },
+      {
+        "A_name" : "provider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 52, Column: 9",
+        "H_initialValue" : "UserNameLetterIconImageProvider(userNameFirstLetter: pair.0, backgroundColor: pair.1)"
+      }
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "cellForItemAt"
+    ],
+    "J_returnType" : "-> UICollectionViewCell"
+  },
+  {
+    "A_name" : "cell",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 49, Column: 9",
+    "H_initialValue" : "collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell"
+  },
+  {
+    "A_name" : "pair",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 51, Column: 9",
+    "H_initialValue" : "model[indexPath.row]"
+  },
+  {
+    "A_name" : "provider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 52, Column: 9",
+    "H_initialValue" : "UserNameLetterIconImageProvider(userNameFirstLetter: pair.0, backgroundColor: pair.1)"
+  },
+  {
+    "A_name" : "UserNameLetterIconImageProvider",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ImageDataProvider"
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 61, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "cacheKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 62, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "letter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 63, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "color",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 64, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 66, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "UIColor"
+        ],
+        "I_parameters" : [
+          "userNameFirstLetter",
+          "backgroundColor"
+        ]
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 71, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "letter",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 72, Column: 9",
+            "H_initialValue" : "self.letter as NSString"
+          },
+          {
+            "A_name" : "rect",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 73, Column: 9",
+            "H_initialValue" : "CGRect(x: 0, y: 0, width: 250, height: 250)"
+          },
+          {
+            "A_name" : "format",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 75, Column: 9",
+            "H_initialValue" : "UIGraphicsImageRendererFormat.default()"
+          },
+          {
+            "A_name" : "renderer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 78, Column: 9",
+            "H_initialValue" : "UIGraphicsImageRenderer(size: rect.size, format: format)"
+          },
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 79, Column: 9",
+            "H_initialValue" : "renderer.pngData { context in\n            color.setFill()\n            context.fill(rect)\n            \n            let attributes = [\n                NSAttributedString.Key.foregroundColor: UIColor.white,\n                .font: UIFont.systemFont(ofSize: 200)\n            ]\n            \n            let textSize = letter.size(withAttributes: attributes)\n            let textRect = CGRect(\n                x: (rect.width - textSize.width) \/ 2,\n                y: (rect.height - textSize.height) \/ 2,\n                width: textSize.width,\n                height: textSize.height)\n            letter.draw(in: textRect, withAttributes: attributes)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "@escaping (Result<Data, any Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "handler"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "cacheKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 62, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "letter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 63, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "color",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 64, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 66, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "UIColor"
+    ],
+    "I_parameters" : [
+      "userNameFirstLetter",
+      "backgroundColor"
+    ]
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 71, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "letter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 72, Column: 9",
+        "H_initialValue" : "self.letter as NSString"
+      },
+      {
+        "A_name" : "rect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 73, Column: 9",
+        "H_initialValue" : "CGRect(x: 0, y: 0, width: 250, height: 250)"
+      },
+      {
+        "A_name" : "format",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 75, Column: 9",
+        "H_initialValue" : "UIGraphicsImageRendererFormat.default()"
+      },
+      {
+        "A_name" : "renderer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 78, Column: 9",
+        "H_initialValue" : "UIGraphicsImageRenderer(size: rect.size, format: format)"
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 79, Column: 9",
+        "H_initialValue" : "renderer.pngData { context in\n            color.setFill()\n            context.fill(rect)\n            \n            let attributes = [\n                NSAttributedString.Key.foregroundColor: UIColor.white,\n                .font: UIFont.systemFont(ofSize: 200)\n            ]\n            \n            let textSize = letter.size(withAttributes: attributes)\n            let textRect = CGRect(\n                x: (rect.width - textSize.width) \/ 2,\n                y: (rect.height - textSize.height) \/ 2,\n                width: textSize.width,\n                height: textSize.height)\n            letter.draw(in: textRect, withAttributes: attributes)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping (Result<Data, any Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "handler"
+    ]
+  },
+  {
+    "A_name" : "letter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 72, Column: 9",
+    "H_initialValue" : "self.letter as NSString"
+  },
+  {
+    "A_name" : "rect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 73, Column: 9",
+    "H_initialValue" : "CGRect(x: 0, y: 0, width: 250, height: 250)"
+  },
+  {
+    "A_name" : "format",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 75, Column: 9",
+    "H_initialValue" : "UIGraphicsImageRendererFormat.default()"
+  },
+  {
+    "A_name" : "renderer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 78, Column: 9",
+    "H_initialValue" : "UIGraphicsImageRenderer(size: rect.size, format: format)"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 79, Column: 9",
+    "H_initialValue" : "renderer.pngData { context in\n            color.setFill()\n            context.fill(rect)\n            \n            let attributes = [\n                NSAttributedString.Key.foregroundColor: UIColor.white,\n                .font: UIFont.systemFont(ofSize: 200)\n            ]\n            \n            let textSize = letter.size(withAttributes: attributes)\n            let textRect = CGRect(\n                x: (rect.width - textSize.width) \/ 2,\n                y: (rect.height - textSize.height) \/ 2,\n                width: textSize.width,\n                height: textSize.height)\n            letter.draw(in: textRect, withAttributes: attributes)\n        }"
+  },
+  {
+    "A_name" : "attributes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 83, Column: 13",
+    "H_initialValue" : "[\n                NSAttributedString.Key.foregroundColor: UIColor.white,\n                .font: UIFont.systemFont(ofSize: 200)\n            ]"
+  },
+  {
+    "A_name" : "textSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 88, Column: 13",
+    "H_initialValue" : "letter.size(withAttributes: attributes)"
+  },
+  {
+    "A_name" : "textRect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ImageDataProviderCollectionViewController.swift - Line: 89, Column: 13",
+    "H_initialValue" : "CGRect(\n                x: (rect.width - textSize.width) \/ 2,\n                y: (rect.height - textSize.height) \/ 2,\n                width: textSize.width,\n                height: textSize.height)"
+  }
+]

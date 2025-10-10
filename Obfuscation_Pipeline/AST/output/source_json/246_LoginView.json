@@ -1,0 +1,370 @@
+[
+  {
+    "A_name" : "LoginView",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIView"
+    ],
+    "F_location" : "LoginView.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "logoImageView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginView.swift - Line: 16, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"img_logo_ios\", in: .module, compatibleWith: nil)\n        imageView.contentMode = .scaleAspectFit\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "characterImageView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginView.swift - Line: 23, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"img_login_ios\", in: .module, compatibleWith: nil)\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "appleLoginButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginView.swift - Line: 29, Column: 5",
+        "H_initialValue" : "{\n        let button = UIButton(type: .system)\n        button.backgroundColor = UIColor(named: \"gray900\") ?? .black\n        button.layer.cornerRadius = 8\n        button.clipsToBounds = true\n\n        let iconImageView = UIImageView()\n        iconImageView.image = UIImage(\n            named: \"ic_apple_20_ios\",\n            in: .module,\n            compatibleWith: nil\n        )?.withRenderingMode(.alwaysOriginal)\n        iconImageView.contentMode = .scaleAspectFit\n\n        let titleLabel = UILabel()\n        titleLabel.text = \"Apple로 계속하기\"\n        titleLabel.font = .suit(.body_sb_16)\n        titleLabel.textColor = .white\n        titleLabel.textAlignment = .center\n\n        button.addSubview(iconImageView)\n        button.addSubview(titleLabel)\n\n        iconImageView.snp.makeConstraints {\n            $0.leading.equalToSuperview().inset(16)\n            $0.centerY.equalToSuperview()\n            $0.width.height.equalTo(20)\n        }\n\n        titleLabel.snp.makeConstraints {\n            $0.center.equalToSuperview()\n        }\n\n        return button\n    }()"
+      },
+      {
+        "A_name" : "privacyPolicyButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginView.swift - Line: 66, Column: 5",
+        "H_initialValue" : "{\n        let button = UIButton(type: .system)\n\n        let title = \"개인정보처리방침\"\n        let attributedTitle = NSAttributedString(\n            string: title,\n            attributes: [\n                .underlineStyle: NSUnderlineStyle.single.rawValue,\n                .foregroundColor: UIColor.white,\n                .font: UIFont.suit(.body_m_14)\n            ]\n        )\n\n        button.setAttributedTitle(attributedTitle, for: .normal)\n        return button\n    }()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LoginView.swift - Line: 86, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "LoginView.swift - Line: 90, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LoginView.swift - Line: 96, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LoginView.swift - Line: 106, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "logoImageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 16, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"img_logo_ios\", in: .module, compatibleWith: nil)\n        imageView.contentMode = .scaleAspectFit\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 17, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "characterImageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 23, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"img_login_ios\", in: .module, compatibleWith: nil)\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 24, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "appleLoginButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 29, Column: 5",
+    "H_initialValue" : "{\n        let button = UIButton(type: .system)\n        button.backgroundColor = UIColor(named: \"gray900\") ?? .black\n        button.layer.cornerRadius = 8\n        button.clipsToBounds = true\n\n        let iconImageView = UIImageView()\n        iconImageView.image = UIImage(\n            named: \"ic_apple_20_ios\",\n            in: .module,\n            compatibleWith: nil\n        )?.withRenderingMode(.alwaysOriginal)\n        iconImageView.contentMode = .scaleAspectFit\n\n        let titleLabel = UILabel()\n        titleLabel.text = \"Apple로 계속하기\"\n        titleLabel.font = .suit(.body_sb_16)\n        titleLabel.textColor = .white\n        titleLabel.textAlignment = .center\n\n        button.addSubview(iconImageView)\n        button.addSubview(titleLabel)\n\n        iconImageView.snp.makeConstraints {\n            $0.leading.equalToSuperview().inset(16)\n            $0.centerY.equalToSuperview()\n            $0.width.height.equalTo(20)\n        }\n\n        titleLabel.snp.makeConstraints {\n            $0.center.equalToSuperview()\n        }\n\n        return button\n    }()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 30, Column: 9",
+    "H_initialValue" : "UIButton(type: .system)"
+  },
+  {
+    "A_name" : "iconImageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 35, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "titleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 43, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "privacyPolicyButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 66, Column: 5",
+    "H_initialValue" : "{\n        let button = UIButton(type: .system)\n\n        let title = \"개인정보처리방침\"\n        let attributedTitle = NSAttributedString(\n            string: title,\n            attributes: [\n                .underlineStyle: NSUnderlineStyle.single.rawValue,\n                .foregroundColor: UIColor.white,\n                .font: UIFont.suit(.body_m_14)\n            ]\n        )\n\n        button.setAttributedTitle(attributedTitle, for: .normal)\n        return button\n    }()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 67, Column: 9",
+    "H_initialValue" : "UIButton(type: .system)"
+  },
+  {
+    "A_name" : "title",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 69, Column: 9",
+    "H_initialValue" : "\"개인정보처리방침\""
+  },
+  {
+    "A_name" : "attributedTitle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 70, Column: 9",
+    "H_initialValue" : "NSAttributedString(\n            string: title,\n            attributes: [\n                .underlineStyle: NSUnderlineStyle.single.rawValue,\n                .foregroundColor: UIColor.white,\n                .font: UIFont.suit(.body_m_14)\n            ]\n        )"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LoginView.swift - Line: 86, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "LoginView.swift - Line: 90, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LoginView.swift - Line: 96, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LoginView.swift - Line: 106, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "LoginView",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 133, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "startSplashAnimation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LoginView.swift - Line: 135, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "startSplashAnimation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LoginView.swift - Line: 135, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

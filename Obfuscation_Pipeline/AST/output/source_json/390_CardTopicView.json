@@ -1,0 +1,644 @@
+[
+  {
+    "A_name" : "CardTopicView",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIView"
+    ],
+    "F_location" : "CardTopicView.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "topicData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 13, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onTapWriteDiary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 17, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "titleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 21, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"오늘의 추천 주제\"\n        label.font = .suit(.caption_m_12)\n        label.textColor = .gray500\n        label.numberOfLines = 2\n        return label\n    }()"
+      },
+      {
+        "A_name" : "iconButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 30, Column: 5",
+        "H_initialValue" : "{\n        let button = UIButton()\n        let image = UIImage(\n            named: \"ic_change_20_ios\",\n            in: .module,\n            compatibleWith: nil\n        )\n        button.setImage(image, for: .normal)\n        button.imageView?.contentMode = .scaleAspectFit\n        return button\n    }()"
+      },
+      {
+        "A_name" : "topicStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 42, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.alignment = .center\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "topicKorLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 49, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_sb_16)\n        label.textColor = .gray700\n        label.numberOfLines = 2\n        return label\n    }()"
+      },
+      {
+        "A_name" : "topicEnLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 57, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_sb_16)\n        label.textColor = .gray700\n        label.numberOfLines = 2\n        return label\n    }()"
+      },
+      {
+        "A_name" : "cardStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 65, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .vertical\n        stack.alignment = .leading\n        stack.spacing = 8\n        stack.backgroundColor = .gray100\n        stack.layer.cornerRadius = 8\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "diaryAddButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 75, Column: 5",
+        "H_initialValue" : "CTAButton(style: .IconTextButton(iconName: \"ic_plus_16_ios\", text: \"일기 작성하기\"))"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CardTopicView.swift - Line: 79, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "CardTopicView.swift - Line: 86, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "setupUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 92, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setupLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 119, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "addTargets",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 143, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "didTapChangeTopic",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CardTopicView.swift - Line: 157, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "isEnglishVisible",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CardTopicView.swift - Line: 158, Column: 9",
+            "H_initialValue" : "!topicEnLabel.isHidden"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "didTapWriteDiary",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "CardTopicView.swift - Line: 163, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 169, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "korText",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CardTopicView.swift - Line: 170, Column: 9",
+            "H_initialValue" : "kor ?? \"한글 주제 아직 없지롱\""
+          },
+          {
+            "A_name" : "enText",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CardTopicView.swift - Line: 171, Column: 9",
+            "H_initialValue" : "en  ?? \"Bringing up the English topic\""
+          }
+        ],
+        "I_parameterType" : [
+          "String?",
+          "String?"
+        ],
+        "I_parameters" : [
+          "kor",
+          "en"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "topicData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 13, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onTapWriteDiary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 17, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "titleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 21, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"오늘의 추천 주제\"\n        label.font = .suit(.caption_m_12)\n        label.textColor = .gray500\n        label.numberOfLines = 2\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 22, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "iconButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 30, Column: 5",
+    "H_initialValue" : "{\n        let button = UIButton()\n        let image = UIImage(\n            named: \"ic_change_20_ios\",\n            in: .module,\n            compatibleWith: nil\n        )\n        button.setImage(image, for: .normal)\n        button.imageView?.contentMode = .scaleAspectFit\n        return button\n    }()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 31, Column: 9",
+    "H_initialValue" : "UIButton()"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 32, Column: 9",
+    "H_initialValue" : "UIImage(\n            named: \"ic_change_20_ios\",\n            in: .module,\n            compatibleWith: nil\n        )"
+  },
+  {
+    "A_name" : "topicStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 42, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.alignment = .center\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 43, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "topicKorLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 49, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_sb_16)\n        label.textColor = .gray700\n        label.numberOfLines = 2\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 50, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "topicEnLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 57, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_sb_16)\n        label.textColor = .gray700\n        label.numberOfLines = 2\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 58, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "cardStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 65, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .vertical\n        stack.alignment = .leading\n        stack.spacing = 8\n        stack.backgroundColor = .gray100\n        stack.layer.cornerRadius = 8\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 66, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "diaryAddButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 75, Column: 5",
+    "H_initialValue" : "CTAButton(style: .IconTextButton(iconName: \"ic_plus_16_ios\", text: \"일기 작성하기\"))"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CardTopicView.swift - Line: 79, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "CardTopicView.swift - Line: 86, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "setupUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 92, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setupLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 119, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "addTargets",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 143, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didTapChangeTopic",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CardTopicView.swift - Line: 157, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "isEnglishVisible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 158, Column: 9",
+        "H_initialValue" : "!topicEnLabel.isHidden"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "isEnglishVisible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 158, Column: 9",
+    "H_initialValue" : "!topicEnLabel.isHidden"
+  },
+  {
+    "A_name" : "didTapWriteDiary",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "CardTopicView.swift - Line: 163, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 169, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "korText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 170, Column: 9",
+        "H_initialValue" : "kor ?? \"한글 주제 아직 없지롱\""
+      },
+      {
+        "A_name" : "enText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardTopicView.swift - Line: 171, Column: 9",
+        "H_initialValue" : "en  ?? \"Bringing up the English topic\""
+      }
+    ],
+    "I_parameterType" : [
+      "String?",
+      "String?"
+    ],
+    "I_parameters" : [
+      "kor",
+      "en"
+    ]
+  },
+  {
+    "A_name" : "korText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 170, Column: 9",
+    "H_initialValue" : "kor ?? \"한글 주제 아직 없지롱\""
+  },
+  {
+    "A_name" : "enText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardTopicView.swift - Line: 171, Column: 9",
+    "H_initialValue" : "en  ?? \"Bringing up the English topic\""
+  }
+]

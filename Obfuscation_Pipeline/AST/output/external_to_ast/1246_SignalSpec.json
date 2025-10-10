@@ -1,0 +1,3682 @@
+[
+  {
+    "A_name" : "SignalSpec",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "QuickSpec"
+    ],
+    "F_location" : "SignalSpec.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "spec",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SignalSpec.swift - Line: 17, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "spec",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SignalSpec.swift - Line: 17, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 19, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "didRunGenerator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 26, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "numbers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 35, Column: 5",
+    "H_initialValue" : "[ 1, 2, 5 ]"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 37, Column: 5",
+    "H_initialValue" : "Signal { observer, _ in\n\t\t\t\t\ttestScheduler.schedule {\n\t\t\t\t\t\tfor number in numbers {\n\t\t\t\t\t\t\tobserver.send(value: number)\n\t\t\t\t\t\t}\n\t\t\t\t\t\tobserver.sendCompleted()\n\t\t\t\t\t}\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "fromSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 46, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 47, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 70, Column: 5",
+    "H_initialValue" : "AnyDisposable()"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 72, Column: 5",
+    "H_initialValue" : "Signal { observer, lifetime in\n\t\t\t\t\ttestScheduler.schedule {\n\t\t\t\t\t\tobserver.send(error: TestError.default)\n\t\t\t\t\t}\n\t\t\t\t\tlifetime += disposable\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "errored",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 79, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 93, Column: 5",
+    "H_initialValue" : "AnyDisposable()"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 95, Column: 5",
+    "H_initialValue" : "Signal { observer, lifetime in\n\t\t\t\t\ttestScheduler.schedule {\n\t\t\t\t\t\tobserver.sendCompleted()\n\t\t\t\t\t}\n\t\t\t\t\tlifetime += disposable\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 102, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 116, Column: 5",
+    "H_initialValue" : "AnyDisposable()"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 118, Column: 5",
+    "H_initialValue" : "Signal { observer, lifetime in\n\t\t\t\t\ttestScheduler.schedule {\n\t\t\t\t\t\tobserver.sendInterrupted()\n\t\t\t\t\t}\n\t\t\t\t\tlifetime += disposable\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "interrupted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 125, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 140, Column: 5",
+    "H_initialValue" : "AnyDisposable()"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 142, Column: 5",
+    "H_initialValue" : "Signal { observer, lifetime in\n\t\t\t\t\tobserver.sendInterrupted()\n\t\t\t\t\texpect(disposable.isDisposed) == false\n\t\t\t\t\tlifetime += disposable\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 154, Column: 5",
+    "H_initialValue" : "AnyDisposable()"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 156, Column: 5",
+    "H_initialValue" : "Signal { observer, lifetime in\n\t\t\t\t\tobserver.sendCompleted()\n\t\t\t\t\texpect(disposable.isDisposed) == false\n\t\t\t\t\tlifetime += disposable\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 168, Column: 5",
+    "H_initialValue" : "AnyDisposable()"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 170, Column: 5",
+    "H_initialValue" : "Signal { observer, lifetime in\n\t\t\t\t\tobserver.send(error: .default)\n\t\t\t\t\texpect(disposable.isDisposed) == false\n\t\t\t\t\tlifetime += disposable\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 184, Column: 5",
+    "H_initialValue" : "Signal<(), Never>.empty"
+  },
+  {
+    "A_name" : "hasUnexpectedEventsEmitted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 186, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "signalInterrupted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 187, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 207, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 225, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "fromSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 252, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 253, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 281, Column: 5",
+    "H_initialValue" : "AnyDisposable()"
+  },
+  {
+    "A_name" : "autoreleasepool",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 297, Column: 7",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "() -> Void"
+    ],
+    "I_parameters" : [
+      "invoking"
+    ]
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 305, Column: 9",
+    "H_initialValue" : "signal.observe { _ in }"
+  },
+  {
+    "A_name" : "queue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 317, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "hasSlept",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 327, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "events",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 328, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "semaphore",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 332, Column: 5",
+    "H_initialValue" : "DispatchSemaphore(value: 0)"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 344, Column: 5",
+    "H_initialValue" : "DispatchGroup()"
+  },
+  {
+    "A_name" : "queue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 365, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "counter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 366, Column: 5",
+    "H_initialValue" : "Atomic<Int>(0)"
+  },
+  {
+    "A_name" : "executionCounter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 367, Column: 5",
+    "H_initialValue" : "Atomic<Int>(0)"
+  },
+  {
+    "A_name" : "iterations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 375, Column: 5",
+    "H_initialValue" : "1000"
+  },
+  {
+    "A_name" : "group",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 376, Column: 5",
+    "H_initialValue" : "DispatchGroup()"
+  },
+  {
+    "A_name" : "semaphore",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 386, Column: 7",
+    "H_initialValue" : "DispatchSemaphore(value: 0)"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 410, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 417, Column: 5",
+    "H_initialValue" : "AnyDisposable()"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 419, Column: 5",
+    "H_initialValue" : "Signal { observer, lifetime in\n\t\t\t\t\ttestScheduler.schedule {\n\t\t\t\t\t\tfor number in [ 1, 2 ] {\n\t\t\t\t\t\t\tobserver.send(value: number)\n\t\t\t\t\t\t}\n\t\t\t\t\t\tobserver.sendCompleted()\n\t\t\t\t\t\tobserver.send(value: 4)\n\t\t\t\t\t}\n\t\t\t\t\tlifetime += disposable\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "fromSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 430, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "runCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 445, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 446, Column: 5",
+    "H_initialValue" : "Signal { observer, _ in\n\t\t\t\t\trunCount += 1\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "testStr",
+    "B_kind" : "variable",
+    "C_accessLevel" : "weak",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "SignalSpec.swift - Line: 457, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "test",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 460, Column: 5",
+    "H_initialValue" : "{\n\t\t\t\t\tlet innerStr = NSMutableString(string: \"\")\n\t\t\t\t\tsignal.observeValues { value in\n\t\t\t\t\t\tinnerStr.append(\"\\(value)\")\n\t\t\t\t\t}\n\t\t\t\t\ttestStr = innerStr\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "innerStr",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 461, Column: 6",
+    "H_initialValue" : "NSMutableString(string: \"\")"
+  },
+  {
+    "A_name" : "testStr",
+    "B_kind" : "variable",
+    "C_accessLevel" : "weak",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "SignalSpec.swift - Line: 479, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "test",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 482, Column: 5",
+    "H_initialValue" : "{\n\t\t\t\t\tlet innerStr = NSMutableString(string: \"\")\n\t\t\t\t\tsignal.observeValues { value in\n\t\t\t\t\t\tinnerStr.append(\"\\(value)\")\n\t\t\t\t\t}\n\n\t\t\t\t\ttestStr = innerStr\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "innerStr",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 483, Column: 6",
+    "H_initialValue" : "NSMutableString(string: \"\")"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 506, Column: 5",
+    "H_initialValue" : "[Int]()"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 520, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "mappedSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 541, Column: 5",
+    "H_initialValue" : "signal.map { String($0 + 1) }"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 543, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mappedSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 561, Column: 5",
+    "H_initialValue" : "signal.map(value: 1)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 563, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mappedSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 579, Column: 5",
+    "H_initialValue" : "signal.map(\\String.count)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 581, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "producerError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 599, Column: 5",
+    "H_initialValue" : "NSError(domain: \"com.reactivecocoa.errordomain\", code: 100, userInfo: nil)"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 600, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "token",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 615, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lifetime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 616, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "destination",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 617, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "tupleSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 618, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "tupleObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 619, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "theLens",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 620, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "getterCounter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 621, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "lensScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 622, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "targetScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 623, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "target",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 624, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mappedSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 713, Column: 5",
+    "H_initialValue" : "signal.filter { $0 % 2 == 0 }"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 715, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mappedSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 735, Column: 5",
+    "H_initialValue" : "signal.compactMap(Int.init)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 737, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mappedSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 755, Column: 5",
+    "H_initialValue" : "signal.compactMap(Int.init)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 757, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mappedSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 778, Column: 5",
+    "H_initialValue" : "signal.compactMap(Int.init)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 780, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mappedSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 797, Column: 5",
+    "H_initialValue" : "signal.compactMap(Int.init)"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 799, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "mappedSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 809, Column: 5",
+    "H_initialValue" : "signal.compactMap(Int.init)"
+  },
+  {
+    "A_name" : "failure",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 811, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mappedSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 823, Column: 5",
+    "H_initialValue" : "signal.skipNil()"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 825, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 847, Column: 5",
+    "H_initialValue" : "baseSignal.scan(\"\", +)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 849, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 866, Column: 5",
+    "H_initialValue" : "baseSignal.scan(into: \"\") { $0 += $1 }"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 868, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 885, Column: 5",
+    "H_initialValue" : "baseSignal.scanMap(false) { state, value -> (Bool, String) in\n\t\t\t\t\treturn (true, state ? \"\\(value)\" : \"initial\")\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 889, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 909, Column: 5",
+    "H_initialValue" : "baseSignal.scanMap(into: false) { (state: inout Bool, value: Int) -> String in\n\t\t\t\t\tdefer { state = true }\n\t\t\t\t\treturn state ? \"\\(value)\" : \"initial\"\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 914, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 934, Column: 5",
+    "H_initialValue" : "baseSignal.reduce(1, +)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 936, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 937, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 967, Column: 5",
+    "H_initialValue" : "baseSignal.reduce(1, +)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 969, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 970, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 996, Column: 5",
+    "H_initialValue" : "baseSignal.reduce(into: 1) { $0 += $1 }"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 998, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 999, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1029, Column: 5",
+    "H_initialValue" : "baseSignal.reduce(into: 1) { $0 += $1 }"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1031, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1032, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1058, Column: 5",
+    "H_initialValue" : "baseSignal.skip(first: 1)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1060, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1074, Column: 5",
+    "H_initialValue" : "baseSignal.skip(first: 0)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1076, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1092, Column: 5",
+    "H_initialValue" : "baseSignal.skipRepeats()"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1094, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1114, Column: 5",
+    "H_initialValue" : "baseSignal.skipRepeats { $0.count == $1.count }"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1116, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "disposedItems",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1135, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "Item",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1137, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "payload",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalSpec.swift - Line: 1138, Column: 6",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "disposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SignalSpec.swift - Line: 1139, Column: 6",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "payload",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1138, Column: 6",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1139, Column: 6",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "item",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1142, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Item"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1172, Column: 5",
+    "H_initialValue" : "baseSignal.uniqueValues()"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1174, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1200, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1201, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1203, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1240, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1241, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "triggerObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1242, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1244, Column: 4",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1298, Column: 5",
+    "H_initialValue" : "baseSignal.take(first: 2)"
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1300, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1301, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "numbers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1326, Column: 5",
+    "H_initialValue" : "[ 1, 2, 4, 4, 5 ]"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1327, Column: 5",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1329, Column: 5",
+    "H_initialValue" : "Signal { observer, _ in\n\t\t\t\t\ttestScheduler.schedule {\n\t\t\t\t\t\tfor number in numbers {\n\t\t\t\t\t\t\tobserver.send(value: number)\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1337, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "numbers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1348, Column: 5",
+    "H_initialValue" : "[ 1, 2, 4, 4, 5 ]"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1349, Column: 5",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1351, Column: 5",
+    "H_initialValue" : "Signal { observer, _ in\n\t\t\t\t\ttestScheduler.schedule {\n\t\t\t\t\t\tfor number in numbers {\n\t\t\t\t\t\t\tobserver.send(value: number)\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1359, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "interrupted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1360, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1385, Column: 5",
+    "H_initialValue" : "original.collect()"
+  },
+  {
+    "A_name" : "expectedResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1386, Column: 5",
+    "H_initialValue" : "[ 1, 2, 3 ]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1388, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1406, Column: 5",
+    "H_initialValue" : "original.collect()"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1408, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1419, Column: 5",
+    "H_initialValue" : "original.collect()"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1421, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1433, Column: 5",
+    "H_initialValue" : "original.collect(count: 3)"
+  },
+  {
+    "A_name" : "observedValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1435, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1441, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1463, Column: 5",
+    "H_initialValue" : "original.collect { _, value in value != 5 }"
+  },
+  {
+    "A_name" : "expectedValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1465, Column: 5",
+    "H_initialValue" : "[\n\t\t\t\t\t[5, 5],\n\t\t\t\t\t[42, 5],\n\t\t\t\t]"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1488, Column: 5",
+    "H_initialValue" : "original.collect { values in values.reduce(0, +) == 10 }"
+  },
+  {
+    "A_name" : "expectedValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1490, Column: 5",
+    "H_initialValue" : "[\n\t\t\t\t\t[1, 2, 3, 4],\n\t\t\t\t\t[5, 6, 7, 8, 9],\n\t\t\t\t]"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1512, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1513, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "triggerObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1514, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1516, Column: 4",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1517, Column: 4",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1582, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1583, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "replacementObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1584, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1586, Column: 4",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1587, Column: 4",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1642, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1643, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "latestValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1652, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1653, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "latestValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1678, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1679, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1700, Column: 5",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1703, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1720, Column: 5",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1721, Column: 5",
+    "H_initialValue" : "Signal { observer, _ in\n\t\t\t\t\ttestScheduler.schedule {\n\t\t\t\t\t\tobserver.send(value: 1)\n\t\t\t\t\t}\n\t\t\t\t\ttestScheduler.schedule(after: .seconds(5)) {\n\t\t\t\t\t\tobserver.send(value: 2)\n\t\t\t\t\t\tobserver.sendCompleted()\n\t\t\t\t\t}\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1731, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1732, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1760, Column: 5",
+    "H_initialValue" : "TestScheduler()"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1761, Column: 5",
+    "H_initialValue" : "Signal { observer, _ in\n\t\t\t\t\ttestScheduler.schedule {\n\t\t\t\t\t\tobserver.send(error: TestError.default)\n\t\t\t\t\t}\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "errored",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1767, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1779, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1780, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1781, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1794, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1845, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1846, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1878, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "shouldThrottle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1879, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1880, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1881, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1895, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1906, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1918, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1931, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1945, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1959, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1970, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1971, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1972, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 1985, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2024, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2025, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2057, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2058, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2059, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2072, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2113, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2114, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2146, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2166, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2167, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2168, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2181, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2232, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2233, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2266, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2267, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2268, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2281, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2332, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2333, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2365, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2366, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2367, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2380, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2423, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2424, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2457, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2458, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2459, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2472, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2515, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2516, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "sampledSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2548, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2549, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "samplerObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2550, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2561, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2571, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2579, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2589, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "sampledSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2601, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2602, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "samplerObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2603, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2614, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2624, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2632, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2642, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "withLatestSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2654, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2655, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sampleeObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2656, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2667, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2677, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2685, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2695, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "event",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2706, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "event",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2714, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "withLatestSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2723, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2724, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sampleeObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2725, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2736, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2746, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2754, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2764, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "event",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2772, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "event",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2780, Column: 5",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "combinedSignal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2794, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2795, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "otherObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2796, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "latest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2807, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2824, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "leftObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2836, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rightObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2837, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "zipped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2838, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2850, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2875, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2876, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2902, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2903, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2928, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2929, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "latestEvent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2962, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2993, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dematerialized",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 2994, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3003, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "errored",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3018, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3028, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "latestResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3040, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3073, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dematerialized",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3074, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3083, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "errored",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3098, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3109, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastThree",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3110, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3119, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3135, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3147, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "errored",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3148, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "testScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3172, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3173, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3174, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3184, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "errored",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3185, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3210, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "errored",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3211, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3236, Column: 5",
+    "H_initialValue" : "Signal<Int, Never>.never\n\t\t\t\t\t.timeout(after: 2, raising: TestError.default, on: testScheduler)"
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3246, Column: 5",
+    "H_initialValue" : "baseSignal.attempt { _ in\n\t\t\t\t\treturn .success(())\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "current",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3250, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3265, Column: 5",
+    "H_initialValue" : "baseSignal.attempt { _ in\n\t\t\t\t\treturn .failure(.default)\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3269, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3282, Column: 5",
+    "H_initialValue" : "baseSignal.attempt { _ in\n\t\t\t\t\t_ = try operation(value: 1)\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "current",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3286, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3301, Column: 5",
+    "H_initialValue" : "baseSignal.attempt { _ in\n\t\t\t\t\t_ = try operation(value: nil) as Int\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3305, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3316, Column: 5",
+    "H_initialValue" : "baseSignal.attempt { _ in\n\t\t\t\t\t_ = try operation(value: 1)\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3320, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3331, Column: 5",
+    "H_initialValue" : "baseSignal.attemptMap { num -> Result<Bool, TestError> in\n\t\t\t\t\treturn .success(num % 2 == 0)\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "even",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3335, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3351, Column: 5",
+    "H_initialValue" : "baseSignal.attemptMap { _ -> Result<Bool, TestError> in\n\t\t\t\t\treturn .failure(.default)\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3355, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3368, Column: 5",
+    "H_initialValue" : "baseSignal.attemptMap { num -> Bool in\n\t\t\t\t\ttry operation(value: num % 2 == 0)\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "even",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3372, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3388, Column: 5",
+    "H_initialValue" : "baseSignal.attemptMap { _ -> Bool in\n\t\t\t\t\ttry operation(value: nil)\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3392, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3403, Column: 5",
+    "H_initialValue" : "baseSignal.attemptMap { num in\n\t\t\t\t\ttry operation(value: num % 2 == 0)\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3407, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3416, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3417, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "initialValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3418, Column: 4",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "latestValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3419, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signalA",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3561, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signalB",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3562, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signalC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3563, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observerA",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3564, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observerB",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3565, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observerC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3566, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "combinedValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3568, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3569, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "combineLatestExampleName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3588, Column: 4",
+    "H_initialValue" : "\"combineLatest examples\""
+  },
+  {
+    "A_name" : "signalA",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3665, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signalB",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3666, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "signalC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3667, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observerA",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3668, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observerB",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3669, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "observerC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3670, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "zippedValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3672, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3673, Column: 4",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "zipExampleName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3692, Column: 4",
+    "H_initialValue" : "\"zip examples\""
+  },
+  {
+    "A_name" : "expectations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3771, Column: 6",
+    "H_initialValue" : "[\n\t\t\t\t\t\t{ event in expect(event).to(equal(\"[] value 1\")) },\n\t\t\t\t\t\t{ event in expect(event).to(equal(\"[] completed\")) },\n\t\t\t\t\t\t{ event in expect(event).to(equal(\"[] terminated\")) },\n\t\t\t\t\t\t{ event in expect(event).to(equal(\"[] disposed\")) },\n\t\t\t\t\t]"
+  },
+  {
+    "A_name" : "logger",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3778, Column: 6",
+    "H_initialValue" : "TestLogger(expectations: expectations)"
+  },
+  {
+    "A_name" : "expectations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3790, Column: 6",
+    "H_initialValue" : "[\n\t\t\t\t\t\t{ event in expect(event).to(equal(\"[test.rac] value 1\")) },\n\t\t\t\t\t\t{ event in expect(event).to(equal(\"[test.rac] failed error1\")) },\n\t\t\t\t\t\t{ event in expect(event).to(equal(\"[test.rac] terminated\")) },\n\t\t\t\t\t\t{ event in expect(event).to(equal(\"[test.rac] disposed\")) },\n\t\t\t\t\t]"
+  },
+  {
+    "A_name" : "logger",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3797, Column: 6",
+    "H_initialValue" : "TestLogger(expectations: expectations)"
+  },
+  {
+    "A_name" : "expectations",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3809, Column: 6",
+    "H_initialValue" : "[\n\t\t\t\t\t\t{ event in expect(event) == \"[test.rac] failed error1\" },\n\t\t\t\t\t]"
+  },
+  {
+    "A_name" : "logger",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3813, Column: 6",
+    "H_initialValue" : "TestLogger(expectations: expectations)"
+  },
+  {
+    "A_name" : "combined",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3963, Column: 5",
+    "H_initialValue" : "Signal\n\t\t\t\t\t.combineLatest(Signal<Int, Never>.never.promoteError(),\n\t\t\t\t\t               Signal<Double, TestError>.never,\n\t\t\t\t\t               Signal<Float, Never>.never.promoteError(),\n\t\t\t\t\t               Signal<UInt, POSIXError>.never.flatMapError { _ in .empty })"
+  },
+  {
+    "A_name" : "completable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3975, Column: 5",
+    "H_initialValue" : "Signal<Never, Never>.never"
+  },
+  {
+    "A_name" : "producer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3976, Column: 5",
+    "H_initialValue" : "Signal<Int, Never>.never\n\t\t\t\t\t.flatMap(.latest) { _ in completable.promoteValue() }"
+  },
+  {
+    "A_name" : "operation",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SignalSpec.swift - Line: 3985, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T?"
+    ],
+    "I_parameters" : [
+      "value"
+    ],
+    "J_returnType" : "-> T"
+  }
+]

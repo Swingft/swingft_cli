@@ -1,0 +1,310 @@
+[
+  {
+    "A_name" : "SchedulePeriodicRecursiveCommand",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SchedulerServices+Emulation.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "tick",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerServices+Emulation.swift - Line: 10, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "dispatchStart",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerServices+Emulation.swift - Line: 11, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "SchedulePeriodicRecursive",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SchedulerServices+Emulation.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerServices+Emulation.swift - Line: 18, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "startAfter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerServices+Emulation.swift - Line: 19, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "period",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerServices+Emulation.swift - Line: 20, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "action",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerServices+Emulation.swift - Line: 21, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "state",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerServices+Emulation.swift - Line: 23, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "pendingTickCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerServices+Emulation.swift - Line: 24, Column: 5",
+        "H_initialValue" : "AtomicInt(0)"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerServices+Emulation.swift - Line: 26, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SchedulerType",
+          "RxTimeInterval",
+          "RxTimeInterval",
+          "@escaping RecursiveAction",
+          "State"
+        ],
+        "I_parameters" : [
+          "scheduler",
+          "startAfter",
+          "period",
+          "action",
+          "state"
+        ]
+      },
+      {
+        "A_name" : "start",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerServices+Emulation.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "tick",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerServices+Emulation.swift - Line: 38, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SchedulePeriodicRecursiveCommand",
+          "RecursiveScheduler"
+        ],
+        "I_parameters" : [
+          "_",
+          "scheduler"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerServices+Emulation.swift - Line: 18, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "startAfter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerServices+Emulation.swift - Line: 19, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "period",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerServices+Emulation.swift - Line: 20, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "action",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerServices+Emulation.swift - Line: 21, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerServices+Emulation.swift - Line: 23, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "pendingTickCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerServices+Emulation.swift - Line: 24, Column: 5",
+    "H_initialValue" : "AtomicInt(0)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerServices+Emulation.swift - Line: 26, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SchedulerType",
+      "RxTimeInterval",
+      "RxTimeInterval",
+      "@escaping RecursiveAction",
+      "State"
+    ],
+    "I_parameters" : [
+      "scheduler",
+      "startAfter",
+      "period",
+      "action",
+      "state"
+    ]
+  },
+  {
+    "A_name" : "start",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerServices+Emulation.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "tick",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerServices+Emulation.swift - Line: 38, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SchedulePeriodicRecursiveCommand",
+      "RecursiveScheduler"
+    ],
+    "I_parameters" : [
+      "_",
+      "scheduler"
+    ]
+  }
+]

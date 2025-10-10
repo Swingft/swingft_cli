@@ -1,0 +1,1645 @@
+[
+  {
+    "A_name" : "Disposable",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyObject"
+    ],
+    "F_location" : "Disposable.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 13, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 19, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 13, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 19, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "DisposableState",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Int32"
+    ],
+    "F_location" : "Disposable.swift - Line: 23, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "active",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 25, Column: 7",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "disposed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 28, Column: 7",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "UnsafeAtomicState",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 31, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "tryDispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+          "inline"
+        ],
+        "F_location" : "Disposable.swift - Line: 35, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "tryDispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+      "inline"
+    ],
+    "F_location" : "Disposable.swift - Line: 35, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "_SimpleDisposable",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Disposable"
+    ],
+    "F_location" : "Disposable.swift - Line: 42, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "state",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 43, Column: 2",
+        "H_initialValue" : "UnsafeAtomicState<DisposableState>(.active)"
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 45, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 49, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 43, Column: 2",
+    "H_initialValue" : "UnsafeAtomicState<DisposableState>(.active)"
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 45, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 49, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "NopDisposable",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Disposable"
+    ],
+    "F_location" : "Disposable.swift - Line: 59, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "shared",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Disposable.swift - Line: 60, Column: 2",
+        "H_initialValue" : "NopDisposable()"
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 61, Column: 2",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 62, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 63, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "shared",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Disposable.swift - Line: 60, Column: 2",
+    "H_initialValue" : "NopDisposable()"
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 61, Column: 2",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 62, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 63, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "AnyDisposable",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Disposable"
+    ],
+    "F_location" : "Disposable.swift - Line: 67, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "ActionDisposable",
+        "B_kind" : "class",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "final"
+        ],
+        "E_adoptedClassProtocols" : [
+          "Disposable"
+        ],
+        "F_location" : "Disposable.swift - Line: 68, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "state",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Disposable.swift - Line: 69, Column: 3",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "action",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Disposable.swift - Line: 70, Column: 3",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "isDisposed",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Disposable.swift - Line: 72, Column: 3",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Disposable.swift - Line: 76, Column: 3",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "(() -> Void)?"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "dispose",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Disposable.swift - Line: 85, Column: 3",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "base",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 93, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 95, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 103, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping () -> Void"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 108, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 116, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Disposable"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 120, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "ActionDisposable",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Disposable"
+    ],
+    "F_location" : "Disposable.swift - Line: 68, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "state",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 69, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "action",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 70, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 72, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 76, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(() -> Void)?"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 85, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 69, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "action",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 70, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 72, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 76, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(() -> Void)?"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 85, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "base",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 93, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 95, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 103, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping () -> Void"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 108, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 116, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Disposable"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 120, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "CompositeDisposable",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Disposable"
+    ],
+    "F_location" : "Disposable.swift - Line: 126, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "disposables",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 127, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "state",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 128, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 130, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 140, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "bag",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Disposable.swift - Line: 141, Column: 3",
+            "H_initialValue" : "Bag(disposables)"
+          }
+        ],
+        "I_parameterType" : [
+          "S"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "Disposable.swift - Line: 152, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "S"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "Disposable.swift - Line: 159, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 163, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "add",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Disposable.swift - Line: 179, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Disposable?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable?"
+      },
+      {
+        "A_name" : "add",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Disposable.swift - Line: 205, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping () -> Void"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable?"
+      },
+      {
+        "A_name" : "+=",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult",
+          "static"
+        ],
+        "F_location" : "Disposable.swift - Line: 230, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CompositeDisposable",
+          "Disposable?"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Disposable?"
+      },
+      {
+        "A_name" : "+=",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult",
+          "static"
+        ],
+        "F_location" : "Disposable.swift - Line: 248, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CompositeDisposable",
+          "@escaping () -> Void"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Disposable?"
+      }
+    ]
+  },
+  {
+    "A_name" : "disposables",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 127, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 128, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 130, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 140, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "bag",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 141, Column: 3",
+        "H_initialValue" : "Bag(disposables)"
+      }
+    ],
+    "I_parameterType" : [
+      "S"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "bag",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 141, Column: 3",
+    "H_initialValue" : "Bag(disposables)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "Disposable.swift - Line: 152, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "S"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "Disposable.swift - Line: 159, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 163, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "add",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Disposable.swift - Line: 179, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Disposable?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable?"
+  },
+  {
+    "A_name" : "add",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Disposable.swift - Line: 205, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping () -> Void"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable?"
+  },
+  {
+    "A_name" : "+=",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult",
+      "static"
+    ],
+    "F_location" : "Disposable.swift - Line: 230, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CompositeDisposable",
+      "Disposable?"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Disposable?"
+  },
+  {
+    "A_name" : "+=",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult",
+      "static"
+    ],
+    "F_location" : "Disposable.swift - Line: 248, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CompositeDisposable",
+      "@escaping () -> Void"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Disposable?"
+  },
+  {
+    "A_name" : "ScopedDisposable",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Disposable"
+    ],
+    "F_location" : "Disposable.swift - Line: 256, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "inner",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 259, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 261, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 270, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Inner"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 278, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "inner",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 259, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 261, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 270, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Inner"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 278, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "ScopedDisposable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 283, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "Disposable.swift - Line: 290, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Disposable"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "ScopedDisposable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 295, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "+=",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult",
+          "static"
+        ],
+        "F_location" : "Disposable.swift - Line: 309, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ScopedDisposable<CompositeDisposable>",
+          "Disposable?"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Disposable?"
+      },
+      {
+        "A_name" : "+=",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult",
+          "static"
+        ],
+        "F_location" : "Disposable.swift - Line: 327, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ScopedDisposable<CompositeDisposable>",
+          "@escaping () -> Void"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Disposable?"
+      }
+    ]
+  },
+  {
+    "A_name" : "+=",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult",
+      "static"
+    ],
+    "F_location" : "Disposable.swift - Line: 309, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ScopedDisposable<CompositeDisposable>",
+      "Disposable?"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Disposable?"
+  },
+  {
+    "A_name" : "+=",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult",
+      "static"
+    ],
+    "F_location" : "Disposable.swift - Line: 327, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ScopedDisposable<CompositeDisposable>",
+      "@escaping () -> Void"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Disposable?"
+  },
+  {
+    "A_name" : "SerialDisposable",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Disposable"
+    ],
+    "F_location" : "Disposable.swift - Line: 335, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "_inner",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 336, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "state",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 337, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 339, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "inner",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 347, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 366, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Disposable?"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Disposable.swift - Line: 371, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "_inner",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 336, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 337, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 339, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "inner",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 347, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 366, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Disposable?"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Disposable.swift - Line: 371, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

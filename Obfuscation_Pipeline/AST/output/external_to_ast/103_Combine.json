@@ -1,0 +1,2578 @@
+[
+  {
+    "A_name" : "DataResponsePublisher",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Publisher"
+    ],
+    "F_location" : "Combine.swift - Line: 34, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 41, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "responseHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 42, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 50, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DataRequest",
+          "DispatchQueue",
+          "Serializer"
+        ],
+        "I_parameters" : [
+          "_",
+          "queue",
+          "serializer"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 62, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DataRequest",
+          "DispatchQueue",
+          "Serializer"
+        ],
+        "I_parameters" : [
+          "_",
+          "queue",
+          "serializer"
+        ]
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 73, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> AnyPublisher<Result<Value, AFError>, Never>"
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 80, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> AnyPublisher<Value, AFError>"
+      },
+      {
+        "A_name" : "receive",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 84, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "S"
+        ],
+        "I_parameters" : [
+          "subscriber"
+        ]
+      },
+      {
+        "A_name" : "Inner",
+        "B_kind" : "class",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "final"
+        ],
+        "E_adoptedClassProtocols" : [
+          "Subscription"
+        ],
+        "F_location" : "Combine.swift - Line: 90, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "downstream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 94, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 95, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "responseHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 96, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 98, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "DataRequest",
+              "@escaping Handler",
+              "Downstream"
+            ],
+            "I_parameters" : [
+              "request",
+              "responseHandler",
+              "downstream"
+            ]
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 104, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "Subscribers.Demand"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "cancel",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 116, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 41, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "responseHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 42, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 50, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataRequest",
+      "DispatchQueue",
+      "Serializer"
+    ],
+    "I_parameters" : [
+      "_",
+      "queue",
+      "serializer"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 62, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataRequest",
+      "DispatchQueue",
+      "Serializer"
+    ],
+    "I_parameters" : [
+      "_",
+      "queue",
+      "serializer"
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 73, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> AnyPublisher<Result<Value, AFError>, Never>"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 80, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> AnyPublisher<Value, AFError>"
+  },
+  {
+    "A_name" : "receive",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 84, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "S"
+    ],
+    "I_parameters" : [
+      "subscriber"
+    ]
+  },
+  {
+    "A_name" : "Inner",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Subscription"
+    ],
+    "F_location" : "Combine.swift - Line: 90, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "downstream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 94, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 95, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "responseHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 96, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 98, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DataRequest",
+          "@escaping Handler",
+          "Downstream"
+        ],
+        "I_parameters" : [
+          "request",
+          "responseHandler",
+          "downstream"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 104, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Subscribers.Demand"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 116, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "downstream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 94, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 95, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "responseHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 96, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 98, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataRequest",
+      "@escaping Handler",
+      "Downstream"
+    ],
+    "I_parameters" : [
+      "request",
+      "responseHandler",
+      "downstream"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 104, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Subscribers.Demand"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 116, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "DataResponsePublisher",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 123, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 126, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataRequest",
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "_",
+      "queue"
+    ]
+  },
+  {
+    "A_name" : "DataRequest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 133, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "publishResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 141, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Serializer",
+          "DispatchQueue"
+        ],
+        "I_parameters" : [
+          "using",
+          "on"
+        ],
+        "J_returnType" : "-> DataResponsePublisher<T>"
+      },
+      {
+        "A_name" : "publishData",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 159, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "any DataPreprocessor",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "queue",
+          "preprocessor",
+          "emptyResponseCodes",
+          "emptyRequestMethods"
+        ],
+        "J_returnType" : "-> DataResponsePublisher<Data>"
+      },
+      {
+        "A_name" : "publishString",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 186, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "any DataPreprocessor",
+          "String.Encoding?",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "queue",
+          "preprocessor",
+          "encoding",
+          "emptyResponseCodes",
+          "emptyRequestMethods"
+        ],
+        "J_returnType" : "-> DataResponsePublisher<String>"
+      },
+      {
+        "A_name" : "publishDecodable",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "_disfavoredOverload",
+          "available",
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 199, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T.Type",
+          "DispatchQueue",
+          "any DataPreprocessor",
+          "any DataDecoder",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "type",
+          "queue",
+          "preprocessor",
+          "decoder",
+          "emptyResponseCodes",
+          "emptyResponseMethods"
+        ],
+        "J_returnType" : "-> DataResponsePublisher<T>"
+      },
+      {
+        "A_name" : "publishDecodable",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 231, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T.Type",
+          "DispatchQueue",
+          "any DataPreprocessor",
+          "any DataDecoder",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "type",
+          "queue",
+          "preprocessor",
+          "decoder",
+          "emptyResponseCodes",
+          "emptyRequestMethods"
+        ],
+        "J_returnType" : "-> DataResponsePublisher<T>"
+      },
+      {
+        "A_name" : "publishUnserialized",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 250, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue"
+        ],
+        "I_parameters" : [
+          "queue"
+        ],
+        "J_returnType" : "-> DataResponsePublisher<Data?>"
+      }
+    ]
+  },
+  {
+    "A_name" : "publishResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 141, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Serializer",
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "using",
+      "on"
+    ],
+    "J_returnType" : "-> DataResponsePublisher<T>"
+  },
+  {
+    "A_name" : "publishData",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 159, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "any DataPreprocessor",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "queue",
+      "preprocessor",
+      "emptyResponseCodes",
+      "emptyRequestMethods"
+    ],
+    "J_returnType" : "-> DataResponsePublisher<Data>"
+  },
+  {
+    "A_name" : "publishString",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 186, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "any DataPreprocessor",
+      "String.Encoding?",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "queue",
+      "preprocessor",
+      "encoding",
+      "emptyResponseCodes",
+      "emptyRequestMethods"
+    ],
+    "J_returnType" : "-> DataResponsePublisher<String>"
+  },
+  {
+    "A_name" : "publishDecodable",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "_disfavoredOverload",
+      "available",
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 199, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T.Type",
+      "DispatchQueue",
+      "any DataPreprocessor",
+      "any DataDecoder",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "type",
+      "queue",
+      "preprocessor",
+      "decoder",
+      "emptyResponseCodes",
+      "emptyResponseMethods"
+    ],
+    "J_returnType" : "-> DataResponsePublisher<T>"
+  },
+  {
+    "A_name" : "publishDecodable",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 231, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T.Type",
+      "DispatchQueue",
+      "any DataPreprocessor",
+      "any DataDecoder",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "type",
+      "queue",
+      "preprocessor",
+      "decoder",
+      "emptyResponseCodes",
+      "emptyRequestMethods"
+    ],
+    "J_returnType" : "-> DataResponsePublisher<T>"
+  },
+  {
+    "A_name" : "publishUnserialized",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 250, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "queue"
+    ],
+    "J_returnType" : "-> DataResponsePublisher<Data?>"
+  },
+  {
+    "A_name" : "DataStreamPublisher",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Publisher"
+    ],
+    "F_location" : "Combine.swift - Line: 257, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 264, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "streamHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 265, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 274, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DataStreamRequest",
+          "DispatchQueue",
+          "Serializer"
+        ],
+        "I_parameters" : [
+          "_",
+          "queue",
+          "serializer"
+        ]
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 283, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> AnyPublisher<Result<Value, AFError>, Never>"
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 300, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> AnyPublisher<Value, AFError>"
+      },
+      {
+        "A_name" : "receive",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 304, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "S"
+        ],
+        "I_parameters" : [
+          "subscriber"
+        ]
+      },
+      {
+        "A_name" : "Inner",
+        "B_kind" : "class",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "final"
+        ],
+        "E_adoptedClassProtocols" : [
+          "Subscription"
+        ],
+        "F_location" : "Combine.swift - Line: 310, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "downstream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 314, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 315, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "streamHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 316, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 318, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "DataStreamRequest",
+              "@escaping Handler",
+              "Downstream"
+            ],
+            "I_parameters" : [
+              "request",
+              "streamHandler",
+              "downstream"
+            ]
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 324, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "Subscribers.Demand"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "cancel",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 338, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 264, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "streamHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 265, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 274, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataStreamRequest",
+      "DispatchQueue",
+      "Serializer"
+    ],
+    "I_parameters" : [
+      "_",
+      "queue",
+      "serializer"
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 283, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> AnyPublisher<Result<Value, AFError>, Never>"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 300, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> AnyPublisher<Value, AFError>"
+  },
+  {
+    "A_name" : "receive",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 304, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "S"
+    ],
+    "I_parameters" : [
+      "subscriber"
+    ]
+  },
+  {
+    "A_name" : "Inner",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Subscription"
+    ],
+    "F_location" : "Combine.swift - Line: 310, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "downstream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 314, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 315, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "streamHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 316, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 318, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DataStreamRequest",
+          "@escaping Handler",
+          "Downstream"
+        ],
+        "I_parameters" : [
+          "request",
+          "streamHandler",
+          "downstream"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 324, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Subscribers.Demand"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 338, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "downstream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 314, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 315, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "streamHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 316, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 318, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataStreamRequest",
+      "@escaping Handler",
+      "Downstream"
+    ],
+    "I_parameters" : [
+      "request",
+      "streamHandler",
+      "downstream"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 324, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Subscribers.Demand"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 338, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "DataStreamRequest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 345, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "publishStream",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 352, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Serializer",
+          "DispatchQueue"
+        ],
+        "I_parameters" : [
+          "using",
+          "on"
+        ],
+        "J_returnType" : "-> DataStreamPublisher<Serializer.SerializedObject>"
+      },
+      {
+        "A_name" : "publishData",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 364, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue"
+        ],
+        "I_parameters" : [
+          "queue"
+        ],
+        "J_returnType" : "-> DataStreamPublisher<Data>"
+      },
+      {
+        "A_name" : "publishString",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 375, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue"
+        ],
+        "I_parameters" : [
+          "queue"
+        ],
+        "J_returnType" : "-> DataStreamPublisher<String>"
+      },
+      {
+        "A_name" : "publishDecodable",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 390, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T.Type",
+          "DispatchQueue",
+          "any DataDecoder",
+          "any DataPreprocessor"
+        ],
+        "I_parameters" : [
+          "type",
+          "queue",
+          "decoder",
+          "preprocessor"
+        ],
+        "J_returnType" : "-> DataStreamPublisher<T>"
+      }
+    ]
+  },
+  {
+    "A_name" : "publishStream",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 352, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Serializer",
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "using",
+      "on"
+    ],
+    "J_returnType" : "-> DataStreamPublisher<Serializer.SerializedObject>"
+  },
+  {
+    "A_name" : "publishData",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 364, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "queue"
+    ],
+    "J_returnType" : "-> DataStreamPublisher<Data>"
+  },
+  {
+    "A_name" : "publishString",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 375, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "queue"
+    ],
+    "J_returnType" : "-> DataStreamPublisher<String>"
+  },
+  {
+    "A_name" : "publishDecodable",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 390, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T.Type",
+      "DispatchQueue",
+      "any DataDecoder",
+      "any DataPreprocessor"
+    ],
+    "I_parameters" : [
+      "type",
+      "queue",
+      "decoder",
+      "preprocessor"
+    ],
+    "J_returnType" : "-> DataStreamPublisher<T>"
+  },
+  {
+    "A_name" : "DownloadResponsePublisher",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Publisher"
+    ],
+    "F_location" : "Combine.swift - Line: 402, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 409, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "responseHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 410, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 418, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DownloadRequest",
+          "DispatchQueue",
+          "Serializer"
+        ],
+        "I_parameters" : [
+          "_",
+          "queue",
+          "serializer"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 430, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DownloadRequest",
+          "DispatchQueue",
+          "Serializer"
+        ],
+        "I_parameters" : [
+          "_",
+          "queue",
+          "serializer"
+        ]
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 442, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> AnyPublisher<Result<Value, AFError>, Never>"
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 449, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> AnyPublisher<Value, AFError>"
+      },
+      {
+        "A_name" : "receive",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 453, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "S"
+        ],
+        "I_parameters" : [
+          "subscriber"
+        ]
+      },
+      {
+        "A_name" : "Inner",
+        "B_kind" : "class",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "final"
+        ],
+        "E_adoptedClassProtocols" : [
+          "Subscription"
+        ],
+        "F_location" : "Combine.swift - Line: 459, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "downstream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 463, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 464, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "responseHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 465, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 467, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "DownloadRequest",
+              "@escaping Handler",
+              "Downstream"
+            ],
+            "I_parameters" : [
+              "request",
+              "responseHandler",
+              "downstream"
+            ]
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 473, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "Subscribers.Demand"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "cancel",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Combine.swift - Line: 485, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 409, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "responseHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 410, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 418, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DownloadRequest",
+      "DispatchQueue",
+      "Serializer"
+    ],
+    "I_parameters" : [
+      "_",
+      "queue",
+      "serializer"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 430, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DownloadRequest",
+      "DispatchQueue",
+      "Serializer"
+    ],
+    "I_parameters" : [
+      "_",
+      "queue",
+      "serializer"
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 442, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> AnyPublisher<Result<Value, AFError>, Never>"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 449, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> AnyPublisher<Value, AFError>"
+  },
+  {
+    "A_name" : "receive",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 453, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "S"
+    ],
+    "I_parameters" : [
+      "subscriber"
+    ]
+  },
+  {
+    "A_name" : "Inner",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Subscription"
+    ],
+    "F_location" : "Combine.swift - Line: 459, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "downstream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 463, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 464, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "responseHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 465, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 467, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DownloadRequest",
+          "@escaping Handler",
+          "Downstream"
+        ],
+        "I_parameters" : [
+          "request",
+          "responseHandler",
+          "downstream"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 473, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Subscribers.Demand"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Combine.swift - Line: 485, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "downstream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 463, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 464, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "responseHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 465, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 467, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DownloadRequest",
+      "@escaping Handler",
+      "Downstream"
+    ],
+    "I_parameters" : [
+      "request",
+      "responseHandler",
+      "downstream"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 473, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Subscribers.Demand"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 485, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "DownloadRequest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 492, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "publishResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 500, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Serializer",
+          "DispatchQueue"
+        ],
+        "I_parameters" : [
+          "using",
+          "on"
+        ],
+        "J_returnType" : "-> DownloadResponsePublisher<T>"
+      },
+      {
+        "A_name" : "publishResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 514, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Serializer",
+          "DispatchQueue"
+        ],
+        "I_parameters" : [
+          "using",
+          "on"
+        ],
+        "J_returnType" : "-> DownloadResponsePublisher<T>"
+      },
+      {
+        "A_name" : "publishURL",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 526, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue"
+        ],
+        "I_parameters" : [
+          "queue"
+        ],
+        "J_returnType" : "-> DownloadResponsePublisher<URL>"
+      },
+      {
+        "A_name" : "publishData",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 544, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "any DataPreprocessor",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "queue",
+          "preprocessor",
+          "emptyResponseCodes",
+          "emptyRequestMethods"
+        ],
+        "J_returnType" : "-> DownloadResponsePublisher<Data>"
+      },
+      {
+        "A_name" : "publishString",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 571, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "any DataPreprocessor",
+          "String.Encoding?",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "queue",
+          "preprocessor",
+          "encoding",
+          "emptyResponseCodes",
+          "emptyRequestMethods"
+        ],
+        "J_returnType" : "-> DownloadResponsePublisher<String>"
+      },
+      {
+        "A_name" : "publishDecodable",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "_disfavoredOverload",
+          "available",
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 584, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T.Type",
+          "DispatchQueue",
+          "any DataPreprocessor",
+          "any DataDecoder",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "type",
+          "queue",
+          "preprocessor",
+          "decoder",
+          "emptyResponseCodes",
+          "emptyResponseMethods"
+        ],
+        "J_returnType" : "-> DownloadResponsePublisher<T>"
+      },
+      {
+        "A_name" : "publishDecodable",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 615, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T.Type",
+          "DispatchQueue",
+          "any DataPreprocessor",
+          "any DataDecoder",
+          "Set<Int>",
+          "Set<HTTPMethod>"
+        ],
+        "I_parameters" : [
+          "type",
+          "queue",
+          "preprocessor",
+          "decoder",
+          "emptyResponseCodes",
+          "emptyRequestMethods"
+        ],
+        "J_returnType" : "-> DownloadResponsePublisher<T>"
+      }
+    ]
+  },
+  {
+    "A_name" : "publishResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 500, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Serializer",
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "using",
+      "on"
+    ],
+    "J_returnType" : "-> DownloadResponsePublisher<T>"
+  },
+  {
+    "A_name" : "publishResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 514, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Serializer",
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "using",
+      "on"
+    ],
+    "J_returnType" : "-> DownloadResponsePublisher<T>"
+  },
+  {
+    "A_name" : "publishURL",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 526, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "queue"
+    ],
+    "J_returnType" : "-> DownloadResponsePublisher<URL>"
+  },
+  {
+    "A_name" : "publishData",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 544, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "any DataPreprocessor",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "queue",
+      "preprocessor",
+      "emptyResponseCodes",
+      "emptyRequestMethods"
+    ],
+    "J_returnType" : "-> DownloadResponsePublisher<Data>"
+  },
+  {
+    "A_name" : "publishString",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 571, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "any DataPreprocessor",
+      "String.Encoding?",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "queue",
+      "preprocessor",
+      "encoding",
+      "emptyResponseCodes",
+      "emptyRequestMethods"
+    ],
+    "J_returnType" : "-> DownloadResponsePublisher<String>"
+  },
+  {
+    "A_name" : "publishDecodable",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "_disfavoredOverload",
+      "available",
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 584, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T.Type",
+      "DispatchQueue",
+      "any DataPreprocessor",
+      "any DataDecoder",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "type",
+      "queue",
+      "preprocessor",
+      "decoder",
+      "emptyResponseCodes",
+      "emptyResponseMethods"
+    ],
+    "J_returnType" : "-> DownloadResponsePublisher<T>"
+  },
+  {
+    "A_name" : "publishDecodable",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 615, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T.Type",
+      "DispatchQueue",
+      "any DataPreprocessor",
+      "any DataDecoder",
+      "Set<Int>",
+      "Set<HTTPMethod>"
+    ],
+    "I_parameters" : [
+      "type",
+      "queue",
+      "preprocessor",
+      "decoder",
+      "emptyResponseCodes",
+      "emptyRequestMethods"
+    ],
+    "J_returnType" : "-> DownloadResponsePublisher<T>"
+  },
+  {
+    "A_name" : "DownloadResponsePublisher",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 630, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 633, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DownloadRequest",
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "_",
+      "queue"
+    ]
+  },
+  {
+    "A_name" : "DownloadRequest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Combine.swift - Line: 640, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "publishUnserialized",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Combine.swift - Line: 646, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue"
+        ],
+        "I_parameters" : [
+          "on"
+        ],
+        "J_returnType" : "-> DownloadResponsePublisher<URL?>"
+      }
+    ]
+  },
+  {
+    "A_name" : "publishUnserialized",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Combine.swift - Line: 646, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue"
+    ],
+    "I_parameters" : [
+      "on"
+    ],
+    "J_returnType" : "-> DownloadResponsePublisher<URL?>"
+  }
+]

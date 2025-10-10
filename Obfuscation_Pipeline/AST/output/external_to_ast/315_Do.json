@@ -1,0 +1,575 @@
+[
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "`do`",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 26, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "((Element) throws -> Void)?",
+          "((Element) throws -> Void)?",
+          "((Swift.Error) throws -> Void)?",
+          "((Swift.Error) throws -> Void)?",
+          "(() throws -> Void)?",
+          "(() throws -> Void)?",
+          "(() -> Void)?",
+          "(() -> Void)?",
+          "(() -> Void)?"
+        ],
+        "I_parameters" : [
+          "onNext",
+          "afterNext",
+          "onError",
+          "afterError",
+          "onCompleted",
+          "afterCompleted",
+          "onSubscribe",
+          "onSubscribed",
+          "onDispose"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "`do`",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 26, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "((Element) throws -> Void)?",
+      "((Element) throws -> Void)?",
+      "((Swift.Error) throws -> Void)?",
+      "((Swift.Error) throws -> Void)?",
+      "(() throws -> Void)?",
+      "(() throws -> Void)?",
+      "(() -> Void)?",
+      "(() -> Void)?",
+      "(() -> Void)?"
+    ],
+    "I_parameters" : [
+      "onNext",
+      "afterNext",
+      "onError",
+      "afterError",
+      "onCompleted",
+      "afterCompleted",
+      "onSubscribe",
+      "onSubscribed",
+      "onDispose"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "DoSink",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sink<Observer>",
+      "ObserverType"
+    ],
+    "F_location" : "Do.swift - Line: 50, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "eventHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 55, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "afterEventHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 56, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 58, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping EventHandler",
+          "@escaping AfterEventHandler",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "eventHandler",
+          "afterEventHandler",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 64, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "eventHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 55, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "afterEventHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 56, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 58, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping EventHandler",
+      "@escaping AfterEventHandler",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "eventHandler",
+      "afterEventHandler",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 64, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "Do",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Element>"
+    ],
+    "F_location" : "Do.swift - Line: 80, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 84, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "eventHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 85, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "afterEventHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 86, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onSubscribe",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 87, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onSubscribed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 88, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onDispose",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 89, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 91, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<Element>",
+          "@escaping EventHandler",
+          "@escaping AfterEventHandler",
+          "(() -> Void)?",
+          "(() -> Void)?",
+          "(() -> Void)?"
+        ],
+        "I_parameters" : [
+          "source",
+          "eventHandler",
+          "afterEventHandler",
+          "onSubscribe",
+          "onSubscribed",
+          "onDispose"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Do.swift - Line: 100, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Do.swift - Line: 102, Column: 9",
+            "H_initialValue" : "DoSink(eventHandler: self.eventHandler, afterEventHandler: self.afterEventHandler, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Do.swift - Line: 103, Column: 9",
+            "H_initialValue" : "self.source.subscribe(sink)"
+          },
+          {
+            "A_name" : "onDispose",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Do.swift - Line: 105, Column: 9",
+            "H_initialValue" : "self.onDispose"
+          },
+          {
+            "A_name" : "allSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Do.swift - Line: 106, Column: 9",
+            "H_initialValue" : "Disposables.create {\n            subscription.dispose()\n            onDispose?()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 84, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "eventHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 85, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "afterEventHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 86, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onSubscribe",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 87, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onSubscribed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 88, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onDispose",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 89, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 91, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<Element>",
+      "@escaping EventHandler",
+      "@escaping AfterEventHandler",
+      "(() -> Void)?",
+      "(() -> Void)?",
+      "(() -> Void)?"
+    ],
+    "I_parameters" : [
+      "source",
+      "eventHandler",
+      "afterEventHandler",
+      "onSubscribe",
+      "onSubscribed",
+      "onDispose"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Do.swift - Line: 100, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 102, Column: 9",
+        "H_initialValue" : "DoSink(eventHandler: self.eventHandler, afterEventHandler: self.afterEventHandler, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 103, Column: 9",
+        "H_initialValue" : "self.source.subscribe(sink)"
+      },
+      {
+        "A_name" : "onDispose",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 105, Column: 9",
+        "H_initialValue" : "self.onDispose"
+      },
+      {
+        "A_name" : "allSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Do.swift - Line: 106, Column: 9",
+        "H_initialValue" : "Disposables.create {\n            subscription.dispose()\n            onDispose?()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 102, Column: 9",
+    "H_initialValue" : "DoSink(eventHandler: self.eventHandler, afterEventHandler: self.afterEventHandler, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 103, Column: 9",
+    "H_initialValue" : "self.source.subscribe(sink)"
+  },
+  {
+    "A_name" : "onDispose",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 105, Column: 9",
+    "H_initialValue" : "self.onDispose"
+  },
+  {
+    "A_name" : "allSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Do.swift - Line: 106, Column: 9",
+    "H_initialValue" : "Disposables.create {\n            subscription.dispose()\n            onDispose?()\n        }"
+  }
+]

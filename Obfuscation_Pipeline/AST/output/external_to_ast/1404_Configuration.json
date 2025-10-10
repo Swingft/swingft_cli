@@ -1,0 +1,404 @@
+[
+  {
+    "A_name" : "Configuration",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "NSObject"
+    ],
+    "F_location" : "Configuration.swift - Line: 19, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "exampleHooks",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Configuration.swift - Line: 20, Column: 5",
+        "H_initialValue" : "ExampleHooks()"
+      },
+      {
+        "A_name" : "suiteHooks",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Configuration.swift - Line: 21, Column: 5",
+        "H_initialValue" : "SuiteHooks()"
+      },
+      {
+        "A_name" : "exclusionFilters",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Configuration.swift - Line: 22, Column: 5",
+        "H_initialValue" : "[\n        { example in \/\/ swiftlint:disable:this opening_brace\n            if let pending = example.filterFlags[Filter.pending] {\n                return pending\n            } else {\n                return false\n            }\n        },\n    ]"
+      },
+      {
+        "A_name" : "inclusionFilters",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Configuration.swift - Line: 31, Column: 5",
+        "H_initialValue" : "[\n        { example in \/\/ swiftlint:disable:this opening_brace\n            if let focused = example.filterFlags[Filter.focused] {\n                return focused\n            } else {\n                return false\n            }\n        },\n    ]"
+      },
+      {
+        "A_name" : "runAllWhenEverythingFiltered",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Configuration.swift - Line: 44, Column: 5",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "include",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Configuration.swift - Line: 56, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping ExampleFilter"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "exclude",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Configuration.swift - Line: 70, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping ExampleFilter"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "beforeEach",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Configuration.swift - Line: 107, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping BeforeExampleClosure"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "afterEach",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Configuration.swift - Line: 144, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping AfterExampleClosure"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "beforeSuite",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Configuration.swift - Line: 153, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping BeforeSuiteClosure"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "afterSuite",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Configuration.swift - Line: 162, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping AfterSuiteClosure"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "exampleHooks",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Configuration.swift - Line: 20, Column: 5",
+    "H_initialValue" : "ExampleHooks()"
+  },
+  {
+    "A_name" : "suiteHooks",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Configuration.swift - Line: 21, Column: 5",
+    "H_initialValue" : "SuiteHooks()"
+  },
+  {
+    "A_name" : "exclusionFilters",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Configuration.swift - Line: 22, Column: 5",
+    "H_initialValue" : "[\n        { example in \/\/ swiftlint:disable:this opening_brace\n            if let pending = example.filterFlags[Filter.pending] {\n                return pending\n            } else {\n                return false\n            }\n        },\n    ]"
+  },
+  {
+    "A_name" : "inclusionFilters",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Configuration.swift - Line: 31, Column: 5",
+    "H_initialValue" : "[\n        { example in \/\/ swiftlint:disable:this opening_brace\n            if let focused = example.filterFlags[Filter.focused] {\n                return focused\n            } else {\n                return false\n            }\n        },\n    ]"
+  },
+  {
+    "A_name" : "runAllWhenEverythingFiltered",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Configuration.swift - Line: 44, Column: 5",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "include",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Configuration.swift - Line: 56, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping ExampleFilter"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "exclude",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Configuration.swift - Line: 70, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping ExampleFilter"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "beforeEach",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "Configuration.swift - Line: 80, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping BeforeExampleWithMetadataClosure"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "beforeEach",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Configuration.swift - Line: 85, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping BeforeExampleWithMetadataClosure"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "beforeEach",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Configuration.swift - Line: 107, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping BeforeExampleClosure"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "afterEach",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "Configuration.swift - Line: 117, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping AfterExampleWithMetadataClosure"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "afterEach",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Configuration.swift - Line: 122, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping AfterExampleWithMetadataClosure"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "afterEach",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Configuration.swift - Line: 144, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping AfterExampleClosure"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "beforeSuite",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Configuration.swift - Line: 153, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping BeforeSuiteClosure"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "afterSuite",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Configuration.swift - Line: 162, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping AfterSuiteClosure"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  }
+]

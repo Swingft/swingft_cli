@@ -1,0 +1,1038 @@
+[
+  {
+    "A_name" : "MaybeTrait",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 14, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "MaybeEvent",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "frozen"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 18, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "success",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 20, Column: 10",
+        "I_parameterType" : [
+          "Element"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 23, Column: 10",
+        "I_parameterType" : [
+          "Swift.Error"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "completed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 26, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "PrimitiveSequenceType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 29, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "create",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Maybe.swift - Line: 40, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "source",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Maybe.swift - Line: 41, Column: 9",
+            "H_initialValue" : "Observable<Element>.create { observer in\n            return subscribe { event in\n                switch event {\n                case .success(let element):\n                    observer.on(.next(element))\n                    observer.on(.completed)\n                case .error(let error):\n                    observer.on(.error(error))\n                case .completed:\n                    observer.on(.completed)\n                }\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "@escaping (@escaping MaybeObserver) -> Disposable"
+        ],
+        "I_parameters" : [
+          "subscribe"
+        ],
+        "J_returnType" : "-> PrimitiveSequence<Trait, Element>"
+      },
+      {
+        "A_name" : "subscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 63, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "stopped",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Maybe.swift - Line: 64, Column: 9",
+            "H_initialValue" : "false"
+          }
+        ],
+        "I_parameterType" : [
+          "@escaping (MaybeEvent<Element>) -> Void"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "subscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 95, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Object",
+          "((Object, Element) -> Void)?",
+          "((Object, Swift.Error) -> Void)?",
+          "((Object) -> Void)?",
+          "((Object) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "onSuccess",
+          "onError",
+          "onCompleted",
+          "onDisposed"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "subscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 132, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "disposable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Maybe.swift - Line: 141, Column: 9",
+            "H_initialValue" : "onDisposed.map(Disposables.create(with:)) ?? Disposables.create()"
+          },
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Maybe.swift - Line: 143, Column: 9",
+            "H_initialValue" : "{ event in\n            switch event {\n            case .success(let element):\n                onSuccess?(element)\n                disposable.dispose()\n            case .error(let error):\n                if let onError = onError {\n                    onError(error)\n                } else {\n                    Hooks.defaultErrorHandler(callStack, error)\n                }\n                disposable.dispose()\n            case .completed:\n                onCompleted?()\n                disposable.dispose()\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "((Element) -> Void)?",
+          "((Swift.Error) -> Void)?",
+          "(() -> Void)?",
+          "(() -> Void)?"
+        ],
+        "I_parameters" : [
+          "onSuccess",
+          "onError",
+          "onCompleted",
+          "onDisposed"
+        ],
+        "J_returnType" : "-> Disposable"
+      }
+    ]
+  },
+  {
+    "A_name" : "create",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Maybe.swift - Line: 40, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 41, Column: 9",
+        "H_initialValue" : "Observable<Element>.create { observer in\n            return subscribe { event in\n                switch event {\n                case .success(let element):\n                    observer.on(.next(element))\n                    observer.on(.completed)\n                case .error(let error):\n                    observer.on(.error(error))\n                case .completed:\n                    observer.on(.completed)\n                }\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping (@escaping MaybeObserver) -> Disposable"
+    ],
+    "I_parameters" : [
+      "subscribe"
+    ],
+    "J_returnType" : "-> PrimitiveSequence<Trait, Element>"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 41, Column: 9",
+    "H_initialValue" : "Observable<Element>.create { observer in\n            return subscribe { event in\n                switch event {\n                case .success(let element):\n                    observer.on(.next(element))\n                    observer.on(.completed)\n                case .error(let error):\n                    observer.on(.error(error))\n                case .completed:\n                    observer.on(.completed)\n                }\n            }\n        }"
+  },
+  {
+    "A_name" : "subscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 63, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "stopped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 64, Column: 9",
+        "H_initialValue" : "false"
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping (MaybeEvent<Element>) -> Void"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "stopped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 64, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "subscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 95, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Object",
+      "((Object, Element) -> Void)?",
+      "((Object, Swift.Error) -> Void)?",
+      "((Object) -> Void)?",
+      "((Object) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "onSuccess",
+      "onError",
+      "onCompleted",
+      "onDisposed"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 132, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "disposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 141, Column: 9",
+        "H_initialValue" : "onDisposed.map(Disposables.create(with:)) ?? Disposables.create()"
+      },
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 143, Column: 9",
+        "H_initialValue" : "{ event in\n            switch event {\n            case .success(let element):\n                onSuccess?(element)\n                disposable.dispose()\n            case .error(let error):\n                if let onError = onError {\n                    onError(error)\n                } else {\n                    Hooks.defaultErrorHandler(callStack, error)\n                }\n                disposable.dispose()\n            case .completed:\n                onCompleted?()\n                disposable.dispose()\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "((Element) -> Void)?",
+      "((Swift.Error) -> Void)?",
+      "(() -> Void)?",
+      "(() -> Void)?"
+    ],
+    "I_parameters" : [
+      "onSuccess",
+      "onError",
+      "onCompleted",
+      "onDisposed"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "callStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 137, Column: 13",
+    "H_initialValue" : "Hooks.recordCallStackOnError ? Thread.callStackSymbols : []"
+  },
+  {
+    "A_name" : "callStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 139, Column: 13",
+    "H_initialValue" : "[String]()"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 141, Column: 9",
+    "H_initialValue" : "onDisposed.map(Disposables.create(with:)) ?? Disposables.create()"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 143, Column: 9",
+    "H_initialValue" : "{ event in\n            switch event {\n            case .success(let element):\n                onSuccess?(element)\n                disposable.dispose()\n            case .error(let error):\n                if let onError = onError {\n                    onError(error)\n                } else {\n                    Hooks.defaultErrorHandler(callStack, error)\n                }\n                disposable.dispose()\n            case .completed:\n                onCompleted?()\n                disposable.dispose()\n            }\n        }"
+  },
+  {
+    "A_name" : "PrimitiveSequenceType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 168, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "just",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Maybe.swift - Line: 177, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Maybe<Element>"
+      },
+      {
+        "A_name" : "just",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Maybe.swift - Line: 190, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element",
+          "ImmediateSchedulerType"
+        ],
+        "I_parameters" : [
+          "_",
+          "scheduler"
+        ],
+        "J_returnType" : "-> Maybe<Element>"
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Maybe.swift - Line: 201, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Swift.Error"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Maybe<Element>"
+      },
+      {
+        "A_name" : "never",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Maybe.swift - Line: 212, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Maybe<Element>"
+      },
+      {
+        "A_name" : "empty",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Maybe.swift - Line: 223, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Maybe<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "just",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Maybe.swift - Line: 177, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Maybe<Element>"
+  },
+  {
+    "A_name" : "just",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Maybe.swift - Line: 190, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element",
+      "ImmediateSchedulerType"
+    ],
+    "I_parameters" : [
+      "_",
+      "scheduler"
+    ],
+    "J_returnType" : "-> Maybe<Element>"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Maybe.swift - Line: 201, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Swift.Error"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Maybe<Element>"
+  },
+  {
+    "A_name" : "never",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Maybe.swift - Line: 212, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Maybe<Element>"
+  },
+  {
+    "A_name" : "empty",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Maybe.swift - Line: 223, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Maybe<Element>"
+  },
+  {
+    "A_name" : "PrimitiveSequenceType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 228, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "`do`",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 245, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "((Element) throws -> Void)?",
+          "((Element) throws -> Void)?",
+          "((Swift.Error) throws -> Void)?",
+          "((Swift.Error) throws -> Void)?",
+          "(() throws -> Void)?",
+          "(() throws -> Void)?",
+          "(() -> Void)?",
+          "(() -> Void)?",
+          "(() -> Void)?"
+        ],
+        "I_parameters" : [
+          "onNext",
+          "afterNext",
+          "onError",
+          "afterError",
+          "onCompleted",
+          "afterCompleted",
+          "onSubscribe",
+          "onSubscribed",
+          "onDispose"
+        ],
+        "J_returnType" : "-> Maybe<Element>"
+      },
+      {
+        "A_name" : "filter",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 276, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Element) throws -> Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Maybe<Element>"
+      },
+      {
+        "A_name" : "map",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 290, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Element) throws -> Result"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Maybe<Result>"
+      },
+      {
+        "A_name" : "compactMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 302, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Element) throws -> Result?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Maybe<Result>"
+      },
+      {
+        "A_name" : "flatMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 315, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Element) throws -> Maybe<Result>"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Maybe<Result>"
+      },
+      {
+        "A_name" : "ifEmpty",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 328, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element"
+        ],
+        "I_parameters" : [
+          "default"
+        ],
+        "J_returnType" : "-> Single<Element>"
+      },
+      {
+        "A_name" : "ifEmpty",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 340, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Maybe<Element>"
+        ],
+        "I_parameters" : [
+          "switchTo"
+        ],
+        "J_returnType" : "-> Maybe<Element>"
+      },
+      {
+        "A_name" : "ifEmpty",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 352, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Single<Element>"
+        ],
+        "I_parameters" : [
+          "switchTo"
+        ],
+        "J_returnType" : "-> Single<Element>"
+      },
+      {
+        "A_name" : "catchAndReturn",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Maybe.swift - Line: 364, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> PrimitiveSequence<Trait, Element>"
+      },
+      {
+        "A_name" : "catchErrorJustReturn",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "Maybe.swift - Line: 377, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> PrimitiveSequence<Trait, Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "`do`",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 245, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "((Element) throws -> Void)?",
+      "((Element) throws -> Void)?",
+      "((Swift.Error) throws -> Void)?",
+      "((Swift.Error) throws -> Void)?",
+      "(() throws -> Void)?",
+      "(() throws -> Void)?",
+      "(() -> Void)?",
+      "(() -> Void)?",
+      "(() -> Void)?"
+    ],
+    "I_parameters" : [
+      "onNext",
+      "afterNext",
+      "onError",
+      "afterError",
+      "onCompleted",
+      "afterCompleted",
+      "onSubscribe",
+      "onSubscribed",
+      "onDispose"
+    ],
+    "J_returnType" : "-> Maybe<Element>"
+  },
+  {
+    "A_name" : "filter",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 276, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Element) throws -> Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Maybe<Element>"
+  },
+  {
+    "A_name" : "map",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 290, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Element) throws -> Result"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Maybe<Result>"
+  },
+  {
+    "A_name" : "compactMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 302, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Element) throws -> Result?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Maybe<Result>"
+  },
+  {
+    "A_name" : "flatMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 315, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Element) throws -> Maybe<Result>"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Maybe<Result>"
+  },
+  {
+    "A_name" : "ifEmpty",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 328, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element"
+    ],
+    "I_parameters" : [
+      "default"
+    ],
+    "J_returnType" : "-> Single<Element>"
+  },
+  {
+    "A_name" : "ifEmpty",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 340, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Maybe<Element>"
+    ],
+    "I_parameters" : [
+      "switchTo"
+    ],
+    "J_returnType" : "-> Maybe<Element>"
+  },
+  {
+    "A_name" : "ifEmpty",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 352, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Single<Element>"
+    ],
+    "I_parameters" : [
+      "switchTo"
+    ],
+    "J_returnType" : "-> Single<Element>"
+  },
+  {
+    "A_name" : "catchAndReturn",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Maybe.swift - Line: 364, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> PrimitiveSequence<Trait, Element>"
+  },
+  {
+    "A_name" : "catchErrorJustReturn",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "Maybe.swift - Line: 377, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> PrimitiveSequence<Trait, Element>"
+  }
+]

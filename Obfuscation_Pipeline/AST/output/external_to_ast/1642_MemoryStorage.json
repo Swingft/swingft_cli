@@ -1,0 +1,1286 @@
+[
+  {
+    "A_name" : "MemoryStorage",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 35, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Backend",
+        "B_kind" : "class",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "final"
+        ],
+        "E_adoptedClassProtocols" : [
+          "@unchecked Sendable"
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 54, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "storage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 56, Column: 9",
+            "H_initialValue" : "NSCache<NSString, StorageObject<T>>()"
+          },
+          {
+            "A_name" : "keys",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 66, Column: 9",
+            "H_initialValue" : "Set<String>()"
+          },
+          {
+            "A_name" : "cleanTimer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 68, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "lock",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 69, Column: 9",
+            "H_initialValue" : "NSLock()"
+          },
+          {
+            "A_name" : "config",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 74, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 90, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "Config"
+            ],
+            "I_parameters" : [
+              "config"
+            ]
+          },
+          {
+            "A_name" : "removeExpired",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 102, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "store",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 127, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "T",
+              "String",
+              "StorageExpiration?"
+            ],
+            "I_parameters" : [
+              "value",
+              "forKey",
+              "expiration"
+            ]
+          },
+          {
+            "A_name" : "storeNoThrow",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 137, Column: 9",
+            "G_members" : [
+              {
+                "A_name" : "expiration",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "MemoryStorage.swift - Line: 144, Column: 13",
+                "H_initialValue" : "expiration ?? config.expiration"
+              },
+              {
+                "A_name" : "object",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "MemoryStorage.swift - Line: 148, Column: 13",
+                "H_initialValue" : ""
+              }
+            ],
+            "I_parameterType" : [
+              "T",
+              "String",
+              "StorageExpiration?"
+            ],
+            "I_parameters" : [
+              "value",
+              "forKey",
+              "expiration"
+            ]
+          },
+          {
+            "A_name" : "value",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 164, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "String",
+              "ExpirationExtending"
+            ],
+            "I_parameters" : [
+              "forKey",
+              "extendingExpiration"
+            ],
+            "J_returnType" : "-> T?"
+          },
+          {
+            "A_name" : "isCached",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 179, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "String"
+            ],
+            "I_parameters" : [
+              "forKey"
+            ],
+            "J_returnType" : "-> Bool"
+          },
+          {
+            "A_name" : "remove",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 189, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "String"
+            ],
+            "I_parameters" : [
+              "forKey"
+            ]
+          },
+          {
+            "A_name" : "removeAll",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 197, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Backend",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 54, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "storage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 56, Column: 9",
+        "H_initialValue" : "NSCache<NSString, StorageObject<T>>()"
+      },
+      {
+        "A_name" : "keys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 66, Column: 9",
+        "H_initialValue" : "Set<String>()"
+      },
+      {
+        "A_name" : "cleanTimer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 68, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 69, Column: 9",
+        "H_initialValue" : "NSLock()"
+      },
+      {
+        "A_name" : "config",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 74, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 90, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Config"
+        ],
+        "I_parameters" : [
+          "config"
+        ]
+      },
+      {
+        "A_name" : "removeExpired",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 102, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "store",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 127, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T",
+          "String",
+          "StorageExpiration?"
+        ],
+        "I_parameters" : [
+          "value",
+          "forKey",
+          "expiration"
+        ]
+      },
+      {
+        "A_name" : "storeNoThrow",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 137, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "expiration",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 144, Column: 13",
+            "H_initialValue" : "expiration ?? config.expiration"
+          },
+          {
+            "A_name" : "object",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MemoryStorage.swift - Line: 148, Column: 13",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "T",
+          "String",
+          "StorageExpiration?"
+        ],
+        "I_parameters" : [
+          "value",
+          "forKey",
+          "expiration"
+        ]
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 164, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "ExpirationExtending"
+        ],
+        "I_parameters" : [
+          "forKey",
+          "extendingExpiration"
+        ],
+        "J_returnType" : "-> T?"
+      },
+      {
+        "A_name" : "isCached",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 179, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forKey"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "remove",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 189, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "forKey"
+        ]
+      },
+      {
+        "A_name" : "removeAll",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 197, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "storage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 56, Column: 9",
+    "H_initialValue" : "NSCache<NSString, StorageObject<T>>()"
+  },
+  {
+    "A_name" : "keys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 66, Column: 9",
+    "H_initialValue" : "Set<String>()"
+  },
+  {
+    "A_name" : "cleanTimer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 68, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 69, Column: 9",
+    "H_initialValue" : "NSLock()"
+  },
+  {
+    "A_name" : "config",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 74, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 90, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Config"
+    ],
+    "I_parameters" : [
+      "config"
+    ]
+  },
+  {
+    "A_name" : "removeExpired",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 102, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "nsKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 106, Column: 17",
+    "H_initialValue" : "key as NSString"
+  },
+  {
+    "A_name" : "store",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 127, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T",
+      "String",
+      "StorageExpiration?"
+    ],
+    "I_parameters" : [
+      "value",
+      "forKey",
+      "expiration"
+    ]
+  },
+  {
+    "A_name" : "storeNoThrow",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 137, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "expiration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 144, Column: 13",
+        "H_initialValue" : "expiration ?? config.expiration"
+      },
+      {
+        "A_name" : "object",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 148, Column: 13",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "T",
+      "String",
+      "StorageExpiration?"
+    ],
+    "I_parameters" : [
+      "value",
+      "forKey",
+      "expiration"
+    ]
+  },
+  {
+    "A_name" : "expiration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 144, Column: 13",
+    "H_initialValue" : "expiration ?? config.expiration"
+  },
+  {
+    "A_name" : "object",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 148, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 164, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "ExpirationExtending"
+    ],
+    "I_parameters" : [
+      "forKey",
+      "extendingExpiration"
+    ],
+    "J_returnType" : "-> T?"
+  },
+  {
+    "A_name" : "isCached",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 179, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forKey"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "remove",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 189, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "forKey"
+    ]
+  },
+  {
+    "A_name" : "removeAll",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 197, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "MemoryStorage",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 206, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "Config",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 208, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "totalCostLimit",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 215, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "countLimit",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 220, Column: 9",
+        "H_initialValue" : ".max"
+      },
+      {
+        "A_name" : "expiration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 225, Column: 9",
+        "H_initialValue" : ".seconds(300)"
+      },
+      {
+        "A_name" : "cleanInterval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 228, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "keepWhenEnteringBackground",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 239, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 250, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "totalCostLimit",
+          "cleanInterval"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "totalCostLimit",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 215, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "countLimit",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 220, Column: 9",
+    "H_initialValue" : ".max"
+  },
+  {
+    "A_name" : "expiration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 225, Column: 9",
+    "H_initialValue" : ".seconds(300)"
+  },
+  {
+    "A_name" : "cleanInterval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 228, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "keepWhenEnteringBackground",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 239, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 250, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "TimeInterval"
+    ],
+    "I_parameters" : [
+      "totalCostLimit",
+      "cleanInterval"
+    ]
+  },
+  {
+    "A_name" : "MemoryStorage",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 257, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "BackgroundKeepingStorageObject",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "StorageObject<T>",
+      "NSDiscardableContent"
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 259, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "accessing",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 260, Column: 9",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "beginContentAccess",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 261, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "endContentAccess",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 270, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "discardContentIfPossible",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 274, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "isContentDiscarded",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 278, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "accessing",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 260, Column: 9",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "beginContentAccess",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 261, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "endContentAccess",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 270, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "discardContentIfPossible",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 274, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "isContentDiscarded",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 278, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "StorageObject",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 283, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 284, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "expiration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 285, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "estimatedExpiration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 287, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 289, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T",
+          "StorageExpiration"
+        ],
+        "I_parameters" : [
+          "_",
+          "expiration"
+        ]
+      },
+      {
+        "A_name" : "extendExpiration",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 296, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ExpirationExtending"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "isExpired",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MemoryStorage.swift - Line: 307, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 284, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "expiration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 285, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "estimatedExpiration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 287, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 289, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T",
+      "StorageExpiration"
+    ],
+    "I_parameters" : [
+      "_",
+      "expiration"
+    ]
+  },
+  {
+    "A_name" : "extendExpiration",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 296, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ExpirationExtending"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "isExpired",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MemoryStorage.swift - Line: 307, Column: 9",
+    "H_initialValue" : ""
+  }
+]

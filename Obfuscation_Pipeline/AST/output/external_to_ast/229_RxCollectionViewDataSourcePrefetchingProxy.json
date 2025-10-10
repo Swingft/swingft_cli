@@ -1,0 +1,354 @@
+[
+  {
+    "A_name" : "UICollectionView",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "HasPrefetchDataSource"
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 14, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "collectionViewPrefetchDataSourceNotSet",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 19, Column: 1",
+    "H_initialValue" : "CollectionViewPrefetchDataSourceNotSet()"
+  },
+  {
+    "A_name" : "CollectionViewPrefetchDataSourceNotSet",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "available",
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "NSObject",
+      "UICollectionViewDataSourcePrefetching"
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 22, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 27, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "[IndexPath]"
+        ],
+        "I_parameters" : [
+          "_",
+          "prefetchItemsAt"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 27, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "[IndexPath]"
+    ],
+    "I_parameters" : [
+      "_",
+      "prefetchItemsAt"
+    ]
+  },
+  {
+    "A_name" : "RxCollectionViewDataSourcePrefetchingProxy",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "DelegateProxy<UICollectionView, UICollectionViewDataSourcePrefetching>",
+      "DelegateProxyType"
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 31, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "weak"
+        ],
+        "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 37, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 40, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ParentObject"
+        ],
+        "I_parameters" : [
+          "collectionView"
+        ]
+      },
+      {
+        "A_name" : "registerKnownImplementations",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 46, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "_prefetchItemsPublishSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 50, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "prefetchItemsPublishSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 53, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_requiredMethodsPrefetchDataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "weak"
+        ],
+        "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 64, Column: 5",
+        "H_initialValue" : "collectionViewPrefetchDataSourceNotSet"
+      },
+      {
+        "A_name" : "setForwardToDelegate",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 67, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UICollectionViewDataSourcePrefetching?",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "retainDelegate"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 37, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 40, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ParentObject"
+    ],
+    "I_parameters" : [
+      "collectionView"
+    ]
+  },
+  {
+    "A_name" : "registerKnownImplementations",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 46, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "_prefetchItemsPublishSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 50, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "prefetchItemsPublishSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 53, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 58, Column: 9",
+    "H_initialValue" : "PublishSubject<[IndexPath]>()"
+  },
+  {
+    "A_name" : "_requiredMethodsPrefetchDataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 64, Column: 5",
+    "H_initialValue" : "collectionViewPrefetchDataSourceNotSet"
+  },
+  {
+    "A_name" : "setForwardToDelegate",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 67, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UICollectionViewDataSourcePrefetching?",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "retainDelegate"
+    ]
+  },
+  {
+    "A_name" : "RxCollectionViewDataSourcePrefetchingProxy",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UICollectionViewDataSourcePrefetching"
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 80, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 83, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "[IndexPath]"
+        ],
+        "I_parameters" : [
+          "_",
+          "prefetchItemsAt"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxCollectionViewDataSourcePrefetchingProxy.swift - Line: 83, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "[IndexPath]"
+    ],
+    "I_parameters" : [
+      "_",
+      "prefetchItemsAt"
+    ]
+  }
+]

@@ -1,0 +1,1921 @@
+[
+  {
+    "A_name" : "BaseRetryPolicyTestCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 29, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "StubRequest",
+        "B_kind" : "class",
+        "C_accessLevel" : "final",
+        "D_attributes" : [
+          "final"
+        ],
+        "E_adoptedClassProtocols" : [
+          "DataRequest",
+          "@unchecked Sendable"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 32, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "urlRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 33, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "override",
+            "D_attributes" : [
+              "override"
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 34, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "mockedResponse",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 36, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "override",
+            "D_attributes" : [
+              "override"
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 37, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 39, Column: 9",
+            "G_members" : [
+              {
+                "A_name" : "request",
+                "B_kind" : "variable",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "RetryPolicyTests.swift - Line: 42, Column: 13",
+                "H_initialValue" : "Session.RequestConvertible(url: url,\n                                                     method: method,\n                                                     parameters: nil,\n                                                     encoding: URLEncoding.default,\n                                                     headers: nil,\n                                                     requestModifier: nil)"
+              }
+            ],
+            "I_parameterType" : [
+              "URL",
+              "HTTPMethod",
+              "HTTPURLResponse?",
+              "Session"
+            ],
+            "I_parameters" : [
+              "_",
+              "method",
+              "response",
+              "session"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "idempotentMethods",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 62, Column: 5",
+        "H_initialValue" : "[.get, .head, .put, .delete, .options, .trace]"
+      },
+      {
+        "A_name" : "nonIdempotentMethods",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 63, Column: 5",
+        "H_initialValue" : "[.post, .patch, .connect]"
+      },
+      {
+        "A_name" : "methods",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 64, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 66, Column: 5",
+        "H_initialValue" : "Session(rootQueue: .main, startRequestsImmediately: false)"
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 68, Column: 5",
+        "H_initialValue" : "Endpoint().url"
+      },
+      {
+        "A_name" : "connectionLost",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 70, Column: 5",
+        "H_initialValue" : "URLError(.networkConnectionLost)"
+      },
+      {
+        "A_name" : "resourceUnavailable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 71, Column: 5",
+        "H_initialValue" : "URLError(.resourceUnavailable)"
+      },
+      {
+        "A_name" : "unknown",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 72, Column: 5",
+        "H_initialValue" : "URLError(.unknown)"
+      },
+      {
+        "A_name" : "connectionLostError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 74, Column: 5",
+        "H_initialValue" : "AFError.sessionTaskFailed(error: connectionLost)"
+      },
+      {
+        "A_name" : "resourceUnavailableError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 75, Column: 5",
+        "H_initialValue" : "AFError.sessionTaskFailed(error: resourceUnavailable)"
+      },
+      {
+        "A_name" : "unknownError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 76, Column: 5",
+        "H_initialValue" : "AFError.sessionTaskFailed(error: unknown)"
+      },
+      {
+        "A_name" : "retryableStatusCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 78, Column: 5",
+        "H_initialValue" : "[408, 500, 502, 503, 504]"
+      },
+      {
+        "A_name" : "statusCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 79, Column: 5",
+        "H_initialValue" : "Set(100...599)"
+      },
+      {
+        "A_name" : "retryableErrorCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 81, Column: 5",
+        "H_initialValue" : "[.backgroundSessionInUseByAnotherProcess,\n                                                   .backgroundSessionWasDisconnected,\n                                                   .badServerResponse,\n                                                   .callIsActive,\n                                                   .cannotConnectToHost,\n                                                   .cannotFindHost,\n                                                   .cannotLoadFromNetwork,\n                                                   .dataNotAllowed,\n                                                   .dnsLookupFailed,\n                                                   .downloadDecodingFailedMidStream,\n                                                   .downloadDecodingFailedToComplete,\n                                                   .internationalRoamingOff,\n                                                   .networkConnectionLost,\n                                                   .notConnectedToInternet,\n                                                   .secureConnectionFailed,\n                                                   .serverCertificateHasBadDate,\n                                                   .serverCertificateNotYetValid,\n                                                   .timedOut]"
+      },
+      {
+        "A_name" : "nonRetryableErrorCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 100, Column: 5",
+        "H_initialValue" : "[.appTransportSecurityRequiresSecureConnection,\n                                                      .backgroundSessionRequiresSharedContainer,\n                                                      .badURL,\n                                                      .cancelled,\n                                                      .cannotCloseFile,\n                                                      .cannotCreateFile,\n                                                      .cannotDecodeContentData,\n                                                      .cannotDecodeRawData,\n                                                      .cannotMoveFile,\n                                                      .cannotOpenFile,\n                                                      .cannotParseResponse,\n                                                      .cannotRemoveFile,\n                                                      .cannotWriteToFile,\n                                                      .clientCertificateRejected,\n                                                      .clientCertificateRequired,\n                                                      .dataLengthExceedsMaximum,\n                                                      .fileDoesNotExist,\n                                                      .fileIsDirectory,\n                                                      .httpTooManyRedirects,\n                                                      .noPermissionsToReadFile,\n                                                      .redirectToNonExistentLocation,\n                                                      .requestBodyStreamExhausted,\n                                                      .resourceUnavailable,\n                                                      .serverCertificateHasUnknownRoot,\n                                                      .serverCertificateUntrusted,\n                                                      .unknown,\n                                                      .unsupportedURL,\n                                                      .userAuthenticationRequired,\n                                                      .userCancelledAuthentication,\n                                                      .zeroByteResource]"
+      },
+      {
+        "A_name" : "errorCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 131, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 137, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 138, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "HTTPMethod",
+          "Int?"
+        ],
+        "I_parameters" : [
+          "method",
+          "statusCode"
+        ],
+        "J_returnType" : "-> Request"
+      },
+      {
+        "A_name" : "urlError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 147, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLError.Code"
+        ],
+        "I_parameters" : [
+          "with"
+        ],
+        "J_returnType" : "-> URLError"
+      }
+    ]
+  },
+  {
+    "A_name" : "StubRequest",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "DataRequest",
+      "@unchecked Sendable"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 32, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "urlRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 33, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 34, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "mockedResponse",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 36, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 37, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 39, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 42, Column: 13",
+            "H_initialValue" : "Session.RequestConvertible(url: url,\n                                                     method: method,\n                                                     parameters: nil,\n                                                     encoding: URLEncoding.default,\n                                                     headers: nil,\n                                                     requestModifier: nil)"
+          }
+        ],
+        "I_parameterType" : [
+          "URL",
+          "HTTPMethod",
+          "HTTPURLResponse?",
+          "Session"
+        ],
+        "I_parameters" : [
+          "_",
+          "method",
+          "response",
+          "session"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "urlRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 33, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 34, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mockedResponse",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 36, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 37, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 39, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 42, Column: 13",
+        "H_initialValue" : "Session.RequestConvertible(url: url,\n                                                     method: method,\n                                                     parameters: nil,\n                                                     encoding: URLEncoding.default,\n                                                     headers: nil,\n                                                     requestModifier: nil)"
+      }
+    ],
+    "I_parameterType" : [
+      "URL",
+      "HTTPMethod",
+      "HTTPURLResponse?",
+      "Session"
+    ],
+    "I_parameters" : [
+      "_",
+      "method",
+      "response",
+      "session"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 42, Column: 13",
+    "H_initialValue" : "Session.RequestConvertible(url: url,\n                                                     method: method,\n                                                     parameters: nil,\n                                                     encoding: URLEncoding.default,\n                                                     headers: nil,\n                                                     requestModifier: nil)"
+  },
+  {
+    "A_name" : "idempotentMethods",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 62, Column: 5",
+    "H_initialValue" : "[.get, .head, .put, .delete, .options, .trace]"
+  },
+  {
+    "A_name" : "nonIdempotentMethods",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 63, Column: 5",
+    "H_initialValue" : "[.post, .patch, .connect]"
+  },
+  {
+    "A_name" : "methods",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 64, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 66, Column: 5",
+    "H_initialValue" : "Session(rootQueue: .main, startRequestsImmediately: false)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 68, Column: 5",
+    "H_initialValue" : "Endpoint().url"
+  },
+  {
+    "A_name" : "connectionLost",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 70, Column: 5",
+    "H_initialValue" : "URLError(.networkConnectionLost)"
+  },
+  {
+    "A_name" : "resourceUnavailable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 71, Column: 5",
+    "H_initialValue" : "URLError(.resourceUnavailable)"
+  },
+  {
+    "A_name" : "unknown",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 72, Column: 5",
+    "H_initialValue" : "URLError(.unknown)"
+  },
+  {
+    "A_name" : "connectionLostError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 74, Column: 5",
+    "H_initialValue" : "AFError.sessionTaskFailed(error: connectionLost)"
+  },
+  {
+    "A_name" : "resourceUnavailableError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 75, Column: 5",
+    "H_initialValue" : "AFError.sessionTaskFailed(error: resourceUnavailable)"
+  },
+  {
+    "A_name" : "unknownError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 76, Column: 5",
+    "H_initialValue" : "AFError.sessionTaskFailed(error: unknown)"
+  },
+  {
+    "A_name" : "retryableStatusCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 78, Column: 5",
+    "H_initialValue" : "[408, 500, 502, 503, 504]"
+  },
+  {
+    "A_name" : "statusCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 79, Column: 5",
+    "H_initialValue" : "Set(100...599)"
+  },
+  {
+    "A_name" : "retryableErrorCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 81, Column: 5",
+    "H_initialValue" : "[.backgroundSessionInUseByAnotherProcess,\n                                                   .backgroundSessionWasDisconnected,\n                                                   .badServerResponse,\n                                                   .callIsActive,\n                                                   .cannotConnectToHost,\n                                                   .cannotFindHost,\n                                                   .cannotLoadFromNetwork,\n                                                   .dataNotAllowed,\n                                                   .dnsLookupFailed,\n                                                   .downloadDecodingFailedMidStream,\n                                                   .downloadDecodingFailedToComplete,\n                                                   .internationalRoamingOff,\n                                                   .networkConnectionLost,\n                                                   .notConnectedToInternet,\n                                                   .secureConnectionFailed,\n                                                   .serverCertificateHasBadDate,\n                                                   .serverCertificateNotYetValid,\n                                                   .timedOut]"
+  },
+  {
+    "A_name" : "nonRetryableErrorCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 100, Column: 5",
+    "H_initialValue" : "[.appTransportSecurityRequiresSecureConnection,\n                                                      .backgroundSessionRequiresSharedContainer,\n                                                      .badURL,\n                                                      .cancelled,\n                                                      .cannotCloseFile,\n                                                      .cannotCreateFile,\n                                                      .cannotDecodeContentData,\n                                                      .cannotDecodeRawData,\n                                                      .cannotMoveFile,\n                                                      .cannotOpenFile,\n                                                      .cannotParseResponse,\n                                                      .cannotRemoveFile,\n                                                      .cannotWriteToFile,\n                                                      .clientCertificateRejected,\n                                                      .clientCertificateRequired,\n                                                      .dataLengthExceedsMaximum,\n                                                      .fileDoesNotExist,\n                                                      .fileIsDirectory,\n                                                      .httpTooManyRedirects,\n                                                      .noPermissionsToReadFile,\n                                                      .redirectToNonExistentLocation,\n                                                      .requestBodyStreamExhausted,\n                                                      .resourceUnavailable,\n                                                      .serverCertificateHasUnknownRoot,\n                                                      .serverCertificateUntrusted,\n                                                      .unknown,\n                                                      .unsupportedURL,\n                                                      .userAuthenticationRequired,\n                                                      .userCancelledAuthentication,\n                                                      .zeroByteResource]"
+  },
+  {
+    "A_name" : "errorCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 131, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 137, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 138, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "HTTPMethod",
+      "Int?"
+    ],
+    "I_parameters" : [
+      "method",
+      "statusCode"
+    ],
+    "J_returnType" : "-> Request"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 138, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "urlError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 147, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLError.Code"
+    ],
+    "I_parameters" : [
+      "with"
+    ],
+    "J_returnType" : "-> URLError"
+  },
+  {
+    "A_name" : "RetryPolicyTestCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseRetryPolicyTestCase"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 154, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testThatRetryIsNotPerformedOnCancelledRequests",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 157, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "retrier",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 160, Column: 9",
+            "H_initialValue" : "InspectorInterceptor(Retrier { _, _, _, completion in\n            completion(.retry)\n        })"
+          },
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 163, Column: 9",
+            "H_initialValue" : "Session(interceptor: retrier)"
+          },
+          {
+            "A_name" : "didFinish",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 164, Column: 9",
+            "H_initialValue" : "expectation(description: \"didFinish request\")"
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 167, Column: 9",
+            "H_initialValue" : "session.request(.default).responseDecodable(of: TestResponse.self) { _ in\n            didFinish.fulfill()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatRetryPolicyRetriesRequestsBelowRetryLimit",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 179, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "retryPolicy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 182, Column: 9",
+            "H_initialValue" : "RetryPolicy()"
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 183, Column: 9",
+            "H_initialValue" : "request(method: .get)"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 185, Column: 9",
+            "H_initialValue" : "[:]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatRetryPolicyRetriesIdempotentRequests",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 219, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "retryPolicy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 222, Column: 9",
+            "H_initialValue" : "RetryPolicy()"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 223, Column: 9",
+            "H_initialValue" : "[:]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatRetryPolicyRetriesRequestsWithRetryableStatusCodes",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 248, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "retryPolicy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 251, Column: 9",
+            "H_initialValue" : "RetryPolicy()"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 252, Column: 9",
+            "H_initialValue" : "[:]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatRetryPolicyRetriesRequestsWithRetryableErrors",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 277, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "retryPolicy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 280, Column: 9",
+            "H_initialValue" : "RetryPolicy()"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 281, Column: 9",
+            "H_initialValue" : "[:]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatRetryPolicyRetriesRequestsWithRetryableAFErrors",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 308, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "retryPolicy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 311, Column: 9",
+            "H_initialValue" : "RetryPolicy()"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 312, Column: 9",
+            "H_initialValue" : "[:]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatRetryPolicyDoesNotRetryErrorsThatAreNotRetryable",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 339, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "retryPolicy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 342, Column: 9",
+            "H_initialValue" : "RetryPolicy()"
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 343, Column: 9",
+            "H_initialValue" : "request(method: .get)"
+          },
+          {
+            "A_name" : "errors",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 345, Column: 9",
+            "H_initialValue" : "[resourceUnavailable,\n                                   unknown,\n                                   resourceUnavailableError,\n                                   unknownError]"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 350, Column: 9",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatRetryPolicyTimeDelayBacksOffExponentially",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 376, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "retryPolicy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 379, Column: 9",
+            "H_initialValue" : "RetryPolicy(retryLimit: 4)"
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 380, Column: 9",
+            "H_initialValue" : "request(method: .get)"
+          },
+          {
+            "A_name" : "results",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 382, Column: 9",
+            "H_initialValue" : "[:]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testThatRetryIsNotPerformedOnCancelledRequests",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 157, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "retrier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 160, Column: 9",
+        "H_initialValue" : "InspectorInterceptor(Retrier { _, _, _, completion in\n            completion(.retry)\n        })"
+      },
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 163, Column: 9",
+        "H_initialValue" : "Session(interceptor: retrier)"
+      },
+      {
+        "A_name" : "didFinish",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 164, Column: 9",
+        "H_initialValue" : "expectation(description: \"didFinish request\")"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 167, Column: 9",
+        "H_initialValue" : "session.request(.default).responseDecodable(of: TestResponse.self) { _ in\n            didFinish.fulfill()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "retrier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 160, Column: 9",
+    "H_initialValue" : "InspectorInterceptor(Retrier { _, _, _, completion in\n            completion(.retry)\n        })"
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 163, Column: 9",
+    "H_initialValue" : "Session(interceptor: retrier)"
+  },
+  {
+    "A_name" : "didFinish",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 164, Column: 9",
+    "H_initialValue" : "expectation(description: \"didFinish request\")"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 167, Column: 9",
+    "H_initialValue" : "session.request(.default).responseDecodable(of: TestResponse.self) { _ in\n            didFinish.fulfill()\n        }"
+  },
+  {
+    "A_name" : "testThatRetryPolicyRetriesRequestsBelowRetryLimit",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 179, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "retryPolicy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 182, Column: 9",
+        "H_initialValue" : "RetryPolicy()"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 183, Column: 9",
+        "H_initialValue" : "request(method: .get)"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 185, Column: 9",
+        "H_initialValue" : "[:]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "retryPolicy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 182, Column: 9",
+    "H_initialValue" : "RetryPolicy()"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 183, Column: 9",
+    "H_initialValue" : "request(method: .get)"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 185, Column: 9",
+    "H_initialValue" : "[:]"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 189, Column: 13",
+    "H_initialValue" : "expectation(description: \"retry policy should complete\")"
+  },
+  {
+    "A_name" : "testThatRetryPolicyRetriesIdempotentRequests",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 219, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "retryPolicy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 222, Column: 9",
+        "H_initialValue" : "RetryPolicy()"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 223, Column: 9",
+        "H_initialValue" : "[:]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "retryPolicy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 222, Column: 9",
+    "H_initialValue" : "RetryPolicy()"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 223, Column: 9",
+    "H_initialValue" : "[:]"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 227, Column: 13",
+    "H_initialValue" : "request(method: method)"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 228, Column: 13",
+    "H_initialValue" : "expectation(description: \"retry policy should complete\")"
+  },
+  {
+    "A_name" : "testThatRetryPolicyRetriesRequestsWithRetryableStatusCodes",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 248, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "retryPolicy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 251, Column: 9",
+        "H_initialValue" : "RetryPolicy()"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 252, Column: 9",
+        "H_initialValue" : "[:]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "retryPolicy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 251, Column: 9",
+    "H_initialValue" : "RetryPolicy()"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 252, Column: 9",
+    "H_initialValue" : "[:]"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 256, Column: 13",
+    "H_initialValue" : "request(method: .get, statusCode: statusCode)"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 257, Column: 13",
+    "H_initialValue" : "expectation(description: \"retry policy should complete\")"
+  },
+  {
+    "A_name" : "testThatRetryPolicyRetriesRequestsWithRetryableErrors",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 277, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "retryPolicy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 280, Column: 9",
+        "H_initialValue" : "RetryPolicy()"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 281, Column: 9",
+        "H_initialValue" : "[:]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "retryPolicy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 280, Column: 9",
+    "H_initialValue" : "RetryPolicy()"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 281, Column: 9",
+    "H_initialValue" : "[:]"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 285, Column: 13",
+    "H_initialValue" : "request(method: .get)"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 286, Column: 13",
+    "H_initialValue" : "URLError(code)"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 288, Column: 13",
+    "H_initialValue" : "expectation(description: \"retry policy should complete\")"
+  },
+  {
+    "A_name" : "testThatRetryPolicyRetriesRequestsWithRetryableAFErrors",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 308, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "retryPolicy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 311, Column: 9",
+        "H_initialValue" : "RetryPolicy()"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 312, Column: 9",
+        "H_initialValue" : "[:]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "retryPolicy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 311, Column: 9",
+    "H_initialValue" : "RetryPolicy()"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 312, Column: 9",
+    "H_initialValue" : "[:]"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 316, Column: 13",
+    "H_initialValue" : "request(method: .get)"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 317, Column: 13",
+    "H_initialValue" : "AFError.sessionTaskFailed(error: URLError(code))"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 319, Column: 13",
+    "H_initialValue" : "expectation(description: \"retry policy should complete\")"
+  },
+  {
+    "A_name" : "testThatRetryPolicyDoesNotRetryErrorsThatAreNotRetryable",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 339, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "retryPolicy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 342, Column: 9",
+        "H_initialValue" : "RetryPolicy()"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 343, Column: 9",
+        "H_initialValue" : "request(method: .get)"
+      },
+      {
+        "A_name" : "errors",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 345, Column: 9",
+        "H_initialValue" : "[resourceUnavailable,\n                                   unknown,\n                                   resourceUnavailableError,\n                                   unknownError]"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 350, Column: 9",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "retryPolicy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 342, Column: 9",
+    "H_initialValue" : "RetryPolicy()"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 343, Column: 9",
+    "H_initialValue" : "request(method: .get)"
+  },
+  {
+    "A_name" : "errors",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 345, Column: 9",
+    "H_initialValue" : "[resourceUnavailable,\n                                   unknown,\n                                   resourceUnavailableError,\n                                   unknownError]"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 350, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 354, Column: 13",
+    "H_initialValue" : "expectation(description: \"retry policy should complete\")"
+  },
+  {
+    "A_name" : "testThatRetryPolicyTimeDelayBacksOffExponentially",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 376, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "retryPolicy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 379, Column: 9",
+        "H_initialValue" : "RetryPolicy(retryLimit: 4)"
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 380, Column: 9",
+        "H_initialValue" : "request(method: .get)"
+      },
+      {
+        "A_name" : "results",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 382, Column: 9",
+        "H_initialValue" : "[:]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "retryPolicy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 379, Column: 9",
+    "H_initialValue" : "RetryPolicy(retryLimit: 4)"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 380, Column: 9",
+    "H_initialValue" : "request(method: .get)"
+  },
+  {
+    "A_name" : "results",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 382, Column: 9",
+    "H_initialValue" : "[:]"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 386, Column: 13",
+    "H_initialValue" : "expectation(description: \"retry policy should complete\")"
+  },
+  {
+    "A_name" : "ConnectionLostRetryPolicyTestCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseRetryPolicyTestCase"
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 427, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testThatConnectionLostRetryPolicyCanBeInitializedWithDefaultValues",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 428, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "retryPolicy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 430, Column: 9",
+            "H_initialValue" : "ConnectionLostRetryPolicy()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatConnectionLostRetryPolicyCanBeInitializedWithCustomValues",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 441, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "retryPolicy",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RetryPolicyTests.swift - Line: 443, Column: 9",
+            "H_initialValue" : "ConnectionLostRetryPolicy(retryLimit: 3,\n                                                    exponentialBackoffBase: 4,\n                                                    exponentialBackoffScale: 0.25,\n                                                    retryableHTTPMethods: [.delete, .get])"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testThatConnectionLostRetryPolicyCanBeInitializedWithDefaultValues",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 428, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "retryPolicy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 430, Column: 9",
+        "H_initialValue" : "ConnectionLostRetryPolicy()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "retryPolicy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 430, Column: 9",
+    "H_initialValue" : "ConnectionLostRetryPolicy()"
+  },
+  {
+    "A_name" : "testThatConnectionLostRetryPolicyCanBeInitializedWithCustomValues",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 441, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "retryPolicy",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RetryPolicyTests.swift - Line: 443, Column: 9",
+        "H_initialValue" : "ConnectionLostRetryPolicy(retryLimit: 3,\n                                                    exponentialBackoffBase: 4,\n                                                    exponentialBackoffScale: 0.25,\n                                                    retryableHTTPMethods: [.delete, .get])"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "retryPolicy",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RetryPolicyTests.swift - Line: 443, Column: 9",
+    "H_initialValue" : "ConnectionLostRetryPolicy(retryLimit: 3,\n                                                    exponentialBackoffBase: 4,\n                                                    exponentialBackoffScale: 0.25,\n                                                    retryableHTTPMethods: [.delete, .get])"
+  }
+]

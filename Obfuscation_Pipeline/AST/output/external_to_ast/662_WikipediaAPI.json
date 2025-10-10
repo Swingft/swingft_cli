@@ -1,0 +1,461 @@
+[
+  {
+    "A_name" : "apiError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 12, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> NSError"
+  },
+  {
+    "A_name" : "WikipediaParseError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 16, Column: 1",
+    "H_initialValue" : "apiError(\"Error during parsing\")"
+  },
+  {
+    "A_name" : "WikipediaAPI",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 18, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "getSearchResults",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaAPI.swift - Line: 19, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<[WikipediaSearchResult]>"
+      },
+      {
+        "A_name" : "articleContent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaAPI.swift - Line: 20, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "WikipediaSearchResult"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<WikipediaPage>"
+      }
+    ]
+  },
+  {
+    "A_name" : "getSearchResults",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 19, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<[WikipediaSearchResult]>"
+  },
+  {
+    "A_name" : "articleContent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 20, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "WikipediaSearchResult"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<WikipediaPage>"
+  },
+  {
+    "A_name" : "DefaultWikipediaAPI",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "WikipediaAPI"
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 23, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "sharedAPI",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "WikipediaAPI.swift - Line: 25, Column: 5",
+        "H_initialValue" : "DefaultWikipediaAPI() \/\/ Singleton"
+      },
+      {
+        "A_name" : "`$`",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaAPI.swift - Line: 27, Column: 5",
+        "H_initialValue" : "Dependencies.sharedDependencies"
+      },
+      {
+        "A_name" : "loadingWikipediaData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaAPI.swift - Line: 29, Column: 5",
+        "H_initialValue" : "ActivityIndicator()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaAPI.swift - Line: 31, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "JSON",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaAPI.swift - Line: 33, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<Any>"
+      },
+      {
+        "A_name" : "getSearchResults",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaAPI.swift - Line: 40, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "escapedQuery",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WikipediaAPI.swift - Line: 41, Column: 9",
+            "H_initialValue" : "query.URLEscaped"
+          },
+          {
+            "A_name" : "urlContent",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WikipediaAPI.swift - Line: 42, Column: 9",
+            "H_initialValue" : "\"http:\/\/en.wikipedia.org\/w\/api.php?action=opensearch&search=\\(escapedQuery)\""
+          },
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WikipediaAPI.swift - Line: 43, Column: 9",
+            "H_initialValue" : "URL(string: urlContent)!"
+          }
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<[WikipediaSearchResult]>"
+      },
+      {
+        "A_name" : "articleContent",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaAPI.swift - Line: 58, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "escapedPage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WikipediaAPI.swift - Line: 59, Column: 9",
+            "H_initialValue" : "searchResult.title.URLEscaped"
+          }
+        ],
+        "I_parameterType" : [
+          "WikipediaSearchResult"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<WikipediaPage>"
+      }
+    ]
+  },
+  {
+    "A_name" : "sharedAPI",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 25, Column: 5",
+    "H_initialValue" : "DefaultWikipediaAPI() \/\/ Singleton"
+  },
+  {
+    "A_name" : "`$`",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 27, Column: 5",
+    "H_initialValue" : "Dependencies.sharedDependencies"
+  },
+  {
+    "A_name" : "loadingWikipediaData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 29, Column: 5",
+    "H_initialValue" : "ActivityIndicator()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 31, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "JSON",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 33, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<Any>"
+  },
+  {
+    "A_name" : "getSearchResults",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 40, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "escapedQuery",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaAPI.swift - Line: 41, Column: 9",
+        "H_initialValue" : "query.URLEscaped"
+      },
+      {
+        "A_name" : "urlContent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaAPI.swift - Line: 42, Column: 9",
+        "H_initialValue" : "\"http:\/\/en.wikipedia.org\/w\/api.php?action=opensearch&search=\\(escapedQuery)\""
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaAPI.swift - Line: 43, Column: 9",
+        "H_initialValue" : "URL(string: urlContent)!"
+      }
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<[WikipediaSearchResult]>"
+  },
+  {
+    "A_name" : "escapedQuery",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 41, Column: 9",
+    "H_initialValue" : "query.URLEscaped"
+  },
+  {
+    "A_name" : "urlContent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 42, Column: 9",
+    "H_initialValue" : "\"http:\/\/en.wikipedia.org\/w\/api.php?action=opensearch&search=\\(escapedQuery)\""
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 43, Column: 9",
+    "H_initialValue" : "URL(string: urlContent)!"
+  },
+  {
+    "A_name" : "articleContent",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 58, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "escapedPage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WikipediaAPI.swift - Line: 59, Column: 9",
+        "H_initialValue" : "searchResult.title.URLEscaped"
+      }
+    ],
+    "I_parameterType" : [
+      "WikipediaSearchResult"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<WikipediaPage>"
+  },
+  {
+    "A_name" : "escapedPage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WikipediaAPI.swift - Line: 59, Column: 9",
+    "H_initialValue" : "searchResult.title.URLEscaped"
+  }
+]

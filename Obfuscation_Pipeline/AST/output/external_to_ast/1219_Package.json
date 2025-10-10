@@ -1,0 +1,22 @@
+[
+  {
+    "A_name" : "lottieXCFramework",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Package.swift - Line: 7, Column: 1",
+    "H_initialValue" : "Target.binaryTarget(\n  name: \"Lottie\",\n  url: \"https:\/\/github.com\/airbnb\/lottie-ios\/releases\/download\/4.5.2\/Lottie.xcframework.zip\",\n  checksum: \"92206ff6af80373903767214ac16215838f6da11dedca789c0439299b46b6694\"\n)"
+  },
+  {
+    "A_name" : "package",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Package.swift - Line: 13, Column: 1",
+    "H_initialValue" : "Package(\n  name: \"Lottie\",\n  platforms: [.iOS(\"13.0\"), .macOS(\"10.15\"), .tvOS(\"13.0\"), .custom(\"visionOS\", versionString: \"1.0\")],\n  products: [.library(name: \"Lottie\", targets: [\"Lottie\", \"_LottieStub\"])],\n  targets: [\n    lottieXCFramework,\n    \n    \/\/ Without at least one regular (non-binary) target, this package doesn't show up\n    \/\/ in Xcode under \"Frameworks, Libraries, and Embedded Content\". That prevents\n    \/\/ Lottie from being embedded in the app product, causing the app to crash when\n    \/\/ ran on a physical device. As a workaround, we can include a stub target\n    \/\/ with at least one source file.\n    \/\/ https:\/\/github.com\/apple\/swift-package-manager\/issues\/6069\n    .target(name: \"_LottieStub\"),\n    \n    .testTarget(\n      name: \"LottieTests\",\n      dependencies: [\"Lottie\"],\n      path: \"Tests\"\n    ),\n  ]\n)"
+  }
+]

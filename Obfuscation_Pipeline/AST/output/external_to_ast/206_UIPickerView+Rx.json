@@ -1,0 +1,478 @@
+[
+  {
+    "A_name" : "Reactive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 14, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "delegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIPickerView+Rx.swift - Line: 18, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "setDelegate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIPickerView+Rx.swift - Line: 29, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UIPickerViewDelegate"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "dataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIPickerView+Rx.swift - Line: 39, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "itemSelected",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIPickerView+Rx.swift - Line: 46, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "modelSelected",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIPickerView+Rx.swift - Line: 67, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "source",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIPickerView+Rx.swift - Line: 68, Column: 13",
+            "H_initialValue" : "itemSelected.flatMap { [weak view = self.base as UIPickerView] _, component -> Observable<[T]> in\n                guard let view = view else {\n                    return Observable.empty()\n                }\n\n                let model: [T] = try (0 ..< view.numberOfComponents).map { component in\n                    let row = view.selectedRow(inComponent: component)\n                    return try view.rx.model(at: IndexPath(row: row, section: component))\n                }\n\n                return Observable.just(model)\n            }"
+          }
+        ],
+        "I_parameterType" : [
+          "T.Type"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> ControlEvent<[T]>"
+      },
+      {
+        "A_name" : "itemTitles",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIPickerView+Rx.swift - Line: 107, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> (_ titleForRow: @escaping (Int, Sequence.Element) -> String?)\n            -> Disposable"
+      },
+      {
+        "A_name" : "itemAttributedTitles",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIPickerView+Rx.swift - Line: 140, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> (_ attributedTitleForRow: @escaping (Int, Sequence.Element) -> NSAttributedString?)\n            -> Disposable"
+      },
+      {
+        "A_name" : "items",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIPickerView+Rx.swift - Line: 179, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Source"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> (_ viewForRow: @escaping (Int, Sequence.Element, UIView?) -> UIView)\n            -> Disposable"
+      },
+      {
+        "A_name" : "items",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIPickerView+Rx.swift - Line: 200, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Adapter"
+        ],
+        "I_parameters" : [
+          "adapter"
+        ],
+        "J_returnType" : "-> (_ source: Source)\n            -> Disposable"
+      },
+      {
+        "A_name" : "model",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIPickerView+Rx.swift - Line: 217, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "dataSource",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "UIPickerView+Rx.swift - Line: 218, Column: 13",
+            "H_initialValue" : "castOrFatalError(self.dataSource.forwardToDelegate(), message: \"This method only works in case one of the `rx.itemTitles, rx.itemAttributedTitles, items(_ source: O)` methods was used.\")"
+          }
+        ],
+        "I_parameterType" : [
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "at"
+        ],
+        "J_returnType" : "-> T"
+      }
+    ]
+  },
+  {
+    "A_name" : "delegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 18, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "setDelegate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 29, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UIPickerViewDelegate"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "dataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 39, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "itemSelected",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 46, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 47, Column: 13",
+    "H_initialValue" : "delegate\n                .methodInvoked(#selector(UIPickerViewDelegate.pickerView(_:didSelectRow:inComponent:)))\n                .map {\n                    return (row: try castOrThrow(Int.self, $0[1]), component: try castOrThrow(Int.self, $0[2]))\n                }"
+  },
+  {
+    "A_name" : "modelSelected",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 67, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIPickerView+Rx.swift - Line: 68, Column: 13",
+        "H_initialValue" : "itemSelected.flatMap { [weak view = self.base as UIPickerView] _, component -> Observable<[T]> in\n                guard let view = view else {\n                    return Observable.empty()\n                }\n\n                let model: [T] = try (0 ..< view.numberOfComponents).map { component in\n                    let row = view.selectedRow(inComponent: component)\n                    return try view.rx.model(at: IndexPath(row: row, section: component))\n                }\n\n                return Observable.just(model)\n            }"
+      }
+    ],
+    "I_parameterType" : [
+      "T.Type"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> ControlEvent<[T]>"
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 68, Column: 13",
+    "H_initialValue" : "itemSelected.flatMap { [weak view = self.base as UIPickerView] _, component -> Observable<[T]> in\n                guard let view = view else {\n                    return Observable.empty()\n                }\n\n                let model: [T] = try (0 ..< view.numberOfComponents).map { component in\n                    let row = view.selectedRow(inComponent: component)\n                    return try view.rx.model(at: IndexPath(row: row, section: component))\n                }\n\n                return Observable.just(model)\n            }"
+  },
+  {
+    "A_name" : "model",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 73, Column: 17",
+    "H_initialValue" : "try (0 ..< view.numberOfComponents).map { component in\n                    let row = view.selectedRow(inComponent: component)\n                    return try view.rx.model(at: IndexPath(row: row, section: component))\n                }"
+  },
+  {
+    "A_name" : "row",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 74, Column: 21",
+    "H_initialValue" : "view.selectedRow(inComponent: component)"
+  },
+  {
+    "A_name" : "itemTitles",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 107, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> (_ titleForRow: @escaping (Int, Sequence.Element) -> String?)\n            -> Disposable"
+  },
+  {
+    "A_name" : "adapter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 112, Column: 21",
+    "H_initialValue" : "RxStringPickerViewAdapter<Sequence>(titleForRow: titleForRow)"
+  },
+  {
+    "A_name" : "itemAttributedTitles",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 140, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> (_ attributedTitleForRow: @escaping (Int, Sequence.Element) -> NSAttributedString?)\n            -> Disposable"
+  },
+  {
+    "A_name" : "adapter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 145, Column: 21",
+    "H_initialValue" : "RxAttributedStringPickerViewAdapter<Sequence>(attributedTitleForRow: attributedTitleForRow)"
+  },
+  {
+    "A_name" : "items",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 179, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Source"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> (_ viewForRow: @escaping (Int, Sequence.Element, UIView?) -> UIView)\n            -> Disposable"
+  },
+  {
+    "A_name" : "adapter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 184, Column: 21",
+    "H_initialValue" : "RxPickerViewAdapter<Sequence>(viewForRow: viewForRow)"
+  },
+  {
+    "A_name" : "items",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 200, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Adapter"
+    ],
+    "I_parameters" : [
+      "adapter"
+    ],
+    "J_returnType" : "-> (_ source: Source)\n            -> Disposable"
+  },
+  {
+    "A_name" : "delegateSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 205, Column: 21",
+    "H_initialValue" : "self.setDelegate(adapter)"
+  },
+  {
+    "A_name" : "dataSourceSubscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 206, Column: 21",
+    "H_initialValue" : "source.subscribeProxyDataSource(ofObject: self.base, dataSource: adapter, retainDataSource: true, binding: { [weak pickerView = self.base] (_: RxPickerViewDataSourceProxy, event) in\n                        guard let pickerView = pickerView else { return }\n                        adapter.pickerView(pickerView, observedEvent: event)\n                    })"
+  },
+  {
+    "A_name" : "model",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 217, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "dataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "UIPickerView+Rx.swift - Line: 218, Column: 13",
+        "H_initialValue" : "castOrFatalError(self.dataSource.forwardToDelegate(), message: \"This method only works in case one of the `rx.itemTitles, rx.itemAttributedTitles, items(_ source: O)` methods was used.\")"
+      }
+    ],
+    "I_parameterType" : [
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "at"
+    ],
+    "J_returnType" : "-> T"
+  },
+  {
+    "A_name" : "dataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "UIPickerView+Rx.swift - Line: 218, Column: 13",
+    "H_initialValue" : "castOrFatalError(self.dataSource.forwardToDelegate(), message: \"This method only works in case one of the `rx.itemTitles, rx.itemAttributedTitles, items(_ source: O)` methods was used.\")"
+  }
+]

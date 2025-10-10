@@ -1,0 +1,628 @@
+[
+  {
+    "A_name" : "Disposable",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "disposed",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DisposeBag.swift - Line: 13, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DisposeBag"
+        ],
+        "I_parameters" : [
+          "by"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "disposed",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 13, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DisposeBag"
+    ],
+    "I_parameters" : [
+      "by"
+    ]
+  },
+  {
+    "A_name" : "DisposeBag",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "DisposeBase"
+    ],
+    "F_location" : "DisposeBag.swift - Line: 30, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DisposeBag.swift - Line: 32, Column: 5",
+        "H_initialValue" : "SpinLock()"
+      },
+      {
+        "A_name" : "disposables",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DisposeBag.swift - Line: 35, Column: 5",
+        "H_initialValue" : "[Disposable]()"
+      },
+      {
+        "A_name" : "isDisposed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DisposeBag.swift - Line: 36, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DisposeBag.swift - Line: 39, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "insert",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DisposeBag.swift - Line: 46, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Disposable"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "_insert",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DisposeBag.swift - Line: 50, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Disposable"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable?"
+      },
+      {
+        "A_name" : "dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DisposeBag.swift - Line: 63, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "oldDisposables",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DisposeBag.swift - Line: 64, Column: 9",
+            "H_initialValue" : "self._dispose()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "_dispose",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DisposeBag.swift - Line: 71, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> [Disposable]"
+      }
+    ]
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 32, Column: 5",
+    "H_initialValue" : "SpinLock()"
+  },
+  {
+    "A_name" : "disposables",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 35, Column: 5",
+    "H_initialValue" : "[Disposable]()"
+  },
+  {
+    "A_name" : "isDisposed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 36, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DisposeBag.swift - Line: 39, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "insert",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 46, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Disposable"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "_insert",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 50, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Disposable"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable?"
+  },
+  {
+    "A_name" : "dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 63, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "oldDisposables",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DisposeBag.swift - Line: 64, Column: 9",
+        "H_initialValue" : "self._dispose()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "oldDisposables",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 64, Column: 9",
+    "H_initialValue" : "self._dispose()"
+  },
+  {
+    "A_name" : "_dispose",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 71, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> [Disposable]"
+  },
+  {
+    "A_name" : "disposables",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 73, Column: 13",
+    "H_initialValue" : "self.disposables"
+  },
+  {
+    "A_name" : "DisposeBag",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 87, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "insert",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DisposeBag.swift - Line: 107, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Disposable"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "insert",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DisposeBag.swift - Line: 112, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "() -> [Disposable]"
+        ],
+        "I_parameters" : [
+          "builder"
+        ]
+      },
+      {
+        "A_name" : "insert",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DisposeBag.swift - Line: 117, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[Disposable]"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "DisposeBag.swift - Line: 89, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Disposable"
+    ],
+    "I_parameters" : [
+      "disposing"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "DisposeBag.swift - Line: 96, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "() -> [Disposable]"
+    ],
+    "I_parameters" : [
+      "builder"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "DisposeBag.swift - Line: 101, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[Disposable]"
+    ],
+    "I_parameters" : [
+      "disposing"
+    ]
+  },
+  {
+    "A_name" : "insert",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 107, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Disposable"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "insert",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 112, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "() -> [Disposable]"
+    ],
+    "I_parameters" : [
+      "builder"
+    ]
+  },
+  {
+    "A_name" : "insert",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 117, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[Disposable]"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "DisposableBuilder",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "resultBuilder"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 129, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "buildBlock",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DisposeBag.swift - Line: 131, Column: 7",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Disposable"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> [Disposable]"
+      }
+    ]
+  },
+  {
+    "A_name" : "buildBlock",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DisposeBag.swift - Line: 131, Column: 7",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Disposable"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> [Disposable]"
+  },
+  {
+    "A_name" : "DisposableBuilder",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "_functionBuilder"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DisposeBag.swift - Line: 136, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "buildBlock",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DisposeBag.swift - Line: 138, Column: 7",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Disposable"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> [Disposable]"
+      }
+    ]
+  },
+  {
+    "A_name" : "buildBlock",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DisposeBag.swift - Line: 138, Column: 7",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Disposable"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> [Disposable]"
+  }
+]

@@ -1,0 +1,4004 @@
+[
+  {
+    "A_name" : "Request",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "Request.swift - Line: 29, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "State",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 32, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "initialized",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 34, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "resumed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 37, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "suspended",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 40, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "cancelled",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 44, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "finished",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 47, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "canTransitionTo",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 50, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "State"
+            ],
+            "I_parameters" : [
+              "_"
+            ],
+            "J_returnType" : "-> Bool"
+          }
+        ]
+      },
+      {
+        "A_name" : "id",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 69, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "underlyingQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 71, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "serializationQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 73, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "eventMonitor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 75, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "interceptor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 77, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "delegate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "weak"
+        ],
+        "F_location" : "Request.swift - Line: 79, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "MutableState",
+        "B_kind" : "struct",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 84, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "state",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 86, Column: 9",
+            "H_initialValue" : ".initialized"
+          },
+          {
+            "A_name" : "uploadProgressHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 88, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "downloadProgressHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 90, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "redirectHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 92, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "cachedResponseHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 94, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "cURLHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 96, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "urlRequestHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 98, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "urlSessionTaskHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 100, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "responseSerializers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 102, Column: 9",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "responseSerializerCompletions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 104, Column: 9",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "responseSerializerProcessingFinished",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 106, Column: 9",
+            "H_initialValue" : "false"
+          },
+          {
+            "A_name" : "credential",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 108, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "requests",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 110, Column: 9",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "tasks",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 112, Column: 9",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "metrics",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 115, Column: 9",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "retryCount",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 117, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "error",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 119, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "isFinishing",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 122, Column: 9",
+            "H_initialValue" : "false"
+          },
+          {
+            "A_name" : "finishHandlers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 124, Column: 9",
+            "H_initialValue" : "[]"
+          }
+        ]
+      },
+      {
+        "A_name" : "mutableState",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 128, Column: 5",
+        "H_initialValue" : "Protected(MutableState())"
+      },
+      {
+        "A_name" : "state",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 131, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isInitialized",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 133, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isResumed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 135, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isSuspended",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 137, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isCancelled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 139, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isFinished",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 141, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "uploadProgress",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 149, Column: 5",
+        "H_initialValue" : "Progress(totalUnitCount: 0)"
+      },
+      {
+        "A_name" : "downloadProgress",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 151, Column: 5",
+        "H_initialValue" : "Progress(totalUnitCount: 0)"
+      },
+      {
+        "A_name" : "uploadProgressHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 153, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "downloadProgressHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 159, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "redirectHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 167, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cachedResponseHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 175, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "credential",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 183, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "validators",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 191, Column: 5",
+        "H_initialValue" : "Protected<[@Sendable () -> Void]>([])"
+      },
+      {
+        "A_name" : "requests",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 196, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "firstRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 198, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lastRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 200, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 202, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "performedRequests",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 206, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 212, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "tasks",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 217, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "firstTask",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 219, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lastTask",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 221, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "task",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 223, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "allMetrics",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 228, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "firstMetrics",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 230, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lastMetrics",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 232, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "metrics",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 234, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "retryCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 239, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 244, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 259, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UUID",
+          "DispatchQueue",
+          "DispatchQueue",
+          "(any EventMonitor)?",
+          "(any RequestInterceptor)?",
+          "any RequestDelegate"
+        ],
+        "I_parameters" : [
+          "id",
+          "underlyingQueue",
+          "serializationQueue",
+          "eventMonitor",
+          "interceptor",
+          "delegate"
+        ]
+      },
+      {
+        "A_name" : "didCreateInitialURLRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 281, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "didFailToCreateURLRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 294, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AFError"
+        ],
+        "I_parameters" : [
+          "with"
+        ]
+      },
+      {
+        "A_name" : "didAdaptInitialRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 311, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "_",
+          "to"
+        ]
+      },
+      {
+        "A_name" : "didFailToAdaptURLRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 326, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "AFError"
+        ],
+        "I_parameters" : [
+          "_",
+          "withError"
+        ]
+      },
+      {
+        "A_name" : "didCreateURLRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 341, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "callCURLHandlerIfNecessary",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 356, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "didCreateTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 369, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "didResume",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 384, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "didResumeTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 393, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "didSuspend",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 400, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "didSuspendTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 409, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "didCancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 416, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "didCancelTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 429, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "didGatherMetrics",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 438, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTaskMetrics"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "didFailTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 451, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask",
+          "AFError"
+        ],
+        "I_parameters" : [
+          "_",
+          "earlyWithError"
+        ]
+      },
+      {
+        "A_name" : "didCompleteTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 468, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "validators",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 473, Column: 9",
+            "H_initialValue" : "validators.read { $0 }"
+          }
+        ],
+        "I_parameterType" : [
+          "URLSessionTask",
+          "AFError?"
+        ],
+        "I_parameters" : [
+          "_",
+          "with"
+        ]
+      },
+      {
+        "A_name" : "prepareForRetry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 482, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "retryOrFinish",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 496, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AFError?"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "finish",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 516, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AFError?"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "appendResponseSerializer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 536, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping @Sendable () -> Void"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "nextResponseSerializer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 557, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "responseSerializer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 558, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> (@Sendable () -> Void)?"
+      },
+      {
+        "A_name" : "processNextResponseSerializer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 572, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "responseSerializerDidComplete",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 610, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping @Sendable () -> Void"
+        ],
+        "I_parameters" : [
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "reset",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 616, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "updateUploadProgress",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 635, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int64",
+          "Int64"
+        ],
+        "I_parameters" : [
+          "totalBytesSent",
+          "totalBytesExpectedToSend"
+        ]
+      },
+      {
+        "A_name" : "withState",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 645, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(State) -> Void"
+        ],
+        "I_parameters" : [
+          "perform"
+        ]
+      },
+      {
+        "A_name" : "task",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 658, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "URLSession"
+        ],
+        "I_parameters" : [
+          "for",
+          "using"
+        ],
+        "J_returnType" : "-> URLSessionTask"
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Request.swift - Line: 671, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "suspend",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Request.swift - Line: 697, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "resume",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Request.swift - Line: 718, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "authenticate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Request.swift - Line: 746, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "credential",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 748, Column: 9",
+            "H_initialValue" : "URLCredential(user: username, password: password, persistence: persistence)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String",
+          "URLCredential.Persistence"
+        ],
+        "I_parameters" : [
+          "username",
+          "password",
+          "persistence"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "authenticate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "Request.swift - Line: 758, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLCredential"
+        ],
+        "I_parameters" : [
+          "with"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "downloadProgress",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "Request.swift - Line: 774, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping ProgressHandler"
+        ],
+        "I_parameters" : [
+          "queue",
+          "closure"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "uploadProgress",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "Request.swift - Line: 791, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping ProgressHandler"
+        ],
+        "I_parameters" : [
+          "queue",
+          "closure"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "redirect",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "Request.swift - Line: 808, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any RedirectHandler"
+        ],
+        "I_parameters" : [
+          "using"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "cacheResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "Request.swift - Line: 828, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any CachedResponseHandler"
+        ],
+        "I_parameters" : [
+          "using"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "cURLDescription",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "Request.swift - Line: 850, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping @Sendable (String) -> Void"
+        ],
+        "I_parameters" : [
+          "on",
+          "calling"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "cURLDescription",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "Request.swift - Line: 872, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping @Sendable (String) -> Void"
+        ],
+        "I_parameters" : [
+          "calling"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "onURLRequestCreation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "Request.swift - Line: 889, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping @Sendable (URLRequest) -> Void"
+        ],
+        "I_parameters" : [
+          "on",
+          "perform"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "onURLSessionTaskCreation",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "Request.swift - Line: 914, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping @Sendable (URLSessionTask) -> Void"
+        ],
+        "I_parameters" : [
+          "on",
+          "perform"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "onFinish",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 933, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping () -> Void"
+        ],
+        "I_parameters" : [
+          "perform"
+        ]
+      },
+      {
+        "A_name" : "cleanup",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 942, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "handlers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 943, Column: 9",
+            "H_initialValue" : "mutableState.finishHandlers"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "State",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 32, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "initialized",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 34, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "resumed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 37, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "suspended",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 40, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "cancelled",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 44, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "finished",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 47, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "canTransitionTo",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 50, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "State"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "canTransitionTo",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 50, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "State"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "id",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 69, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "underlyingQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 71, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "serializationQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 73, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "eventMonitor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 75, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "interceptor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 77, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "delegate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "Request.swift - Line: 79, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "MutableState",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 84, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "state",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 86, Column: 9",
+        "H_initialValue" : ".initialized"
+      },
+      {
+        "A_name" : "uploadProgressHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 88, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "downloadProgressHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 90, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "redirectHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 92, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cachedResponseHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 94, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cURLHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 96, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "urlRequestHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 98, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "urlSessionTaskHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 100, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "responseSerializers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 102, Column: 9",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "responseSerializerCompletions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 104, Column: 9",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "responseSerializerProcessingFinished",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 106, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "credential",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 108, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "requests",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 110, Column: 9",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "tasks",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 112, Column: 9",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "metrics",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 115, Column: 9",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "retryCount",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 117, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 119, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isFinishing",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 122, Column: 9",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "finishHandlers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 124, Column: 9",
+        "H_initialValue" : "[]"
+      }
+    ]
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 86, Column: 9",
+    "H_initialValue" : ".initialized"
+  },
+  {
+    "A_name" : "uploadProgressHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 88, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "downloadProgressHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 90, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "redirectHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 92, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cachedResponseHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 94, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cURLHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 96, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "urlRequestHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 98, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "urlSessionTaskHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 100, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "responseSerializers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 102, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "responseSerializerCompletions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 104, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "responseSerializerProcessingFinished",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 106, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "credential",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 108, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "requests",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 110, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "tasks",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 112, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "metrics",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 115, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "retryCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 117, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 119, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isFinishing",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 122, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "finishHandlers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 124, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "mutableState",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 128, Column: 5",
+    "H_initialValue" : "Protected(MutableState())"
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 131, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isInitialized",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 133, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isResumed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 135, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isSuspended",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 137, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isCancelled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 139, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isFinished",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 141, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "uploadProgress",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 149, Column: 5",
+    "H_initialValue" : "Progress(totalUnitCount: 0)"
+  },
+  {
+    "A_name" : "downloadProgress",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 151, Column: 5",
+    "H_initialValue" : "Progress(totalUnitCount: 0)"
+  },
+  {
+    "A_name" : "uploadProgressHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 153, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "downloadProgressHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 159, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "redirectHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 167, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cachedResponseHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 175, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "credential",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 183, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "validators",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 191, Column: 5",
+    "H_initialValue" : "Protected<[@Sendable () -> Void]>([])"
+  },
+  {
+    "A_name" : "requests",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 196, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "firstRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 198, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 200, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 202, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "performedRequests",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 206, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 212, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "tasks",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 217, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "firstTask",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 219, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastTask",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 221, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 223, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "allMetrics",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 228, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "firstMetrics",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 230, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lastMetrics",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 232, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "metrics",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 234, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "retryCount",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 239, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 244, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 259, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UUID",
+      "DispatchQueue",
+      "DispatchQueue",
+      "(any EventMonitor)?",
+      "(any RequestInterceptor)?",
+      "any RequestDelegate"
+    ],
+    "I_parameters" : [
+      "id",
+      "underlyingQueue",
+      "serializationQueue",
+      "eventMonitor",
+      "interceptor",
+      "delegate"
+    ]
+  },
+  {
+    "A_name" : "didCreateInitialURLRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 281, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "didFailToCreateURLRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 294, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AFError"
+    ],
+    "I_parameters" : [
+      "with"
+    ]
+  },
+  {
+    "A_name" : "didAdaptInitialRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 311, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "_",
+      "to"
+    ]
+  },
+  {
+    "A_name" : "didFailToAdaptURLRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 326, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "AFError"
+    ],
+    "I_parameters" : [
+      "_",
+      "withError"
+    ]
+  },
+  {
+    "A_name" : "didCreateURLRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 341, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "callCURLHandlerIfNecessary",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 356, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didCreateTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 369, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "didResume",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 384, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didResumeTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 393, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "didSuspend",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 400, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didSuspendTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 409, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "didCancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 416, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didCancelTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 429, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "didGatherMetrics",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 438, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTaskMetrics"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "didFailTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 451, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask",
+      "AFError"
+    ],
+    "I_parameters" : [
+      "_",
+      "earlyWithError"
+    ]
+  },
+  {
+    "A_name" : "didCompleteTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 468, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "validators",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 473, Column: 9",
+        "H_initialValue" : "validators.read { $0 }"
+      }
+    ],
+    "I_parameterType" : [
+      "URLSessionTask",
+      "AFError?"
+    ],
+    "I_parameters" : [
+      "_",
+      "with"
+    ]
+  },
+  {
+    "A_name" : "validators",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 473, Column: 9",
+    "H_initialValue" : "validators.read { $0 }"
+  },
+  {
+    "A_name" : "prepareForRetry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 482, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "retryOrFinish",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 496, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AFError?"
+    ],
+    "I_parameters" : [
+      "error"
+    ]
+  },
+  {
+    "A_name" : "finish",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 516, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AFError?"
+    ],
+    "I_parameters" : [
+      "error"
+    ]
+  },
+  {
+    "A_name" : "appendResponseSerializer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 536, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping @Sendable () -> Void"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "nextResponseSerializer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 557, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "responseSerializer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 558, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> (@Sendable () -> Void)?"
+  },
+  {
+    "A_name" : "responseSerializer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 558, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "responseSerializerIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 561, Column: 13",
+    "H_initialValue" : "mutableState.responseSerializerCompletions.count"
+  },
+  {
+    "A_name" : "processNextResponseSerializer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 572, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "completions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 575, Column: 13",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "responseSerializerDidComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 610, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping @Sendable () -> Void"
+    ],
+    "I_parameters" : [
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "reset",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 616, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "updateUploadProgress",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 635, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int64",
+      "Int64"
+    ],
+    "I_parameters" : [
+      "totalBytesSent",
+      "totalBytesExpectedToSend"
+    ]
+  },
+  {
+    "A_name" : "withState",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 645, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(State) -> Void"
+    ],
+    "I_parameters" : [
+      "perform"
+    ]
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 658, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "URLSession"
+    ],
+    "I_parameters" : [
+      "for",
+      "using"
+    ],
+    "J_returnType" : "-> URLSessionTask"
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Request.swift - Line: 671, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "suspend",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Request.swift - Line: 697, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "resume",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Request.swift - Line: 718, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "authenticate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Request.swift - Line: 746, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "credential",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 748, Column: 9",
+        "H_initialValue" : "URLCredential(user: username, password: password, persistence: persistence)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String",
+      "URLCredential.Persistence"
+    ],
+    "I_parameters" : [
+      "username",
+      "password",
+      "persistence"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "credential",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 748, Column: 9",
+    "H_initialValue" : "URLCredential(user: username, password: password, persistence: persistence)"
+  },
+  {
+    "A_name" : "authenticate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "Request.swift - Line: 758, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLCredential"
+    ],
+    "I_parameters" : [
+      "with"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "downloadProgress",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "Request.swift - Line: 774, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping ProgressHandler"
+    ],
+    "I_parameters" : [
+      "queue",
+      "closure"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "uploadProgress",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "Request.swift - Line: 791, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping ProgressHandler"
+    ],
+    "I_parameters" : [
+      "queue",
+      "closure"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "redirect",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "Request.swift - Line: 808, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any RedirectHandler"
+    ],
+    "I_parameters" : [
+      "using"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "cacheResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "Request.swift - Line: 828, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any CachedResponseHandler"
+    ],
+    "I_parameters" : [
+      "using"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "cURLDescription",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "Request.swift - Line: 850, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping @Sendable (String) -> Void"
+    ],
+    "I_parameters" : [
+      "on",
+      "calling"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "cURLDescription",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "Request.swift - Line: 872, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping @Sendable (String) -> Void"
+    ],
+    "I_parameters" : [
+      "calling"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "onURLRequestCreation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "Request.swift - Line: 889, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping @Sendable (URLRequest) -> Void"
+    ],
+    "I_parameters" : [
+      "on",
+      "perform"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "onURLSessionTaskCreation",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "Request.swift - Line: 914, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping @Sendable (URLSessionTask) -> Void"
+    ],
+    "I_parameters" : [
+      "on",
+      "perform"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "onFinish",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 933, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping () -> Void"
+    ],
+    "I_parameters" : [
+      "perform"
+    ]
+  },
+  {
+    "A_name" : "cleanup",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 942, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "handlers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 943, Column: 9",
+        "H_initialValue" : "mutableState.finishHandlers"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "handlers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 943, Column: 9",
+    "H_initialValue" : "mutableState.finishHandlers"
+  },
+  {
+    "A_name" : "Request",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 953, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "ResponseDisposition",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "Request.swift - Line: 955, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "allow",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 957, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "cancel",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 959, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "sessionDisposition",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 961, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "ResponseDisposition",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "Request.swift - Line: 955, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "allow",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 957, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 959, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "sessionDisposition",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 961, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "sessionDisposition",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 961, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Request",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Equatable"
+    ],
+    "F_location" : "Request.swift - Line: 972, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "==",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Request.swift - Line: 973, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "Request"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Request.swift - Line: 973, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "Request"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "Request",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Hashable"
+    ],
+    "F_location" : "Request.swift - Line: 978, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "hash",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 979, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "inout Hasher"
+        ],
+        "I_parameters" : [
+          "into"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "hash",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 979, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "inout Hasher"
+    ],
+    "I_parameters" : [
+      "into"
+    ]
+  },
+  {
+    "A_name" : "Request",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomStringConvertible"
+    ],
+    "F_location" : "Request.swift - Line: 984, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "description",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 987, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "description",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 987, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "requestDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 992, Column: 9",
+    "H_initialValue" : "\"\\(method) \\(url.absoluteString)\""
+  },
+  {
+    "A_name" : "Request",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 998, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "cURLDescription",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 1002, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "components",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 1009, Column: 9",
+            "H_initialValue" : "[\"$ curl -v\"]"
+          },
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Request.swift - Line: 1042, Column: 9",
+            "H_initialValue" : "HTTPHeaders()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "cURLDescription",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 1002, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "components",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 1009, Column: 9",
+        "H_initialValue" : "[\"$ curl -v\"]"
+      },
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 1042, Column: 9",
+        "H_initialValue" : "HTTPHeaders()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "components",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 1009, Column: 9",
+    "H_initialValue" : "[\"$ curl -v\"]"
+  },
+  {
+    "A_name" : "protectionSpace",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 1014, Column: 13",
+    "H_initialValue" : "URLProtectionSpace(host: host,\n                                                     port: url.port ?? 0,\n                                                     protocol: url.scheme,\n                                                     realm: host,\n                                                     authenticationMethod: NSURLAuthenticationMethodHTTPBasic)"
+  },
+  {
+    "A_name" : "allCookies",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 1036, Column: 17",
+    "H_initialValue" : "cookies.map { \"\\($0.name)=\\($0.value)\" }.joined(separator: \";\")"
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 1042, Column: 9",
+    "H_initialValue" : "HTTPHeaders()"
+  },
+  {
+    "A_name" : "escapedValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 1055, Column: 13",
+    "H_initialValue" : "header.value.replacingOccurrences(of: \"\\\"\", with: \"\\\\\\\"\")"
+  },
+  {
+    "A_name" : "httpBody",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 1060, Column: 13",
+    "H_initialValue" : "String(decoding: httpBodyData, as: UTF8.self)"
+  },
+  {
+    "A_name" : "escapedBody",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 1061, Column: 13",
+    "H_initialValue" : "httpBody.replacingOccurrences(of: \"\\\\\\\"\", with: \"\\\\\\\\\\\"\")"
+  },
+  {
+    "A_name" : "RequestDelegate",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyObject",
+      "Sendable"
+    ],
+    "F_location" : "Request.swift - Line: 1074, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "sessionConfiguration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 1076, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "startImmediately",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 1079, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cleanup",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 1084, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request"
+        ],
+        "I_parameters" : [
+          "after"
+        ]
+      },
+      {
+        "A_name" : "retryResult",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 1092, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "AFError",
+          "@escaping @Sendable (RetryResult) -> Void"
+        ],
+        "I_parameters" : [
+          "for",
+          "dueTo",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "retryRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Request.swift - Line: 1099, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Request",
+          "TimeInterval?"
+        ],
+        "I_parameters" : [
+          "_",
+          "withDelay"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "sessionConfiguration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 1076, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "startImmediately",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 1079, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cleanup",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 1084, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request"
+    ],
+    "I_parameters" : [
+      "after"
+    ]
+  },
+  {
+    "A_name" : "retryResult",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 1092, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "AFError",
+      "@escaping @Sendable (RetryResult) -> Void"
+    ],
+    "I_parameters" : [
+      "for",
+      "dueTo",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "retryRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Request.swift - Line: 1099, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Request",
+      "TimeInterval?"
+    ],
+    "I_parameters" : [
+      "_",
+      "withDelay"
+    ]
+  }
+]

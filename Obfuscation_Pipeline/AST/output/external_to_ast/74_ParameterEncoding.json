@@ -1,0 +1,1427 @@
+[
+  {
+    "A_name" : "ParameterEncoding",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 31, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 40, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any URLRequestConvertible",
+          "Parameters?"
+        ],
+        "I_parameters" : [
+          "_",
+          "with"
+        ],
+        "J_returnType" : "-> URLRequest"
+      }
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 40, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any URLRequestConvertible",
+      "Parameters?"
+    ],
+    "I_parameters" : [
+      "_",
+      "with"
+    ],
+    "J_returnType" : "-> URLRequest"
+  },
+  {
+    "A_name" : "URLEncoding",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ParameterEncoding"
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 59, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Destination",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 64, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "methodDependent",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 67, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "queryString",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 69, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "httpBody",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 71, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "encodesParametersInURL",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 73, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "HTTPMethod"
+            ],
+            "I_parameters" : [
+              "for"
+            ],
+            "J_returnType" : "-> Bool"
+          }
+        ]
+      },
+      {
+        "A_name" : "ArrayEncoding",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 83, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "brackets",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 85, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "noBrackets",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 87, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "indexInBrackets",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 89, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "custom",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 91, Column: 14",
+            "I_parameterType" : [
+              "@Sendable (_ key: String, _ index: Int) -> String"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "encode",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 93, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "String",
+              "Int"
+            ],
+            "I_parameters" : [
+              "key",
+              "atIndex"
+            ],
+            "J_returnType" : "-> String"
+          }
+        ]
+      },
+      {
+        "A_name" : "BoolEncoding",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 108, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "numeric",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 110, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "literal",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 112, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "encode",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 114, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "Bool"
+            ],
+            "I_parameters" : [
+              "value"
+            ],
+            "J_returnType" : "-> String"
+          }
+        ]
+      },
+      {
+        "A_name" : "`default`",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 127, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "queryString",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 130, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "httpBody",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 133, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "destination",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 136, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "arrayEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 139, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "boolEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 142, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 153, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Destination",
+          "ArrayEncoding",
+          "BoolEncoding"
+        ],
+        "I_parameters" : [
+          "destination",
+          "arrayEncoding",
+          "boolEncoding"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 163, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "urlRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 164, Column: 9",
+            "H_initialValue" : "try urlRequest.asURLRequest()"
+          }
+        ],
+        "I_parameterType" : [
+          "any URLRequestConvertible",
+          "Parameters?"
+        ],
+        "I_parameters" : [
+          "_",
+          "with"
+        ],
+        "J_returnType" : "-> URLRequest"
+      },
+      {
+        "A_name" : "queryComponents",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 196, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "components",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 197, Column: 9",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "Any"
+        ],
+        "I_parameters" : [
+          "fromKey",
+          "value"
+        ],
+        "J_returnType" : "-> [(String, String)]"
+      },
+      {
+        "A_name" : "escape",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 226, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "query",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 230, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "components",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 231, Column: 9",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+          "[String: Any]"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "Destination",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 64, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "methodDependent",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 67, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "queryString",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 69, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "httpBody",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 71, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "encodesParametersInURL",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 73, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "HTTPMethod"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "encodesParametersInURL",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 73, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "HTTPMethod"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "ArrayEncoding",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 83, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "brackets",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 85, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "noBrackets",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 87, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "indexInBrackets",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 89, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "custom",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 91, Column: 14",
+        "I_parameterType" : [
+          "@Sendable (_ key: String, _ index: Int) -> String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 93, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "Int"
+        ],
+        "I_parameters" : [
+          "key",
+          "atIndex"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 93, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Int"
+    ],
+    "I_parameters" : [
+      "key",
+      "atIndex"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "BoolEncoding",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 108, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "numeric",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 110, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "literal",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 112, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 114, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "value"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 114, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "value"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "`default`",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 127, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "queryString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 130, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "httpBody",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 133, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "destination",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 136, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "arrayEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 139, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boolEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 142, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 153, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Destination",
+      "ArrayEncoding",
+      "BoolEncoding"
+    ],
+    "I_parameters" : [
+      "destination",
+      "arrayEncoding",
+      "boolEncoding"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 163, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "urlRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 164, Column: 9",
+        "H_initialValue" : "try urlRequest.asURLRequest()"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLRequestConvertible",
+      "Parameters?"
+    ],
+    "I_parameters" : [
+      "_",
+      "with"
+    ],
+    "J_returnType" : "-> URLRequest"
+  },
+  {
+    "A_name" : "urlRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 164, Column: 9",
+    "H_initialValue" : "try urlRequest.asURLRequest()"
+  },
+  {
+    "A_name" : "percentEncodedQuery",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 174, Column: 17",
+    "H_initialValue" : "(urlComponents.percentEncodedQuery.map { $0 + \"&\" } ?? \"\") + query(parameters)"
+  },
+  {
+    "A_name" : "queryComponents",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 196, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "components",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 197, Column: 9",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "Any"
+    ],
+    "I_parameters" : [
+      "fromKey",
+      "value"
+    ],
+    "J_returnType" : "-> [(String, String)]"
+  },
+  {
+    "A_name" : "components",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 197, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "escape",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 226, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "query",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 230, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "components",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 231, Column: 9",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+      "[String: Any]"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "components",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 231, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 234, Column: 13",
+    "H_initialValue" : "parameters[key]!"
+  },
+  {
+    "A_name" : "JSONEncoding",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ParameterEncoding"
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 245, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Error",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Swift.Error"
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 247, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "invalidJSONObject",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 250, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "`default`",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 256, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "prettyPrinted",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 259, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 262, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 269, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "JSONSerialization.WritingOptions"
+        ],
+        "I_parameters" : [
+          "options"
+        ]
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 275, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "urlRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 276, Column: 9",
+            "H_initialValue" : "try urlRequest.asURLRequest()"
+          }
+        ],
+        "I_parameterType" : [
+          "any URLRequestConvertible",
+          "Parameters?"
+        ],
+        "I_parameters" : [
+          "_",
+          "with"
+        ],
+        "J_returnType" : "-> URLRequest"
+      },
+      {
+        "A_name" : "encode",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 307, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "urlRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ParameterEncoding.swift - Line: 308, Column: 9",
+            "H_initialValue" : "try urlRequest.asURLRequest()"
+          }
+        ],
+        "I_parameterType" : [
+          "any URLRequestConvertible",
+          "Any?"
+        ],
+        "I_parameters" : [
+          "_",
+          "withJSONObject"
+        ],
+        "J_returnType" : "-> URLRequest"
+      }
+    ]
+  },
+  {
+    "A_name" : "Error",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Swift.Error"
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 247, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "invalidJSONObject",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 250, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "`default`",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 256, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "prettyPrinted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 259, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 262, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 269, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "JSONSerialization.WritingOptions"
+    ],
+    "I_parameters" : [
+      "options"
+    ]
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 275, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "urlRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 276, Column: 9",
+        "H_initialValue" : "try urlRequest.asURLRequest()"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLRequestConvertible",
+      "Parameters?"
+    ],
+    "I_parameters" : [
+      "_",
+      "with"
+    ],
+    "J_returnType" : "-> URLRequest"
+  },
+  {
+    "A_name" : "urlRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 276, Column: 9",
+    "H_initialValue" : "try urlRequest.asURLRequest()"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 285, Column: 13",
+    "H_initialValue" : "try JSONSerialization.data(withJSONObject: parameters, options: options)"
+  },
+  {
+    "A_name" : "encode",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 307, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "urlRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 308, Column: 9",
+        "H_initialValue" : "try urlRequest.asURLRequest()"
+      }
+    ],
+    "I_parameterType" : [
+      "any URLRequestConvertible",
+      "Any?"
+    ],
+    "I_parameters" : [
+      "_",
+      "withJSONObject"
+    ],
+    "J_returnType" : "-> URLRequest"
+  },
+  {
+    "A_name" : "urlRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 308, Column: 9",
+    "H_initialValue" : "try urlRequest.asURLRequest()"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 317, Column: 13",
+    "H_initialValue" : "try JSONSerialization.data(withJSONObject: jsonObject, options: options)"
+  },
+  {
+    "A_name" : "JSONEncoding.Error",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 332, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "localizedDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 333, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "localizedDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 333, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "NSNumber",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 343, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isBool",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ParameterEncoding.swift - Line: 344, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "isBool",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ParameterEncoding.swift - Line: 344, Column: 5",
+    "H_initialValue" : ""
+  }
+]

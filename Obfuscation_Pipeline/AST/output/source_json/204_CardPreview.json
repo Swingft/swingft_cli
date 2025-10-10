@@ -1,0 +1,468 @@
+[
+  {
+    "A_name" : "CardPreview",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIView"
+    ],
+    "F_location" : "CardPreview.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "previewLine",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardPreview.swift - Line: 16, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .hilingualBlack\n        return view\n    }()"
+      },
+      {
+        "A_name" : "originalText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardPreview.swift - Line: 22, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_m_16)\n        label.textColor = .black\n        label.numberOfLines = 3\n        label.lineBreakMode = .byTruncatingTail\n        return label\n    }()"
+      },
+      {
+        "A_name" : "previewImage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardPreview.swift - Line: 31, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(\n            named: \"img_profile_normal_ios\",\n            in: .module,\n            compatibleWith: nil\n        )\n        imageView.contentMode = .scaleAspectFill\n        imageView.clipsToBounds = true\n        imageView.layer.cornerRadius = 8\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "cardStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardPreview.swift - Line: 44, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.spacing = 8\n        stack.alignment = .center\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CardPreview.swift - Line: 54, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "CardPreview.swift - Line: 60, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "setupUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardPreview.swift - Line: 66, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setupLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardPreview.swift - Line: 76, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "CardPreviewType",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "CardPreview.swift - Line: 98, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "textOnly",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CardPreview.swift - Line: 99, Column: 14",
+            "I_parameterType" : [
+              "String?"
+            ],
+            "I_parameters" : [
+              "text"
+            ]
+          },
+          {
+            "A_name" : "textWithImage",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CardPreview.swift - Line: 100, Column: 14",
+            "I_parameterType" : [
+              "String?",
+              "String?"
+            ],
+            "I_parameters" : [
+              "text",
+              "imageUrl"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardPreview.swift - Line: 103, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CardPreviewType"
+        ],
+        "I_parameters" : [
+          "type"
+        ]
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardPreview.swift - Line: 144, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String?",
+          "String?"
+        ],
+        "I_parameters" : [
+          "text",
+          "imageUrl"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "previewLine",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 16, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .hilingualBlack\n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 17, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "originalText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 22, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_m_16)\n        label.textColor = .black\n        label.numberOfLines = 3\n        label.lineBreakMode = .byTruncatingTail\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 23, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "previewImage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 31, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(\n            named: \"img_profile_normal_ios\",\n            in: .module,\n            compatibleWith: nil\n        )\n        imageView.contentMode = .scaleAspectFill\n        imageView.clipsToBounds = true\n        imageView.layer.cornerRadius = 8\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 32, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "cardStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 44, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.spacing = 8\n        stack.alignment = .center\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 45, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CardPreview.swift - Line: 54, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "CardPreview.swift - Line: 60, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "setupUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 66, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setupLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 76, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "CardPreviewType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 98, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "textOnly",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardPreview.swift - Line: 99, Column: 14",
+        "I_parameterType" : [
+          "String?"
+        ],
+        "I_parameters" : [
+          "text"
+        ]
+      },
+      {
+        "A_name" : "textWithImage",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CardPreview.swift - Line: 100, Column: 14",
+        "I_parameterType" : [
+          "String?",
+          "String?"
+        ],
+        "I_parameters" : [
+          "text",
+          "imageUrl"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 103, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CardPreviewType"
+    ],
+    "I_parameters" : [
+      "type"
+    ]
+  },
+  {
+    "A_name" : "display",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 106, Column: 13",
+    "H_initialValue" : "text ?? \"일기를 불러오지 못했습니다.\""
+  },
+  {
+    "A_name" : "display",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 122, Column: 13",
+    "H_initialValue" : "text ?? \"일기를 불러오지 못했습니다.\""
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CardPreview.swift - Line: 144, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String?",
+      "String?"
+    ],
+    "I_parameters" : [
+      "text",
+      "imageUrl"
+    ]
+  }
+]

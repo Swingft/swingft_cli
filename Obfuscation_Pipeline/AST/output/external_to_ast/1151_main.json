@@ -1,0 +1,347 @@
+[
+  {
+    "A_name" : "sourceFilesRoot",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 16, Column: 1",
+    "H_initialValue" : "CommandLine.arguments[1]"
+  },
+  {
+    "A_name" : "derivedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 17, Column: 1",
+    "H_initialValue" : "CommandLine.arguments[2]"
+  },
+  {
+    "A_name" : "fileManager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 19, Column: 1",
+    "H_initialValue" : "FileManager()"
+  },
+  {
+    "A_name" : "escape",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 21, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "escapedString",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "main.swift - Line: 22, Column: 5",
+        "H_initialValue" : "value.replacingOccurrences(of: \"\\n\", with: \"\\\\n\")"
+      },
+      {
+        "A_name" : "escapedString1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "main.swift - Line: 23, Column: 5",
+        "H_initialValue" : "escapedString.replacingOccurrences(of: \"\\r\", with: \"\\\\r\")"
+      },
+      {
+        "A_name" : "escapedString2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "main.swift - Line: 24, Column: 5",
+        "H_initialValue" : "escapedString1.replacingOccurrences(of: \"\\\"\", with: \"\\\\\\\"\")"
+      }
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "value"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "escapedString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 22, Column: 5",
+    "H_initialValue" : "value.replacingOccurrences(of: \"\\n\", with: \"\\\\n\")"
+  },
+  {
+    "A_name" : "escapedString1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 23, Column: 5",
+    "H_initialValue" : "escapedString.replacingOccurrences(of: \"\\r\", with: \"\\\\r\")"
+  },
+  {
+    "A_name" : "escapedString2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 24, Column: 5",
+    "H_initialValue" : "escapedString1.replacingOccurrences(of: \"\\\"\", with: \"\\\\\\\"\")"
+  },
+  {
+    "A_name" : "processFile",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 29, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "main.swift - Line: 30, Column: 5",
+        "H_initialValue" : "URL(fileURLWithPath: path)"
+      },
+      {
+        "A_name" : "rawContent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "main.swift - Line: 31, Column: 5",
+        "H_initialValue" : "try! Data(contentsOf: url)"
+      },
+      {
+        "A_name" : "content",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "main.swift - Line: 32, Column: 5",
+        "H_initialValue" : "String(data: rawContent, encoding: String.Encoding.utf8)"
+      },
+      {
+        "A_name" : "functionContentComponents",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "main.swift - Line: 36, Column: 5",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "path",
+      "outputPath"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 30, Column: 5",
+    "H_initialValue" : "URL(fileURLWithPath: path)"
+  },
+  {
+    "A_name" : "rawContent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 31, Column: 5",
+    "H_initialValue" : "try! Data(contentsOf: url)"
+  },
+  {
+    "A_name" : "content",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 32, Column: 5",
+    "H_initialValue" : "String(data: rawContent, encoding: String.Encoding.utf8)"
+  },
+  {
+    "A_name" : "functionContentComponents",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 36, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "codePlusSuffixSeparated",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 41, Column: 9",
+    "H_initialValue" : "codePlusSuffix.components(separatedBy: \"%>\")"
+  },
+  {
+    "A_name" : "code",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 46, Column: 9",
+    "H_initialValue" : "codePlusSuffixSeparated[0]"
+  },
+  {
+    "A_name" : "suffix",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 47, Column: 9",
+    "H_initialValue" : "codePlusSuffixSeparated[1]"
+  },
+  {
+    "A_name" : "runCommand",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 64, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "process",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "main.swift - Line: 67, Column: 5",
+        "H_initialValue" : "Process()"
+      }
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "path"
+    ]
+  },
+  {
+    "A_name" : "process",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 67, Column: 5",
+    "H_initialValue" : "Process()"
+  },
+  {
+    "A_name" : "files",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 80, Column: 1",
+    "H_initialValue" : "try fileManager.subpathsOfDirectory(atPath: sourceFilesRoot)"
+  },
+  {
+    "A_name" : "generateAllFiles",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 82, Column: 1",
+    "H_initialValue" : "[\"\/\/ Generated code\\n\", \"import Foundation\\n\"]"
+  },
+  {
+    "A_name" : "path",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 91, Column: 5",
+    "H_initialValue" : "(sourceFilesRoot as NSString).appendingPathComponent(file as String)"
+  },
+  {
+    "A_name" : "endIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 92, Column: 5",
+    "H_initialValue" : "path.index(before: path.index(before: path.index(before: path.endIndex)))"
+  },
+  {
+    "A_name" : "outputPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 93, Column: 5",
+    "H_initialValue" : "String(path[path.startIndex ..<  endIndex]) + \".swift\""
+  },
+  {
+    "A_name" : "script",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 98, Column: 1",
+    "H_initialValue" : "generateAllFiles.joined(separator: \"\")"
+  },
+  {
+    "A_name" : "scriptPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "main.swift - Line: 99, Column: 1",
+    "H_initialValue" : "(derivedData as NSString).appendingPathComponent(\"_preprocessor.sh\")"
+  }
+]

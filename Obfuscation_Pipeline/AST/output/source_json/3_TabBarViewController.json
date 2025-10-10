@@ -1,0 +1,554 @@
+[
+  {
+    "A_name" : "TabBarViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UITabBarController"
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "factory",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 14, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 18, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ViewControllerFactory"
+        ],
+        "I_parameters" : [
+          "diContainer"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 23, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 29, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setupViewControllers",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 38, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "homeVC",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TabBarViewController.swift - Line: 39, Column: 9",
+            "H_initialValue" : "makeTabItem(\n            viewController: factory.makeHomeViewController(),\n            title: \"홈\",\n            selectedImageName: \"ic_home_black_24_ios\",\n            unselectedImageName: \"ic_home_gray_24_ios\"\n        )"
+          },
+          {
+            "A_name" : "vocabVC",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TabBarViewController.swift - Line: 46, Column: 9",
+            "H_initialValue" : "makeTabItem(\n            viewController: factory.makeWordBookViewController(),\n            title: \"단어장\",\n            selectedImageName: \"ic_book_black_24_ios\",\n            unselectedImageName: \"ic_book_gray_24_ios\"\n        )"
+          },
+          {
+            "A_name" : "feedVC",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TabBarViewController.swift - Line: 53, Column: 9",
+            "H_initialValue" : "makeTabItem(\n            viewController: factory.makeFeedViewController(),\n            title: \"피드\",\n            selectedImageName: \"ic_community_black_24_ios\",\n            unselectedImageName: \"ic_community_gray_24_ios\"\n        )"
+          },
+          {
+            "A_name" : "myVC",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TabBarViewController.swift - Line: 60, Column: 9",
+            "H_initialValue" : "makeTabItem(\n            viewController: factory.makeMypageViewController(),\n            title: \"마이\",\n            selectedImageName: \"ic_my_black_24_ios\",\n            unselectedImageName: \"ic_my_gray_24_ios\"\n        )"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setupTabBarAppearance",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 70, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "appearance",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TabBarViewController.swift - Line: 71, Column: 9",
+            "H_initialValue" : "UITabBarAppearance()"
+          },
+          {
+            "A_name" : "itemAppearance",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TabBarViewController.swift - Line: 75, Column: 9",
+            "H_initialValue" : "UITabBarItemAppearance()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "makeTabItem",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 91, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "nav",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "TabBarViewController.swift - Line: 97, Column: 9",
+            "H_initialValue" : "UINavigationController(rootViewController: viewController)"
+          }
+        ],
+        "I_parameterType" : [
+          "UIViewController",
+          "String",
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "viewController",
+          "title",
+          "selectedImageName",
+          "unselectedImageName"
+        ],
+        "J_returnType" : "-> UIViewController"
+      }
+    ]
+  },
+  {
+    "A_name" : "factory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 14, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 18, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ViewControllerFactory"
+    ],
+    "I_parameters" : [
+      "diContainer"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 23, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 29, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setupViewControllers",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 38, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "homeVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 39, Column: 9",
+        "H_initialValue" : "makeTabItem(\n            viewController: factory.makeHomeViewController(),\n            title: \"홈\",\n            selectedImageName: \"ic_home_black_24_ios\",\n            unselectedImageName: \"ic_home_gray_24_ios\"\n        )"
+      },
+      {
+        "A_name" : "vocabVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 46, Column: 9",
+        "H_initialValue" : "makeTabItem(\n            viewController: factory.makeWordBookViewController(),\n            title: \"단어장\",\n            selectedImageName: \"ic_book_black_24_ios\",\n            unselectedImageName: \"ic_book_gray_24_ios\"\n        )"
+      },
+      {
+        "A_name" : "feedVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 53, Column: 9",
+        "H_initialValue" : "makeTabItem(\n            viewController: factory.makeFeedViewController(),\n            title: \"피드\",\n            selectedImageName: \"ic_community_black_24_ios\",\n            unselectedImageName: \"ic_community_gray_24_ios\"\n        )"
+      },
+      {
+        "A_name" : "myVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 60, Column: 9",
+        "H_initialValue" : "makeTabItem(\n            viewController: factory.makeMypageViewController(),\n            title: \"마이\",\n            selectedImageName: \"ic_my_black_24_ios\",\n            unselectedImageName: \"ic_my_gray_24_ios\"\n        )"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "homeVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 39, Column: 9",
+    "H_initialValue" : "makeTabItem(\n            viewController: factory.makeHomeViewController(),\n            title: \"홈\",\n            selectedImageName: \"ic_home_black_24_ios\",\n            unselectedImageName: \"ic_home_gray_24_ios\"\n        )"
+  },
+  {
+    "A_name" : "vocabVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 46, Column: 9",
+    "H_initialValue" : "makeTabItem(\n            viewController: factory.makeWordBookViewController(),\n            title: \"단어장\",\n            selectedImageName: \"ic_book_black_24_ios\",\n            unselectedImageName: \"ic_book_gray_24_ios\"\n        )"
+  },
+  {
+    "A_name" : "feedVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 53, Column: 9",
+    "H_initialValue" : "makeTabItem(\n            viewController: factory.makeFeedViewController(),\n            title: \"피드\",\n            selectedImageName: \"ic_community_black_24_ios\",\n            unselectedImageName: \"ic_community_gray_24_ios\"\n        )"
+  },
+  {
+    "A_name" : "myVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 60, Column: 9",
+    "H_initialValue" : "makeTabItem(\n            viewController: factory.makeMypageViewController(),\n            title: \"마이\",\n            selectedImageName: \"ic_my_black_24_ios\",\n            unselectedImageName: \"ic_my_gray_24_ios\"\n        )"
+  },
+  {
+    "A_name" : "setupTabBarAppearance",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 70, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "appearance",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 71, Column: 9",
+        "H_initialValue" : "UITabBarAppearance()"
+      },
+      {
+        "A_name" : "itemAppearance",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 75, Column: 9",
+        "H_initialValue" : "UITabBarItemAppearance()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "appearance",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 71, Column: 9",
+    "H_initialValue" : "UITabBarAppearance()"
+  },
+  {
+    "A_name" : "itemAppearance",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 75, Column: 9",
+    "H_initialValue" : "UITabBarItemAppearance()"
+  },
+  {
+    "A_name" : "makeTabItem",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 91, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "nav",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 97, Column: 9",
+        "H_initialValue" : "UINavigationController(rootViewController: viewController)"
+      }
+    ],
+    "I_parameterType" : [
+      "UIViewController",
+      "String",
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "viewController",
+      "title",
+      "selectedImageName",
+      "unselectedImageName"
+    ],
+    "J_returnType" : "-> UIViewController"
+  },
+  {
+    "A_name" : "nav",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 97, Column: 9",
+    "H_initialValue" : "UINavigationController(rootViewController: viewController)"
+  },
+  {
+    "A_name" : "TabBarViewController",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UITabBarControllerDelegate"
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 111, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lastSelectedIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 113, Column: 5",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "tabBarController",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TabBarViewController.swift - Line: 115, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITabBarController",
+          "UIViewController"
+        ],
+        "I_parameters" : [
+          "_",
+          "didSelect"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "lastSelectedIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 113, Column: 5",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "tabBarController",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 115, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITabBarController",
+      "UIViewController"
+    ],
+    "I_parameters" : [
+      "_",
+      "didSelect"
+    ]
+  },
+  {
+    "A_name" : "isReSelected",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TabBarViewController.swift - Line: 123, Column: 13",
+    "H_initialValue" : "(TabBarViewController.lastSelectedIndex == 2)"
+  }
+]

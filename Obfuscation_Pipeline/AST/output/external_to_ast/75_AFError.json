@@ -1,0 +1,3344 @@
+[
+  {
+    "A_name" : "AFError",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Error",
+      "Sendable"
+    ],
+    "F_location" : "AFError.swift - Line: 33, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "MultipartEncodingFailureReason",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "AFError.swift - Line: 35, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "bodyPartURLInvalid",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 37, Column: 14",
+            "I_parameterType" : [
+              "URL"
+            ],
+            "I_parameters" : [
+              "url"
+            ]
+          },
+          {
+            "A_name" : "bodyPartFilenameInvalid",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 39, Column: 14",
+            "I_parameterType" : [
+              "URL"
+            ],
+            "I_parameters" : [
+              "in"
+            ]
+          },
+          {
+            "A_name" : "bodyPartFileNotReachable",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 41, Column: 14",
+            "I_parameterType" : [
+              "URL"
+            ],
+            "I_parameters" : [
+              "at"
+            ]
+          },
+          {
+            "A_name" : "bodyPartFileNotReachableWithError",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 43, Column: 14",
+            "I_parameterType" : [
+              "URL",
+              "any Error"
+            ],
+            "I_parameters" : [
+              "atURL",
+              "error"
+            ]
+          },
+          {
+            "A_name" : "bodyPartFileIsDirectory",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 45, Column: 14",
+            "I_parameterType" : [
+              "URL"
+            ],
+            "I_parameters" : [
+              "at"
+            ]
+          },
+          {
+            "A_name" : "bodyPartFileSizeNotAvailable",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 47, Column: 14",
+            "I_parameterType" : [
+              "URL"
+            ],
+            "I_parameters" : [
+              "at"
+            ]
+          },
+          {
+            "A_name" : "bodyPartFileSizeQueryFailedWithError",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 49, Column: 14",
+            "I_parameterType" : [
+              "URL",
+              "any Error"
+            ],
+            "I_parameters" : [
+              "forURL",
+              "error"
+            ]
+          },
+          {
+            "A_name" : "bodyPartInputStreamCreationFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 51, Column: 14",
+            "I_parameterType" : [
+              "URL"
+            ],
+            "I_parameters" : [
+              "for"
+            ]
+          },
+          {
+            "A_name" : "outputStreamCreationFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 53, Column: 14",
+            "I_parameterType" : [
+              "URL"
+            ],
+            "I_parameters" : [
+              "for"
+            ]
+          },
+          {
+            "A_name" : "outputStreamFileAlreadyExists",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 55, Column: 14",
+            "I_parameterType" : [
+              "URL"
+            ],
+            "I_parameters" : [
+              "at"
+            ]
+          },
+          {
+            "A_name" : "outputStreamURLInvalid",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 57, Column: 14",
+            "I_parameterType" : [
+              "URL"
+            ],
+            "I_parameters" : [
+              "url"
+            ]
+          },
+          {
+            "A_name" : "outputStreamWriteFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 59, Column: 14",
+            "I_parameterType" : [
+              "any Error"
+            ],
+            "I_parameters" : [
+              "error"
+            ]
+          },
+          {
+            "A_name" : "inputStreamReadFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 61, Column: 14",
+            "I_parameterType" : [
+              "any Error"
+            ],
+            "I_parameters" : [
+              "error"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "UnexpectedInputStreamLength",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Error"
+        ],
+        "F_location" : "AFError.swift - Line: 66, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "bytesExpected",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 68, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "bytesRead",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 70, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "ParameterEncodingFailureReason",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "AFError.swift - Line: 74, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "missingURL",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 76, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "jsonEncodingFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 78, Column: 14",
+            "I_parameterType" : [
+              "any Error"
+            ],
+            "I_parameters" : [
+              "error"
+            ]
+          },
+          {
+            "A_name" : "customEncodingFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 80, Column: 14",
+            "I_parameterType" : [
+              "any Error"
+            ],
+            "I_parameters" : [
+              "error"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "ParameterEncoderFailureReason",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "AFError.swift - Line: 84, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "RequiredComponent",
+            "B_kind" : "enum",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "E_adoptedClassProtocols" : [
+              "Sendable"
+            ],
+            "F_location" : "AFError.swift - Line: 86, Column: 9",
+            "G_members" : [
+              {
+                "A_name" : "url",
+                "B_kind" : "case",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "AFError.swift - Line: 88, Column: 18",
+                "I_parameterType" : [
+
+                ],
+                "I_parameters" : [
+
+                ]
+              },
+              {
+                "A_name" : "httpMethod",
+                "B_kind" : "case",
+                "C_accessLevel" : "internal",
+                "D_attributes" : [
+
+                ],
+                "F_location" : "AFError.swift - Line: 90, Column: 18",
+                "I_parameterType" : [
+                  "String"
+                ],
+                "I_parameters" : [
+                  "rawValue"
+                ]
+              }
+            ]
+          },
+          {
+            "A_name" : "missingRequiredComponent",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 94, Column: 14",
+            "I_parameterType" : [
+              "RequiredComponent"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "encoderFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 96, Column: 14",
+            "I_parameterType" : [
+              "any Error"
+            ],
+            "I_parameters" : [
+              "error"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "ResponseValidationFailureReason",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "AFError.swift - Line: 100, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "dataFileNil",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 102, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "dataFileReadFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 104, Column: 14",
+            "I_parameterType" : [
+              "URL"
+            ],
+            "I_parameters" : [
+              "at"
+            ]
+          },
+          {
+            "A_name" : "missingContentType",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 107, Column: 14",
+            "I_parameterType" : [
+              "[String]"
+            ],
+            "I_parameters" : [
+              "acceptableContentTypes"
+            ]
+          },
+          {
+            "A_name" : "unacceptableContentType",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 109, Column: 14",
+            "I_parameterType" : [
+              "[String]",
+              "String"
+            ],
+            "I_parameters" : [
+              "acceptableContentTypes",
+              "responseContentType"
+            ]
+          },
+          {
+            "A_name" : "unacceptableStatusCode",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 111, Column: 14",
+            "I_parameterType" : [
+              "Int"
+            ],
+            "I_parameters" : [
+              "code"
+            ]
+          },
+          {
+            "A_name" : "customValidationFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 113, Column: 14",
+            "I_parameterType" : [
+              "any Error"
+            ],
+            "I_parameters" : [
+              "error"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "ResponseSerializationFailureReason",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "AFError.swift - Line: 117, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "inputDataNilOrZeroLength",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 119, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "inputFileNil",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 121, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "inputFileReadFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 123, Column: 14",
+            "I_parameterType" : [
+              "URL"
+            ],
+            "I_parameters" : [
+              "at"
+            ]
+          },
+          {
+            "A_name" : "stringSerializationFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 125, Column: 14",
+            "I_parameterType" : [
+              "String.Encoding"
+            ],
+            "I_parameters" : [
+              "encoding"
+            ]
+          },
+          {
+            "A_name" : "jsonSerializationFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 127, Column: 14",
+            "I_parameterType" : [
+              "any Error"
+            ],
+            "I_parameters" : [
+              "error"
+            ]
+          },
+          {
+            "A_name" : "decodingFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 129, Column: 14",
+            "I_parameterType" : [
+              "any Error"
+            ],
+            "I_parameters" : [
+              "error"
+            ]
+          },
+          {
+            "A_name" : "customSerializationFailed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 131, Column: 14",
+            "I_parameterType" : [
+              "any Error"
+            ],
+            "I_parameters" : [
+              "error"
+            ]
+          },
+          {
+            "A_name" : "invalidEmptyResponse",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 133, Column: 14",
+            "I_parameterType" : [
+              "String"
+            ],
+            "I_parameters" : [
+              "type"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "URLRequestValidationFailureReason",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "AFError.swift - Line: 189, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "bodyDataInGETRequest",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 191, Column: 14",
+            "I_parameterType" : [
+              "Data"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "createUploadableFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 195, Column: 10",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "createURLRequestFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 197, Column: 10",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "downloadedFileMoveFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 199, Column: 10",
+        "I_parameterType" : [
+          "any Error",
+          "URL",
+          "URL"
+        ],
+        "I_parameters" : [
+          "error",
+          "source",
+          "destination"
+        ]
+      },
+      {
+        "A_name" : "explicitlyCancelled",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 201, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidURL",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 203, Column: 10",
+        "I_parameterType" : [
+          "any URLConvertible"
+        ],
+        "I_parameters" : [
+          "url"
+        ]
+      },
+      {
+        "A_name" : "multipartEncodingFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 205, Column: 10",
+        "I_parameterType" : [
+          "MultipartEncodingFailureReason"
+        ],
+        "I_parameters" : [
+          "reason"
+        ]
+      },
+      {
+        "A_name" : "parameterEncodingFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 207, Column: 10",
+        "I_parameterType" : [
+          "ParameterEncodingFailureReason"
+        ],
+        "I_parameters" : [
+          "reason"
+        ]
+      },
+      {
+        "A_name" : "parameterEncoderFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 209, Column: 10",
+        "I_parameterType" : [
+          "ParameterEncoderFailureReason"
+        ],
+        "I_parameters" : [
+          "reason"
+        ]
+      },
+      {
+        "A_name" : "requestAdaptationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 211, Column: 10",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "requestRetryFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 213, Column: 10",
+        "I_parameterType" : [
+          "any Error",
+          "any Error"
+        ],
+        "I_parameters" : [
+          "retryError",
+          "originalError"
+        ]
+      },
+      {
+        "A_name" : "responseValidationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 215, Column: 10",
+        "I_parameterType" : [
+          "ResponseValidationFailureReason"
+        ],
+        "I_parameters" : [
+          "reason"
+        ]
+      },
+      {
+        "A_name" : "responseSerializationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 217, Column: 10",
+        "I_parameterType" : [
+          "ResponseSerializationFailureReason"
+        ],
+        "I_parameters" : [
+          "reason"
+        ]
+      },
+      {
+        "A_name" : "sessionDeinitialized",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 223, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "sessionInvalidated",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 225, Column: 10",
+        "I_parameterType" : [
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "sessionTaskFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 227, Column: 10",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "urlRequestValidationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 229, Column: 10",
+        "I_parameterType" : [
+          "URLRequestValidationFailureReason"
+        ],
+        "I_parameters" : [
+          "reason"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "MultipartEncodingFailureReason",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "AFError.swift - Line: 35, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "bodyPartURLInvalid",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 37, Column: 14",
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "url"
+        ]
+      },
+      {
+        "A_name" : "bodyPartFilenameInvalid",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 39, Column: 14",
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "in"
+        ]
+      },
+      {
+        "A_name" : "bodyPartFileNotReachable",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 41, Column: 14",
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "at"
+        ]
+      },
+      {
+        "A_name" : "bodyPartFileNotReachableWithError",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 43, Column: 14",
+        "I_parameterType" : [
+          "URL",
+          "any Error"
+        ],
+        "I_parameters" : [
+          "atURL",
+          "error"
+        ]
+      },
+      {
+        "A_name" : "bodyPartFileIsDirectory",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 45, Column: 14",
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "at"
+        ]
+      },
+      {
+        "A_name" : "bodyPartFileSizeNotAvailable",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 47, Column: 14",
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "at"
+        ]
+      },
+      {
+        "A_name" : "bodyPartFileSizeQueryFailedWithError",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 49, Column: 14",
+        "I_parameterType" : [
+          "URL",
+          "any Error"
+        ],
+        "I_parameters" : [
+          "forURL",
+          "error"
+        ]
+      },
+      {
+        "A_name" : "bodyPartInputStreamCreationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 51, Column: 14",
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "for"
+        ]
+      },
+      {
+        "A_name" : "outputStreamCreationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 53, Column: 14",
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "for"
+        ]
+      },
+      {
+        "A_name" : "outputStreamFileAlreadyExists",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 55, Column: 14",
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "at"
+        ]
+      },
+      {
+        "A_name" : "outputStreamURLInvalid",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 57, Column: 14",
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "url"
+        ]
+      },
+      {
+        "A_name" : "outputStreamWriteFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 59, Column: 14",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "inputStreamReadFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 61, Column: 14",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "UnexpectedInputStreamLength",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Error"
+    ],
+    "F_location" : "AFError.swift - Line: 66, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "bytesExpected",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 68, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "bytesRead",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 70, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "bytesExpected",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 68, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "bytesRead",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 70, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ParameterEncodingFailureReason",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "AFError.swift - Line: 74, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "missingURL",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 76, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "jsonEncodingFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 78, Column: 14",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "customEncodingFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 80, Column: 14",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "ParameterEncoderFailureReason",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "AFError.swift - Line: 84, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "RequiredComponent",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "AFError.swift - Line: 86, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "url",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 88, Column: 18",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "httpMethod",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 90, Column: 18",
+            "I_parameterType" : [
+              "String"
+            ],
+            "I_parameters" : [
+              "rawValue"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "missingRequiredComponent",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 94, Column: 14",
+        "I_parameterType" : [
+          "RequiredComponent"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "encoderFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 96, Column: 14",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "RequiredComponent",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "AFError.swift - Line: 86, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 88, Column: 18",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "httpMethod",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 90, Column: 18",
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "rawValue"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "ResponseValidationFailureReason",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "AFError.swift - Line: 100, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "dataFileNil",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 102, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "dataFileReadFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 104, Column: 14",
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "at"
+        ]
+      },
+      {
+        "A_name" : "missingContentType",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 107, Column: 14",
+        "I_parameterType" : [
+          "[String]"
+        ],
+        "I_parameters" : [
+          "acceptableContentTypes"
+        ]
+      },
+      {
+        "A_name" : "unacceptableContentType",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 109, Column: 14",
+        "I_parameterType" : [
+          "[String]",
+          "String"
+        ],
+        "I_parameters" : [
+          "acceptableContentTypes",
+          "responseContentType"
+        ]
+      },
+      {
+        "A_name" : "unacceptableStatusCode",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 111, Column: 14",
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "code"
+        ]
+      },
+      {
+        "A_name" : "customValidationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 113, Column: 14",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "ResponseSerializationFailureReason",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "AFError.swift - Line: 117, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "inputDataNilOrZeroLength",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 119, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "inputFileNil",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 121, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "inputFileReadFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 123, Column: 14",
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "at"
+        ]
+      },
+      {
+        "A_name" : "stringSerializationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 125, Column: 14",
+        "I_parameterType" : [
+          "String.Encoding"
+        ],
+        "I_parameters" : [
+          "encoding"
+        ]
+      },
+      {
+        "A_name" : "jsonSerializationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 127, Column: 14",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "decodingFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 129, Column: 14",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "customSerializationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 131, Column: 14",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "invalidEmptyResponse",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 133, Column: 14",
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "type"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "ServerTrustFailureReason",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "AFError.swift - Line: 138, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "Output",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "AFError.swift - Line: 140, Column: 9",
+        "G_members" : [
+          {
+            "A_name" : "host",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 142, Column: 13",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "trust",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 144, Column: 13",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "status",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 146, Column: 13",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 148, Column: 13",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AFError.swift - Line: 151, Column: 13",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "String",
+              "SecTrust",
+              "OSStatus",
+              "SecTrustResultType"
+            ],
+            "I_parameters" : [
+              "_",
+              "_",
+              "_",
+              "_"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "noRequiredEvaluator",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 160, Column: 14",
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "host"
+        ]
+      },
+      {
+        "A_name" : "noCertificatesFound",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 162, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "noPublicKeysFound",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 164, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "policyApplicationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 166, Column: 14",
+        "I_parameterType" : [
+          "SecTrust",
+          "SecPolicy",
+          "OSStatus"
+        ],
+        "I_parameters" : [
+          "trust",
+          "policy",
+          "status"
+        ]
+      },
+      {
+        "A_name" : "settingAnchorCertificatesFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 168, Column: 14",
+        "I_parameterType" : [
+          "OSStatus",
+          "[SecCertificate]"
+        ],
+        "I_parameters" : [
+          "status",
+          "certificates"
+        ]
+      },
+      {
+        "A_name" : "revocationPolicyCreationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 170, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "trustEvaluationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 172, Column: 14",
+        "I_parameterType" : [
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "defaultEvaluationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 174, Column: 14",
+        "I_parameterType" : [
+          "Output"
+        ],
+        "I_parameters" : [
+          "output"
+        ]
+      },
+      {
+        "A_name" : "hostValidationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 176, Column: 14",
+        "I_parameterType" : [
+          "Output"
+        ],
+        "I_parameters" : [
+          "output"
+        ]
+      },
+      {
+        "A_name" : "revocationCheckFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 178, Column: 14",
+        "I_parameterType" : [
+          "Output",
+          "RevocationTrustEvaluator.Options"
+        ],
+        "I_parameters" : [
+          "output",
+          "options"
+        ]
+      },
+      {
+        "A_name" : "certificatePinningFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 180, Column: 14",
+        "I_parameterType" : [
+          "String",
+          "SecTrust",
+          "[SecCertificate]",
+          "[SecCertificate]"
+        ],
+        "I_parameters" : [
+          "host",
+          "trust",
+          "pinnedCertificates",
+          "serverCertificates"
+        ]
+      },
+      {
+        "A_name" : "publicKeyPinningFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 182, Column: 14",
+        "I_parameterType" : [
+          "String",
+          "SecTrust",
+          "[SecKey]",
+          "[SecKey]"
+        ],
+        "I_parameters" : [
+          "host",
+          "trust",
+          "pinnedKeys",
+          "serverKeys"
+        ]
+      },
+      {
+        "A_name" : "customEvaluationFailed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 184, Column: 14",
+        "I_parameterType" : [
+          "any Error"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Output",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "AFError.swift - Line: 140, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "host",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 142, Column: 13",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "trust",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 144, Column: 13",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "status",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 146, Column: 13",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 148, Column: 13",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 151, Column: 13",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "SecTrust",
+          "OSStatus",
+          "SecTrustResultType"
+        ],
+        "I_parameters" : [
+          "_",
+          "_",
+          "_",
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "host",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 142, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "trust",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 144, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "status",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 146, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 148, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 151, Column: 13",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "SecTrust",
+      "OSStatus",
+      "SecTrustResultType"
+    ],
+    "I_parameters" : [
+      "_",
+      "_",
+      "_",
+      "_"
+    ]
+  },
+  {
+    "A_name" : "URLRequestValidationFailureReason",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "AFError.swift - Line: 189, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "bodyDataInGETRequest",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 191, Column: 14",
+        "I_parameterType" : [
+          "Data"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Error",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 232, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "asAFError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 234, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "asAFError",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 239, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@autoclosure () -> String",
+          "StaticString",
+          "UInt"
+        ],
+        "I_parameters" : [
+          "orFailWith",
+          "file",
+          "line"
+        ],
+        "J_returnType" : "-> AFError"
+      },
+      {
+        "A_name" : "asAFError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 247, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@autoclosure () -> AFError"
+        ],
+        "I_parameters" : [
+          "or"
+        ],
+        "J_returnType" : "-> AFError"
+      }
+    ]
+  },
+  {
+    "A_name" : "asAFError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 234, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "asAFError",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 239, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@autoclosure () -> String",
+      "StaticString",
+      "UInt"
+    ],
+    "I_parameters" : [
+      "orFailWith",
+      "file",
+      "line"
+    ],
+    "J_returnType" : "-> AFError"
+  },
+  {
+    "A_name" : "asAFError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 247, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@autoclosure () -> AFError"
+    ],
+    "I_parameters" : [
+      "or"
+    ],
+    "J_returnType" : "-> AFError"
+  },
+  {
+    "A_name" : "AFError",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 254, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isSessionDeinitializedError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 256, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isSessionInvalidatedError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 262, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isExplicitlyCancelledError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 268, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isInvalidURLError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 274, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isParameterEncodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 281, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isParameterEncoderError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 288, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isMultipartEncodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 295, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isRequestAdaptationError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 302, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isResponseValidationError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 309, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isResponseSerializationError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 316, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isRequestRetryError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 332, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isCreateUploadableError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 339, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isCreateURLRequestError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 346, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isDownloadedFileMoveError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 353, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isSessionTaskError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 360, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "isSessionDeinitializedError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 256, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isSessionInvalidatedError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 262, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isExplicitlyCancelledError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 268, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isInvalidURLError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 274, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isParameterEncodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 281, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isParameterEncoderError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 288, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isMultipartEncodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 295, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isRequestAdaptationError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 302, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isResponseValidationError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 309, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isResponseSerializationError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 316, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isServerTrustEvaluationError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 324, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isRequestRetryError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 332, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isCreateUploadableError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 339, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isCreateURLRequestError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 346, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isDownloadedFileMoveError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 353, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isSessionTaskError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 360, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 368, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "urlConvertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 370, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 376, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "underlyingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 384, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "acceptableContentTypes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 423, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "responseContentType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 429, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "responseCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 435, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "failedStringEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 441, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "sourceURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 447, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "destinationURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 453, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "urlConvertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 370, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 376, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "underlyingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 384, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "acceptableContentTypes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 423, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "responseContentType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 429, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "responseCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 435, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "failedStringEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 441, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sourceURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 447, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "destinationURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 453, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "downloadResumeData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 460, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError.ParameterEncodingFailureReason",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 466, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "underlyingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 467, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "underlyingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 467, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError.ParameterEncoderFailureReason",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 478, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "underlyingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 479, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "underlyingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 479, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError.MultipartEncodingFailureReason",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 489, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 490, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "underlyingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 510, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 490, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "underlyingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 510, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError.ResponseValidationFailureReason",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 531, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "acceptableContentTypes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 532, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "responseContentType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 545, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "responseCode",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 558, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "underlyingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 571, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "acceptableContentTypes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 532, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "responseContentType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 545, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "responseCode",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 558, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "underlyingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 571, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError.ResponseSerializationFailureReason",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 585, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "failedStringEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 586, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "underlyingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 601, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "failedStringEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 586, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "underlyingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 601, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError.ServerTrustFailureReason",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 618, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "output",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 619, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "underlyingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 639, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 619, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "underlyingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 639, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "LocalizedError"
+    ],
+    "F_location" : "AFError.swift - Line: 664, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "errorDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 665, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "errorDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 665, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError.ParameterEncodingFailureReason",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 713, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "localizedDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 714, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "localizedDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 714, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError.ParameterEncoderFailureReason",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 726, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "localizedDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 727, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "localizedDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 727, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError.MultipartEncodingFailureReason",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 737, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "localizedDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 738, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "localizedDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 738, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError.ResponseSerializationFailureReason",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 778, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "localizedDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 779, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "localizedDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 779, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError.ResponseValidationFailureReason",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 804, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "localizedDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 805, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "localizedDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 805, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError.ServerTrustFailureReason",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 830, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "localizedDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 831, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "localizedDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 831, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "AFError.URLRequestValidationFailureReason",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 864, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "localizedDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AFError.swift - Line: 865, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "localizedDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AFError.swift - Line: 865, Column: 5",
+    "H_initialValue" : ""
+  }
+]

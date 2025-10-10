@@ -1,0 +1,392 @@
+[
+  {
+    "A_name" : "MoyaPublisher",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Publisher"
+    ],
+    "F_location" : "MoyaPublisher.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Subscription",
+        "B_kind" : "class",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Combine.Subscription"
+        ],
+        "F_location" : "MoyaPublisher.swift - Line: 14, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "performCall",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaPublisher.swift - Line: 15, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "cancellable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "private",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaPublisher.swift - Line: 16, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaPublisher.swift - Line: 18, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "AnySubscriber<Output, MoyaError>",
+              "@escaping (AnySubscriber<Output, MoyaError>) -> Moya.Cancellable?"
+            ],
+            "I_parameters" : [
+              "subscriber",
+              "callback"
+            ]
+          },
+          {
+            "A_name" : "request",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaPublisher.swift - Line: 22, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "Subscribers.Demand"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "cancel",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaPublisher.swift - Line: 28, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "callback",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaPublisher.swift - Line: 33, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaPublisher.swift - Line: 35, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (AnySubscriber<Output, MoyaError>) -> Moya.Cancellable?"
+        ],
+        "I_parameters" : [
+          "callback"
+        ]
+      },
+      {
+        "A_name" : "receive",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaPublisher.swift - Line: 39, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaPublisher.swift - Line: 40, Column: 9",
+            "H_initialValue" : "Subscription(subscriber: AnySubscriber(subscriber), callback: callback)"
+          }
+        ],
+        "I_parameterType" : [
+          "S"
+        ],
+        "I_parameters" : [
+          "subscriber"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Subscription",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Combine.Subscription"
+    ],
+    "F_location" : "MoyaPublisher.swift - Line: 14, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "performCall",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaPublisher.swift - Line: 15, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cancellable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaPublisher.swift - Line: 16, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaPublisher.swift - Line: 18, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AnySubscriber<Output, MoyaError>",
+          "@escaping (AnySubscriber<Output, MoyaError>) -> Moya.Cancellable?"
+        ],
+        "I_parameters" : [
+          "subscriber",
+          "callback"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaPublisher.swift - Line: 22, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Subscribers.Demand"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaPublisher.swift - Line: 28, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "performCall",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaPublisher.swift - Line: 15, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cancellable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaPublisher.swift - Line: 16, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaPublisher.swift - Line: 18, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnySubscriber<Output, MoyaError>",
+      "@escaping (AnySubscriber<Output, MoyaError>) -> Moya.Cancellable?"
+    ],
+    "I_parameters" : [
+      "subscriber",
+      "callback"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaPublisher.swift - Line: 22, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Subscribers.Demand"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaPublisher.swift - Line: 28, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "callback",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaPublisher.swift - Line: 33, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaPublisher.swift - Line: 35, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (AnySubscriber<Output, MoyaError>) -> Moya.Cancellable?"
+    ],
+    "I_parameters" : [
+      "callback"
+    ]
+  },
+  {
+    "A_name" : "receive",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaPublisher.swift - Line: 39, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaPublisher.swift - Line: 40, Column: 9",
+        "H_initialValue" : "Subscription(subscriber: AnySubscriber(subscriber), callback: callback)"
+      }
+    ],
+    "I_parameterType" : [
+      "S"
+    ],
+    "I_parameters" : [
+      "subscriber"
+    ]
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaPublisher.swift - Line: 40, Column: 9",
+    "H_initialValue" : "Subscription(subscriber: AnySubscriber(subscriber), callback: callback)"
+  }
+]

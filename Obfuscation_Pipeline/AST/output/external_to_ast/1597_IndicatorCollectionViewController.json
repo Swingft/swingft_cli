@@ -1,0 +1,526 @@
+[
+  {
+    "A_name" : "reuseIdentifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 30, Column: 1",
+    "H_initialValue" : "\"IndicatorCell\""
+  },
+  {
+    "A_name" : "gifData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 31, Column: 1",
+    "H_initialValue" : "{\n    let url = Bundle.main.url(forResource: \"loader\", withExtension: \"gif\")!\n    return try! Data(contentsOf: url)\n}()"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 32, Column: 5",
+    "H_initialValue" : "Bundle.main.url(forResource: \"loader\", withExtension: \"gif\")!"
+  },
+  {
+    "A_name" : "IndicatorCollectionViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "UICollectionViewController"
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 36, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "MyIndicator",
+        "B_kind" : "class",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Indicator"
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 38, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "timer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "IndicatorCollectionViewController.swift - Line: 40, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "startAnimatingView",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "IndicatorCollectionViewController.swift - Line: 42, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "stopAnimatingView",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "IndicatorCollectionViewController.swift - Line: 57, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "view",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "IndicatorCollectionViewController.swift - Line: 62, Column: 9",
+            "H_initialValue" : "{\n            let view = UIView()\n            view.heightAnchor.constraint(equalToConstant: 30).isActive = true\n            view.widthAnchor.constraint(equalToConstant: 30).isActive = true\n            \n            view.backgroundColor = .red\n            return view\n        }()"
+          }
+        ]
+      },
+      {
+        "A_name" : "indicators",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 72, Column: 5",
+        "H_initialValue" : "[\n        \"None\",\n        \"UIActivityIndicatorView\",\n        \"GIF Image\",\n        \"Custom\"\n    ]"
+      },
+      {
+        "A_name" : "selectedIndicatorIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 78, Column: 5",
+        "H_initialValue" : "1"
+      },
+      {
+        "A_name" : "selectedIndicatorType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 83, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 93, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 98, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "numberOfItemsInSection"
+        ],
+        "J_returnType" : "-> Int"
+      },
+      {
+        "A_name" : "collectionView",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 102, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "cell",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "IndicatorCollectionViewController.swift - Line: 103, Column: 9",
+            "H_initialValue" : "collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell"
+          }
+        ],
+        "I_parameterType" : [
+          "UICollectionView",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "cellForItemAt"
+        ],
+        "J_returnType" : "-> UICollectionViewCell"
+      },
+      {
+        "A_name" : "alertPopup",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 112, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "alert",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "IndicatorCollectionViewController.swift - Line: 113, Column: 9",
+            "H_initialValue" : "super.alertPopup(sender)"
+          }
+        ],
+        "I_parameterType" : [
+          "Any"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> UIAlertController"
+      }
+    ]
+  },
+  {
+    "A_name" : "MyIndicator",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Indicator"
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 38, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "timer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 40, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "startAnimatingView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 42, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "stopAnimatingView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 57, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "view",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 62, Column: 9",
+        "H_initialValue" : "{\n            let view = UIView()\n            view.heightAnchor.constraint(equalToConstant: 30).isActive = true\n            view.widthAnchor.constraint(equalToConstant: 30).isActive = true\n            \n            view.backgroundColor = .red\n            return view\n        }()"
+      }
+    ]
+  },
+  {
+    "A_name" : "timer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 40, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "startAnimatingView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 42, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "stopAnimatingView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 57, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 62, Column: 9",
+    "H_initialValue" : "{\n            let view = UIView()\n            view.heightAnchor.constraint(equalToConstant: 30).isActive = true\n            view.widthAnchor.constraint(equalToConstant: 30).isActive = true\n            \n            view.backgroundColor = .red\n            return view\n        }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 63, Column: 13",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "indicators",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 72, Column: 5",
+    "H_initialValue" : "[\n        \"None\",\n        \"UIActivityIndicatorView\",\n        \"GIF Image\",\n        \"Custom\"\n    ]"
+  },
+  {
+    "A_name" : "selectedIndicatorIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 78, Column: 5",
+    "H_initialValue" : "1"
+  },
+  {
+    "A_name" : "selectedIndicatorType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 83, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 93, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 98, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "numberOfItemsInSection"
+    ],
+    "J_returnType" : "-> Int"
+  },
+  {
+    "A_name" : "collectionView",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 102, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "cell",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 103, Column: 9",
+        "H_initialValue" : "collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell"
+      }
+    ],
+    "I_parameterType" : [
+      "UICollectionView",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "cellForItemAt"
+    ],
+    "J_returnType" : "-> UICollectionViewCell"
+  },
+  {
+    "A_name" : "cell",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 103, Column: 9",
+    "H_initialValue" : "collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell"
+  },
+  {
+    "A_name" : "alertPopup",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 112, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "alert",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "IndicatorCollectionViewController.swift - Line: 113, Column: 9",
+        "H_initialValue" : "super.alertPopup(sender)"
+      }
+    ],
+    "I_parameterType" : [
+      "Any"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> UIAlertController"
+  },
+  {
+    "A_name" : "alert",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "IndicatorCollectionViewController.swift - Line: 113, Column: 9",
+    "H_initialValue" : "super.alertPopup(sender)"
+  }
+]

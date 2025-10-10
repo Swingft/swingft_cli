@@ -1,0 +1,1164 @@
+[
+  {
+    "A_name" : "BasicAuthenticationTestCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 29, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testHTTPBasicAuthenticationFailsWithInvalidCredentials",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 30, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 33, Column: 9",
+            "H_initialValue" : "Session()"
+          },
+          {
+            "A_name" : "endpoint",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 34, Column: 9",
+            "H_initialValue" : "Endpoint.basicAuth()"
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 35, Column: 9",
+            "H_initialValue" : "expectation(description: \"\\(endpoint.url) 401\")"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 37, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testHTTPBasicAuthenticationWithValidCredentials",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 57, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 60, Column: 9",
+            "H_initialValue" : "Session()"
+          },
+          {
+            "A_name" : "user",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 61, Column: 9",
+            "H_initialValue" : "\"user1\""
+          },
+          {
+            "A_name" : "password",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 61, Column: 9",
+            "H_initialValue" : "\"password\""
+          },
+          {
+            "A_name" : "endpoint",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 62, Column: 9",
+            "H_initialValue" : "Endpoint.basicAuth(forUser: user, password: password)"
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 63, Column: 9",
+            "H_initialValue" : "expectation(description: \"\\(endpoint.url) 200\")"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 65, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testHTTPBasicAuthenticationWithStoredCredentials",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 85, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 88, Column: 9",
+            "H_initialValue" : "Session()"
+          },
+          {
+            "A_name" : "user",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 89, Column: 9",
+            "H_initialValue" : "\"user2\""
+          },
+          {
+            "A_name" : "password",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 89, Column: 9",
+            "H_initialValue" : "\"password\""
+          },
+          {
+            "A_name" : "endpoint",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 90, Column: 9",
+            "H_initialValue" : "Endpoint.basicAuth(forUser: user, password: password)"
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 91, Column: 9",
+            "H_initialValue" : "expectation(description: \"\\(endpoint.url) 200\")"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 93, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "credential",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 96, Column: 9",
+            "H_initialValue" : "URLCredential(user: user, password: password, persistence: .forSession)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testHiddenHTTPBasicAuthentication",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 119, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 122, Column: 9",
+            "H_initialValue" : "Session()"
+          },
+          {
+            "A_name" : "endpoint",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 123, Column: 9",
+            "H_initialValue" : "Endpoint.hiddenBasicAuth()"
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 124, Column: 9",
+            "H_initialValue" : "expectation(description: \"\\(endpoint.url) 200\")"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 126, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testHTTPBasicAuthenticationFailsWithInvalidCredentials",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 30, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 33, Column: 9",
+        "H_initialValue" : "Session()"
+      },
+      {
+        "A_name" : "endpoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 34, Column: 9",
+        "H_initialValue" : "Endpoint.basicAuth()"
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 35, Column: 9",
+        "H_initialValue" : "expectation(description: \"\\(endpoint.url) 401\")"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 37, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 33, Column: 9",
+    "H_initialValue" : "Session()"
+  },
+  {
+    "A_name" : "endpoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 34, Column: 9",
+    "H_initialValue" : "Endpoint.basicAuth()"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 35, Column: 9",
+    "H_initialValue" : "expectation(description: \"\\(endpoint.url) 401\")"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 37, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testHTTPBasicAuthenticationWithValidCredentials",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 57, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 60, Column: 9",
+        "H_initialValue" : "Session()"
+      },
+      {
+        "A_name" : "user",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 61, Column: 9",
+        "H_initialValue" : "\"user1\""
+      },
+      {
+        "A_name" : "password",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 61, Column: 9",
+        "H_initialValue" : "\"password\""
+      },
+      {
+        "A_name" : "endpoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 62, Column: 9",
+        "H_initialValue" : "Endpoint.basicAuth(forUser: user, password: password)"
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 63, Column: 9",
+        "H_initialValue" : "expectation(description: \"\\(endpoint.url) 200\")"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 65, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 60, Column: 9",
+    "H_initialValue" : "Session()"
+  },
+  {
+    "A_name" : "user",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 61, Column: 9",
+    "H_initialValue" : "\"user1\""
+  },
+  {
+    "A_name" : "password",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 61, Column: 9",
+    "H_initialValue" : "\"password\""
+  },
+  {
+    "A_name" : "endpoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 62, Column: 9",
+    "H_initialValue" : "Endpoint.basicAuth(forUser: user, password: password)"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 63, Column: 9",
+    "H_initialValue" : "expectation(description: \"\\(endpoint.url) 200\")"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 65, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testHTTPBasicAuthenticationWithStoredCredentials",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 85, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 88, Column: 9",
+        "H_initialValue" : "Session()"
+      },
+      {
+        "A_name" : "user",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 89, Column: 9",
+        "H_initialValue" : "\"user2\""
+      },
+      {
+        "A_name" : "password",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 89, Column: 9",
+        "H_initialValue" : "\"password\""
+      },
+      {
+        "A_name" : "endpoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 90, Column: 9",
+        "H_initialValue" : "Endpoint.basicAuth(forUser: user, password: password)"
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 91, Column: 9",
+        "H_initialValue" : "expectation(description: \"\\(endpoint.url) 200\")"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 93, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "credential",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 96, Column: 9",
+        "H_initialValue" : "URLCredential(user: user, password: password, persistence: .forSession)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 88, Column: 9",
+    "H_initialValue" : "Session()"
+  },
+  {
+    "A_name" : "user",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 89, Column: 9",
+    "H_initialValue" : "\"user2\""
+  },
+  {
+    "A_name" : "password",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 89, Column: 9",
+    "H_initialValue" : "\"password\""
+  },
+  {
+    "A_name" : "endpoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 90, Column: 9",
+    "H_initialValue" : "Endpoint.basicAuth(forUser: user, password: password)"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 91, Column: 9",
+    "H_initialValue" : "expectation(description: \"\\(endpoint.url) 200\")"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 93, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "credential",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 96, Column: 9",
+    "H_initialValue" : "URLCredential(user: user, password: password, persistence: .forSession)"
+  },
+  {
+    "A_name" : "testHiddenHTTPBasicAuthentication",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 119, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 122, Column: 9",
+        "H_initialValue" : "Session()"
+      },
+      {
+        "A_name" : "endpoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 123, Column: 9",
+        "H_initialValue" : "Endpoint.hiddenBasicAuth()"
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 124, Column: 9",
+        "H_initialValue" : "expectation(description: \"\\(endpoint.url) 200\")"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 126, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 122, Column: 9",
+    "H_initialValue" : "Session()"
+  },
+  {
+    "A_name" : "endpoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 123, Column: 9",
+    "H_initialValue" : "Endpoint.hiddenBasicAuth()"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 124, Column: 9",
+    "H_initialValue" : "expectation(description: \"\\(endpoint.url) 200\")"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 126, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "HTTPDigestAuthenticationTestCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 149, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "disabled_testHTTPDigestAuthenticationWithInvalidCredentials",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 150, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 153, Column: 9",
+            "H_initialValue" : "Session()"
+          },
+          {
+            "A_name" : "endpoint",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 154, Column: 9",
+            "H_initialValue" : "Endpoint.digestAuth()"
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 155, Column: 9",
+            "H_initialValue" : "expectation(description: \"\\(endpoint.url) 401\")"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 157, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "disabled_testHTTPDigestAuthenticationWithValidCredentials",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "MainActor"
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 177, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "session",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 180, Column: 9",
+            "H_initialValue" : "Session()"
+          },
+          {
+            "A_name" : "user",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 181, Column: 9",
+            "H_initialValue" : "\"user\""
+          },
+          {
+            "A_name" : "password",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 181, Column: 9",
+            "H_initialValue" : "\"password\""
+          },
+          {
+            "A_name" : "endpoint",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 182, Column: 9",
+            "H_initialValue" : "Endpoint.digestAuth(forUser: user, password: password)"
+          },
+          {
+            "A_name" : "expectation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 183, Column: 9",
+            "H_initialValue" : "expectation(description: \"\\(endpoint.url) 200\")"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthenticationTests.swift - Line: 185, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "disabled_testHTTPDigestAuthenticationWithInvalidCredentials",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 150, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 153, Column: 9",
+        "H_initialValue" : "Session()"
+      },
+      {
+        "A_name" : "endpoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 154, Column: 9",
+        "H_initialValue" : "Endpoint.digestAuth()"
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 155, Column: 9",
+        "H_initialValue" : "expectation(description: \"\\(endpoint.url) 401\")"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 157, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 153, Column: 9",
+    "H_initialValue" : "Session()"
+  },
+  {
+    "A_name" : "endpoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 154, Column: 9",
+    "H_initialValue" : "Endpoint.digestAuth()"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 155, Column: 9",
+    "H_initialValue" : "expectation(description: \"\\(endpoint.url) 401\")"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 157, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "disabled_testHTTPDigestAuthenticationWithValidCredentials",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 177, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "session",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 180, Column: 9",
+        "H_initialValue" : "Session()"
+      },
+      {
+        "A_name" : "user",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 181, Column: 9",
+        "H_initialValue" : "\"user\""
+      },
+      {
+        "A_name" : "password",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 181, Column: 9",
+        "H_initialValue" : "\"password\""
+      },
+      {
+        "A_name" : "endpoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 182, Column: 9",
+        "H_initialValue" : "Endpoint.digestAuth(forUser: user, password: password)"
+      },
+      {
+        "A_name" : "expectation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 183, Column: 9",
+        "H_initialValue" : "expectation(description: \"\\(endpoint.url) 200\")"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthenticationTests.swift - Line: 185, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "session",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 180, Column: 9",
+    "H_initialValue" : "Session()"
+  },
+  {
+    "A_name" : "user",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 181, Column: 9",
+    "H_initialValue" : "\"user\""
+  },
+  {
+    "A_name" : "password",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 181, Column: 9",
+    "H_initialValue" : "\"password\""
+  },
+  {
+    "A_name" : "endpoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 182, Column: 9",
+    "H_initialValue" : "Endpoint.digestAuth(forUser: user, password: password)"
+  },
+  {
+    "A_name" : "expectation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 183, Column: 9",
+    "H_initialValue" : "expectation(description: \"\\(endpoint.url) 200\")"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthenticationTests.swift - Line: 185, Column: 9",
+    "H_initialValue" : ""
+  }
+]

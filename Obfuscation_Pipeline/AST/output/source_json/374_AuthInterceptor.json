@@ -1,0 +1,474 @@
+[
+  {
+    "A_name" : "AuthInterceptor",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "RequestInterceptor"
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "shared",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 14, Column: 5",
+        "H_initialValue" : "AuthInterceptor()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 15, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "cancellables",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 18, Column: 5",
+        "H_initialValue" : "Set<AnyCancellable>()"
+      },
+      {
+        "A_name" : "isRefreshing",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 19, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "requestsToRetry",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 20, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "adapt",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 24, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthInterceptor.swift - Line: 27, Column: 9",
+            "H_initialValue" : "urlRequest"
+          },
+          {
+            "A_name" : "accessToken",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthInterceptor.swift - Line: 35, Column: 9",
+            "H_initialValue" : "UserDefaultHandler.accessToken"
+          }
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "Session",
+          "@escaping (Result<URLRequest, Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "for",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "retry",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 45, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "refreshToken",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthInterceptor.swift - Line: 62, Column: 9",
+            "H_initialValue" : "UserDefaultHandler.refreshToken"
+          }
+        ],
+        "I_parameterType" : [
+          "Request",
+          "Session",
+          "Error",
+          "@escaping (RetryResult) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "for",
+          "dueTo",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "completeAllWithRetry",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 91, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "completions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthInterceptor.swift - Line: 93, Column: 9",
+            "H_initialValue" : "requestsToRetry"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "completeAllWithFailure",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 98, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "completions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AuthInterceptor.swift - Line: 100, Column: 9",
+            "H_initialValue" : "requestsToRetry"
+          }
+        ],
+        "I_parameterType" : [
+          "Error"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "notifySessionExpired",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 107, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "shared",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 14, Column: 5",
+    "H_initialValue" : "AuthInterceptor()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 15, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "cancellables",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 18, Column: 5",
+    "H_initialValue" : "Set<AnyCancellable>()"
+  },
+  {
+    "A_name" : "isRefreshing",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 19, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "requestsToRetry",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 20, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "adapt",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 24, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 27, Column: 9",
+        "H_initialValue" : "urlRequest"
+      },
+      {
+        "A_name" : "accessToken",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 35, Column: 9",
+        "H_initialValue" : "UserDefaultHandler.accessToken"
+      }
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "Session",
+      "@escaping (Result<URLRequest, Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "for",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 27, Column: 9",
+    "H_initialValue" : "urlRequest"
+  },
+  {
+    "A_name" : "accessToken",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 35, Column: 9",
+    "H_initialValue" : "UserDefaultHandler.accessToken"
+  },
+  {
+    "A_name" : "retry",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 45, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "refreshToken",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 62, Column: 9",
+        "H_initialValue" : "UserDefaultHandler.refreshToken"
+      }
+    ],
+    "I_parameterType" : [
+      "Request",
+      "Session",
+      "Error",
+      "@escaping (RetryResult) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "for",
+      "dueTo",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "refreshToken",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 62, Column: 9",
+    "H_initialValue" : "UserDefaultHandler.refreshToken"
+  },
+  {
+    "A_name" : "completeAllWithRetry",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 91, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "completions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 93, Column: 9",
+        "H_initialValue" : "requestsToRetry"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "completions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 93, Column: 9",
+    "H_initialValue" : "requestsToRetry"
+  },
+  {
+    "A_name" : "completeAllWithFailure",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 98, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "completions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AuthInterceptor.swift - Line: 100, Column: 9",
+        "H_initialValue" : "requestsToRetry"
+      }
+    ],
+    "I_parameterType" : [
+      "Error"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "completions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 100, Column: 9",
+    "H_initialValue" : "requestsToRetry"
+  },
+  {
+    "A_name" : "notifySessionExpired",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AuthInterceptor.swift - Line: 107, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

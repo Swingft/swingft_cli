@@ -1,0 +1,698 @@
+[
+  {
+    "A_name" : "KingfisherWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 31, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "setImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 51, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "options",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NSButton+Kingfisher.swift - Line: 60, Column: 9",
+            "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? .empty))"
+          }
+        ],
+        "I_parameterType" : [
+          "Source?",
+          "KFCrossPlatformImage?",
+          "KingfisherOptionsInfo?",
+          "DownloadProgressBlock?",
+          "(@MainActor @Sendable (Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "placeholder",
+          "options",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "setImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 85, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(any Resource)?",
+          "KFCrossPlatformImage?",
+          "KingfisherOptionsInfo?",
+          "DownloadProgressBlock?",
+          "(@MainActor @Sendable (Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "placeholder",
+          "options",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "setImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 102, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "mutatingSelf",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NSButton+Kingfisher.swift - Line: 110, Column: 9",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+          "Source?",
+          "KFCrossPlatformImage?",
+          "KingfisherParsedOptionsInfo",
+          "DownloadProgressBlock?",
+          "(@MainActor @Sendable (Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "placeholder",
+          "parsedOptions",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "cancelImageDownloadTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 134, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setAlternateImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 140, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "options",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NSButton+Kingfisher.swift - Line: 149, Column: 9",
+            "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? .empty))"
+          }
+        ],
+        "I_parameterType" : [
+          "Source?",
+          "KFCrossPlatformImage?",
+          "KingfisherOptionsInfo?",
+          "DownloadProgressBlock?",
+          "(@MainActor @Sendable (Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "placeholder",
+          "options",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "setAlternateImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 174, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(any Resource)?",
+          "KFCrossPlatformImage?",
+          "KingfisherOptionsInfo?",
+          "DownloadProgressBlock?",
+          "(@MainActor @Sendable (Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "placeholder",
+          "options",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "setAlternateImage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 191, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "mutatingSelf",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NSButton+Kingfisher.swift - Line: 199, Column: 9",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+          "Source?",
+          "KFCrossPlatformImage?",
+          "KingfisherParsedOptionsInfo",
+          "DownloadProgressBlock?",
+          "(@MainActor @Sendable (Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+        ],
+        "I_parameters" : [
+          "with",
+          "placeholder",
+          "parsedOptions",
+          "progressBlock",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> DownloadTask?"
+      },
+      {
+        "A_name" : "cancelAlternateImageDownloadTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 225, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "setImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 51, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 60, Column: 9",
+        "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? .empty))"
+      }
+    ],
+    "I_parameterType" : [
+      "Source?",
+      "KFCrossPlatformImage?",
+      "KingfisherOptionsInfo?",
+      "DownloadProgressBlock?",
+      "(@MainActor @Sendable (Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "placeholder",
+      "options",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 60, Column: 9",
+    "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? .empty))"
+  },
+  {
+    "A_name" : "setImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 85, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(any Resource)?",
+      "KFCrossPlatformImage?",
+      "KingfisherOptionsInfo?",
+      "DownloadProgressBlock?",
+      "(@MainActor @Sendable (Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "placeholder",
+      "options",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "setImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 102, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "mutatingSelf",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 110, Column: 9",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+      "Source?",
+      "KFCrossPlatformImage?",
+      "KingfisherParsedOptionsInfo",
+      "DownloadProgressBlock?",
+      "(@MainActor @Sendable (Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "placeholder",
+      "parsedOptions",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "mutatingSelf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 110, Column: 9",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "cancelImageDownloadTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 134, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setAlternateImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 140, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "options",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 149, Column: 9",
+        "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? .empty))"
+      }
+    ],
+    "I_parameterType" : [
+      "Source?",
+      "KFCrossPlatformImage?",
+      "KingfisherOptionsInfo?",
+      "DownloadProgressBlock?",
+      "(@MainActor @Sendable (Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "placeholder",
+      "options",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "options",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 149, Column: 9",
+    "H_initialValue" : "KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? .empty))"
+  },
+  {
+    "A_name" : "setAlternateImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 174, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(any Resource)?",
+      "KFCrossPlatformImage?",
+      "KingfisherOptionsInfo?",
+      "DownloadProgressBlock?",
+      "(@MainActor @Sendable (Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "placeholder",
+      "options",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "setAlternateImage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 191, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "mutatingSelf",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 199, Column: 9",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+      "Source?",
+      "KFCrossPlatformImage?",
+      "KingfisherParsedOptionsInfo",
+      "DownloadProgressBlock?",
+      "(@MainActor @Sendable (Result<RetrieveImageResult, KingfisherError>) -> Void)?"
+    ],
+    "I_parameters" : [
+      "with",
+      "placeholder",
+      "parsedOptions",
+      "progressBlock",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> DownloadTask?"
+  },
+  {
+    "A_name" : "mutatingSelf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 199, Column: 9",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "cancelAlternateImageDownloadTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 225, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "taskIdentifierKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 232, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "imageTaskKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 233, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "alternateTaskIdentifierKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 235, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "alternateImageTaskKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 236, Column: 1",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "KingfisherWrapper",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "MainActor"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 238, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "taskIdentifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 243, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "imageTask",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 254, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "alternateTaskIdentifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 259, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "alternateImageTask",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NSButton+Kingfisher.swift - Line: 270, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "taskIdentifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 243, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "box",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 245, Column: 13",
+    "H_initialValue" : "getAssociatedObject(base, &taskIdentifierKey)"
+  },
+  {
+    "A_name" : "box",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 249, Column: 13",
+    "H_initialValue" : "newValue.map { Box($0) }"
+  },
+  {
+    "A_name" : "imageTask",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 254, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "alternateTaskIdentifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 259, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "box",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 261, Column: 13",
+    "H_initialValue" : "getAssociatedObject(base, &alternateTaskIdentifierKey)"
+  },
+  {
+    "A_name" : "box",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 265, Column: 13",
+    "H_initialValue" : "newValue.map { Box($0) }"
+  },
+  {
+    "A_name" : "alternateImageTask",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NSButton+Kingfisher.swift - Line: 270, Column: 5",
+    "H_initialValue" : ""
+  }
+]

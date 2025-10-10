@@ -1,0 +1,325 @@
+[
+  {
+    "A_name" : "Operators",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Throttle.swift - Line: 3, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "Throttle",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UnaryAsyncOperator<Value, Value, Error>"
+    ],
+    "F_location" : "Throttle.swift - Line: 4, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "interval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Throttle.swift - Line: 5, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "targetWithClock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Throttle.swift - Line: 6, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "state",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Throttle.swift - Line: 8, Column: 3",
+        "H_initialValue" : "Atomic(ThrottleState())"
+      },
+      {
+        "A_name" : "schedulerDisposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Throttle.swift - Line: 9, Column: 3",
+        "H_initialValue" : "SerialDisposable()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Throttle.swift - Line: 11, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer<Value, Error>",
+          "Lifetime",
+          "DateScheduler",
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "downstream",
+          "downstreamLifetime",
+          "target",
+          "interval"
+        ]
+      },
+      {
+        "A_name" : "receive",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Throttle.swift - Line: 26, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "scheduleDate",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Throttle.swift - Line: 27, Column: 4",
+            "H_initialValue" : "state.modify { state in\n\t\t\t\tstate.pendingValue = value\n\n\t\t\t\tlet proposedScheduleDate: Date\n\t\t\t\tif let previousDate = state.previousDate, previousDate <= targetWithClock.currentDate {\n\t\t\t\t\tproposedScheduleDate = previousDate.addingTimeInterval(interval)\n\t\t\t\t} else {\n\t\t\t\t\tproposedScheduleDate = targetWithClock.currentDate\n\t\t\t\t}\n\n\t\t\t\treturn proposedScheduleDate < targetWithClock.currentDate ? targetWithClock.currentDate : proposedScheduleDate\n\t\t\t}"
+          }
+        ],
+        "I_parameterType" : [
+          "Value"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "interval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Throttle.swift - Line: 5, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "targetWithClock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Throttle.swift - Line: 6, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Throttle.swift - Line: 8, Column: 3",
+    "H_initialValue" : "Atomic(ThrottleState())"
+  },
+  {
+    "A_name" : "schedulerDisposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Throttle.swift - Line: 9, Column: 3",
+    "H_initialValue" : "SerialDisposable()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Throttle.swift - Line: 11, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer<Value, Error>",
+      "Lifetime",
+      "DateScheduler",
+      "TimeInterval"
+    ],
+    "I_parameters" : [
+      "downstream",
+      "downstreamLifetime",
+      "target",
+      "interval"
+    ]
+  },
+  {
+    "A_name" : "receive",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Throttle.swift - Line: 26, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "scheduleDate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Throttle.swift - Line: 27, Column: 4",
+        "H_initialValue" : "state.modify { state in\n\t\t\t\tstate.pendingValue = value\n\n\t\t\t\tlet proposedScheduleDate: Date\n\t\t\t\tif let previousDate = state.previousDate, previousDate <= targetWithClock.currentDate {\n\t\t\t\t\tproposedScheduleDate = previousDate.addingTimeInterval(interval)\n\t\t\t\t} else {\n\t\t\t\t\tproposedScheduleDate = targetWithClock.currentDate\n\t\t\t\t}\n\n\t\t\t\treturn proposedScheduleDate < targetWithClock.currentDate ? targetWithClock.currentDate : proposedScheduleDate\n\t\t\t}"
+      }
+    ],
+    "I_parameterType" : [
+      "Value"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "scheduleDate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Throttle.swift - Line: 27, Column: 4",
+    "H_initialValue" : "state.modify { state in\n\t\t\t\tstate.pendingValue = value\n\n\t\t\t\tlet proposedScheduleDate: Date\n\t\t\t\tif let previousDate = state.previousDate, previousDate <= targetWithClock.currentDate {\n\t\t\t\t\tproposedScheduleDate = previousDate.addingTimeInterval(interval)\n\t\t\t\t} else {\n\t\t\t\t\tproposedScheduleDate = targetWithClock.currentDate\n\t\t\t\t}\n\n\t\t\t\treturn proposedScheduleDate < targetWithClock.currentDate ? targetWithClock.currentDate : proposedScheduleDate\n\t\t\t}"
+  },
+  {
+    "A_name" : "proposedScheduleDate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Throttle.swift - Line: 30, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ThrottleState",
+    "B_kind" : "struct",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Throttle.swift - Line: 51, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "previousDate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Throttle.swift - Line: 52, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "pendingValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Throttle.swift - Line: 53, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "retrieveValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "mutating",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "Throttle.swift - Line: 55, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Date"
+        ],
+        "I_parameters" : [
+          "date"
+        ],
+        "J_returnType" : "-> Value?"
+      }
+    ]
+  },
+  {
+    "A_name" : "previousDate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Throttle.swift - Line: 52, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "pendingValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Throttle.swift - Line: 53, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "retrieveValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "mutating",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "Throttle.swift - Line: 55, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Date"
+    ],
+    "I_parameters" : [
+      "date"
+    ],
+    "J_returnType" : "-> Value?"
+  }
+]

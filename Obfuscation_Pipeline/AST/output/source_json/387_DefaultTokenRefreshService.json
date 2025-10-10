@@ -1,0 +1,127 @@
+[
+  {
+    "A_name" : "TokenRefreshService",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DefaultTokenRefreshService.swift - Line: 13, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "refreshToken",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultTokenRefreshService.swift - Line: 14, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> AnyPublisher<(accessToken: String, refreshToken: String), Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "refreshToken",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultTokenRefreshService.swift - Line: 14, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> AnyPublisher<(accessToken: String, refreshToken: String), Error>"
+  },
+  {
+    "A_name" : "DefaultTokenRefreshService",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseService<AuthAPI>",
+      "TokenRefreshService"
+    ],
+    "F_location" : "DefaultTokenRefreshService.swift - Line: 17, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "refreshToken",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DefaultTokenRefreshService.swift - Line: 19, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> AnyPublisher<(accessToken: String, refreshToken: String), Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "refreshToken",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultTokenRefreshService.swift - Line: 19, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> AnyPublisher<(accessToken: String, refreshToken: String), Error>"
+  },
+  {
+    "A_name" : "access",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultTokenRefreshService.swift - Line: 22, Column: 17",
+    "H_initialValue" : "response.data.accessToken"
+  },
+  {
+    "A_name" : "refresh",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DefaultTokenRefreshService.swift - Line: 23, Column: 17",
+    "H_initialValue" : "response.data.refreshToken"
+  }
+]

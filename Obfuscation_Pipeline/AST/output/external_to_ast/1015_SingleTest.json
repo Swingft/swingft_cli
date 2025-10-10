@@ -1,0 +1,5211 @@
+[
+  {
+    "A_name" : "SingleTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "SingleTest.swift - Line: 13, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "SingleTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 18, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testSingle_Subscription_success",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 19, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 20, Column: 9",
+            "H_initialValue" : "Single.just(1)"
+          },
+          {
+            "A_name" : "events",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 22, Column: 9",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSingle_Subscription_error",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 31, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 32, Column: 9",
+            "H_initialValue" : "Single<Int>.error(testError)"
+          },
+          {
+            "A_name" : "events",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 34, Column: 9",
+            "H_initialValue" : "[]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSingle_Subscription_onDisposed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 43, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 45, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 46, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 47, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 48, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "onDisposesCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 49, Column: 9",
+            "H_initialValue" : "0"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSingle_Subscription_onDisposed_success",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 70, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "single",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 72, Column: 9",
+            "H_initialValue" : "Single.just(1)"
+          },
+          {
+            "A_name" : "onDisposedCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 73, Column: 9",
+            "H_initialValue" : "0"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSingle_Subscription_onDisposed_error",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 82, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "single",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 84, Column: 9",
+            "H_initialValue" : "Single<Int>.error(testError)"
+          },
+          {
+            "A_name" : "onDisposedCalled",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 85, Column: 9",
+            "H_initialValue" : "0"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSingle_create_success",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 94, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 95, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 97, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "disposedTime",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 99, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 111, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n                }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSingle_create_error",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 128, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 129, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 131, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "disposedTime",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 133, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 145, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n                }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSingle_create_disposing",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 161, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 162, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "observer",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 164, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "disposedTime",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 165, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 166, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 167, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testSingle_Subscription_success",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 19, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 20, Column: 9",
+        "H_initialValue" : "Single.just(1)"
+      },
+      {
+        "A_name" : "events",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 22, Column: 9",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 20, Column: 9",
+    "H_initialValue" : "Single.just(1)"
+  },
+  {
+    "A_name" : "events",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 22, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "testSingle_Subscription_error",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 31, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 32, Column: 9",
+        "H_initialValue" : "Single<Int>.error(testError)"
+      },
+      {
+        "A_name" : "events",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 34, Column: 9",
+        "H_initialValue" : "[]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 32, Column: 9",
+    "H_initialValue" : "Single<Int>.error(testError)"
+  },
+  {
+    "A_name" : "events",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 34, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "testSingle_Subscription_onDisposed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 43, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 45, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 46, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 47, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 48, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onDisposesCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 49, Column: 9",
+        "H_initialValue" : "0"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 45, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 46, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 47, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 48, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onDisposesCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 49, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "testSingle_Subscription_onDisposed_success",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 70, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "single",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 72, Column: 9",
+        "H_initialValue" : "Single.just(1)"
+      },
+      {
+        "A_name" : "onDisposedCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 73, Column: 9",
+        "H_initialValue" : "0"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "single",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 72, Column: 9",
+    "H_initialValue" : "Single.just(1)"
+  },
+  {
+    "A_name" : "onDisposedCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 73, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "testSingle_Subscription_onDisposed_error",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 82, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "single",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 84, Column: 9",
+        "H_initialValue" : "Single<Int>.error(testError)"
+      },
+      {
+        "A_name" : "onDisposedCalled",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 85, Column: 9",
+        "H_initialValue" : "0"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "single",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 84, Column: 9",
+    "H_initialValue" : "Single<Int>.error(testError)"
+  },
+  {
+    "A_name" : "onDisposedCalled",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 85, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "testSingle_create_success",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 94, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 95, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 97, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "disposedTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 99, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 111, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n                }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 95, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 97, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "disposedTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 99, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 111, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n                }\n        }"
+  },
+  {
+    "A_name" : "testSingle_create_error",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 128, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 129, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 131, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "disposedTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 133, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 145, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n                }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 129, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 131, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "disposedTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 133, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 145, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single<Int>.create { _observer in\n                observer = _observer\n                return Disposables.create {\n                    disposedTime = scheduler.clock\n                }\n                }\n        }"
+  },
+  {
+    "A_name" : "testSingle_create_disposing",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 161, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 162, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "observer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 164, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "disposedTime",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 165, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 166, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 167, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 162, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "observer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 164, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "disposedTime",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 165, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 166, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 167, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "SingleTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 198, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "test_just_producesElement",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 199, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 200, Column: 9",
+            "H_initialValue" : "try! (Single.just(1) as Single<Int>).toBlocking().first()!"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_just2_producesElement",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 204, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 205, Column: 9",
+            "H_initialValue" : "try! (Single.just(1, scheduler: CurrentThreadScheduler.instance) as Single<Int>).toBlocking().first()!"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_error_fails",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 209, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_never_producesElement",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 219, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "event",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 220, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 221, Column: 9",
+            "H_initialValue" : "(Single<Int>.never() as Single<Int>).subscribe { _event in\n            event = _event\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_deferred",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 229, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 230, Column: 9",
+            "H_initialValue" : "try! (Single.deferred { Single.just(1) } as Single<Int>).toBlocking().toArray()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_delay",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 234, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 235, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 237, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single.just(1).delay(.seconds(2), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_delaySubscription",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 247, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 248, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 250, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single.just(1).delaySubscription(.seconds(2), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_observeOn",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 260, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 261, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 263, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single.just(1).observe(on:scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_subscribeOn",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 273, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 274, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 276, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single.just(1).subscribe(on: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_catchError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 286, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 287, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 289, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single.error(testError).catch { _ in Single.just(2) }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_catchAndReturn",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 299, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 300, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 302, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single.error(testError).catchAndReturn(2)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_retry",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 312, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 313, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "isFirst",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 315, Column: 9",
+            "H_initialValue" : "true"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 316, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            (Single.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Single.error(e)\n                    }\n\n                    return Single.just(2)\n                }\n                .retry(2) as Single<Int>\n            )\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_retryWhen1",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 338, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 339, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "isFirst",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 341, Column: 9",
+            "H_initialValue" : "true"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 342, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            (Single.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Single.error(e)\n                    }\n\n                    return Single.just(2)\n                }\n                .retry { (e: Observable<Error>) in\n                    return e\n                } as Single<Int>\n            )\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_retryWhen2",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 366, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 367, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "isFirst",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 369, Column: 9",
+            "H_initialValue" : "true"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 370, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            (Single.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Single.error(e)\n                    }\n\n                    return Single.just(2)\n                }\n                .retry { e in\n                    return e\n                } as Single<Int>\n            )\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_debug",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 394, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 395, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 397, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single.just(1).debug()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_using",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 407, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 408, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "disposeInvoked",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 410, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "createInvoked",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 411, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "disposable",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 413, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 414, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "_d",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 415, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 417, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single.using({ () -> MockDisposable in\n                disposeInvoked += 1\n                disposable = MockDisposable(scheduler: scheduler)\n                return disposable\n            }, primitiveSequenceFactory: { (d: MockDisposable) -> Single<Int> in\n                _d = d\n                createInvoked += 1\n                xs = scheduler.createColdObservable([\n                    .next(100, scheduler.clock),\n                    .completed(100)\n                    ])\n                return xs.asObservable().asSingle()\n            })\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_timeout",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 453, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 454, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 456, Column: 9",
+            "H_initialValue" : "scheduler.createColdObservable([\n                .next(10, 1),\n                .completed(20)\n            ]).asSingle()"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 461, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(5), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_timeout_other",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 470, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 471, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 473, Column: 9",
+            "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n            ]).asSingle()"
+          },
+          {
+            "A_name" : "xs2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 478, Column: 9",
+            "H_initialValue" : "scheduler.createColdObservable([\n            .next(20, 2),\n            .completed(20)\n            ]).asSingle()"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 483, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(5), other: xs2, scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_timeout_succeeds",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 493, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 494, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 496, Column: 9",
+            "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n            ]).asSingle()"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 501, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(30), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_timeout_other_succeeds",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 511, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 512, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 514, Column: 9",
+            "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n            ]).asSingle()"
+          },
+          {
+            "A_name" : "xs2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 519, Column: 9",
+            "H_initialValue" : "scheduler.createColdObservable([\n            .next(20, 2),\n            .completed(20)\n            ]).asSingle()"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 524, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(30), other: xs2, scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "test_just_producesElement",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 199, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 200, Column: 9",
+        "H_initialValue" : "try! (Single.just(1) as Single<Int>).toBlocking().first()!"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 200, Column: 9",
+    "H_initialValue" : "try! (Single.just(1) as Single<Int>).toBlocking().first()!"
+  },
+  {
+    "A_name" : "test_just2_producesElement",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 204, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 205, Column: 9",
+        "H_initialValue" : "try! (Single.just(1, scheduler: CurrentThreadScheduler.instance) as Single<Int>).toBlocking().first()!"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 205, Column: 9",
+    "H_initialValue" : "try! (Single.just(1, scheduler: CurrentThreadScheduler.instance) as Single<Int>).toBlocking().first()!"
+  },
+  {
+    "A_name" : "test_error_fails",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 209, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "test_never_producesElement",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 219, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "event",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 220, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 221, Column: 9",
+        "H_initialValue" : "(Single<Int>.never() as Single<Int>).subscribe { _event in\n            event = _event\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "event",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 220, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 221, Column: 9",
+    "H_initialValue" : "(Single<Int>.never() as Single<Int>).subscribe { _event in\n            event = _event\n        }"
+  },
+  {
+    "A_name" : "test_deferred",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 229, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 230, Column: 9",
+        "H_initialValue" : "try! (Single.deferred { Single.just(1) } as Single<Int>).toBlocking().toArray()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 230, Column: 9",
+    "H_initialValue" : "try! (Single.deferred { Single.just(1) } as Single<Int>).toBlocking().toArray()"
+  },
+  {
+    "A_name" : "test_delay",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 234, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 235, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 237, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single.just(1).delay(.seconds(2), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 235, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 237, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single.just(1).delay(.seconds(2), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_delaySubscription",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 247, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 248, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 250, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single.just(1).delaySubscription(.seconds(2), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 248, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 250, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single.just(1).delaySubscription(.seconds(2), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_observeOn",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 260, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 261, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 263, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single.just(1).observe(on:scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 261, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 263, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single.just(1).observe(on:scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_subscribeOn",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 273, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 274, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 276, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single.just(1).subscribe(on: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 274, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 276, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single.just(1).subscribe(on: scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_catchError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 286, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 287, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 289, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single.error(testError).catch { _ in Single.just(2) }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 287, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 289, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single.error(testError).catch { _ in Single.just(2) }\n        }"
+  },
+  {
+    "A_name" : "test_catchAndReturn",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 299, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 300, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 302, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single.error(testError).catchAndReturn(2)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 300, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 302, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single.error(testError).catchAndReturn(2)\n        }"
+  },
+  {
+    "A_name" : "test_retry",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 312, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 313, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "isFirst",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 315, Column: 9",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 316, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            (Single.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Single.error(e)\n                    }\n\n                    return Single.just(2)\n                }\n                .retry(2) as Single<Int>\n            )\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 313, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "isFirst",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 315, Column: 9",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 316, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            (Single.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Single.error(e)\n                    }\n\n                    return Single.just(2)\n                }\n                .retry(2) as Single<Int>\n            )\n        }"
+  },
+  {
+    "A_name" : "test_retryWhen1",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 338, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 339, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "isFirst",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 341, Column: 9",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 342, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            (Single.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Single.error(e)\n                    }\n\n                    return Single.just(2)\n                }\n                .retry { (e: Observable<Error>) in\n                    return e\n                } as Single<Int>\n            )\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 339, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "isFirst",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 341, Column: 9",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 342, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            (Single.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Single.error(e)\n                    }\n\n                    return Single.just(2)\n                }\n                .retry { (e: Observable<Error>) in\n                    return e\n                } as Single<Int>\n            )\n        }"
+  },
+  {
+    "A_name" : "test_retryWhen2",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 366, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 367, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "isFirst",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 369, Column: 9",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 370, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            (Single.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Single.error(e)\n                    }\n\n                    return Single.just(2)\n                }\n                .retry { e in\n                    return e\n                } as Single<Int>\n            )\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 367, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "isFirst",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 369, Column: 9",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 370, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            (Single.error(testError)\n                .catch { e in\n                    defer {\n                        isFirst = false\n                    }\n                    if isFirst {\n                        return Single.error(e)\n                    }\n\n                    return Single.just(2)\n                }\n                .retry { e in\n                    return e\n                } as Single<Int>\n            )\n        }"
+  },
+  {
+    "A_name" : "test_debug",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 394, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 395, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 397, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single.just(1).debug()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 395, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 397, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single.just(1).debug()\n        }"
+  },
+  {
+    "A_name" : "test_using",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 407, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 408, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "disposeInvoked",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 410, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "createInvoked",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 411, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "disposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 413, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 414, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_d",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 415, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 417, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single.using({ () -> MockDisposable in\n                disposeInvoked += 1\n                disposable = MockDisposable(scheduler: scheduler)\n                return disposable\n            }, primitiveSequenceFactory: { (d: MockDisposable) -> Single<Int> in\n                _d = d\n                createInvoked += 1\n                xs = scheduler.createColdObservable([\n                    .next(100, scheduler.clock),\n                    .completed(100)\n                    ])\n                return xs.asObservable().asSingle()\n            })\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 408, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "disposeInvoked",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 410, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "createInvoked",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 411, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "disposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 413, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 414, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_d",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 415, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 417, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single.using({ () -> MockDisposable in\n                disposeInvoked += 1\n                disposable = MockDisposable(scheduler: scheduler)\n                return disposable\n            }, primitiveSequenceFactory: { (d: MockDisposable) -> Single<Int> in\n                _d = d\n                createInvoked += 1\n                xs = scheduler.createColdObservable([\n                    .next(100, scheduler.clock),\n                    .completed(100)\n                    ])\n                return xs.asObservable().asSingle()\n            })\n        }"
+  },
+  {
+    "A_name" : "test_timeout",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 453, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 454, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 456, Column: 9",
+        "H_initialValue" : "scheduler.createColdObservable([\n                .next(10, 1),\n                .completed(20)\n            ]).asSingle()"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 461, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(5), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 454, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 456, Column: 9",
+    "H_initialValue" : "scheduler.createColdObservable([\n                .next(10, 1),\n                .completed(20)\n            ]).asSingle()"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 461, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(5), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_timeout_other",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 470, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 471, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 473, Column: 9",
+        "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n            ]).asSingle()"
+      },
+      {
+        "A_name" : "xs2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 478, Column: 9",
+        "H_initialValue" : "scheduler.createColdObservable([\n            .next(20, 2),\n            .completed(20)\n            ]).asSingle()"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 483, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(5), other: xs2, scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 471, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 473, Column: 9",
+    "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n            ]).asSingle()"
+  },
+  {
+    "A_name" : "xs2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 478, Column: 9",
+    "H_initialValue" : "scheduler.createColdObservable([\n            .next(20, 2),\n            .completed(20)\n            ]).asSingle()"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 483, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(5), other: xs2, scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_timeout_succeeds",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 493, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 494, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 496, Column: 9",
+        "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n            ]).asSingle()"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 501, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(30), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 494, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 496, Column: 9",
+    "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n            ]).asSingle()"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 501, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(30), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "test_timeout_other_succeeds",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 511, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 512, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 514, Column: 9",
+        "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n            ]).asSingle()"
+      },
+      {
+        "A_name" : "xs2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 519, Column: 9",
+        "H_initialValue" : "scheduler.createColdObservable([\n            .next(20, 2),\n            .completed(20)\n            ]).asSingle()"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 524, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(30), other: xs2, scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 512, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 514, Column: 9",
+    "H_initialValue" : "scheduler.createColdObservable([\n            .next(10, 1),\n            .completed(20)\n            ]).asSingle()"
+  },
+  {
+    "A_name" : "xs2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 519, Column: 9",
+    "H_initialValue" : "scheduler.createColdObservable([\n            .next(20, 2),\n            .completed(20)\n            ]).asSingle()"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 524, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.timeout(.seconds(30), other: xs2, scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "SingleTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 535, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "test_timer",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 536, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 537, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 539, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single<Int>.timer(.seconds(2), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "test_timer",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 536, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 537, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 539, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single<Int>.timer(.seconds(2), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 537, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 539, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single<Int>.timer(.seconds(2), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "SingleTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 550, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "test_do",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 551, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 552, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 554, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).do(onSuccess: { _ in () }, onError: { _ in () }, onSubscribe: { () in () }, onSubscribed: { () in () }, onDispose: { () in () })\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_filter",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 564, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 565, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 567, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).filter { _ in false }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_map",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 576, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 577, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 579, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).map { $0 * 2 }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_compactMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 589, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 590, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 592, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            (Single<String>.just(\"1\").compactMap(Int.init) as Maybe<Int>).asObservable()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_compactMapNil",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 602, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 603, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 605, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            (Single<String>.just(\"a\").compactMap(Int.init) as Maybe<Int>).asObservable()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_flatMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 614, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 615, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 617, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).flatMap { .just($0 * 2) }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_flatMapMaybe",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 627, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 628, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 630, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).flatMapMaybe { Maybe.just($0 * 2) }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_flatMapCompletable",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 640, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 641, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 643, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single<Int>.just(10).flatMapCompletable { _ in Completable.empty() }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_asMaybe",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 652, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 653, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 655, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).asMaybe() as Maybe<Int>\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_asCompletable",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 665, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 666, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 668, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single<Int>.just(5).asCompletable() as Completable\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_asCompletableError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 677, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 678, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 680, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single<Int>.error(testError).asCompletable() as Completable\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "test_do",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 551, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 552, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 554, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).do(onSuccess: { _ in () }, onError: { _ in () }, onSubscribe: { () in () }, onSubscribed: { () in () }, onDispose: { () in () })\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 552, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 554, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).do(onSuccess: { _ in () }, onError: { _ in () }, onSubscribe: { () in () }, onSubscribed: { () in () }, onDispose: { () in () })\n        }"
+  },
+  {
+    "A_name" : "test_filter",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 564, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 565, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 567, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).filter { _ in false }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 565, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 567, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).filter { _ in false }\n        }"
+  },
+  {
+    "A_name" : "test_map",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 576, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 577, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 579, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).map { $0 * 2 }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 577, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 579, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).map { $0 * 2 }\n        }"
+  },
+  {
+    "A_name" : "test_compactMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 589, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 590, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 592, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            (Single<String>.just(\"1\").compactMap(Int.init) as Maybe<Int>).asObservable()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 590, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 592, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            (Single<String>.just(\"1\").compactMap(Int.init) as Maybe<Int>).asObservable()\n        }"
+  },
+  {
+    "A_name" : "test_compactMapNil",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 602, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 603, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 605, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            (Single<String>.just(\"a\").compactMap(Int.init) as Maybe<Int>).asObservable()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 603, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 605, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            (Single<String>.just(\"a\").compactMap(Int.init) as Maybe<Int>).asObservable()\n        }"
+  },
+  {
+    "A_name" : "test_flatMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 614, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 615, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 617, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).flatMap { .just($0 * 2) }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 615, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 617, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).flatMap { .just($0 * 2) }\n        }"
+  },
+  {
+    "A_name" : "test_flatMapMaybe",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 627, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 628, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 630, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).flatMapMaybe { Maybe.just($0 * 2) }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 628, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 630, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).flatMapMaybe { Maybe.just($0 * 2) }\n        }"
+  },
+  {
+    "A_name" : "test_flatMapCompletable",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 640, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 641, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 643, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single<Int>.just(10).flatMapCompletable { _ in Completable.empty() }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 641, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 643, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single<Int>.just(10).flatMapCompletable { _ in Completable.empty() }\n        }"
+  },
+  {
+    "A_name" : "test_asMaybe",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 652, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 653, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 655, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).asMaybe() as Maybe<Int>\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 653, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 655, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single<Int>.just(1).asMaybe() as Maybe<Int>\n        }"
+  },
+  {
+    "A_name" : "test_asCompletable",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 665, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 666, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 668, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single<Int>.just(5).asCompletable() as Completable\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 666, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 668, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single<Int>.just(5).asCompletable() as Completable\n        }"
+  },
+  {
+    "A_name" : "test_asCompletableError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 677, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 678, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 680, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single<Int>.error(testError).asCompletable() as Completable\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 678, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 680, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single<Int>.error(testError).asCompletable() as Completable\n        }"
+  },
+  {
+    "A_name" : "SingleTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 690, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "test_zip_tuple",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 691, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 692, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 694, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            (Single.zip(Single.just(1), Single.just(2)) as Single<(Int, Int)>).map { $0.0 + $0.1 }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_zip_resultSelector",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 704, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 705, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 707, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            Single.zip(Single.just(1), Single.just(2)) { $0 + $1 }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testZipCollection_selector",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 717, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "collection",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 718, Column: 9",
+            "H_initialValue" : "[Single<Int>.just(1), Single<Int>.just(1), Single<Int>.just(1)]"
+          },
+          {
+            "A_name" : "singleResult",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 719, Column: 9",
+            "H_initialValue" : "Single.zip(collection) { $0.reduce(0, +) }"
+          },
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 721, Column: 9",
+            "H_initialValue" : "try! singleResult\n            .toBlocking()\n            .first()!"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testZipCollection_selector_when_empty",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 728, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "collection",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 729, Column: 9",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "singleResult",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 730, Column: 9",
+            "H_initialValue" : "Single.zip(collection) { $0.reduce(0, +) }"
+          },
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 732, Column: 9",
+            "H_initialValue" : "try! singleResult\n            .toBlocking()\n            .first()!"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testZipCollection_tuple",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 739, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "collection",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 740, Column: 9",
+            "H_initialValue" : "[Single<Int>.just(1), Single<Int>.just(1), Single<Int>.just(1)]"
+          },
+          {
+            "A_name" : "singleResult",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 741, Column: 9",
+            "H_initialValue" : "Single.zip(collection).map { $0.reduce(0, +) }"
+          },
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 743, Column: 9",
+            "H_initialValue" : "try! singleResult\n            .toBlocking()\n            .first()!"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testZipCollection_tuple_when_empty",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 750, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "collection",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 751, Column: 9",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "singleResult",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 752, Column: 9",
+            "H_initialValue" : "Single.zip(collection)"
+          },
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 754, Column: 9",
+            "H_initialValue" : "try! singleResult\n            .toBlocking()\n            .first()!"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "test_zip_tuple",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 691, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 692, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 694, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            (Single.zip(Single.just(1), Single.just(2)) as Single<(Int, Int)>).map { $0.0 + $0.1 }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 692, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 694, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            (Single.zip(Single.just(1), Single.just(2)) as Single<(Int, Int)>).map { $0.0 + $0.1 }\n        }"
+  },
+  {
+    "A_name" : "test_zip_resultSelector",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 704, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 705, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 707, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            Single.zip(Single.just(1), Single.just(2)) { $0 + $1 }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 705, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 707, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            Single.zip(Single.just(1), Single.just(2)) { $0 + $1 }\n        }"
+  },
+  {
+    "A_name" : "testZipCollection_selector",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 717, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "collection",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 718, Column: 9",
+        "H_initialValue" : "[Single<Int>.just(1), Single<Int>.just(1), Single<Int>.just(1)]"
+      },
+      {
+        "A_name" : "singleResult",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 719, Column: 9",
+        "H_initialValue" : "Single.zip(collection) { $0.reduce(0, +) }"
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 721, Column: 9",
+        "H_initialValue" : "try! singleResult\n            .toBlocking()\n            .first()!"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "collection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 718, Column: 9",
+    "H_initialValue" : "[Single<Int>.just(1), Single<Int>.just(1), Single<Int>.just(1)]"
+  },
+  {
+    "A_name" : "singleResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 719, Column: 9",
+    "H_initialValue" : "Single.zip(collection) { $0.reduce(0, +) }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 721, Column: 9",
+    "H_initialValue" : "try! singleResult\n            .toBlocking()\n            .first()!"
+  },
+  {
+    "A_name" : "testZipCollection_selector_when_empty",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 728, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "collection",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 729, Column: 9",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "singleResult",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 730, Column: 9",
+        "H_initialValue" : "Single.zip(collection) { $0.reduce(0, +) }"
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 732, Column: 9",
+        "H_initialValue" : "try! singleResult\n            .toBlocking()\n            .first()!"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "collection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 729, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "singleResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 730, Column: 9",
+    "H_initialValue" : "Single.zip(collection) { $0.reduce(0, +) }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 732, Column: 9",
+    "H_initialValue" : "try! singleResult\n            .toBlocking()\n            .first()!"
+  },
+  {
+    "A_name" : "testZipCollection_tuple",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 739, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "collection",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 740, Column: 9",
+        "H_initialValue" : "[Single<Int>.just(1), Single<Int>.just(1), Single<Int>.just(1)]"
+      },
+      {
+        "A_name" : "singleResult",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 741, Column: 9",
+        "H_initialValue" : "Single.zip(collection).map { $0.reduce(0, +) }"
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 743, Column: 9",
+        "H_initialValue" : "try! singleResult\n            .toBlocking()\n            .first()!"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "collection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 740, Column: 9",
+    "H_initialValue" : "[Single<Int>.just(1), Single<Int>.just(1), Single<Int>.just(1)]"
+  },
+  {
+    "A_name" : "singleResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 741, Column: 9",
+    "H_initialValue" : "Single.zip(collection).map { $0.reduce(0, +) }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 743, Column: 9",
+    "H_initialValue" : "try! singleResult\n            .toBlocking()\n            .first()!"
+  },
+  {
+    "A_name" : "testZipCollection_tuple_when_empty",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 750, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "collection",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 751, Column: 9",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "singleResult",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 752, Column: 9",
+        "H_initialValue" : "Single.zip(collection)"
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 754, Column: 9",
+        "H_initialValue" : "try! singleResult\n            .toBlocking()\n            .first()!"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "collection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 751, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "singleResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 752, Column: 9",
+    "H_initialValue" : "Single.zip(collection)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 754, Column: 9",
+    "H_initialValue" : "try! singleResult\n            .toBlocking()\n            .first()!"
+  },
+  {
+    "A_name" : "SingleTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 762, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testDefaultErrorHandler",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 763, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "loggedErrors",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 764, Column: 9",
+            "H_initialValue" : "[TestError]()"
+          },
+          {
+            "A_name" : "originalErrorHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SingleTest.swift - Line: 769, Column: 9",
+            "H_initialValue" : "Hooks.defaultErrorHandler"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testDefaultErrorHandler",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 763, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "loggedErrors",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 764, Column: 9",
+        "H_initialValue" : "[TestError]()"
+      },
+      {
+        "A_name" : "originalErrorHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SingleTest.swift - Line: 769, Column: 9",
+        "H_initialValue" : "Hooks.defaultErrorHandler"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "loggedErrors",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 764, Column: 9",
+    "H_initialValue" : "[TestError]()"
+  },
+  {
+    "A_name" : "originalErrorHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SingleTest.swift - Line: 769, Column: 9",
+    "H_initialValue" : "Hooks.defaultErrorHandler"
+  }
+]

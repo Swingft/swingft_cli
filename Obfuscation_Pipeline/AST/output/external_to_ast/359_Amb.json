@@ -1,0 +1,877 @@
+[
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "amb",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Amb.swift - Line: 17, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Sequence"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "amb",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Amb.swift - Line: 17, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Sequence"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 25, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "amb",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 35, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "O2"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Observable<Element>"
+      }
+    ]
+  },
+  {
+    "A_name" : "amb",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 35, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "O2"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Observable<Element>"
+  },
+  {
+    "A_name" : "AmbState",
+    "B_kind" : "enum",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 42, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "neither",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 43, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "left",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 44, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "right",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 45, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "AmbObserver",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "ObserverType"
+    ],
+    "F_location" : "Amb.swift - Line: 48, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 54, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 55, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 56, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 58, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Disposable",
+          "@escaping Sink"
+        ],
+        "I_parameters" : [
+          "parent",
+          "cancel",
+          "sink"
+        ]
+      },
+      {
+        "A_name" : "on",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 68, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 54, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 55, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 56, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 58, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Disposable",
+      "@escaping Sink"
+    ],
+    "I_parameters" : [
+      "parent",
+      "cancel",
+      "sink"
+    ]
+  },
+  {
+    "A_name" : "on",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 68, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "AmbSink",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sink<Observer>"
+    ],
+    "F_location" : "Amb.swift - Line: 82, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "parent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 87, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "lock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 89, Column: 5",
+        "H_initialValue" : "RecursiveLock()"
+      },
+      {
+        "A_name" : "choice",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 91, Column: 5",
+        "H_initialValue" : "AmbState.neither"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 93, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Parent",
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "parent",
+          "observer",
+          "cancel"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 98, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Amb.swift - Line: 99, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Amb.swift - Line: 100, Column: 9",
+            "H_initialValue" : "SingleAssignmentDisposable()"
+          },
+          {
+            "A_name" : "disposeAll",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Amb.swift - Line: 101, Column: 9",
+            "H_initialValue" : "Disposables.create(subscription1, subscription2)"
+          },
+          {
+            "A_name" : "forwardEvent",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Amb.swift - Line: 103, Column: 9",
+            "H_initialValue" : "{ (o: AmbObserverType, event: Event<Element>) -> Void in\n            self.forwardOn(event)\n            if event.isStopEvent {\n                self.dispose()\n            }\n        }"
+          },
+          {
+            "A_name" : "decide",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Amb.swift - Line: 110, Column: 9",
+            "H_initialValue" : "{ (o: AmbObserverType, event: Event<Element>, me: AmbState, otherSubscription: Disposable) in\n            self.lock.performLocked {\n                if self.choice == .neither {\n                    self.choice = me\n                    o.sink = forwardEvent\n                    o.cancel = disposeAll\n                    otherSubscription.dispose()\n                }\n                \n                if self.choice == me {\n                    self.forwardOn(event)\n                    if event.isStopEvent {\n                        self.dispose()\n                    }\n                }\n            }\n        }"
+          },
+          {
+            "A_name" : "sink1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Amb.swift - Line: 128, Column: 9",
+            "H_initialValue" : "AmbObserver(parent: self, cancel: subscription1) { o, e in\n            decide(o, e, .left, subscription2)\n        }"
+          },
+          {
+            "A_name" : "sink2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Amb.swift - Line: 132, Column: 9",
+            "H_initialValue" : "AmbObserver(parent: self, cancel: subscription1) { o, e in\n            decide(o, e, .right, subscription1)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Disposable"
+      }
+    ]
+  },
+  {
+    "A_name" : "parent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 87, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "lock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 89, Column: 5",
+    "H_initialValue" : "RecursiveLock()"
+  },
+  {
+    "A_name" : "choice",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 91, Column: 5",
+    "H_initialValue" : "AmbState.neither"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 93, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Parent",
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "parent",
+      "observer",
+      "cancel"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 98, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 99, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 100, Column: 9",
+        "H_initialValue" : "SingleAssignmentDisposable()"
+      },
+      {
+        "A_name" : "disposeAll",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 101, Column: 9",
+        "H_initialValue" : "Disposables.create(subscription1, subscription2)"
+      },
+      {
+        "A_name" : "forwardEvent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 103, Column: 9",
+        "H_initialValue" : "{ (o: AmbObserverType, event: Event<Element>) -> Void in\n            self.forwardOn(event)\n            if event.isStopEvent {\n                self.dispose()\n            }\n        }"
+      },
+      {
+        "A_name" : "decide",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 110, Column: 9",
+        "H_initialValue" : "{ (o: AmbObserverType, event: Event<Element>, me: AmbState, otherSubscription: Disposable) in\n            self.lock.performLocked {\n                if self.choice == .neither {\n                    self.choice = me\n                    o.sink = forwardEvent\n                    o.cancel = disposeAll\n                    otherSubscription.dispose()\n                }\n                \n                if self.choice == me {\n                    self.forwardOn(event)\n                    if event.isStopEvent {\n                        self.dispose()\n                    }\n                }\n            }\n        }"
+      },
+      {
+        "A_name" : "sink1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 128, Column: 9",
+        "H_initialValue" : "AmbObserver(parent: self, cancel: subscription1) { o, e in\n            decide(o, e, .left, subscription2)\n        }"
+      },
+      {
+        "A_name" : "sink2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 132, Column: 9",
+        "H_initialValue" : "AmbObserver(parent: self, cancel: subscription1) { o, e in\n            decide(o, e, .right, subscription1)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 99, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 100, Column: 9",
+    "H_initialValue" : "SingleAssignmentDisposable()"
+  },
+  {
+    "A_name" : "disposeAll",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 101, Column: 9",
+    "H_initialValue" : "Disposables.create(subscription1, subscription2)"
+  },
+  {
+    "A_name" : "forwardEvent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 103, Column: 9",
+    "H_initialValue" : "{ (o: AmbObserverType, event: Event<Element>) -> Void in\n            self.forwardOn(event)\n            if event.isStopEvent {\n                self.dispose()\n            }\n        }"
+  },
+  {
+    "A_name" : "decide",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 110, Column: 9",
+    "H_initialValue" : "{ (o: AmbObserverType, event: Event<Element>, me: AmbState, otherSubscription: Disposable) in\n            self.lock.performLocked {\n                if self.choice == .neither {\n                    self.choice = me\n                    o.sink = forwardEvent\n                    o.cancel = disposeAll\n                    otherSubscription.dispose()\n                }\n                \n                if self.choice == me {\n                    self.forwardOn(event)\n                    if event.isStopEvent {\n                        self.dispose()\n                    }\n                }\n            }\n        }"
+  },
+  {
+    "A_name" : "sink1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 128, Column: 9",
+    "H_initialValue" : "AmbObserver(parent: self, cancel: subscription1) { o, e in\n            decide(o, e, .left, subscription2)\n        }"
+  },
+  {
+    "A_name" : "sink2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 132, Column: 9",
+    "H_initialValue" : "AmbObserver(parent: self, cancel: subscription1) { o, e in\n            decide(o, e, .right, subscription1)\n        }"
+  },
+  {
+    "A_name" : "Amb",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Producer<Element>"
+    ],
+    "F_location" : "Amb.swift - Line: 143, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "left",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 144, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "right",
+        "B_kind" : "variable",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 145, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 147, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<Element>",
+          "Observable<Element>"
+        ],
+        "I_parameters" : [
+          "left",
+          "right"
+        ]
+      },
+      {
+        "A_name" : "run",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Amb.swift - Line: 152, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "sink",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Amb.swift - Line: 153, Column: 9",
+            "H_initialValue" : "AmbSink(parent: self, observer: observer, cancel: cancel)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Amb.swift - Line: 154, Column: 9",
+            "H_initialValue" : "sink.run()"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer",
+          "Cancelable"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancel"
+        ],
+        "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+      }
+    ]
+  },
+  {
+    "A_name" : "left",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 144, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "right",
+    "B_kind" : "variable",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 145, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 147, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<Element>",
+      "Observable<Element>"
+    ],
+    "I_parameters" : [
+      "left",
+      "right"
+    ]
+  },
+  {
+    "A_name" : "run",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Amb.swift - Line: 152, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "sink",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 153, Column: 9",
+        "H_initialValue" : "AmbSink(parent: self, observer: observer, cancel: cancel)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Amb.swift - Line: 154, Column: 9",
+        "H_initialValue" : "sink.run()"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer",
+      "Cancelable"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancel"
+    ],
+    "J_returnType" : "-> (sink: Disposable, subscription: Disposable)"
+  },
+  {
+    "A_name" : "sink",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 153, Column: 9",
+    "H_initialValue" : "AmbSink(parent: self, observer: observer, cancel: cancel)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Amb.swift - Line: 154, Column: 9",
+    "H_initialValue" : "sink.run()"
+  }
+]

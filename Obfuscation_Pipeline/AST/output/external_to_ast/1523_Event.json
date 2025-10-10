@@ -1,0 +1,2189 @@
+[
+  {
+    "A_name" : "Signal",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 4, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Event",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 9, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "value",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Event.swift - Line: 11, Column: 8",
+            "I_parameterType" : [
+              "Value"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "failed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Event.swift - Line: 15, Column: 8",
+            "I_parameterType" : [
+              "Error"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "completed",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Event.swift - Line: 18, Column: 8",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "interrupted",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Event.swift - Line: 25, Column: 8",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "isCompleted",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Event.swift - Line: 28, Column: 3",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "isTerminating",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Event.swift - Line: 40, Column: 3",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "map",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Event.swift - Line: 59, Column: 3",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "(Value) -> U"
+            ],
+            "I_parameters" : [
+              "_"
+            ],
+            "J_returnType" : "-> Signal<U, Error>.Event"
+          },
+          {
+            "A_name" : "mapError",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Event.swift - Line: 85, Column: 3",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "(Error) -> F"
+            ],
+            "I_parameters" : [
+              "_"
+            ],
+            "J_returnType" : "-> Signal<Value, F>.Event"
+          },
+          {
+            "A_name" : "value",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Event.swift - Line: 102, Column: 3",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "error",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Event.swift - Line: 111, Column: 3",
+            "H_initialValue" : ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Event",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 9, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "value",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 11, Column: 8",
+        "I_parameterType" : [
+          "Value"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "failed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 15, Column: 8",
+        "I_parameterType" : [
+          "Error"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "completed",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 18, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "interrupted",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 25, Column: 8",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "isCompleted",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 28, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isTerminating",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 40, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "map",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 59, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(Value) -> U"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Signal<U, Error>.Event"
+      },
+      {
+        "A_name" : "mapError",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 85, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(Error) -> F"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Signal<Value, F>.Event"
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 102, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 111, Column: 3",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "isCompleted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 28, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isTerminating",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 40, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "map",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 59, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(Value) -> U"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Signal<U, Error>.Event"
+  },
+  {
+    "A_name" : "mapError",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 85, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(Error) -> F"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Signal<Value, F>.Event"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 102, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 111, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 121, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "==",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 122, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Signal<Value, Error>.Event",
+          "Signal<Value, Error>.Event"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 122, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Signal<Value, Error>.Event",
+      "Signal<Value, Error>.Event"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Equatable"
+    ],
+    "F_location" : "Event.swift - Line: 142, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomStringConvertible"
+    ],
+    "F_location" : "Event.swift - Line: 144, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "description",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 145, Column: 2",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "description",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 145, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "EventProtocol",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 163, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "event",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 170, Column: 2",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "event",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 170, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "EventProtocol"
+    ],
+    "F_location" : "Event.swift - Line: 173, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "event",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 174, Column: 2",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "event",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 174, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 207, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "filter",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 210, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Value) -> Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      },
+      {
+        "A_name" : "compactMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 216, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Value) -> U?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<U, Error>"
+      },
+      {
+        "A_name" : "map",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 222, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Value) -> U"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<U, Error>"
+      },
+      {
+        "A_name" : "mapError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 228, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Error) -> E"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<Value, E>"
+      },
+      {
+        "A_name" : "materialize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 234, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "materializeResults",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 240, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "attemptMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 246, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Value) -> Result<U, Error>"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<U, Error>"
+      },
+      {
+        "A_name" : "attempt",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 252, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Value) -> Result<(), Error>"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "filter",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 210, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Value) -> Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "compactMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 216, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Value) -> U?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<U, Error>"
+  },
+  {
+    "A_name" : "map",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 222, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Value) -> U"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<U, Error>"
+  },
+  {
+    "A_name" : "mapError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 228, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Error) -> E"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<Value, E>"
+  },
+  {
+    "A_name" : "materialize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 234, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "materializeResults",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 240, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "attemptMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 246, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Value) -> Result<U, Error>"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<U, Error>"
+  },
+  {
+    "A_name" : "attempt",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 252, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Value) -> Result<(), Error>"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 259, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "attempt",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 260, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Value) throws -> Void"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      },
+      {
+        "A_name" : "attemptMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 267, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Value) throws -> U"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<U, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "attempt",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 260, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Value) throws -> Void"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "attemptMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 267, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Value) throws -> U"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<U, Error>"
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 274, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "take",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 275, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "first"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      },
+      {
+        "A_name" : "take",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 281, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "last"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      },
+      {
+        "A_name" : "take",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 287, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Value) -> Bool"
+        ],
+        "I_parameters" : [
+          "while"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      },
+      {
+        "A_name" : "skip",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 293, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "first"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      },
+      {
+        "A_name" : "skip",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 299, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Value) -> Bool"
+        ],
+        "I_parameters" : [
+          "while"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "take",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 275, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "first"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "take",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 281, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "last"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "take",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 287, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Value) -> Bool"
+    ],
+    "I_parameters" : [
+      "while"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "skip",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 293, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "first"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "skip",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 299, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Value) -> Bool"
+    ],
+    "I_parameters" : [
+      "while"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 306, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "dematerialize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 307, Column: 2",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "dematerialize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 307, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 314, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "dematerializeResults",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 315, Column: 2",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "dematerializeResults",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 315, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 322, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "skipNil",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 323, Column: 2",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "skipNil",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 323, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 328, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "collect",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 329, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "collect",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 333, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "count"
+        ],
+        "J_returnType" : "-> Transformation<[Value], Error>"
+      },
+      {
+        "A_name" : "collect",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 338, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (_ collectedValues: [Value]) -> Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<[Value], Error>"
+      },
+      {
+        "A_name" : "collect",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 344, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (_ collected: [Value], _ latest: Value) -> Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<[Value], Error>"
+      },
+      {
+        "A_name" : "combinePrevious",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 354, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Value?"
+        ],
+        "I_parameters" : [
+          "initial"
+        ],
+        "J_returnType" : "-> Transformation<(Value, Value), Error>"
+      },
+      {
+        "A_name" : "skipRepeats",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 360, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Value, Value) -> Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      },
+      {
+        "A_name" : "uniqueValues",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 366, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Value) -> Identity"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      },
+      {
+        "A_name" : "reduce",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 372, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "U",
+          "@escaping (inout U, Value) -> Void"
+        ],
+        "I_parameters" : [
+          "into",
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<U, Error>"
+      },
+      {
+        "A_name" : "reduce",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 378, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "U",
+          "@escaping (U, Value) -> U"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<U, Error>"
+      },
+      {
+        "A_name" : "scan",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 382, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "U",
+          "@escaping (inout U, Value) -> Void"
+        ],
+        "I_parameters" : [
+          "into",
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<U, Error>"
+      },
+      {
+        "A_name" : "scan",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 389, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "U",
+          "@escaping (U, Value) -> U"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<U, Error>"
+      },
+      {
+        "A_name" : "scanMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 393, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "State",
+          "@escaping (inout State, Value) -> U"
+        ],
+        "I_parameters" : [
+          "into",
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<U, Error>"
+      },
+      {
+        "A_name" : "scanMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 399, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "State",
+          "@escaping (State, Value) -> (State, U)"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<U, Error>"
+      },
+      {
+        "A_name" : "observe",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 407, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Scheduler"
+        ],
+        "I_parameters" : [
+          "on"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      },
+      {
+        "A_name" : "lazyMap",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 413, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Scheduler",
+          "@escaping (Value) -> U"
+        ],
+        "I_parameters" : [
+          "on",
+          "transform"
+        ],
+        "J_returnType" : "-> Transformation<U, Error>"
+      },
+      {
+        "A_name" : "delay",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 419, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TimeInterval",
+          "DateScheduler"
+        ],
+        "I_parameters" : [
+          "_",
+          "on"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      },
+      {
+        "A_name" : "throttle",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 425, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TimeInterval",
+          "DateScheduler"
+        ],
+        "I_parameters" : [
+          "_",
+          "on"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      },
+      {
+        "A_name" : "debounce",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 431, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "TimeInterval",
+          "DateScheduler",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "on",
+          "discardWhenCompleted"
+        ],
+        "J_returnType" : "-> Transformation<Value, Error>"
+      },
+      {
+        "A_name" : "collect",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 443, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchTimeInterval",
+          "DateScheduler",
+          "Bool",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "every",
+          "on",
+          "skipEmpty",
+          "discardWhenCompleted"
+        ],
+        "J_returnType" : "-> Transformation<[Value], Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "collect",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 329, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "collect",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 333, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "count"
+    ],
+    "J_returnType" : "-> Transformation<[Value], Error>"
+  },
+  {
+    "A_name" : "collect",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 338, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (_ collectedValues: [Value]) -> Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<[Value], Error>"
+  },
+  {
+    "A_name" : "collect",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 344, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (_ collected: [Value], _ latest: Value) -> Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<[Value], Error>"
+  },
+  {
+    "A_name" : "combinePrevious",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 354, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Value?"
+    ],
+    "I_parameters" : [
+      "initial"
+    ],
+    "J_returnType" : "-> Transformation<(Value, Value), Error>"
+  },
+  {
+    "A_name" : "skipRepeats",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 360, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Value, Value) -> Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "uniqueValues",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 366, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Value) -> Identity"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "reduce",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 372, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "U",
+      "@escaping (inout U, Value) -> Void"
+    ],
+    "I_parameters" : [
+      "into",
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<U, Error>"
+  },
+  {
+    "A_name" : "reduce",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 378, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "U",
+      "@escaping (U, Value) -> U"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<U, Error>"
+  },
+  {
+    "A_name" : "scan",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 382, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "U",
+      "@escaping (inout U, Value) -> Void"
+    ],
+    "I_parameters" : [
+      "into",
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<U, Error>"
+  },
+  {
+    "A_name" : "scan",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 389, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "U",
+      "@escaping (U, Value) -> U"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<U, Error>"
+  },
+  {
+    "A_name" : "scanMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 393, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "State",
+      "@escaping (inout State, Value) -> U"
+    ],
+    "I_parameters" : [
+      "into",
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<U, Error>"
+  },
+  {
+    "A_name" : "scanMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 399, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "State",
+      "@escaping (State, Value) -> (State, U)"
+    ],
+    "I_parameters" : [
+      "_",
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<U, Error>"
+  },
+  {
+    "A_name" : "new",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 401, Column: 4",
+    "H_initialValue" : "next(state, value)"
+  },
+  {
+    "A_name" : "observe",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 407, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Scheduler"
+    ],
+    "I_parameters" : [
+      "on"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "lazyMap",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 413, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Scheduler",
+      "@escaping (Value) -> U"
+    ],
+    "I_parameters" : [
+      "on",
+      "transform"
+    ],
+    "J_returnType" : "-> Transformation<U, Error>"
+  },
+  {
+    "A_name" : "delay",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 419, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TimeInterval",
+      "DateScheduler"
+    ],
+    "I_parameters" : [
+      "_",
+      "on"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "throttle",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 425, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TimeInterval",
+      "DateScheduler"
+    ],
+    "I_parameters" : [
+      "_",
+      "on"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "debounce",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 431, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "TimeInterval",
+      "DateScheduler",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "on",
+      "discardWhenCompleted"
+    ],
+    "J_returnType" : "-> Transformation<Value, Error>"
+  },
+  {
+    "A_name" : "collect",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 443, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchTimeInterval",
+      "DateScheduler",
+      "Bool",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "every",
+      "on",
+      "skipEmpty",
+      "discardWhenCompleted"
+    ],
+    "J_returnType" : "-> Transformation<[Value], Error>"
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 458, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "promoteError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 459, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "F.Type"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<Value, F>"
+      }
+    ]
+  },
+  {
+    "A_name" : "promoteError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 459, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "F.Type"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<Value, F>"
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 477, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "promoteValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Event.swift - Line: 478, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "U.Type"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Transformation<U, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "promoteValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Event.swift - Line: 478, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "U.Type"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Transformation<U, Error>"
+  },
+  {
+    "A_name" : "Signal.Event",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 487, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "promoteValue",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Event.swift - Line: 488, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Signal<U, Error>.Event"
+      }
+    ]
+  },
+  {
+    "A_name" : "promoteValue",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Event.swift - Line: 488, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Signal<U, Error>.Event"
+  }
+]

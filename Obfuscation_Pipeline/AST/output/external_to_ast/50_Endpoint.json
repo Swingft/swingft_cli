@@ -1,0 +1,674 @@
+[
+  {
+    "A_name" : "EndpointSampleResponse",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 4, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "networkResponse",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 7, Column: 10",
+        "I_parameterType" : [
+          "Int",
+          "Data"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 10, Column: 10",
+        "I_parameterType" : [
+          "HTTPURLResponse",
+          "Data"
+        ],
+        "I_parameters" : [
+          "_",
+          "_"
+        ]
+      },
+      {
+        "A_name" : "networkError",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 13, Column: 10",
+        "I_parameterType" : [
+          "NSError"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Endpoint",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 20, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 24, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "sampleResponseClosure",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 27, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "method",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 30, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "task",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 33, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "httpHeaderFields",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 36, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 38, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "@escaping SampleResponseClosure",
+          "Moya.Method",
+          "Task",
+          "[String: String]?"
+        ],
+        "I_parameters" : [
+          "url",
+          "sampleResponseClosure",
+          "method",
+          "task",
+          "httpHeaderFields"
+        ]
+      },
+      {
+        "A_name" : "adding",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 52, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[String: String]"
+        ],
+        "I_parameters" : [
+          "newHTTPHeaderFields"
+        ],
+        "J_returnType" : "-> Endpoint"
+      },
+      {
+        "A_name" : "replacing",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 57, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Task"
+        ],
+        "I_parameters" : [
+          "task"
+        ],
+        "J_returnType" : "-> Endpoint"
+      },
+      {
+        "A_name" : "add",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 61, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "newHTTPHeaderFields",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Endpoint.swift - Line: 66, Column: 9",
+            "H_initialValue" : "self.httpHeaderFields ?? [:]"
+          }
+        ],
+        "I_parameterType" : [
+          "[String: String]?"
+        ],
+        "I_parameters" : [
+          "httpHeaderFields"
+        ],
+        "J_returnType" : "-> [String: String]?"
+      }
+    ]
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 24, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sampleResponseClosure",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 27, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "method",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 30, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 33, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "httpHeaderFields",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 36, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 38, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "@escaping SampleResponseClosure",
+      "Moya.Method",
+      "Task",
+      "[String: String]?"
+    ],
+    "I_parameters" : [
+      "url",
+      "sampleResponseClosure",
+      "method",
+      "task",
+      "httpHeaderFields"
+    ]
+  },
+  {
+    "A_name" : "adding",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 52, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[String: String]"
+    ],
+    "I_parameters" : [
+      "newHTTPHeaderFields"
+    ],
+    "J_returnType" : "-> Endpoint"
+  },
+  {
+    "A_name" : "replacing",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 57, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Task"
+    ],
+    "I_parameters" : [
+      "task"
+    ],
+    "J_returnType" : "-> Endpoint"
+  },
+  {
+    "A_name" : "add",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 61, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "newHTTPHeaderFields",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 66, Column: 9",
+        "H_initialValue" : "self.httpHeaderFields ?? [:]"
+      }
+    ],
+    "I_parameterType" : [
+      "[String: String]?"
+    ],
+    "I_parameters" : [
+      "httpHeaderFields"
+    ],
+    "J_returnType" : "-> [String: String]?"
+  },
+  {
+    "A_name" : "newHTTPHeaderFields",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 66, Column: 9",
+    "H_initialValue" : "self.httpHeaderFields ?? [:]"
+  },
+  {
+    "A_name" : "Endpoint",
+    "B_kind" : "extension",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 75, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "urlRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 78, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Endpoint.swift - Line: 83, Column: 9",
+            "H_initialValue" : "URLRequest(url: requestURL)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> URLRequest"
+      }
+    ]
+  },
+  {
+    "A_name" : "urlRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 78, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 83, Column: 9",
+        "H_initialValue" : "URLRequest(url: requestURL)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> URLRequest"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 83, Column: 9",
+    "H_initialValue" : "URLRequest(url: requestURL)"
+  },
+  {
+    "A_name" : "parameterEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 100, Column: 13",
+    "H_initialValue" : "URLEncoding(destination: .queryString)"
+  },
+  {
+    "A_name" : "parameterEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 106, Column: 13",
+    "H_initialValue" : "URLEncoding(destination: .queryString)"
+  },
+  {
+    "A_name" : "bodyfulRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 112, Column: 13",
+    "H_initialValue" : "try request.encoded(parameters: bodyParameters, parameterEncoding: bodyParameterEncoding)"
+  },
+  {
+    "A_name" : "urlEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 113, Column: 13",
+    "H_initialValue" : "URLEncoding(destination: .queryString)"
+  },
+  {
+    "A_name" : "Endpoint",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Equatable",
+      "Hashable"
+    ],
+    "F_location" : "Endpoint.swift - Line: 121, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "hash",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 122, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "inout Hasher"
+        ],
+        "I_parameters" : [
+          "into"
+        ]
+      },
+      {
+        "A_name" : "==",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Endpoint.swift - Line: 141, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "areEndpointsEqualInAdditionalProperties",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Endpoint.swift - Line: 142, Column: 9",
+            "H_initialValue" : "{\n            switch (lhs.task, rhs.task) {\n            case (let .uploadFile(file1), let .uploadFile(file2)):\n                return file1 == file2\n            case (let .uploadMultipart(multipartData1), let .uploadMultipart(multipartData2)),\n                 (let .uploadCompositeMultipart(multipartData1, _), let .uploadCompositeMultipart(multipartData2, _)):\n                return multipartData1 == multipartData2\n            default:\n                return true\n            }\n        }()"
+          },
+          {
+            "A_name" : "lhsRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Endpoint.swift - Line: 153, Column: 9",
+            "H_initialValue" : "try? lhs.urlRequest()"
+          },
+          {
+            "A_name" : "rhsRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Endpoint.swift - Line: 154, Column: 9",
+            "H_initialValue" : "try? rhs.urlRequest()"
+          }
+        ],
+        "I_parameterType" : [
+          "Endpoint",
+          "Endpoint"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> Bool"
+      }
+    ]
+  },
+  {
+    "A_name" : "hash",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 122, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "inout Hasher"
+    ],
+    "I_parameters" : [
+      "into"
+    ]
+  },
+  {
+    "A_name" : "==",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Endpoint.swift - Line: 141, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "areEndpointsEqualInAdditionalProperties",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 142, Column: 9",
+        "H_initialValue" : "{\n            switch (lhs.task, rhs.task) {\n            case (let .uploadFile(file1), let .uploadFile(file2)):\n                return file1 == file2\n            case (let .uploadMultipart(multipartData1), let .uploadMultipart(multipartData2)),\n                 (let .uploadCompositeMultipart(multipartData1, _), let .uploadCompositeMultipart(multipartData2, _)):\n                return multipartData1 == multipartData2\n            default:\n                return true\n            }\n        }()"
+      },
+      {
+        "A_name" : "lhsRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 153, Column: 9",
+        "H_initialValue" : "try? lhs.urlRequest()"
+      },
+      {
+        "A_name" : "rhsRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Endpoint.swift - Line: 154, Column: 9",
+        "H_initialValue" : "try? rhs.urlRequest()"
+      }
+    ],
+    "I_parameterType" : [
+      "Endpoint",
+      "Endpoint"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "areEndpointsEqualInAdditionalProperties",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 142, Column: 9",
+    "H_initialValue" : "{\n            switch (lhs.task, rhs.task) {\n            case (let .uploadFile(file1), let .uploadFile(file2)):\n                return file1 == file2\n            case (let .uploadMultipart(multipartData1), let .uploadMultipart(multipartData2)),\n                 (let .uploadCompositeMultipart(multipartData1, _), let .uploadCompositeMultipart(multipartData2, _)):\n                return multipartData1 == multipartData2\n            default:\n                return true\n            }\n        }()"
+  },
+  {
+    "A_name" : "lhsRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 153, Column: 9",
+    "H_initialValue" : "try? lhs.urlRequest()"
+  },
+  {
+    "A_name" : "rhsRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Endpoint.swift - Line: 154, Column: 9",
+    "H_initialValue" : "try? rhs.urlRequest()"
+  }
+]

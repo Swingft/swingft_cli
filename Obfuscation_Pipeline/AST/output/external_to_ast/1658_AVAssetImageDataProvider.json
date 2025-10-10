@@ -1,0 +1,490 @@
+[
+  {
+    "A_name" : "AVAssetImageGenerator",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked @retroactive Sendable"
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 39, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "AVAssetImageGenerator",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "@unchecked Sendable"
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 41, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "AVAssetImageDataProvider",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ImageDataProvider"
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 45, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "AVAssetImageDataProviderError",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Error"
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 48, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "userCancelled",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AVAssetImageDataProvider.swift - Line: 50, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "invalidImage",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AVAssetImageDataProvider.swift - Line: 53, Column: 14",
+            "I_parameterType" : [
+              "CGImage?"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "assetImageGenerator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 57, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "time",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 60, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "internalKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 62, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cacheKey",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 70, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 78, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AVAssetImageGenerator",
+          "CMTime"
+        ],
+        "I_parameters" : [
+          "assetImageGenerator",
+          "time"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 90, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "asset",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AVAssetImageDataProvider.swift - Line: 91, Column: 9",
+            "H_initialValue" : "AVAsset(url: assetURL)"
+          },
+          {
+            "A_name" : "generator",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AVAssetImageDataProvider.swift - Line: 92, Column: 9",
+            "H_initialValue" : "AVAssetImageGenerator(asset: asset)"
+          }
+        ],
+        "I_parameterType" : [
+          "URL",
+          "CMTime"
+        ],
+        "I_parameters" : [
+          "assetURL",
+          "time"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 106, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "time",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "AVAssetImageDataProvider.swift - Line: 107, Column: 9",
+            "H_initialValue" : "CMTime(seconds: seconds, preferredTimescale: 600)"
+          }
+        ],
+        "I_parameterType" : [
+          "URL",
+          "TimeInterval"
+        ],
+        "I_parameters" : [
+          "assetURL",
+          "seconds"
+        ]
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 111, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@Sendable @escaping (Result<Data, any Error>) -> Void"
+        ],
+        "I_parameters" : [
+          "handler"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "AVAssetImageDataProviderError",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Error"
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 48, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "userCancelled",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 50, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "invalidImage",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 53, Column: 14",
+        "I_parameterType" : [
+          "CGImage?"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "assetImageGenerator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 57, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "time",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 60, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "internalKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 62, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cacheKey",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 70, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 78, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AVAssetImageGenerator",
+      "CMTime"
+    ],
+    "I_parameters" : [
+      "assetImageGenerator",
+      "time"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 90, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "asset",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 91, Column: 9",
+        "H_initialValue" : "AVAsset(url: assetURL)"
+      },
+      {
+        "A_name" : "generator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 92, Column: 9",
+        "H_initialValue" : "AVAssetImageGenerator(asset: asset)"
+      }
+    ],
+    "I_parameterType" : [
+      "URL",
+      "CMTime"
+    ],
+    "I_parameters" : [
+      "assetURL",
+      "time"
+    ]
+  },
+  {
+    "A_name" : "asset",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 91, Column: 9",
+    "H_initialValue" : "AVAsset(url: assetURL)"
+  },
+  {
+    "A_name" : "generator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 92, Column: 9",
+    "H_initialValue" : "AVAssetImageGenerator(asset: asset)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 106, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "time",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 107, Column: 9",
+        "H_initialValue" : "CMTime(seconds: seconds, preferredTimescale: 600)"
+      }
+    ],
+    "I_parameterType" : [
+      "URL",
+      "TimeInterval"
+    ],
+    "I_parameters" : [
+      "assetURL",
+      "seconds"
+    ]
+  },
+  {
+    "A_name" : "time",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 107, Column: 9",
+    "H_initialValue" : "CMTime(seconds: seconds, preferredTimescale: 600)"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 111, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@Sendable @escaping (Result<Data, any Error>) -> Void"
+    ],
+    "I_parameters" : [
+      "handler"
+    ]
+  },
+  {
+    "A_name" : "CGImage",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 134, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "jpegData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "AVAssetImageDataProvider.swift - Line: 135, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "jpegData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "AVAssetImageDataProvider.swift - Line: 135, Column: 5",
+    "H_initialValue" : ""
+  }
+]

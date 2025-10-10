@@ -1,0 +1,404 @@
+[
+  {
+    "A_name" : "FeedbackViewModel",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseViewModel"
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "diaryId",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 14, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "Input",
+        "B_kind" : "struct",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 18, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "viewDidLoad",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedbackViewModel.swift - Line: 19, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "Output",
+        "B_kind" : "struct",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 24, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fetchDiaryResult",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedbackViewModel.swift - Line: 25, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "fetchFeedbackResult",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedbackViewModel.swift - Line: 26, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "errorMessage",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FeedbackViewModel.swift - Line: 27, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "diaryDetailUseCase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 32, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "feedbackUseCase",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 33, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "diaryDetailSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 35, Column: 5",
+        "H_initialValue" : "PassthroughSubject<DiaryDetailEntity, Never>()"
+      },
+      {
+        "A_name" : "feedbackSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 36, Column: 5",
+        "H_initialValue" : "PassthroughSubject<[DiaryFeedbackEntity], Never>()"
+      },
+      {
+        "A_name" : "errorSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 37, Column: 5",
+        "H_initialValue" : "PassthroughSubject<String, Never>()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 39, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "DiaryDetailUseCase",
+          "FeedbackUseCase"
+        ],
+        "I_parameters" : [
+          "diaryId",
+          "diaryDetailUseCase",
+          "feedbackUseCase"
+        ]
+      },
+      {
+        "A_name" : "transform",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 46, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Input"
+        ],
+        "I_parameters" : [
+          "input"
+        ],
+        "J_returnType" : "-> Output"
+      }
+    ]
+  },
+  {
+    "A_name" : "diaryId",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 14, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Input",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 18, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 19, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 19, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "Output",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 24, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fetchDiaryResult",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 25, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "fetchFeedbackResult",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 26, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "errorMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FeedbackViewModel.swift - Line: 27, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "fetchDiaryResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 25, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "fetchFeedbackResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 26, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "errorMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 27, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "diaryDetailUseCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 32, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "feedbackUseCase",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 33, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "diaryDetailSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 35, Column: 5",
+    "H_initialValue" : "PassthroughSubject<DiaryDetailEntity, Never>()"
+  },
+  {
+    "A_name" : "feedbackSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 36, Column: 5",
+    "H_initialValue" : "PassthroughSubject<[DiaryFeedbackEntity], Never>()"
+  },
+  {
+    "A_name" : "errorSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 37, Column: 5",
+    "H_initialValue" : "PassthroughSubject<String, Never>()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 39, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "DiaryDetailUseCase",
+      "FeedbackUseCase"
+    ],
+    "I_parameters" : [
+      "diaryId",
+      "diaryDetailUseCase",
+      "feedbackUseCase"
+    ]
+  },
+  {
+    "A_name" : "transform",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 46, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Input"
+    ],
+    "I_parameters" : [
+      "input"
+    ],
+    "J_returnType" : "-> Output"
+  },
+  {
+    "A_name" : "feedbackData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FeedbackViewModel.swift - Line: 59, Column: 25",
+    "H_initialValue" : "entity"
+  }
+]

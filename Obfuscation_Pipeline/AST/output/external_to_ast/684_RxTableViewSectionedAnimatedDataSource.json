@@ -1,0 +1,177 @@
+[
+  {
+    "A_name" : "RxTableViewSectionedAnimatedDataSource",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "TableViewSectionedDataSource<Section>",
+      "RxTableViewDataSourceType"
+    ],
+    "F_location" : "RxTableViewSectionedAnimatedDataSource.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "animationConfiguration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxTableViewSectionedAnimatedDataSource.swift - Line: 23, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dataSet",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxTableViewSectionedAnimatedDataSource.swift - Line: 67, Column: 5",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxTableViewSectionedAnimatedDataSource.swift - Line: 69, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "Event<Element>"
+        ],
+        "I_parameters" : [
+          "_",
+          "observedEvent"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "animationConfiguration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxTableViewSectionedAnimatedDataSource.swift - Line: 23, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxTableViewSectionedAnimatedDataSource.swift - Line: 26, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationConfiguration",
+      "@escaping ConfigureCell",
+      "@escaping  TitleForHeaderInSection",
+      "@escaping TitleForFooterInSection",
+      "@escaping CanEditRowAtIndexPath",
+      "@escaping CanMoveRowAtIndexPath",
+      "@escaping SectionIndexTitles",
+      "@escaping SectionForSectionIndexTitle"
+    ],
+    "I_parameters" : [
+      "animationConfiguration",
+      "configureCell",
+      "titleForHeaderInSection",
+      "titleForFooterInSection",
+      "canEditRowAtIndexPath",
+      "canMoveRowAtIndexPath",
+      "sectionIndexTitles",
+      "sectionForSectionIndexTitle"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxTableViewSectionedAnimatedDataSource.swift - Line: 48, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AnimationConfiguration",
+      "@escaping ConfigureCell",
+      "@escaping  TitleForHeaderInSection",
+      "@escaping TitleForFooterInSection",
+      "@escaping CanEditRowAtIndexPath",
+      "@escaping CanMoveRowAtIndexPath"
+    ],
+    "I_parameters" : [
+      "animationConfiguration",
+      "configureCell",
+      "titleForHeaderInSection",
+      "titleForFooterInSection",
+      "canEditRowAtIndexPath",
+      "canMoveRowAtIndexPath"
+    ]
+  },
+  {
+    "A_name" : "dataSet",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxTableViewSectionedAnimatedDataSource.swift - Line: 67, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxTableViewSectionedAnimatedDataSource.swift - Line: 69, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "Event<Element>"
+    ],
+    "I_parameters" : [
+      "_",
+      "observedEvent"
+    ]
+  },
+  {
+    "A_name" : "oldSections",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxTableViewSectionedAnimatedDataSource.swift - Line: 87, Column: 21",
+    "H_initialValue" : "dataSource.sectionModels"
+  },
+  {
+    "A_name" : "differences",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxTableViewSectionedAnimatedDataSource.swift - Line: 89, Column: 25",
+    "H_initialValue" : "try Diff.differencesForSectionedView(initialSections: oldSections, finalSections: newSections)"
+  }
+]

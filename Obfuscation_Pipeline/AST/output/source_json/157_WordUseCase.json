@@ -1,0 +1,238 @@
+[
+  {
+    "A_name" : "WordBookUseCase",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "WordUseCase.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "execute",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordUseCase.swift - Line: 11, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SortOption"
+        ],
+        "I_parameters" : [
+          "sort"
+        ],
+        "J_returnType" : "-> AnyPublisher<[(date: String, items: [WordEntity])], Error>"
+      },
+      {
+        "A_name" : "getWordDetail",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordUseCase.swift - Line: 12, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "id"
+        ],
+        "J_returnType" : "-> AnyPublisher<WordEntity, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "execute",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordUseCase.swift - Line: 11, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SortOption"
+    ],
+    "I_parameters" : [
+      "sort"
+    ],
+    "J_returnType" : "-> AnyPublisher<[(date: String, items: [WordEntity])], Error>"
+  },
+  {
+    "A_name" : "getWordDetail",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordUseCase.swift - Line: 12, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "id"
+    ],
+    "J_returnType" : "-> AnyPublisher<WordEntity, Error>"
+  },
+  {
+    "A_name" : "DefaultWordBookUseCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "WordBookUseCase"
+    ],
+    "F_location" : "WordUseCase.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "repository",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordUseCase.swift - Line: 17, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordUseCase.swift - Line: 19, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "WordBookRepository"
+        ],
+        "I_parameters" : [
+          "repository"
+        ]
+      },
+      {
+        "A_name" : "execute",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordUseCase.swift - Line: 23, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SortOption"
+        ],
+        "I_parameters" : [
+          "sort"
+        ],
+        "J_returnType" : "-> AnyPublisher<[(date: String, items: [WordEntity])], Error>"
+      },
+      {
+        "A_name" : "getWordDetail",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordUseCase.swift - Line: 26, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "id"
+        ],
+        "J_returnType" : "-> AnyPublisher<WordEntity, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "repository",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordUseCase.swift - Line: 17, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordUseCase.swift - Line: 19, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "WordBookRepository"
+    ],
+    "I_parameters" : [
+      "repository"
+    ]
+  },
+  {
+    "A_name" : "execute",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordUseCase.swift - Line: 23, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SortOption"
+    ],
+    "I_parameters" : [
+      "sort"
+    ],
+    "J_returnType" : "-> AnyPublisher<[(date: String, items: [WordEntity])], Error>"
+  },
+  {
+    "A_name" : "getWordDetail",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordUseCase.swift - Line: 26, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "id"
+    ],
+    "J_returnType" : "-> AnyPublisher<WordEntity, Error>"
+  }
+]

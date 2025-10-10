@@ -17,9 +17,7 @@ def handle_generate_json(json_path: str) -> None:
             "build_target": "MySwiftProject"
         },
         "options": {
-            "Obfuscation_classNames": True,
-            "Obfuscation_methodNames": True,
-            "Obfuscation_variableNames": True,
+            "Obfuscation_identifiers": True,
             "Obfuscation_controlFlow": True,
             "Delete_debug_symbols": True,
             "Encryption_strings": True

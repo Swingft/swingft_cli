@@ -1,0 +1,213 @@
+[
+  {
+    "A_name" : "MoyaProvider",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ReactiveCompatible"
+    ],
+    "F_location" : "MoyaProvider+Rx.swift - Line: 7, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "Reactive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MoyaProvider+Rx.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Rx.swift - Line: 17, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Base.Target",
+          "DispatchQueue?"
+        ],
+        "I_parameters" : [
+          "_",
+          "callbackQueue"
+        ],
+        "J_returnType" : "-> Single<Response>"
+      },
+      {
+        "A_name" : "requestWithProgress",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Rx.swift - Line: 35, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "progressBlock",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Rx.swift - Line: 37, Column: 9",
+            "H_initialValue" : "AnyObserver<ProgressResponse>.onNext"
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Rx.swift - Line: 38, Column: 9",
+            "H_initialValue" : "Observable.create { [weak base] observer in\n            let cancellableToken = base?.request(token, callbackQueue: callbackQueue, progress: progressBlock(observer)) { result in\n                switch result {\n                case .success:\n                    observer.onCompleted()\n                case let .failure(error):\n                    observer.onError(error)\n                }\n            }\n\n            return Disposables.create {\n                cancellableToken?.cancel()\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "Base.Target",
+          "DispatchQueue?"
+        ],
+        "I_parameters" : [
+          "_",
+          "callbackQueue"
+        ],
+        "J_returnType" : "-> Observable<ProgressResponse>"
+      }
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Rx.swift - Line: 17, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Base.Target",
+      "DispatchQueue?"
+    ],
+    "I_parameters" : [
+      "_",
+      "callbackQueue"
+    ],
+    "J_returnType" : "-> Single<Response>"
+  },
+  {
+    "A_name" : "cancellableToken",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Rx.swift - Line: 19, Column: 13",
+    "H_initialValue" : "base?.request(token, callbackQueue: callbackQueue, progress: nil) { result in\n                switch result {\n                case let .success(response):\n                    single(.success(response))\n                case let .failure(error):\n                    single(.failure(error))\n                }\n            }"
+  },
+  {
+    "A_name" : "requestWithProgress",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Rx.swift - Line: 35, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "progressBlock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Rx.swift - Line: 37, Column: 9",
+        "H_initialValue" : "AnyObserver<ProgressResponse>.onNext"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Rx.swift - Line: 38, Column: 9",
+        "H_initialValue" : "Observable.create { [weak base] observer in\n            let cancellableToken = base?.request(token, callbackQueue: callbackQueue, progress: progressBlock(observer)) { result in\n                switch result {\n                case .success:\n                    observer.onCompleted()\n                case let .failure(error):\n                    observer.onError(error)\n                }\n            }\n\n            return Disposables.create {\n                cancellableToken?.cancel()\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "Base.Target",
+      "DispatchQueue?"
+    ],
+    "I_parameters" : [
+      "_",
+      "callbackQueue"
+    ],
+    "J_returnType" : "-> Observable<ProgressResponse>"
+  },
+  {
+    "A_name" : "progressBlock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Rx.swift - Line: 37, Column: 9",
+    "H_initialValue" : "AnyObserver<ProgressResponse>.onNext"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Rx.swift - Line: 38, Column: 9",
+    "H_initialValue" : "Observable.create { [weak base] observer in\n            let cancellableToken = base?.request(token, callbackQueue: callbackQueue, progress: progressBlock(observer)) { result in\n                switch result {\n                case .success:\n                    observer.onCompleted()\n                case let .failure(error):\n                    observer.onError(error)\n                }\n            }\n\n            return Disposables.create {\n                cancellableToken?.cancel()\n            }\n        }"
+  },
+  {
+    "A_name" : "cancellableToken",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Rx.swift - Line: 39, Column: 13",
+    "H_initialValue" : "base?.request(token, callbackQueue: callbackQueue, progress: progressBlock(observer)) { result in\n                switch result {\n                case .success:\n                    observer.onCompleted()\n                case let .failure(error):\n                    observer.onError(error)\n                }\n            }"
+  },
+  {
+    "A_name" : "progressObject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Rx.swift - Line: 55, Column: 13",
+    "H_initialValue" : "progress.progressObject ?? last.progressObject"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Rx.swift - Line: 56, Column: 13",
+    "H_initialValue" : "progress.response ?? last.response"
+  }
+]

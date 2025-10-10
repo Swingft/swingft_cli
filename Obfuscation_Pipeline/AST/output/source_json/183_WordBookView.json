@@ -1,0 +1,554 @@
+[
+  {
+    "A_name" : "WordBookView",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIView"
+    ],
+    "F_location" : "WordBookView.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "navigationContainer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookView.swift - Line: 15, Column: 5",
+        "H_initialValue" : "UIView()"
+      },
+      {
+        "A_name" : "refreshControl",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookView.swift - Line: 17, Column: 5",
+        "H_initialValue" : "UIRefreshControl()"
+      },
+      {
+        "A_name" : "titleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookView.swift - Line: 19, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"나의 단어장\"\n        label.textColor = .white\n        label.font = .suit(.head_b_18)\n        return label\n    }()"
+      },
+      {
+        "A_name" : "searchBar",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookView.swift - Line: 27, Column: 5",
+        "H_initialValue" : "{\n        let searchBar = UISearchBar()\n        searchBar.placeholder = \"단어나 표현을 검색해주세요\"\n        searchBar.searchBarStyle = .minimal\n        searchBar.searchTextField.backgroundColor = .white\n        searchBar.searchTextField.layer.cornerRadius = 8\n        searchBar.searchTextField.clipsToBounds = true\n        searchBar.setImage(UIImage(named: \"ic_search_20_ios\", in: .module, compatibleWith: nil), for: .search, state: .normal)\n        searchBar.setImage(UIImage(named: \"ic_close_20_ios\", in: .module, compatibleWith: nil), for: .clear, state: .normal)\n        searchBar.searchTextField.attributedText = .suit(.body_m_16, text: \"\")\n        searchBar.searchTextField.defaultTextAttributes[.font] = UIFont.suit(.body_m_16)\n        searchBar.updateHeight(height: 46)\n        searchBar.searchTextField.keyboardType = .asciiCapable\n        searchBar.searchTextField.autocorrectionType = .no\n        searchBar.searchTextField.autocapitalizationType = .none\n\n        let attributes: [NSAttributedString.Key: Any] = [\n            .foregroundColor: UIColor.gray400,\n            .font: UIFont.suit(.body_m_16)\n        ]\n        searchBar.searchTextField.attributedPlaceholder = NSAttributedString(\n            string: \"단어나 표현을 검색해주세요\",\n            attributes: attributes\n        )\n        return searchBar\n    }()"
+      },
+      {
+        "A_name" : "totalCountLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookView.swift - Line: 54, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"총 0개\"\n        label.textColor = .gray500\n        label.font = .suit(.body_m_14)\n        return label\n    }()"
+      },
+      {
+        "A_name" : "sortButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookView.swift - Line: 62, Column: 5",
+        "H_initialValue" : "{\n        let button = UIButton(type: .system)\n        let image = UIImage(named: \"ic_list_24_ios\", in: .module, compatibleWith: nil)?\n            .withRenderingMode(.alwaysTemplate)\n        button.setImage(image, for: .normal)\n        button.setTitle(\"최신순\", for: .normal)\n        button.tintColor = .gray500\n        button.setTitleColor(.gray500, for: .normal)\n        button.titleLabel?.font = .suit(.body_m_14)\n        button.contentHorizontalAlignment = .right\n        button.semanticContentAttribute = .forceLeftToRight\n        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 2)\n        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: -2)\n        return button\n    }()"
+      },
+      {
+        "A_name" : "statusHeaderView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "lazy",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "WordBookView.swift - Line: 78, Column: 5",
+        "H_initialValue" : "{\n        let container = UIView()\n        container.backgroundColor = .clear\n\n        let stack = UIStackView(arrangedSubviews: [totalCountLabel, sortButton])\n        stack.axis = .horizontal\n        stack.alignment = .center\n        stack.distribution = .equalSpacing\n\n        container.addSubview(stack)\n        stack.snp.makeConstraints {\n            $0.top.bottom.equalToSuperview().inset(12)\n            $0.leading.trailing.equalToSuperview().inset(16)\n        }\n\n        return container\n    }()"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookView.swift - Line: 96, Column: 5",
+        "H_initialValue" : "{\n        let table = UITableView(frame: .zero, style: .grouped)\n        table.separatorStyle = .none\n        table.backgroundColor = .gray100\n        table.sectionHeaderHeight = UITableView.automaticDimension\n        table.estimatedSectionHeaderHeight = 44\n        table.register(WordBookCell.self, forCellReuseIdentifier: WordBookCell.identifier)\n        table.register(WordBookHeaderView.self, forHeaderFooterViewReuseIdentifier: WordBookHeaderView.identifier)\n        return table\n    }()"
+      },
+      {
+        "A_name" : "emptyView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookView.swift - Line: 107, Column: 5",
+        "H_initialValue" : "WordBookEmptyView()"
+      },
+      {
+        "A_name" : "sortOptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookView.swift - Line: 111, Column: 5",
+        "H_initialValue" : "[\"최신순\", \"A-Z순\"]"
+      },
+      {
+        "A_name" : "layoutSubviews",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "WordBookView.swift - Line: 115, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "WordBookView.swift - Line: 120, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "WordBookView.swift - Line: 137, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "updateHeaderView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookView.swift - Line: 166, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int",
+          "Int"
+        ],
+        "I_parameters" : [
+          "totalCount",
+          "sortIndex"
+        ]
+      },
+      {
+        "A_name" : "showHeaderView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookView.swift - Line: 175, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "updateHeaderViewLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookView.swift - Line: 184, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headerSize",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "WordBookView.swift - Line: 185, Column: 9",
+            "H_initialValue" : "statusHeaderView.systemLayoutSizeFitting(CGSize(\n            width: bounds.width,\n            height: UIView.layoutFittingCompressedSize.height\n        ))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "navigationContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 15, Column: 5",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "refreshControl",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 17, Column: 5",
+    "H_initialValue" : "UIRefreshControl()"
+  },
+  {
+    "A_name" : "titleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 19, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"나의 단어장\"\n        label.textColor = .white\n        label.font = .suit(.head_b_18)\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 20, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "searchBar",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 27, Column: 5",
+    "H_initialValue" : "{\n        let searchBar = UISearchBar()\n        searchBar.placeholder = \"단어나 표현을 검색해주세요\"\n        searchBar.searchBarStyle = .minimal\n        searchBar.searchTextField.backgroundColor = .white\n        searchBar.searchTextField.layer.cornerRadius = 8\n        searchBar.searchTextField.clipsToBounds = true\n        searchBar.setImage(UIImage(named: \"ic_search_20_ios\", in: .module, compatibleWith: nil), for: .search, state: .normal)\n        searchBar.setImage(UIImage(named: \"ic_close_20_ios\", in: .module, compatibleWith: nil), for: .clear, state: .normal)\n        searchBar.searchTextField.attributedText = .suit(.body_m_16, text: \"\")\n        searchBar.searchTextField.defaultTextAttributes[.font] = UIFont.suit(.body_m_16)\n        searchBar.updateHeight(height: 46)\n        searchBar.searchTextField.keyboardType = .asciiCapable\n        searchBar.searchTextField.autocorrectionType = .no\n        searchBar.searchTextField.autocapitalizationType = .none\n\n        let attributes: [NSAttributedString.Key: Any] = [\n            .foregroundColor: UIColor.gray400,\n            .font: UIFont.suit(.body_m_16)\n        ]\n        searchBar.searchTextField.attributedPlaceholder = NSAttributedString(\n            string: \"단어나 표현을 검색해주세요\",\n            attributes: attributes\n        )\n        return searchBar\n    }()"
+  },
+  {
+    "A_name" : "searchBar",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 28, Column: 9",
+    "H_initialValue" : "UISearchBar()"
+  },
+  {
+    "A_name" : "attributes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 43, Column: 9",
+    "H_initialValue" : "[\n            .foregroundColor: UIColor.gray400,\n            .font: UIFont.suit(.body_m_16)\n        ]"
+  },
+  {
+    "A_name" : "totalCountLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 54, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"총 0개\"\n        label.textColor = .gray500\n        label.font = .suit(.body_m_14)\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 55, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "sortButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 62, Column: 5",
+    "H_initialValue" : "{\n        let button = UIButton(type: .system)\n        let image = UIImage(named: \"ic_list_24_ios\", in: .module, compatibleWith: nil)?\n            .withRenderingMode(.alwaysTemplate)\n        button.setImage(image, for: .normal)\n        button.setTitle(\"최신순\", for: .normal)\n        button.tintColor = .gray500\n        button.setTitleColor(.gray500, for: .normal)\n        button.titleLabel?.font = .suit(.body_m_14)\n        button.contentHorizontalAlignment = .right\n        button.semanticContentAttribute = .forceLeftToRight\n        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -2, bottom: 0, right: 2)\n        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: -2)\n        return button\n    }()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 63, Column: 9",
+    "H_initialValue" : "UIButton(type: .system)"
+  },
+  {
+    "A_name" : "image",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 64, Column: 9",
+    "H_initialValue" : "UIImage(named: \"ic_list_24_ios\", in: .module, compatibleWith: nil)?\n            .withRenderingMode(.alwaysTemplate)"
+  },
+  {
+    "A_name" : "statusHeaderView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "lazy",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "WordBookView.swift - Line: 78, Column: 5",
+    "H_initialValue" : "{\n        let container = UIView()\n        container.backgroundColor = .clear\n\n        let stack = UIStackView(arrangedSubviews: [totalCountLabel, sortButton])\n        stack.axis = .horizontal\n        stack.alignment = .center\n        stack.distribution = .equalSpacing\n\n        container.addSubview(stack)\n        stack.snp.makeConstraints {\n            $0.top.bottom.equalToSuperview().inset(12)\n            $0.leading.trailing.equalToSuperview().inset(16)\n        }\n\n        return container\n    }()"
+  },
+  {
+    "A_name" : "container",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 79, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 82, Column: 9",
+    "H_initialValue" : "UIStackView(arrangedSubviews: [totalCountLabel, sortButton])"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 96, Column: 5",
+    "H_initialValue" : "{\n        let table = UITableView(frame: .zero, style: .grouped)\n        table.separatorStyle = .none\n        table.backgroundColor = .gray100\n        table.sectionHeaderHeight = UITableView.automaticDimension\n        table.estimatedSectionHeaderHeight = 44\n        table.register(WordBookCell.self, forCellReuseIdentifier: WordBookCell.identifier)\n        table.register(WordBookHeaderView.self, forHeaderFooterViewReuseIdentifier: WordBookHeaderView.identifier)\n        return table\n    }()"
+  },
+  {
+    "A_name" : "table",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 97, Column: 9",
+    "H_initialValue" : "UITableView(frame: .zero, style: .grouped)"
+  },
+  {
+    "A_name" : "emptyView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 107, Column: 5",
+    "H_initialValue" : "WordBookEmptyView()"
+  },
+  {
+    "A_name" : "sortOptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 111, Column: 5",
+    "H_initialValue" : "[\"최신순\", \"A-Z순\"]"
+  },
+  {
+    "A_name" : "layoutSubviews",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "WordBookView.swift - Line: 115, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "WordBookView.swift - Line: 120, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "WordBookView.swift - Line: 137, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "updateHeaderView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 166, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int",
+      "Int"
+    ],
+    "I_parameters" : [
+      "totalCount",
+      "sortIndex"
+    ]
+  },
+  {
+    "A_name" : "showHeaderView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 175, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "updateHeaderViewLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 184, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headerSize",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "WordBookView.swift - Line: 185, Column: 9",
+        "H_initialValue" : "statusHeaderView.systemLayoutSizeFitting(CGSize(\n            width: bounds.width,\n            height: UIView.layoutFittingCompressedSize.height\n        ))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "headerSize",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "WordBookView.swift - Line: 185, Column: 9",
+    "H_initialValue" : "statusHeaderView.systemLayoutSizeFitting(CGSize(\n            width: bounds.width,\n            height: UIView.layoutFittingCompressedSize.height\n        ))"
+  }
+]

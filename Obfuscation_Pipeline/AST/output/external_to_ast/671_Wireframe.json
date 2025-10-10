@@ -1,0 +1,367 @@
+[
+  {
+    "A_name" : "RetryResult",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Wireframe.swift - Line: 17, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "retry",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Wireframe.swift - Line: 18, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Wireframe.swift - Line: 19, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Wireframe",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Wireframe.swift - Line: 22, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "open",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Wireframe.swift - Line: 23, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "url"
+        ]
+      },
+      {
+        "A_name" : "promptFor",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Wireframe.swift - Line: 24, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "Action",
+          "[Action]"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancelAction",
+          "actions"
+        ],
+        "J_returnType" : "-> Observable<Action>"
+      }
+    ]
+  },
+  {
+    "A_name" : "open",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Wireframe.swift - Line: 23, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL"
+    ],
+    "I_parameters" : [
+      "url"
+    ]
+  },
+  {
+    "A_name" : "promptFor",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Wireframe.swift - Line: 24, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Action",
+      "[Action]"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancelAction",
+      "actions"
+    ],
+    "J_returnType" : "-> Observable<Action>"
+  },
+  {
+    "A_name" : "DefaultWireframe",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Wireframe"
+    ],
+    "F_location" : "Wireframe.swift - Line: 28, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "shared",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Wireframe.swift - Line: 29, Column: 5",
+        "H_initialValue" : "DefaultWireframe()"
+      },
+      {
+        "A_name" : "open",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Wireframe.swift - Line: 31, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URL"
+        ],
+        "I_parameters" : [
+          "url"
+        ]
+      },
+      {
+        "A_name" : "presentAlert",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Wireframe.swift - Line: 46, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "promptFor",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Wireframe.swift - Line: 55, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "Action",
+          "[Action]"
+        ],
+        "I_parameters" : [
+          "_",
+          "cancelAction",
+          "actions"
+        ],
+        "J_returnType" : "-> Observable<Action>"
+      }
+    ]
+  },
+  {
+    "A_name" : "shared",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Wireframe.swift - Line: 29, Column: 5",
+    "H_initialValue" : "DefaultWireframe()"
+  },
+  {
+    "A_name" : "open",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Wireframe.swift - Line: 31, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URL"
+    ],
+    "I_parameters" : [
+      "url"
+    ]
+  },
+  {
+    "A_name" : "rootViewController",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Wireframe.swift - Line: 40, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> UIViewController"
+  },
+  {
+    "A_name" : "presentAlert",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Wireframe.swift - Line: 46, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "alertView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Wireframe.swift - Line: 48, Column: 13",
+    "H_initialValue" : "UIAlertController(title: \"RxExample\", message: message, preferredStyle: .alert)"
+  },
+  {
+    "A_name" : "promptFor",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Wireframe.swift - Line: 55, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "Action",
+      "[Action]"
+    ],
+    "I_parameters" : [
+      "_",
+      "cancelAction",
+      "actions"
+    ],
+    "J_returnType" : "-> Observable<Action>"
+  },
+  {
+    "A_name" : "alertView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Wireframe.swift - Line: 58, Column: 13",
+    "H_initialValue" : "UIAlertController(title: \"RxExample\", message: message, preferredStyle: .alert)"
+  },
+  {
+    "A_name" : "RetryResult",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomStringConvertible"
+    ],
+    "F_location" : "Wireframe.swift - Line: 82, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "description",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Wireframe.swift - Line: 83, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "description",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Wireframe.swift - Line: 83, Column: 5",
+    "H_initialValue" : ""
+  }
+]

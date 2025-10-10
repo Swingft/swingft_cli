@@ -1,0 +1,550 @@
+[
+  {
+    "A_name" : "PriorityQueue",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "hasHigherPriority",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 10, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isEqual",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 11, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "elements",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 13, Column: 5",
+        "H_initialValue" : "[Element]()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 15, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping (Element, Element) -> Bool",
+          "@escaping (Element, Element) -> Bool"
+        ],
+        "I_parameters" : [
+          "hasHigherPriority",
+          "isEqual"
+        ]
+      },
+      {
+        "A_name" : "enqueue",
+        "B_kind" : "function",
+        "C_accessLevel" : "mutating",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 20, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "peek",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 25, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Element?"
+      },
+      {
+        "A_name" : "isEmpty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 29, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dequeue",
+        "B_kind" : "function",
+        "C_accessLevel" : "mutating",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 33, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Element?"
+      },
+      {
+        "A_name" : "remove",
+        "B_kind" : "function",
+        "C_accessLevel" : "mutating",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 43, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Element"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "removeAt",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 52, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "removingLast",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PriorityQueue.swift - Line: 53, Column: 9",
+            "H_initialValue" : "index == elements.count - 1"
+          }
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "bubbleToHigherPriority",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 66, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "unbalancedIndex",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PriorityQueue.swift - Line: 70, Column: 9",
+            "H_initialValue" : "initialUnbalancedIndex"
+          }
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "bubbleToLowerPriority",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 80, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "unbalancedIndex",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PriorityQueue.swift - Line: 84, Column: 9",
+            "H_initialValue" : "initialUnbalancedIndex"
+          }
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "hasHigherPriority",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 10, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isEqual",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 11, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "elements",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 13, Column: 5",
+    "H_initialValue" : "[Element]()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 15, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping (Element, Element) -> Bool",
+      "@escaping (Element, Element) -> Bool"
+    ],
+    "I_parameters" : [
+      "hasHigherPriority",
+      "isEqual"
+    ]
+  },
+  {
+    "A_name" : "enqueue",
+    "B_kind" : "function",
+    "C_accessLevel" : "mutating",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 20, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "peek",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 25, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Element?"
+  },
+  {
+    "A_name" : "isEmpty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 29, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dequeue",
+    "B_kind" : "function",
+    "C_accessLevel" : "mutating",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 33, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Element?"
+  },
+  {
+    "A_name" : "remove",
+    "B_kind" : "function",
+    "C_accessLevel" : "mutating",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 43, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Element"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "removeAt",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 52, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "removingLast",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 53, Column: 9",
+        "H_initialValue" : "index == elements.count - 1"
+      }
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "removingLast",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 53, Column: 9",
+    "H_initialValue" : "index == elements.count - 1"
+  },
+  {
+    "A_name" : "bubbleToHigherPriority",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 66, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "unbalancedIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 70, Column: 9",
+        "H_initialValue" : "initialUnbalancedIndex"
+      }
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "unbalancedIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 70, Column: 9",
+    "H_initialValue" : "initialUnbalancedIndex"
+  },
+  {
+    "A_name" : "parentIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 73, Column: 13",
+    "H_initialValue" : "(unbalancedIndex - 1) \/ 2"
+  },
+  {
+    "A_name" : "bubbleToLowerPriority",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 80, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "unbalancedIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 84, Column: 9",
+        "H_initialValue" : "initialUnbalancedIndex"
+      }
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "unbalancedIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 84, Column: 9",
+    "H_initialValue" : "initialUnbalancedIndex"
+  },
+  {
+    "A_name" : "leftChildIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 86, Column: 13",
+    "H_initialValue" : "unbalancedIndex * 2 + 1"
+  },
+  {
+    "A_name" : "rightChildIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 87, Column: 13",
+    "H_initialValue" : "unbalancedIndex * 2 + 2"
+  },
+  {
+    "A_name" : "highestPriorityIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 89, Column: 13",
+    "H_initialValue" : "unbalancedIndex"
+  },
+  {
+    "A_name" : "PriorityQueue",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomDebugStringConvertible"
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 107, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "debugDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PriorityQueue.swift - Line: 108, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "debugDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PriorityQueue.swift - Line: 108, Column: 5",
+    "H_initialValue" : ""
+  }
+]

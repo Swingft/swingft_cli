@@ -1,0 +1,558 @@
+[
+  {
+    "A_name" : "raiseException",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 16, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSExceptionName?",
+      "String?",
+      "NSDictionary?",
+      "((NSException) -> Void)?"
+    ],
+    "I_parameters" : [
+      "named",
+      "reason",
+      "userInfo",
+      "closure"
+    ],
+    "J_returnType" : "-> Predicate<Out>"
+  },
+  {
+    "A_name" : "raiseException",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 34, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String?",
+      "String?",
+      "NSDictionary?",
+      "((NSException) -> Void)?"
+    ],
+    "I_parameters" : [
+      "named",
+      "reason",
+      "userInfo",
+      "closure"
+    ],
+    "J_returnType" : "-> Predicate<Out>"
+  },
+  {
+    "A_name" : "exception",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 41, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "capture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 42, Column: 9",
+    "H_initialValue" : "NMBExceptionCapture(handler: ({ e in\n            exception = e\n        }), finally: nil)"
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 54, Column: 9",
+    "H_initialValue" : "messageForException(\n            exception: exception,\n            named: named,\n            reason: reason,\n            userInfo: userInfo,\n            closure: closure\n        )"
+  },
+  {
+    "A_name" : "matches",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 62, Column: 9",
+    "H_initialValue" : "exceptionMatchesNonNilFieldsOrClosure(\n            exception,\n            named: named,\n            reason: reason,\n            userInfo: userInfo,\n            closure: closure\n        )"
+  },
+  {
+    "A_name" : "messageForException",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 73, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "rawMessage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RaisesException.swift - Line: 80, Column: 5",
+        "H_initialValue" : "\"raise exception\""
+      },
+      {
+        "A_name" : "actual",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RaisesException.swift - Line: 98, Column: 5",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "NSException?",
+      "String?",
+      "String?",
+      "NSDictionary?",
+      "((NSException) -> Void)?"
+    ],
+    "I_parameters" : [
+      "exception",
+      "named",
+      "reason",
+      "userInfo",
+      "closure"
+    ],
+    "J_returnType" : "-> ExpectationMessage"
+  },
+  {
+    "A_name" : "rawMessage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 80, Column: 5",
+    "H_initialValue" : "\"raise exception\""
+  },
+  {
+    "A_name" : "actual",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 98, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "exceptionMatchesNonNilFieldsOrClosure",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 109, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "matches",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RaisesException.swift - Line: 115, Column: 9",
+        "H_initialValue" : "false"
+      }
+    ],
+    "I_parameterType" : [
+      "NSException?",
+      "String?",
+      "String?",
+      "NSDictionary?",
+      "((NSException) -> Void)?"
+    ],
+    "I_parameters" : [
+      "_",
+      "named",
+      "reason",
+      "userInfo",
+      "closure"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "matches",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 115, Column: 9",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "assertions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 131, Column: 17",
+    "H_initialValue" : "gatherFailingExpectations {\n                    closure(exception)\n                }"
+  },
+  {
+    "A_name" : "messages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 134, Column: 17",
+    "H_initialValue" : "assertions.map { $0.message }"
+  },
+  {
+    "A_name" : "NMBObjCRaiseExceptionPredicate",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "NMBPredicate"
+    ],
+    "F_location" : "RaisesException.swift - Line: 144, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "_name",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RaisesException.swift - Line: 145, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_reason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RaisesException.swift - Line: 146, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_userInfo",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RaisesException.swift - Line: 147, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_block",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RaisesException.swift - Line: 148, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "fileprivate",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RaisesException.swift - Line: 150, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "predicate",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RaisesException.swift - Line: 156, Column: 9",
+            "H_initialValue" : "raiseException(\n            named: name,\n            reason: reason,\n            userInfo: userInfo,\n            closure: block\n        )"
+          },
+          {
+            "A_name" : "predicateBlock",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RaisesException.swift - Line: 162, Column: 9",
+            "H_initialValue" : "{ actualExpression in\n            return try predicate.satisfies(actualExpression).toObjectiveC()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "String?",
+          "String?",
+          "NSDictionary?",
+          "((NSException) -> Void)?"
+        ],
+        "I_parameters" : [
+          "name",
+          "reason",
+          "userInfo",
+          "block"
+        ]
+      },
+      {
+        "A_name" : "named",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "RaisesException.swift - Line: 168, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "reason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "RaisesException.swift - Line: 180, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "userInfo",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "RaisesException.swift - Line: 192, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "satisfyingBlock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "RaisesException.swift - Line: 204, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "_name",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 145, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_reason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 146, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_userInfo",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 147, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_block",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 148, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "fileprivate",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 150, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "predicate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RaisesException.swift - Line: 156, Column: 9",
+        "H_initialValue" : "raiseException(\n            named: name,\n            reason: reason,\n            userInfo: userInfo,\n            closure: block\n        )"
+      },
+      {
+        "A_name" : "predicateBlock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RaisesException.swift - Line: 162, Column: 9",
+        "H_initialValue" : "{ actualExpression in\n            return try predicate.satisfies(actualExpression).toObjectiveC()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "String?",
+      "String?",
+      "NSDictionary?",
+      "((NSException) -> Void)?"
+    ],
+    "I_parameters" : [
+      "name",
+      "reason",
+      "userInfo",
+      "block"
+    ]
+  },
+  {
+    "A_name" : "predicate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 156, Column: 9",
+    "H_initialValue" : "raiseException(\n            named: name,\n            reason: reason,\n            userInfo: userInfo,\n            closure: block\n        )"
+  },
+  {
+    "A_name" : "predicateBlock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 162, Column: 9",
+    "H_initialValue" : "{ actualExpression in\n            return try predicate.satisfies(actualExpression).toObjectiveC()\n        }"
+  },
+  {
+    "A_name" : "named",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "RaisesException.swift - Line: 168, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "reason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "RaisesException.swift - Line: 180, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "userInfo",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "RaisesException.swift - Line: 192, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "satisfyingBlock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "RaisesException.swift - Line: 204, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "NMBPredicate",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RaisesException.swift - Line: 217, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "raiseExceptionMatcher",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "class"
+        ],
+        "F_location" : "RaisesException.swift - Line: 218, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> NMBObjCRaiseExceptionPredicate"
+      }
+    ]
+  },
+  {
+    "A_name" : "raiseExceptionMatcher",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "class"
+    ],
+    "F_location" : "RaisesException.swift - Line: 218, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> NMBObjCRaiseExceptionPredicate"
+  }
+]

@@ -1,0 +1,1891 @@
+[
+  {
+    "A_name" : "ObservableSkipTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 13, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "ObservableSkipTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testSkip_Complete_After",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 17, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 18, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 20, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .completed(690)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 43, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.skip(20)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSkip_Complete_Some",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 57, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 58, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 60, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .completed(690)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 83, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.skip(17)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSkip_Complete_Before",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 96, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 97, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 99, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .completed(690)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 122, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.skip(10)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSkip_Complete_Zero",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 142, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 143, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 145, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .completed(690)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 168, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.skip(0)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSkip_Error_After",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 198, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 199, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 201, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .error(690, testError)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 224, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.skip(20)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSkip_Error_Same",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 237, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 238, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 240, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .error(690, testError)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 263, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.skip(17)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSkip_Error_Before",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 276, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 277, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 279, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .error(690, testError)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 302, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.skip(3)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSkip_Dispose_Before",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 329, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 330, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 332, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 354, Column: 9",
+            "H_initialValue" : "scheduler.start(disposed: 250) {\n            xs.skip(3)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSkip_Dispose_After",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 366, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 367, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 369, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 391, Column: 9",
+            "H_initialValue" : "scheduler.start(disposed: 400) {\n            xs.skip(3)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testSkip_Complete_After",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 17, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 18, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 20, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .completed(690)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 43, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.skip(20)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 18, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 20, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .completed(690)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 43, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.skip(20)\n        }"
+  },
+  {
+    "A_name" : "testSkip_Complete_Some",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 57, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 58, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 60, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .completed(690)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 83, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.skip(17)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 58, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 60, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .completed(690)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 83, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.skip(17)\n        }"
+  },
+  {
+    "A_name" : "testSkip_Complete_Before",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 96, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 97, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 99, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .completed(690)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 122, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.skip(10)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 97, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 99, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .completed(690)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 122, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.skip(10)\n        }"
+  },
+  {
+    "A_name" : "testSkip_Complete_Zero",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 142, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 143, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 145, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .completed(690)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 168, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.skip(0)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 143, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 145, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .completed(690)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 168, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.skip(0)\n        }"
+  },
+  {
+    "A_name" : "testSkip_Error_After",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 198, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 199, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 201, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .error(690, testError)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 224, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.skip(20)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 199, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 201, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .error(690, testError)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 224, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.skip(20)\n        }"
+  },
+  {
+    "A_name" : "testSkip_Error_Same",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 237, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 238, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 240, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .error(690, testError)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 263, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.skip(17)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 238, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 240, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .error(690, testError)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 263, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.skip(17)\n        }"
+  },
+  {
+    "A_name" : "testSkip_Error_Before",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 276, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 277, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 279, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .error(690, testError)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 302, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.skip(3)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 277, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 279, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            .error(690, testError)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 302, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.skip(3)\n        }"
+  },
+  {
+    "A_name" : "testSkip_Dispose_Before",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 329, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 330, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 332, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 354, Column: 9",
+        "H_initialValue" : "scheduler.start(disposed: 250) {\n            xs.skip(3)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 330, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 332, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 354, Column: 9",
+    "H_initialValue" : "scheduler.start(disposed: 250) {\n            xs.skip(3)\n        }"
+  },
+  {
+    "A_name" : "testSkip_Dispose_After",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 366, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 367, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 369, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 391, Column: 9",
+        "H_initialValue" : "scheduler.start(disposed: 400) {\n            xs.skip(3)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 367, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 369, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(70, 6),\n            .next(150, 4),\n            .next(210, 9),\n            .next(230, 13),\n            .next(270, 7),\n            .next(280, 1),\n            .next(300, -1),\n            .next(310, 3),\n            .next(340, 8),\n            .next(370, 11),\n            .next(410, 15),\n            .next(415, 16),\n            .next(460, 72),\n            .next(510, 76),\n            .next(560, 32),\n            .next(570, -100),\n            .next(580, -3),\n            .next(590, 5),\n            .next(630, 10),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 391, Column: 9",
+    "H_initialValue" : "scheduler.start(disposed: 400) {\n            xs.skip(3)\n        }"
+  },
+  {
+    "A_name" : "testSkipReleasesResourcesOnComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 409, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testSkipReleasesResourcesOnError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 413, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "ObservableSkipTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 420, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testSkip_Zero",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 421, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 422, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 424, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, 1),\n            .next(220, 2),\n            .completed(230)\n        ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 430, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(0), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSkip_Some",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 445, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 446, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 448, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, 1),\n            .next(220, 2),\n            .completed(230)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 454, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(15), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSkip_Late",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 468, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 469, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 471, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, 1),\n            .next(220, 2),\n            .completed(230)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 477, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(50), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSkip_Error",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 490, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 491, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 493, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 497, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(50), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testSkip_Never",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 510, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 511, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 513, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+SkipTests.swift - Line: 516, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(50), scheduler: scheduler)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testSkip_Zero",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 421, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 422, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 424, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, 1),\n            .next(220, 2),\n            .completed(230)\n        ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 430, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(0), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 422, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 424, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, 1),\n            .next(220, 2),\n            .completed(230)\n        ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 430, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(0), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "testSkip_Some",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 445, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 446, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 448, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, 1),\n            .next(220, 2),\n            .completed(230)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 454, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(15), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 446, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 448, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, 1),\n            .next(220, 2),\n            .completed(230)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 454, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(15), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "testSkip_Late",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 468, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 469, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 471, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, 1),\n            .next(220, 2),\n            .completed(230)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 477, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(50), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 469, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 471, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, 1),\n            .next(220, 2),\n            .completed(230)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 477, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(50), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "testSkip_Error",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 490, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 491, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 493, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 497, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(50), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 491, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 493, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .error(210, testError)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 497, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(50), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "testSkip_Never",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 510, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 511, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 513, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 516, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(50), scheduler: scheduler)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 511, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 513, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 516, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.skip(.seconds(50), scheduler: scheduler)\n        }"
+  },
+  {
+    "A_name" : "testSkipTimeReleasesResourcesOnComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 529, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 530, Column: 13",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 530, Column: 13",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "testSkipTimeReleasesResourcesOnError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 535, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+SkipTests.swift - Line: 536, Column: 13",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+SkipTests.swift - Line: 536, Column: 13",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  }
+]

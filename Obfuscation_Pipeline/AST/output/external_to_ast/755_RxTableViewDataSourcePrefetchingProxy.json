@@ -1,0 +1,354 @@
+[
+  {
+    "A_name" : "UITableView",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "HasPrefetchDataSource"
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 14, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "tableViewPrefetchDataSourceNotSet",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 19, Column: 1",
+    "H_initialValue" : "TableViewPrefetchDataSourceNotSet()"
+  },
+  {
+    "A_name" : "TableViewPrefetchDataSourceNotSet",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "available",
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "NSObject",
+      "UITableViewDataSourcePrefetching"
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 22, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 27, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "[IndexPath]"
+        ],
+        "I_parameters" : [
+          "_",
+          "prefetchRowsAt"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 27, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "[IndexPath]"
+    ],
+    "I_parameters" : [
+      "_",
+      "prefetchRowsAt"
+    ]
+  },
+  {
+    "A_name" : "RxTableViewDataSourcePrefetchingProxy",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "DelegateProxy<UITableView, UITableViewDataSourcePrefetching>",
+      "DelegateProxyType"
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 31, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "tableView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "weak"
+        ],
+        "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 37, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 40, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ParentObject"
+        ],
+        "I_parameters" : [
+          "tableView"
+        ]
+      },
+      {
+        "A_name" : "registerKnownImplementations",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 46, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "_prefetchRowsPublishSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 50, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "prefetchRowsPublishSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 53, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_requiredMethodsPrefetchDataSource",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "weak"
+        ],
+        "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 64, Column: 5",
+        "H_initialValue" : "tableViewPrefetchDataSourceNotSet"
+      },
+      {
+        "A_name" : "setForwardToDelegate",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 67, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableViewDataSourcePrefetching?",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_",
+          "retainDelegate"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 37, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 40, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ParentObject"
+    ],
+    "I_parameters" : [
+      "tableView"
+    ]
+  },
+  {
+    "A_name" : "registerKnownImplementations",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 46, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "_prefetchRowsPublishSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 50, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "prefetchRowsPublishSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 53, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "subject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 58, Column: 9",
+    "H_initialValue" : "PublishSubject<[IndexPath]>()"
+  },
+  {
+    "A_name" : "_requiredMethodsPrefetchDataSource",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 64, Column: 5",
+    "H_initialValue" : "tableViewPrefetchDataSourceNotSet"
+  },
+  {
+    "A_name" : "setForwardToDelegate",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 67, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableViewDataSourcePrefetching?",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_",
+      "retainDelegate"
+    ]
+  },
+  {
+    "A_name" : "RxTableViewDataSourcePrefetchingProxy",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UITableViewDataSourcePrefetching"
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 80, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 83, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "[IndexPath]"
+        ],
+        "I_parameters" : [
+          "_",
+          "prefetchRowsAt"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RxTableViewDataSourcePrefetchingProxy.swift - Line: 83, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "[IndexPath]"
+    ],
+    "I_parameters" : [
+      "_",
+      "prefetchRowsAt"
+    ]
+  }
+]

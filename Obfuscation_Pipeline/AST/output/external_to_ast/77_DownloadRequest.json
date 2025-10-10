@@ -1,0 +1,1647 @@
+[
+  {
+    "A_name" : "DownloadRequest",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Request",
+      "@unchecked Sendable"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 28, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Options",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "OptionSet",
+          "Sendable"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 31, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "createIntermediateDirectories",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "DownloadRequest.swift - Line: 33, Column: 9",
+            "H_initialValue" : "Options(rawValue: 1 << 0)"
+          },
+          {
+            "A_name" : "removePreviousFile",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+              "static"
+            ],
+            "F_location" : "DownloadRequest.swift - Line: 35, Column: 9",
+            "H_initialValue" : "Options(rawValue: 1 << 1)"
+          },
+          {
+            "A_name" : "rawValue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DownloadRequest.swift - Line: 37, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DownloadRequest.swift - Line: 39, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "Int"
+            ],
+            "I_parameters" : [
+              "rawValue"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "suggestedDownloadDestination",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "class"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 65, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FileManager.SearchPathDirectory",
+          "FileManager.SearchPathDomainMask",
+          "Options"
+        ],
+        "I_parameters" : [
+          "for",
+          "in",
+          "options"
+        ],
+        "J_returnType" : "-> Destination"
+      },
+      {
+        "A_name" : "defaultDestination",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 80, Column: 5",
+        "H_initialValue" : "{ url, _ in\n        (defaultDestinationURL(url), [])\n    }"
+      },
+      {
+        "A_name" : "defaultDestinationURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 86, Column: 5",
+        "H_initialValue" : "{ url in\n        let filename = \"Alamofire_\\(url.lastPathComponent)\"\n        let destination = url.deletingLastPathComponent().appendingPathComponent(filename)\n\n        return destination\n    }"
+      },
+      {
+        "A_name" : "Downloadable",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 96, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DownloadRequest.swift - Line: 98, Column: 14",
+            "I_parameterType" : [
+              "any URLRequestConvertible"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "resumeData",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DownloadRequest.swift - Line: 100, Column: 14",
+            "I_parameterType" : [
+              "Data"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "DownloadRequestMutableState",
+        "B_kind" : "struct",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 106, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "resumeData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DownloadRequest.swift - Line: 108, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DownloadRequest.swift - Line: 110, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "mutableDownloadState",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 114, Column: 5",
+        "H_initialValue" : "Protected(DownloadRequestMutableState())"
+      },
+      {
+        "A_name" : "resumeData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 120, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 129, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "downloadable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 134, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "destination",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 136, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 150, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UUID",
+          "Downloadable",
+          "DispatchQueue",
+          "DispatchQueue",
+          "(any EventMonitor)?",
+          "(any RequestInterceptor)?",
+          "any RequestDelegate",
+          "@escaping Destination"
+        ],
+        "I_parameters" : [
+          "id",
+          "downloadable",
+          "underlyingQueue",
+          "serializationQueue",
+          "eventMonitor",
+          "interceptor",
+          "delegate",
+          "destination"
+        ]
+      },
+      {
+        "A_name" : "reset",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 169, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "didFinishDownloading",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 183, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask",
+          "Result<URL, AFError>"
+        ],
+        "I_parameters" : [
+          "using",
+          "with"
+        ]
+      },
+      {
+        "A_name" : "updateDownloadProgress",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 197, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int64",
+          "Int64"
+        ],
+        "I_parameters" : [
+          "bytesWritten",
+          "totalBytesExpectedToWrite"
+        ]
+      },
+      {
+        "A_name" : "task",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 204, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "URLSession"
+        ],
+        "I_parameters" : [
+          "for",
+          "using"
+        ],
+        "J_returnType" : "-> URLSessionTask"
+      },
+      {
+        "A_name" : "task",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 215, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data",
+          "URLSession"
+        ],
+        "I_parameters" : [
+          "forResumeData",
+          "using"
+        ],
+        "J_returnType" : "-> URLSessionTask"
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "discardableResult",
+          "override"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 225, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 237, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "producingResumeData"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 253, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping @Sendable (_ data: Data?) -> Void"
+        ],
+        "I_parameters" : [
+          "byProducingResumeData"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 265, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(@Sendable (_ resumeData: Data?) -> Void)?"
+        ],
+        "I_parameters" : [
+          "optionallyProducingResumeData"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "validate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 304, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "validator",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DownloadRequest.swift - Line: 306, Column: 9",
+            "H_initialValue" : "{ [unowned self] in\n            guard error == nil, let response else { return }\n\n            let result = validation(request, response, fileURL)\n\n            if case let .failure(error) = result {\n                self.error = error.asAFError(or: .responseValidationFailed(reason: .customValidationFailed(error: error)))\n            }\n\n            eventMonitor?.request(self,\n                                  didValidateRequest: request,\n                                  response: response,\n                                  fileURL: fileURL,\n                                  withResult: result)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "@escaping Validation"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 336, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping @Sendable (AFDownloadResponse<URL?>) -> Void"
+        ],
+        "I_parameters" : [
+          "queue",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "_response",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 364, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "Serializer",
+          "@escaping @Sendable (AFDownloadResponse<Serializer.SerializedObject>) -> Void"
+        ],
+        "I_parameters" : [
+          "queue",
+          "responseSerializer",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 445, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "Serializer",
+          "@escaping @Sendable (AFDownloadResponse<Serializer.SerializedObject>) -> Void"
+        ],
+        "I_parameters" : [
+          "queue",
+          "responseSerializer",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 464, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "Serializer",
+          "@escaping @Sendable (AFDownloadResponse<Serializer.SerializedObject>) -> Void"
+        ],
+        "I_parameters" : [
+          "queue",
+          "responseSerializer",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "responseURL",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 479, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping @Sendable (AFDownloadResponse<URL>) -> Void"
+        ],
+        "I_parameters" : [
+          "queue",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "responseData",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 499, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "any DataPreprocessor",
+          "Set<Int>",
+          "Set<HTTPMethod>",
+          "@escaping @Sendable (AFDownloadResponse<Data>) -> Void"
+        ],
+        "I_parameters" : [
+          "queue",
+          "dataPreprocessor",
+          "emptyResponseCodes",
+          "emptyRequestMethods",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "responseString",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 528, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "any DataPreprocessor",
+          "String.Encoding?",
+          "Set<Int>",
+          "Set<HTTPMethod>",
+          "@escaping @Sendable (AFDownloadResponse<String>) -> Void"
+        ],
+        "I_parameters" : [
+          "queue",
+          "dataPreprocessor",
+          "encoding",
+          "emptyResponseCodes",
+          "emptyRequestMethods",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "responseJSON",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available",
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 559, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "any DataPreprocessor",
+          "Set<Int>",
+          "Set<HTTPMethod>",
+          "JSONSerialization.ReadingOptions",
+          "@escaping @Sendable (AFDownloadResponse<Any>) -> Void"
+        ],
+        "I_parameters" : [
+          "queue",
+          "dataPreprocessor",
+          "emptyResponseCodes",
+          "emptyRequestMethods",
+          "options",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "responseDecodable",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 591, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T.Type",
+          "DispatchQueue",
+          "any DataPreprocessor",
+          "any DataDecoder",
+          "Set<Int>",
+          "Set<HTTPMethod>",
+          "@escaping @Sendable (AFDownloadResponse<T>) -> Void"
+        ],
+        "I_parameters" : [
+          "of",
+          "queue",
+          "dataPreprocessor",
+          "decoder",
+          "emptyResponseCodes",
+          "emptyRequestMethods",
+          "completionHandler"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "Options",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "OptionSet",
+      "Sendable"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 31, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "createIntermediateDirectories",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 33, Column: 9",
+        "H_initialValue" : "Options(rawValue: 1 << 0)"
+      },
+      {
+        "A_name" : "removePreviousFile",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 35, Column: 9",
+        "H_initialValue" : "Options(rawValue: 1 << 1)"
+      },
+      {
+        "A_name" : "rawValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 37, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 39, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "rawValue"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "createIntermediateDirectories",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 33, Column: 9",
+    "H_initialValue" : "Options(rawValue: 1 << 0)"
+  },
+  {
+    "A_name" : "removePreviousFile",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 35, Column: 9",
+    "H_initialValue" : "Options(rawValue: 1 << 1)"
+  },
+  {
+    "A_name" : "rawValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 37, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 39, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "rawValue"
+    ]
+  },
+  {
+    "A_name" : "suggestedDownloadDestination",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "class"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 65, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FileManager.SearchPathDirectory",
+      "FileManager.SearchPathDomainMask",
+      "Options"
+    ],
+    "I_parameters" : [
+      "for",
+      "in",
+      "options"
+    ],
+    "J_returnType" : "-> Destination"
+  },
+  {
+    "A_name" : "directoryURLs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 69, Column: 13",
+    "H_initialValue" : "FileManager.default.urls(for: directory, in: domain)"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 70, Column: 13",
+    "H_initialValue" : "directoryURLs.first?.appendingPathComponent(response.suggestedFilename!) ?? temporaryURL"
+  },
+  {
+    "A_name" : "defaultDestination",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 80, Column: 5",
+    "H_initialValue" : "{ url, _ in\n        (defaultDestinationURL(url), [])\n    }"
+  },
+  {
+    "A_name" : "defaultDestinationURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 86, Column: 5",
+    "H_initialValue" : "{ url in\n        let filename = \"Alamofire_\\(url.lastPathComponent)\"\n        let destination = url.deletingLastPathComponent().appendingPathComponent(filename)\n\n        return destination\n    }"
+  },
+  {
+    "A_name" : "filename",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 87, Column: 9",
+    "H_initialValue" : "\"Alamofire_\\(url.lastPathComponent)\""
+  },
+  {
+    "A_name" : "destination",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 88, Column: 9",
+    "H_initialValue" : "url.deletingLastPathComponent().appendingPathComponent(filename)"
+  },
+  {
+    "A_name" : "Downloadable",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 96, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 98, Column: 14",
+        "I_parameterType" : [
+          "any URLRequestConvertible"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "resumeData",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 100, Column: 14",
+        "I_parameterType" : [
+          "Data"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "DownloadRequestMutableState",
+    "B_kind" : "struct",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 106, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "resumeData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 108, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 110, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "resumeData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 108, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 110, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "mutableDownloadState",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 114, Column: 5",
+    "H_initialValue" : "Protected(DownloadRequestMutableState())"
+  },
+  {
+    "A_name" : "resumeData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 120, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 129, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "downloadable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 134, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "destination",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 136, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 150, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UUID",
+      "Downloadable",
+      "DispatchQueue",
+      "DispatchQueue",
+      "(any EventMonitor)?",
+      "(any RequestInterceptor)?",
+      "any RequestDelegate",
+      "@escaping Destination"
+    ],
+    "I_parameters" : [
+      "id",
+      "downloadable",
+      "underlyingQueue",
+      "serializationQueue",
+      "eventMonitor",
+      "interceptor",
+      "delegate",
+      "destination"
+    ]
+  },
+  {
+    "A_name" : "reset",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 169, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "didFinishDownloading",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 183, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask",
+      "Result<URL, AFError>"
+    ],
+    "I_parameters" : [
+      "using",
+      "with"
+    ]
+  },
+  {
+    "A_name" : "updateDownloadProgress",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 197, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int64",
+      "Int64"
+    ],
+    "I_parameters" : [
+      "bytesWritten",
+      "totalBytesExpectedToWrite"
+    ]
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 204, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "URLSession"
+    ],
+    "I_parameters" : [
+      "for",
+      "using"
+    ],
+    "J_returnType" : "-> URLSessionTask"
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 215, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data",
+      "URLSession"
+    ],
+    "I_parameters" : [
+      "forResumeData",
+      "using"
+    ],
+    "J_returnType" : "-> URLSessionTask"
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "discardableResult",
+      "override"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 225, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 237, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "producingResumeData"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 253, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping @Sendable (_ data: Data?) -> Void"
+    ],
+    "I_parameters" : [
+      "byProducingResumeData"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 265, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(@Sendable (_ resumeData: Data?) -> Void)?"
+    ],
+    "I_parameters" : [
+      "optionallyProducingResumeData"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "validate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 304, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "validator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DownloadRequest.swift - Line: 306, Column: 9",
+        "H_initialValue" : "{ [unowned self] in\n            guard error == nil, let response else { return }\n\n            let result = validation(request, response, fileURL)\n\n            if case let .failure(error) = result {\n                self.error = error.asAFError(or: .responseValidationFailed(reason: .customValidationFailed(error: error)))\n            }\n\n            eventMonitor?.request(self,\n                                  didValidateRequest: request,\n                                  response: response,\n                                  fileURL: fileURL,\n                                  withResult: result)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping Validation"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "validator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 306, Column: 9",
+    "H_initialValue" : "{ [unowned self] in\n            guard error == nil, let response else { return }\n\n            let result = validation(request, response, fileURL)\n\n            if case let .failure(error) = result {\n                self.error = error.asAFError(or: .responseValidationFailed(reason: .customValidationFailed(error: error)))\n            }\n\n            eventMonitor?.request(self,\n                                  didValidateRequest: request,\n                                  response: response,\n                                  fileURL: fileURL,\n                                  withResult: result)\n        }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 309, Column: 13",
+    "H_initialValue" : "validation(request, response, fileURL)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 336, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping @Sendable (AFDownloadResponse<URL?>) -> Void"
+    ],
+    "I_parameters" : [
+      "queue",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 343, Column: 13",
+    "H_initialValue" : "AFResult<URL?>(value: self.fileURL, error: self.error)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 347, Column: 17",
+    "H_initialValue" : "DownloadResponse(request: self.request,\n                                                response: self.response,\n                                                fileURL: self.fileURL,\n                                                resumeData: self.resumeData,\n                                                metrics: self.metrics,\n                                                serializationDuration: 0,\n                                                result: result)"
+  },
+  {
+    "A_name" : "_response",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 364, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "Serializer",
+      "@escaping @Sendable (AFDownloadResponse<Serializer.SerializedObject>) -> Void"
+    ],
+    "I_parameters" : [
+      "queue",
+      "responseSerializer",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "start",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 370, Column: 13",
+    "H_initialValue" : "ProcessInfo.processInfo.systemUptime"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 371, Column: 13",
+    "H_initialValue" : "Result {\n                try responseSerializer.serializeDownload(request: self.request,\n                                                         response: self.response,\n                                                         fileURL: self.fileURL,\n                                                         error: self.error)\n            }.mapError { error in\n                error.asAFError(or: .responseSerializationFailed(reason: .customSerializationFailed(error: error)))\n            }"
+  },
+  {
+    "A_name" : "end",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 379, Column: 13",
+    "H_initialValue" : "ProcessInfo.processInfo.systemUptime"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 383, Column: 17",
+    "H_initialValue" : "DownloadResponse(request: self.request,\n                                                response: self.response,\n                                                fileURL: self.fileURL,\n                                                resumeData: self.resumeData,\n                                                metrics: self.metrics,\n                                                serializationDuration: end - start,\n                                                result: result)"
+  },
+  {
+    "A_name" : "didComplete",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 399, Column: 21",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 412, Column: 25",
+    "H_initialValue" : ".failure(retryError.asAFError(orFailWith: \"Received retryError was not already AFError\"))"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 414, Column: 25",
+    "H_initialValue" : "DownloadResponse(request: self.request,\n                                                        response: self.response,\n                                                        fileURL: self.fileURL,\n                                                        resumeData: self.resumeData,\n                                                        metrics: self.metrics,\n                                                        serializationDuration: end - start,\n                                                        result: result)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 445, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "Serializer",
+      "@escaping @Sendable (AFDownloadResponse<Serializer.SerializedObject>) -> Void"
+    ],
+    "I_parameters" : [
+      "queue",
+      "responseSerializer",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 464, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "Serializer",
+      "@escaping @Sendable (AFDownloadResponse<Serializer.SerializedObject>) -> Void"
+    ],
+    "I_parameters" : [
+      "queue",
+      "responseSerializer",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "responseURL",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 479, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping @Sendable (AFDownloadResponse<URL>) -> Void"
+    ],
+    "I_parameters" : [
+      "queue",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "responseData",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 499, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "any DataPreprocessor",
+      "Set<Int>",
+      "Set<HTTPMethod>",
+      "@escaping @Sendable (AFDownloadResponse<Data>) -> Void"
+    ],
+    "I_parameters" : [
+      "queue",
+      "dataPreprocessor",
+      "emptyResponseCodes",
+      "emptyRequestMethods",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "responseString",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 528, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "any DataPreprocessor",
+      "String.Encoding?",
+      "Set<Int>",
+      "Set<HTTPMethod>",
+      "@escaping @Sendable (AFDownloadResponse<String>) -> Void"
+    ],
+    "I_parameters" : [
+      "queue",
+      "dataPreprocessor",
+      "encoding",
+      "emptyResponseCodes",
+      "emptyRequestMethods",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "responseJSON",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available",
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 559, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "any DataPreprocessor",
+      "Set<Int>",
+      "Set<HTTPMethod>",
+      "JSONSerialization.ReadingOptions",
+      "@escaping @Sendable (AFDownloadResponse<Any>) -> Void"
+    ],
+    "I_parameters" : [
+      "queue",
+      "dataPreprocessor",
+      "emptyResponseCodes",
+      "emptyRequestMethods",
+      "options",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "responseDecodable",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "DownloadRequest.swift - Line: 591, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T.Type",
+      "DispatchQueue",
+      "any DataPreprocessor",
+      "any DataDecoder",
+      "Set<Int>",
+      "Set<HTTPMethod>",
+      "@escaping @Sendable (AFDownloadResponse<T>) -> Void"
+    ],
+    "I_parameters" : [
+      "of",
+      "queue",
+      "dataPreprocessor",
+      "decoder",
+      "emptyResponseCodes",
+      "emptyRequestMethods",
+      "completionHandler"
+    ],
+    "J_returnType" : "-> Self"
+  }
+]

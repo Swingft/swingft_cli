@@ -1,0 +1,1070 @@
+[
+  {
+    "A_name" : "SharedDiaryViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIViewController<SharedDiaryViewModel>"
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isMine",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 18, Column: 5",
+        "H_initialValue" : "true"
+      },
+      {
+        "A_name" : "diaryId",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 19, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "userId",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 20, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "viewDidLoadSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 22, Column: 5",
+        "H_initialValue" : "PassthroughSubject<Void, Never>()"
+      },
+      {
+        "A_name" : "dialog",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 26, Column: 5",
+        "H_initialValue" : "Dialog()"
+      },
+      {
+        "A_name" : "modal",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 27, Column: 5",
+        "H_initialValue" : "{\n        let modal = Modal()\n        modal.isHidden = true\n        return modal\n    }()"
+      },
+      {
+        "A_name" : "sharedDiaryView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 33, Column: 5",
+        "H_initialValue" : "SharedDiaryView()"
+      },
+      {
+        "A_name" : "diaryDetailViewController",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 34, Column: 5",
+        "H_initialValue" : "{\n        let vc = diContainer.makeDiaryDetailViewController(diaryId: diaryId)\n        vc.showsActionButton = false\n        return vc\n    }()"
+      },
+      {
+        "A_name" : "bottomSafeAreaBackgroundView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 39, Column: 5",
+        "H_initialValue" : "UIView()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 43, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SharedDiaryViewModel",
+          "ViewControllerFactory",
+          "Int"
+        ],
+        "I_parameters" : [
+          "viewModel",
+          "diContainer",
+          "diaryId"
+        ]
+      },
+      {
+        "A_name" : "viewWillAppear",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 50, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 55, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 95, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 107, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "likeToggleSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 134, Column: 5",
+        "H_initialValue" : "PassthroughSubject<(Int, Bool), Never>()"
+      },
+      {
+        "A_name" : "publishTappedSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 135, Column: 5",
+        "H_initialValue" : "PassthroughSubject<Int, Never>()"
+      },
+      {
+        "A_name" : "unpublishTappedSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 136, Column: 5",
+        "H_initialValue" : "PassthroughSubject<Int, Never>()"
+      },
+      {
+        "A_name" : "blockUserSubject",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 137, Column: 5",
+        "H_initialValue" : "PassthroughSubject<Int64, Never>()"
+      },
+      {
+        "A_name" : "bind",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 139, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "input",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SharedDiaryViewController.swift - Line: 142, Column: 9",
+            "H_initialValue" : "makeInput()"
+          },
+          {
+            "A_name" : "output",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SharedDiaryViewController.swift - Line: 143, Column: 9",
+            "H_initialValue" : "viewModel.transform(input: input)"
+          }
+        ],
+        "I_parameterType" : [
+          "SharedDiaryViewModel"
+        ],
+        "I_parameters" : [
+          "viewModel"
+        ]
+      },
+      {
+        "A_name" : "makeInput",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 148, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> SharedDiaryViewModel.Input"
+      },
+      {
+        "A_name" : "bindOutput",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 158, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SharedDiaryViewModel.Output"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "navigationType",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 200, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> NavigationType?"
+      },
+      {
+        "A_name" : "backButtonTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "override"
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 204, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "menuButtonTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 208, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "showModal",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 214, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "items",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SharedDiaryViewController.swift - Line: 215, Column: 13",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "showBlockModal",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 248, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "blockModal",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SharedDiaryViewController.swift - Line: 249, Column: 9",
+            "H_initialValue" : "BlockModal()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "showPrivateDialog",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 258, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "showErrorDialog",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 285, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "message"
+        ]
+      },
+      {
+        "A_name" : "showReportDialog",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 299, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "isMine",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 18, Column: 5",
+    "H_initialValue" : "true"
+  },
+  {
+    "A_name" : "diaryId",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 19, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "userId",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 20, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "viewDidLoadSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 22, Column: 5",
+    "H_initialValue" : "PassthroughSubject<Void, Never>()"
+  },
+  {
+    "A_name" : "dialog",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 26, Column: 5",
+    "H_initialValue" : "Dialog()"
+  },
+  {
+    "A_name" : "modal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 27, Column: 5",
+    "H_initialValue" : "{\n        let modal = Modal()\n        modal.isHidden = true\n        return modal\n    }()"
+  },
+  {
+    "A_name" : "modal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 28, Column: 9",
+    "H_initialValue" : "Modal()"
+  },
+  {
+    "A_name" : "sharedDiaryView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 33, Column: 5",
+    "H_initialValue" : "SharedDiaryView()"
+  },
+  {
+    "A_name" : "diaryDetailViewController",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 34, Column: 5",
+    "H_initialValue" : "{\n        let vc = diContainer.makeDiaryDetailViewController(diaryId: diaryId)\n        vc.showsActionButton = false\n        return vc\n    }()"
+  },
+  {
+    "A_name" : "vc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 35, Column: 9",
+    "H_initialValue" : "diContainer.makeDiaryDetailViewController(diaryId: diaryId)"
+  },
+  {
+    "A_name" : "bottomSafeAreaBackgroundView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 39, Column: 5",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 43, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SharedDiaryViewModel",
+      "ViewControllerFactory",
+      "Int"
+    ],
+    "I_parameters" : [
+      "viewModel",
+      "diContainer",
+      "diaryId"
+    ]
+  },
+  {
+    "A_name" : "viewWillAppear",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 50, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 55, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "vc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 64, Column: 17",
+    "H_initialValue" : "diContainer.makeMyFeedProfileViewController()"
+  },
+  {
+    "A_name" : "vc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 67, Column: 17",
+    "H_initialValue" : "diContainer.makeUserFeedProfileViewController(userId: userId ?? 0)"
+  },
+  {
+    "A_name" : "toast",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 76, Column: 17",
+    "H_initialValue" : "ToastMessage()"
+  },
+  {
+    "A_name" : "myVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 82, Column: 21",
+    "H_initialValue" : "self.diContainer.makeMyFeedProfileViewController()"
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 95, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 107, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "likeToggleSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 134, Column: 5",
+    "H_initialValue" : "PassthroughSubject<(Int, Bool), Never>()"
+  },
+  {
+    "A_name" : "publishTappedSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 135, Column: 5",
+    "H_initialValue" : "PassthroughSubject<Int, Never>()"
+  },
+  {
+    "A_name" : "unpublishTappedSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 136, Column: 5",
+    "H_initialValue" : "PassthroughSubject<Int, Never>()"
+  },
+  {
+    "A_name" : "blockUserSubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 137, Column: 5",
+    "H_initialValue" : "PassthroughSubject<Int64, Never>()"
+  },
+  {
+    "A_name" : "bind",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 139, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "input",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 142, Column: 9",
+        "H_initialValue" : "makeInput()"
+      },
+      {
+        "A_name" : "output",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 143, Column: 9",
+        "H_initialValue" : "viewModel.transform(input: input)"
+      }
+    ],
+    "I_parameterType" : [
+      "SharedDiaryViewModel"
+    ],
+    "I_parameters" : [
+      "viewModel"
+    ]
+  },
+  {
+    "A_name" : "input",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 142, Column: 9",
+    "H_initialValue" : "makeInput()"
+  },
+  {
+    "A_name" : "output",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 143, Column: 9",
+    "H_initialValue" : "viewModel.transform(input: input)"
+  },
+  {
+    "A_name" : "makeInput",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 148, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> SharedDiaryViewModel.Input"
+  },
+  {
+    "A_name" : "bindOutput",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 158, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SharedDiaryViewModel.Output"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "vc",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 189, Column: 17",
+    "H_initialValue" : "diContainer.makeUserFeedProfileViewController(userId: userId)"
+  },
+  {
+    "A_name" : "navigationType",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 200, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> NavigationType?"
+  },
+  {
+    "A_name" : "backButtonTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "override"
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 204, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "menuButtonTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 208, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "showModal",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 214, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "items",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 215, Column: 13",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "items",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 215, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "showBlockModal",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 248, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "blockModal",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SharedDiaryViewController.swift - Line: 249, Column: 9",
+        "H_initialValue" : "BlockModal()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "blockModal",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 249, Column: 9",
+    "H_initialValue" : "BlockModal()"
+  },
+  {
+    "A_name" : "showPrivateDialog",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 258, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "toast",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 275, Column: 25",
+    "H_initialValue" : "ToastMessage()"
+  },
+  {
+    "A_name" : "showErrorDialog",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 285, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "message"
+    ]
+  },
+  {
+    "A_name" : "showReportDialog",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 299, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "safariVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SharedDiaryViewController.swift - Line: 313, Column: 17",
+    "H_initialValue" : "SFSafariViewController(url: url)"
+  }
+]

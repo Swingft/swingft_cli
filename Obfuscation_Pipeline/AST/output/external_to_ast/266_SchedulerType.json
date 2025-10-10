@@ -1,0 +1,298 @@
+[
+  {
+    "A_name" : "SchedulerType",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ImmediateSchedulerType"
+    ],
+    "F_location" : "SchedulerType.swift - Line: 19, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "now",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerType.swift - Line: 22, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "scheduleRelative",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerType.swift - Line: 34, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StateType",
+          "RxTimeInterval",
+          "@escaping (StateType) -> Disposable"
+        ],
+        "I_parameters" : [
+          "_",
+          "dueTime",
+          "action"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "schedulePeriodic",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerType.swift - Line: 45, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StateType",
+          "RxTimeInterval",
+          "RxTimeInterval",
+          "@escaping (StateType) -> StateType"
+        ],
+        "I_parameters" : [
+          "_",
+          "startAfter",
+          "period",
+          "action"
+        ],
+        "J_returnType" : "-> Disposable"
+      }
+    ]
+  },
+  {
+    "A_name" : "now",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerType.swift - Line: 22, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "scheduleRelative",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerType.swift - Line: 34, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StateType",
+      "RxTimeInterval",
+      "@escaping (StateType) -> Disposable"
+    ],
+    "I_parameters" : [
+      "_",
+      "dueTime",
+      "action"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "schedulePeriodic",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerType.swift - Line: 45, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StateType",
+      "RxTimeInterval",
+      "RxTimeInterval",
+      "@escaping (StateType) -> StateType"
+    ],
+    "I_parameters" : [
+      "_",
+      "startAfter",
+      "period",
+      "action"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "SchedulerType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SchedulerType.swift - Line: 48, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "schedulePeriodic",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerType.swift - Line: 58, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "schedule",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SchedulerType.swift - Line: 59, Column: 9",
+            "H_initialValue" : "SchedulePeriodicRecursive(scheduler: self, startAfter: startAfter, period: period, action: action, state: state)"
+          }
+        ],
+        "I_parameterType" : [
+          "StateType",
+          "RxTimeInterval",
+          "RxTimeInterval",
+          "@escaping (StateType) -> StateType"
+        ],
+        "I_parameters" : [
+          "_",
+          "startAfter",
+          "period",
+          "action"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "scheduleRecursive",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerType.swift - Line: 64, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SchedulerType.swift - Line: 65, Column: 9",
+            "H_initialValue" : "AnyRecursiveScheduler(scheduler: self, action: action)"
+          }
+        ],
+        "I_parameterType" : [
+          "State",
+          "RxTimeInterval",
+          "@escaping (State, AnyRecursiveScheduler<State>) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "dueTime",
+          "action"
+        ],
+        "J_returnType" : "-> Disposable"
+      }
+    ]
+  },
+  {
+    "A_name" : "schedulePeriodic",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerType.swift - Line: 58, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "schedule",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerType.swift - Line: 59, Column: 9",
+        "H_initialValue" : "SchedulePeriodicRecursive(scheduler: self, startAfter: startAfter, period: period, action: action, state: state)"
+      }
+    ],
+    "I_parameterType" : [
+      "StateType",
+      "RxTimeInterval",
+      "RxTimeInterval",
+      "@escaping (StateType) -> StateType"
+    ],
+    "I_parameters" : [
+      "_",
+      "startAfter",
+      "period",
+      "action"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "schedule",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerType.swift - Line: 59, Column: 9",
+    "H_initialValue" : "SchedulePeriodicRecursive(scheduler: self, startAfter: startAfter, period: period, action: action, state: state)"
+  },
+  {
+    "A_name" : "scheduleRecursive",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerType.swift - Line: 64, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerType.swift - Line: 65, Column: 9",
+        "H_initialValue" : "AnyRecursiveScheduler(scheduler: self, action: action)"
+      }
+    ],
+    "I_parameterType" : [
+      "State",
+      "RxTimeInterval",
+      "@escaping (State, AnyRecursiveScheduler<State>) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "dueTime",
+      "action"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerType.swift - Line: 65, Column: 9",
+    "H_initialValue" : "AnyRecursiveScheduler(scheduler: self, action: action)"
+  }
+]

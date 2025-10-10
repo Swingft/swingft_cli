@@ -1,0 +1,201 @@
+[
+  {
+    "A_name" : "SharingScheduler",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "SchedulerType+SharedSequence.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "make",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SchedulerType+SharedSequence.swift - Line: 13, Column: 5",
+        "H_initialValue" : "{ MainScheduler() }"
+      },
+      {
+        "A_name" : "mock",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SchedulerType+SharedSequence.swift - Line: 21, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "SchedulerType",
+          "() throws -> Void"
+        ],
+        "I_parameters" : [
+          "scheduler",
+          "action"
+        ]
+      },
+      {
+        "A_name" : "mock",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "SchedulerType+SharedSequence.swift - Line: 31, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "originalMake",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SchedulerType+SharedSequence.swift - Line: 32, Column: 9",
+            "H_initialValue" : "make"
+          }
+        ],
+        "I_parameterType" : [
+          "@escaping () -> SchedulerType",
+          "() throws -> Void"
+        ],
+        "I_parameters" : [
+          "makeScheduler",
+          "action"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "make",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SchedulerType+SharedSequence.swift - Line: 13, Column: 5",
+    "H_initialValue" : "{ MainScheduler() }"
+  },
+  {
+    "A_name" : "mock",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SchedulerType+SharedSequence.swift - Line: 21, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "SchedulerType",
+      "() throws -> Void"
+    ],
+    "I_parameters" : [
+      "scheduler",
+      "action"
+    ]
+  },
+  {
+    "A_name" : "mock",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "SchedulerType+SharedSequence.swift - Line: 31, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "originalMake",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerType+SharedSequence.swift - Line: 32, Column: 9",
+        "H_initialValue" : "make"
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping () -> SchedulerType",
+      "() throws -> Void"
+    ],
+    "I_parameters" : [
+      "makeScheduler",
+      "action"
+    ]
+  },
+  {
+    "A_name" : "originalMake",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerType+SharedSequence.swift - Line: 32, Column: 9",
+    "H_initialValue" : "make"
+  },
+  {
+    "A_name" : "_forceCompilerToStopDoingInsaneOptimizationsThatBreakCode",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerType+SharedSequence.swift - Line: 52, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "a",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SchedulerType+SharedSequence.swift - Line: 53, Column: 5",
+        "H_initialValue" : "1"
+      }
+    ],
+    "I_parameterType" : [
+      "() -> SchedulerType"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "a",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerType+SharedSequence.swift - Line: 53, Column: 5",
+    "H_initialValue" : "1"
+  },
+  {
+    "A_name" : "b",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerType+SharedSequence.swift - Line: 55, Column: 5",
+    "H_initialValue" : "314 + Int32(Glibc.random() & 1)"
+  },
+  {
+    "A_name" : "b",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SchedulerType+SharedSequence.swift - Line: 57, Column: 5",
+    "H_initialValue" : "314 + Int32(arc4random() & 1)"
+  }
+]

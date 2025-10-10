@@ -1,0 +1,1396 @@
+[
+  {
+    "A_name" : "SelectedInfo",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UIView"
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "topicData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 13, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "currentDiaryId",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 17, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "currentIsPublished",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 18, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "overlayView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 19, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onDiaryPreviewTapped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 23, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onMoreButtonTapped",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 24, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "onMenuAction",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 25, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cardTopicView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 29, Column: 5",
+        "H_initialValue" : "CardTopicView()"
+      },
+      {
+        "A_name" : "cardPreview",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 30, Column: 5",
+        "H_initialValue" : "CardPreview()"
+      },
+      {
+        "A_name" : "emptyDiaryView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 31, Column: 5",
+        "H_initialValue" : "EmptyDiaryView()"
+      },
+      {
+        "A_name" : "diaryLockView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 32, Column: 5",
+        "H_initialValue" : "DiaryLockView()"
+      },
+      {
+        "A_name" : "selectedDayLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 34, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.head_b_16)\n        label.textColor = .black\n        return label\n    }()"
+      },
+      {
+        "A_name" : "dot",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 41, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .gray300\n        view.layer.cornerRadius = 1\n        return view\n    }()"
+      },
+      {
+        "A_name" : "notWrittenLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 48, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.caption_m_12)\n        label.textColor = .gray300\n        return label\n    }()"
+      },
+      {
+        "A_name" : "selectedDayStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 55, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.spacing = 4\n        stack.alignment = .center\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "iconView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 63, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"ic_time_16_ios\", in: .module, compatibleWith: nil)\n        imageView.contentMode = .scaleAspectFit\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "timeLeftLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 70, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_sb_14)\n        label.textColor = .black\n        return label\n    }()"
+      },
+      {
+        "A_name" : "timeLeftStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 77, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.spacing = 4\n        stack.alignment = .center\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "spacer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 85, Column: 5",
+        "H_initialValue" : "UIView()"
+      },
+      {
+        "A_name" : "headerStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 87, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.alignment = .center\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "moreImageView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 94, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.contentMode = .scaleAspectFit\n        imageView.image = UIImage(named: \"ic_more_24_ios\", in: .module, compatibleWith: nil)\n        imageView.isHidden = true\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "menu",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 102, Column: 5",
+        "H_initialValue" : "{\n        let menu = ActionMenu()\n        menu.isHidden = true\n        return menu\n    }()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 110, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CGRect"
+        ],
+        "I_parameters" : [
+          "frame"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 117, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "setupUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 123, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "tapGesture",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SelectedInfo.swift - Line: 146, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(cardPreviewTapped))"
+          },
+          {
+            "A_name" : "moreTapGesture",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SelectedInfo.swift - Line: 150, Column: 9",
+            "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(moreButtonTapped))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setupLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 155, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setDelegate",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 189, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setNotWrittenState",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 194, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "UIColor"
+        ],
+        "I_parameters" : [
+          "_",
+          "color"
+        ]
+      },
+      {
+        "A_name" : "reset",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 201, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "updateView",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 209, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "today",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SelectedInfo.swift - Line: 226, Column: 9",
+            "H_initialValue" : "Calendar.current.startOfDay(for: Date())"
+          },
+          {
+            "A_name" : "selectedDay",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SelectedInfo.swift - Line: 227, Column: 9",
+            "H_initialValue" : "Calendar.current.startOfDay(for: date)"
+          }
+        ],
+        "I_parameterType" : [
+          "Date",
+          "Int?",
+          "Bool?",
+          "Int",
+          "(kor: String, en: String)?",
+          "String?",
+          "String?"
+        ],
+        "I_parameters" : [
+          "for",
+          "diaryId",
+          "isPublished",
+          "remainingTime",
+          "topicData",
+          "diaryData",
+          "imageURL"
+        ]
+      },
+      {
+        "A_name" : "setSelectedDate",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 269, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "formatter",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SelectedInfo.swift - Line: 270, Column: 9",
+            "H_initialValue" : "DateFormatter()"
+          }
+        ],
+        "I_parameterType" : [
+          "Date"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "updateDiaryState",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 278, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "isPublished"
+        ]
+      },
+      {
+        "A_name" : "updateMenuState",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 283, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool?"
+        ],
+        "I_parameters" : [
+          "isPublished"
+        ]
+      },
+      {
+        "A_name" : "formatRemainingTime",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 306, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fullText",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SelectedInfo.swift - Line: 307, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "highlightText",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SelectedInfo.swift - Line: 308, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "attributed",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SelectedInfo.swift - Line: 320, Column: 9",
+            "H_initialValue" : "NSMutableAttributedString(string: fullText)"
+          }
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> NSAttributedString"
+      },
+      {
+        "A_name" : "cardPreviewTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 329, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "moreButtonTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 335, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "topicData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 13, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "currentDiaryId",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 17, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "currentIsPublished",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 18, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "overlayView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 19, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onDiaryPreviewTapped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 23, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onMoreButtonTapped",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 24, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onMenuAction",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 25, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cardTopicView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 29, Column: 5",
+    "H_initialValue" : "CardTopicView()"
+  },
+  {
+    "A_name" : "cardPreview",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 30, Column: 5",
+    "H_initialValue" : "CardPreview()"
+  },
+  {
+    "A_name" : "emptyDiaryView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 31, Column: 5",
+    "H_initialValue" : "EmptyDiaryView()"
+  },
+  {
+    "A_name" : "diaryLockView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 32, Column: 5",
+    "H_initialValue" : "DiaryLockView()"
+  },
+  {
+    "A_name" : "selectedDayLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 34, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.head_b_16)\n        label.textColor = .black\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 35, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "dot",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 41, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .gray300\n        view.layer.cornerRadius = 1\n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 42, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "notWrittenLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 48, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.caption_m_12)\n        label.textColor = .gray300\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 49, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "selectedDayStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 55, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.spacing = 4\n        stack.alignment = .center\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 56, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "iconView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 63, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"ic_time_16_ios\", in: .module, compatibleWith: nil)\n        imageView.contentMode = .scaleAspectFit\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 64, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "timeLeftLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 70, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_sb_14)\n        label.textColor = .black\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 71, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "timeLeftStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 77, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.spacing = 4\n        stack.alignment = .center\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 78, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "spacer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 85, Column: 5",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "headerStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 87, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .horizontal\n        stack.alignment = .center\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 88, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "moreImageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 94, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.contentMode = .scaleAspectFit\n        imageView.image = UIImage(named: \"ic_more_24_ios\", in: .module, compatibleWith: nil)\n        imageView.isHidden = true\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 95, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "menu",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 102, Column: 5",
+    "H_initialValue" : "{\n        let menu = ActionMenu()\n        menu.isHidden = true\n        return menu\n    }()"
+  },
+  {
+    "A_name" : "menu",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 103, Column: 9",
+    "H_initialValue" : "ActionMenu()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 110, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CGRect"
+    ],
+    "I_parameters" : [
+      "frame"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 117, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "setupUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 123, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "tapGesture",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 146, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(cardPreviewTapped))"
+      },
+      {
+        "A_name" : "moreTapGesture",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 150, Column: 9",
+        "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(moreButtonTapped))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "tapGesture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 146, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(cardPreviewTapped))"
+  },
+  {
+    "A_name" : "moreTapGesture",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 150, Column: 9",
+    "H_initialValue" : "UITapGestureRecognizer(target: self, action: #selector(moreButtonTapped))"
+  },
+  {
+    "A_name" : "setupLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 155, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setDelegate",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 189, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setNotWrittenState",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 194, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "UIColor"
+    ],
+    "I_parameters" : [
+      "_",
+      "color"
+    ]
+  },
+  {
+    "A_name" : "reset",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 201, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "updateView",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 209, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "today",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 226, Column: 9",
+        "H_initialValue" : "Calendar.current.startOfDay(for: Date())"
+      },
+      {
+        "A_name" : "selectedDay",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 227, Column: 9",
+        "H_initialValue" : "Calendar.current.startOfDay(for: date)"
+      }
+    ],
+    "I_parameterType" : [
+      "Date",
+      "Int?",
+      "Bool?",
+      "Int",
+      "(kor: String, en: String)?",
+      "String?",
+      "String?"
+    ],
+    "I_parameters" : [
+      "for",
+      "diaryId",
+      "isPublished",
+      "remainingTime",
+      "topicData",
+      "diaryData",
+      "imageURL"
+    ]
+  },
+  {
+    "A_name" : "today",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 226, Column: 9",
+    "H_initialValue" : "Calendar.current.startOfDay(for: Date())"
+  },
+  {
+    "A_name" : "selectedDay",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 227, Column: 9",
+    "H_initialValue" : "Calendar.current.startOfDay(for: date)"
+  },
+  {
+    "A_name" : "setSelectedDate",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 269, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "formatter",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 270, Column: 9",
+        "H_initialValue" : "DateFormatter()"
+      }
+    ],
+    "I_parameterType" : [
+      "Date"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "formatter",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 270, Column: 9",
+    "H_initialValue" : "DateFormatter()"
+  },
+  {
+    "A_name" : "updateDiaryState",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 278, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "isPublished"
+    ]
+  },
+  {
+    "A_name" : "updateMenuState",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 283, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool?"
+    ],
+    "I_parameters" : [
+      "isPublished"
+    ]
+  },
+  {
+    "A_name" : "formatRemainingTime",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 306, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fullText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 307, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "highlightText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 308, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "attributed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 320, Column: 9",
+        "H_initialValue" : "NSMutableAttributedString(string: fullText)"
+      }
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> NSAttributedString"
+  },
+  {
+    "A_name" : "fullText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 307, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "highlightText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 308, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "hours",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 311, Column: 13",
+    "H_initialValue" : "Int(ceil(Double(remainingTime) \/ 60.0))"
+  },
+  {
+    "A_name" : "minutes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 315, Column: 13",
+    "H_initialValue" : "max(1, remainingTime)"
+  },
+  {
+    "A_name" : "attributed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 320, Column: 9",
+    "H_initialValue" : "NSMutableAttributedString(string: fullText)"
+  },
+  {
+    "A_name" : "cardPreviewTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 329, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "moreButtonTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 335, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "SelectedInfo",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ActionMenuDelegate"
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 347, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "actionMenu",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SelectedInfo.swift - Line: 348, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "ActionMenu",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "didSelectItemAt"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "actionMenu",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SelectedInfo.swift - Line: 348, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ActionMenu",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "didSelectItemAt"
+    ]
+  }
+]

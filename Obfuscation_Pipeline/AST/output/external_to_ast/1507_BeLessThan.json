@@ -1,0 +1,202 @@
+[
+  {
+    "A_name" : "beLessThan",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeLessThan.swift - Line: 2, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "message",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeLessThan.swift - Line: 3, Column: 5",
+        "H_initialValue" : "\"be less than <\\(stringify(expectedValue))>\""
+      }
+    ],
+    "I_parameterType" : [
+      "T?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Predicate<T>"
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeLessThan.swift - Line: 3, Column: 5",
+    "H_initialValue" : "\"be less than <\\(stringify(expectedValue))>\""
+  },
+  {
+    "A_name" : "<",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeLessThan.swift - Line: 11, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Expectation<T>",
+      "T"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ]
+  },
+  {
+    "A_name" : "beLessThan",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeLessThan.swift - Line: 19, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "message",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeLessThan.swift - Line: 20, Column: 5",
+        "H_initialValue" : "\"be less than <\\(stringify(expectedValue))>\""
+      }
+    ],
+    "I_parameterType" : [
+      "NMBComparable?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Predicate<NMBComparable>"
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeLessThan.swift - Line: 20, Column: 5",
+    "H_initialValue" : "\"be less than <\\(stringify(expectedValue))>\""
+  },
+  {
+    "A_name" : "actualValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeLessThan.swift - Line: 22, Column: 9",
+    "H_initialValue" : "try actualExpression.evaluate()"
+  },
+  {
+    "A_name" : "matches",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeLessThan.swift - Line: 23, Column: 9",
+    "H_initialValue" : "actualValue != nil && actualValue!.NMB_compare(expectedValue) == ComparisonResult.orderedAscending"
+  },
+  {
+    "A_name" : "<",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeLessThan.swift - Line: 28, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Expectation<NMBComparable>",
+      "NMBComparable?"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ]
+  },
+  {
+    "A_name" : "NMBPredicate",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BeLessThan.swift - Line: 32, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "beLessThanMatcher",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "class"
+        ],
+        "F_location" : "BeLessThan.swift - Line: 33, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NMBComparable?"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> NMBPredicate"
+      }
+    ]
+  },
+  {
+    "A_name" : "beLessThanMatcher",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "class"
+    ],
+    "F_location" : "BeLessThan.swift - Line: 33, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NMBComparable?"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> NMBPredicate"
+  },
+  {
+    "A_name" : "expr",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeLessThan.swift - Line: 35, Column: 13",
+    "H_initialValue" : "actualExpression.cast { $0 as? NMBComparable }"
+  }
+]

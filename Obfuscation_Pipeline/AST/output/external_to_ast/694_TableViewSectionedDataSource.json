@@ -1,0 +1,752 @@
+[
+  {
+    "A_name" : "TableViewSectionedDataSource",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "NSObject",
+      "UITableViewDataSource",
+      "SectionedViewDataSourceType"
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "_sectionModels",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 87, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "sectionModels",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 89, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "model",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 109, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "at"
+        ],
+        "J_returnType" : "-> Any"
+      },
+      {
+        "A_name" : "setSections",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 113, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[Section]"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "configureCell",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 117, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "titleForHeaderInSection",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 125, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "titleForFooterInSection",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 132, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "canEditRowAtIndexPath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 140, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "canMoveRowAtIndexPath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 147, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "rowAnimation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 155, Column: 5",
+        "H_initialValue" : ".automatic"
+      },
+      {
+        "A_name" : "numberOfSections",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 177, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView"
+        ],
+        "I_parameters" : [
+          "in"
+        ],
+        "J_returnType" : "-> Int"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 181, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "numberOfRowsInSection"
+        ],
+        "J_returnType" : "-> Int"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 186, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "cellForRowAt"
+        ],
+        "J_returnType" : "-> UITableViewCell"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 192, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "titleForHeaderInSection"
+        ],
+        "J_returnType" : "-> String?"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 196, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "Int"
+        ],
+        "I_parameters" : [
+          "_",
+          "titleForFooterInSection"
+        ],
+        "J_returnType" : "-> String?"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 200, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "canEditRowAt"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 204, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "canMoveRowAt"
+        ],
+        "J_returnType" : "-> Bool"
+      },
+      {
+        "A_name" : "tableView",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "TableViewSectionedDataSource.swift - Line: 208, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableView",
+          "IndexPath",
+          "IndexPath"
+        ],
+        "I_parameters" : [
+          "_",
+          "moveRowAt",
+          "to"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 34, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping ConfigureCell",
+      "@escaping  TitleForHeaderInSection",
+      "@escaping TitleForFooterInSection",
+      "@escaping CanEditRowAtIndexPath",
+      "@escaping CanMoveRowAtIndexPath",
+      "@escaping SectionIndexTitles",
+      "@escaping SectionForSectionIndexTitle"
+    ],
+    "I_parameters" : [
+      "configureCell",
+      "titleForHeaderInSection",
+      "titleForFooterInSection",
+      "canEditRowAtIndexPath",
+      "canMoveRowAtIndexPath",
+      "sectionIndexTitles",
+      "sectionForSectionIndexTitle"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 52, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping ConfigureCell",
+      "@escaping  TitleForHeaderInSection",
+      "@escaping TitleForFooterInSection",
+      "@escaping CanEditRowAtIndexPath",
+      "@escaping CanMoveRowAtIndexPath"
+    ],
+    "I_parameters" : [
+      "configureCell",
+      "titleForHeaderInSection",
+      "titleForFooterInSection",
+      "canEditRowAtIndexPath",
+      "canMoveRowAtIndexPath"
+    ]
+  },
+  {
+    "A_name" : "_dataSourceBound",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 71, Column: 5",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "ensureNotMutatedAfterBinding",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 73, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "_sectionModels",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 87, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "sectionModels",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 89, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sectionModel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 94, Column: 9",
+    "H_initialValue" : "self._sectionModels[section]"
+  },
+  {
+    "A_name" : "section",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 103, Column: 13",
+    "H_initialValue" : "self._sectionModels[indexPath.section]"
+  },
+  {
+    "A_name" : "model",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 109, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "at"
+    ],
+    "J_returnType" : "-> Any"
+  },
+  {
+    "A_name" : "setSections",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 113, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[Section]"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "configureCell",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 117, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "titleForHeaderInSection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 125, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "titleForFooterInSection",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 132, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "canEditRowAtIndexPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 140, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "canMoveRowAtIndexPath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 147, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "rowAnimation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 155, Column: 5",
+    "H_initialValue" : ".automatic"
+  },
+  {
+    "A_name" : "sectionIndexTitles",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 158, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "sectionForSectionIndexTitle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 165, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "numberOfSections",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 177, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView"
+    ],
+    "I_parameters" : [
+      "in"
+    ],
+    "J_returnType" : "-> Int"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 181, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "numberOfRowsInSection"
+    ],
+    "J_returnType" : "-> Int"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 186, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "cellForRowAt"
+    ],
+    "J_returnType" : "-> UITableViewCell"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 192, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "titleForHeaderInSection"
+    ],
+    "J_returnType" : "-> String?"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 196, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "titleForFooterInSection"
+    ],
+    "J_returnType" : "-> String?"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 200, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "canEditRowAt"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 204, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "canMoveRowAt"
+    ],
+    "J_returnType" : "-> Bool"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 208, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "IndexPath",
+      "IndexPath"
+    ],
+    "I_parameters" : [
+      "_",
+      "moveRowAt",
+      "to"
+    ]
+  },
+  {
+    "A_name" : "sectionIndexTitles",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 213, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> [String]?"
+  },
+  {
+    "A_name" : "tableView",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "TableViewSectionedDataSource.swift - Line: 217, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableView",
+      "String",
+      "Int"
+    ],
+    "I_parameters" : [
+      "_",
+      "sectionForSectionIndexTitle",
+      "at"
+    ],
+    "J_returnType" : "-> Int"
+  }
+]

@@ -1,0 +1,5042 @@
+[
+  {
+    "A_name" : "EncodingCharacters",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 29, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "crlf",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 30, Column: 5",
+        "H_initialValue" : "\"\\r\\n\""
+      }
+    ]
+  },
+  {
+    "A_name" : "crlf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 30, Column: 5",
+    "H_initialValue" : "\"\\r\\n\""
+  },
+  {
+    "A_name" : "BoundaryGenerator",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 33, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "BoundaryType",
+        "B_kind" : "enum",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 34, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "initial",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 35, Column: 14",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "encapsulated",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 35, Column: 23",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          },
+          {
+            "A_name" : "final",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 35, Column: 37",
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "boundary",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 38, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "boundary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 39, Column: 9",
+            "H_initialValue" : "switch boundaryType {\n        case .initial:\n            \"--\\(boundaryKey)\\(EncodingCharacters.crlf)\"\n        case .encapsulated:\n            \"\\(EncodingCharacters.crlf)--\\(boundaryKey)\\(EncodingCharacters.crlf)\"\n        case .final:\n            \"\\(EncodingCharacters.crlf)--\\(boundaryKey)--\\(EncodingCharacters.crlf)\"\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "BoundaryType",
+          "String"
+        ],
+        "I_parameters" : [
+          "forBoundaryType",
+          "boundaryKey"
+        ],
+        "J_returnType" : "-> String"
+      },
+      {
+        "A_name" : "boundaryData",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 51, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "BoundaryType",
+          "String"
+        ],
+        "I_parameters" : [
+          "boundaryType",
+          "boundaryKey"
+        ],
+        "J_returnType" : "-> Data"
+      }
+    ]
+  },
+  {
+    "A_name" : "BoundaryType",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 34, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "initial",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 35, Column: 14",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "encapsulated",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 35, Column: 23",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "final",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 35, Column: 37",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 38, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "boundary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 39, Column: 9",
+        "H_initialValue" : "switch boundaryType {\n        case .initial:\n            \"--\\(boundaryKey)\\(EncodingCharacters.crlf)\"\n        case .encapsulated:\n            \"\\(EncodingCharacters.crlf)--\\(boundaryKey)\\(EncodingCharacters.crlf)\"\n        case .final:\n            \"\\(EncodingCharacters.crlf)--\\(boundaryKey)--\\(EncodingCharacters.crlf)\"\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "BoundaryType",
+      "String"
+    ],
+    "I_parameters" : [
+      "forBoundaryType",
+      "boundaryKey"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 39, Column: 9",
+    "H_initialValue" : "switch boundaryType {\n        case .initial:\n            \"--\\(boundaryKey)\\(EncodingCharacters.crlf)\"\n        case .encapsulated:\n            \"\\(EncodingCharacters.crlf)--\\(boundaryKey)\\(EncodingCharacters.crlf)\"\n        case .final:\n            \"\\(EncodingCharacters.crlf)--\\(boundaryKey)--\\(EncodingCharacters.crlf)\"\n        }"
+  },
+  {
+    "A_name" : "boundaryData",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 51, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "BoundaryType",
+      "String"
+    ],
+    "I_parameters" : [
+      "boundaryType",
+      "boundaryKey"
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "MultipartFormDataPropertiesTestCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 59, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testThatContentTypeContainsBoundary",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 60, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 62, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "boundary",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 65, Column: 9",
+            "H_initialValue" : "multipartFormData.boundary"
+          },
+          {
+            "A_name" : "expectedContentType",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 68, Column: 9",
+            "H_initialValue" : "\"multipart\/form-data; boundary=\\(boundary)\""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatContentLengthMatchesTotalBodyPartSize",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 72, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 74, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "data1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 75, Column: 9",
+            "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+          },
+          {
+            "A_name" : "data2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 76, Column: 9",
+            "H_initialValue" : "Data(\"Vim at integre alterum.\".utf8)"
+          },
+          {
+            "A_name" : "expectedContentLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 83, Column: 9",
+            "H_initialValue" : "UInt64(data1.count + data2.count)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testThatContentTypeContainsBoundary",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 60, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 62, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "boundary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 65, Column: 9",
+        "H_initialValue" : "multipartFormData.boundary"
+      },
+      {
+        "A_name" : "expectedContentType",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 68, Column: 9",
+        "H_initialValue" : "\"multipart\/form-data; boundary=\\(boundary)\""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 62, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 65, Column: 9",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedContentType",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 68, Column: 9",
+    "H_initialValue" : "\"multipart\/form-data; boundary=\\(boundary)\""
+  },
+  {
+    "A_name" : "testThatContentLengthMatchesTotalBodyPartSize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 72, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 74, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "data1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 75, Column: 9",
+        "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+      },
+      {
+        "A_name" : "data2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 76, Column: 9",
+        "H_initialValue" : "Data(\"Vim at integre alterum.\".utf8)"
+      },
+      {
+        "A_name" : "expectedContentLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 83, Column: 9",
+        "H_initialValue" : "UInt64(data1.count + data2.count)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 74, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "data1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 75, Column: 9",
+    "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+  },
+  {
+    "A_name" : "data2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 76, Column: 9",
+    "H_initialValue" : "Data(\"Vim at integre alterum.\".utf8)"
+  },
+  {
+    "A_name" : "expectedContentLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 83, Column: 9",
+    "H_initialValue" : "UInt64(data1.count + data2.count)"
+  },
+  {
+    "A_name" : "MultipartFormDataEncodingTestCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 90, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "crlf",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 91, Column: 5",
+        "H_initialValue" : "EncodingCharacters.crlf"
+      },
+      {
+        "A_name" : "testEncodingDataBodyPart",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 93, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 95, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 97, Column: 9",
+            "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+          },
+          {
+            "A_name" : "encodedData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 100, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testEncodingMultipleDataBodyParts",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 127, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 129, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "frenchData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 131, Column: 9",
+            "H_initialValue" : "Data(\"français\".utf8)"
+          },
+          {
+            "A_name" : "japaneseData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 132, Column: 9",
+            "H_initialValue" : "Data(\"日本語\".utf8)"
+          },
+          {
+            "A_name" : "emojiData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 133, Column: 9",
+            "H_initialValue" : "Data(\"😃👍🏻🍻🎉\".utf8)"
+          },
+          {
+            "A_name" : "encodedData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 139, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testEncodingFileBodyPart",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 174, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 176, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "unicornImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 178, Column: 9",
+            "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+          },
+          {
+            "A_name" : "encodedData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 181, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testEncodingMultipleFileBodyParts",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 210, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 212, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "unicornImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 214, Column: 9",
+            "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+          },
+          {
+            "A_name" : "rainbowImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 215, Column: 9",
+            "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+          },
+          {
+            "A_name" : "encodedData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 220, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testEncodingStreamBodyPart",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 256, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 258, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "unicornImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 260, Column: 9",
+            "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+          },
+          {
+            "A_name" : "unicornDataLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 261, Column: 9",
+            "H_initialValue" : "UInt64((try! Data(contentsOf: unicornImageURL)).count)"
+          },
+          {
+            "A_name" : "unicornStream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 262, Column: 9",
+            "H_initialValue" : "InputStream(url: unicornImageURL)!"
+          },
+          {
+            "A_name" : "encodedData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 270, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testEncodingMultipleStreamBodyParts",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 299, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 301, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "unicornImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 303, Column: 9",
+            "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+          },
+          {
+            "A_name" : "unicornDataLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 304, Column: 9",
+            "H_initialValue" : "UInt64((try! Data(contentsOf: unicornImageURL)).count)"
+          },
+          {
+            "A_name" : "unicornStream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 305, Column: 9",
+            "H_initialValue" : "InputStream(url: unicornImageURL)!"
+          },
+          {
+            "A_name" : "rainbowImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 307, Column: 9",
+            "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+          },
+          {
+            "A_name" : "rainbowDataLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 308, Column: 9",
+            "H_initialValue" : "UInt64((try! Data(contentsOf: rainbowImageURL)).count)"
+          },
+          {
+            "A_name" : "rainbowStream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 309, Column: 9",
+            "H_initialValue" : "InputStream(url: rainbowImageURL)!"
+          },
+          {
+            "A_name" : "encodedData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 322, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testEncodingMultipleBodyPartsWithVaryingTypes",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 358, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 360, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "loremData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 362, Column: 9",
+            "H_initialValue" : "Data(\"Lorem ipsum.\".utf8)"
+          },
+          {
+            "A_name" : "unicornImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 364, Column: 9",
+            "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+          },
+          {
+            "A_name" : "rainbowImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 366, Column: 9",
+            "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+          },
+          {
+            "A_name" : "rainbowDataLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 367, Column: 9",
+            "H_initialValue" : "UInt64((try! Data(contentsOf: rainbowImageURL)).count)"
+          },
+          {
+            "A_name" : "rainbowStream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 368, Column: 9",
+            "H_initialValue" : "InputStream(url: rainbowImageURL)!"
+          },
+          {
+            "A_name" : "encodedData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 378, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "crlf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 91, Column: 5",
+    "H_initialValue" : "EncodingCharacters.crlf"
+  },
+  {
+    "A_name" : "testEncodingDataBodyPart",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 93, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 95, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 97, Column: 9",
+        "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+      },
+      {
+        "A_name" : "encodedData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 100, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 95, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 97, Column: 9",
+    "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+  },
+  {
+    "A_name" : "encodedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 100, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 113, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 115, Column: 13",
+    "H_initialValue" : "(\n                BoundaryGenerator.boundary(forBoundaryType: .initial, boundaryKey: boundary) +\n                    \"Content-Disposition: form-data; name=\\\"data\\\"\\(crlf)\\(crlf)\" +\n                    \"Lorem ipsum dolor sit amet.\" +\n                    BoundaryGenerator.boundary(forBoundaryType: .final, boundaryKey: boundary)\n            )"
+  },
+  {
+    "A_name" : "expectedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 121, Column: 13",
+    "H_initialValue" : "Data(expectedString.utf8)"
+  },
+  {
+    "A_name" : "testEncodingMultipleDataBodyParts",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 127, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 129, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "frenchData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 131, Column: 9",
+        "H_initialValue" : "Data(\"français\".utf8)"
+      },
+      {
+        "A_name" : "japaneseData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 132, Column: 9",
+        "H_initialValue" : "Data(\"日本語\".utf8)"
+      },
+      {
+        "A_name" : "emojiData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 133, Column: 9",
+        "H_initialValue" : "Data(\"😃👍🏻🍻🎉\".utf8)"
+      },
+      {
+        "A_name" : "encodedData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 139, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 129, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "frenchData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 131, Column: 9",
+    "H_initialValue" : "Data(\"français\".utf8)"
+  },
+  {
+    "A_name" : "japaneseData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 132, Column: 9",
+    "H_initialValue" : "Data(\"日本語\".utf8)"
+  },
+  {
+    "A_name" : "emojiData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 133, Column: 9",
+    "H_initialValue" : "Data(\"😃👍🏻🍻🎉\".utf8)"
+  },
+  {
+    "A_name" : "encodedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 139, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 152, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 154, Column: 13",
+    "H_initialValue" : "(\n                BoundaryGenerator.boundary(forBoundaryType: .initial, boundaryKey: boundary) +\n                    \"Content-Disposition: form-data; name=\\\"french\\\"\\(crlf)\\(crlf)\" +\n                    \"français\" +\n                    BoundaryGenerator.boundary(forBoundaryType: .encapsulated, boundaryKey: boundary) +\n                    \"Content-Disposition: form-data; name=\\\"japanese\\\"\\(crlf)\" +\n                    \"Content-Type: text\/plain\\(crlf)\\(crlf)\" +\n                    \"日本語\" +\n                    BoundaryGenerator.boundary(forBoundaryType: .encapsulated, boundaryKey: boundary) +\n                    \"Content-Disposition: form-data; name=\\\"emoji\\\"\\(crlf)\" +\n                    \"Content-Type: text\/plain\\(crlf)\\(crlf)\" +\n                    \"😃👍🏻🍻🎉\" +\n                    BoundaryGenerator.boundary(forBoundaryType: .final, boundaryKey: boundary)\n            )"
+  },
+  {
+    "A_name" : "expectedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 168, Column: 13",
+    "H_initialValue" : "Data(expectedString.utf8)"
+  },
+  {
+    "A_name" : "testEncodingFileBodyPart",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 174, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 176, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "unicornImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 178, Column: 9",
+        "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+      },
+      {
+        "A_name" : "encodedData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 181, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 176, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "unicornImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 178, Column: 9",
+    "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+  },
+  {
+    "A_name" : "encodedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 181, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 194, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 196, Column: 13",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "testEncodingMultipleFileBodyParts",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 210, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 212, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "unicornImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 214, Column: 9",
+        "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+      },
+      {
+        "A_name" : "rainbowImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 215, Column: 9",
+        "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+      },
+      {
+        "A_name" : "encodedData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 220, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 212, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "unicornImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 214, Column: 9",
+    "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+  },
+  {
+    "A_name" : "rainbowImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 215, Column: 9",
+    "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+  },
+  {
+    "A_name" : "encodedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 220, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 233, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 235, Column: 13",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "testEncodingStreamBodyPart",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 256, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 258, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "unicornImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 260, Column: 9",
+        "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+      },
+      {
+        "A_name" : "unicornDataLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 261, Column: 9",
+        "H_initialValue" : "UInt64((try! Data(contentsOf: unicornImageURL)).count)"
+      },
+      {
+        "A_name" : "unicornStream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 262, Column: 9",
+        "H_initialValue" : "InputStream(url: unicornImageURL)!"
+      },
+      {
+        "A_name" : "encodedData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 270, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 258, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "unicornImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 260, Column: 9",
+    "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+  },
+  {
+    "A_name" : "unicornDataLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 261, Column: 9",
+    "H_initialValue" : "UInt64((try! Data(contentsOf: unicornImageURL)).count)"
+  },
+  {
+    "A_name" : "unicornStream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 262, Column: 9",
+    "H_initialValue" : "InputStream(url: unicornImageURL)!"
+  },
+  {
+    "A_name" : "encodedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 270, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 283, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 285, Column: 13",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "testEncodingMultipleStreamBodyParts",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 299, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 301, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "unicornImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 303, Column: 9",
+        "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+      },
+      {
+        "A_name" : "unicornDataLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 304, Column: 9",
+        "H_initialValue" : "UInt64((try! Data(contentsOf: unicornImageURL)).count)"
+      },
+      {
+        "A_name" : "unicornStream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 305, Column: 9",
+        "H_initialValue" : "InputStream(url: unicornImageURL)!"
+      },
+      {
+        "A_name" : "rainbowImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 307, Column: 9",
+        "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+      },
+      {
+        "A_name" : "rainbowDataLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 308, Column: 9",
+        "H_initialValue" : "UInt64((try! Data(contentsOf: rainbowImageURL)).count)"
+      },
+      {
+        "A_name" : "rainbowStream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 309, Column: 9",
+        "H_initialValue" : "InputStream(url: rainbowImageURL)!"
+      },
+      {
+        "A_name" : "encodedData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 322, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 301, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "unicornImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 303, Column: 9",
+    "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+  },
+  {
+    "A_name" : "unicornDataLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 304, Column: 9",
+    "H_initialValue" : "UInt64((try! Data(contentsOf: unicornImageURL)).count)"
+  },
+  {
+    "A_name" : "unicornStream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 305, Column: 9",
+    "H_initialValue" : "InputStream(url: unicornImageURL)!"
+  },
+  {
+    "A_name" : "rainbowImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 307, Column: 9",
+    "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+  },
+  {
+    "A_name" : "rainbowDataLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 308, Column: 9",
+    "H_initialValue" : "UInt64((try! Data(contentsOf: rainbowImageURL)).count)"
+  },
+  {
+    "A_name" : "rainbowStream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 309, Column: 9",
+    "H_initialValue" : "InputStream(url: rainbowImageURL)!"
+  },
+  {
+    "A_name" : "encodedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 322, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 335, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 337, Column: 13",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "testEncodingMultipleBodyPartsWithVaryingTypes",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 358, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 360, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "loremData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 362, Column: 9",
+        "H_initialValue" : "Data(\"Lorem ipsum.\".utf8)"
+      },
+      {
+        "A_name" : "unicornImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 364, Column: 9",
+        "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+      },
+      {
+        "A_name" : "rainbowImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 366, Column: 9",
+        "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+      },
+      {
+        "A_name" : "rainbowDataLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 367, Column: 9",
+        "H_initialValue" : "UInt64((try! Data(contentsOf: rainbowImageURL)).count)"
+      },
+      {
+        "A_name" : "rainbowStream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 368, Column: 9",
+        "H_initialValue" : "InputStream(url: rainbowImageURL)!"
+      },
+      {
+        "A_name" : "encodedData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 378, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 360, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "loremData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 362, Column: 9",
+    "H_initialValue" : "Data(\"Lorem ipsum.\".utf8)"
+  },
+  {
+    "A_name" : "unicornImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 364, Column: 9",
+    "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+  },
+  {
+    "A_name" : "rainbowImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 366, Column: 9",
+    "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+  },
+  {
+    "A_name" : "rainbowDataLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 367, Column: 9",
+    "H_initialValue" : "UInt64((try! Data(contentsOf: rainbowImageURL)).count)"
+  },
+  {
+    "A_name" : "rainbowStream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 368, Column: 9",
+    "H_initialValue" : "InputStream(url: rainbowImageURL)!"
+  },
+  {
+    "A_name" : "encodedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 378, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 391, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 393, Column: 13",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "MultipartFormDataWriteEncodedDataToDiskTestCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 423, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "crlf",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 424, Column: 5",
+        "H_initialValue" : "EncodingCharacters.crlf"
+      },
+      {
+        "A_name" : "testWritingEncodedDataBodyPartToDisk",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 426, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 428, Column: 9",
+            "H_initialValue" : "temporaryFileURL"
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 429, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 431, Column: 9",
+            "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 434, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWritingMultipleEncodedDataBodyPartsToDisk",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 461, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 463, Column: 9",
+            "H_initialValue" : "temporaryFileURL"
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 464, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "frenchData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 466, Column: 9",
+            "H_initialValue" : "Data(\"français\".utf8)"
+          },
+          {
+            "A_name" : "japaneseData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 467, Column: 9",
+            "H_initialValue" : "Data(\"日本語\".utf8)"
+          },
+          {
+            "A_name" : "emojiData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 468, Column: 9",
+            "H_initialValue" : "Data(\"😃👍🏻🍻🎉\".utf8)"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 474, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWritingEncodedFileBodyPartToDisk",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 509, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 511, Column: 9",
+            "H_initialValue" : "temporaryFileURL"
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 512, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "unicornImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 514, Column: 9",
+            "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 517, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWritingMultipleEncodedFileBodyPartsToDisk",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 548, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 550, Column: 9",
+            "H_initialValue" : "temporaryFileURL"
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 551, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "unicornImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 553, Column: 9",
+            "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+          },
+          {
+            "A_name" : "rainbowImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 554, Column: 9",
+            "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 559, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWritingEncodedStreamBodyPartToDiskRespectingBodyLength",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 597, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "destinationFileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 599, Column: 9",
+            "H_initialValue" : "temporaryFileURL"
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 600, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "unicornImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 602, Column: 9",
+            "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+          },
+          {
+            "A_name" : "unicornImageData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 603, Column: 9",
+            "H_initialValue" : "try! Data(contentsOf: unicornImageURL)"
+          },
+          {
+            "A_name" : "unicornDataLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 604, Column: 9",
+            "H_initialValue" : "unicornImageData.count"
+          },
+          {
+            "A_name" : "expectedFileStreamUploadLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 607, Column: 9",
+            "H_initialValue" : "UInt64(unicornDataLength \/ 2)"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 614, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWritingEncodedStreamBodyPartToDisk",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 644, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 646, Column: 9",
+            "H_initialValue" : "temporaryFileURL"
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 647, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "unicornImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 649, Column: 9",
+            "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+          },
+          {
+            "A_name" : "unicornDataLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 650, Column: 9",
+            "H_initialValue" : "UInt64((try! Data(contentsOf: unicornImageURL)).count)"
+          },
+          {
+            "A_name" : "unicornStream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 651, Column: 9",
+            "H_initialValue" : "InputStream(url: unicornImageURL)!"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 659, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWritingMultipleEncodedStreamBodyPartsToDisk",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 690, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 692, Column: 9",
+            "H_initialValue" : "temporaryFileURL"
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 693, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "unicornImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 695, Column: 9",
+            "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+          },
+          {
+            "A_name" : "unicornDataLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 696, Column: 9",
+            "H_initialValue" : "UInt64((try! Data(contentsOf: unicornImageURL)).count)"
+          },
+          {
+            "A_name" : "unicornStream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 697, Column: 9",
+            "H_initialValue" : "InputStream(url: unicornImageURL)!"
+          },
+          {
+            "A_name" : "rainbowImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 699, Column: 9",
+            "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+          },
+          {
+            "A_name" : "rainbowDataLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 700, Column: 9",
+            "H_initialValue" : "UInt64((try! Data(contentsOf: rainbowImageURL)).count)"
+          },
+          {
+            "A_name" : "rainbowStream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 701, Column: 9",
+            "H_initialValue" : "InputStream(url: rainbowImageURL)!"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 714, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWritingMultipleEncodedBodyPartsWithVaryingTypesToDisk",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 752, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 754, Column: 9",
+            "H_initialValue" : "temporaryFileURL"
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 755, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "loremData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 757, Column: 9",
+            "H_initialValue" : "Data(\"Lorem ipsum.\".utf8)"
+          },
+          {
+            "A_name" : "unicornImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 759, Column: 9",
+            "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+          },
+          {
+            "A_name" : "rainbowImageURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 761, Column: 9",
+            "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+          },
+          {
+            "A_name" : "rainbowDataLength",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 762, Column: 9",
+            "H_initialValue" : "UInt64((try! Data(contentsOf: rainbowImageURL)).count)"
+          },
+          {
+            "A_name" : "rainbowStream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 763, Column: 9",
+            "H_initialValue" : "InputStream(url: rainbowImageURL)!"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 773, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "crlf",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 424, Column: 5",
+    "H_initialValue" : "EncodingCharacters.crlf"
+  },
+  {
+    "A_name" : "testWritingEncodedDataBodyPartToDisk",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 426, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 428, Column: 9",
+        "H_initialValue" : "temporaryFileURL"
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 429, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 431, Column: 9",
+        "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 434, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 428, Column: 9",
+    "H_initialValue" : "temporaryFileURL"
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 429, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 431, Column: 9",
+    "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 434, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 447, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 449, Column: 13",
+    "H_initialValue" : "BoundaryGenerator.boundary(forBoundaryType: .initial, boundaryKey: boundary) +\n                \"Content-Disposition: form-data; name=\\\"data\\\"\\(crlf)\\(crlf)\" +\n                \"Lorem ipsum dolor sit amet.\" +\n                BoundaryGenerator.boundary(forBoundaryType: .final, boundaryKey: boundary)"
+  },
+  {
+    "A_name" : "expectedFileData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 453, Column: 13",
+    "H_initialValue" : "Data(expectedString.utf8)"
+  },
+  {
+    "A_name" : "testWritingMultipleEncodedDataBodyPartsToDisk",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 461, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 463, Column: 9",
+        "H_initialValue" : "temporaryFileURL"
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 464, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "frenchData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 466, Column: 9",
+        "H_initialValue" : "Data(\"français\".utf8)"
+      },
+      {
+        "A_name" : "japaneseData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 467, Column: 9",
+        "H_initialValue" : "Data(\"日本語\".utf8)"
+      },
+      {
+        "A_name" : "emojiData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 468, Column: 9",
+        "H_initialValue" : "Data(\"😃👍🏻🍻🎉\".utf8)"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 474, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 463, Column: 9",
+    "H_initialValue" : "temporaryFileURL"
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 464, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "frenchData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 466, Column: 9",
+    "H_initialValue" : "Data(\"français\".utf8)"
+  },
+  {
+    "A_name" : "japaneseData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 467, Column: 9",
+    "H_initialValue" : "Data(\"日本語\".utf8)"
+  },
+  {
+    "A_name" : "emojiData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 468, Column: 9",
+    "H_initialValue" : "Data(\"😃👍🏻🍻🎉\".utf8)"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 474, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 487, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 489, Column: 13",
+    "H_initialValue" : "(\n                BoundaryGenerator.boundary(forBoundaryType: .initial, boundaryKey: boundary) +\n                    \"Content-Disposition: form-data; name=\\\"french\\\"\\(crlf)\\(crlf)\" +\n                    \"français\" +\n                    BoundaryGenerator.boundary(forBoundaryType: .encapsulated, boundaryKey: boundary) +\n                    \"Content-Disposition: form-data; name=\\\"japanese\\\"\\(crlf)\\(crlf)\" +\n                    \"日本語\" +\n                    BoundaryGenerator.boundary(forBoundaryType: .encapsulated, boundaryKey: boundary) +\n                    \"Content-Disposition: form-data; name=\\\"emoji\\\"\\(crlf)\\(crlf)\" +\n                    \"😃👍🏻🍻🎉\" +\n                    BoundaryGenerator.boundary(forBoundaryType: .final, boundaryKey: boundary)\n            )"
+  },
+  {
+    "A_name" : "expectedFileData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 501, Column: 13",
+    "H_initialValue" : "Data(expectedString.utf8)"
+  },
+  {
+    "A_name" : "testWritingEncodedFileBodyPartToDisk",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 509, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 511, Column: 9",
+        "H_initialValue" : "temporaryFileURL"
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 512, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "unicornImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 514, Column: 9",
+        "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 517, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 511, Column: 9",
+    "H_initialValue" : "temporaryFileURL"
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 512, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "unicornImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 514, Column: 9",
+    "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 517, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 530, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedFileData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 532, Column: 13",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "testWritingMultipleEncodedFileBodyPartsToDisk",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 548, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 550, Column: 9",
+        "H_initialValue" : "temporaryFileURL"
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 551, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "unicornImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 553, Column: 9",
+        "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+      },
+      {
+        "A_name" : "rainbowImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 554, Column: 9",
+        "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 559, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 550, Column: 9",
+    "H_initialValue" : "temporaryFileURL"
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 551, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "unicornImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 553, Column: 9",
+    "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+  },
+  {
+    "A_name" : "rainbowImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 554, Column: 9",
+    "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 559, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 572, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedFileData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 574, Column: 13",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "testWritingEncodedStreamBodyPartToDiskRespectingBodyLength",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 597, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "destinationFileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 599, Column: 9",
+        "H_initialValue" : "temporaryFileURL"
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 600, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "unicornImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 602, Column: 9",
+        "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+      },
+      {
+        "A_name" : "unicornImageData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 603, Column: 9",
+        "H_initialValue" : "try! Data(contentsOf: unicornImageURL)"
+      },
+      {
+        "A_name" : "unicornDataLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 604, Column: 9",
+        "H_initialValue" : "unicornImageData.count"
+      },
+      {
+        "A_name" : "expectedFileStreamUploadLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 607, Column: 9",
+        "H_initialValue" : "UInt64(unicornDataLength \/ 2)"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 614, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "destinationFileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 599, Column: 9",
+    "H_initialValue" : "temporaryFileURL"
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 600, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "unicornImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 602, Column: 9",
+    "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+  },
+  {
+    "A_name" : "unicornImageData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 603, Column: 9",
+    "H_initialValue" : "try! Data(contentsOf: unicornImageURL)"
+  },
+  {
+    "A_name" : "unicornDataLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 604, Column: 9",
+    "H_initialValue" : "unicornImageData.count"
+  },
+  {
+    "A_name" : "expectedFileStreamUploadLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 607, Column: 9",
+    "H_initialValue" : "UInt64(unicornDataLength \/ 2)"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 614, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 627, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedFileData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 629, Column: 13",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "testWritingEncodedStreamBodyPartToDisk",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 644, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 646, Column: 9",
+        "H_initialValue" : "temporaryFileURL"
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 647, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "unicornImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 649, Column: 9",
+        "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+      },
+      {
+        "A_name" : "unicornDataLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 650, Column: 9",
+        "H_initialValue" : "UInt64((try! Data(contentsOf: unicornImageURL)).count)"
+      },
+      {
+        "A_name" : "unicornStream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 651, Column: 9",
+        "H_initialValue" : "InputStream(url: unicornImageURL)!"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 659, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 646, Column: 9",
+    "H_initialValue" : "temporaryFileURL"
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 647, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "unicornImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 649, Column: 9",
+    "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+  },
+  {
+    "A_name" : "unicornDataLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 650, Column: 9",
+    "H_initialValue" : "UInt64((try! Data(contentsOf: unicornImageURL)).count)"
+  },
+  {
+    "A_name" : "unicornStream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 651, Column: 9",
+    "H_initialValue" : "InputStream(url: unicornImageURL)!"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 659, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 672, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedFileData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 674, Column: 13",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "testWritingMultipleEncodedStreamBodyPartsToDisk",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 690, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 692, Column: 9",
+        "H_initialValue" : "temporaryFileURL"
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 693, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "unicornImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 695, Column: 9",
+        "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+      },
+      {
+        "A_name" : "unicornDataLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 696, Column: 9",
+        "H_initialValue" : "UInt64((try! Data(contentsOf: unicornImageURL)).count)"
+      },
+      {
+        "A_name" : "unicornStream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 697, Column: 9",
+        "H_initialValue" : "InputStream(url: unicornImageURL)!"
+      },
+      {
+        "A_name" : "rainbowImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 699, Column: 9",
+        "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+      },
+      {
+        "A_name" : "rainbowDataLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 700, Column: 9",
+        "H_initialValue" : "UInt64((try! Data(contentsOf: rainbowImageURL)).count)"
+      },
+      {
+        "A_name" : "rainbowStream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 701, Column: 9",
+        "H_initialValue" : "InputStream(url: rainbowImageURL)!"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 714, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 692, Column: 9",
+    "H_initialValue" : "temporaryFileURL"
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 693, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "unicornImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 695, Column: 9",
+    "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+  },
+  {
+    "A_name" : "unicornDataLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 696, Column: 9",
+    "H_initialValue" : "UInt64((try! Data(contentsOf: unicornImageURL)).count)"
+  },
+  {
+    "A_name" : "unicornStream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 697, Column: 9",
+    "H_initialValue" : "InputStream(url: unicornImageURL)!"
+  },
+  {
+    "A_name" : "rainbowImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 699, Column: 9",
+    "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+  },
+  {
+    "A_name" : "rainbowDataLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 700, Column: 9",
+    "H_initialValue" : "UInt64((try! Data(contentsOf: rainbowImageURL)).count)"
+  },
+  {
+    "A_name" : "rainbowStream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 701, Column: 9",
+    "H_initialValue" : "InputStream(url: rainbowImageURL)!"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 714, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 727, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedFileData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 729, Column: 13",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "testWritingMultipleEncodedBodyPartsWithVaryingTypesToDisk",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 752, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 754, Column: 9",
+        "H_initialValue" : "temporaryFileURL"
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 755, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "loremData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 757, Column: 9",
+        "H_initialValue" : "Data(\"Lorem ipsum.\".utf8)"
+      },
+      {
+        "A_name" : "unicornImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 759, Column: 9",
+        "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+      },
+      {
+        "A_name" : "rainbowImageURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 761, Column: 9",
+        "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+      },
+      {
+        "A_name" : "rainbowDataLength",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 762, Column: 9",
+        "H_initialValue" : "UInt64((try! Data(contentsOf: rainbowImageURL)).count)"
+      },
+      {
+        "A_name" : "rainbowStream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 763, Column: 9",
+        "H_initialValue" : "InputStream(url: rainbowImageURL)!"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 773, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 754, Column: 9",
+    "H_initialValue" : "temporaryFileURL"
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 755, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "loremData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 757, Column: 9",
+    "H_initialValue" : "Data(\"Lorem ipsum.\".utf8)"
+  },
+  {
+    "A_name" : "unicornImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 759, Column: 9",
+    "H_initialValue" : "url(forResource: \"unicorn\", withExtension: \"png\")"
+  },
+  {
+    "A_name" : "rainbowImageURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 761, Column: 9",
+    "H_initialValue" : "url(forResource: \"rainbow\", withExtension: \"jpg\")"
+  },
+  {
+    "A_name" : "rainbowDataLength",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 762, Column: 9",
+    "H_initialValue" : "UInt64((try! Data(contentsOf: rainbowImageURL)).count)"
+  },
+  {
+    "A_name" : "rainbowStream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 763, Column: 9",
+    "H_initialValue" : "InputStream(url: rainbowImageURL)!"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 773, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "boundary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 786, Column: 13",
+    "H_initialValue" : "multipartFormData.boundary"
+  },
+  {
+    "A_name" : "expectedFileData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 788, Column: 13",
+    "H_initialValue" : "Data()"
+  },
+  {
+    "A_name" : "MultipartFormDataFailureTestCase",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseTestCase"
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 820, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testThatAppendingFileBodyPartWithInvalidLastPathComponentReturnsError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 821, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 823, Column: 9",
+            "H_initialValue" : "NSURL(string: \"\")! as URL"
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 824, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 827, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatAppendingFileBodyPartThatIsNotFileURLReturnsError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 843, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 845, Column: 9",
+            "H_initialValue" : "URL(string: \"https:\/\/example.com\/image.jpg\")!"
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 846, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 849, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatAppendingFileBodyPartThatIsNotReachableReturnsError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 864, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "filePath",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 866, Column: 9",
+            "H_initialValue" : "(NSTemporaryDirectory() as NSString).appendingPathComponent(\"does_not_exist.jpg\")"
+          },
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 867, Column: 9",
+            "H_initialValue" : "URL(fileURLWithPath: filePath)"
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 868, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 871, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatAppendingFileBodyPartThatIsDirectoryReturnsError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 887, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "directoryURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 889, Column: 9",
+            "H_initialValue" : "URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)"
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 890, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 893, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatWritingEncodedDataToExistingFileURLFails",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 908, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 910, Column: 9",
+            "H_initialValue" : "temporaryFileURL"
+          },
+          {
+            "A_name" : "writerError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 912, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 920, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 921, Column: 9",
+            "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 924, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatWritingEncodedDataToBadURLFails",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 939, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "fileURL",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 941, Column: 9",
+            "H_initialValue" : "URL(string: \"\/this\/is\/not\/a\/valid\/url\")!"
+          },
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 943, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 944, Column: 9",
+            "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+          },
+          {
+            "A_name" : "encodingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 947, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testThatStreamBodyPartHasUnexpectedLength",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 961, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "multipartFormData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 963, Column: 9",
+            "H_initialValue" : "MultipartFormData()"
+          },
+          {
+            "A_name" : "data",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 964, Column: 9",
+            "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+          },
+          {
+            "A_name" : "firstError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 966, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "secondError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MultipartFormDataTests.swift - Line: 967, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testThatAppendingFileBodyPartWithInvalidLastPathComponentReturnsError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 821, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 823, Column: 9",
+        "H_initialValue" : "NSURL(string: \"\")! as URL"
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 824, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 827, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 823, Column: 9",
+    "H_initialValue" : "NSURL(string: \"\")! as URL"
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 824, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 827, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatAppendingFileBodyPartThatIsNotFileURLReturnsError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 843, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 845, Column: 9",
+        "H_initialValue" : "URL(string: \"https:\/\/example.com\/image.jpg\")!"
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 846, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 849, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 845, Column: 9",
+    "H_initialValue" : "URL(string: \"https:\/\/example.com\/image.jpg\")!"
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 846, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 849, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatAppendingFileBodyPartThatIsNotReachableReturnsError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 864, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "filePath",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 866, Column: 9",
+        "H_initialValue" : "(NSTemporaryDirectory() as NSString).appendingPathComponent(\"does_not_exist.jpg\")"
+      },
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 867, Column: 9",
+        "H_initialValue" : "URL(fileURLWithPath: filePath)"
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 868, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 871, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "filePath",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 866, Column: 9",
+    "H_initialValue" : "(NSTemporaryDirectory() as NSString).appendingPathComponent(\"does_not_exist.jpg\")"
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 867, Column: 9",
+    "H_initialValue" : "URL(fileURLWithPath: filePath)"
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 868, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 871, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatAppendingFileBodyPartThatIsDirectoryReturnsError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 887, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "directoryURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 889, Column: 9",
+        "H_initialValue" : "URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)"
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 890, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 893, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "directoryURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 889, Column: 9",
+    "H_initialValue" : "URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)"
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 890, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 893, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatWritingEncodedDataToExistingFileURLFails",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 908, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 910, Column: 9",
+        "H_initialValue" : "temporaryFileURL"
+      },
+      {
+        "A_name" : "writerError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 912, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 920, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 921, Column: 9",
+        "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 924, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 910, Column: 9",
+    "H_initialValue" : "temporaryFileURL"
+  },
+  {
+    "A_name" : "writerError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 912, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 920, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 921, Column: 9",
+    "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 924, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatWritingEncodedDataToBadURLFails",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 939, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "fileURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 941, Column: 9",
+        "H_initialValue" : "URL(string: \"\/this\/is\/not\/a\/valid\/url\")!"
+      },
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 943, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 944, Column: 9",
+        "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+      },
+      {
+        "A_name" : "encodingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 947, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "fileURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 941, Column: 9",
+    "H_initialValue" : "URL(string: \"\/this\/is\/not\/a\/valid\/url\")!"
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 943, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 944, Column: 9",
+    "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+  },
+  {
+    "A_name" : "encodingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 947, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "testThatStreamBodyPartHasUnexpectedLength",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 961, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "multipartFormData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 963, Column: 9",
+        "H_initialValue" : "MultipartFormData()"
+      },
+      {
+        "A_name" : "data",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 964, Column: 9",
+        "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+      },
+      {
+        "A_name" : "firstError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 966, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "secondError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MultipartFormDataTests.swift - Line: 967, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "multipartFormData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 963, Column: 9",
+    "H_initialValue" : "MultipartFormData()"
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 964, Column: 9",
+    "H_initialValue" : "Data(\"Lorem ipsum dolor sit amet.\".utf8)"
+  },
+  {
+    "A_name" : "firstError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 966, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "secondError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MultipartFormDataTests.swift - Line: 967, Column: 9",
+    "H_initialValue" : ""
+  }
+]

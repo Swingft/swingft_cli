@@ -1,0 +1,416 @@
+[
+  {
+    "A_name" : "BeIdenticalToObjectTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "XCTestCase"
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 5, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "BeIdenticalToObjectTester",
+        "B_kind" : "class",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "BeIdenticalToObjectTest.swift - Line: 6, Column: 5",
+        "G_members" : [
+
+        ]
+      },
+      {
+        "A_name" : "testObjectA",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeIdenticalToObjectTest.swift - Line: 7, Column: 5",
+        "H_initialValue" : "BeIdenticalToObjectTester()"
+      },
+      {
+        "A_name" : "testObjectB",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeIdenticalToObjectTest.swift - Line: 8, Column: 5",
+        "H_initialValue" : "BeIdenticalToObjectTester()"
+      },
+      {
+        "A_name" : "testBeIdenticalToPositive",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeIdenticalToObjectTest.swift - Line: 10, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testBeIdenticalToNegative",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeIdenticalToObjectTest.swift - Line: 14, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testBeIdenticalToPositiveMessage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeIdenticalToObjectTest.swift - Line: 18, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "message",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BeIdenticalToObjectTest.swift - Line: 19, Column: 9",
+            "H_initialValue" : "String(describing: NSString(format: \"expected to be identical to <%p>, got <%p>\",\n            unsafeBitCast(testObjectB, to: Int.self), unsafeBitCast(testObjectA, to: Int.self)))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testBeIdenticalToNegativeMessage",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeIdenticalToObjectTest.swift - Line: 26, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "message",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BeIdenticalToObjectTest.swift - Line: 27, Column: 9",
+            "H_initialValue" : "String(describing: NSString(format: \"expected to not be identical to <%p>, got <%p>\",\n            unsafeBitCast(testObjectA, to: Int.self), unsafeBitCast(testObjectA, to: Int.self)))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testFailsOnNils",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeIdenticalToObjectTest.swift - Line: 34, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "message1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BeIdenticalToObjectTest.swift - Line: 35, Column: 9",
+            "H_initialValue" : "String(describing: NSString(format: \"expected to be identical to <%p>, got nil\",\n            unsafeBitCast(testObjectA, to: Int.self)))"
+          },
+          {
+            "A_name" : "message2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "BeIdenticalToObjectTest.swift - Line: 41, Column: 9",
+            "H_initialValue" : "String(describing: NSString(format: \"expected to not be identical to <%p>, got nil\",\n            unsafeBitCast(testObjectA, to: Int.self)))"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testOperators",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeIdenticalToObjectTest.swift - Line: 48, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "BeIdenticalToObjectTester",
+    "B_kind" : "class",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 6, Column: 5",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "testObjectA",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 7, Column: 5",
+    "H_initialValue" : "BeIdenticalToObjectTester()"
+  },
+  {
+    "A_name" : "testObjectB",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 8, Column: 5",
+    "H_initialValue" : "BeIdenticalToObjectTester()"
+  },
+  {
+    "A_name" : "testBeIdenticalToPositive",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 10, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testBeIdenticalToNegative",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 14, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testBeIdenticalToPositiveMessage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 18, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "message",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeIdenticalToObjectTest.swift - Line: 19, Column: 9",
+        "H_initialValue" : "String(describing: NSString(format: \"expected to be identical to <%p>, got <%p>\",\n            unsafeBitCast(testObjectB, to: Int.self), unsafeBitCast(testObjectA, to: Int.self)))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 19, Column: 9",
+    "H_initialValue" : "String(describing: NSString(format: \"expected to be identical to <%p>, got <%p>\",\n            unsafeBitCast(testObjectB, to: Int.self), unsafeBitCast(testObjectA, to: Int.self)))"
+  },
+  {
+    "A_name" : "testBeIdenticalToNegativeMessage",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 26, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "message",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeIdenticalToObjectTest.swift - Line: 27, Column: 9",
+        "H_initialValue" : "String(describing: NSString(format: \"expected to not be identical to <%p>, got <%p>\",\n            unsafeBitCast(testObjectA, to: Int.self), unsafeBitCast(testObjectA, to: Int.self)))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 27, Column: 9",
+    "H_initialValue" : "String(describing: NSString(format: \"expected to not be identical to <%p>, got <%p>\",\n            unsafeBitCast(testObjectA, to: Int.self), unsafeBitCast(testObjectA, to: Int.self)))"
+  },
+  {
+    "A_name" : "testFailsOnNils",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 34, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "message1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeIdenticalToObjectTest.swift - Line: 35, Column: 9",
+        "H_initialValue" : "String(describing: NSString(format: \"expected to be identical to <%p>, got nil\",\n            unsafeBitCast(testObjectA, to: Int.self)))"
+      },
+      {
+        "A_name" : "message2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "BeIdenticalToObjectTest.swift - Line: 41, Column: 9",
+        "H_initialValue" : "String(describing: NSString(format: \"expected to not be identical to <%p>, got nil\",\n            unsafeBitCast(testObjectA, to: Int.self)))"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "message1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 35, Column: 9",
+    "H_initialValue" : "String(describing: NSString(format: \"expected to be identical to <%p>, got nil\",\n            unsafeBitCast(testObjectA, to: Int.self)))"
+  },
+  {
+    "A_name" : "message2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 41, Column: 9",
+    "H_initialValue" : "String(describing: NSString(format: \"expected to not be identical to <%p>, got nil\",\n            unsafeBitCast(testObjectA, to: Int.self)))"
+  },
+  {
+    "A_name" : "testOperators",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "BeIdenticalToObjectTest.swift - Line: 48, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

@@ -1,0 +1,396 @@
+[
+  {
+    "A_name" : "NotificationCenter",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ReactiveExtensionsProvider"
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 20, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "Reactive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 22, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "notifications",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FoundationExtensions.swift - Line: 33, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Notification.Name?",
+          "AnyObject?"
+        ],
+        "I_parameters" : [
+          "forName",
+          "object"
+        ],
+        "J_returnType" : "-> Signal<Notification, Never>"
+      }
+    ]
+  },
+  {
+    "A_name" : "notifications",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 33, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Notification.Name?",
+      "AnyObject?"
+    ],
+    "I_parameters" : [
+      "forName",
+      "object"
+    ],
+    "J_returnType" : "-> Signal<Notification, Never>"
+  },
+  {
+    "A_name" : "notificationObserver",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 35, Column: 4",
+    "H_initialValue" : "base.addObserver(forName: name, object: object, queue: nil) { notification in\n\t\t\t\tobserver.send(value: notification)\n\t\t\t}"
+  },
+  {
+    "A_name" : "defaultSessionError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 46, Column: 1",
+    "H_initialValue" : "NSError(domain: \"org.reactivecocoa.ReactiveSwift.Reactivity.URLSession.dataWithRequest\",\n                                          code: 1,\n                                          userInfo: nil)"
+  },
+  {
+    "A_name" : "URLSession",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ReactiveExtensionsProvider"
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 50, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "Reactive",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 52, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "data",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FoundationExtensions.swift - Line: 66, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "with"
+        ],
+        "J_returnType" : "-> SignalProducer<(Data, URLResponse), Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "data",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 66, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "with"
+    ],
+    "J_returnType" : "-> SignalProducer<(Data, URLResponse), Error>"
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 68, Column: 4",
+    "H_initialValue" : "base.dataTask(with: request) { data, response, error in\n\t\t\t\tif let data = data, let response = response {\n\t\t\t\t\tobserver.send(value: (data, response))\n\t\t\t\t\tobserver.sendCompleted()\n\t\t\t\t} else {\n\t\t\t\t\tobserver.send(error: error ?? defaultSessionError)\n\t\t\t\t}\n\t\t\t}"
+  },
+  {
+    "A_name" : "Date",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 83, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "addingTimeInterval",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FoundationExtensions.swift - Line: 84, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchTimeInterval"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Date"
+      }
+    ]
+  },
+  {
+    "A_name" : "addingTimeInterval",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 84, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchTimeInterval"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Date"
+  },
+  {
+    "A_name" : "DispatchTimeInterval",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 89, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "timeInterval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FoundationExtensions.swift - Line: 90, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "-",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static",
+          "prefix"
+        ],
+        "F_location" : "FoundationExtensions.swift - Line: 109, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchTimeInterval"
+        ],
+        "I_parameters" : [
+          "lhs"
+        ],
+        "J_returnType" : "-> DispatchTimeInterval"
+      },
+      {
+        "A_name" : "*",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "FoundationExtensions.swift - Line: 129, Column: 2",
+        "G_members" : [
+          {
+            "A_name" : "seconds",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FoundationExtensions.swift - Line: 130, Column: 3",
+            "H_initialValue" : "lhs.timeInterval * rhs"
+          },
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "FoundationExtensions.swift - Line: 131, Column: 3",
+            "H_initialValue" : ".never"
+          }
+        ],
+        "I_parameterType" : [
+          "DispatchTimeInterval",
+          "Double"
+        ],
+        "I_parameters" : [
+          "lhs",
+          "rhs"
+        ],
+        "J_returnType" : "-> DispatchTimeInterval"
+      }
+    ]
+  },
+  {
+    "A_name" : "timeInterval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 90, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "-",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static",
+      "prefix"
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 109, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchTimeInterval"
+    ],
+    "I_parameters" : [
+      "lhs"
+    ],
+    "J_returnType" : "-> DispatchTimeInterval"
+  },
+  {
+    "A_name" : "*",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 129, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "seconds",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FoundationExtensions.swift - Line: 130, Column: 3",
+        "H_initialValue" : "lhs.timeInterval * rhs"
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "FoundationExtensions.swift - Line: 131, Column: 3",
+        "H_initialValue" : ".never"
+      }
+    ],
+    "I_parameterType" : [
+      "DispatchTimeInterval",
+      "Double"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> DispatchTimeInterval"
+  },
+  {
+    "A_name" : "seconds",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 130, Column: 3",
+    "H_initialValue" : "lhs.timeInterval * rhs"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "FoundationExtensions.swift - Line: 131, Column: 3",
+    "H_initialValue" : ".never"
+  }
+]

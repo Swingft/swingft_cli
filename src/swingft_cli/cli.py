@@ -17,27 +17,9 @@ from swingft_cli.commands.obfuscate_cmd import handle_obfuscate
 # from swingft_cli.commands.debug_report_cmd import handle_debug_report  # 디버깅 심볼 기능 연결 해제
 
 # ------------------------------
-# Preflight: exception_list.json vs swingft_config.json overlap check
+# Preflight: ast_node.json vs swingft_config.json overlap check
 # ------------------------------
 
-def _flatten_exception_list(ex_list):
-    """Convert our agreed exception JSON array into {kind: set(names)}.
-    Each item is a dict with at least A_name and B_kind. Property is normalized to variable.
-    """
-    by_kind = {}
-    if not isinstance(ex_list, list):
-        return {}
-    for item in ex_list:
-        if not isinstance(item, dict):
-            continue
-        name = str(item.get("A_name", "")).strip()
-        kind = str(item.get("B_kind", "")).strip().lower()
-        if not name or not kind:
-            continue
-        if kind == "property":
-            kind = "variable"
-        by_kind.setdefault(kind, set()).add(name)
-    return by_kind
 
 
 def _collect_config_sets(cfg: dict):
@@ -60,19 +42,19 @@ def _collect_config_sets(cfg: dict):
     }
 
 
-def _preflight_check_exceptions(config_path: Path, exception_path: Path, *, fail_on_conflict: bool = False):
-    """Load config & exception JSON, report overlaps. Optionally abort on conflicts."""
-    if not exception_path.exists():
-        print(f"[preflight] warning: exception list not found: {exception_path}")
+def _preflight_check_exceptions(config_path: Path, ast_path: Path, *, fail_on_conflict: bool = False):
+    """Load config & ast_node JSON, report overlaps. Optionally abort on conflicts."""
+    if not ast_path.exists():
+        print(f"[preflight] warning: AST node file not found: {ast_path}")
         return
     if not config_path.exists():
         print(f"[preflight] warning: config not found: {config_path}")
         return
 
     try:
-        ex_list = json.loads(exception_path.read_text(encoding="utf-8"))
+        ast_list = json.loads(ast_path.read_text(encoding="utf-8"))
     except Exception as e:
-        print(f"[preflight] warning: malformed exception list ({exception_path}): {e}")
+        print(f"[preflight] warning: malformed AST node file ({ast_path}): {e}")
         return
 
     try:
@@ -81,13 +63,17 @@ def _preflight_check_exceptions(config_path: Path, exception_path: Path, *, fail
         print(f"[preflight] warning: malformed config ({config_path}): {e}")
         return
 
-    ex_by_kind = _flatten_exception_list(ex_list)
-    cfg_sets = _collect_config_sets(cfg)
-
-    # Build one big set of exception names (name-only comparison)
+    # Extract excluded identifiers from AST nodes (isException: 1)
     exc_all_names = set()
-    for names in ex_by_kind.values():
-        exc_all_names.update(names)
+    if isinstance(ast_list, list):
+        for item in ast_list:
+            if isinstance(item, dict):
+                name = str(item.get("A_name", "")).strip()
+                is_exception = item.get("isException", 0)
+                if name and is_exception == 1:
+                    exc_all_names.add(name)
+
+    cfg_sets = _collect_config_sets(cfg)
 
     conflicts = {
         "obf_include_vs_exception": cfg_sets["inc_obf"] & exc_all_names,
@@ -98,7 +84,7 @@ def _preflight_check_exceptions(config_path: Path, exception_path: Path, *, fail
 
     any_conflict = any(conflicts[k] for k in conflicts)
     if any_conflict:
-        print("\n[preflight] ⚠️  예외 대상과 config 겹침 발견")
+        print("\n[preflight] ⚠️  제외 대상과 config 겹침 발견")
         for key, vals in conflicts.items():
             if vals:
                 sample = ", ".join(sorted(list(vals))[:10])
@@ -106,7 +92,7 @@ def _preflight_check_exceptions(config_path: Path, exception_path: Path, *, fail
         if fail_on_conflict:
             raise SystemExit("[preflight] conflicts detected; aborting due to fail_on_conflict=True")
     else:
-        print("[preflight] 예외 대상과 config 충돌 없음 ✅")
+        print("[preflight] 제외 대상과 config 충돌 없음 ✅")
 
 def main():
     parser = argparse.ArgumentParser(description="Swingft CLI")
@@ -122,6 +108,8 @@ def main():
                                   help='Path to config JSON (default when flag present: swingft_config.json)')
     obfuscate_parser.add_argument('--check-rules', action='store_true',
                                   help='Scan project and print which identifiers from config are present')
+    obfuscate_parser.add_argument('--encryption-only', action='store_true',
+                                  help='Show only encryption-related logs')
 
     # Debug-symbol report command 비활성화: 난독화 파이프라인으로 이관됨
     # report_parser = subparsers.add_parser('report-debug-symbols', help='디버깅 심볼을 찾아 리포트를 생성합니다.')

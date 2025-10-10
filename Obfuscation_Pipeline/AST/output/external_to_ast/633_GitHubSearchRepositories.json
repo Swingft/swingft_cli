@@ -1,0 +1,512 @@
+[
+  {
+    "A_name" : "GitHubCommand",
+    "B_kind" : "enum",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 9, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "changeSearch",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 10, Column: 10",
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "text"
+        ]
+      },
+      {
+        "A_name" : "loadMoreItems",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 11, Column: 10",
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "gitHubResponseReceived",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 12, Column: 10",
+        "I_parameterType" : [
+          "SearchRepositoriesResponse"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "GitHubSearchRepositoriesState",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 15, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "searchText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 17, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "shouldLoadNextPage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 18, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "repositories",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 19, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "nextURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 20, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "failure",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 21, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 23, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "searchText"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "searchText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 17, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "shouldLoadNextPage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 18, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "repositories",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 19, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "nextURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 20, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "failure",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 21, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 23, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "searchText"
+    ]
+  },
+  {
+    "A_name" : "GitHubSearchRepositoriesState",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 32, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "initial",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 33, Column: 5",
+        "H_initialValue" : "GitHubSearchRepositoriesState(searchText: \"\")"
+      },
+      {
+        "A_name" : "reduce",
+        "B_kind" : "function",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 35, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "GitHubSearchRepositoriesState",
+          "GitHubCommand"
+        ],
+        "I_parameters" : [
+          "state",
+          "command"
+        ],
+        "J_returnType" : "-> GitHubSearchRepositoriesState"
+      }
+    ]
+  },
+  {
+    "A_name" : "initial",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 33, Column: 5",
+    "H_initialValue" : "GitHubSearchRepositoriesState(searchText: \"\")"
+  },
+  {
+    "A_name" : "reduce",
+    "B_kind" : "function",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 35, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "GitHubSearchRepositoriesState",
+      "GitHubCommand"
+    ],
+    "I_parameters" : [
+      "state",
+      "command"
+    ],
+    "J_returnType" : "-> GitHubSearchRepositoriesState"
+  },
+  {
+    "A_name" : "GithubQuery",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Equatable"
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 64, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "searchText",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 65, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "shouldLoadNextPage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 66, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "nextURL",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 67, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "searchText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 65, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "shouldLoadNextPage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 66, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "nextURL",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 67, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "githubSearchRepositories",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 74, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "searchPerformerFeedback",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 82, Column: 5",
+        "H_initialValue" : "react(\n        query: { (state) in\n            GithubQuery(searchText: state.searchText, shouldLoadNextPage: state.shouldLoadNextPage, nextURL: state.nextURL)\n        },\n        effects: { query -> Signal<GitHubCommand> in\n                if !query.shouldLoadNextPage {\n                    return Signal.empty()\n                }\n\n                if query.searchText.isEmpty {\n                    return Signal.just(GitHubCommand.gitHubResponseReceived(.success((repositories: [], nextURL: nil))))\n                }\n\n                guard let nextURL = query.nextURL else {\n                    return Signal.empty()\n                }\n\n                return performSearch(nextURL)\n                    .asSignal(onErrorJustReturn: .failure(GitHubServiceError.networkError))\n                    .map(GitHubCommand.gitHubResponseReceived)\n            }\n    )"
+      },
+      {
+        "A_name" : "inputFeedbackLoop",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 106, Column: 5",
+        "H_initialValue" : "{ state in\n        let loadNextPage = loadNextPageTrigger(state).map { _ in GitHubCommand.loadMoreItems }\n        let searchText = searchText.map(GitHubCommand.changeSearch)\n\n        return Signal.merge(loadNextPage, searchText)\n    }"
+      }
+    ],
+    "I_parameterType" : [
+      "Signal<String>",
+      "@escaping (Driver<GitHubSearchRepositoriesState>) -> Signal<()>",
+      "@escaping (URL) -> Observable<SearchRepositoriesResponse>"
+    ],
+    "I_parameters" : [
+      "searchText",
+      "loadNextPageTrigger",
+      "performSearch"
+    ],
+    "J_returnType" : "-> Driver<GitHubSearchRepositoriesState>"
+  },
+  {
+    "A_name" : "searchPerformerFeedback",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 82, Column: 5",
+    "H_initialValue" : "react(\n        query: { (state) in\n            GithubQuery(searchText: state.searchText, shouldLoadNextPage: state.shouldLoadNextPage, nextURL: state.nextURL)\n        },\n        effects: { query -> Signal<GitHubCommand> in\n                if !query.shouldLoadNextPage {\n                    return Signal.empty()\n                }\n\n                if query.searchText.isEmpty {\n                    return Signal.just(GitHubCommand.gitHubResponseReceived(.success((repositories: [], nextURL: nil))))\n                }\n\n                guard let nextURL = query.nextURL else {\n                    return Signal.empty()\n                }\n\n                return performSearch(nextURL)\n                    .asSignal(onErrorJustReturn: .failure(GitHubServiceError.networkError))\n                    .map(GitHubCommand.gitHubResponseReceived)\n            }\n    )"
+  },
+  {
+    "A_name" : "inputFeedbackLoop",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 106, Column: 5",
+    "H_initialValue" : "{ state in\n        let loadNextPage = loadNextPageTrigger(state).map { _ in GitHubCommand.loadMoreItems }\n        let searchText = searchText.map(GitHubCommand.changeSearch)\n\n        return Signal.merge(loadNextPage, searchText)\n    }"
+  },
+  {
+    "A_name" : "loadNextPage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 107, Column: 9",
+    "H_initialValue" : "loadNextPageTrigger(state).map { _ in GitHubCommand.loadMoreItems }"
+  },
+  {
+    "A_name" : "searchText",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 108, Column: 9",
+    "H_initialValue" : "searchText.map(GitHubCommand.changeSearch)"
+  },
+  {
+    "A_name" : "GitHubSearchRepositoriesState",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 123, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "isOffline",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 124, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "isLimitExceeded",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "GitHubSearchRepositories.swift - Line: 137, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "isOffline",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 124, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "isLimitExceeded",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 137, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "GitHubSearchRepositoriesState",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Mutable"
+    ],
+    "F_location" : "GitHubSearchRepositories.swift - Line: 151, Column: 1",
+    "G_members" : [
+
+    ]
+  }
+]

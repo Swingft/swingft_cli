@@ -1,0 +1,211 @@
+[
+  {
+    "A_name" : "Operators",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "LazyMap.swift - Line: 1, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "LazyMap",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UnaryAsyncOperator<Value, NewValue, Error>"
+    ],
+    "F_location" : "LazyMap.swift - Line: 2, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "transform",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LazyMap.swift - Line: 3, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "box",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LazyMap.swift - Line: 4, Column: 3",
+        "H_initialValue" : "Atomic<Value?>(nil)"
+      },
+      {
+        "A_name" : "valueDisposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LazyMap.swift - Line: 5, Column: 4",
+        "H_initialValue" : "SerialDisposable()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "LazyMap.swift - Line: 7, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer<NewValue, Error>",
+          "Lifetime",
+          "Scheduler",
+          "@escaping (Value) -> NewValue"
+        ],
+        "I_parameters" : [
+          "downstream",
+          "downstreamLifetime",
+          "target",
+          "transform"
+        ]
+      },
+      {
+        "A_name" : "receive",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LazyMap.swift - Line: 19, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Value"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "terminate",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "LazyMap.swift - Line: 30, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Termination<Error>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "transform",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LazyMap.swift - Line: 3, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "box",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LazyMap.swift - Line: 4, Column: 3",
+    "H_initialValue" : "Atomic<Value?>(nil)"
+  },
+  {
+    "A_name" : "valueDisposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LazyMap.swift - Line: 5, Column: 4",
+    "H_initialValue" : "SerialDisposable()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "LazyMap.swift - Line: 7, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer<NewValue, Error>",
+      "Lifetime",
+      "Scheduler",
+      "@escaping (Value) -> NewValue"
+    ],
+    "I_parameters" : [
+      "downstream",
+      "downstreamLifetime",
+      "target",
+      "transform"
+    ]
+  },
+  {
+    "A_name" : "receive",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LazyMap.swift - Line: 19, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Value"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "terminate",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "LazyMap.swift - Line: 30, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Termination<Error>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  }
+]

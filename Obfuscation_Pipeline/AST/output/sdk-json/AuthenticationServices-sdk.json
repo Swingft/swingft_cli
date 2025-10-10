@@ -1,0 +1,4344 @@
+{
+  "ASAccountAuthenticationModificationController": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAccountAuthenticationModificationController",
+    "members": {
+      "delegate": {
+        "kind": "Var",
+        "type": "delegate",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationController(py)delegate"
+      },
+      "presentationContextProvider": {
+        "kind": "Var",
+        "type": "presentationContextProvider",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationController(py)presentationContextProvider"
+      },
+      "perform": {
+        "kind": "Func",
+        "type": "perform(_:)",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationController(im)performRequest:"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "ASAccountAuthenticationModificationControllerDelegate": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAccountAuthenticationModificationControllerDelegate",
+    "members": {
+      "accountAuthenticationModificationController": {
+        "kind": "Func",
+        "type": "accountAuthenticationModificationController(_:didFail:error:)",
+        "usr": "c:objc(pl)ASAccountAuthenticationModificationControllerDelegate(im)accountAuthenticationModificationController:didFailRequest:withError:"
+      }
+    }
+  },
+  "ASAccountAuthenticationModificationControllerPresentationContextProviding": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAccountAuthenticationModificationControllerPresentationContextProviding",
+    "members": {
+      "presentationAnchor": {
+        "kind": "Func",
+        "type": "presentationAnchor(for:)",
+        "usr": "c:objc(pl)ASAccountAuthenticationModificationControllerPresentationContextProviding(im)presentationAnchorForAccountAuthenticationModificationController:"
+      }
+    }
+  },
+  "ASAccountAuthenticationModificationExtensionContext": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAccountAuthenticationModificationExtensionContext",
+    "members": {
+      "getSignInWithAppleUpgradeAuthorization": {
+        "kind": "Func",
+        "type": "getSignInWithAppleUpgradeAuthorization(state:nonce:completionHandler:)",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationExtensionContext(im)getSignInWithAppleUpgradeAuthorizationWithState:nonce:completionHandler:"
+      },
+      "requestSignInWithAppleUpgradeAuthorization": {
+        "kind": "Func",
+        "type": "requestSignInWithAppleUpgradeAuthorization(state:nonce:)",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationExtensionContext(im)getSignInWithAppleUpgradeAuthorizationWithState:nonce:completionHandler:"
+      },
+      "completeUpgradeToSignInWithApple": {
+        "kind": "Func",
+        "type": "completeUpgradeToSignInWithApple(userInfo:)",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationExtensionContext(im)completeUpgradeToSignInWithAppleWithUserInfo:"
+      },
+      "completeChangePasswordRequest": {
+        "kind": "Func",
+        "type": "completeChangePasswordRequest(updatedCredential:userInfo:)",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationExtensionContext(im)completeChangePasswordRequestWithUpdatedCredential:userInfo:"
+      },
+      "cancelRequest": {
+        "kind": "Func",
+        "type": "cancelRequest(withError:)",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationExtensionContext(im)cancelRequestWithError:"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "ASAccountAuthenticationModificationReplacePasswordWithSignInWithAppleRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAccountAuthenticationModificationReplacePasswordWithSignInWithAppleRequest",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "user": {
+        "kind": "Var",
+        "type": "user",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationReplacePasswordWithSignInWithAppleRequest(py)user"
+      },
+      "serviceIdentifier": {
+        "kind": "Var",
+        "type": "serviceIdentifier",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationReplacePasswordWithSignInWithAppleRequest(py)serviceIdentifier"
+      },
+      "userInfo": {
+        "kind": "Var",
+        "type": "userInfo",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationReplacePasswordWithSignInWithAppleRequest(py)userInfo"
+      }
+    }
+  },
+  "ASAccountAuthenticationModificationRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAccountAuthenticationModificationRequest",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "ASAccountAuthenticationModificationUpgradePasswordToStrongPasswordRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAccountAuthenticationModificationUpgradePasswordToStrongPasswordRequest",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "user": {
+        "kind": "Var",
+        "type": "user",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationUpgradePasswordToStrongPasswordRequest(py)user"
+      },
+      "serviceIdentifier": {
+        "kind": "Var",
+        "type": "serviceIdentifier",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationUpgradePasswordToStrongPasswordRequest(py)serviceIdentifier"
+      },
+      "userInfo": {
+        "kind": "Var",
+        "type": "userInfo",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationUpgradePasswordToStrongPasswordRequest(py)userInfo"
+      }
+    }
+  },
+  "ASAccountAuthenticationModificationViewController": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAccountAuthenticationModificationViewController",
+    "members": {
+      "extensionContext": {
+        "kind": "Var",
+        "type": "extensionContext",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationViewController(py)extensionContext"
+      },
+      "convertAccountToSignInWithAppleWithoutUserInteraction": {
+        "kind": "Func",
+        "type": "convertAccountToSignInWithAppleWithoutUserInteraction(for:existingCredential:userInfo:)",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationViewController(im)convertAccountToSignInWithAppleWithoutUserInteractionForServiceIdentifier:existingCredential:userInfo:"
+      },
+      "prepareInterfaceToConvertAccountToSignInWithApple": {
+        "kind": "Func",
+        "type": "prepareInterfaceToConvertAccountToSignInWithApple(for:existingCredential:userInfo:)",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationViewController(im)prepareInterfaceToConvertAccountToSignInWithAppleForServiceIdentifier:existingCredential:userInfo:"
+      },
+      "changePasswordWithoutUserInteraction": {
+        "kind": "Func",
+        "type": "changePasswordWithoutUserInteraction(for:existingCredential:newPassword:userInfo:)",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationViewController(im)changePasswordWithoutUserInteractionForServiceIdentifier:existingCredential:newPassword:userInfo:"
+      },
+      "prepareInterfaceToChangePassword": {
+        "kind": "Func",
+        "type": "prepareInterfaceToChangePassword(for:existingCredential:newPassword:userInfo:)",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationViewController(im)prepareInterfaceToChangePasswordForServiceIdentifier:existingCredential:newPassword:userInfo:"
+      },
+      "cancelRequest": {
+        "kind": "Func",
+        "type": "cancelRequest()",
+        "usr": "c:objc(cs)ASAccountAuthenticationModificationViewController(im)cancelRequest"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "ASAuthorization": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorization",
+    "members": {
+      "provider": {
+        "kind": "Var",
+        "type": "provider",
+        "usr": "c:objc(cs)ASAuthorization(py)provider"
+      },
+      "credential": {
+        "kind": "Var",
+        "type": "credential",
+        "usr": "c:objc(cs)ASAuthorization(py)credential"
+      }
+    }
+  },
+  "OpenIDOperation": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "c:@T@ASAuthorizationOpenIDOperation",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So30ASAuthorizationOpenIDOperationa8rawValueABSS_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So30ASAuthorizationOpenIDOperationa8rawValueSSvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So30ASAuthorizationOpenIDOperationa8RawValuea"
+      },
+      "_ObjectiveCType": {
+        "kind": "TypeAlias",
+        "type": "_ObjectiveCType",
+        "usr": "s:So30ASAuthorizationOpenIDOperationa15_ObjectiveCTypea"
+      },
+      "operationImplicit": {
+        "kind": "Var",
+        "type": "operationImplicit",
+        "usr": "c:@ASAuthorizationOperationImplicit"
+      },
+      "operationLogin": {
+        "kind": "Var",
+        "type": "operationLogin",
+        "usr": "c:@ASAuthorizationOperationLogin"
+      },
+      "operationRefresh": {
+        "kind": "Var",
+        "type": "operationRefresh",
+        "usr": "c:@ASAuthorizationOperationRefresh"
+      },
+      "operationLogout": {
+        "kind": "Var",
+        "type": "operationLogout",
+        "usr": "c:@ASAuthorizationOperationLogout"
+      }
+    }
+  },
+  "Scope": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "c:@T@ASAuthorizationScope",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So20ASAuthorizationScopea8rawValueABSS_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So20ASAuthorizationScopea8rawValueSSvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So20ASAuthorizationScopea8RawValuea"
+      },
+      "_ObjectiveCType": {
+        "kind": "TypeAlias",
+        "type": "_ObjectiveCType",
+        "usr": "s:So20ASAuthorizationScopea15_ObjectiveCTypea"
+      },
+      "fullName": {
+        "kind": "Var",
+        "type": "fullName",
+        "usr": "c:@ASAuthorizationScopeFullName"
+      },
+      "email": {
+        "kind": "Var",
+        "type": "email",
+        "usr": "c:@ASAuthorizationScopeEmail"
+      }
+    }
+  },
+  "ASAuthorizationAppleIDButton": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationAppleIDButton",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "cornerRadius": {
+        "kind": "Var",
+        "type": "cornerRadius",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDButton(py)cornerRadius"
+      },
+      "ButtonType": {
+        "kind": "Enum",
+        "type": "ButtonType",
+        "usr": "c:@E@ASAuthorizationAppleIDButtonType"
+      },
+      "Style": {
+        "kind": "Enum",
+        "type": "Style",
+        "usr": "c:@E@ASAuthorizationAppleIDButtonStyle"
+      }
+    }
+  },
+  "ButtonType": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASAuthorizationAppleIDButtonType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So32ASAuthorizationAppleIDButtonTypeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So32ASAuthorizationAppleIDButtonTypeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So32ASAuthorizationAppleIDButtonTypeV8RawValuea"
+      },
+      "signIn": {
+        "kind": "EnumElement",
+        "type": "signIn",
+        "usr": "c:@E@ASAuthorizationAppleIDButtonType@ASAuthorizationAppleIDButtonTypeSignIn"
+      },
+      "continue": {
+        "kind": "EnumElement",
+        "type": "continue",
+        "usr": "c:@E@ASAuthorizationAppleIDButtonType@ASAuthorizationAppleIDButtonTypeContinue"
+      },
+      "signUp": {
+        "kind": "EnumElement",
+        "type": "signUp",
+        "usr": "c:@E@ASAuthorizationAppleIDButtonType@ASAuthorizationAppleIDButtonTypeSignUp"
+      },
+      "default": {
+        "kind": "Var",
+        "type": "default",
+        "usr": "c:@E@ASAuthorizationAppleIDButtonType@ASAuthorizationAppleIDButtonTypeDefault"
+      }
+    }
+  },
+  "Style": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASAuthorizationAppleIDButtonStyle",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So33ASAuthorizationAppleIDButtonStyleV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So33ASAuthorizationAppleIDButtonStyleV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So33ASAuthorizationAppleIDButtonStyleV8RawValuea"
+      },
+      "white": {
+        "kind": "EnumElement",
+        "type": "white",
+        "usr": "c:@E@ASAuthorizationAppleIDButtonStyle@ASAuthorizationAppleIDButtonStyleWhite"
+      },
+      "whiteOutline": {
+        "kind": "EnumElement",
+        "type": "whiteOutline",
+        "usr": "c:@E@ASAuthorizationAppleIDButtonStyle@ASAuthorizationAppleIDButtonStyleWhiteOutline"
+      },
+      "black": {
+        "kind": "EnumElement",
+        "type": "black",
+        "usr": "c:@E@ASAuthorizationAppleIDButtonStyle@ASAuthorizationAppleIDButtonStyleBlack"
+      }
+    }
+  },
+  "ASAuthorizationAppleIDCredential": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationAppleIDCredential",
+    "members": {
+      "user": {
+        "kind": "Var",
+        "type": "user",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDCredential(py)user"
+      },
+      "state": {
+        "kind": "Var",
+        "type": "state",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDCredential(py)state"
+      },
+      "authorizedScopes": {
+        "kind": "Var",
+        "type": "authorizedScopes",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDCredential(py)authorizedScopes"
+      },
+      "authorizationCode": {
+        "kind": "Var",
+        "type": "authorizationCode",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDCredential(py)authorizationCode"
+      },
+      "identityToken": {
+        "kind": "Var",
+        "type": "identityToken",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDCredential(py)identityToken"
+      },
+      "email": {
+        "kind": "Var",
+        "type": "email",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDCredential(py)email"
+      },
+      "fullName": {
+        "kind": "Var",
+        "type": "fullName",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDCredential(py)fullName"
+      },
+      "realUserStatus": {
+        "kind": "Var",
+        "type": "realUserStatus",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDCredential(py)realUserStatus"
+      },
+      "userAgeRange": {
+        "kind": "Var",
+        "type": "userAgeRange",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDCredential(py)userAgeRange"
+      }
+    }
+  },
+  "ASAuthorizationAppleIDProvider": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationAppleIDProvider",
+    "members": {
+      "createRequest": {
+        "kind": "Func",
+        "type": "createRequest()",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDProvider(im)createRequest"
+      },
+      "getCredentialState": {
+        "kind": "Func",
+        "type": "getCredentialState(forUserID:completion:)",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDProvider(im)getCredentialStateForUserID:completion:"
+      },
+      "credentialState": {
+        "kind": "Func",
+        "type": "credentialState(forUserID:)",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDProvider(im)getCredentialStateForUserID:completion:"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "CredentialState": {
+        "kind": "Enum",
+        "type": "CredentialState",
+        "usr": "c:@E@ASAuthorizationAppleIDProviderCredentialState"
+      },
+      "credentialRevokedNotification": {
+        "kind": "Var",
+        "type": "credentialRevokedNotification",
+        "usr": "c:@ASAuthorizationAppleIDProviderCredentialRevokedNotification"
+      }
+    }
+  },
+  "CredentialState": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASAuthorizationAppleIDProviderCredentialState",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So45ASAuthorizationAppleIDProviderCredentialStateV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So45ASAuthorizationAppleIDProviderCredentialStateV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So45ASAuthorizationAppleIDProviderCredentialStateV8RawValuea"
+      },
+      "revoked": {
+        "kind": "EnumElement",
+        "type": "revoked",
+        "usr": "c:@E@ASAuthorizationAppleIDProviderCredentialState@ASAuthorizationAppleIDProviderCredentialRevoked"
+      },
+      "authorized": {
+        "kind": "EnumElement",
+        "type": "authorized",
+        "usr": "c:@E@ASAuthorizationAppleIDProviderCredentialState@ASAuthorizationAppleIDProviderCredentialAuthorized"
+      },
+      "notFound": {
+        "kind": "EnumElement",
+        "type": "notFound",
+        "usr": "c:@E@ASAuthorizationAppleIDProviderCredentialState@ASAuthorizationAppleIDProviderCredentialNotFound"
+      },
+      "transferred": {
+        "kind": "EnumElement",
+        "type": "transferred",
+        "usr": "c:@E@ASAuthorizationAppleIDProviderCredentialState@ASAuthorizationAppleIDProviderCredentialTransferred"
+      }
+    }
+  },
+  "ASAuthorizationAppleIDRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationAppleIDRequest",
+    "members": {
+      "user": {
+        "kind": "Var",
+        "type": "user",
+        "usr": "c:objc(cs)ASAuthorizationAppleIDRequest(py)user"
+      }
+    }
+  },
+  "ASAuthorizationController": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationController",
+    "members": {
+      "authorizationRequests": {
+        "kind": "Var",
+        "type": "authorizationRequests",
+        "usr": "c:objc(cs)ASAuthorizationController(py)authorizationRequests"
+      },
+      "delegate": {
+        "kind": "Var",
+        "type": "delegate",
+        "usr": "c:objc(cs)ASAuthorizationController(py)delegate"
+      },
+      "presentationContextProvider": {
+        "kind": "Var",
+        "type": "presentationContextProvider",
+        "usr": "c:objc(cs)ASAuthorizationController(py)presentationContextProvider"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(authorizationRequests:)",
+        "usr": "c:objc(cs)ASAuthorizationController(im)initWithAuthorizationRequests:"
+      },
+      "performRequests": {
+        "kind": "Func",
+        "type": "performRequests(options:)",
+        "usr": "c:objc(cs)ASAuthorizationController(im)performRequestsWithOptions:"
+      },
+      "performAutoFillAssistedRequests": {
+        "kind": "Func",
+        "type": "performAutoFillAssistedRequests()",
+        "usr": "c:objc(cs)ASAuthorizationController(im)performAutoFillAssistedRequests"
+      },
+      "cancel": {
+        "kind": "Func",
+        "type": "cancel()",
+        "usr": "c:objc(cs)ASAuthorizationController(im)cancel"
+      }
+    }
+  },
+  "RequestOptions": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASAuthorizationControllerRequestOptions",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So39ASAuthorizationControllerRequestOptionsV8rawValueABSu_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So39ASAuthorizationControllerRequestOptionsV8rawValueSuvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So39ASAuthorizationControllerRequestOptionsV8RawValuea"
+      },
+      "Element": {
+        "kind": "TypeAlias",
+        "type": "Element",
+        "usr": "s:So39ASAuthorizationControllerRequestOptionsV7Elementa"
+      },
+      "ArrayLiteralElement": {
+        "kind": "TypeAlias",
+        "type": "ArrayLiteralElement",
+        "usr": "s:So39ASAuthorizationControllerRequestOptionsV19ArrayLiteralElementa"
+      },
+      "preferImmediatelyAvailableCredentials": {
+        "kind": "Var",
+        "type": "preferImmediatelyAvailableCredentials",
+        "usr": "c:@E@ASAuthorizationControllerRequestOptions@ASAuthorizationControllerRequestOptionPreferImmediatelyAvailableCredentials"
+      }
+    }
+  },
+  "ASAuthorizationControllerDelegate": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationControllerDelegate",
+    "members": {
+      "authorizationController": {
+        "kind": "Func",
+        "type": "authorizationController(controller:didCompleteWithError:)",
+        "usr": "c:objc(pl)ASAuthorizationControllerDelegate(im)authorizationController:didCompleteWithError:"
+      }
+    }
+  },
+  "ASAuthorizationControllerPresentationContextProviding": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationControllerPresentationContextProviding",
+    "members": {
+      "presentationAnchor": {
+        "kind": "Func",
+        "type": "presentationAnchor(for:)",
+        "usr": "c:objc(pl)ASAuthorizationControllerPresentationContextProviding(im)presentationAnchorForAuthorizationController:"
+      }
+    }
+  },
+  "ASAuthorizationCredential": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationCredential",
+    "members": {}
+  },
+  "ASAuthorizationError": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:SC20ASAuthorizationErrorLeV",
+    "members": {
+      "_nsError": {
+        "kind": "Var",
+        "type": "_nsError",
+        "usr": "s:SC20ASAuthorizationErrorLeV03_nsB0So7NSErrorCvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_nsError:)",
+        "usr": "s:SC20ASAuthorizationErrorLeV03_nsB0ABSo7NSErrorC_tcfc"
+      },
+      "errorDomain": {
+        "kind": "Var",
+        "type": "errorDomain",
+        "usr": "s:SC20ASAuthorizationErrorLeV11errorDomainSSvpZ"
+      },
+      "Code": {
+        "kind": "Enum",
+        "type": "Code",
+        "usr": "c:@E@ASAuthorizationError"
+      },
+      "unknown": {
+        "kind": "Var",
+        "type": "unknown",
+        "usr": "s:SC20ASAuthorizationErrorLeV7unknownSoAAVvpZ"
+      },
+      "canceled": {
+        "kind": "Var",
+        "type": "canceled",
+        "usr": "s:SC20ASAuthorizationErrorLeV8canceledSoAAVvpZ"
+      },
+      "invalidResponse": {
+        "kind": "Var",
+        "type": "invalidResponse",
+        "usr": "s:SC20ASAuthorizationErrorLeV15invalidResponseSoAAVvpZ"
+      },
+      "notHandled": {
+        "kind": "Var",
+        "type": "notHandled",
+        "usr": "s:SC20ASAuthorizationErrorLeV10notHandledSoAAVvpZ"
+      },
+      "failed": {
+        "kind": "Var",
+        "type": "failed",
+        "usr": "s:SC20ASAuthorizationErrorLeV6failedSoAAVvpZ"
+      },
+      "notInteractive": {
+        "kind": "Var",
+        "type": "notInteractive",
+        "usr": "s:SC20ASAuthorizationErrorLeV14notInteractiveSoAAVvpZ"
+      },
+      "matchedExcludedCredential": {
+        "kind": "Var",
+        "type": "matchedExcludedCredential",
+        "usr": "s:SC20ASAuthorizationErrorLeV25matchedExcludedCredentialSoAAVvpZ"
+      },
+      "credentialImport": {
+        "kind": "Var",
+        "type": "credentialImport",
+        "usr": "s:SC20ASAuthorizationErrorLeV16credentialImportSoAAVvpZ"
+      },
+      "credentialExport": {
+        "kind": "Var",
+        "type": "credentialExport",
+        "usr": "s:SC20ASAuthorizationErrorLeV16credentialExportSoAAVvpZ"
+      }
+    }
+  },
+  "Code": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASWebAuthenticationSessionErrorCode",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So35ASWebAuthenticationSessionErrorCodeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So35ASWebAuthenticationSessionErrorCodeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So35ASWebAuthenticationSessionErrorCodeV8RawValuea"
+      },
+      "_ErrorType": {
+        "kind": "TypeAlias",
+        "type": "_ErrorType",
+        "usr": "c:@E@ASWebAuthenticationSessionErrorCode"
+      },
+      "canceledLogin": {
+        "kind": "EnumElement",
+        "type": "canceledLogin",
+        "usr": "c:@E@ASWebAuthenticationSessionErrorCode@ASWebAuthenticationSessionErrorCodeCanceledLogin"
+      },
+      "presentationContextNotProvided": {
+        "kind": "EnumElement",
+        "type": "presentationContextNotProvided",
+        "usr": "c:@E@ASWebAuthenticationSessionErrorCode@ASWebAuthenticationSessionErrorCodePresentationContextNotProvided"
+      },
+      "presentationContextInvalid": {
+        "kind": "EnumElement",
+        "type": "presentationContextInvalid",
+        "usr": "c:@E@ASWebAuthenticationSessionErrorCode@ASWebAuthenticationSessionErrorCodePresentationContextInvalid"
+      }
+    }
+  },
+  "ASAuthorizationOpenIDRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationOpenIDRequest",
+    "members": {
+      "requestedScopes": {
+        "kind": "Var",
+        "type": "requestedScopes",
+        "usr": "c:objc(cs)ASAuthorizationOpenIDRequest(py)requestedScopes"
+      },
+      "state": {
+        "kind": "Var",
+        "type": "state",
+        "usr": "c:objc(cs)ASAuthorizationOpenIDRequest(py)state"
+      },
+      "nonce": {
+        "kind": "Var",
+        "type": "nonce",
+        "usr": "c:objc(cs)ASAuthorizationOpenIDRequest(py)nonce"
+      },
+      "requestedOperation": {
+        "kind": "Var",
+        "type": "requestedOperation",
+        "usr": "c:objc(cs)ASAuthorizationOpenIDRequest(py)requestedOperation"
+      }
+    }
+  },
+  "ASAuthorizationPasswordProvider": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationPasswordProvider",
+    "members": {
+      "createRequest": {
+        "kind": "Func",
+        "type": "createRequest()",
+        "usr": "c:objc(cs)ASAuthorizationPasswordProvider(im)createRequest"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "ASAuthorizationPasswordRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationPasswordRequest",
+    "members": {}
+  },
+  "ASAuthorizationPlatformPublicKeyCredentialAssertion": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationPlatformPublicKeyCredentialAssertion",
+    "members": {
+      "attachment": {
+        "kind": "Var",
+        "type": "attachment",
+        "usr": "c:objc(cs)ASAuthorizationPlatformPublicKeyCredentialAssertion(py)attachment"
+      },
+      "largeBlob": {
+        "kind": "Var",
+        "type": "largeBlob",
+        "usr": "s:So51ASAuthorizationPlatformPublicKeyCredentialAssertionC22AuthenticationServicesE9largeBlobAC0acde5LargejF6OutputVSgvp"
+      },
+      "prf": {
+        "kind": "Var",
+        "type": "prf",
+        "usr": "s:So51ASAuthorizationPlatformPublicKeyCredentialAssertionC22AuthenticationServicesE3prfAC0acdE18PRFAssertionOutputVSgvp"
+      }
+    }
+  },
+  "ASAuthorizationPlatformPublicKeyCredentialAssertionRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationPlatformPublicKeyCredentialAssertionRequest",
+    "members": {
+      "allowedCredentials": {
+        "kind": "Var",
+        "type": "allowedCredentials",
+        "usr": "c:objc(cs)ASAuthorizationPlatformPublicKeyCredentialAssertionRequest(py)allowedCredentials"
+      },
+      "prf": {
+        "kind": "Var",
+        "type": "prf",
+        "usr": "s:So58ASAuthorizationPlatformPublicKeyCredentialAssertionRequestC22AuthenticationServicesE3prfAC0acdE17PRFAssertionInputVSgvp"
+      },
+      "largeBlob": {
+        "kind": "Var",
+        "type": "largeBlob",
+        "usr": "s:So58ASAuthorizationPlatformPublicKeyCredentialAssertionRequestC22AuthenticationServicesE9largeBlobAC0acde5LargekF5InputVSgvp"
+      }
+    }
+  },
+  "ASAuthorizationPlatformPublicKeyCredentialDescriptor": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationPlatformPublicKeyCredentialDescriptor",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(credentialID:)",
+        "usr": "c:objc(cs)ASAuthorizationPlatformPublicKeyCredentialDescriptor(im)initWithCredentialID:"
+      }
+    }
+  },
+  "ASAuthorizationPlatformPublicKeyCredentialProvider": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationPlatformPublicKeyCredentialProvider",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(relyingPartyIdentifier:)",
+        "usr": "c:objc(cs)ASAuthorizationPlatformPublicKeyCredentialProvider(im)initWithRelyingPartyIdentifier:"
+      },
+      "createCredentialRegistrationRequest": {
+        "kind": "Func",
+        "type": "createCredentialRegistrationRequest(clientData:name:userID:requestStyle:)",
+        "usr": "s:So50ASAuthorizationPlatformPublicKeyCredentialProviderC22AuthenticationServicesE06createE19RegistrationRequest10clientData4name6userID12requestStyleSo0abcdejK0CAC08ASPublicde6ClientM0V_SS10Foundation0M0VSo0abcdejkR0VtF"
+      },
+      "createCredentialAssertionRequest": {
+        "kind": "Func",
+        "type": "createCredentialAssertionRequest(clientData:)",
+        "usr": "s:So50ASAuthorizationPlatformPublicKeyCredentialProviderC22AuthenticationServicesE06createE16AssertionRequest10clientDataSo0abcdejK0CAC08ASPublicde6ClientM0V_tF"
+      },
+      "relyingPartyIdentifier": {
+        "kind": "Var",
+        "type": "relyingPartyIdentifier",
+        "usr": "c:objc(cs)ASAuthorizationPlatformPublicKeyCredentialProvider(py)relyingPartyIdentifier"
+      }
+    }
+  },
+  "ASAuthorizationPlatformPublicKeyCredentialRegistration": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationPlatformPublicKeyCredentialRegistration",
+    "members": {
+      "attachment": {
+        "kind": "Var",
+        "type": "attachment",
+        "usr": "c:objc(cs)ASAuthorizationPlatformPublicKeyCredentialRegistration(py)attachment"
+      },
+      "prf": {
+        "kind": "Var",
+        "type": "prf",
+        "usr": "s:So54ASAuthorizationPlatformPublicKeyCredentialRegistrationC22AuthenticationServicesE3prfAC0acdE21PRFRegistrationOutputVSgvp"
+      },
+      "largeBlob": {
+        "kind": "Var",
+        "type": "largeBlob",
+        "usr": "s:So54ASAuthorizationPlatformPublicKeyCredentialRegistrationC22AuthenticationServicesE9largeBlobAC0acde5LargejF6OutputVSgvp"
+      }
+    }
+  },
+  "ASAuthorizationPlatformPublicKeyCredentialRegistrationRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationPlatformPublicKeyCredentialRegistrationRequest",
+    "members": {
+      "requestStyle": {
+        "kind": "Var",
+        "type": "requestStyle",
+        "usr": "c:objc(cs)ASAuthorizationPlatformPublicKeyCredentialRegistrationRequest(py)requestStyle"
+      },
+      "RequestStyle": {
+        "kind": "Enum",
+        "type": "RequestStyle",
+        "usr": "c:@E@ASAuthorizationPlatformPublicKeyCredentialRegistrationRequestStyle"
+      },
+      "prf": {
+        "kind": "Var",
+        "type": "prf",
+        "usr": "s:So61ASAuthorizationPlatformPublicKeyCredentialRegistrationRequestC22AuthenticationServicesE3prfAC0acdE20PRFRegistrationInputVSgvp"
+      },
+      "largeBlob": {
+        "kind": "Var",
+        "type": "largeBlob",
+        "usr": "s:So61ASAuthorizationPlatformPublicKeyCredentialRegistrationRequestC22AuthenticationServicesE9largeBlobAC0acde5LargekF5InputVSgvp"
+      }
+    }
+  },
+  "RequestStyle": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASAuthorizationPlatformPublicKeyCredentialRegistrationRequestStyle",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So66ASAuthorizationPlatformPublicKeyCredentialRegistrationRequestStyleV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So66ASAuthorizationPlatformPublicKeyCredentialRegistrationRequestStyleV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So66ASAuthorizationPlatformPublicKeyCredentialRegistrationRequestStyleV8RawValuea"
+      },
+      "standard": {
+        "kind": "EnumElement",
+        "type": "standard",
+        "usr": "c:@E@ASAuthorizationPlatformPublicKeyCredentialRegistrationRequestStyle@ASAuthorizationPlatformPublicKeyCredentialRegistrationRequestStyleStandard"
+      },
+      "conditional": {
+        "kind": "EnumElement",
+        "type": "conditional",
+        "usr": "c:@E@ASAuthorizationPlatformPublicKeyCredentialRegistrationRequestStyle@ASAuthorizationPlatformPublicKeyCredentialRegistrationRequestStyleConditional"
+      }
+    }
+  },
+  "ASAuthorizationProvider": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationProvider",
+    "members": {}
+  },
+  "ASAuthorizationProviderAuthorizationOperation": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "c:@T@ASAuthorizationProviderAuthorizationOperation",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So45ASAuthorizationProviderAuthorizationOperationa8rawValueABSS_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So45ASAuthorizationProviderAuthorizationOperationa8rawValueSSvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So45ASAuthorizationProviderAuthorizationOperationa8RawValuea"
+      },
+      "_ObjectiveCType": {
+        "kind": "TypeAlias",
+        "type": "_ObjectiveCType",
+        "usr": "s:So45ASAuthorizationProviderAuthorizationOperationa15_ObjectiveCTypea"
+      },
+      "configurationRemoved": {
+        "kind": "Var",
+        "type": "configurationRemoved",
+        "usr": "c:@ASAuthorizationProviderAuthorizationOperationConfigurationRemoved"
+      },
+      "directRequest": {
+        "kind": "Var",
+        "type": "directRequest",
+        "usr": "c:@ASAuthorizationProviderAuthorizationOperationDirectRequest"
+      }
+    }
+  },
+  "ASAuthorizationProviderExtensionAuthorizationRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest",
+    "members": {
+      "doNotHandle": {
+        "kind": "Func",
+        "type": "doNotHandle()",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(im)doNotHandle"
+      },
+      "cancel": {
+        "kind": "Func",
+        "type": "cancel()",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(im)cancel"
+      },
+      "complete": {
+        "kind": "Func",
+        "type": "complete(error:)",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(im)completeWithError:"
+      },
+      "presentAuthorizationViewController": {
+        "kind": "Func",
+        "type": "presentAuthorizationViewController()",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(im)presentAuthorizationViewControllerWithCompletion:"
+      },
+      "url": {
+        "kind": "Var",
+        "type": "url",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(py)url"
+      },
+      "requestedOperation": {
+        "kind": "Var",
+        "type": "requestedOperation",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(py)requestedOperation"
+      },
+      "httpHeaders": {
+        "kind": "Var",
+        "type": "httpHeaders",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(py)httpHeaders"
+      },
+      "httpBody": {
+        "kind": "Var",
+        "type": "httpBody",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(py)httpBody"
+      },
+      "realm": {
+        "kind": "Var",
+        "type": "realm",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(py)realm"
+      },
+      "extensionData": {
+        "kind": "Var",
+        "type": "extensionData",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(py)extensionData"
+      },
+      "callerBundleIdentifier": {
+        "kind": "Var",
+        "type": "callerBundleIdentifier",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(py)callerBundleIdentifier"
+      },
+      "authorizationOptions": {
+        "kind": "Var",
+        "type": "authorizationOptions",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(py)authorizationOptions"
+      },
+      "isCallerManaged": {
+        "kind": "Var",
+        "type": "isCallerManaged",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(py)callerManaged"
+      },
+      "callerTeamIdentifier": {
+        "kind": "Var",
+        "type": "callerTeamIdentifier",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(py)callerTeamIdentifier"
+      },
+      "localizedCallerDisplayName": {
+        "kind": "Var",
+        "type": "localizedCallerDisplayName",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(py)localizedCallerDisplayName"
+      },
+      "isUserInterfaceEnabled": {
+        "kind": "Var",
+        "type": "isUserInterfaceEnabled",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationRequest(py)userInterfaceEnabled"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "ASAuthorizationProviderExtensionAuthorizationRequestHandler": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationProviderExtensionAuthorizationRequestHandler",
+    "members": {
+      "beginAuthorization": {
+        "kind": "Func",
+        "type": "beginAuthorization(with:)",
+        "usr": "c:objc(pl)ASAuthorizationProviderExtensionAuthorizationRequestHandler(im)beginAuthorizationWithRequest:"
+      },
+      "cancelAuthorization": {
+        "kind": "Func",
+        "type": "cancelAuthorization(with:)",
+        "usr": "c:objc(pl)ASAuthorizationProviderExtensionAuthorizationRequestHandler(im)cancelAuthorizationWithRequest:"
+      }
+    }
+  },
+  "ASAuthorizationProviderExtensionAuthorizationResult": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationResult",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "httpAuthorizationHeaders": {
+        "kind": "Var",
+        "type": "httpAuthorizationHeaders",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationResult(py)httpAuthorizationHeaders"
+      },
+      "httpResponse": {
+        "kind": "Var",
+        "type": "httpResponse",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationResult(py)httpResponse"
+      },
+      "httpBody": {
+        "kind": "Var",
+        "type": "httpBody",
+        "usr": "c:objc(cs)ASAuthorizationProviderExtensionAuthorizationResult(py)httpBody"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialAssertion": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialAssertion",
+    "members": {
+      "rawAuthenticatorData": {
+        "kind": "Var",
+        "type": "rawAuthenticatorData",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialAssertion(py)rawAuthenticatorData"
+      },
+      "userID": {
+        "kind": "Var",
+        "type": "userID",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialAssertion(py)userID"
+      },
+      "signature": {
+        "kind": "Var",
+        "type": "signature",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialAssertion(py)signature"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialAssertionRequest": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialAssertionRequest",
+    "members": {
+      "challenge": {
+        "kind": "Var",
+        "type": "challenge",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialAssertionRequest(py)challenge"
+      },
+      "relyingPartyIdentifier": {
+        "kind": "Var",
+        "type": "relyingPartyIdentifier",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialAssertionRequest(py)relyingPartyIdentifier"
+      },
+      "allowedCredentials": {
+        "kind": "Var",
+        "type": "allowedCredentials",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialAssertionRequest(py)allowedCredentials"
+      },
+      "userVerificationPreference": {
+        "kind": "Var",
+        "type": "userVerificationPreference",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialAssertionRequest(py)userVerificationPreference"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialAttachment": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASAuthorizationPublicKeyCredentialAttachment",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So44ASAuthorizationPublicKeyCredentialAttachmentV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So44ASAuthorizationPublicKeyCredentialAttachmentV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So44ASAuthorizationPublicKeyCredentialAttachmentV8RawValuea"
+      },
+      "platform": {
+        "kind": "EnumElement",
+        "type": "platform",
+        "usr": "c:@E@ASAuthorizationPublicKeyCredentialAttachment@ASAuthorizationPublicKeyCredentialAttachmentPlatform"
+      },
+      "crossPlatform": {
+        "kind": "EnumElement",
+        "type": "crossPlatform",
+        "usr": "c:@E@ASAuthorizationPublicKeyCredentialAttachment@ASAuthorizationPublicKeyCredentialAttachmentCrossPlatform"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialAttestationKind": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "c:@T@ASAuthorizationPublicKeyCredentialAttestationKind",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So49ASAuthorizationPublicKeyCredentialAttestationKinda8rawValueABSS_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So49ASAuthorizationPublicKeyCredentialAttestationKinda8rawValueSSvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So49ASAuthorizationPublicKeyCredentialAttestationKinda8RawValuea"
+      },
+      "_ObjectiveCType": {
+        "kind": "TypeAlias",
+        "type": "_ObjectiveCType",
+        "usr": "s:So49ASAuthorizationPublicKeyCredentialAttestationKinda15_ObjectiveCTypea"
+      },
+      "none": {
+        "kind": "Var",
+        "type": "none",
+        "usr": "c:@ASAuthorizationPublicKeyCredentialAttestationKindNone"
+      },
+      "direct": {
+        "kind": "Var",
+        "type": "direct",
+        "usr": "c:@ASAuthorizationPublicKeyCredentialAttestationKindDirect"
+      },
+      "indirect": {
+        "kind": "Var",
+        "type": "indirect",
+        "usr": "c:@ASAuthorizationPublicKeyCredentialAttestationKindIndirect"
+      },
+      "enterprise": {
+        "kind": "Var",
+        "type": "enterprise",
+        "usr": "c:@ASAuthorizationPublicKeyCredentialAttestationKindEnterprise"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialDescriptor": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialDescriptor",
+    "members": {
+      "credentialID": {
+        "kind": "Var",
+        "type": "credentialID",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialDescriptor(py)credentialID"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialParameters": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationPublicKeyCredentialParameters",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(algorithm:)",
+        "usr": "c:objc(cs)ASAuthorizationPublicKeyCredentialParameters(im)initWithAlgorithm:"
+      },
+      "algorithm": {
+        "kind": "Var",
+        "type": "algorithm",
+        "usr": "c:objc(cs)ASAuthorizationPublicKeyCredentialParameters(py)algorithm"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialRegistration": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialRegistration",
+    "members": {
+      "rawAttestationObject": {
+        "kind": "Var",
+        "type": "rawAttestationObject",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialRegistration(py)rawAttestationObject"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialRegistrationRequest": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialRegistrationRequest",
+    "members": {
+      "relyingPartyIdentifier": {
+        "kind": "Var",
+        "type": "relyingPartyIdentifier",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialRegistrationRequest(py)relyingPartyIdentifier"
+      },
+      "userID": {
+        "kind": "Var",
+        "type": "userID",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialRegistrationRequest(py)userID"
+      },
+      "name": {
+        "kind": "Var",
+        "type": "name",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialRegistrationRequest(py)name"
+      },
+      "displayName": {
+        "kind": "Var",
+        "type": "displayName",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialRegistrationRequest(py)displayName"
+      },
+      "challenge": {
+        "kind": "Var",
+        "type": "challenge",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialRegistrationRequest(py)challenge"
+      },
+      "userVerificationPreference": {
+        "kind": "Var",
+        "type": "userVerificationPreference",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialRegistrationRequest(py)userVerificationPreference"
+      },
+      "attestationPreference": {
+        "kind": "Var",
+        "type": "attestationPreference",
+        "usr": "c:objc(pl)ASAuthorizationPublicKeyCredentialRegistrationRequest(py)attestationPreference"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialResidentKeyPreference": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "c:@T@ASAuthorizationPublicKeyCredentialResidentKeyPreference",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So042ASAuthorizationPublicKeyCredentialResidentC10Preferencea8rawValueABSS_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So042ASAuthorizationPublicKeyCredentialResidentC10Preferencea8rawValueSSvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So042ASAuthorizationPublicKeyCredentialResidentC10Preferencea8RawValuea"
+      },
+      "_ObjectiveCType": {
+        "kind": "TypeAlias",
+        "type": "_ObjectiveCType",
+        "usr": "s:So042ASAuthorizationPublicKeyCredentialResidentC10Preferencea15_ObjectiveCTypea"
+      },
+      "discouraged": {
+        "kind": "Var",
+        "type": "discouraged",
+        "usr": "c:@ASAuthorizationPublicKeyCredentialResidentKeyPreferenceDiscouraged"
+      },
+      "preferred": {
+        "kind": "Var",
+        "type": "preferred",
+        "usr": "c:@ASAuthorizationPublicKeyCredentialResidentKeyPreferencePreferred"
+      },
+      "required": {
+        "kind": "Var",
+        "type": "required",
+        "usr": "c:@ASAuthorizationPublicKeyCredentialResidentKeyPreferenceRequired"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialUserVerificationPreference": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "c:@T@ASAuthorizationPublicKeyCredentialUserVerificationPreference",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So60ASAuthorizationPublicKeyCredentialUserVerificationPreferencea8rawValueABSS_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So60ASAuthorizationPublicKeyCredentialUserVerificationPreferencea8rawValueSSvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So60ASAuthorizationPublicKeyCredentialUserVerificationPreferencea8RawValuea"
+      },
+      "_ObjectiveCType": {
+        "kind": "TypeAlias",
+        "type": "_ObjectiveCType",
+        "usr": "s:So60ASAuthorizationPublicKeyCredentialUserVerificationPreferencea15_ObjectiveCTypea"
+      },
+      "preferred": {
+        "kind": "Var",
+        "type": "preferred",
+        "usr": "c:@ASAuthorizationPublicKeyCredentialUserVerificationPreferencePreferred"
+      },
+      "required": {
+        "kind": "Var",
+        "type": "required",
+        "usr": "c:@ASAuthorizationPublicKeyCredentialUserVerificationPreferenceRequired"
+      },
+      "discouraged": {
+        "kind": "Var",
+        "type": "discouraged",
+        "usr": "c:@ASAuthorizationPublicKeyCredentialUserVerificationPreferenceDiscouraged"
+      }
+    }
+  },
+  "ASAuthorizationRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationRequest",
+    "members": {
+      "provider": {
+        "kind": "Var",
+        "type": "provider",
+        "usr": "c:objc(cs)ASAuthorizationRequest(py)provider"
+      }
+    }
+  },
+  "ASAuthorizationSecurityKeyPublicKeyCredentialAssertion": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialAssertion",
+    "members": {
+      "appID": {
+        "kind": "Var",
+        "type": "appID",
+        "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialAssertion(py)appID"
+      }
+    }
+  },
+  "ASAuthorizationSecurityKeyPublicKeyCredentialAssertionRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialAssertionRequest",
+    "members": {
+      "allowedCredentials": {
+        "kind": "Var",
+        "type": "allowedCredentials",
+        "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialAssertionRequest(py)allowedCredentials"
+      },
+      "appID": {
+        "kind": "Var",
+        "type": "appID",
+        "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialAssertionRequest(py)appID"
+      }
+    }
+  },
+  "ASAuthorizationSecurityKeyPublicKeyCredentialDescriptor": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialDescriptor",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(credentialID:transports:)",
+        "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialDescriptor(im)initWithCredentialID:transports:"
+      },
+      "transports": {
+        "kind": "Var",
+        "type": "transports",
+        "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialDescriptor(py)transports"
+      }
+    }
+  },
+  "Transport": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "c:@T@ASAuthorizationSecurityKeyPublicKeyCredentialDescriptorTransport",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So032ASAuthorizationSecurityKeyPublicC29CredentialDescriptorTransporta8rawValueABSS_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So032ASAuthorizationSecurityKeyPublicC29CredentialDescriptorTransporta8rawValueSSvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So032ASAuthorizationSecurityKeyPublicC29CredentialDescriptorTransporta8RawValuea"
+      },
+      "_ObjectiveCType": {
+        "kind": "TypeAlias",
+        "type": "_ObjectiveCType",
+        "usr": "s:So032ASAuthorizationSecurityKeyPublicC29CredentialDescriptorTransporta15_ObjectiveCTypea"
+      },
+      "usb": {
+        "kind": "Var",
+        "type": "usb",
+        "usr": "c:@ASAuthorizationSecurityKeyPublicKeyCredentialDescriptorTransportUSB"
+      },
+      "nfc": {
+        "kind": "Var",
+        "type": "nfc",
+        "usr": "c:@ASAuthorizationSecurityKeyPublicKeyCredentialDescriptorTransportNFC"
+      },
+      "bluetooth": {
+        "kind": "Var",
+        "type": "bluetooth",
+        "usr": "c:@ASAuthorizationSecurityKeyPublicKeyCredentialDescriptorTransportBluetooth"
+      },
+      "allSupported": {
+        "kind": "Var",
+        "type": "allSupported",
+        "usr": "c:@F@ASAuthorizationAllSupportedPublicKeyCredentialDescriptorTransports"
+      }
+    }
+  },
+  "ASAuthorizationSecurityKeyPublicKeyCredentialProvider": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialProvider",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(relyingPartyIdentifier:)",
+        "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialProvider(im)initWithRelyingPartyIdentifier:"
+      },
+      "createCredentialRegistrationRequest": {
+        "kind": "Func",
+        "type": "createCredentialRegistrationRequest(clientData:displayName:name:userID:)",
+        "usr": "s:So032ASAuthorizationSecurityKeyPublicC18CredentialProviderC22AuthenticationServicesE06createE19RegistrationRequest10clientData11displayName4name6userIDSo0abcdcejK0CAC08ASPublicce6ClientM0V_S2S10Foundation0M0VtF"
+      },
+      "createCredentialAssertionRequest": {
+        "kind": "Func",
+        "type": "createCredentialAssertionRequest(clientData:)",
+        "usr": "s:So032ASAuthorizationSecurityKeyPublicC18CredentialProviderC22AuthenticationServicesE06createE16AssertionRequest10clientDataSo0abcdcejK0CAC08ASPublicce6ClientM0V_tF"
+      },
+      "relyingPartyIdentifier": {
+        "kind": "Var",
+        "type": "relyingPartyIdentifier",
+        "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialProvider(py)relyingPartyIdentifier"
+      }
+    }
+  },
+  "ASAuthorizationSecurityKeyPublicKeyCredentialRegistration": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialRegistration",
+    "members": {
+      "transports": {
+        "kind": "Var",
+        "type": "transports",
+        "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialRegistration(py)transports"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "ASAuthorizationSecurityKeyPublicKeyCredentialRegistrationRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialRegistrationRequest",
+    "members": {
+      "credentialParameters": {
+        "kind": "Var",
+        "type": "credentialParameters",
+        "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialRegistrationRequest(py)credentialParameters"
+      },
+      "excludedCredentials": {
+        "kind": "Var",
+        "type": "excludedCredentials",
+        "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialRegistrationRequest(py)excludedCredentials"
+      },
+      "residentKeyPreference": {
+        "kind": "Var",
+        "type": "residentKeyPreference",
+        "usr": "c:objc(cs)ASAuthorizationSecurityKeyPublicKeyCredentialRegistrationRequest(py)residentKeyPreference"
+      }
+    }
+  },
+  "ASAuthorizationSingleSignOnCredential": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationSingleSignOnCredential",
+    "members": {
+      "state": {
+        "kind": "Var",
+        "type": "state",
+        "usr": "c:objc(cs)ASAuthorizationSingleSignOnCredential(py)state"
+      },
+      "accessToken": {
+        "kind": "Var",
+        "type": "accessToken",
+        "usr": "c:objc(cs)ASAuthorizationSingleSignOnCredential(py)accessToken"
+      },
+      "identityToken": {
+        "kind": "Var",
+        "type": "identityToken",
+        "usr": "c:objc(cs)ASAuthorizationSingleSignOnCredential(py)identityToken"
+      },
+      "authorizedScopes": {
+        "kind": "Var",
+        "type": "authorizedScopes",
+        "usr": "c:objc(cs)ASAuthorizationSingleSignOnCredential(py)authorizedScopes"
+      },
+      "authenticatedResponse": {
+        "kind": "Var",
+        "type": "authenticatedResponse",
+        "usr": "c:objc(cs)ASAuthorizationSingleSignOnCredential(py)authenticatedResponse"
+      }
+    }
+  },
+  "ASAuthorizationSingleSignOnProvider": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationSingleSignOnProvider",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(identityProvider:)",
+        "usr": "c:objc(cs)ASAuthorizationSingleSignOnProvider(cm)authorizationProviderWithIdentityProviderURL:"
+      },
+      "createRequest": {
+        "kind": "Func",
+        "type": "createRequest()",
+        "usr": "c:objc(cs)ASAuthorizationSingleSignOnProvider(im)createRequest"
+      },
+      "url": {
+        "kind": "Var",
+        "type": "url",
+        "usr": "c:objc(cs)ASAuthorizationSingleSignOnProvider(py)url"
+      },
+      "canPerformAuthorization": {
+        "kind": "Var",
+        "type": "canPerformAuthorization",
+        "usr": "c:objc(cs)ASAuthorizationSingleSignOnProvider(py)canPerformAuthorization"
+      }
+    }
+  },
+  "ASAuthorizationSingleSignOnRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationSingleSignOnRequest",
+    "members": {
+      "authorizationOptions": {
+        "kind": "Var",
+        "type": "authorizationOptions",
+        "usr": "c:objc(cs)ASAuthorizationSingleSignOnRequest(py)authorizationOptions"
+      },
+      "isUserInterfaceEnabled": {
+        "kind": "Var",
+        "type": "isUserInterfaceEnabled",
+        "usr": "c:objc(cs)ASAuthorizationSingleSignOnRequest(py)userInterfaceEnabled"
+      }
+    }
+  },
+  "ASAuthorizationWebBrowserPlatformPublicKeyCredentialAssertionRequest": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationWebBrowserPlatformPublicKeyCredentialAssertionRequest",
+    "members": {
+      "shouldShowHybridTransport": {
+        "kind": "Var",
+        "type": "shouldShowHybridTransport",
+        "usr": "c:objc(pl)ASAuthorizationWebBrowserPlatformPublicKeyCredentialAssertionRequest(py)shouldShowHybridTransport"
+      }
+    }
+  },
+  "ASAuthorizationWebBrowserPlatformPublicKeyCredentialRegistrationRequest": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationWebBrowserPlatformPublicKeyCredentialRegistrationRequest",
+    "members": {
+      "excludedCredentials": {
+        "kind": "Var",
+        "type": "excludedCredentials",
+        "usr": "c:objc(pl)ASAuthorizationWebBrowserPlatformPublicKeyCredentialRegistrationRequest(py)excludedCredentials"
+      }
+    }
+  },
+  "ASAuthorizationWebBrowserPublicKeyCredentialManager": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationWebBrowserPublicKeyCredentialManager",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)ASAuthorizationWebBrowserPublicKeyCredentialManager(im)init"
+      },
+      "requestAuthorizationForPublicKeyCredentials": {
+        "kind": "Func",
+        "type": "requestAuthorizationForPublicKeyCredentials()",
+        "usr": "c:objc(cs)ASAuthorizationWebBrowserPublicKeyCredentialManager(im)requestAuthorizationForPublicKeyCredentials:"
+      },
+      "authorizationStateForPlatformCredentials": {
+        "kind": "Var",
+        "type": "authorizationStateForPlatformCredentials",
+        "usr": "c:objc(cs)ASAuthorizationWebBrowserPublicKeyCredentialManager(py)authorizationStateForPlatformCredentials"
+      },
+      "AuthorizationState": {
+        "kind": "Enum",
+        "type": "AuthorizationState",
+        "usr": "c:@E@ASAuthorizationWebBrowserPublicKeyCredentialManagerAuthorizationState"
+      },
+      "platformCredentials": {
+        "kind": "Func",
+        "type": "platformCredentials(forRelyingParty:)",
+        "usr": "s:So51ASAuthorizationWebBrowserPublicKeyCredentialManagerC22AuthenticationServicesE19platformCredentials15forRelyingPartySayAC0abc8PlatformdeF0VGSS_tYaF"
+      }
+    }
+  },
+  "AuthorizationState": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASAuthorizationWebBrowserPublicKeyCredentialManagerAuthorizationState",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So69ASAuthorizationWebBrowserPublicKeyCredentialManagerAuthorizationStateV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So69ASAuthorizationWebBrowserPublicKeyCredentialManagerAuthorizationStateV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So69ASAuthorizationWebBrowserPublicKeyCredentialManagerAuthorizationStateV8RawValuea"
+      },
+      "authorized": {
+        "kind": "EnumElement",
+        "type": "authorized",
+        "usr": "c:@E@ASAuthorizationWebBrowserPublicKeyCredentialManagerAuthorizationState@ASAuthorizationWebBrowserPublicKeyCredentialManagerAuthorizationStateAuthorized"
+      },
+      "denied": {
+        "kind": "EnumElement",
+        "type": "denied",
+        "usr": "c:@E@ASAuthorizationWebBrowserPublicKeyCredentialManagerAuthorizationState@ASAuthorizationWebBrowserPublicKeyCredentialManagerAuthorizationStateDenied"
+      },
+      "notDetermined": {
+        "kind": "EnumElement",
+        "type": "notDetermined",
+        "usr": "c:@E@ASAuthorizationWebBrowserPublicKeyCredentialManagerAuthorizationState@ASAuthorizationWebBrowserPublicKeyCredentialManagerAuthorizationStateNotDetermined"
+      }
+    }
+  },
+  "ASAuthorizationWebBrowserSecurityKeyPublicKeyCredentialAssertionRequest": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationWebBrowserSecurityKeyPublicKeyCredentialAssertionRequest",
+    "members": {
+      "clientData": {
+        "kind": "Var",
+        "type": "clientData",
+        "usr": "s:So042ASAuthorizationWebBrowserSecurityKeyPublicE26CredentialAssertionRequestP22AuthenticationServicesE10clientDataAC08ASPubliceg6ClientM0VSgvp"
+      }
+    }
+  },
+  "ASAuthorizationWebBrowserSecurityKeyPublicKeyCredentialRegistrationRequest": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASAuthorizationWebBrowserSecurityKeyPublicKeyCredentialRegistrationRequest",
+    "members": {
+      "clientData": {
+        "kind": "Var",
+        "type": "clientData",
+        "usr": "s:So042ASAuthorizationWebBrowserSecurityKeyPublicE29CredentialRegistrationRequestP22AuthenticationServicesE10clientDataAC08ASPubliceg6ClientM0VSgvp"
+      }
+    }
+  },
+  "ASCOSEAlgorithmIdentifier": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "c:@T@ASCOSEAlgorithmIdentifier",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So25ASCOSEAlgorithmIdentifiera8rawValueABSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So25ASCOSEAlgorithmIdentifiera8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So25ASCOSEAlgorithmIdentifiera8RawValuea"
+      },
+      "ES256": {
+        "kind": "Var",
+        "type": "ES256",
+        "usr": "c:@ASCOSEAlgorithmIdentifierES256"
+      }
+    }
+  },
+  "ASCOSEEllipticCurveIdentifier": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "c:@T@ASCOSEEllipticCurveIdentifier",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So29ASCOSEEllipticCurveIdentifiera8rawValueABSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So29ASCOSEEllipticCurveIdentifiera8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So29ASCOSEEllipticCurveIdentifiera8RawValuea"
+      },
+      "P256": {
+        "kind": "Var",
+        "type": "P256",
+        "usr": "c:@ASCOSEEllipticCurveIdentifierP256"
+      }
+    }
+  },
+  "ASCredentialIdentity": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASCredentialIdentity",
+    "members": {
+      "serviceIdentifier": {
+        "kind": "Var",
+        "type": "serviceIdentifier",
+        "usr": "c:objc(pl)ASCredentialIdentity(py)serviceIdentifier"
+      },
+      "user": {
+        "kind": "Var",
+        "type": "user",
+        "usr": "c:objc(pl)ASCredentialIdentity(py)user"
+      },
+      "recordIdentifier": {
+        "kind": "Var",
+        "type": "recordIdentifier",
+        "usr": "c:objc(pl)ASCredentialIdentity(py)recordIdentifier"
+      },
+      "rank": {
+        "kind": "Var",
+        "type": "rank",
+        "usr": "c:objc(pl)ASCredentialIdentity(py)rank"
+      }
+    }
+  },
+  "ASCredentialIdentityStore": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASCredentialIdentityStore",
+    "members": {
+      "shared": {
+        "kind": "Var",
+        "type": "shared",
+        "usr": "c:objc(cs)ASCredentialIdentityStore(cpy)sharedStore"
+      },
+      "getState": {
+        "kind": "Func",
+        "type": "getState(_:)",
+        "usr": "c:objc(cs)ASCredentialIdentityStore(im)getCredentialIdentityStoreStateWithCompletion:"
+      },
+      "state": {
+        "kind": "Func",
+        "type": "state()",
+        "usr": "c:objc(cs)ASCredentialIdentityStore(im)getCredentialIdentityStoreStateWithCompletion:"
+      },
+      "saveCredentialIdentities": {
+        "kind": "Func",
+        "type": "saveCredentialIdentities(_:)",
+        "usr": "c:objc(cs)ASCredentialIdentityStore(im)saveCredentialIdentityEntries:completion:"
+      },
+      "removeCredentialIdentities": {
+        "kind": "Func",
+        "type": "removeCredentialIdentities(_:)",
+        "usr": "c:objc(cs)ASCredentialIdentityStore(im)removeCredentialIdentityEntries:completion:"
+      },
+      "removeAllCredentialIdentities": {
+        "kind": "Func",
+        "type": "removeAllCredentialIdentities()",
+        "usr": "c:objc(cs)ASCredentialIdentityStore(im)removeAllCredentialIdentitiesWithCompletion:"
+      },
+      "replaceCredentialIdentities": {
+        "kind": "Func",
+        "type": "replaceCredentialIdentities(_:)",
+        "usr": "c:objc(cs)ASCredentialIdentityStore(im)replaceCredentialIdentityEntries:completion:"
+      },
+      "credentialIdentities": {
+        "kind": "Func",
+        "type": "credentialIdentities(forService:credentialIdentityTypes:)",
+        "usr": "s:So25ASCredentialIdentityStoreC22AuthenticationServicesE20credentialIdentities10forService0fB5TypesSaySo0aB0_pGSo0aI10IdentifierCSg_So0abJ0VtYaF"
+      }
+    }
+  },
+  "IdentityTypes": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASCredentialIdentityTypes",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So25ASCredentialIdentityTypesV8rawValueABSu_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So25ASCredentialIdentityTypesV8rawValueSuvp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So25ASCredentialIdentityTypesV8RawValuea"
+      },
+      "Element": {
+        "kind": "TypeAlias",
+        "type": "Element",
+        "usr": "s:So25ASCredentialIdentityTypesV7Elementa"
+      },
+      "ArrayLiteralElement": {
+        "kind": "TypeAlias",
+        "type": "ArrayLiteralElement",
+        "usr": "s:So25ASCredentialIdentityTypesV19ArrayLiteralElementa"
+      },
+      "password": {
+        "kind": "Var",
+        "type": "password",
+        "usr": "c:@E@ASCredentialIdentityTypes@ASCredentialIdentityTypesPassword"
+      },
+      "passkey": {
+        "kind": "Var",
+        "type": "passkey",
+        "usr": "c:@E@ASCredentialIdentityTypes@ASCredentialIdentityTypesPasskey"
+      },
+      "oneTimeCode": {
+        "kind": "Var",
+        "type": "oneTimeCode",
+        "usr": "c:@E@ASCredentialIdentityTypes@ASCredentialIdentityTypesOneTimeCode"
+      }
+    }
+  },
+  "ASCredentialIdentityStoreError": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:SC34ASCredentialIdentityStoreErrorCodeLeV",
+    "members": {
+      "_nsError": {
+        "kind": "Var",
+        "type": "_nsError",
+        "usr": "s:SC34ASCredentialIdentityStoreErrorCodeLeV03_nsD0So7NSErrorCvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_nsError:)",
+        "usr": "s:SC34ASCredentialIdentityStoreErrorCodeLeV03_nsD0ABSo7NSErrorC_tcfc"
+      },
+      "errorDomain": {
+        "kind": "Var",
+        "type": "errorDomain",
+        "usr": "s:SC34ASCredentialIdentityStoreErrorCodeLeV11errorDomainSSvpZ"
+      },
+      "Code": {
+        "kind": "Enum",
+        "type": "Code",
+        "usr": "c:@E@ASCredentialIdentityStoreErrorCode"
+      },
+      "internalError": {
+        "kind": "Var",
+        "type": "internalError",
+        "usr": "s:SC34ASCredentialIdentityStoreErrorCodeLeV08internalD0SoAAVvpZ"
+      },
+      "storeDisabled": {
+        "kind": "Var",
+        "type": "storeDisabled",
+        "usr": "s:SC34ASCredentialIdentityStoreErrorCodeLeV13storeDisabledSoAAVvpZ"
+      },
+      "storeBusy": {
+        "kind": "Var",
+        "type": "storeBusy",
+        "usr": "s:SC34ASCredentialIdentityStoreErrorCodeLeV9storeBusySoAAVvpZ"
+      }
+    }
+  },
+  "ASCredentialIdentityStoreState": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASCredentialIdentityStoreState",
+    "members": {
+      "isEnabled": {
+        "kind": "Var",
+        "type": "isEnabled",
+        "usr": "c:objc(cs)ASCredentialIdentityStoreState(py)enabled"
+      },
+      "supportsIncrementalUpdates": {
+        "kind": "Var",
+        "type": "supportsIncrementalUpdates",
+        "usr": "c:objc(cs)ASCredentialIdentityStoreState(py)supportsIncrementalUpdates"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "ASCredentialProviderExtensionContext": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASCredentialProviderExtensionContext",
+    "members": {
+      "completeRequest": {
+        "kind": "Func",
+        "type": "completeRequest(withTextToInsert:)",
+        "usr": "c:objc(cs)ASCredentialProviderExtensionContext(im)completeRequestWithTextToInsert:completionHandler:"
+      },
+      "completeAssertionRequest": {
+        "kind": "Func",
+        "type": "completeAssertionRequest(using:)",
+        "usr": "c:objc(cs)ASCredentialProviderExtensionContext(im)completeAssertionRequestWithSelectedPasskeyCredential:completionHandler:"
+      },
+      "completeRegistrationRequest": {
+        "kind": "Func",
+        "type": "completeRegistrationRequest(using:)",
+        "usr": "c:objc(cs)ASCredentialProviderExtensionContext(im)completeRegistrationRequestWithSelectedPasskeyCredential:completionHandler:"
+      },
+      "completeOneTimeCodeRequest": {
+        "kind": "Func",
+        "type": "completeOneTimeCodeRequest(using:)",
+        "usr": "c:objc(cs)ASCredentialProviderExtensionContext(im)completeOneTimeCodeRequestWithSelectedCredential:completionHandler:"
+      },
+      "completeExtensionConfigurationRequest": {
+        "kind": "Func",
+        "type": "completeExtensionConfigurationRequest()",
+        "usr": "c:objc(cs)ASCredentialProviderExtensionContext(im)completeExtensionConfigurationRequest"
+      },
+      "cancelRequest": {
+        "kind": "Func",
+        "type": "cancelRequest(withError:)",
+        "usr": "c:objc(cs)ASCredentialProviderExtensionContext(im)cancelRequestWithError:"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "ASCredentialProviderViewController": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASCredentialProviderViewController",
+    "members": {
+      "extensionContext": {
+        "kind": "Var",
+        "type": "extensionContext",
+        "usr": "c:objc(cs)ASCredentialProviderViewController(py)extensionContext"
+      },
+      "prepareCredentialList": {
+        "kind": "Func",
+        "type": "prepareCredentialList(for:requestParameters:)",
+        "usr": "c:objc(cs)ASCredentialProviderViewController(im)prepareCredentialListForServiceIdentifiers:requestParameters:"
+      },
+      "prepareOneTimeCodeCredentialList": {
+        "kind": "Func",
+        "type": "prepareOneTimeCodeCredentialList(for:)",
+        "usr": "c:objc(cs)ASCredentialProviderViewController(im)prepareOneTimeCodeCredentialListForServiceIdentifiers:"
+      },
+      "prepareInterfaceForUserChoosingTextToInsert": {
+        "kind": "Func",
+        "type": "prepareInterfaceForUserChoosingTextToInsert()",
+        "usr": "c:objc(cs)ASCredentialProviderViewController(im)prepareInterfaceForUserChoosingTextToInsert"
+      },
+      "provideCredentialWithoutUserInteraction": {
+        "kind": "Func",
+        "type": "provideCredentialWithoutUserInteraction(for:)",
+        "usr": "c:objc(cs)ASCredentialProviderViewController(im)provideCredentialWithoutUserInteractionForRequest:"
+      },
+      "prepareInterfaceToProvideCredential": {
+        "kind": "Func",
+        "type": "prepareInterfaceToProvideCredential(for:)",
+        "usr": "c:objc(cs)ASCredentialProviderViewController(im)prepareInterfaceToProvideCredentialForRequest:"
+      },
+      "prepareInterfaceForExtensionConfiguration": {
+        "kind": "Func",
+        "type": "prepareInterfaceForExtensionConfiguration()",
+        "usr": "c:objc(cs)ASCredentialProviderViewController(im)prepareInterfaceForExtensionConfiguration"
+      },
+      "prepareInterface": {
+        "kind": "Func",
+        "type": "prepareInterface(forPasskeyRegistration:)",
+        "usr": "c:objc(cs)ASCredentialProviderViewController(im)prepareInterfaceForPasskeyRegistration:"
+      },
+      "performWithoutUserInteractionIfPossible": {
+        "kind": "Func",
+        "type": "performWithoutUserInteractionIfPossible(passkeyRegistration:)",
+        "usr": "c:objc(cs)ASCredentialProviderViewController(im)performPasskeyRegistrationWithoutUserInteractionIfPossible:"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      }
+    }
+  },
+  "ASCredentialRequest": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASCredentialRequest",
+    "members": {
+      "type": {
+        "kind": "Var",
+        "type": "type",
+        "usr": "c:objc(pl)ASCredentialRequest(py)type"
+      },
+      "credentialIdentity": {
+        "kind": "Var",
+        "type": "credentialIdentity",
+        "usr": "c:objc(pl)ASCredentialRequest(py)credentialIdentity"
+      }
+    }
+  },
+  "ASCredentialRequestType": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASCredentialRequestType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So23ASCredentialRequestTypeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So23ASCredentialRequestTypeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So23ASCredentialRequestTypeV8RawValuea"
+      },
+      "password": {
+        "kind": "EnumElement",
+        "type": "password",
+        "usr": "c:@E@ASCredentialRequestType@ASCredentialRequestTypePassword"
+      },
+      "passkeyAssertion": {
+        "kind": "EnumElement",
+        "type": "passkeyAssertion",
+        "usr": "c:@E@ASCredentialRequestType@ASCredentialRequestTypePasskeyAssertion"
+      },
+      "passkeyRegistration": {
+        "kind": "EnumElement",
+        "type": "passkeyRegistration",
+        "usr": "c:@E@ASCredentialRequestType@ASCredentialRequestTypePasskeyRegistration"
+      },
+      "oneTimeCode": {
+        "kind": "EnumElement",
+        "type": "oneTimeCode",
+        "usr": "c:@E@ASCredentialRequestType@ASCredentialRequestTypeOneTimeCode"
+      }
+    }
+  },
+  "ASCredentialServiceIdentifier": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASCredentialServiceIdentifier",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "identifier": {
+        "kind": "Var",
+        "type": "identifier",
+        "usr": "c:objc(cs)ASCredentialServiceIdentifier(py)identifier"
+      },
+      "type": {
+        "kind": "Var",
+        "type": "type",
+        "usr": "c:objc(cs)ASCredentialServiceIdentifier(py)type"
+      },
+      "IdentifierType": {
+        "kind": "Enum",
+        "type": "IdentifierType",
+        "usr": "c:@E@ASCredentialServiceIdentifierType"
+      }
+    }
+  },
+  "IdentifierType": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASCredentialServiceIdentifierType",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So33ASCredentialServiceIdentifierTypeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So33ASCredentialServiceIdentifierTypeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So33ASCredentialServiceIdentifierTypeV8RawValuea"
+      },
+      "domain": {
+        "kind": "EnumElement",
+        "type": "domain",
+        "usr": "c:@E@ASCredentialServiceIdentifierType@ASCredentialServiceIdentifierTypeDomain"
+      },
+      "URL": {
+        "kind": "EnumElement",
+        "type": "URL",
+        "usr": "c:@E@ASCredentialServiceIdentifierType@ASCredentialServiceIdentifierTypeURL"
+      }
+    }
+  },
+  "ASExtensionError": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:SC20ASExtensionErrorCodeLeV",
+    "members": {
+      "_nsError": {
+        "kind": "Var",
+        "type": "_nsError",
+        "usr": "s:SC20ASExtensionErrorCodeLeV03_nsB0So7NSErrorCvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_nsError:)",
+        "usr": "s:SC20ASExtensionErrorCodeLeV03_nsB0ABSo7NSErrorC_tcfc"
+      },
+      "errorDomain": {
+        "kind": "Var",
+        "type": "errorDomain",
+        "usr": "s:SC20ASExtensionErrorCodeLeV11errorDomainSSvpZ"
+      },
+      "Code": {
+        "kind": "Enum",
+        "type": "Code",
+        "usr": "c:@E@ASExtensionErrorCode"
+      },
+      "failed": {
+        "kind": "Var",
+        "type": "failed",
+        "usr": "s:SC20ASExtensionErrorCodeLeV6failedSoAAVvpZ"
+      },
+      "userCanceled": {
+        "kind": "Var",
+        "type": "userCanceled",
+        "usr": "s:SC20ASExtensionErrorCodeLeV12userCanceledSoAAVvpZ"
+      },
+      "userInteractionRequired": {
+        "kind": "Var",
+        "type": "userInteractionRequired",
+        "usr": "s:SC20ASExtensionErrorCodeLeV23userInteractionRequiredSoAAVvpZ"
+      },
+      "credentialIdentityNotFound": {
+        "kind": "Var",
+        "type": "credentialIdentityNotFound",
+        "usr": "s:SC20ASExtensionErrorCodeLeV26credentialIdentityNotFoundSoAAVvpZ"
+      },
+      "matchedExcludedCredential": {
+        "kind": "Var",
+        "type": "matchedExcludedCredential",
+        "usr": "s:SC20ASExtensionErrorCodeLeV25matchedExcludedCredentialSoAAVvpZ"
+      }
+    }
+  },
+  "ASOneTimeCodeCredential": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASOneTimeCodeCredential",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(code:)",
+        "usr": "c:objc(cs)ASOneTimeCodeCredential(im)initWithCode:"
+      },
+      "code": {
+        "kind": "Var",
+        "type": "code",
+        "usr": "c:objc(cs)ASOneTimeCodeCredential(py)code"
+      }
+    }
+  },
+  "ASOneTimeCodeCredentialIdentity": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASOneTimeCodeCredentialIdentity",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(serviceIdentifier:label:recordIdentifier:)",
+        "usr": "c:objc(cs)ASOneTimeCodeCredentialIdentity(im)initWithServiceIdentifier:label:recordIdentifier:"
+      },
+      "label": {
+        "kind": "Var",
+        "type": "label",
+        "usr": "c:objc(cs)ASOneTimeCodeCredentialIdentity(py)label"
+      }
+    }
+  },
+  "ASOneTimeCodeCredentialRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASOneTimeCodeCredentialRequest",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(credentialIdentity:)",
+        "usr": "c:objc(cs)ASOneTimeCodeCredentialRequest(im)initWithCredentialIdentity:"
+      }
+    }
+  },
+  "ASPasskeyAssertionCredential": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASPasskeyAssertionCredential",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(userHandle:relyingParty:signature:clientDataHash:authenticatorData:credentialID:extensionOutput:)",
+        "usr": "s:So28ASPasskeyAssertionCredentialC22AuthenticationServicesE10userHandle12relyingParty9signature14clientDataHash013authenticatorL012credentialID15extensionOutputAB10Foundation0L0V_SSA4mC0abc9ExtensionR0VSgtcfc"
+      },
+      "userHandle": {
+        "kind": "Var",
+        "type": "userHandle",
+        "usr": "c:objc(cs)ASPasskeyAssertionCredential(py)userHandle"
+      },
+      "relyingParty": {
+        "kind": "Var",
+        "type": "relyingParty",
+        "usr": "c:objc(cs)ASPasskeyAssertionCredential(py)relyingParty"
+      },
+      "signature": {
+        "kind": "Var",
+        "type": "signature",
+        "usr": "c:objc(cs)ASPasskeyAssertionCredential(py)signature"
+      },
+      "clientDataHash": {
+        "kind": "Var",
+        "type": "clientDataHash",
+        "usr": "c:objc(cs)ASPasskeyAssertionCredential(py)clientDataHash"
+      },
+      "authenticatorData": {
+        "kind": "Var",
+        "type": "authenticatorData",
+        "usr": "c:objc(cs)ASPasskeyAssertionCredential(py)authenticatorData"
+      },
+      "credentialID": {
+        "kind": "Var",
+        "type": "credentialID",
+        "usr": "c:objc(cs)ASPasskeyAssertionCredential(py)credentialID"
+      },
+      "extensionOutput": {
+        "kind": "Var",
+        "type": "extensionOutput",
+        "usr": "s:So28ASPasskeyAssertionCredentialC22AuthenticationServicesE15extensionOutputAC0abc9ExtensionG0VSgvp"
+      }
+    }
+  },
+  "ASPasskeyCredentialIdentity": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASPasskeyCredentialIdentity",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(relyingPartyIdentifier:userName:credentialID:userHandle:recordIdentifier:)",
+        "usr": "s:So27ASPasskeyCredentialIdentityC22AuthenticationServicesE22relyingPartyIdentifier8userName12credentialID0I6Handle06recordH0ABSS_SS10Foundation4DataVAKSSSgtcfc"
+      },
+      "relyingPartyIdentifier": {
+        "kind": "Var",
+        "type": "relyingPartyIdentifier",
+        "usr": "c:objc(cs)ASPasskeyCredentialIdentity(py)relyingPartyIdentifier"
+      },
+      "userName": {
+        "kind": "Var",
+        "type": "userName",
+        "usr": "c:objc(cs)ASPasskeyCredentialIdentity(py)userName"
+      },
+      "credentialID": {
+        "kind": "Var",
+        "type": "credentialID",
+        "usr": "c:objc(cs)ASPasskeyCredentialIdentity(py)credentialID"
+      },
+      "userHandle": {
+        "kind": "Var",
+        "type": "userHandle",
+        "usr": "c:objc(cs)ASPasskeyCredentialIdentity(py)userHandle"
+      },
+      "recordIdentifier": {
+        "kind": "Var",
+        "type": "recordIdentifier",
+        "usr": "c:objc(cs)ASPasskeyCredentialIdentity(py)recordIdentifier"
+      },
+      "rank": {
+        "kind": "Var",
+        "type": "rank",
+        "usr": "c:objc(cs)ASPasskeyCredentialIdentity(py)rank"
+      }
+    }
+  },
+  "ASPasskeyCredentialRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASPasskeyCredentialRequest",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(credentialIdentity:clientDataHash:userVerificationPreference:supportedAlgorithms:extensionInput:)",
+        "usr": "s:So26ASPasskeyCredentialRequestC22AuthenticationServicesE18credentialIdentity14clientDataHash26userVerificationPreference19supportedAlgorithms14extensionInputABSo0abG0C_10Foundation0I0VSo024ASAuthorizationPublicKeyb4UserlM0aSaySo25ASCOSEAlgorithmIdentifieraGAC0a9Assertionb9ExtensionQ0VSgtcfc"
+      },
+      "clientDataHash": {
+        "kind": "Var",
+        "type": "clientDataHash",
+        "usr": "c:objc(cs)ASPasskeyCredentialRequest(py)clientDataHash"
+      },
+      "userVerificationPreference": {
+        "kind": "Var",
+        "type": "userVerificationPreference",
+        "usr": "c:objc(cs)ASPasskeyCredentialRequest(py)userVerificationPreference"
+      },
+      "excludedCredentials": {
+        "kind": "Var",
+        "type": "excludedCredentials",
+        "usr": "c:objc(cs)ASPasskeyCredentialRequest(py)excludedCredentials"
+      },
+      "supportedAlgorithms": {
+        "kind": "Var",
+        "type": "supportedAlgorithms",
+        "usr": "s:So26ASPasskeyCredentialRequestC22AuthenticationServicesE19supportedAlgorithmsSaySo25ASCOSEAlgorithmIdentifieraGvp"
+      },
+      "extensionInput": {
+        "kind": "Var",
+        "type": "extensionInput",
+        "usr": "s:So26ASPasskeyCredentialRequestC22AuthenticationServicesE14extensionInputAC0ab9ExtensionG0Ovp"
+      }
+    }
+  },
+  "ASPasskeyCredentialRequestParameters": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASPasskeyCredentialRequestParameters",
+    "members": {
+      "relyingPartyIdentifier": {
+        "kind": "Var",
+        "type": "relyingPartyIdentifier",
+        "usr": "c:objc(cs)ASPasskeyCredentialRequestParameters(py)relyingPartyIdentifier"
+      },
+      "clientDataHash": {
+        "kind": "Var",
+        "type": "clientDataHash",
+        "usr": "c:objc(cs)ASPasskeyCredentialRequestParameters(py)clientDataHash"
+      },
+      "userVerificationPreference": {
+        "kind": "Var",
+        "type": "userVerificationPreference",
+        "usr": "c:objc(cs)ASPasskeyCredentialRequestParameters(py)userVerificationPreference"
+      },
+      "allowedCredentials": {
+        "kind": "Var",
+        "type": "allowedCredentials",
+        "usr": "c:objc(cs)ASPasskeyCredentialRequestParameters(py)allowedCredentials"
+      },
+      "extensionInput": {
+        "kind": "Var",
+        "type": "extensionInput",
+        "usr": "s:So36ASPasskeyCredentialRequestParametersC22AuthenticationServicesE14extensionInputAC0a9Assertionb9ExtensionH0VSgvp"
+      }
+    }
+  },
+  "ASPasskeyRegistrationCredential": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASPasskeyRegistrationCredential",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(relyingParty:clientDataHash:credentialID:attestationObject:extensionOutput:)",
+        "usr": "s:So31ASPasskeyRegistrationCredentialC22AuthenticationServicesE12relyingParty14clientDataHash12credentialID17attestationObject15extensionOutputABSS_10Foundation0I0VA2kC0abc9ExtensionP0VSgtcfc"
+      },
+      "relyingParty": {
+        "kind": "Var",
+        "type": "relyingParty",
+        "usr": "c:objc(cs)ASPasskeyRegistrationCredential(py)relyingParty"
+      },
+      "clientDataHash": {
+        "kind": "Var",
+        "type": "clientDataHash",
+        "usr": "c:objc(cs)ASPasskeyRegistrationCredential(py)clientDataHash"
+      },
+      "credentialID": {
+        "kind": "Var",
+        "type": "credentialID",
+        "usr": "c:objc(cs)ASPasskeyRegistrationCredential(py)credentialID"
+      },
+      "attestationObject": {
+        "kind": "Var",
+        "type": "attestationObject",
+        "usr": "c:objc(cs)ASPasskeyRegistrationCredential(py)attestationObject"
+      },
+      "extensionOutput": {
+        "kind": "Var",
+        "type": "extensionOutput",
+        "usr": "s:So31ASPasskeyRegistrationCredentialC22AuthenticationServicesE15extensionOutputAC0abc9ExtensionG0VSgvp"
+      }
+    }
+  },
+  "ASPasswordCredential": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASPasswordCredential",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "c:objc(cs)NSObject(im)init"
+      },
+      "user": {
+        "kind": "Var",
+        "type": "user",
+        "usr": "c:objc(cs)ASPasswordCredential(py)user"
+      },
+      "password": {
+        "kind": "Var",
+        "type": "password",
+        "usr": "c:objc(cs)ASPasswordCredential(py)password"
+      }
+    }
+  },
+  "ASPasswordCredentialIdentity": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASPasswordCredentialIdentity",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(serviceIdentifier:user:recordIdentifier:)",
+        "usr": "c:objc(cs)ASPasswordCredentialIdentity(im)initWithServiceIdentifier:user:recordIdentifier:"
+      },
+      "serviceIdentifier": {
+        "kind": "Var",
+        "type": "serviceIdentifier",
+        "usr": "c:objc(cs)ASPasswordCredentialIdentity(py)serviceIdentifier"
+      },
+      "user": {
+        "kind": "Var",
+        "type": "user",
+        "usr": "c:objc(cs)ASPasswordCredentialIdentity(py)user"
+      },
+      "recordIdentifier": {
+        "kind": "Var",
+        "type": "recordIdentifier",
+        "usr": "c:objc(cs)ASPasswordCredentialIdentity(py)recordIdentifier"
+      },
+      "rank": {
+        "kind": "Var",
+        "type": "rank",
+        "usr": "c:objc(cs)ASPasswordCredentialIdentity(py)rank"
+      }
+    }
+  },
+  "ASPasswordCredentialRequest": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASPasswordCredentialRequest",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(credentialIdentity:)",
+        "usr": "c:objc(cs)ASPasswordCredentialRequest(im)initWithCredentialIdentity:"
+      }
+    }
+  },
+  "ASPublicKeyCredential": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASPublicKeyCredential",
+    "members": {
+      "rawClientDataJSON": {
+        "kind": "Var",
+        "type": "rawClientDataJSON",
+        "usr": "c:objc(pl)ASPublicKeyCredential(py)rawClientDataJSON"
+      },
+      "credentialID": {
+        "kind": "Var",
+        "type": "credentialID",
+        "usr": "c:objc(pl)ASPublicKeyCredential(py)credentialID"
+      }
+    }
+  },
+  "ASPublicKeyCredentialClientDataCrossOriginValue": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASPublicKeyCredentialClientDataCrossOriginValue",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So47ASPublicKeyCredentialClientDataCrossOriginValueV03rawH0ABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So47ASPublicKeyCredentialClientDataCrossOriginValueV03rawH0Sivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So47ASPublicKeyCredentialClientDataCrossOriginValueV03RawH0a"
+      },
+      "notSet": {
+        "kind": "EnumElement",
+        "type": "notSet",
+        "usr": "c:@E@ASPublicKeyCredentialClientDataCrossOriginValue@ASPublicKeyCredentialClientDataCrossOriginValueNotSet"
+      },
+      "crossOrigin": {
+        "kind": "EnumElement",
+        "type": "crossOrigin",
+        "usr": "c:@E@ASPublicKeyCredentialClientDataCrossOriginValue@ASPublicKeyCredentialClientDataCrossOriginValueCrossOrigin"
+      },
+      "sameOriginWithAncestors": {
+        "kind": "EnumElement",
+        "type": "sameOriginWithAncestors",
+        "usr": "c:@E@ASPublicKeyCredentialClientDataCrossOriginValue@ASPublicKeyCredentialClientDataCrossOriginValueSameOriginWithAncestors"
+      }
+    }
+  },
+  "ASSettingsHelper": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASSettingsHelper",
+    "members": {
+      "openCredentialProviderAppSettings": {
+        "kind": "Func",
+        "type": "openCredentialProviderAppSettings()",
+        "usr": "c:objc(cs)ASSettingsHelper(cm)openCredentialProviderAppSettingsWithCompletionHandler:"
+      },
+      "openVerificationCodeAppSettings": {
+        "kind": "Func",
+        "type": "openVerificationCodeAppSettings()",
+        "usr": "c:objc(cs)ASSettingsHelper(cm)openVerificationCodeAppSettingsWithCompletionHandler:"
+      },
+      "requestToTurnOnCredentialProviderExtension": {
+        "kind": "Func",
+        "type": "requestToTurnOnCredentialProviderExtension()",
+        "usr": "c:objc(cs)ASSettingsHelper(cm)requestToTurnOnCredentialProviderExtensionWithCompletionHandler:"
+      }
+    }
+  },
+  "ASUserAgeRange": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASUserAgeRange",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So14ASUserAgeRangeV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So14ASUserAgeRangeV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So14ASUserAgeRangeV8RawValuea"
+      },
+      "unknown": {
+        "kind": "EnumElement",
+        "type": "unknown",
+        "usr": "c:@E@ASUserAgeRange@ASUserAgeRangeUnknown"
+      },
+      "child": {
+        "kind": "EnumElement",
+        "type": "child",
+        "usr": "c:@E@ASUserAgeRange@ASUserAgeRangeChild"
+      },
+      "notChild": {
+        "kind": "EnumElement",
+        "type": "notChild",
+        "usr": "c:@E@ASUserAgeRange@ASUserAgeRangeNotChild"
+      }
+    }
+  },
+  "ASUserDetectionStatus": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "c:@E@ASUserDetectionStatus",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:So21ASUserDetectionStatusV8rawValueABSgSi_tcfc"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:So21ASUserDetectionStatusV8rawValueSivp"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:So21ASUserDetectionStatusV8RawValuea"
+      },
+      "unsupported": {
+        "kind": "EnumElement",
+        "type": "unsupported",
+        "usr": "c:@E@ASUserDetectionStatus@ASUserDetectionStatusUnsupported"
+      },
+      "unknown": {
+        "kind": "EnumElement",
+        "type": "unknown",
+        "usr": "c:@E@ASUserDetectionStatus@ASUserDetectionStatusUnknown"
+      },
+      "likelyReal": {
+        "kind": "EnumElement",
+        "type": "likelyReal",
+        "usr": "c:@E@ASUserDetectionStatus@ASUserDetectionStatusLikelyReal"
+      }
+    }
+  },
+  "ASWebAuthenticationPresentationContextProviding": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(pl)ASWebAuthenticationPresentationContextProviding",
+    "members": {
+      "presentationAnchor": {
+        "kind": "Func",
+        "type": "presentationAnchor(for:)",
+        "usr": "c:objc(pl)ASWebAuthenticationPresentationContextProviding(im)presentationAnchorForWebAuthenticationSession:"
+      }
+    }
+  },
+  "ASWebAuthenticationSession": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASWebAuthenticationSession",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(url:callback:completionHandler:)",
+        "usr": "c:objc(cs)ASWebAuthenticationSession(im)initWithURL:callback:completionHandler:"
+      },
+      "presentationContextProvider": {
+        "kind": "Var",
+        "type": "presentationContextProvider",
+        "usr": "c:objc(cs)ASWebAuthenticationSession(py)presentationContextProvider"
+      },
+      "prefersEphemeralWebBrowserSession": {
+        "kind": "Var",
+        "type": "prefersEphemeralWebBrowserSession",
+        "usr": "c:objc(cs)ASWebAuthenticationSession(py)prefersEphemeralWebBrowserSession"
+      },
+      "additionalHeaderFields": {
+        "kind": "Var",
+        "type": "additionalHeaderFields",
+        "usr": "c:objc(cs)ASWebAuthenticationSession(py)additionalHeaderFields"
+      },
+      "canStart": {
+        "kind": "Var",
+        "type": "canStart",
+        "usr": "c:objc(cs)ASWebAuthenticationSession(py)canStart"
+      },
+      "start": {
+        "kind": "Func",
+        "type": "start()",
+        "usr": "c:objc(cs)ASWebAuthenticationSession(im)start"
+      },
+      "cancel": {
+        "kind": "Func",
+        "type": "cancel()",
+        "usr": "c:objc(cs)ASWebAuthenticationSession(im)cancel"
+      },
+      "CompletionHandler": {
+        "kind": "TypeAlias",
+        "type": "CompletionHandler",
+        "usr": "c:@T@ASWebAuthenticationSessionCompletionHandler"
+      }
+    }
+  },
+  "Callback": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASWebAuthenticationSessionCallback",
+    "members": {
+      "customScheme": {
+        "kind": "Func",
+        "type": "customScheme(_:)",
+        "usr": "c:objc(cs)ASWebAuthenticationSessionCallback(cm)callbackWithCustomScheme:"
+      },
+      "https": {
+        "kind": "Func",
+        "type": "https(host:path:)",
+        "usr": "c:objc(cs)ASWebAuthenticationSessionCallback(cm)callbackWithHTTPSHost:path:"
+      },
+      "matchesURL": {
+        "kind": "Func",
+        "type": "matchesURL(_:)",
+        "usr": "c:objc(cs)ASWebAuthenticationSessionCallback(im)matchesURL:"
+      }
+    }
+  },
+  "ASWebAuthenticationSessionError": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:SC35ASWebAuthenticationSessionErrorCodeLeV",
+    "members": {
+      "_nsError": {
+        "kind": "Var",
+        "type": "_nsError",
+        "usr": "s:SC35ASWebAuthenticationSessionErrorCodeLeV03_nsD0So7NSErrorCvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(_nsError:)",
+        "usr": "s:SC35ASWebAuthenticationSessionErrorCodeLeV03_nsD0ABSo7NSErrorC_tcfc"
+      },
+      "errorDomain": {
+        "kind": "Var",
+        "type": "errorDomain",
+        "usr": "s:SC35ASWebAuthenticationSessionErrorCodeLeV11errorDomainSSvpZ"
+      },
+      "Code": {
+        "kind": "Enum",
+        "type": "Code",
+        "usr": "c:@E@ASWebAuthenticationSessionErrorCode"
+      },
+      "canceledLogin": {
+        "kind": "Var",
+        "type": "canceledLogin",
+        "usr": "s:SC35ASWebAuthenticationSessionErrorCodeLeV13canceledLoginSoAAVvpZ"
+      },
+      "presentationContextNotProvided": {
+        "kind": "Var",
+        "type": "presentationContextNotProvided",
+        "usr": "s:SC35ASWebAuthenticationSessionErrorCodeLeV30presentationContextNotProvidedSoAAVvpZ"
+      },
+      "presentationContextInvalid": {
+        "kind": "Var",
+        "type": "presentationContextInvalid",
+        "usr": "s:SC35ASWebAuthenticationSessionErrorCodeLeV26presentationContextInvalidSoAAVvpZ"
+      }
+    }
+  },
+  "ASPasskeyAssertionCredentialExtensionInput": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices42ASPasskeyAssertionCredentialExtensionInputV",
+    "members": {
+      "largeBlob": {
+        "kind": "Var",
+        "type": "largeBlob",
+        "usr": "s:22AuthenticationServices42ASPasskeyAssertionCredentialExtensionInputV9largeBlobAA024ASAuthorizationPublicKeye5LargeidG0VSgvp"
+      },
+      "prf": {
+        "kind": "Var",
+        "type": "prf",
+        "usr": "s:22AuthenticationServices42ASPasskeyAssertionCredentialExtensionInputV3prfAA024ASAuthorizationPublicKeye12PRFAssertionG0VSgvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(largeBlob:prf:)",
+        "usr": "s:22AuthenticationServices42ASPasskeyAssertionCredentialExtensionInputV9largeBlob3prfAcA024ASAuthorizationPublicKeye5LargeidG0VSg_AA0klme12PRFAssertionG0VSgtcfc"
+      }
+    }
+  },
+  "ASPasskeyAssertionCredentialExtensionOutput": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices43ASPasskeyAssertionCredentialExtensionOutputV",
+    "members": {
+      "largeBlob": {
+        "kind": "Var",
+        "type": "largeBlob",
+        "usr": "s:22AuthenticationServices43ASPasskeyAssertionCredentialExtensionOutputV9largeBlobAA024ASAuthorizationPublicKeye5LargeidG0VSgvp"
+      },
+      "prf": {
+        "kind": "Var",
+        "type": "prf",
+        "usr": "s:22AuthenticationServices43ASPasskeyAssertionCredentialExtensionOutputV3prfAA024ASAuthorizationPublicKeye12PRFAssertionG0VSgvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(largeBlob:prf:)",
+        "usr": "s:22AuthenticationServices43ASPasskeyAssertionCredentialExtensionOutputV9largeBlob3prfAcA024ASAuthorizationPublicKeye5LargeidG0VSg_AA0klme12PRFAssertionG0VSgtcfc"
+      }
+    }
+  },
+  "ASPasskeyRegistrationCredentialExtensionOutput": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices46ASPasskeyRegistrationCredentialExtensionOutputV",
+    "members": {
+      "largeBlob": {
+        "kind": "Var",
+        "type": "largeBlob",
+        "usr": "s:22AuthenticationServices46ASPasskeyRegistrationCredentialExtensionOutputV9largeBlobAA024ASAuthorizationPublicKeye5LargeidG0VSgvp"
+      },
+      "prf": {
+        "kind": "Var",
+        "type": "prf",
+        "usr": "s:22AuthenticationServices46ASPasskeyRegistrationCredentialExtensionOutputV3prfAA024ASAuthorizationPublicKeye15PRFRegistrationG0VSgvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(largeBlob:prf:)",
+        "usr": "s:22AuthenticationServices46ASPasskeyRegistrationCredentialExtensionOutputV9largeBlob3prfAcA024ASAuthorizationPublicKeye5LargeidG0VSg_AA0klme15PRFRegistrationG0VSgtcfc"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialLargeBlobAssertionInput": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices57ASAuthorizationPublicKeyCredentialLargeBlobAssertionInputV",
+    "members": {
+      "read": {
+        "kind": "Var",
+        "type": "read",
+        "usr": "s:22AuthenticationServices57ASAuthorizationPublicKeyCredentialLargeBlobAssertionInputV4readACvpZ"
+      },
+      "write": {
+        "kind": "Func",
+        "type": "write(_:)",
+        "usr": "s:22AuthenticationServices57ASAuthorizationPublicKeyCredentialLargeBlobAssertionInputV5writeyAC10Foundation4DataVFZ"
+      },
+      "Operation": {
+        "kind": "Enum",
+        "type": "Operation",
+        "usr": "s:22AuthenticationServices57ASAuthorizationPublicKeyCredentialLargeBlobAssertionInputV9OperationO"
+      },
+      "operation": {
+        "kind": "Var",
+        "type": "operation",
+        "usr": "s:22AuthenticationServices57ASAuthorizationPublicKeyCredentialLargeBlobAssertionInputV9operationAC9OperationOvp"
+      }
+    }
+  },
+  "Operation": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices57ASAuthorizationPublicKeyCredentialLargeBlobAssertionInputV9OperationO",
+    "members": {
+      "read": {
+        "kind": "EnumElement",
+        "type": "read",
+        "usr": "s:22AuthenticationServices57ASAuthorizationPublicKeyCredentialLargeBlobAssertionInputV9OperationO4readyA2EmF"
+      },
+      "write": {
+        "kind": "EnumElement",
+        "type": "write",
+        "usr": "s:22AuthenticationServices57ASAuthorizationPublicKeyCredentialLargeBlobAssertionInputV9OperationO5writeyAE10Foundation4DataVcAEmF"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialLargeBlobRegistrationInput": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices60ASAuthorizationPublicKeyCredentialLargeBlobRegistrationInputV",
+    "members": {
+      "supportRequired": {
+        "kind": "Var",
+        "type": "supportRequired",
+        "usr": "s:22AuthenticationServices60ASAuthorizationPublicKeyCredentialLargeBlobRegistrationInputV15supportRequiredACvpZ"
+      },
+      "supportPreferred": {
+        "kind": "Var",
+        "type": "supportPreferred",
+        "usr": "s:22AuthenticationServices60ASAuthorizationPublicKeyCredentialLargeBlobRegistrationInputV16supportPreferredACvpZ"
+      },
+      "SupportRequirement": {
+        "kind": "Enum",
+        "type": "SupportRequirement",
+        "usr": "s:22AuthenticationServices60ASAuthorizationPublicKeyCredentialLargeBlobRegistrationInputV18SupportRequirementO"
+      },
+      "supportRequirement": {
+        "kind": "Var",
+        "type": "supportRequirement",
+        "usr": "s:22AuthenticationServices60ASAuthorizationPublicKeyCredentialLargeBlobRegistrationInputV18supportRequirementAC07SupportL0Ovp"
+      }
+    }
+  },
+  "SupportRequirement": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices60ASAuthorizationPublicKeyCredentialLargeBlobRegistrationInputV18SupportRequirementO",
+    "members": {
+      "required": {
+        "kind": "EnumElement",
+        "type": "required",
+        "usr": "s:22AuthenticationServices60ASAuthorizationPublicKeyCredentialLargeBlobRegistrationInputV18SupportRequirementO8requiredyA2EmF"
+      },
+      "preferred": {
+        "kind": "EnumElement",
+        "type": "preferred",
+        "usr": "s:22AuthenticationServices60ASAuthorizationPublicKeyCredentialLargeBlobRegistrationInputV18SupportRequirementO9preferredyA2EmF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices60ASAuthorizationPublicKeyCredentialLargeBlobRegistrationInputV18SupportRequirementO2eeoiySbAE_AEtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices60ASAuthorizationPublicKeyCredentialLargeBlobRegistrationInputV18SupportRequirementO4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices60ASAuthorizationPublicKeyCredentialLargeBlobRegistrationInputV18SupportRequirementO9hashValueSivp"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialLargeBlobAssertionOutput": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices58ASAuthorizationPublicKeyCredentialLargeBlobAssertionOutputV",
+    "members": {
+      "read": {
+        "kind": "Func",
+        "type": "read(data:)",
+        "usr": "s:22AuthenticationServices58ASAuthorizationPublicKeyCredentialLargeBlobAssertionOutputV4read4dataAC10Foundation4DataVSg_tFZ"
+      },
+      "write": {
+        "kind": "Func",
+        "type": "write(success:)",
+        "usr": "s:22AuthenticationServices58ASAuthorizationPublicKeyCredentialLargeBlobAssertionOutputV5write7successACSb_tFZ"
+      },
+      "OperationResult": {
+        "kind": "Enum",
+        "type": "OperationResult",
+        "usr": "s:22AuthenticationServices58ASAuthorizationPublicKeyCredentialLargeBlobAssertionOutputV15OperationResultO"
+      },
+      "result": {
+        "kind": "Var",
+        "type": "result",
+        "usr": "s:22AuthenticationServices58ASAuthorizationPublicKeyCredentialLargeBlobAssertionOutputV6resultAC15OperationResultOvp"
+      }
+    }
+  },
+  "OperationResult": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices58ASAuthorizationPublicKeyCredentialLargeBlobAssertionOutputV15OperationResultO",
+    "members": {
+      "read": {
+        "kind": "EnumElement",
+        "type": "read",
+        "usr": "s:22AuthenticationServices58ASAuthorizationPublicKeyCredentialLargeBlobAssertionOutputV15OperationResultO4readyAE10Foundation4DataVSg_tcAEmF"
+      },
+      "write": {
+        "kind": "EnumElement",
+        "type": "write",
+        "usr": "s:22AuthenticationServices58ASAuthorizationPublicKeyCredentialLargeBlobAssertionOutputV15OperationResultO5writeyAESb_tcAEmF"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialLargeBlobRegistrationOutput": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices61ASAuthorizationPublicKeyCredentialLargeBlobRegistrationOutputV",
+    "members": {
+      "supported": {
+        "kind": "Var",
+        "type": "supported",
+        "usr": "s:22AuthenticationServices61ASAuthorizationPublicKeyCredentialLargeBlobRegistrationOutputV9supportedACvpZ"
+      },
+      "unsupported": {
+        "kind": "Var",
+        "type": "unsupported",
+        "usr": "s:22AuthenticationServices61ASAuthorizationPublicKeyCredentialLargeBlobRegistrationOutputV11unsupportedACvpZ"
+      },
+      "isSupported": {
+        "kind": "Var",
+        "type": "isSupported",
+        "usr": "s:22AuthenticationServices61ASAuthorizationPublicKeyCredentialLargeBlobRegistrationOutputV11isSupportedSbvp"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialPRFAssertionInput": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices51ASAuthorizationPublicKeyCredentialPRFAssertionInputV",
+    "members": {
+      "inputValues": {
+        "kind": "Var",
+        "type": "inputValues",
+        "usr": "s:22AuthenticationServices51ASAuthorizationPublicKeyCredentialPRFAssertionInputV11inputValuesAC0hJ0VSgvp"
+      },
+      "perCredentialInputValues": {
+        "kind": "Var",
+        "type": "perCredentialInputValues",
+        "usr": "s:22AuthenticationServices51ASAuthorizationPublicKeyCredentialPRFAssertionInputV03perfH6ValuesSDy10Foundation4DataVAC0hJ0VGSgvp"
+      }
+    }
+  },
+  "InputValues": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices51ASAuthorizationPublicKeyCredentialPRFAssertionInputV0H6ValuesV",
+    "members": {
+      "init": {
+        "kind": "Constructor",
+        "type": "init(saltInput1:saltInput2:)",
+        "usr": "s:22AuthenticationServices51ASAuthorizationPublicKeyCredentialPRFAssertionInputV0H6ValuesV10saltInput10J6Input2AE10Foundation4DataV_AJSgtcfc"
+      },
+      "saltInput1": {
+        "kind": "Var",
+        "type": "saltInput1",
+        "usr": "s:22AuthenticationServices51ASAuthorizationPublicKeyCredentialPRFAssertionInputV0H6ValuesV10saltInput110Foundation4DataVvp"
+      },
+      "saltInput2": {
+        "kind": "Var",
+        "type": "saltInput2",
+        "usr": "s:22AuthenticationServices51ASAuthorizationPublicKeyCredentialPRFAssertionInputV0H6ValuesV10saltInput210Foundation4DataVSgvp"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialPRFAssertionOutput": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices52ASAuthorizationPublicKeyCredentialPRFAssertionOutputV",
+    "members": {
+      "first": {
+        "kind": "Var",
+        "type": "first",
+        "usr": "s:22AuthenticationServices52ASAuthorizationPublicKeyCredentialPRFAssertionOutputV5first9CryptoKit09SymmetricE0Vvp"
+      },
+      "second": {
+        "kind": "Var",
+        "type": "second",
+        "usr": "s:22AuthenticationServices52ASAuthorizationPublicKeyCredentialPRFAssertionOutputV6second9CryptoKit09SymmetricE0VSgvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(first:second:)",
+        "usr": "s:22AuthenticationServices52ASAuthorizationPublicKeyCredentialPRFAssertionOutputV5first6secondAC9CryptoKit09SymmetricE0V_AHSgtcfc"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialPRFRegistrationInput": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices54ASAuthorizationPublicKeyCredentialPRFRegistrationInputV",
+    "members": {
+      "InputValues": {
+        "kind": "TypeAlias",
+        "type": "InputValues",
+        "usr": "s:22AuthenticationServices54ASAuthorizationPublicKeyCredentialPRFRegistrationInputV0H6Valuesa"
+      },
+      "checkForSupport": {
+        "kind": "Var",
+        "type": "checkForSupport",
+        "usr": "s:22AuthenticationServices54ASAuthorizationPublicKeyCredentialPRFRegistrationInputV15checkForSupportACvpZ"
+      },
+      "inputValues": {
+        "kind": "Var",
+        "type": "inputValues",
+        "usr": "s:22AuthenticationServices54ASAuthorizationPublicKeyCredentialPRFRegistrationInputV11inputValuesAA0cdef12PRFAssertionH0V0hJ0VSgvp"
+      },
+      "shouldCheckForSupport": {
+        "kind": "Var",
+        "type": "shouldCheckForSupport",
+        "usr": "s:22AuthenticationServices54ASAuthorizationPublicKeyCredentialPRFRegistrationInputV21shouldCheckForSupportSbvp"
+      }
+    }
+  },
+  "ASAuthorizationPublicKeyCredentialPRFRegistrationOutput": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices55ASAuthorizationPublicKeyCredentialPRFRegistrationOutputV",
+    "members": {
+      "supported": {
+        "kind": "Var",
+        "type": "supported",
+        "usr": "s:22AuthenticationServices55ASAuthorizationPublicKeyCredentialPRFRegistrationOutputV9supportedACvpZ"
+      },
+      "unsupported": {
+        "kind": "Var",
+        "type": "unsupported",
+        "usr": "s:22AuthenticationServices55ASAuthorizationPublicKeyCredentialPRFRegistrationOutputV11unsupportedACvpZ"
+      },
+      "isSupported": {
+        "kind": "Var",
+        "type": "isSupported",
+        "usr": "s:22AuthenticationServices55ASAuthorizationPublicKeyCredentialPRFRegistrationOutputV11isSupportedSbvp"
+      },
+      "first": {
+        "kind": "Var",
+        "type": "first",
+        "usr": "s:22AuthenticationServices55ASAuthorizationPublicKeyCredentialPRFRegistrationOutputV5first9CryptoKit09SymmetricE0VSgvp"
+      },
+      "second": {
+        "kind": "Var",
+        "type": "second",
+        "usr": "s:22AuthenticationServices55ASAuthorizationPublicKeyCredentialPRFRegistrationOutputV6second9CryptoKit09SymmetricE0VSgvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(first:second:)",
+        "usr": "s:22AuthenticationServices55ASAuthorizationPublicKeyCredentialPRFRegistrationOutputV5first6secondAC9CryptoKit09SymmetricE0V_AHSgtcfc"
+      }
+    }
+  },
+  "ASAuthorizationWebBrowserPlatformPublicKeyCredential": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices52ASAuthorizationWebBrowserPlatformPublicKeyCredentialV",
+    "members": {
+      "name": {
+        "kind": "Var",
+        "type": "name",
+        "usr": "s:22AuthenticationServices52ASAuthorizationWebBrowserPlatformPublicKeyCredentialV4nameSSvp"
+      },
+      "customTitle": {
+        "kind": "Var",
+        "type": "customTitle",
+        "usr": "s:22AuthenticationServices52ASAuthorizationWebBrowserPlatformPublicKeyCredentialV11customTitleSSvp"
+      },
+      "relyingParty": {
+        "kind": "Var",
+        "type": "relyingParty",
+        "usr": "s:22AuthenticationServices52ASAuthorizationWebBrowserPlatformPublicKeyCredentialV12relyingPartySSvp"
+      },
+      "credentialID": {
+        "kind": "Var",
+        "type": "credentialID",
+        "usr": "s:22AuthenticationServices52ASAuthorizationWebBrowserPlatformPublicKeyCredentialV12credentialID10Foundation4DataVvp"
+      },
+      "userHandle": {
+        "kind": "Var",
+        "type": "userHandle",
+        "usr": "s:22AuthenticationServices52ASAuthorizationWebBrowserPlatformPublicKeyCredentialV10userHandle10Foundation4DataVvp"
+      },
+      "providerName": {
+        "kind": "Var",
+        "type": "providerName",
+        "usr": "s:22AuthenticationServices52ASAuthorizationWebBrowserPlatformPublicKeyCredentialV12providerNameSSvp"
+      }
+    }
+  },
+  "ASAuthorizationWebBrowserPlatformPublicKeyCredentialProvider": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices60ASAuthorizationWebBrowserPlatformPublicKeyCredentialProviderP",
+    "members": {
+      "createCredentialRegistrationRequest": {
+        "kind": "Func",
+        "type": "createCredentialRegistrationRequest(clientData:name:userID:requestStyle:)",
+        "usr": "s:22AuthenticationServices60ASAuthorizationWebBrowserPlatformPublicKeyCredentialProviderP06createI19RegistrationRequest10clientData4name6userID12requestStyleSo0cfghilM0CAA08ASPublichi6ClientO0V_SS10Foundation0O0VSo0cfghilmT0VtF"
+      },
+      "createCredentialAssertionRequest": {
+        "kind": "Func",
+        "type": "createCredentialAssertionRequest(clientData:)",
+        "usr": "s:22AuthenticationServices60ASAuthorizationWebBrowserPlatformPublicKeyCredentialProviderP06createI16AssertionRequest10clientDataSo0cfghilM0CAA08ASPublichi6ClientO0V_tF"
+      }
+    }
+  },
+  "ASAuthorizationWebBrowserSecurityKeyPublicKeyCredentialProvider": {
+    "kind": "Protocol",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices042ASAuthorizationWebBrowserSecurityKeyPublicG18CredentialProviderP",
+    "members": {
+      "createCredentialRegistrationRequest": {
+        "kind": "Func",
+        "type": "createCredentialRegistrationRequest(clientData:displayName:name:userID:)",
+        "usr": "s:22AuthenticationServices042ASAuthorizationWebBrowserSecurityKeyPublicG18CredentialProviderP06createI19RegistrationRequest10clientData11displayName4name6userIDSo0cfghgilM0CAA08ASPublicgi6ClientO0V_S2S10Foundation0O0VtF"
+      },
+      "createCredentialAssertionRequest": {
+        "kind": "Func",
+        "type": "createCredentialAssertionRequest(clientData:)",
+        "usr": "s:22AuthenticationServices042ASAuthorizationWebBrowserSecurityKeyPublicG18CredentialProviderP06createI16AssertionRequest10clientDataSo0cfghgilM0CAA08ASPublicgi6ClientO0V_tF"
+      }
+    }
+  },
+  "ASPasskeyRegistrationCredentialExtensionInput": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices45ASPasskeyRegistrationCredentialExtensionInputV",
+    "members": {
+      "largeBlob": {
+        "kind": "Var",
+        "type": "largeBlob",
+        "usr": "s:22AuthenticationServices45ASPasskeyRegistrationCredentialExtensionInputV9largeBlobAA024ASAuthorizationPublicKeye5LargeidG0VSgvp"
+      },
+      "prf": {
+        "kind": "Var",
+        "type": "prf",
+        "usr": "s:22AuthenticationServices45ASPasskeyRegistrationCredentialExtensionInputV3prfAA024ASAuthorizationPublicKeye15PRFRegistrationG0VSgvp"
+      }
+    }
+  },
+  "ASPasskeyCredentialExtensionInput": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices33ASPasskeyCredentialExtensionInputO",
+    "members": {
+      "none": {
+        "kind": "EnumElement",
+        "type": "none",
+        "usr": "s:22AuthenticationServices33ASPasskeyCredentialExtensionInputO4noneyA2CmF"
+      },
+      "assertion": {
+        "kind": "EnumElement",
+        "type": "assertion",
+        "usr": "s:22AuthenticationServices33ASPasskeyCredentialExtensionInputO9assertionyAcA0c9AssertiondeF0VcACmF"
+      },
+      "registration": {
+        "kind": "EnumElement",
+        "type": "registration",
+        "usr": "s:22AuthenticationServices33ASPasskeyCredentialExtensionInputO12registrationyAcA0c12RegistrationdeF0VcACmF"
+      }
+    }
+  },
+  "ASPublicKeyCredentialClientData": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices31ASPublicKeyCredentialClientDataV",
+    "members": {
+      "CrossOriginValue": {
+        "kind": "Enum",
+        "type": "CrossOriginValue",
+        "usr": "s:22AuthenticationServices31ASPublicKeyCredentialClientDataV16CrossOriginValueO"
+      },
+      "challenge": {
+        "kind": "Var",
+        "type": "challenge",
+        "usr": "s:22AuthenticationServices31ASPublicKeyCredentialClientDataV9challenge10Foundation0G0Vvp"
+      },
+      "origin": {
+        "kind": "Var",
+        "type": "origin",
+        "usr": "s:22AuthenticationServices31ASPublicKeyCredentialClientDataV6originSSvp"
+      },
+      "topOrigin": {
+        "kind": "Var",
+        "type": "topOrigin",
+        "usr": "s:22AuthenticationServices31ASPublicKeyCredentialClientDataV9topOriginSSSgvp"
+      },
+      "crossOrigin": {
+        "kind": "Var",
+        "type": "crossOrigin",
+        "usr": "s:22AuthenticationServices31ASPublicKeyCredentialClientDataV11crossOriginAC05CrossI5ValueOSgvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(challenge:origin:topOrigin:crossOrigin:)",
+        "usr": "s:22AuthenticationServices31ASPublicKeyCredentialClientDataV9challenge6origin9topOrigin05crossK0AC10Foundation0G0V_S2SSgAC05CrossK5ValueOSgtcfc"
+      }
+    }
+  },
+  "CrossOriginValue": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices31ASPublicKeyCredentialClientDataV16CrossOriginValueO",
+    "members": {
+      "crossOrigin": {
+        "kind": "EnumElement",
+        "type": "crossOrigin",
+        "usr": "s:22AuthenticationServices31ASPublicKeyCredentialClientDataV16CrossOriginValueO05crossI0yA2EmF"
+      },
+      "sameOriginWithAncestors": {
+        "kind": "EnumElement",
+        "type": "sameOriginWithAncestors",
+        "usr": "s:22AuthenticationServices31ASPublicKeyCredentialClientDataV16CrossOriginValueO04sameI13WithAncestorsyA2EmF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices31ASPublicKeyCredentialClientDataV16CrossOriginValueO2eeoiySbAE_AEtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices31ASPublicKeyCredentialClientDataV16CrossOriginValueO4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices31ASPublicKeyCredentialClientDataV16CrossOriginValueO04hashJ0Sivp"
+      }
+    }
+  },
+  "ASExportedCredentialData": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices24ASExportedCredentialDataV",
+    "members": {
+      "accounts": {
+        "kind": "Var",
+        "type": "accounts",
+        "usr": "s:22AuthenticationServices24ASExportedCredentialDataV8accountsSayAA19ASImportableAccountVGvp"
+      },
+      "id": {
+        "kind": "Var",
+        "type": "id",
+        "usr": "s:22AuthenticationServices24ASExportedCredentialDataV2id10Foundation4UUIDVvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:22AuthenticationServices24ASExportedCredentialDataV4fromACs7Decoder_p_tKcfc"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices24ASExportedCredentialDataV2eeoiySbAC_ACtFZ"
+      },
+      "ID": {
+        "kind": "TypeAlias",
+        "type": "ID",
+        "usr": "s:22AuthenticationServices24ASExportedCredentialDataV2IDa"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:22AuthenticationServices24ASExportedCredentialDataV6encode2toys7Encoder_p_tKF"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices24ASExportedCredentialDataV4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices24ASExportedCredentialDataV9hashValueSivp"
+      }
+    }
+  },
+  "ASImportableAccount": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices19ASImportableAccountV",
+    "members": {
+      "id": {
+        "kind": "Var",
+        "type": "id",
+        "usr": "s:22AuthenticationServices19ASImportableAccountV2id10Foundation4DataVvp"
+      },
+      "userName": {
+        "kind": "Var",
+        "type": "userName",
+        "usr": "s:22AuthenticationServices19ASImportableAccountV8userNameSSvp"
+      },
+      "email": {
+        "kind": "Var",
+        "type": "email",
+        "usr": "s:22AuthenticationServices19ASImportableAccountV5emailSSvp"
+      },
+      "fullName": {
+        "kind": "Var",
+        "type": "fullName",
+        "usr": "s:22AuthenticationServices19ASImportableAccountV8fullNameSSSgvp"
+      },
+      "collections": {
+        "kind": "Var",
+        "type": "collections",
+        "usr": "s:22AuthenticationServices19ASImportableAccountV11collectionsSayAA0C10CollectionVGvp"
+      },
+      "items": {
+        "kind": "Var",
+        "type": "items",
+        "usr": "s:22AuthenticationServices19ASImportableAccountV5itemsSayAA0C4ItemVGvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:22AuthenticationServices19ASImportableAccountV4fromACs7Decoder_p_tKcfc"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:22AuthenticationServices19ASImportableAccountV6encode2toys7Encoder_p_tKF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices19ASImportableAccountV2eeoiySbAC_ACtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices19ASImportableAccountV4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices19ASImportableAccountV9hashValueSivp"
+      }
+    }
+  },
+  "ASImportableCollection": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices22ASImportableCollectionV",
+    "members": {
+      "id": {
+        "kind": "Var",
+        "type": "id",
+        "usr": "s:22AuthenticationServices22ASImportableCollectionV2id10Foundation4DataVvp"
+      },
+      "title": {
+        "kind": "Var",
+        "type": "title",
+        "usr": "s:22AuthenticationServices22ASImportableCollectionV5titleSSvp"
+      },
+      "subtitle": {
+        "kind": "Var",
+        "type": "subtitle",
+        "usr": "s:22AuthenticationServices22ASImportableCollectionV8subtitleSSSgvp"
+      },
+      "items": {
+        "kind": "Var",
+        "type": "items",
+        "usr": "s:22AuthenticationServices22ASImportableCollectionV5itemsSayAA0C10LinkedItemVGvp"
+      },
+      "subcollections": {
+        "kind": "Var",
+        "type": "subcollections",
+        "usr": "s:22AuthenticationServices22ASImportableCollectionV14subcollectionsSayACGvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:22AuthenticationServices22ASImportableCollectionV4fromACs7Decoder_p_tKcfc"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:22AuthenticationServices22ASImportableCollectionV6encode2toys7Encoder_p_tKF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices22ASImportableCollectionV2eeoiySbAC_ACtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices22ASImportableCollectionV4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices22ASImportableCollectionV9hashValueSivp"
+      }
+    }
+  },
+  "ASImportableLinkedItem": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices22ASImportableLinkedItemV",
+    "members": {
+      "item": {
+        "kind": "Var",
+        "type": "item",
+        "usr": "s:22AuthenticationServices22ASImportableLinkedItemV4item10Foundation4DataVvp"
+      },
+      "account": {
+        "kind": "Var",
+        "type": "account",
+        "usr": "s:22AuthenticationServices22ASImportableLinkedItemV7account10Foundation4DataVSgvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:22AuthenticationServices22ASImportableLinkedItemV4fromACs7Decoder_p_tKcfc"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:22AuthenticationServices22ASImportableLinkedItemV6encode2toys7Encoder_p_tKF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices22ASImportableLinkedItemV2eeoiySbAC_ACtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices22ASImportableLinkedItemV4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices22ASImportableLinkedItemV9hashValueSivp"
+      }
+    }
+  },
+  "ASImportableItem": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices16ASImportableItemV",
+    "members": {
+      "ItemType": {
+        "kind": "Enum",
+        "type": "ItemType",
+        "usr": "s:22AuthenticationServices16ASImportableItemV0D4TypeO"
+      },
+      "id": {
+        "kind": "Var",
+        "type": "id",
+        "usr": "s:22AuthenticationServices16ASImportableItemV2id10Foundation4DataVvp"
+      },
+      "created": {
+        "kind": "Var",
+        "type": "created",
+        "usr": "s:22AuthenticationServices16ASImportableItemV7created10Foundation4DateVvp"
+      },
+      "lastModified": {
+        "kind": "Var",
+        "type": "lastModified",
+        "usr": "s:22AuthenticationServices16ASImportableItemV12lastModified10Foundation4DateVvp"
+      },
+      "type": {
+        "kind": "Var",
+        "type": "type",
+        "usr": "s:22AuthenticationServices16ASImportableItemV4typeAC0D4TypeOvp"
+      },
+      "title": {
+        "kind": "Var",
+        "type": "title",
+        "usr": "s:22AuthenticationServices16ASImportableItemV5titleSSvp"
+      },
+      "subtitle": {
+        "kind": "Var",
+        "type": "subtitle",
+        "usr": "s:22AuthenticationServices16ASImportableItemV8subtitleSSSgvp"
+      },
+      "credentials": {
+        "kind": "Var",
+        "type": "credentials",
+        "usr": "s:22AuthenticationServices16ASImportableItemV11credentialsSayAA0C10CredentialOGvp"
+      },
+      "tags": {
+        "kind": "Var",
+        "type": "tags",
+        "usr": "s:22AuthenticationServices16ASImportableItemV4tagsSaySSGvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:22AuthenticationServices16ASImportableItemV4fromACs7Decoder_p_tKcfc"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:22AuthenticationServices16ASImportableItemV6encode2toys7Encoder_p_tKF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices16ASImportableItemV2eeoiySbAC_ACtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices16ASImportableItemV4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices16ASImportableItemV9hashValueSivp"
+      }
+    }
+  },
+  "ItemType": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices16ASImportableItemV0D4TypeO",
+    "members": {
+      "login": {
+        "kind": "EnumElement",
+        "type": "login",
+        "usr": "s:22AuthenticationServices16ASImportableItemV0D4TypeO5loginyA2EmF"
+      },
+      "document": {
+        "kind": "EnumElement",
+        "type": "document",
+        "usr": "s:22AuthenticationServices16ASImportableItemV0D4TypeO8documentyA2EmF"
+      },
+      "identity": {
+        "kind": "EnumElement",
+        "type": "identity",
+        "usr": "s:22AuthenticationServices16ASImportableItemV0D4TypeO8identityyA2EmF"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:22AuthenticationServices16ASImportableItemV0D4TypeO8rawValueAESgSS_tcfc"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:22AuthenticationServices16ASImportableItemV0D4TypeO8RawValuea"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:22AuthenticationServices16ASImportableItemV0D4TypeO8rawValueSSvp"
+      }
+    }
+  },
+  "ASImportableEditableField": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices25ASImportableEditableFieldV",
+    "members": {
+      "FieldType": {
+        "kind": "Enum",
+        "type": "FieldType",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV0E4TypeO"
+      },
+      "id": {
+        "kind": "Var",
+        "type": "id",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV2id10Foundation4DataVvp"
+      },
+      "fieldType": {
+        "kind": "Var",
+        "type": "fieldType",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV9fieldTypeAC0eG0Ovp"
+      },
+      "value": {
+        "kind": "Var",
+        "type": "value",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV5valueSSvp"
+      },
+      "label": {
+        "kind": "Var",
+        "type": "label",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV5labelSSSgvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV4fromACs7Decoder_p_tKcfc"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV6encode2toys7Encoder_p_tKF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV2eeoiySbAC_ACtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV9hashValueSivp"
+      }
+    }
+  },
+  "FieldType": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices25ASImportableEditableFieldV0E4TypeO",
+    "members": {
+      "string": {
+        "kind": "EnumElement",
+        "type": "string",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV0E4TypeO6stringyA2EmF"
+      },
+      "concealedString": {
+        "kind": "EnumElement",
+        "type": "concealedString",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV0E4TypeO15concealedStringyA2EmF"
+      },
+      "email": {
+        "kind": "EnumElement",
+        "type": "email",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV0E4TypeO5emailyA2EmF"
+      },
+      "number": {
+        "kind": "EnumElement",
+        "type": "number",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV0E4TypeO6numberyA2EmF"
+      },
+      "boolean": {
+        "kind": "EnumElement",
+        "type": "boolean",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV0E4TypeO7booleanyA2EmF"
+      },
+      "date": {
+        "kind": "EnumElement",
+        "type": "date",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV0E4TypeO4dateyA2EmF"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV0E4TypeO8rawValueAESgSS_tcfc"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV0E4TypeO8RawValuea"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:22AuthenticationServices25ASImportableEditableFieldV0E4TypeO8rawValueSSvp"
+      }
+    }
+  },
+  "ASImportableCredential": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices22ASImportableCredentialO",
+    "members": {
+      "basicAuthentication": {
+        "kind": "EnumElement",
+        "type": "basicAuthentication",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO05basicA0yA2C05BasicA0VcACmF"
+      },
+      "passkey": {
+        "kind": "EnumElement",
+        "type": "passkey",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO7passkeyyA2C7PasskeyVcACmF"
+      },
+      "totp": {
+        "kind": "EnumElement",
+        "type": "totp",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4totpyA2C4TOTPVcACmF"
+      },
+      "note": {
+        "kind": "EnumElement",
+        "type": "note",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4noteyA2C4NoteVcACmF"
+      },
+      "creditCard": {
+        "kind": "EnumElement",
+        "type": "creditCard",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO10creditCardyA2C06CreditF0VcACmF"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4fromACs7Decoder_p_tKcfc"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO6encode2toys7Encoder_p_tKF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO2eeoiySbAC_ACtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO9hashValueSivp"
+      }
+    }
+  },
+  "BasicAuthentication": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices22ASImportableCredentialO05BasicA0V",
+    "members": {
+      "urls": {
+        "kind": "Var",
+        "type": "urls",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO05BasicA0V4urlsSaySSGvp"
+      },
+      "username": {
+        "kind": "Var",
+        "type": "username",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO05BasicA0V8usernameAA0C13EditableFieldVSgvp"
+      },
+      "password": {
+        "kind": "Var",
+        "type": "password",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO05BasicA0V8passwordAA0C13EditableFieldVSgvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO05BasicA0V4fromAEs7Decoder_p_tKcfc"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO05BasicA0V2eeoiySbAE_AEtFZ"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO05BasicA0V6encode2toys7Encoder_p_tKF"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO05BasicA0V4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO05BasicA0V9hashValueSivp"
+      }
+    }
+  },
+  "Passkey": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices22ASImportableCredentialO7PasskeyV",
+    "members": {
+      "credentialID": {
+        "kind": "Var",
+        "type": "credentialID",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO7PasskeyV12credentialID10Foundation4DataVvp"
+      },
+      "relyingPartyIdentifier": {
+        "kind": "Var",
+        "type": "relyingPartyIdentifier",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO7PasskeyV22relyingPartyIdentifierSSvp"
+      },
+      "userName": {
+        "kind": "Var",
+        "type": "userName",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO7PasskeyV8userNameSSvp"
+      },
+      "userDisplayName": {
+        "kind": "Var",
+        "type": "userDisplayName",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO7PasskeyV15userDisplayNameSSvp"
+      },
+      "userHandle": {
+        "kind": "Var",
+        "type": "userHandle",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO7PasskeyV10userHandle10Foundation4DataVvp"
+      },
+      "key": {
+        "kind": "Var",
+        "type": "key",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO7PasskeyV3key10Foundation4DataVvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO7PasskeyV4fromAEs7Decoder_p_tKcfc"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO7PasskeyV6encode2toys7Encoder_p_tKF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO7PasskeyV2eeoiySbAE_AEtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO7PasskeyV4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO7PasskeyV9hashValueSivp"
+      }
+    }
+  },
+  "CreditCard": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices22ASImportableCredentialO10CreditCardV",
+    "members": {
+      "number": {
+        "kind": "Var",
+        "type": "number",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO10CreditCardV6numberSSvp"
+      },
+      "fullName": {
+        "kind": "Var",
+        "type": "fullName",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO10CreditCardV8fullNameSSvp"
+      },
+      "cardType": {
+        "kind": "Var",
+        "type": "cardType",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO10CreditCardV8cardTypeSSSgvp"
+      },
+      "verificationNumber": {
+        "kind": "Var",
+        "type": "verificationNumber",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO10CreditCardV18verificationNumberSSSgvp"
+      },
+      "expiryDate": {
+        "kind": "Var",
+        "type": "expiryDate",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO10CreditCardV10expiryDateSSSgvp"
+      },
+      "validFrom": {
+        "kind": "Var",
+        "type": "validFrom",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO10CreditCardV9validFromSSSgvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO10CreditCardV4fromAEs7Decoder_p_tKcfc"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO10CreditCardV2eeoiySbAE_AEtFZ"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO10CreditCardV6encode2toys7Encoder_p_tKF"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO10CreditCardV4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO10CreditCardV9hashValueSivp"
+      }
+    }
+  },
+  "TOTP": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV",
+    "members": {
+      "Algorithm": {
+        "kind": "Enum",
+        "type": "Algorithm",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV9AlgorithmO"
+      },
+      "secret": {
+        "kind": "Var",
+        "type": "secret",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV6secret10Foundation4DataVvp"
+      },
+      "period": {
+        "kind": "Var",
+        "type": "period",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV6periods6UInt16Vvp"
+      },
+      "digits": {
+        "kind": "Var",
+        "type": "digits",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV6digitss6UInt16Vvp"
+      },
+      "username": {
+        "kind": "Var",
+        "type": "username",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV8usernameSSvp"
+      },
+      "algorithm": {
+        "kind": "Var",
+        "type": "algorithm",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV9algorithmAE9AlgorithmOvp"
+      },
+      "issuer": {
+        "kind": "Var",
+        "type": "issuer",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV6issuerSSSgvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV4fromAEs7Decoder_p_tKcfc"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV6encode2toys7Encoder_p_tKF"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV2eeoiySbAE_AEtFZ"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV9hashValueSivp"
+      }
+    }
+  },
+  "Algorithm": {
+    "kind": "Enum",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV9AlgorithmO",
+    "members": {
+      "sha1": {
+        "kind": "EnumElement",
+        "type": "sha1",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV9AlgorithmO4sha1yA2GmF"
+      },
+      "sha256": {
+        "kind": "EnumElement",
+        "type": "sha256",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV9AlgorithmO6sha256yA2GmF"
+      },
+      "sha512": {
+        "kind": "EnumElement",
+        "type": "sha512",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV9AlgorithmO6sha512yA2GmF"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(rawValue:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV9AlgorithmO8rawValueAGSgSS_tcfc"
+      },
+      "RawValue": {
+        "kind": "TypeAlias",
+        "type": "RawValue",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV9AlgorithmO8RawValuea"
+      },
+      "rawValue": {
+        "kind": "Var",
+        "type": "rawValue",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4TOTPV9AlgorithmO8rawValueSSvp"
+      }
+    }
+  },
+  "Note": {
+    "kind": "Struct",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices22ASImportableCredentialO4NoteV",
+    "members": {
+      "content": {
+        "kind": "Var",
+        "type": "content",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4NoteV7contentSSvp"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(from:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4NoteV4fromAEs7Decoder_p_tKcfc"
+      },
+      "==": {
+        "kind": "Func",
+        "type": "==(_:_:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4NoteV2eeoiySbAE_AEtFZ"
+      },
+      "encode": {
+        "kind": "Func",
+        "type": "encode(to:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4NoteV6encode2toys7Encoder_p_tKF"
+      },
+      "hash": {
+        "kind": "Func",
+        "type": "hash(into:)",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4NoteV4hash4intoys6HasherVz_tF"
+      },
+      "hashValue": {
+        "kind": "Var",
+        "type": "hashValue",
+        "usr": "s:22AuthenticationServices22ASImportableCredentialO4NoteV9hashValueSivp"
+      }
+    }
+  },
+  "ASCredentialExportManager": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices25ASCredentialExportManagerC",
+    "members": {
+      "exportCredentials": {
+        "kind": "Func",
+        "type": "exportCredentials(_:)",
+        "usr": "s:22AuthenticationServices25ASCredentialExportManagerC17exportCredentialsyyAA24ASExportedCredentialDataVYaKF"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init(presentationAnchor:)",
+        "usr": "s:22AuthenticationServices25ASCredentialExportManagerC18presentationAnchorACSo8UIWindowC_tcfc"
+      }
+    }
+  },
+  "ASCredentialImportManager": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "s:22AuthenticationServices25ASCredentialImportManagerC",
+    "members": {
+      "importCredentials": {
+        "kind": "Func",
+        "type": "importCredentials(token:)",
+        "usr": "s:22AuthenticationServices25ASCredentialImportManagerC17importCredentials5tokenAA24ASExportedCredentialDataV10Foundation4UUIDV_tYaKF"
+      },
+      "init": {
+        "kind": "Constructor",
+        "type": "init()",
+        "usr": "s:22AuthenticationServices25ASCredentialImportManagerCACycfc"
+      }
+    }
+  },
+  "__ASPasskeyAssertionCredentialExtensionInput": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASPasskeyAssertionCredentialExtensionInput",
+    "members": {
+      "supportsSecureCoding": {
+        "kind": "Var",
+        "type": "supportsSecureCoding",
+        "usr": "c:@CM@AuthenticationServices@@objc(cs)ASPasskeyAssertionCredentialExtensionInput(cpy)supportsSecureCoding"
+      }
+    }
+  },
+  "__ASPasskeyAssertionCredentialExtensionOutput": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASPasskeyAssertionCredentialExtensionOutput",
+    "members": {
+      "supportsSecureCoding": {
+        "kind": "Var",
+        "type": "supportsSecureCoding",
+        "usr": "c:@CM@AuthenticationServices@@objc(cs)ASPasskeyAssertionCredentialExtensionOutput(cpy)supportsSecureCoding"
+      }
+    }
+  },
+  "__ASPasskeyRegistrationCredentialExtensionOutput": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASPasskeyRegistrationCredentialExtensionOutput",
+    "members": {
+      "supportsSecureCoding": {
+        "kind": "Var",
+        "type": "supportsSecureCoding",
+        "usr": "c:@CM@AuthenticationServices@@objc(cs)ASPasskeyRegistrationCredentialExtensionOutput(cpy)supportsSecureCoding"
+      }
+    }
+  },
+  "__ASAuthorizationPublicKeyCredentialPRFRegistrationInput": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASAuthorizationPublicKeyCredentialPRFRegistrationInput",
+    "members": {
+      "checkForSupport": {
+        "kind": "Var",
+        "type": "checkForSupport",
+        "usr": "c:@CM@AuthenticationServices@@objc(cs)ASAuthorizationPublicKeyCredentialPRFRegistrationInput(cpy)checkForSupport"
+      }
+    }
+  },
+  "__ASPasskeyRegistrationCredentialExtensionInput": {
+    "kind": "Class",
+    "module": "AuthenticationServices",
+    "usr": "c:objc(cs)ASPasskeyRegistrationCredentialExtensionInput",
+    "members": {
+      "supportsSecureCoding": {
+        "kind": "Var",
+        "type": "supportsSecureCoding",
+        "usr": "c:@CM@AuthenticationServices@@objc(cs)ASPasskeyRegistrationCredentialExtensionInput(cpy)supportsSecureCoding"
+      }
+    }
+  }
+}

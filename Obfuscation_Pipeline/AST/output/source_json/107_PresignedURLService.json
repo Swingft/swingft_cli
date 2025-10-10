@@ -1,0 +1,263 @@
+[
+  {
+    "A_name" : "PresignedURLService",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "PresignedURLService.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "requestPresignedURL",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PresignedURLService.swift - Line: 13, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "contentType",
+          "purpose"
+        ],
+        "J_returnType" : "-> AnyPublisher<(fileKey: String, uploadUrl: String), Error>"
+      },
+      {
+        "A_name" : "uploadImageToS3",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PresignedURLService.swift - Line: 14, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data",
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "imageData",
+          "uploadUrl",
+          "contentType"
+        ],
+        "J_returnType" : "-> AnyPublisher<Void, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "requestPresignedURL",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PresignedURLService.swift - Line: 13, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "contentType",
+      "purpose"
+    ],
+    "J_returnType" : "-> AnyPublisher<(fileKey: String, uploadUrl: String), Error>"
+  },
+  {
+    "A_name" : "uploadImageToS3",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PresignedURLService.swift - Line: 14, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data",
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "imageData",
+      "uploadUrl",
+      "contentType"
+    ],
+    "J_returnType" : "-> AnyPublisher<Void, Error>"
+  },
+  {
+    "A_name" : "DefaultPresignedURLService",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseService<PresignedURLAPI>",
+      "PresignedURLService"
+    ],
+    "F_location" : "PresignedURLService.swift - Line: 17, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "requestPresignedURL",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PresignedURLService.swift - Line: 18, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "requestDTO",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PresignedURLService.swift - Line: 19, Column: 9",
+            "H_initialValue" : "PresignedURLRequestDTO(contentType: contentType, purpose: purpose)"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "contentType",
+          "purpose"
+        ],
+        "J_returnType" : "-> AnyPublisher<(fileKey: String, uploadUrl: String), Error>"
+      },
+      {
+        "A_name" : "uploadImageToS3",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PresignedURLService.swift - Line: 27, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "PresignedURLService.swift - Line: 28, Column: 9",
+            "H_initialValue" : "URLRequest(url: URL(string: uploadUrl)!)"
+          }
+        ],
+        "I_parameterType" : [
+          "Data",
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "imageData",
+          "uploadUrl",
+          "contentType"
+        ],
+        "J_returnType" : "-> AnyPublisher<Void, Error>"
+      }
+    ]
+  },
+  {
+    "A_name" : "requestPresignedURL",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PresignedURLService.swift - Line: 18, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "requestDTO",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PresignedURLService.swift - Line: 19, Column: 9",
+        "H_initialValue" : "PresignedURLRequestDTO(contentType: contentType, purpose: purpose)"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "contentType",
+      "purpose"
+    ],
+    "J_returnType" : "-> AnyPublisher<(fileKey: String, uploadUrl: String), Error>"
+  },
+  {
+    "A_name" : "requestDTO",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PresignedURLService.swift - Line: 19, Column: 9",
+    "H_initialValue" : "PresignedURLRequestDTO(contentType: contentType, purpose: purpose)"
+  },
+  {
+    "A_name" : "uploadImageToS3",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PresignedURLService.swift - Line: 27, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "PresignedURLService.swift - Line: 28, Column: 9",
+        "H_initialValue" : "URLRequest(url: URL(string: uploadUrl)!)"
+      }
+    ],
+    "I_parameterType" : [
+      "Data",
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "imageData",
+      "uploadUrl",
+      "contentType"
+    ],
+    "J_returnType" : "-> AnyPublisher<Void, Error>"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "PresignedURLService.swift - Line: 28, Column: 9",
+    "H_initialValue" : "URLRequest(url: URL(string: uploadUrl)!)"
+  }
+]

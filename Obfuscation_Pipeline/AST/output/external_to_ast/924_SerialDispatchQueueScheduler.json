@@ -1,0 +1,466 @@
+[
+  {
+    "A_name" : "SerialDispatchQueueScheduler",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "SchedulerType"
+    ],
+    "F_location" : "SerialDispatchQueueScheduler.swift - Line: 29, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "now",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDispatchQueueScheduler.swift - Line: 34, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "configuration",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDispatchQueueScheduler.swift - Line: 38, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDispatchQueueScheduler.swift - Line: 46, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "DispatchTimeInterval"
+        ],
+        "I_parameters" : [
+          "serialQueue",
+          "leeway"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "SerialDispatchQueueScheduler.swift - Line: 59, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "queue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SerialDispatchQueueScheduler.swift - Line: 60, Column: 9",
+            "H_initialValue" : "DispatchQueue(label: internalSerialQueueName, attributes: [])"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "((DispatchQueue) -> Void)?",
+          "DispatchTimeInterval"
+        ],
+        "I_parameters" : [
+          "internalSerialQueueName",
+          "serialQueueConfiguration",
+          "leeway"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "convenience"
+        ],
+        "F_location" : "SerialDispatchQueueScheduler.swift - Line: 72, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "serialQueue",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SerialDispatchQueueScheduler.swift - Line: 74, Column: 9",
+            "H_initialValue" : "DispatchQueue(label: internalSerialQueueName,\n                                        attributes: [],\n                                        target: queue)"
+          }
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "String",
+          "DispatchTimeInterval"
+        ],
+        "I_parameters" : [
+          "queue",
+          "internalSerialQueueName",
+          "leeway"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available",
+          "convenience"
+        ],
+        "F_location" : "SerialDispatchQueueScheduler.swift - Line: 87, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQoS",
+          "String",
+          "DispatchTimeInterval"
+        ],
+        "I_parameters" : [
+          "qos",
+          "internalSerialQueueName",
+          "leeway"
+        ]
+      },
+      {
+        "A_name" : "schedule",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "final"
+        ],
+        "F_location" : "SerialDispatchQueueScheduler.swift - Line: 99, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StateType",
+          "@escaping (StateType) -> Disposable"
+        ],
+        "I_parameters" : [
+          "_",
+          "action"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "scheduleInternal",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDispatchQueueScheduler.swift - Line: 103, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StateType",
+          "@escaping (StateType) -> Disposable"
+        ],
+        "I_parameters" : [
+          "_",
+          "action"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "scheduleRelative",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "final"
+        ],
+        "F_location" : "SerialDispatchQueueScheduler.swift - Line: 115, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StateType",
+          "RxTimeInterval",
+          "@escaping (StateType) -> Disposable"
+        ],
+        "I_parameters" : [
+          "_",
+          "dueTime",
+          "action"
+        ],
+        "J_returnType" : "-> Disposable"
+      },
+      {
+        "A_name" : "schedulePeriodic",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDispatchQueueScheduler.swift - Line: 128, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "StateType",
+          "RxTimeInterval",
+          "RxTimeInterval",
+          "@escaping (StateType) -> StateType"
+        ],
+        "I_parameters" : [
+          "_",
+          "startAfter",
+          "period",
+          "action"
+        ],
+        "J_returnType" : "-> Disposable"
+      }
+    ]
+  },
+  {
+    "A_name" : "now",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDispatchQueueScheduler.swift - Line: 34, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "configuration",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDispatchQueueScheduler.swift - Line: 38, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDispatchQueueScheduler.swift - Line: 46, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "DispatchTimeInterval"
+    ],
+    "I_parameters" : [
+      "serialQueue",
+      "leeway"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "SerialDispatchQueueScheduler.swift - Line: 59, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "queue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDispatchQueueScheduler.swift - Line: 60, Column: 9",
+        "H_initialValue" : "DispatchQueue(label: internalSerialQueueName, attributes: [])"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "((DispatchQueue) -> Void)?",
+      "DispatchTimeInterval"
+    ],
+    "I_parameters" : [
+      "internalSerialQueueName",
+      "serialQueueConfiguration",
+      "leeway"
+    ]
+  },
+  {
+    "A_name" : "queue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDispatchQueueScheduler.swift - Line: 60, Column: 9",
+    "H_initialValue" : "DispatchQueue(label: internalSerialQueueName, attributes: [])"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "convenience"
+    ],
+    "F_location" : "SerialDispatchQueueScheduler.swift - Line: 72, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "serialQueue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SerialDispatchQueueScheduler.swift - Line: 74, Column: 9",
+        "H_initialValue" : "DispatchQueue(label: internalSerialQueueName,\n                                        attributes: [],\n                                        target: queue)"
+      }
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "String",
+      "DispatchTimeInterval"
+    ],
+    "I_parameters" : [
+      "queue",
+      "internalSerialQueueName",
+      "leeway"
+    ]
+  },
+  {
+    "A_name" : "serialQueue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDispatchQueueScheduler.swift - Line: 74, Column: 9",
+    "H_initialValue" : "DispatchQueue(label: internalSerialQueueName,\n                                        attributes: [],\n                                        target: queue)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available",
+      "convenience"
+    ],
+    "F_location" : "SerialDispatchQueueScheduler.swift - Line: 87, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQoS",
+      "String",
+      "DispatchTimeInterval"
+    ],
+    "I_parameters" : [
+      "qos",
+      "internalSerialQueueName",
+      "leeway"
+    ]
+  },
+  {
+    "A_name" : "schedule",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "F_location" : "SerialDispatchQueueScheduler.swift - Line: 99, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StateType",
+      "@escaping (StateType) -> Disposable"
+    ],
+    "I_parameters" : [
+      "_",
+      "action"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "scheduleInternal",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDispatchQueueScheduler.swift - Line: 103, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StateType",
+      "@escaping (StateType) -> Disposable"
+    ],
+    "I_parameters" : [
+      "_",
+      "action"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "scheduleRelative",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "F_location" : "SerialDispatchQueueScheduler.swift - Line: 115, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StateType",
+      "RxTimeInterval",
+      "@escaping (StateType) -> Disposable"
+    ],
+    "I_parameters" : [
+      "_",
+      "dueTime",
+      "action"
+    ],
+    "J_returnType" : "-> Disposable"
+  },
+  {
+    "A_name" : "schedulePeriodic",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SerialDispatchQueueScheduler.swift - Line: 128, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "StateType",
+      "RxTimeInterval",
+      "RxTimeInterval",
+      "@escaping (StateType) -> StateType"
+    ],
+    "I_parameters" : [
+      "_",
+      "startAfter",
+      "period",
+      "action"
+    ],
+    "J_returnType" : "-> Disposable"
+  }
+]

@@ -1,0 +1,662 @@
+[
+  {
+    "A_name" : "ReplayRelayTests",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "test_noEvents",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 15, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 16, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "relay",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 18, Column: 9",
+            "H_initialValue" : "ReplayRelay<Int>.create(bufferSize: 3)"
+          },
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 19, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_fewerEventsThanBufferSize",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 26, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 27, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "relay",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 29, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 30, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 31, Column: 9",
+            "H_initialValue" : "nil"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_moreEventsThanBufferSize",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 48, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 49, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "relay",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 51, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 52, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 53, Column: 9",
+            "H_initialValue" : "nil"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_moreEventsThanBufferSizeMultipleObservers",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 74, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 75, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "relay",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 77, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "result1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 78, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription1",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 79, Column: 9",
+            "H_initialValue" : "nil"
+          },
+          {
+            "A_name" : "result2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 81, Column: 9",
+            "H_initialValue" : "scheduler.createObserver(Int.self)"
+          },
+          {
+            "A_name" : "subscription2",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "ReplayRelayTests.swift - Line: 82, Column: 9",
+            "H_initialValue" : "nil"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "test_noEvents",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 15, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 16, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "relay",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 18, Column: 9",
+        "H_initialValue" : "ReplayRelay<Int>.create(bufferSize: 3)"
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 19, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 16, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "relay",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 18, Column: 9",
+    "H_initialValue" : "ReplayRelay<Int>.create(bufferSize: 3)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 19, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "test_fewerEventsThanBufferSize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 26, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 27, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "relay",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 29, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 30, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 31, Column: 9",
+        "H_initialValue" : "nil"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 27, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "relay",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 29, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 30, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 31, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "test_moreEventsThanBufferSize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 48, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 49, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "relay",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 51, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 52, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 53, Column: 9",
+        "H_initialValue" : "nil"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 49, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "relay",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 51, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 52, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 53, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "test_moreEventsThanBufferSizeMultipleObservers",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 74, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 75, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "relay",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 77, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "result1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 78, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription1",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 79, Column: 9",
+        "H_initialValue" : "nil"
+      },
+      {
+        "A_name" : "result2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 81, Column: 9",
+        "H_initialValue" : "scheduler.createObserver(Int.self)"
+      },
+      {
+        "A_name" : "subscription2",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "ReplayRelayTests.swift - Line: 82, Column: 9",
+        "H_initialValue" : "nil"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 75, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "relay",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 77, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "result1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 78, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription1",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 79, Column: 9",
+    "H_initialValue" : "nil"
+  },
+  {
+    "A_name" : "result2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 81, Column: 9",
+    "H_initialValue" : "scheduler.createObserver(Int.self)"
+  },
+  {
+    "A_name" : "subscription2",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "ReplayRelayTests.swift - Line: 82, Column: 9",
+    "H_initialValue" : "nil"
+  }
+]

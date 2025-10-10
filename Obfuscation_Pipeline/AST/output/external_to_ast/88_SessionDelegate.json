@@ -1,0 +1,1406 @@
+[
+  {
+    "A_name" : "SessionDelegate",
+    "B_kind" : "class",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "NSObject",
+      "@unchecked Sendable"
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 28, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "fileManager",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 29, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "stateProvider",
+        "B_kind" : "variable",
+        "C_accessLevel" : "weak",
+        "D_attributes" : [
+          "weak"
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 31, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "eventMonitor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 32, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 38, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "FileManager"
+        ],
+        "I_parameters" : [
+          "fileManager"
+        ]
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 47, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask",
+          "R.Type"
+        ],
+        "I_parameters" : [
+          "for",
+          "as"
+        ],
+        "J_returnType" : "-> R?"
+      }
+    ]
+  },
+  {
+    "A_name" : "fileManager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 29, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "stateProvider",
+    "B_kind" : "variable",
+    "C_accessLevel" : "weak",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 31, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "eventMonitor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 32, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 38, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "FileManager"
+    ],
+    "I_parameters" : [
+      "fileManager"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 47, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask",
+      "R.Type"
+    ],
+    "I_parameters" : [
+      "for",
+      "as"
+    ],
+    "J_returnType" : "-> R?"
+  },
+  {
+    "A_name" : "SessionStateProvider",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "AnyObject",
+      "Sendable"
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 58, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "serverTrustManager",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 59, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "redirectHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 60, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cachedResponseHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 61, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "request",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 63, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> Request?"
+      },
+      {
+        "A_name" : "didGatherMetricsForTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 64, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "didCompleteTask",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 65, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask",
+          "@escaping () -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "completion"
+        ]
+      },
+      {
+        "A_name" : "credential",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 66, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSessionTask",
+          "URLProtectionSpace"
+        ],
+        "I_parameters" : [
+          "for",
+          "in"
+        ],
+        "J_returnType" : "-> URLCredential?"
+      },
+      {
+        "A_name" : "cancelRequestsForSessionInvalidation",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 67, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "with"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "serverTrustManager",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 59, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "redirectHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 60, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cachedResponseHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 61, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 63, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> Request?"
+  },
+  {
+    "A_name" : "didGatherMetricsForTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 64, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "didCompleteTask",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 65, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask",
+      "@escaping () -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "completion"
+    ]
+  },
+  {
+    "A_name" : "credential",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 66, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSessionTask",
+      "URLProtectionSpace"
+    ],
+    "I_parameters" : [
+      "for",
+      "in"
+    ],
+    "J_returnType" : "-> URLCredential?"
+  },
+  {
+    "A_name" : "cancelRequestsForSessionInvalidation",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 67, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "with"
+    ]
+  },
+  {
+    "A_name" : "SessionDelegate",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "URLSessionDelegate"
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 72, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 73, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "_",
+          "didBecomeInvalidWithError"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 73, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "_",
+      "didBecomeInvalidWithError"
+    ]
+  },
+  {
+    "A_name" : "SessionDelegate",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "URLSessionTaskDelegate"
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 82, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 86, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "evaluation",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SessionDelegate.swift - Line: 92, Column: 9",
+            "H_initialValue" : ""
+          }
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask",
+          "URLAuthenticationChallenge",
+          "@escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "task",
+          "didReceive",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "attemptCredentialAuthentication",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 150, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLAuthenticationChallenge",
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "for",
+          "belongingTo"
+        ],
+        "J_returnType" : "-> ChallengeEvaluation"
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 163, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask",
+          "Int64",
+          "Int64",
+          "Int64"
+        ],
+        "I_parameters" : [
+          "_",
+          "task",
+          "didSendBodyData",
+          "totalBytesSent",
+          "totalBytesExpectedToSend"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 178, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask",
+          "@escaping (InputStream?) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "task",
+          "needNewBodyStream"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 192, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask",
+          "HTTPURLResponse",
+          "URLRequest",
+          "@escaping (URLRequest?) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "task",
+          "willPerformHTTPRedirection",
+          "newRequest",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 206, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask",
+          "URLSessionTaskMetrics"
+        ],
+        "I_parameters" : [
+          "_",
+          "task",
+          "didFinishCollecting"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 214, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SessionDelegate.swift - Line: 218, Column: 9",
+            "H_initialValue" : "stateProvider?.request(for: task)"
+          }
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask",
+          "(any Error)?"
+        ],
+        "I_parameters" : [
+          "_",
+          "task",
+          "didCompleteWithError"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+          "available"
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 225, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionTask"
+        ],
+        "I_parameters" : [
+          "_",
+          "taskIsWaitingForConnectivity"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 86, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "evaluation",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 92, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask",
+      "URLAuthenticationChallenge",
+      "@escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "task",
+      "didReceive",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "evaluation",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 92, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "attemptServerTrustAuthentication",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 120, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "host",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 121, Column: 9",
+        "H_initialValue" : "challenge.protectionSpace.host"
+      }
+    ],
+    "I_parameterType" : [
+      "URLAuthenticationChallenge"
+    ],
+    "I_parameters" : [
+      "with"
+    ],
+    "J_returnType" : "-> ChallengeEvaluation"
+  },
+  {
+    "A_name" : "host",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 121, Column: 9",
+    "H_initialValue" : "challenge.protectionSpace.host"
+  },
+  {
+    "A_name" : "attemptCredentialAuthentication",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 150, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLAuthenticationChallenge",
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "for",
+      "belongingTo"
+    ],
+    "J_returnType" : "-> ChallengeEvaluation"
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 163, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask",
+      "Int64",
+      "Int64",
+      "Int64"
+    ],
+    "I_parameters" : [
+      "_",
+      "task",
+      "didSendBodyData",
+      "totalBytesSent",
+      "totalBytesExpectedToSend"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 178, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask",
+      "@escaping (InputStream?) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "task",
+      "needNewBodyStream"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 192, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask",
+      "HTTPURLResponse",
+      "URLRequest",
+      "@escaping (URLRequest?) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "task",
+      "willPerformHTTPRedirection",
+      "newRequest",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 206, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask",
+      "URLSessionTaskMetrics"
+    ],
+    "I_parameters" : [
+      "_",
+      "task",
+      "didFinishCollecting"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 214, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 218, Column: 9",
+        "H_initialValue" : "stateProvider?.request(for: task)"
+      }
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask",
+      "(any Error)?"
+    ],
+    "I_parameters" : [
+      "_",
+      "task",
+      "didCompleteWithError"
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 218, Column: 9",
+    "H_initialValue" : "stateProvider?.request(for: task)"
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+      "available"
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 225, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionTask"
+    ],
+    "I_parameters" : [
+      "_",
+      "taskIsWaitingForConnectivity"
+    ]
+  },
+  {
+    "A_name" : "SessionDelegate",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "URLSessionDataDelegate"
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 233, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 234, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionDataTask",
+          "URLResponse",
+          "@escaping @Sendable (URLSession.ResponseDisposition) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "dataTask",
+          "didReceive",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 253, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionDataTask",
+          "Data"
+        ],
+        "I_parameters" : [
+          "_",
+          "dataTask",
+          "didReceive"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 266, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionDataTask",
+          "CachedURLResponse",
+          "@escaping (CachedURLResponse?) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "dataTask",
+          "willCacheResponse",
+          "completionHandler"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 234, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionDataTask",
+      "URLResponse",
+      "@escaping @Sendable (URLSession.ResponseDisposition) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "dataTask",
+      "didReceive",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 253, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionDataTask",
+      "Data"
+    ],
+    "I_parameters" : [
+      "_",
+      "dataTask",
+      "didReceive"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 266, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionDataTask",
+      "CachedURLResponse",
+      "@escaping (CachedURLResponse?) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "dataTask",
+      "willCacheResponse",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "SessionDelegate",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+      "URLSessionWebSocketDelegate"
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 284, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 286, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionWebSocketTask",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "webSocketTask",
+          "didOpenWithProtocol"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 296, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "reason",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "SessionDelegate.swift - Line: 304, Column: 9",
+            "H_initialValue" : "(reason?.isEmpty == true) ? nil : reason"
+          }
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionWebSocketTask",
+          "URLSessionWebSocketTask.CloseCode",
+          "Data?"
+        ],
+        "I_parameters" : [
+          "_",
+          "webSocketTask",
+          "didCloseWith",
+          "reason"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 286, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionWebSocketTask",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "webSocketTask",
+      "didOpenWithProtocol"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 296, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "reason",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 304, Column: 9",
+        "H_initialValue" : "(reason?.isEmpty == true) ? nil : reason"
+      }
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionWebSocketTask",
+      "URLSessionWebSocketTask.CloseCode",
+      "Data?"
+    ],
+    "I_parameters" : [
+      "_",
+      "webSocketTask",
+      "didCloseWith",
+      "reason"
+    ]
+  },
+  {
+    "A_name" : "reason",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 304, Column: 9",
+    "H_initialValue" : "(reason?.isEmpty == true) ? nil : reason"
+  },
+  {
+    "A_name" : "SessionDelegate",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "URLSessionDownloadDelegate"
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 313, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 314, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionDownloadTask",
+          "Int64",
+          "Int64"
+        ],
+        "I_parameters" : [
+          "_",
+          "downloadTask",
+          "didResumeAtOffset",
+          "expectedTotalBytes"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 331, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionDownloadTask",
+          "Int64",
+          "Int64",
+          "Int64"
+        ],
+        "I_parameters" : [
+          "_",
+          "downloadTask",
+          "didWriteData",
+          "totalBytesWritten",
+          "totalBytesExpectedToWrite"
+        ]
+      },
+      {
+        "A_name" : "urlSession",
+        "B_kind" : "function",
+        "C_accessLevel" : "open",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "SessionDelegate.swift - Line: 350, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "URLSession",
+          "URLSessionDownloadTask",
+          "URL"
+        ],
+        "I_parameters" : [
+          "_",
+          "downloadTask",
+          "didFinishDownloadingTo"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 314, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionDownloadTask",
+      "Int64",
+      "Int64"
+    ],
+    "I_parameters" : [
+      "_",
+      "downloadTask",
+      "didResumeAtOffset",
+      "expectedTotalBytes"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 331, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionDownloadTask",
+      "Int64",
+      "Int64",
+      "Int64"
+    ],
+    "I_parameters" : [
+      "_",
+      "downloadTask",
+      "didWriteData",
+      "totalBytesWritten",
+      "totalBytesExpectedToWrite"
+    ]
+  },
+  {
+    "A_name" : "urlSession",
+    "B_kind" : "function",
+    "C_accessLevel" : "open",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 350, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "URLSession",
+      "URLSessionDownloadTask",
+      "URL"
+    ],
+    "I_parameters" : [
+      "_",
+      "downloadTask",
+      "didFinishDownloadingTo"
+    ]
+  },
+  {
+    "A_name" : "directory",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "SessionDelegate.swift - Line: 374, Column: 17",
+    "H_initialValue" : "destination.deletingLastPathComponent()"
+  }
+]

@@ -1,0 +1,1774 @@
+[
+  {
+    "A_name" : "Method",
+    "B_kind" : "extension",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 5, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "supportsMultipart",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 7, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "supportsMultipart",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 7, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "MoyaProvider",
+    "B_kind" : "extension",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 20, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "requestNormal",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 22, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "endpoint",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 23, Column: 9",
+            "H_initialValue" : "self.endpoint(target)"
+          },
+          {
+            "A_name" : "stubBehavior",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 24, Column: 9",
+            "H_initialValue" : "self.stubClosure(target)"
+          },
+          {
+            "A_name" : "cancellableToken",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 25, Column: 9",
+            "H_initialValue" : "CancellableWrapper()"
+          },
+          {
+            "A_name" : "pluginsWithCompletion",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 28, Column: 9",
+            "H_initialValue" : "{ result in\n            let processedResult = self.plugins.reduce(result) { $1.process($0, target: target) }\n            completion(processedResult)\n        }"
+          },
+          {
+            "A_name" : "performNetworking",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 45, Column: 9",
+            "H_initialValue" : "{ (requestResult: Result<URLRequest, MoyaError>) in\n            if cancellableToken.isCancelled {\n                self.cancelCompletion(pluginsWithCompletion, target: target)\n                return\n            }\n\n            var request: URLRequest!\n\n            switch requestResult {\n            case .success(let urlRequest):\n                request = urlRequest\n            case .failure(let error):\n                pluginsWithCompletion(.failure(error))\n                return\n            }\n\n            let networkCompletion: Moya.Completion = { result in\n              if self.trackInflights {\n                self.inflightRequests[endpoint]?.forEach { $0(result) }\n                self.internalInflightRequests.removeValue(forKey: endpoint)\n              } else {\n                pluginsWithCompletion(result)\n              }\n            }\n\n            cancellableToken.innerCancellable = self.performRequest(target, request: request, callbackQueue: callbackQueue, progress: progress, completion: networkCompletion, endpoint: endpoint, stubBehavior: stubBehavior)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "Target",
+          "DispatchQueue?",
+          "Moya.ProgressBlock?",
+          "@escaping Moya.Completion"
+        ],
+        "I_parameters" : [
+          "_",
+          "callbackQueue",
+          "progress",
+          "completion"
+        ],
+        "J_returnType" : "-> Cancellable"
+      },
+      {
+        "A_name" : "performRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 79, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Target",
+          "URLRequest",
+          "DispatchQueue?",
+          "Moya.ProgressBlock?",
+          "@escaping Moya.Completion",
+          "Endpoint",
+          "Moya.StubBehavior"
+        ],
+        "I_parameters" : [
+          "_",
+          "request",
+          "callbackQueue",
+          "progress",
+          "completion",
+          "endpoint",
+          "stubBehavior"
+        ],
+        "J_returnType" : "-> Cancellable"
+      },
+      {
+        "A_name" : "cancelCompletion",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 100, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "error",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 101, Column: 9",
+            "H_initialValue" : "MoyaError.underlying(NSError(domain: NSURLErrorDomain, code: NSURLErrorCancelled, userInfo: nil), nil)"
+          }
+        ],
+        "I_parameterType" : [
+          "Moya.Completion",
+          "Target"
+        ],
+        "I_parameters" : [
+          "_",
+          "target"
+        ]
+      },
+      {
+        "A_name" : "createStubFunction",
+        "B_kind" : "function",
+        "C_accessLevel" : "final",
+        "D_attributes" : [
+          "final"
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 107, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "CancellableToken",
+          "Target",
+          "@escaping Moya.Completion",
+          "Endpoint",
+          "[PluginType]",
+          "URLRequest"
+        ],
+        "I_parameters" : [
+          "_",
+          "forTarget",
+          "withCompletion",
+          "endpoint",
+          "plugins",
+          "request"
+        ],
+        "J_returnType" : "-> (() -> Void)"
+      },
+      {
+        "A_name" : "notifyPluginsOfImpendingStub",
+        "B_kind" : "function",
+        "C_accessLevel" : "final",
+        "D_attributes" : [
+          "final"
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 146, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "alamoRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 147, Column: 9",
+            "H_initialValue" : "session.request(request)"
+          },
+          {
+            "A_name" : "preparedRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 150, Column: 9",
+            "H_initialValue" : "plugins.reduce(request) { $1.prepare($0, target: target) }"
+          },
+          {
+            "A_name" : "stubbedAlamoRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 152, Column: 9",
+            "H_initialValue" : "RequestTypeWrapper(request: alamoRequest, urlRequest: preparedRequest)"
+          }
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "Target"
+        ],
+        "I_parameters" : [
+          "for",
+          "target"
+        ],
+        "J_returnType" : "-> URLRequest"
+      }
+    ]
+  },
+  {
+    "A_name" : "requestNormal",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 22, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "endpoint",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 23, Column: 9",
+        "H_initialValue" : "self.endpoint(target)"
+      },
+      {
+        "A_name" : "stubBehavior",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 24, Column: 9",
+        "H_initialValue" : "self.stubClosure(target)"
+      },
+      {
+        "A_name" : "cancellableToken",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 25, Column: 9",
+        "H_initialValue" : "CancellableWrapper()"
+      },
+      {
+        "A_name" : "pluginsWithCompletion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 28, Column: 9",
+        "H_initialValue" : "{ result in\n            let processedResult = self.plugins.reduce(result) { $1.process($0, target: target) }\n            completion(processedResult)\n        }"
+      },
+      {
+        "A_name" : "performNetworking",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 45, Column: 9",
+        "H_initialValue" : "{ (requestResult: Result<URLRequest, MoyaError>) in\n            if cancellableToken.isCancelled {\n                self.cancelCompletion(pluginsWithCompletion, target: target)\n                return\n            }\n\n            var request: URLRequest!\n\n            switch requestResult {\n            case .success(let urlRequest):\n                request = urlRequest\n            case .failure(let error):\n                pluginsWithCompletion(.failure(error))\n                return\n            }\n\n            let networkCompletion: Moya.Completion = { result in\n              if self.trackInflights {\n                self.inflightRequests[endpoint]?.forEach { $0(result) }\n                self.internalInflightRequests.removeValue(forKey: endpoint)\n              } else {\n                pluginsWithCompletion(result)\n              }\n            }\n\n            cancellableToken.innerCancellable = self.performRequest(target, request: request, callbackQueue: callbackQueue, progress: progress, completion: networkCompletion, endpoint: endpoint, stubBehavior: stubBehavior)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "Target",
+      "DispatchQueue?",
+      "Moya.ProgressBlock?",
+      "@escaping Moya.Completion"
+    ],
+    "I_parameters" : [
+      "_",
+      "callbackQueue",
+      "progress",
+      "completion"
+    ],
+    "J_returnType" : "-> Cancellable"
+  },
+  {
+    "A_name" : "endpoint",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 23, Column: 9",
+    "H_initialValue" : "self.endpoint(target)"
+  },
+  {
+    "A_name" : "stubBehavior",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 24, Column: 9",
+    "H_initialValue" : "self.stubClosure(target)"
+  },
+  {
+    "A_name" : "cancellableToken",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 25, Column: 9",
+    "H_initialValue" : "CancellableWrapper()"
+  },
+  {
+    "A_name" : "pluginsWithCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 28, Column: 9",
+    "H_initialValue" : "{ result in\n            let processedResult = self.plugins.reduce(result) { $1.process($0, target: target) }\n            completion(processedResult)\n        }"
+  },
+  {
+    "A_name" : "processedResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 29, Column: 13",
+    "H_initialValue" : "self.plugins.reduce(result) { $1.process($0, target: target) }"
+  },
+  {
+    "A_name" : "inflightCompletionBlocks",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 34, Column: 13",
+    "H_initialValue" : "self.inflightRequests[endpoint]"
+  },
+  {
+    "A_name" : "performNetworking",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 45, Column: 9",
+    "H_initialValue" : "{ (requestResult: Result<URLRequest, MoyaError>) in\n            if cancellableToken.isCancelled {\n                self.cancelCompletion(pluginsWithCompletion, target: target)\n                return\n            }\n\n            var request: URLRequest!\n\n            switch requestResult {\n            case .success(let urlRequest):\n                request = urlRequest\n            case .failure(let error):\n                pluginsWithCompletion(.failure(error))\n                return\n            }\n\n            let networkCompletion: Moya.Completion = { result in\n              if self.trackInflights {\n                self.inflightRequests[endpoint]?.forEach { $0(result) }\n                self.internalInflightRequests.removeValue(forKey: endpoint)\n              } else {\n                pluginsWithCompletion(result)\n              }\n            }\n\n            cancellableToken.innerCancellable = self.performRequest(target, request: request, callbackQueue: callbackQueue, progress: progress, completion: networkCompletion, endpoint: endpoint, stubBehavior: stubBehavior)\n        }"
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 51, Column: 13",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "networkCompletion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 61, Column: 13",
+    "H_initialValue" : "{ result in\n              if self.trackInflights {\n                self.inflightRequests[endpoint]?.forEach { $0(result) }\n                self.internalInflightRequests.removeValue(forKey: endpoint)\n              } else {\n                pluginsWithCompletion(result)\n              }\n            }"
+  },
+  {
+    "A_name" : "performRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 79, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Target",
+      "URLRequest",
+      "DispatchQueue?",
+      "Moya.ProgressBlock?",
+      "@escaping Moya.Completion",
+      "Endpoint",
+      "Moya.StubBehavior"
+    ],
+    "I_parameters" : [
+      "_",
+      "request",
+      "callbackQueue",
+      "progress",
+      "completion",
+      "endpoint",
+      "stubBehavior"
+    ],
+    "J_returnType" : "-> Cancellable"
+  },
+  {
+    "A_name" : "cancelCompletion",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 100, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 101, Column: 9",
+        "H_initialValue" : "MoyaError.underlying(NSError(domain: NSURLErrorDomain, code: NSURLErrorCancelled, userInfo: nil), nil)"
+      }
+    ],
+    "I_parameterType" : [
+      "Moya.Completion",
+      "Target"
+    ],
+    "I_parameters" : [
+      "_",
+      "target"
+    ]
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 101, Column: 9",
+    "H_initialValue" : "MoyaError.underlying(NSError(domain: NSURLErrorDomain, code: NSURLErrorCancelled, userInfo: nil), nil)"
+  },
+  {
+    "A_name" : "createStubFunction",
+    "B_kind" : "function",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 107, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "CancellableToken",
+      "Target",
+      "@escaping Moya.Completion",
+      "Endpoint",
+      "[PluginType]",
+      "URLRequest"
+    ],
+    "I_parameters" : [
+      "_",
+      "forTarget",
+      "withCompletion",
+      "endpoint",
+      "plugins",
+      "request"
+    ],
+    "J_returnType" : "-> (() -> Void)"
+  },
+  {
+    "A_name" : "validate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 114, Column: 13",
+    "H_initialValue" : "{ (response: Moya.Response) -> Result<Moya.Response, MoyaError> in\n                let validCodes = target.validationType.statusCodes\n                guard !validCodes.isEmpty else { return .success(response) }\n                if validCodes.contains(response.statusCode) {\n                    return .success(response)\n                } else {\n                    let statusError = MoyaError.statusCode(response)\n                    let error = MoyaError.underlying(statusError, response)\n                    return .failure(error)\n                }\n            }"
+  },
+  {
+    "A_name" : "validCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 115, Column: 17",
+    "H_initialValue" : "target.validationType.statusCodes"
+  },
+  {
+    "A_name" : "statusError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 120, Column: 21",
+    "H_initialValue" : "MoyaError.statusCode(response)"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 121, Column: 21",
+    "H_initialValue" : "MoyaError.underlying(statusError, response)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 128, Column: 17",
+    "H_initialValue" : "Moya.Response(statusCode: statusCode, data: data, request: request, response: nil)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 129, Column: 17",
+    "H_initialValue" : "validate(response)"
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 133, Column: 17",
+    "H_initialValue" : "Moya.Response(statusCode: customResponse.statusCode, data: data, request: request, response: customResponse)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 134, Column: 17",
+    "H_initialValue" : "validate(response)"
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 138, Column: 17",
+    "H_initialValue" : "MoyaError.underlying(error, nil)"
+  },
+  {
+    "A_name" : "notifyPluginsOfImpendingStub",
+    "B_kind" : "function",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 146, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "alamoRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 147, Column: 9",
+        "H_initialValue" : "session.request(request)"
+      },
+      {
+        "A_name" : "preparedRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 150, Column: 9",
+        "H_initialValue" : "plugins.reduce(request) { $1.prepare($0, target: target) }"
+      },
+      {
+        "A_name" : "stubbedAlamoRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 152, Column: 9",
+        "H_initialValue" : "RequestTypeWrapper(request: alamoRequest, urlRequest: preparedRequest)"
+      }
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "Target"
+    ],
+    "I_parameters" : [
+      "for",
+      "target"
+    ],
+    "J_returnType" : "-> URLRequest"
+  },
+  {
+    "A_name" : "alamoRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 147, Column: 9",
+    "H_initialValue" : "session.request(request)"
+  },
+  {
+    "A_name" : "preparedRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 150, Column: 9",
+    "H_initialValue" : "plugins.reduce(request) { $1.prepare($0, target: target) }"
+  },
+  {
+    "A_name" : "stubbedAlamoRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 152, Column: 9",
+    "H_initialValue" : "RequestTypeWrapper(request: alamoRequest, urlRequest: preparedRequest)"
+  },
+  {
+    "A_name" : "MoyaProvider",
+    "B_kind" : "extension",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 159, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "interceptor",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 160, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Target"
+        ],
+        "I_parameters" : [
+          "target"
+        ],
+        "J_returnType" : "-> MoyaRequestInterceptor"
+      },
+      {
+        "A_name" : "setup",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 166, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "MoyaRequestInterceptor",
+          "Target",
+          "Request"
+        ],
+        "I_parameters" : [
+          "interceptor",
+          "with",
+          "and"
+        ]
+      },
+      {
+        "A_name" : "sendUploadMultipart",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 175, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "formData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 176, Column: 9",
+            "H_initialValue" : "RequestMultipartFormData()"
+          },
+          {
+            "A_name" : "interceptor",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 179, Column: 9",
+            "H_initialValue" : "self.interceptor(target: target)"
+          },
+          {
+            "A_name" : "uploadRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 180, Column: 9",
+            "H_initialValue" : "session.requestQueue.sync {\n            let uploadRequest = session.upload(multipartFormData: formData, with: request, interceptor: interceptor)\n            setup(interceptor: interceptor, with: target, and: uploadRequest)\n\n            return uploadRequest\n        }"
+          },
+          {
+            "A_name" : "validationCodes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 187, Column: 9",
+            "H_initialValue" : "target.validationType.statusCodes"
+          },
+          {
+            "A_name" : "validatedRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 188, Column: 9",
+            "H_initialValue" : "validationCodes.isEmpty ? uploadRequest : uploadRequest.validate(statusCode: validationCodes)"
+          }
+        ],
+        "I_parameterType" : [
+          "Target",
+          "URLRequest",
+          "DispatchQueue?",
+          "[MultipartFormData]",
+          "Moya.ProgressBlock?",
+          "@escaping Moya.Completion"
+        ],
+        "I_parameters" : [
+          "_",
+          "request",
+          "callbackQueue",
+          "multipartBody",
+          "progress",
+          "completion"
+        ],
+        "J_returnType" : "-> CancellableToken"
+      },
+      {
+        "A_name" : "sendUploadFile",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 192, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "interceptor",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 193, Column: 9",
+            "H_initialValue" : "self.interceptor(target: target)"
+          },
+          {
+            "A_name" : "uploadRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 194, Column: 9",
+            "H_initialValue" : "session.requestQueue.sync {\n            let uploadRequest = session.upload(file, with: request, interceptor: interceptor)\n            setup(interceptor: interceptor, with: target, and: uploadRequest)\n\n            return uploadRequest\n        }"
+          },
+          {
+            "A_name" : "validationCodes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 201, Column: 9",
+            "H_initialValue" : "target.validationType.statusCodes"
+          },
+          {
+            "A_name" : "alamoRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 202, Column: 9",
+            "H_initialValue" : "validationCodes.isEmpty ? uploadRequest : uploadRequest.validate(statusCode: validationCodes)"
+          }
+        ],
+        "I_parameterType" : [
+          "Target",
+          "URLRequest",
+          "DispatchQueue?",
+          "URL",
+          "ProgressBlock?",
+          "@escaping Completion"
+        ],
+        "I_parameters" : [
+          "_",
+          "request",
+          "callbackQueue",
+          "file",
+          "progress",
+          "completion"
+        ],
+        "J_returnType" : "-> CancellableToken"
+      },
+      {
+        "A_name" : "sendDownloadRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 206, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "interceptor",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 207, Column: 9",
+            "H_initialValue" : "self.interceptor(target: target)"
+          },
+          {
+            "A_name" : "downloadRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 208, Column: 9",
+            "H_initialValue" : "session.requestQueue.sync {\n            let downloadRequest = session.download(request, interceptor: interceptor, to: destination)\n            setup(interceptor: interceptor, with: target, and: downloadRequest)\n\n            return downloadRequest\n        }"
+          },
+          {
+            "A_name" : "validationCodes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 215, Column: 9",
+            "H_initialValue" : "target.validationType.statusCodes"
+          },
+          {
+            "A_name" : "alamoRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 216, Column: 9",
+            "H_initialValue" : "validationCodes.isEmpty ? downloadRequest : downloadRequest.validate(statusCode: validationCodes)"
+          }
+        ],
+        "I_parameterType" : [
+          "Target",
+          "URLRequest",
+          "DispatchQueue?",
+          "@escaping DownloadDestination",
+          "ProgressBlock?",
+          "@escaping Completion"
+        ],
+        "I_parameters" : [
+          "_",
+          "request",
+          "callbackQueue",
+          "destination",
+          "progress",
+          "completion"
+        ],
+        "J_returnType" : "-> CancellableToken"
+      },
+      {
+        "A_name" : "sendRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 220, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "interceptor",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 221, Column: 9",
+            "H_initialValue" : "self.interceptor(target: target)"
+          },
+          {
+            "A_name" : "initialRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 222, Column: 9",
+            "H_initialValue" : "session.requestQueue.sync {\n            let initialRequest = session.request(request, interceptor: interceptor)\n            setup(interceptor: interceptor, with: target, and: initialRequest)\n\n            return initialRequest\n        }"
+          },
+          {
+            "A_name" : "validationCodes",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 229, Column: 9",
+            "H_initialValue" : "target.validationType.statusCodes"
+          },
+          {
+            "A_name" : "alamoRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 230, Column: 9",
+            "H_initialValue" : "validationCodes.isEmpty ? initialRequest : initialRequest.validate(statusCode: validationCodes)"
+          }
+        ],
+        "I_parameterType" : [
+          "Target",
+          "URLRequest",
+          "DispatchQueue?",
+          "Moya.ProgressBlock?",
+          "@escaping Moya.Completion"
+        ],
+        "I_parameters" : [
+          "_",
+          "request",
+          "callbackQueue",
+          "progress",
+          "completion"
+        ],
+        "J_returnType" : "-> CancellableToken"
+      },
+      {
+        "A_name" : "sendAlamofireRequest",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 235, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "plugins",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 237, Column: 9",
+            "H_initialValue" : "self.plugins"
+          },
+          {
+            "A_name" : "progressAlamoRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 238, Column: 9",
+            "H_initialValue" : "alamoRequest"
+          },
+          {
+            "A_name" : "progressClosure",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 239, Column: 9",
+            "H_initialValue" : "{ progress in\n            let sendProgress: () -> Void = {\n                progressCompletion?(ProgressResponse(progress: progress))\n            }\n\n            if let callbackQueue = callbackQueue {\n                callbackQueue.async(execute: sendProgress)\n            } else {\n                sendProgress()\n            }\n        }"
+          },
+          {
+            "A_name" : "completionHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "MoyaProvider+Internal.swift - Line: 270, Column: 9",
+            "H_initialValue" : "{ response, request, data, error in\n            let result = convertResponseToResult(response, request: request, data: data, error: error)\n            \/\/ Inform all plugins about the response\n            plugins.forEach { $0.didReceive(result, target: target) }\n            if let progressCompletion = progressCompletion {\n                let value = try? result.get()\n                switch progressAlamoRequest {\n                case let downloadRequest as DownloadRequest:\n                    progressCompletion(ProgressResponse(progress: downloadRequest.downloadProgress, response: value))\n                case let uploadRequest as UploadRequest:\n                    progressCompletion(ProgressResponse(progress: uploadRequest.uploadProgress, response: value))\n                case let dataRequest as DataRequest:\n                    progressCompletion(ProgressResponse(progress: dataRequest.downloadProgress, response: value))\n                default:\n                    progressCompletion(ProgressResponse(response: value))\n                }\n            }\n            completion(result)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "T",
+          "Target",
+          "DispatchQueue?",
+          "Moya.ProgressBlock?",
+          "@escaping Moya.Completion"
+        ],
+        "I_parameters" : [
+          "_",
+          "target",
+          "callbackQueue",
+          "progress",
+          "completion"
+        ],
+        "J_returnType" : "-> CancellableToken"
+      }
+    ]
+  },
+  {
+    "A_name" : "interceptor",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 160, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Target"
+    ],
+    "I_parameters" : [
+      "target"
+    ],
+    "J_returnType" : "-> MoyaRequestInterceptor"
+  },
+  {
+    "A_name" : "setup",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 166, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "MoyaRequestInterceptor",
+      "Target",
+      "Request"
+    ],
+    "I_parameters" : [
+      "interceptor",
+      "with",
+      "and"
+    ]
+  },
+  {
+    "A_name" : "stubbedAlamoRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 170, Column: 13",
+    "H_initialValue" : "RequestTypeWrapper(request: request, urlRequest: urlRequest)"
+  },
+  {
+    "A_name" : "sendUploadMultipart",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 175, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "formData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 176, Column: 9",
+        "H_initialValue" : "RequestMultipartFormData()"
+      },
+      {
+        "A_name" : "interceptor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 179, Column: 9",
+        "H_initialValue" : "self.interceptor(target: target)"
+      },
+      {
+        "A_name" : "uploadRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 180, Column: 9",
+        "H_initialValue" : "session.requestQueue.sync {\n            let uploadRequest = session.upload(multipartFormData: formData, with: request, interceptor: interceptor)\n            setup(interceptor: interceptor, with: target, and: uploadRequest)\n\n            return uploadRequest\n        }"
+      },
+      {
+        "A_name" : "validationCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 187, Column: 9",
+        "H_initialValue" : "target.validationType.statusCodes"
+      },
+      {
+        "A_name" : "validatedRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 188, Column: 9",
+        "H_initialValue" : "validationCodes.isEmpty ? uploadRequest : uploadRequest.validate(statusCode: validationCodes)"
+      }
+    ],
+    "I_parameterType" : [
+      "Target",
+      "URLRequest",
+      "DispatchQueue?",
+      "[MultipartFormData]",
+      "Moya.ProgressBlock?",
+      "@escaping Moya.Completion"
+    ],
+    "I_parameters" : [
+      "_",
+      "request",
+      "callbackQueue",
+      "multipartBody",
+      "progress",
+      "completion"
+    ],
+    "J_returnType" : "-> CancellableToken"
+  },
+  {
+    "A_name" : "formData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 176, Column: 9",
+    "H_initialValue" : "RequestMultipartFormData()"
+  },
+  {
+    "A_name" : "interceptor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 179, Column: 9",
+    "H_initialValue" : "self.interceptor(target: target)"
+  },
+  {
+    "A_name" : "uploadRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 180, Column: 9",
+    "H_initialValue" : "session.requestQueue.sync {\n            let uploadRequest = session.upload(multipartFormData: formData, with: request, interceptor: interceptor)\n            setup(interceptor: interceptor, with: target, and: uploadRequest)\n\n            return uploadRequest\n        }"
+  },
+  {
+    "A_name" : "uploadRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 181, Column: 13",
+    "H_initialValue" : "session.upload(multipartFormData: formData, with: request, interceptor: interceptor)"
+  },
+  {
+    "A_name" : "validationCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 187, Column: 9",
+    "H_initialValue" : "target.validationType.statusCodes"
+  },
+  {
+    "A_name" : "validatedRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 188, Column: 9",
+    "H_initialValue" : "validationCodes.isEmpty ? uploadRequest : uploadRequest.validate(statusCode: validationCodes)"
+  },
+  {
+    "A_name" : "sendUploadFile",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 192, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "interceptor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 193, Column: 9",
+        "H_initialValue" : "self.interceptor(target: target)"
+      },
+      {
+        "A_name" : "uploadRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 194, Column: 9",
+        "H_initialValue" : "session.requestQueue.sync {\n            let uploadRequest = session.upload(file, with: request, interceptor: interceptor)\n            setup(interceptor: interceptor, with: target, and: uploadRequest)\n\n            return uploadRequest\n        }"
+      },
+      {
+        "A_name" : "validationCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 201, Column: 9",
+        "H_initialValue" : "target.validationType.statusCodes"
+      },
+      {
+        "A_name" : "alamoRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 202, Column: 9",
+        "H_initialValue" : "validationCodes.isEmpty ? uploadRequest : uploadRequest.validate(statusCode: validationCodes)"
+      }
+    ],
+    "I_parameterType" : [
+      "Target",
+      "URLRequest",
+      "DispatchQueue?",
+      "URL",
+      "ProgressBlock?",
+      "@escaping Completion"
+    ],
+    "I_parameters" : [
+      "_",
+      "request",
+      "callbackQueue",
+      "file",
+      "progress",
+      "completion"
+    ],
+    "J_returnType" : "-> CancellableToken"
+  },
+  {
+    "A_name" : "interceptor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 193, Column: 9",
+    "H_initialValue" : "self.interceptor(target: target)"
+  },
+  {
+    "A_name" : "uploadRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 194, Column: 9",
+    "H_initialValue" : "session.requestQueue.sync {\n            let uploadRequest = session.upload(file, with: request, interceptor: interceptor)\n            setup(interceptor: interceptor, with: target, and: uploadRequest)\n\n            return uploadRequest\n        }"
+  },
+  {
+    "A_name" : "uploadRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 195, Column: 13",
+    "H_initialValue" : "session.upload(file, with: request, interceptor: interceptor)"
+  },
+  {
+    "A_name" : "validationCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 201, Column: 9",
+    "H_initialValue" : "target.validationType.statusCodes"
+  },
+  {
+    "A_name" : "alamoRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 202, Column: 9",
+    "H_initialValue" : "validationCodes.isEmpty ? uploadRequest : uploadRequest.validate(statusCode: validationCodes)"
+  },
+  {
+    "A_name" : "sendDownloadRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 206, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "interceptor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 207, Column: 9",
+        "H_initialValue" : "self.interceptor(target: target)"
+      },
+      {
+        "A_name" : "downloadRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 208, Column: 9",
+        "H_initialValue" : "session.requestQueue.sync {\n            let downloadRequest = session.download(request, interceptor: interceptor, to: destination)\n            setup(interceptor: interceptor, with: target, and: downloadRequest)\n\n            return downloadRequest\n        }"
+      },
+      {
+        "A_name" : "validationCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 215, Column: 9",
+        "H_initialValue" : "target.validationType.statusCodes"
+      },
+      {
+        "A_name" : "alamoRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 216, Column: 9",
+        "H_initialValue" : "validationCodes.isEmpty ? downloadRequest : downloadRequest.validate(statusCode: validationCodes)"
+      }
+    ],
+    "I_parameterType" : [
+      "Target",
+      "URLRequest",
+      "DispatchQueue?",
+      "@escaping DownloadDestination",
+      "ProgressBlock?",
+      "@escaping Completion"
+    ],
+    "I_parameters" : [
+      "_",
+      "request",
+      "callbackQueue",
+      "destination",
+      "progress",
+      "completion"
+    ],
+    "J_returnType" : "-> CancellableToken"
+  },
+  {
+    "A_name" : "interceptor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 207, Column: 9",
+    "H_initialValue" : "self.interceptor(target: target)"
+  },
+  {
+    "A_name" : "downloadRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 208, Column: 9",
+    "H_initialValue" : "session.requestQueue.sync {\n            let downloadRequest = session.download(request, interceptor: interceptor, to: destination)\n            setup(interceptor: interceptor, with: target, and: downloadRequest)\n\n            return downloadRequest\n        }"
+  },
+  {
+    "A_name" : "downloadRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 209, Column: 13",
+    "H_initialValue" : "session.download(request, interceptor: interceptor, to: destination)"
+  },
+  {
+    "A_name" : "validationCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 215, Column: 9",
+    "H_initialValue" : "target.validationType.statusCodes"
+  },
+  {
+    "A_name" : "alamoRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 216, Column: 9",
+    "H_initialValue" : "validationCodes.isEmpty ? downloadRequest : downloadRequest.validate(statusCode: validationCodes)"
+  },
+  {
+    "A_name" : "sendRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 220, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "interceptor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 221, Column: 9",
+        "H_initialValue" : "self.interceptor(target: target)"
+      },
+      {
+        "A_name" : "initialRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 222, Column: 9",
+        "H_initialValue" : "session.requestQueue.sync {\n            let initialRequest = session.request(request, interceptor: interceptor)\n            setup(interceptor: interceptor, with: target, and: initialRequest)\n\n            return initialRequest\n        }"
+      },
+      {
+        "A_name" : "validationCodes",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 229, Column: 9",
+        "H_initialValue" : "target.validationType.statusCodes"
+      },
+      {
+        "A_name" : "alamoRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 230, Column: 9",
+        "H_initialValue" : "validationCodes.isEmpty ? initialRequest : initialRequest.validate(statusCode: validationCodes)"
+      }
+    ],
+    "I_parameterType" : [
+      "Target",
+      "URLRequest",
+      "DispatchQueue?",
+      "Moya.ProgressBlock?",
+      "@escaping Moya.Completion"
+    ],
+    "I_parameters" : [
+      "_",
+      "request",
+      "callbackQueue",
+      "progress",
+      "completion"
+    ],
+    "J_returnType" : "-> CancellableToken"
+  },
+  {
+    "A_name" : "interceptor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 221, Column: 9",
+    "H_initialValue" : "self.interceptor(target: target)"
+  },
+  {
+    "A_name" : "initialRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 222, Column: 9",
+    "H_initialValue" : "session.requestQueue.sync {\n            let initialRequest = session.request(request, interceptor: interceptor)\n            setup(interceptor: interceptor, with: target, and: initialRequest)\n\n            return initialRequest\n        }"
+  },
+  {
+    "A_name" : "initialRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 223, Column: 13",
+    "H_initialValue" : "session.request(request, interceptor: interceptor)"
+  },
+  {
+    "A_name" : "validationCodes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 229, Column: 9",
+    "H_initialValue" : "target.validationType.statusCodes"
+  },
+  {
+    "A_name" : "alamoRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 230, Column: 9",
+    "H_initialValue" : "validationCodes.isEmpty ? initialRequest : initialRequest.validate(statusCode: validationCodes)"
+  },
+  {
+    "A_name" : "sendAlamofireRequest",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 235, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "plugins",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 237, Column: 9",
+        "H_initialValue" : "self.plugins"
+      },
+      {
+        "A_name" : "progressAlamoRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 238, Column: 9",
+        "H_initialValue" : "alamoRequest"
+      },
+      {
+        "A_name" : "progressClosure",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 239, Column: 9",
+        "H_initialValue" : "{ progress in\n            let sendProgress: () -> Void = {\n                progressCompletion?(ProgressResponse(progress: progress))\n            }\n\n            if let callbackQueue = callbackQueue {\n                callbackQueue.async(execute: sendProgress)\n            } else {\n                sendProgress()\n            }\n        }"
+      },
+      {
+        "A_name" : "completionHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "MoyaProvider+Internal.swift - Line: 270, Column: 9",
+        "H_initialValue" : "{ response, request, data, error in\n            let result = convertResponseToResult(response, request: request, data: data, error: error)\n            \/\/ Inform all plugins about the response\n            plugins.forEach { $0.didReceive(result, target: target) }\n            if let progressCompletion = progressCompletion {\n                let value = try? result.get()\n                switch progressAlamoRequest {\n                case let downloadRequest as DownloadRequest:\n                    progressCompletion(ProgressResponse(progress: downloadRequest.downloadProgress, response: value))\n                case let uploadRequest as UploadRequest:\n                    progressCompletion(ProgressResponse(progress: uploadRequest.uploadProgress, response: value))\n                case let dataRequest as DataRequest:\n                    progressCompletion(ProgressResponse(progress: dataRequest.downloadProgress, response: value))\n                default:\n                    progressCompletion(ProgressResponse(response: value))\n                }\n            }\n            completion(result)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "T",
+      "Target",
+      "DispatchQueue?",
+      "Moya.ProgressBlock?",
+      "@escaping Moya.Completion"
+    ],
+    "I_parameters" : [
+      "_",
+      "target",
+      "callbackQueue",
+      "progress",
+      "completion"
+    ],
+    "J_returnType" : "-> CancellableToken"
+  },
+  {
+    "A_name" : "plugins",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 237, Column: 9",
+    "H_initialValue" : "self.plugins"
+  },
+  {
+    "A_name" : "progressAlamoRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 238, Column: 9",
+    "H_initialValue" : "alamoRequest"
+  },
+  {
+    "A_name" : "progressClosure",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 239, Column: 9",
+    "H_initialValue" : "{ progress in\n            let sendProgress: () -> Void = {\n                progressCompletion?(ProgressResponse(progress: progress))\n            }\n\n            if let callbackQueue = callbackQueue {\n                callbackQueue.async(execute: sendProgress)\n            } else {\n                sendProgress()\n            }\n        }"
+  },
+  {
+    "A_name" : "sendProgress",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 240, Column: 13",
+    "H_initialValue" : "{\n                progressCompletion?(ProgressResponse(progress: progress))\n            }"
+  },
+  {
+    "A_name" : "completionHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 270, Column: 9",
+    "H_initialValue" : "{ response, request, data, error in\n            let result = convertResponseToResult(response, request: request, data: data, error: error)\n            \/\/ Inform all plugins about the response\n            plugins.forEach { $0.didReceive(result, target: target) }\n            if let progressCompletion = progressCompletion {\n                let value = try? result.get()\n                switch progressAlamoRequest {\n                case let downloadRequest as DownloadRequest:\n                    progressCompletion(ProgressResponse(progress: downloadRequest.downloadProgress, response: value))\n                case let uploadRequest as UploadRequest:\n                    progressCompletion(ProgressResponse(progress: uploadRequest.uploadProgress, response: value))\n                case let dataRequest as DataRequest:\n                    progressCompletion(ProgressResponse(progress: dataRequest.downloadProgress, response: value))\n                default:\n                    progressCompletion(ProgressResponse(response: value))\n                }\n            }\n            completion(result)\n        }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 271, Column: 13",
+    "H_initialValue" : "convertResponseToResult(response, request: request, data: data, error: error)"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "MoyaProvider+Internal.swift - Line: 275, Column: 17",
+    "H_initialValue" : "try? result.get()"
+  }
+]

@@ -1,0 +1,571 @@
+[
+  {
+    "A_name" : "ObservableBufferTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 13, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "ObservableBufferTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testBufferWithTimeOrCount_Basic",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 17, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+BufferTests.swift - Line: 18, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+BufferTests.swift - Line: 20, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(205, 1),\n            .next(210, 2),\n            .next(240, 3),\n            .next(280, 4),\n            .next(320, 5),\n            .next(350, 6),\n            .next(370, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .completed(600)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+BufferTests.swift - Line: 34, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.buffer(timeSpan: .seconds(70), count: 3, scheduler: scheduler).map { EquatableArray($0) }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testBufferWithTimeOrCount_Error",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 54, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+BufferTests.swift - Line: 55, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+BufferTests.swift - Line: 57, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(205, 1),\n            .next(210, 2),\n            .next(240, 3),\n            .next(280, 4),\n            .next(320, 5),\n            .next(350, 6),\n            .next(370, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .error(600, testError)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+BufferTests.swift - Line: 70, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.buffer(timeSpan: .seconds(70), count: 3, scheduler: scheduler).map { EquatableArray($0) }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testBufferWithTimeOrCount_Disposed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 89, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+BufferTests.swift - Line: 90, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+BufferTests.swift - Line: 92, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(205, 1),\n            .next(210, 2),\n            .next(240, 3),\n            .next(280, 4),\n            .next(320, 5),\n            .next(350, 6),\n            .next(370, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .completed(600)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+BufferTests.swift - Line: 105, Column: 9",
+            "H_initialValue" : "scheduler.start(disposed: 370) {\n            xs.buffer(timeSpan: .seconds(70), count: 3, scheduler: scheduler).map { EquatableArray($0) }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testBufferWithTimeOrCount_Default",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 120, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "backgroundScheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+BufferTests.swift - Line: 121, Column: 9",
+            "H_initialValue" : "SerialDispatchQueueScheduler(qos: .default)"
+          },
+          {
+            "A_name" : "result",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+BufferTests.swift - Line: 123, Column: 9",
+            "H_initialValue" : "try! Observable.range(start: 1, count: 10, scheduler: backgroundScheduler)\n            .buffer(timeSpan: .seconds(1000), count: 3, scheduler: backgroundScheduler)\n            .skip(1)\n            .toBlocking()\n            .first()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testBufferWithTimeOrCount_Basic",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 17, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 18, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 20, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(205, 1),\n            .next(210, 2),\n            .next(240, 3),\n            .next(280, 4),\n            .next(320, 5),\n            .next(350, 6),\n            .next(370, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .completed(600)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 34, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.buffer(timeSpan: .seconds(70), count: 3, scheduler: scheduler).map { EquatableArray($0) }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 18, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 20, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(205, 1),\n            .next(210, 2),\n            .next(240, 3),\n            .next(280, 4),\n            .next(320, 5),\n            .next(350, 6),\n            .next(370, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .completed(600)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 34, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.buffer(timeSpan: .seconds(70), count: 3, scheduler: scheduler).map { EquatableArray($0) }\n        }"
+  },
+  {
+    "A_name" : "testBufferWithTimeOrCount_Error",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 54, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 55, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 57, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(205, 1),\n            .next(210, 2),\n            .next(240, 3),\n            .next(280, 4),\n            .next(320, 5),\n            .next(350, 6),\n            .next(370, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .error(600, testError)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 70, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.buffer(timeSpan: .seconds(70), count: 3, scheduler: scheduler).map { EquatableArray($0) }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 55, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 57, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(205, 1),\n            .next(210, 2),\n            .next(240, 3),\n            .next(280, 4),\n            .next(320, 5),\n            .next(350, 6),\n            .next(370, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .error(600, testError)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 70, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.buffer(timeSpan: .seconds(70), count: 3, scheduler: scheduler).map { EquatableArray($0) }\n        }"
+  },
+  {
+    "A_name" : "testBufferWithTimeOrCount_Disposed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 89, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 90, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 92, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(205, 1),\n            .next(210, 2),\n            .next(240, 3),\n            .next(280, 4),\n            .next(320, 5),\n            .next(350, 6),\n            .next(370, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .completed(600)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 105, Column: 9",
+        "H_initialValue" : "scheduler.start(disposed: 370) {\n            xs.buffer(timeSpan: .seconds(70), count: 3, scheduler: scheduler).map { EquatableArray($0) }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 90, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 92, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(205, 1),\n            .next(210, 2),\n            .next(240, 3),\n            .next(280, 4),\n            .next(320, 5),\n            .next(350, 6),\n            .next(370, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .completed(600)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 105, Column: 9",
+    "H_initialValue" : "scheduler.start(disposed: 370) {\n            xs.buffer(timeSpan: .seconds(70), count: 3, scheduler: scheduler).map { EquatableArray($0) }\n        }"
+  },
+  {
+    "A_name" : "testBufferWithTimeOrCount_Default",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 120, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "backgroundScheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 121, Column: 9",
+        "H_initialValue" : "SerialDispatchQueueScheduler(qos: .default)"
+      },
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 123, Column: 9",
+        "H_initialValue" : "try! Observable.range(start: 1, count: 10, scheduler: backgroundScheduler)\n            .buffer(timeSpan: .seconds(1000), count: 3, scheduler: backgroundScheduler)\n            .skip(1)\n            .toBlocking()\n            .first()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "backgroundScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 121, Column: 9",
+    "H_initialValue" : "SerialDispatchQueueScheduler(qos: .default)"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 123, Column: 9",
+    "H_initialValue" : "try! Observable.range(start: 1, count: 10, scheduler: backgroundScheduler)\n            .buffer(timeSpan: .seconds(1000), count: 3, scheduler: backgroundScheduler)\n            .skip(1)\n            .toBlocking()\n            .first()"
+  },
+  {
+    "A_name" : "testBufferReleasesResourcesOnComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 133, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 134, Column: 13",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 134, Column: 13",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "testBufferReleasesResourcesOnError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 139, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+BufferTests.swift - Line: 140, Column: 13",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+BufferTests.swift - Line: 140, Column: 13",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  }
+]

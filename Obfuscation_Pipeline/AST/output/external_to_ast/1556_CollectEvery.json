@@ -1,0 +1,455 @@
+[
+  {
+    "A_name" : "Operators",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 3, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "CollectEvery",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UnaryAsyncOperator<Value, [Value], Error>"
+    ],
+    "F_location" : "CollectEvery.swift - Line: 4, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "interval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CollectEvery.swift - Line: 5, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "discardWhenCompleted",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CollectEvery.swift - Line: 6, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "targetWithClock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CollectEvery.swift - Line: 7, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "state",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CollectEvery.swift - Line: 9, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "timerDisposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CollectEvery.swift - Line: 10, Column: 3",
+        "H_initialValue" : "SerialDisposable()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CollectEvery.swift - Line: 12, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "initialDate",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "CollectEvery.swift - Line: 29, Column: 4",
+            "H_initialValue" : "targetWithClock.currentDate.addingTimeInterval(interval)"
+          }
+        ],
+        "I_parameterType" : [
+          "Observer<[Value], Error>",
+          "Lifetime",
+          "DateScheduler",
+          "DispatchTimeInterval",
+          "Bool",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "downstream",
+          "downstreamLifetime",
+          "target",
+          "interval",
+          "skipEmpty",
+          "discardWhenCompleted"
+        ]
+      },
+      {
+        "A_name" : "receive",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CollectEvery.swift - Line: 43, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Value"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "terminate",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "CollectEvery.swift - Line: 47, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Termination<Error>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "interval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 5, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "discardWhenCompleted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 6, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "targetWithClock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 7, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 9, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "timerDisposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 10, Column: 3",
+    "H_initialValue" : "SerialDisposable()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 12, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "initialDate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CollectEvery.swift - Line: 29, Column: 4",
+        "H_initialValue" : "targetWithClock.currentDate.addingTimeInterval(interval)"
+      }
+    ],
+    "I_parameterType" : [
+      "Observer<[Value], Error>",
+      "Lifetime",
+      "DateScheduler",
+      "DispatchTimeInterval",
+      "Bool",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "downstream",
+      "downstreamLifetime",
+      "target",
+      "interval",
+      "skipEmpty",
+      "discardWhenCompleted"
+    ]
+  },
+  {
+    "A_name" : "initialDate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 29, Column: 4",
+    "H_initialValue" : "targetWithClock.currentDate.addingTimeInterval(interval)"
+  },
+  {
+    "A_name" : "receive",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CollectEvery.swift - Line: 43, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Value"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "terminate",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "CollectEvery.swift - Line: 47, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Termination<Error>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "CollectEveryState",
+    "B_kind" : "struct",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 60, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "skipEmpty",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CollectEvery.swift - Line: 61, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "values",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CollectEvery.swift - Line: 62, Column: 2",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "isCompleted",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CollectEvery.swift - Line: 63, Column: 2",
+        "H_initialValue" : "false"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CollectEvery.swift - Line: 65, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "skipEmpty"
+        ]
+      },
+      {
+        "A_name" : "hasValues",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "CollectEvery.swift - Line: 69, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "collect",
+        "B_kind" : "function",
+        "C_accessLevel" : "mutating",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "CollectEvery.swift - Line: 73, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> [Value]?"
+      }
+    ]
+  },
+  {
+    "A_name" : "skipEmpty",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 61, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "values",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 62, Column: 2",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "isCompleted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 63, Column: 2",
+    "H_initialValue" : "false"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 65, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "skipEmpty"
+    ]
+  },
+  {
+    "A_name" : "hasValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "CollectEvery.swift - Line: 69, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "collect",
+    "B_kind" : "function",
+    "C_accessLevel" : "mutating",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "CollectEvery.swift - Line: 73, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> [Value]?"
+  }
+]

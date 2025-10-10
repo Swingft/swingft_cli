@@ -1,0 +1,1852 @@
+[
+  {
+    "A_name" : "HTTPHeaders",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Equatable",
+      "Hashable",
+      "Sendable"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 28, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 29, Column: 5",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 32, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 36, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[HTTPHeader]"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 42, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "[String: String]"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "add",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 51, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "name",
+          "value"
+        ]
+      },
+      {
+        "A_name" : "add",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 58, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "HTTPHeader"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "update",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 67, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "name",
+          "value"
+        ]
+      },
+      {
+        "A_name" : "update",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 74, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "HTTPHeader"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "remove",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 86, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "name"
+        ]
+      },
+      {
+        "A_name" : "sort",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 93, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "sorted",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 100, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "headers",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeaders.swift - Line: 101, Column: 9",
+            "H_initialValue" : "self"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> HTTPHeaders"
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 112, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "for"
+        ],
+        "J_returnType" : "-> String?"
+      },
+      {
+        "A_name" : "dictionary",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 135, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 29, Column: 5",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 32, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 36, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[HTTPHeader]"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 42, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "[String: String]"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "add",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 51, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "name",
+      "value"
+    ]
+  },
+  {
+    "A_name" : "add",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 58, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "HTTPHeader"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "update",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 67, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "name",
+      "value"
+    ]
+  },
+  {
+    "A_name" : "update",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 74, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "HTTPHeader"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "remove",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 86, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "name"
+    ]
+  },
+  {
+    "A_name" : "sort",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 93, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "sorted",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 100, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 101, Column: 9",
+        "H_initialValue" : "self"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> HTTPHeaders"
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 101, Column: 9",
+    "H_initialValue" : "self"
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 112, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "for"
+    ],
+    "J_returnType" : "-> String?"
+  },
+  {
+    "A_name" : "dictionary",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 135, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "namesAndValues",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 136, Column: 9",
+    "H_initialValue" : "headers.map { ($0.name, $0.value) }"
+  },
+  {
+    "A_name" : "HTTPHeaders",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ExpressibleByDictionaryLiteral"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 142, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 143, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "(String, String)"
+    ],
+    "I_parameters" : [
+      "dictionaryLiteral"
+    ]
+  },
+  {
+    "A_name" : "HTTPHeaders",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ExpressibleByArrayLiteral"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 148, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 149, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "HTTPHeader"
+    ],
+    "I_parameters" : [
+      "arrayLiteral"
+    ]
+  },
+  {
+    "A_name" : "HTTPHeaders",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sequence"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 154, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "makeIterator",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 155, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> IndexingIterator<[HTTPHeader]>"
+      }
+    ]
+  },
+  {
+    "A_name" : "makeIterator",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 155, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> IndexingIterator<[HTTPHeader]>"
+  },
+  {
+    "A_name" : "HTTPHeaders",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Collection"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 160, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "startIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 161, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "endIndex",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 165, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "index",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 173, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Int"
+        ],
+        "I_parameters" : [
+          "after"
+        ],
+        "J_returnType" : "-> Int"
+      }
+    ]
+  },
+  {
+    "A_name" : "startIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 161, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "endIndex",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 165, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 173, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "after"
+    ],
+    "J_returnType" : "-> Int"
+  },
+  {
+    "A_name" : "HTTPHeaders",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomStringConvertible"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 178, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "description",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 179, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "description",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 179, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "HTTPHeader",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Equatable",
+      "Hashable",
+      "Sendable"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 188, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "name",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 190, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 193, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 200, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "name",
+          "value"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "name",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 190, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 193, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 200, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "name",
+      "value"
+    ]
+  },
+  {
+    "A_name" : "HTTPHeader",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "CustomStringConvertible"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 206, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "description",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 207, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "description",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 207, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "HTTPHeader",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 212, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "accept",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 217, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> HTTPHeader"
+      },
+      {
+        "A_name" : "acceptCharset",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 225, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> HTTPHeader"
+      },
+      {
+        "A_name" : "acceptLanguage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 237, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> HTTPHeader"
+      },
+      {
+        "A_name" : "acceptEncoding",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 249, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> HTTPHeader"
+      },
+      {
+        "A_name" : "authorization",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 260, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "credential",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeaders.swift - Line: 261, Column: 9",
+            "H_initialValue" : "Data(\"\\(username):\\(password)\".utf8).base64EncodedString()"
+          }
+        ],
+        "I_parameterType" : [
+          "String",
+          "String"
+        ],
+        "I_parameters" : [
+          "username",
+          "password"
+        ],
+        "J_returnType" : "-> HTTPHeader"
+      },
+      {
+        "A_name" : "authorization",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 271, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "bearerToken"
+        ],
+        "J_returnType" : "-> HTTPHeader"
+      },
+      {
+        "A_name" : "authorization",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 284, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> HTTPHeader"
+      },
+      {
+        "A_name" : "contentDisposition",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 293, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> HTTPHeader"
+      },
+      {
+        "A_name" : "contentEncoding",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 302, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> HTTPHeader"
+      },
+      {
+        "A_name" : "contentType",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 314, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> HTTPHeader"
+      },
+      {
+        "A_name" : "userAgent",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 323, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> HTTPHeader"
+      },
+      {
+        "A_name" : "websocketProtocol",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 331, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> HTTPHeader"
+      }
+    ]
+  },
+  {
+    "A_name" : "accept",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 217, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> HTTPHeader"
+  },
+  {
+    "A_name" : "acceptCharset",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 225, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> HTTPHeader"
+  },
+  {
+    "A_name" : "acceptLanguage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 237, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> HTTPHeader"
+  },
+  {
+    "A_name" : "acceptEncoding",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 249, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> HTTPHeader"
+  },
+  {
+    "A_name" : "authorization",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 260, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "credential",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 261, Column: 9",
+        "H_initialValue" : "Data(\"\\(username):\\(password)\".utf8).base64EncodedString()"
+      }
+    ],
+    "I_parameterType" : [
+      "String",
+      "String"
+    ],
+    "I_parameters" : [
+      "username",
+      "password"
+    ],
+    "J_returnType" : "-> HTTPHeader"
+  },
+  {
+    "A_name" : "credential",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 261, Column: 9",
+    "H_initialValue" : "Data(\"\\(username):\\(password)\".utf8).base64EncodedString()"
+  },
+  {
+    "A_name" : "authorization",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 271, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "bearerToken"
+    ],
+    "J_returnType" : "-> HTTPHeader"
+  },
+  {
+    "A_name" : "authorization",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 284, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> HTTPHeader"
+  },
+  {
+    "A_name" : "contentDisposition",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 293, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> HTTPHeader"
+  },
+  {
+    "A_name" : "contentEncoding",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 302, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> HTTPHeader"
+  },
+  {
+    "A_name" : "contentType",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 314, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> HTTPHeader"
+  },
+  {
+    "A_name" : "userAgent",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 323, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> HTTPHeader"
+  },
+  {
+    "A_name" : "websocketProtocol",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 331, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> HTTPHeader"
+  },
+  {
+    "A_name" : "[HTTPHeader]",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 336, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "index",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 338, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "lowercasedName",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "HTTPHeaders.swift - Line: 339, Column: 9",
+            "H_initialValue" : "name.lowercased()"
+          }
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "of"
+        ],
+        "J_returnType" : "-> Int?"
+      }
+    ]
+  },
+  {
+    "A_name" : "index",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 338, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "lowercasedName",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 339, Column: 9",
+        "H_initialValue" : "name.lowercased()"
+      }
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "of"
+    ],
+    "J_returnType" : "-> Int?"
+  },
+  {
+    "A_name" : "lowercasedName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 339, Column: 9",
+    "H_initialValue" : "name.lowercased()"
+  },
+  {
+    "A_name" : "HTTPHeaders",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 346, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "`default`",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 349, Column: 5",
+        "H_initialValue" : "[.defaultAcceptEncoding,\n                                                .defaultAcceptLanguage,\n                                                .defaultUserAgent]"
+      }
+    ]
+  },
+  {
+    "A_name" : "`default`",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 349, Column: 5",
+    "H_initialValue" : "[.defaultAcceptEncoding,\n                                                .defaultAcceptLanguage,\n                                                .defaultUserAgent]"
+  },
+  {
+    "A_name" : "HTTPHeader",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 354, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "defaultAcceptEncoding",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 359, Column: 5",
+        "H_initialValue" : "{\n        let encodings: [String] = if #available(iOS 11.0, macOS 10.13, tvOS 11.0, watchOS 4.0, *) {\n            [\"br\", \"gzip\", \"deflate\"]\n        } else {\n            [\"gzip\", \"deflate\"]\n        }\n\n        return .acceptEncoding(encodings.qualityEncoded())\n    }()"
+      },
+      {
+        "A_name" : "defaultAcceptLanguage",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 373, Column: 5",
+        "H_initialValue" : ".acceptLanguage(Locale.preferredLanguages.prefix(6).qualityEncoded())"
+      },
+      {
+        "A_name" : "defaultUserAgent",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 380, Column: 5",
+        "H_initialValue" : "{\n        let info = Bundle.main.infoDictionary\n        let executable = (info?[\"CFBundleExecutable\"] as? String) ??\n            (ProcessInfo.processInfo.arguments.first?.split(separator: \"\/\").last.map(String.init)) ??\n            \"Unknown\"\n        let bundle = info?[\"CFBundleIdentifier\"] as? String ?? \"Unknown\"\n        let appVersion = info?[\"CFBundleShortVersionString\"] as? String ?? \"Unknown\"\n        let appBuild = info?[\"CFBundleVersion\"] as? String ?? \"Unknown\"\n\n        let osNameVersion: String = {\n            let version = ProcessInfo.processInfo.operatingSystemVersion\n            let versionString = \"\\(version.majorVersion).\\(version.minorVersion).\\(version.patchVersion)\"\n            let osName: String = {\n                #if os(iOS)\n                #if targetEnvironment(macCatalyst)\n                return \"macOS(Catalyst)\"\n                #else\n                return \"iOS\"\n                #endif\n                #elseif os(watchOS)\n                return \"watchOS\"\n                #elseif os(tvOS)\n                return \"tvOS\"\n                #elseif os(macOS)\n                #if targetEnvironment(macCatalyst)\n                return \"macOS(Catalyst)\"\n                #else\n                return \"macOS\"\n                #endif\n                #elseif swift(>=5.9.2) && os(visionOS)\n                return \"visionOS\"\n                #elseif os(Linux)\n                return \"Linux\"\n                #elseif os(Windows)\n                return \"Windows\"\n                #elseif os(Android)\n                return \"Android\"\n                #else\n                return \"Unknown\"\n                #endif\n            }()\n\n            return \"\\(osName) \\(versionString)\"\n        }()\n\n        let alamofireVersion = \"Alamofire\/\\(AFInfo.version)\"\n\n        let userAgent = \"\\(executable)\/\\(appVersion) (\\(bundle); build:\\(appBuild); \\(osNameVersion)) \\(alamofireVersion)\"\n\n        return .userAgent(userAgent)\n    }()"
+      }
+    ]
+  },
+  {
+    "A_name" : "defaultAcceptEncoding",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 359, Column: 5",
+    "H_initialValue" : "{\n        let encodings: [String] = if #available(iOS 11.0, macOS 10.13, tvOS 11.0, watchOS 4.0, *) {\n            [\"br\", \"gzip\", \"deflate\"]\n        } else {\n            [\"gzip\", \"deflate\"]\n        }\n\n        return .acceptEncoding(encodings.qualityEncoded())\n    }()"
+  },
+  {
+    "A_name" : "encodings",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 360, Column: 9",
+    "H_initialValue" : "if #available(iOS 11.0, macOS 10.13, tvOS 11.0, watchOS 4.0, *) {\n            [\"br\", \"gzip\", \"deflate\"]\n        } else {\n            [\"gzip\", \"deflate\"]\n        }"
+  },
+  {
+    "A_name" : "defaultAcceptLanguage",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 373, Column: 5",
+    "H_initialValue" : ".acceptLanguage(Locale.preferredLanguages.prefix(6).qualityEncoded())"
+  },
+  {
+    "A_name" : "defaultUserAgent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 380, Column: 5",
+    "H_initialValue" : "{\n        let info = Bundle.main.infoDictionary\n        let executable = (info?[\"CFBundleExecutable\"] as? String) ??\n            (ProcessInfo.processInfo.arguments.first?.split(separator: \"\/\").last.map(String.init)) ??\n            \"Unknown\"\n        let bundle = info?[\"CFBundleIdentifier\"] as? String ?? \"Unknown\"\n        let appVersion = info?[\"CFBundleShortVersionString\"] as? String ?? \"Unknown\"\n        let appBuild = info?[\"CFBundleVersion\"] as? String ?? \"Unknown\"\n\n        let osNameVersion: String = {\n            let version = ProcessInfo.processInfo.operatingSystemVersion\n            let versionString = \"\\(version.majorVersion).\\(version.minorVersion).\\(version.patchVersion)\"\n            let osName: String = {\n                #if os(iOS)\n                #if targetEnvironment(macCatalyst)\n                return \"macOS(Catalyst)\"\n                #else\n                return \"iOS\"\n                #endif\n                #elseif os(watchOS)\n                return \"watchOS\"\n                #elseif os(tvOS)\n                return \"tvOS\"\n                #elseif os(macOS)\n                #if targetEnvironment(macCatalyst)\n                return \"macOS(Catalyst)\"\n                #else\n                return \"macOS\"\n                #endif\n                #elseif swift(>=5.9.2) && os(visionOS)\n                return \"visionOS\"\n                #elseif os(Linux)\n                return \"Linux\"\n                #elseif os(Windows)\n                return \"Windows\"\n                #elseif os(Android)\n                return \"Android\"\n                #else\n                return \"Unknown\"\n                #endif\n            }()\n\n            return \"\\(osName) \\(versionString)\"\n        }()\n\n        let alamofireVersion = \"Alamofire\/\\(AFInfo.version)\"\n\n        let userAgent = \"\\(executable)\/\\(appVersion) (\\(bundle); build:\\(appBuild); \\(osNameVersion)) \\(alamofireVersion)\"\n\n        return .userAgent(userAgent)\n    }()"
+  },
+  {
+    "A_name" : "info",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 381, Column: 9",
+    "H_initialValue" : "Bundle.main.infoDictionary"
+  },
+  {
+    "A_name" : "executable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 382, Column: 9",
+    "H_initialValue" : "(info?[\"CFBundleExecutable\"] as? String) ??\n            (ProcessInfo.processInfo.arguments.first?.split(separator: \"\/\").last.map(String.init)) ??\n            \"Unknown\""
+  },
+  {
+    "A_name" : "bundle",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 385, Column: 9",
+    "H_initialValue" : "info?[\"CFBundleIdentifier\"] as? String ?? \"Unknown\""
+  },
+  {
+    "A_name" : "appVersion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 386, Column: 9",
+    "H_initialValue" : "info?[\"CFBundleShortVersionString\"] as? String ?? \"Unknown\""
+  },
+  {
+    "A_name" : "appBuild",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 387, Column: 9",
+    "H_initialValue" : "info?[\"CFBundleVersion\"] as? String ?? \"Unknown\""
+  },
+  {
+    "A_name" : "osNameVersion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 389, Column: 9",
+    "H_initialValue" : "{\n            let version = ProcessInfo.processInfo.operatingSystemVersion\n            let versionString = \"\\(version.majorVersion).\\(version.minorVersion).\\(version.patchVersion)\"\n            let osName: String = {\n                #if os(iOS)\n                #if targetEnvironment(macCatalyst)\n                return \"macOS(Catalyst)\"\n                #else\n                return \"iOS\"\n                #endif\n                #elseif os(watchOS)\n                return \"watchOS\"\n                #elseif os(tvOS)\n                return \"tvOS\"\n                #elseif os(macOS)\n                #if targetEnvironment(macCatalyst)\n                return \"macOS(Catalyst)\"\n                #else\n                return \"macOS\"\n                #endif\n                #elseif swift(>=5.9.2) && os(visionOS)\n                return \"visionOS\"\n                #elseif os(Linux)\n                return \"Linux\"\n                #elseif os(Windows)\n                return \"Windows\"\n                #elseif os(Android)\n                return \"Android\"\n                #else\n                return \"Unknown\"\n                #endif\n            }()\n\n            return \"\\(osName) \\(versionString)\"\n        }()"
+  },
+  {
+    "A_name" : "version",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 390, Column: 13",
+    "H_initialValue" : "ProcessInfo.processInfo.operatingSystemVersion"
+  },
+  {
+    "A_name" : "versionString",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 391, Column: 13",
+    "H_initialValue" : "\"\\(version.majorVersion).\\(version.minorVersion).\\(version.patchVersion)\""
+  },
+  {
+    "A_name" : "osName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 392, Column: 13",
+    "H_initialValue" : "{\n                #if os(iOS)\n                #if targetEnvironment(macCatalyst)\n                return \"macOS(Catalyst)\"\n                #else\n                return \"iOS\"\n                #endif\n                #elseif os(watchOS)\n                return \"watchOS\"\n                #elseif os(tvOS)\n                return \"tvOS\"\n                #elseif os(macOS)\n                #if targetEnvironment(macCatalyst)\n                return \"macOS(Catalyst)\"\n                #else\n                return \"macOS\"\n                #endif\n                #elseif swift(>=5.9.2) && os(visionOS)\n                return \"visionOS\"\n                #elseif os(Linux)\n                return \"Linux\"\n                #elseif os(Windows)\n                return \"Windows\"\n                #elseif os(Android)\n                return \"Android\"\n                #else\n                return \"Unknown\"\n                #endif\n            }()"
+  },
+  {
+    "A_name" : "alamofireVersion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 425, Column: 9",
+    "H_initialValue" : "\"Alamofire\/\\(AFInfo.version)\""
+  },
+  {
+    "A_name" : "userAgent",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 427, Column: 9",
+    "H_initialValue" : "\"\\(executable)\/\\(appVersion) (\\(bundle); build:\\(appBuild); \\(osNameVersion)) \\(alamofireVersion)\""
+  },
+  {
+    "A_name" : "Collection<String>",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 433, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "qualityEncoded",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 434, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "qualityEncoded",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 434, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "quality",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 436, Column: 13",
+    "H_initialValue" : "1.0 - (Double(index) * 0.1)"
+  },
+  {
+    "A_name" : "URLRequest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 444, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 446, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 446, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "HTTPURLResponse",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 452, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 454, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 454, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "URLSessionConfiguration",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 459, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "headers",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "HTTPHeaders.swift - Line: 461, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "headers",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "HTTPHeaders.swift - Line: 461, Column: 5",
+    "H_initialValue" : ""
+  }
+]

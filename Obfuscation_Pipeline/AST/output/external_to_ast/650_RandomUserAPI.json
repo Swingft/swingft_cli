@@ -1,0 +1,264 @@
+[
+  {
+    "A_name" : "RandomUserAPI",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "RandomUserAPI.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "sharedAPI",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "RandomUserAPI.swift - Line: 14, Column: 5",
+        "H_initialValue" : "RandomUserAPI()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RandomUserAPI.swift - Line: 16, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "getExampleUserResultSet",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RandomUserAPI.swift - Line: 18, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "url",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RandomUserAPI.swift - Line: 19, Column: 9",
+            "H_initialValue" : "URL(string: \"http:\/\/api.randomuser.me\/?results=20\")!"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Observable<[User]>"
+      },
+      {
+        "A_name" : "parseJSON",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RandomUserAPI.swift - Line: 30, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "userParsingError",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RandomUserAPI.swift - Line: 35, Column: 9",
+            "H_initialValue" : "exampleError(\"Can't parse user\")"
+          },
+          {
+            "A_name" : "searchResults",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "RandomUserAPI.swift - Line: 37, Column: 9",
+            "H_initialValue" : "try results.map { user in\n            let name = user[\"name\"] as? [String: String]\n            let pictures = user[\"picture\"] as? [String: String]\n            \n            guard let firstName = name?[\"first\"], let lastName = name?[\"last\"], let imageURL = pictures?[\"medium\"] else {\n                throw userParsingError\n            }\n            \n            let returnUser = User(\n                firstName: firstName.capitalized,\n                lastName: lastName.capitalized,\n                imageURL: imageURL\n            )\n            return returnUser\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "[String: AnyObject]"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> [User]"
+      }
+    ]
+  },
+  {
+    "A_name" : "sharedAPI",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "RandomUserAPI.swift - Line: 14, Column: 5",
+    "H_initialValue" : "RandomUserAPI()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RandomUserAPI.swift - Line: 16, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "getExampleUserResultSet",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RandomUserAPI.swift - Line: 18, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "url",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RandomUserAPI.swift - Line: 19, Column: 9",
+        "H_initialValue" : "URL(string: \"http:\/\/api.randomuser.me\/?results=20\")!"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Observable<[User]>"
+  },
+  {
+    "A_name" : "url",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RandomUserAPI.swift - Line: 19, Column: 9",
+    "H_initialValue" : "URL(string: \"http:\/\/api.randomuser.me\/?results=20\")!"
+  },
+  {
+    "A_name" : "parseJSON",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RandomUserAPI.swift - Line: 30, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "userParsingError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RandomUserAPI.swift - Line: 35, Column: 9",
+        "H_initialValue" : "exampleError(\"Can't parse user\")"
+      },
+      {
+        "A_name" : "searchResults",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "RandomUserAPI.swift - Line: 37, Column: 9",
+        "H_initialValue" : "try results.map { user in\n            let name = user[\"name\"] as? [String: String]\n            let pictures = user[\"picture\"] as? [String: String]\n            \n            guard let firstName = name?[\"first\"], let lastName = name?[\"last\"], let imageURL = pictures?[\"medium\"] else {\n                throw userParsingError\n            }\n            \n            let returnUser = User(\n                firstName: firstName.capitalized,\n                lastName: lastName.capitalized,\n                imageURL: imageURL\n            )\n            return returnUser\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "[String: AnyObject]"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> [User]"
+  },
+  {
+    "A_name" : "userParsingError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RandomUserAPI.swift - Line: 35, Column: 9",
+    "H_initialValue" : "exampleError(\"Can't parse user\")"
+  },
+  {
+    "A_name" : "searchResults",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RandomUserAPI.swift - Line: 37, Column: 9",
+    "H_initialValue" : "try results.map { user in\n            let name = user[\"name\"] as? [String: String]\n            let pictures = user[\"picture\"] as? [String: String]\n            \n            guard let firstName = name?[\"first\"], let lastName = name?[\"last\"], let imageURL = pictures?[\"medium\"] else {\n                throw userParsingError\n            }\n            \n            let returnUser = User(\n                firstName: firstName.capitalized,\n                lastName: lastName.capitalized,\n                imageURL: imageURL\n            )\n            return returnUser\n        }"
+  },
+  {
+    "A_name" : "name",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RandomUserAPI.swift - Line: 38, Column: 13",
+    "H_initialValue" : "user[\"name\"] as? [String: String]"
+  },
+  {
+    "A_name" : "pictures",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RandomUserAPI.swift - Line: 39, Column: 13",
+    "H_initialValue" : "user[\"picture\"] as? [String: String]"
+  },
+  {
+    "A_name" : "returnUser",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "RandomUserAPI.swift - Line: 45, Column: 13",
+    "H_initialValue" : "User(\n                firstName: firstName.capitalized,\n                lastName: lastName.capitalized,\n                imageURL: imageURL\n            )"
+  }
+]

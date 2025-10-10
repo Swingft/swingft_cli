@@ -1,0 +1,386 @@
+[
+  {
+    "A_name" : "NotificationCell",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UITableViewCell"
+    ],
+    "F_location" : "NotificationCell.swift - Line: 10, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "identifier",
+        "B_kind" : "variable",
+        "C_accessLevel" : "static",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "NotificationCell.swift - Line: 12, Column: 5",
+        "H_initialValue" : "\"NotificationCell\""
+      },
+      {
+        "A_name" : "messageLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationCell.swift - Line: 16, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_m_16)\n        label.textColor = .hilingualBlack\n        label.numberOfLines = 2\n        return label\n    }()"
+      },
+      {
+        "A_name" : "dateLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationCell.swift - Line: 24, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.caption_r_14)\n        label.textColor = .gray300\n        return label\n    }()"
+      },
+      {
+        "A_name" : "arrowImageView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationCell.swift - Line: 31, Column: 5",
+        "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"ic_arrow_right_g_24_ios\", in: .module, compatibleWith: nil)\n        imageView.contentMode = .scaleAspectFit\n        return imageView\n    }()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "NotificationCell.swift - Line: 40, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UITableViewCell.CellStyle",
+          "String?"
+        ],
+        "I_parameters" : [
+          "style",
+          "reuseIdentifier"
+        ]
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "required",
+        "D_attributes" : [
+          "required"
+        ],
+        "F_location" : "NotificationCell.swift - Line: 47, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NSCoder"
+        ],
+        "I_parameters" : [
+          "coder"
+        ]
+      },
+      {
+        "A_name" : "configure",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationCell.swift - Line: 53, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NotificationModel"
+        ],
+        "I_parameters" : [
+          "with"
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationCell.swift - Line: 61, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationCell.swift - Line: 65, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "makeBoldUserNameText",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationCell.swift - Line: 87, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "attributed",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NotificationCell.swift - Line: 88, Column: 9",
+            "H_initialValue" : "NSMutableAttributedString(string: text)"
+          }
+        ],
+        "I_parameterType" : [
+          "String"
+        ],
+        "I_parameters" : [
+          "from"
+        ],
+        "J_returnType" : "-> NSAttributedString"
+      }
+    ]
+  },
+  {
+    "A_name" : "identifier",
+    "B_kind" : "variable",
+    "C_accessLevel" : "static",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "NotificationCell.swift - Line: 12, Column: 5",
+    "H_initialValue" : "\"NotificationCell\""
+  },
+  {
+    "A_name" : "messageLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCell.swift - Line: 16, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.body_m_16)\n        label.textColor = .hilingualBlack\n        label.numberOfLines = 2\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCell.swift - Line: 17, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "dateLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCell.swift - Line: 24, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.font = .suit(.caption_r_14)\n        label.textColor = .gray300\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCell.swift - Line: 25, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "arrowImageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCell.swift - Line: 31, Column: 5",
+    "H_initialValue" : "{\n        let imageView = UIImageView()\n        imageView.image = UIImage(named: \"ic_arrow_right_g_24_ios\", in: .module, compatibleWith: nil)\n        imageView.contentMode = .scaleAspectFit\n        return imageView\n    }()"
+  },
+  {
+    "A_name" : "imageView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCell.swift - Line: 32, Column: 9",
+    "H_initialValue" : "UIImageView()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "NotificationCell.swift - Line: 40, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UITableViewCell.CellStyle",
+      "String?"
+    ],
+    "I_parameters" : [
+      "style",
+      "reuseIdentifier"
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "required",
+    "D_attributes" : [
+      "required"
+    ],
+    "F_location" : "NotificationCell.swift - Line: 47, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NSCoder"
+    ],
+    "I_parameters" : [
+      "coder"
+    ]
+  },
+  {
+    "A_name" : "configure",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCell.swift - Line: 53, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NotificationModel"
+    ],
+    "I_parameters" : [
+      "with"
+    ]
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCell.swift - Line: 61, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCell.swift - Line: 65, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "makeBoldUserNameText",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCell.swift - Line: 87, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "attributed",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationCell.swift - Line: 88, Column: 9",
+        "H_initialValue" : "NSMutableAttributedString(string: text)"
+      }
+    ],
+    "I_parameterType" : [
+      "String"
+    ],
+    "I_parameters" : [
+      "from"
+    ],
+    "J_returnType" : "-> NSAttributedString"
+  },
+  {
+    "A_name" : "attributed",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCell.swift - Line: 88, Column: 9",
+    "H_initialValue" : "NSMutableAttributedString(string: text)"
+  },
+  {
+    "A_name" : "nameRange",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationCell.swift - Line: 90, Column: 13",
+    "H_initialValue" : "NSRange(text.startIndex..<range.lowerBound, in: text)"
+  }
+]

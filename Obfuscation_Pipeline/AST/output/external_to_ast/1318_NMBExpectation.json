@@ -1,0 +1,559 @@
+[
+  {
+    "A_name" : "from",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 6, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NMBPredicate"
+    ],
+    "I_parameters" : [
+      "objcPredicate"
+    ],
+    "J_returnType" : "-> Predicate<NSObject>"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 8, Column: 9",
+    "H_initialValue" : "objcPredicate.satisfies(({ try actualExpression.evaluate() }),\n                                             location: actualExpression.location)"
+  },
+  {
+    "A_name" : "from",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "closure",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 16, Column: 5",
+        "H_initialValue" : "{ expr, msg in\n        switch style {\n        case .toMatch:\n            return matcher.matches(\n                \/\/ swiftlint:disable:next force_try\n                ({ try! expr.evaluate() }),\n                failureMessage: msg,\n                location: expr.location\n            )\n        case .toNotMatch:\n            return !matcher.doesNotMatch(\n                \/\/ swiftlint:disable:next force_try\n                ({ try! expr.evaluate() }),\n                failureMessage: msg,\n                location: expr.location\n            )\n        }\n    }"
+      }
+    ],
+    "I_parameterType" : [
+      "NMBMatcher",
+      "ExpectationStyle"
+    ],
+    "I_parameters" : [
+      "matcher",
+      "style"
+    ],
+    "J_returnType" : "-> Predicate<NSObject>"
+  },
+  {
+    "A_name" : "closure",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 16, Column: 5",
+    "H_initialValue" : "{ expr, msg in\n        switch style {\n        case .toMatch:\n            return matcher.matches(\n                \/\/ swiftlint:disable:next force_try\n                ({ try! expr.evaluate() }),\n                failureMessage: msg,\n                location: expr.location\n            )\n        case .toNotMatch:\n            return !matcher.doesNotMatch(\n                \/\/ swiftlint:disable:next force_try\n                ({ try! expr.evaluate() }),\n                failureMessage: msg,\n                location: expr.location\n            )\n        }\n    }"
+  },
+  {
+    "A_name" : "NMBExpectation",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "NSObject"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 38, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "_actualBlock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 39, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_negative",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 40, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_file",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 41, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_line",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 42, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "_timeout",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 43, Column: 5",
+        "H_initialValue" : ".seconds(1)"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 45, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "@escaping () -> NSObject?",
+          "Bool",
+          "FileString",
+          "UInt"
+        ],
+        "I_parameters" : [
+          "actualBlock",
+          "negative",
+          "file",
+          "line"
+        ]
+      },
+      {
+        "A_name" : "expectValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 52, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "withTimeout",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 56, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "to",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 62, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "toWithDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 73, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "toNot",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 84, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "toNotWithDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 95, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "notTo",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 106, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "notToWithDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 108, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "toEventually",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 110, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "toEventuallyWithDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 128, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "toEventuallyNot",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 146, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "toEventuallyNotWithDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 164, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "toNotEventually",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 182, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "toNotEventuallyWithDescription",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 186, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "failWithMessage",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "class"
+        ],
+        "F_location" : "NMBExpectation.swift - Line: 190, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "String",
+          "FileString",
+          "UInt"
+        ],
+        "I_parameters" : [
+          "_",
+          "file",
+          "line"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "_actualBlock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 39, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_negative",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 40, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_file",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 41, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_line",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 42, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "_timeout",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 43, Column: 5",
+    "H_initialValue" : ".seconds(1)"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 45, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "@escaping () -> NSObject?",
+      "Bool",
+      "FileString",
+      "UInt"
+    ],
+    "I_parameters" : [
+      "actualBlock",
+      "negative",
+      "file",
+      "line"
+    ]
+  },
+  {
+    "A_name" : "expectValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 52, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "withTimeout",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 56, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "to",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 62, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "toWithDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 73, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "toNot",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 84, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "toNotWithDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 95, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "notTo",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 106, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "notToWithDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 108, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "toEventually",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 110, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "toEventuallyWithDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 128, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "toEventuallyNot",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 146, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "toEventuallyNotWithDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 164, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "toNotEventually",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 182, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "toNotEventuallyWithDescription",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 186, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "failWithMessage",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "class"
+    ],
+    "F_location" : "NMBExpectation.swift - Line: 190, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "String",
+      "FileString",
+      "UInt"
+    ],
+    "I_parameters" : [
+      "_",
+      "file",
+      "line"
+    ]
+  }
+]

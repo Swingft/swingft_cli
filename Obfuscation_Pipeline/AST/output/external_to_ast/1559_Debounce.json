@@ -1,0 +1,415 @@
+[
+  {
+    "A_name" : "Operators",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Debounce.swift - Line: 3, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "Debounce",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "UnaryAsyncOperator<Value, Value, Error>"
+    ],
+    "F_location" : "Debounce.swift - Line: 4, Column: 2",
+    "G_members" : [
+      {
+        "A_name" : "interval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debounce.swift - Line: 5, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "discardWhenCompleted",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debounce.swift - Line: 6, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "targetWithClock",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debounce.swift - Line: 7, Column: 3",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "state",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debounce.swift - Line: 9, Column: 3",
+        "H_initialValue" : "Atomic(DebounceState())"
+      },
+      {
+        "A_name" : "schedulerDisposable",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debounce.swift - Line: 10, Column: 3",
+        "H_initialValue" : "SerialDisposable()"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debounce.swift - Line: 12, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer<Value, Error>",
+          "Lifetime",
+          "DateScheduler",
+          "TimeInterval",
+          "Bool"
+        ],
+        "I_parameters" : [
+          "downstream",
+          "downstreamLifetime",
+          "target",
+          "interval",
+          "discardWhenCompleted"
+        ]
+      },
+      {
+        "A_name" : "receive",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Debounce.swift - Line: 30, Column: 3",
+        "G_members" : [
+          {
+            "A_name" : "now",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Debounce.swift - Line: 31, Column: 4",
+            "H_initialValue" : "targetWithClock.currentDate"
+          },
+          {
+            "A_name" : "targetDate",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Debounce.swift - Line: 37, Column: 4",
+            "H_initialValue" : "now.addingTimeInterval(interval)"
+          }
+        ],
+        "I_parameterType" : [
+          "Value"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "terminate",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "Debounce.swift - Line: 45, Column: 3",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Termination<Error>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "interval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debounce.swift - Line: 5, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "discardWhenCompleted",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debounce.swift - Line: 6, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "targetWithClock",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debounce.swift - Line: 7, Column: 3",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debounce.swift - Line: 9, Column: 3",
+    "H_initialValue" : "Atomic(DebounceState())"
+  },
+  {
+    "A_name" : "schedulerDisposable",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debounce.swift - Line: 10, Column: 3",
+    "H_initialValue" : "SerialDisposable()"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debounce.swift - Line: 12, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer<Value, Error>",
+      "Lifetime",
+      "DateScheduler",
+      "TimeInterval",
+      "Bool"
+    ],
+    "I_parameters" : [
+      "downstream",
+      "downstreamLifetime",
+      "target",
+      "interval",
+      "discardWhenCompleted"
+    ]
+  },
+  {
+    "A_name" : "receive",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Debounce.swift - Line: 30, Column: 3",
+    "G_members" : [
+      {
+        "A_name" : "now",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debounce.swift - Line: 31, Column: 4",
+        "H_initialValue" : "targetWithClock.currentDate"
+      },
+      {
+        "A_name" : "targetDate",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debounce.swift - Line: 37, Column: 4",
+        "H_initialValue" : "now.addingTimeInterval(interval)"
+      }
+    ],
+    "I_parameterType" : [
+      "Value"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "now",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debounce.swift - Line: 31, Column: 4",
+    "H_initialValue" : "targetWithClock.currentDate"
+  },
+  {
+    "A_name" : "targetDate",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debounce.swift - Line: 37, Column: 4",
+    "H_initialValue" : "now.addingTimeInterval(interval)"
+  },
+  {
+    "A_name" : "terminate",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "Debounce.swift - Line: 45, Column: 3",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Termination<Error>"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "pending",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debounce.swift - Line: 50, Column: 5",
+    "H_initialValue" : "state.modify { state in\n\t\t\t\t\treturn (state.retrieve(), state.lastUpdated)\n\t\t\t\t}"
+  },
+  {
+    "A_name" : "DebounceState",
+    "B_kind" : "struct",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Debounce.swift - Line: 69, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "lastUpdated",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debounce.swift - Line: 70, Column: 2",
+        "H_initialValue" : ".distantPast"
+      },
+      {
+        "A_name" : "pendingValue",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Debounce.swift - Line: 71, Column: 2",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "retrieve",
+        "B_kind" : "function",
+        "C_accessLevel" : "mutating",
+        "D_attributes" : [
+          "mutating"
+        ],
+        "F_location" : "Debounce.swift - Line: 73, Column: 2",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> Value?"
+      }
+    ]
+  },
+  {
+    "A_name" : "lastUpdated",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debounce.swift - Line: 70, Column: 2",
+    "H_initialValue" : ".distantPast"
+  },
+  {
+    "A_name" : "pendingValue",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Debounce.swift - Line: 71, Column: 2",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "retrieve",
+    "B_kind" : "function",
+    "C_accessLevel" : "mutating",
+    "D_attributes" : [
+      "mutating"
+    ],
+    "F_location" : "Debounce.swift - Line: 73, Column: 2",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> Value?"
+  }
+]

@@ -1,0 +1,3037 @@
+[
+  {
+    "A_name": "UIView",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "UIView+setRounded.swift - Line: 11, Column: 1"
+  },
+  {
+    "A_name": "UIView",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "UIView+rotate.swift - Line: 11, Column: 1"
+  },
+  {
+    "A_name": "UIView",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "UIVIew+setBorder.swift - Line: 11, Column: 1"
+  },
+  {
+    "A_name": "UICollectionView",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "UICollectionView+deleteAllItems.swift - Line: 11, Column: 1"
+  },
+  {
+    "A_name": "Reactive",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "Reactive+itemAndIndexSelected.swift - Line: 13, Column: 1"
+  },
+  {
+    "A_name": "Array",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "Array+remove.swift - Line: 10, Column: 1"
+  },
+  {
+    "A_name": "UIImageView",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "UIImageView+setTint.swift - Line: 11, Column: 1"
+  },
+  {
+    "A_name": "Sequence",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "Sequence+uniqued.swift - Line: 11, Column: 1"
+  },
+  {
+    "A_name": "UILabel",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "UILabel+setLineSpacing.swift - Line: 11, Column: 1"
+  },
+  {
+    "A_name": "reuseIdentifier",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "RestaurantTableViewCell.swift - Line: 19, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "disposeBag",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "RestaurantTableViewCell.swift - Line: 25, Column: 5",
+    "H_initialValue": "DisposeBag()"
+  },
+  {
+    "A_name": "titleLabel",
+    "B_kind": "variable",
+    "C_accessLevel": "lazy",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "RestaurantTableViewCell.swift - Line: 36, Column: 5",
+    "H_initialValue": "{\n        let label = UILabel()\n    \n        label.numberOfLines = 0\n        label.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.restaurantTableViewTitleLabelSize))\n        label.textColor = .white\n        \n        return label\n    }()"
+  },
+  {
+    "A_name": "collectionViewLayout",
+    "B_kind": "variable",
+    "C_accessLevel": "lazy",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "RestaurantTableViewCell.swift - Line: 46, Column: 5",
+    "H_initialValue": "{\n        let layout = UICollectionViewFlowLayout()\n        layout.itemSize = CGSize(width: NumberConstants.restaurantCollectionViewCellSize, height: NumberConstants.restaurantCollectionViewCellSize)\n        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)\n        layout.scrollDirection = .horizontal\n        \n        return layout\n    }()"
+  },
+  {
+    "A_name": "collectionView",
+    "B_kind": "variable",
+    "C_accessLevel": "lazy",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "RestaurantTableViewCell.swift - Line: 55, Column: 5",
+    "H_initialValue": "{\n        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: collectionViewLayout)\n        \n        collectionView.register(RestaurantCollectionViewCell.self, forCellWithReuseIdentifier: RestaurantCollectionViewCell.reuseIdentifier)\n        \n        collectionView.translatesAutoresizingMaskIntoConstraints = false\n        collectionView.backgroundColor = .clear\n        \n        return collectionView\n    }()"
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "required",
+    "D_attributes": [
+      "required"
+    ],
+    "F_location": "RestaurantTableViewCell.swift - Line: 66, Column: 5",
+    "I_parameterType": [
+      "NSCoder"
+    ],
+    "I_parameters": [
+      "coder"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "RestaurantTableViewCell.swift - Line: 74, Column: 5",
+    "I_parameterType": [
+      "UITableViewCell.CellStyle",
+      "String?"
+    ],
+    "I_parameters": [
+      "style",
+      "reuseIdentifier"
+    ]
+  },
+  {
+    "A_name": "title",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MapKitMarker.swift - Line: 12, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "coordinate",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MapKitMarker.swift - Line: 13, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MapKitMarker.swift - Line: 15, Column: 5",
+    "I_parameterType": [
+      "String?",
+      "CLLocationCoordinate2D"
+    ],
+    "I_parameters": [
+      "title",
+      "coordinate"
+    ]
+  },
+  {
+    "A_name": "rotate",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UIView+rotate.swift - Line: 12, Column: 5",
+    "I_parameterType": [
+      "CGFloat"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "required",
+    "D_attributes": [
+      "required"
+    ],
+    "F_location": "AntiCaptureSettingView.swift - Line: 109, Column: 5",
+    "I_parameterType": [
+      "NSCoder"
+    ],
+    "I_parameters": [
+      "coder"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "AntiCaptureSettingView.swift - Line: 114, Column: 5",
+    "I_parameterType": [
+      "CGRect"
+    ],
+    "I_parameters": [
+      "frame"
+    ]
+  },
+  {
+    "A_name": "antiCaptureSegmentChanged",
+    "B_kind": "function",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "AntiCaptureSettingView.swift - Line: 190, Column: 5",
+    "I_parameterType": [
+      "UISegmentedControl"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "antiCaptureBackgroundColorOfCapturedSegmentChanged",
+    "B_kind": "function",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "AntiCaptureSettingView.swift - Line: 201, Column: 5",
+    "I_parameterType": [
+      "UISegmentedControl"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "antiCaptureBackgroundColorOfAppSwitcherViewSegmentChanged",
+    "B_kind": "function",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "AntiCaptureSettingView.swift - Line: 212, Column: 5",
+    "I_parameterType": [
+      "UISegmentedControl"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "antiCaptureDisableAppSwitcherViewOnceSegmentChanged",
+    "B_kind": "function",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "AntiCaptureSettingView.swift - Line: 223, Column: 5",
+    "I_parameterType": [
+      "UISegmentedControl"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "reuseIdentifier",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "SelectedFeelingsStackViewContentView.swift - Line: 14, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "data",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "SelectedFeelingsStackViewContentView.swift - Line: 20, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "imageView",
+    "B_kind": "variable",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "SelectedFeelingsStackViewContentView.swift - Line: 29, Column: 5",
+    "H_initialValue": "{\n        let view = UIImageView()\n        view.setRounded()\n        return view\n    }()"
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "required",
+    "D_attributes": [
+      "required"
+    ],
+    "F_location": "SelectedFeelingsStackViewContentView.swift - Line: 44, Column: 5",
+    "I_parameterType": [
+      "NSCoder"
+    ],
+    "I_parameters": [
+      "coder"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "SelectedFeelingsStackViewContentView.swift - Line: 50, Column: 5",
+    "I_parameterType": [
+      "CGRect"
+    ],
+    "I_parameters": [
+      "frame"
+    ]
+  },
+  {
+    "A_name": "reuseIdentifier",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "RemoteUrlPresetButtonView.swift - Line: 13, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "index",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "RemoteUrlPresetButtonView.swift - Line: 21, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "required",
+    "D_attributes": [
+      "required"
+    ],
+    "F_location": "RemoteUrlPresetButtonView.swift - Line: 70, Column: 5",
+    "I_parameterType": [
+      "NSCoder"
+    ],
+    "I_parameters": [
+      "coder"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "RemoteUrlPresetButtonView.swift - Line: 76, Column: 5",
+    "I_parameterType": [
+      "CGRect"
+    ],
+    "I_parameters": [
+      "frame"
+    ]
+  },
+  {
+    "A_name": "handleRemoteUrlPresetButtonTap",
+    "B_kind": "function",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "RemoteUrlPresetButtonView.swift - Line: 104, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "handleLongPress",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "RemoteUrlPresetButtonView.swift - Line: 123, Column: 5",
+    "I_parameterType": [
+      "UILongPressGestureRecognizer"
+    ],
+    "I_parameters": [
+      "gesture"
+    ]
+  },
+  {
+    "A_name": "deleteButtonTapped",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "RemoteUrlPresetButtonView.swift - Line: 146, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "tapMainSettingViewController",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "RemoteUrlPresetButtonView.swift - Line: 150, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "contentView",
+    "B_kind": "variable",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "LoadingView.swift - Line: 17, Column: 5",
+    "H_initialValue": "{\n        let view = UIView()\n        view.backgroundColor = .black\n        view.alpha = 0.8\n        \n        return view\n    }()"
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "required",
+    "D_attributes": [
+      "required"
+    ],
+    "F_location": "LoadingView.swift - Line: 34, Column: 5",
+    "I_parameterType": [
+      "NSCoder"
+    ],
+    "I_parameters": [
+      "coder"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "LoadingView.swift - Line: 40, Column: 5",
+    "I_parameterType": [
+      "CGRect"
+    ],
+    "I_parameters": [
+      "frame"
+    ]
+  },
+  {
+    "A_name": "AppDelegate",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [
+      "main"
+    ],
+    "E_adoptedClassProtocols": [
+      "UIResponder",
+      "UIApplicationDelegate"
+    ],
+    "F_location": "AppDelegate.swift - Line: 24, Column: 1"
+  },
+  {
+    "A_name": "application",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "AppDelegate.swift - Line: 27, Column: 5",
+    "I_parameterType": [
+      "UIApplication",
+      "[UIApplication.LaunchOptionsKey: Any]?"
+    ],
+    "I_parameters": [
+      "_",
+      "didFinishLaunchingWithOptions"
+    ],
+    "J_returnType": "-> Bool"
+  },
+  {
+    "A_name": "key",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "AppDelegate.swift - Line: 28, Column: 9",
+    "H_initialValue": "SwingftKey.combinedKey()"
+  },
+  {
+    "A_name": "application",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "AppDelegate.swift - Line: 44, Column: 5",
+    "I_parameterType": [
+      "UIApplication",
+      "UISceneSession",
+      "UIScene.ConnectionOptions"
+    ],
+    "I_parameters": [
+      "_",
+      "configurationForConnecting",
+      "options"
+    ],
+    "J_returnType": "-> UISceneConfiguration"
+  },
+  {
+    "A_name": "application",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "AppDelegate.swift - Line: 48, Column: 5",
+    "I_parameterType": [
+      "UIApplication",
+      "Set<UISceneSession>"
+    ],
+    "I_parameters": [
+      "_",
+      "didDiscardSceneSessions"
+    ]
+  },
+  {
+    "A_name": "SceneDelegate",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "UIResponder",
+      "UIWindowSceneDelegate"
+    ],
+    "F_location": "SceneDelegate.swift - Line: 10, Column: 1"
+  },
+  {
+    "A_name": "window",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "SceneDelegate.swift - Line: 11, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "scene",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "SceneDelegate.swift - Line: 13, Column: 5",
+    "I_parameterType": [
+      "UIScene",
+      "UISceneSession",
+      "UIScene.ConnectionOptions"
+    ],
+    "I_parameters": [
+      "_",
+      "willConnectTo",
+      "options"
+    ]
+  },
+  {
+    "A_name": "viewController",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "SceneDelegate.swift - Line: 17, Column: 9",
+    "H_initialValue": "ChooseViewController()"
+  },
+  {
+    "A_name": "sceneDidDisconnect",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "SceneDelegate.swift - Line: 34, Column: 5",
+    "I_parameterType": [
+      "UIScene"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "sceneDidBecomeActive",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "SceneDelegate.swift - Line: 37, Column: 5",
+    "I_parameterType": [
+      "UIScene"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "sceneWillResignActive",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "SceneDelegate.swift - Line: 40, Column: 5",
+    "I_parameterType": [
+      "UIScene"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "sceneWillEnterForeground",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "SceneDelegate.swift - Line: 43, Column: 5",
+    "I_parameterType": [
+      "UIScene"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "sceneDidEnterBackground",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "SceneDelegate.swift - Line: 46, Column: 5",
+    "I_parameterType": [
+      "UIScene"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "showAlert",
+    "B_kind": "function",
+    "C_accessLevel": "public",
+    "D_attributes": [],
+    "F_location": "SceneDelegate.swift - Line: 49, Column: 5",
+    "I_parameterType": [
+      "String",
+      "String",
+      "(() -> Void)?"
+    ],
+    "I_parameters": [
+      "title",
+      "message",
+      "alertOkButtonAction"
+    ]
+  },
+  {
+    "A_name": "alert",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "SceneDelegate.swift - Line: 50, Column: 9",
+    "H_initialValue": "UIAlertController(title: title, message: message, preferredStyle: .alert)"
+  },
+  {
+    "A_name": "errorDescription",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "AppDelegate.swift - Line: 77, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "recoverySuggestion",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "AppDelegate.swift - Line: 102, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "underlyingError",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "AppDelegate.swift - Line: 130, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "errorDescription",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "AppDelegate.swift - Line: 132, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "recoverySuggestion",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "AppDelegate.swift - Line: 136, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "AppDelegate.swift - Line: 140, Column: 5",
+    "I_parameterType": [
+      "Error?"
+    ],
+    "I_parameters": [
+      "error"
+    ]
+  },
+  {
+    "A_name": "disposeBag",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "BaseViewController.swift - Line: 18, Column: 5",
+    "H_initialValue": "DisposeBag()"
+  },
+  {
+    "A_name": "viewDidLoad",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "BaseViewController.swift - Line: 74, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "handleSharedAntiCaptureChanged",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "BaseViewController.swift - Line: 114, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "DetailViewController",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "BaseViewController"
+    ],
+    "F_location": "DetailViewController.swift - Line: 16, Column: 1"
+  },
+  {
+    "A_name": "viewModel",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "DetailViewController.swift - Line: 17, Column: 5",
+    "H_initialValue": "DependencyInjector.detailViewModel()"
+  },
+  {
+    "A_name": "viewDidLoad",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "DetailViewController.swift - Line: 267, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "barAppearance",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "DetailViewController.swift - Line: 271, Column: 9",
+    "H_initialValue": "{\n            let appearance = UINavigationBarAppearance()\n\n            appearance.backgroundColor = .black\n            appearance.backgroundImage = UIImage()\n            appearance.shadowImage = UIImage()\n\n            return appearance\n        }()"
+  },
+  {
+    "A_name": "preferredStatusBarStyle",
+    "B_kind": "variable",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "DetailViewController.swift - Line: 285, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "disappearRestaurantImageUpScaleView",
+    "B_kind": "function",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "DetailViewController.swift - Line: 596, Column: 5",
+    "I_parameterType": [
+      "UITapGestureRecognizer"
+    ],
+    "I_parameters": [
+      "sender"
+    ]
+  },
+  {
+    "A_name": "showRestaurantLocationDetailViewController",
+    "B_kind": "function",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "DetailViewController.swift - Line: 603, Column: 5",
+    "I_parameterType": [
+      "UITapGestureRecognizer"
+    ],
+    "I_parameters": [
+      "sender"
+    ]
+  },
+  {
+    "A_name": "viewDidLoad",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "ResultViewController.swift - Line: 41, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "viewModel",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "ChooseViewController.swift - Line: 14, Column: 5",
+    "H_initialValue": "DependencyInjector.chooseViewModel()"
+  },
+  {
+    "A_name": "collectionView",
+    "B_kind": "variable",
+    "C_accessLevel": "lazy",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "ChooseViewController.swift - Line: 17, Column: 5",
+    "H_initialValue": "{\n        let cellWidth = ((Int(UIScreen.main.bounds.width) - 32) / NumberConstants.collectionViewCellWidthCount) - 8\n        \n        let layout = UICollectionViewFlowLayout()\n        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)\n        layout.headerReferenceSize = CGSize(width: 0, height: 164)\n        layout.itemSize = CGSize(width: cellWidth, height: cellWidth + 60)\n        \n        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)\n        collectionView.backgroundColor = .black\n        collectionView.showsVerticalScrollIndicator = false\n        collectionView.showsHorizontalScrollIndicator = false\n        collectionView.register(ChooseCollectionViewCell.self, forCellWithReuseIdentifier: ChooseCollectionViewCell.reuseIdentifier)\n        \n        collectionView.translatesAutoresizingMaskIntoConstraints = false\n        \n        return collectionView\n    }()"
+  },
+  {
+    "A_name": "doneButton",
+    "B_kind": "variable",
+    "C_accessLevel": "lazy",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "ChooseViewController.swift - Line: 48, Column: 5",
+    "H_initialValue": "{\n        let button = UIButton()\n        button.backgroundColor = .white\n        button.setTitle(StringConstants.doneUpper, for: .normal)\n        button.titleLabel?.font = .boldSystemFont(ofSize: 17)\n        button.setTitleColor(.black, for: .normal)\n        button.setRounded(35)\n        button.addTarget(self, action: #selector(onTapDoneButton(_:)), for: .touchUpInside)\n        \n        button.translatesAutoresizingMaskIntoConstraints = false\n        \n        return button\n    }()"
+  },
+  {
+    "A_name": "viewDidLoad",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "ChooseViewController.swift - Line: 63, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "viewWillAppear",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "ChooseViewController.swift - Line: 68, Column: 5",
+    "I_parameterType": [
+      "Bool"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "viewDidLayoutSubviews",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "ChooseViewController.swift - Line: 74, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "onTapDoneButton",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "ChooseViewController.swift - Line: 151, Column: 5",
+    "I_parameterType": [
+      "UIButton"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "colors",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "ChooseViewController.swift - Line: 181, Column: 9",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "viewModel",
+    "B_kind": "variable",
+    "C_accessLevel": "public",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "RestaurantLocationDetailViewController.swift - Line: 14, Column: 5",
+    "H_initialValue": "DependencyInjector.detailViewModel()"
+  },
+  {
+    "A_name": "contentView",
+    "B_kind": "variable",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "RestaurantLocationDetailViewController.swift - Line: 16, Column: 5",
+    "H_initialValue": "{\n        let view = UIView()\n        \n        return view\n    }()"
+  },
+  {
+    "A_name": "mapView",
+    "B_kind": "variable",
+    "C_accessLevel": "public",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "RestaurantLocationDetailViewController.swift - Line: 22, Column: 5",
+    "H_initialValue": "{\n        let mapView = MKMapView()\n        mapView.showsUserLocation = true\n        mapView.setUserTrackingMode(.follow, animated: true)\n        mapView.translatesAutoresizingMaskIntoConstraints = false\n\n        return mapView\n    }()"
+  },
+  {
+    "A_name": "viewDidLoad",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "RestaurantLocationDetailViewController.swift - Line: 32, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "viewDidDisappear",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "RestaurantLocationDetailViewController.swift - Line: 36, Column: 5",
+    "I_parameterType": [
+      "Bool"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "viewWillDisappear",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "RestaurantLocationDetailViewController.swift - Line: 40, Column: 5",
+    "I_parameterType": [
+      "Bool"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "MainViewController",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "BaseViewController"
+    ],
+    "F_location": "MainViewController.swift - Line: 24, Column: 1"
+  },
+  {
+    "A_name": "viewModel",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MainViewController.swift - Line: 25, Column: 5",
+    "H_initialValue": "DependencyInjector.mainViewModel()"
+  },
+  {
+    "A_name": "viewDidLoad",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "MainViewController.swift - Line: 111, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "viewWillAppear",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "MainViewController.swift - Line: 125, Column: 5",
+    "I_parameterType": [
+      "Bool"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "preferredStatusBarStyle",
+    "B_kind": "variable",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "MainViewController.swift - Line: 129, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "mainScrollViewRefresh",
+    "B_kind": "function",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "MainViewController.swift - Line: 295, Column: 5",
+    "I_parameterType": [
+      "UIRefreshControl"
+    ],
+    "I_parameters": [
+      "refreshControl"
+    ]
+  },
+  {
+    "A_name": "tapSettingButton",
+    "B_kind": "function",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "MainViewController.swift - Line: 302, Column: 5",
+    "I_parameterType": [
+      "UITapGestureRecognizer"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "viewModel",
+    "B_kind": "variable",
+    "C_accessLevel": "public",
+    "D_attributes": [],
+    "F_location": "MainSettingViewController.swift - Line: 13, Column: 5",
+    "H_initialValue": "DependencyInjector.mainViewModel()"
+  },
+  {
+    "A_name": "contentView",
+    "B_kind": "variable",
+    "C_accessLevel": "lazy",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "MainSettingViewController.swift - Line: 48, Column: 5",
+    "H_initialValue": "{\n        let view = UIView()\n        \n        view.setRounded(50)\n        view.backgroundColor = .white\n        \n        return view\n    }()"
+  },
+  {
+    "A_name": "viewDidLoad",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "MainSettingViewController.swift - Line: 208, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "viewDidDisappear",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "MainSettingViewController.swift - Line: 232, Column: 5",
+    "I_parameterType": [
+      "Bool"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "touchesBegan",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "MainSettingViewController.swift - Line: 395, Column: 5",
+    "I_parameterType": [
+      "Set<UITouch>",
+      "UIEvent?"
+    ],
+    "I_parameters": [
+      "_",
+      "with"
+    ]
+  },
+  {
+    "A_name": "tapDismiss",
+    "B_kind": "function",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "MainSettingViewController.swift - Line: 401, Column: 5",
+    "I_parameterType": [
+      "UITapGestureRecognizer"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "tapRemoteUrlResetButton",
+    "B_kind": "function",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "MainSettingViewController.swift - Line: 408, Column: 5",
+    "I_parameterType": [
+      "UIButton"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "tapRemoteUrlPresetClearButton",
+    "B_kind": "function",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "MainSettingViewController.swift - Line: 416, Column: 5",
+    "I_parameterType": [
+      "UIButton"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "cancelAction",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MainSettingViewController.swift - Line: 427, Column: 9",
+    "H_initialValue": "UIAlertAction(title: StringConstants.alertCancle, style: .cancel, handler: nil)"
+  },
+  {
+    "A_name": "tapRemoteUrlPresetAddButton",
+    "B_kind": "function",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "objc"
+    ],
+    "F_location": "MainSettingViewController.swift - Line: 433, Column: 5",
+    "I_parameterType": [
+      "UIButton"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "textFieldDidEndEditing",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MainSettingViewController.swift - Line: 494, Column: 5",
+    "I_parameterType": [
+      "UITextField"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "FeelingRepositoryImpl.swift - Line: 14, Column: 5",
+    "I_parameterType": [
+      "FeelingLocalDataSource",
+      "FeelingRemoteDataSource"
+    ],
+    "I_parameters": [
+      "localDataSource",
+      "remoteDataSource"
+    ]
+  },
+  {
+    "A_name": "data",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 13, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "id",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Feeling.swift - Line: 12, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "image",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Feeling.swift - Line: 14, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "isSelected",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Feeling.swift - Line: 15, Column: 5",
+    "H_initialValue": "false"
+  },
+  {
+    "A_name": "==",
+    "B_kind": "function",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Feeling.swift - Line: 28, Column: 5",
+    "I_parameterType": [
+      "Feeling",
+      "Feeling"
+    ],
+    "I_parameters": [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType": "-> Bool"
+  },
+  {
+    "A_name": "star",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 20, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "address",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 22, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "kind",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 23, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "call",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 24, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "parking",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 26, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "menu",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 29, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "custom",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 33, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "reuseIdentifier",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "ChooseCollectionViewCell.swift - Line: 14, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "data",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "ChooseCollectionViewCell.swift - Line: 20, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "imageView",
+    "B_kind": "variable",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "ChooseCollectionViewCell.swift - Line: 30, Column: 5",
+    "H_initialValue": "{\n        let view = UIImageView()\n        view.setRounded()\n        return view\n    }()"
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "required",
+    "D_attributes": [
+      "required"
+    ],
+    "F_location": "ChooseCollectionViewCell.swift - Line: 53, Column: 5",
+    "I_parameterType": [
+      "NSCoder"
+    ],
+    "I_parameters": [
+      "coder"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "ChooseCollectionViewCell.swift - Line: 59, Column: 5",
+    "I_parameterType": [
+      "CGRect"
+    ],
+    "I_parameters": [
+      "frame"
+    ]
+  },
+  {
+    "A_name": "reuseIdentifier",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "RestaurantCollectionViewCell.swift - Line: 14, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "required",
+    "D_attributes": [
+      "required"
+    ],
+    "F_location": "RestaurantCollectionViewCell.swift - Line: 46, Column: 5",
+    "I_parameterType": [
+      "NSCoder"
+    ],
+    "I_parameters": [
+      "coder"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "RestaurantCollectionViewCell.swift - Line: 52, Column: 5",
+    "I_parameterType": [
+      "CGRect"
+    ],
+    "I_parameters": [
+      "frame"
+    ]
+  },
+  {
+    "A_name": "reuseIdentifier",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "DetailImageUpScaleCollectionViewCell.swift - Line: 14, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "imageView",
+    "B_kind": "variable",
+    "C_accessLevel": "lazy",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "DetailImageUpScaleCollectionViewCell.swift - Line: 36, Column: 5",
+    "H_initialValue": "{\n        let imageView = UIImageView()\n        imageView.contentMode = .scaleAspectFit\n        imageView.tintColor = .gray\n        \n//        imageView.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(tapImageView)))\n//        imageView.isUserInteractionEnabled = true\n\n        return imageView\n    }()"
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "required",
+    "D_attributes": [
+      "required"
+    ],
+    "F_location": "DetailImageUpScaleCollectionViewCell.swift - Line: 47, Column: 5",
+    "I_parameterType": [
+      "NSCoder"
+    ],
+    "I_parameters": [
+      "coder"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "DetailImageUpScaleCollectionViewCell.swift - Line: 53, Column: 5",
+    "I_parameterType": [
+      "CGRect"
+    ],
+    "I_parameters": [
+      "frame"
+    ]
+  },
+  {
+    "A_name": "reuseIdentifier",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "DetailImageCollectionViewCell.swift - Line: 15, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "imageView",
+    "B_kind": "variable",
+    "C_accessLevel": "lazy",
+    "D_attributes": [
+      "lazy"
+    ],
+    "F_location": "DetailImageCollectionViewCell.swift - Line: 21, Column: 5",
+    "H_initialValue": "{\n        let view = UIImageView()\n        view.tintColor = .gray\n        view.contentMode = .scaleAspectFill\n        view.clipsToBounds = true\n        view.setRounded(8)\n        \n        return view\n    }()"
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "required",
+    "D_attributes": [
+      "required"
+    ],
+    "F_location": "DetailImageCollectionViewCell.swift - Line: 31, Column: 5",
+    "I_parameterType": [
+      "NSCoder"
+    ],
+    "I_parameters": [
+      "coder"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "DetailImageCollectionViewCell.swift - Line: 37, Column: 5",
+    "I_parameterType": [
+      "CGRect"
+    ],
+    "I_parameters": [
+      "frame"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "RestaurantRepositoryImpl.swift - Line: 15, Column: 5",
+    "I_parameterType": [
+      "RestaurantLocalDataSource",
+      "RestaurantRemoteDataSource"
+    ],
+    "I_parameters": [
+      "localDataSource",
+      "remoteDataSource"
+    ]
+  },
+  {
+    "A_name": "base64",
+    "B_kind": "variable",
+    "C_accessLevel": "private",
+    "D_attributes": [],
+    "F_location": "SwingftEncryption.swift - Line: 54, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "public",
+    "D_attributes": [],
+    "F_location": "SwingftEncryption.swift - Line: 59, Column: 5",
+    "I_parameterType": [
+      "StringLiteralType"
+    ],
+    "I_parameters": [
+      "stringLiteral"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "public",
+    "D_attributes": [],
+    "F_location": "SwingftEncryption.swift - Line: 60, Column: 5",
+    "I_parameterType": [
+      "String"
+    ],
+    "I_parameters": [
+      "_"
+    ]
+  },
+  {
+    "A_name": "description",
+    "B_kind": "variable",
+    "C_accessLevel": "public",
+    "D_attributes": [],
+    "F_location": "SwingftEncryption.swift - Line: 62, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "RandomNumberGenerator+RandomNumberGeneratorWithSeed.swift - Line: 11, Column: 5",
+    "I_parameterType": [
+      "Int"
+    ],
+    "I_parameters": [
+      "seed"
+    ]
+  },
+  {
+    "A_name": "next",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "RandomNumberGenerator+RandomNumberGeneratorWithSeed.swift - Line: 12, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": [],
+    "J_returnType": "-> UInt64"
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "RemoteUrlPresetRepositoryImpl.swift - Line: 13, Column: 5",
+    "I_parameterType": [
+      "RemoteUrlPresetLocalDataSource"
+    ],
+    "I_parameters": [
+      "localDataSource"
+    ]
+  },
+  {
+    "A_name": "preferredStatusBarStyle",
+    "B_kind": "variable",
+    "C_accessLevel": "override",
+    "D_attributes": [
+      "override"
+    ],
+    "F_location": "MainNavigationController.swift - Line: 12, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "deleteAllItems",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UICollectionView+deleteAllItems.swift - Line: 12, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "key",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "AppDelegate.swift - Line: 12, Column: 9",
+    "H_initialValue": "[UInt8]()"
+  },
+  {
+    "A_name": "address",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MKMapView+setPlaceMark.swift - Line: 13, Column: 9",
+    "H_initialValue": "address"
+  },
+  {
+    "A_name": "m1",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UIFont+changeSystemFont.swift - Line: 14, Column: 9",
+    "H_initialValue": "class_getClassMethod(UIFont.self, #selector(systemFont(ofSize:)))!"
+  },
+  {
+    "A_name": "m2",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UIFont+changeSystemFont.swift - Line: 15, Column: 9",
+    "H_initialValue": "class_getClassMethod(UIFont.self, #selector(customFont(ofSize:)))!"
+  },
+  {
+    "A_name": "m11",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UIFont+changeSystemFont.swift - Line: 34, Column: 9",
+    "H_initialValue": "class_getClassMethod(UIFont.self, #selector(preferredFont(forTextStyle:compatibleWith:)))!"
+  },
+  {
+    "A_name": "m12",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UIFont+changeSystemFont.swift - Line: 35, Column: 9",
+    "H_initialValue": "class_getClassMethod(UIFont.self, #selector(customFont(forTextStyle:compatibleWith:)))!"
+  },
+  {
+    "A_name": "customFont",
+    "B_kind": "function",
+    "C_accessLevel": "class",
+    "D_attributes": [
+      "objc",
+      "class"
+    ],
+    "F_location": "UIFont+changeSystemFont.swift - Line: 52, Column: 5",
+    "I_parameterType": [
+      "CGFloat"
+    ],
+    "I_parameters": [
+      "ofSize"
+    ],
+    "J_returnType": "-> UIFont"
+  },
+  {
+    "A_name": "customFont",
+    "B_kind": "function",
+    "C_accessLevel": "class",
+    "D_attributes": [
+      "objc",
+      "class"
+    ],
+    "F_location": "UIFont+changeSystemFont.swift - Line: 57, Column: 5",
+    "I_parameterType": [
+      "UIFont.TextStyle"
+    ],
+    "I_parameters": [
+      "forTextStyle"
+    ],
+    "J_returnType": "-> UIFont"
+  },
+  {
+    "A_name": "boldCustomFont",
+    "B_kind": "function",
+    "C_accessLevel": "class",
+    "D_attributes": [
+      "objc",
+      "class"
+    ],
+    "F_location": "UIFont+changeSystemFont.swift - Line: 62, Column: 5",
+    "I_parameterType": [
+      "CGFloat"
+    ],
+    "I_parameters": [
+      "ofSize"
+    ],
+    "J_returnType": "-> UIFont"
+  },
+  {
+    "A_name": "italicCustomFont",
+    "B_kind": "function",
+    "C_accessLevel": "class",
+    "D_attributes": [
+      "objc",
+      "class"
+    ],
+    "F_location": "UIFont+changeSystemFont.swift - Line: 67, Column: 5",
+    "I_parameterType": [
+      "CGFloat"
+    ],
+    "I_parameters": [
+      "ofSize"
+    ],
+    "J_returnType": "-> UIFont"
+  },
+  {
+    "A_name": "customFont",
+    "B_kind": "function",
+    "C_accessLevel": "class",
+    "D_attributes": [
+      "objc",
+      "class"
+    ],
+    "F_location": "UIFont+changeSystemFont.swift - Line: 72, Column: 5",
+    "I_parameterType": [
+      "CGFloat",
+      "UIFont.Weight"
+    ],
+    "I_parameters": [
+      "ofSize",
+      "weight"
+    ],
+    "J_returnType": "-> UIFont"
+  },
+  {
+    "A_name": "customFont",
+    "B_kind": "function",
+    "C_accessLevel": "class",
+    "D_attributes": [
+      "objc",
+      "class"
+    ],
+    "F_location": "UIFont+changeSystemFont.swift - Line: 77, Column: 5",
+    "I_parameterType": [
+      "UIFont.TextStyle",
+      "UITraitCollection"
+    ],
+    "I_parameters": [
+      "forTextStyle",
+      "compatibleWith"
+    ],
+    "J_returnType": "-> UIFont"
+  },
+  {
+    "A_name": "remove",
+    "B_kind": "function",
+    "C_accessLevel": "mutating",
+    "D_attributes": [
+      "mutating"
+    ],
+    "F_location": "Array+remove.swift - Line: 11, Column: 5",
+    "I_parameterType": [
+      "Element"
+    ],
+    "I_parameters": [
+      "object"
+    ]
+  },
+  {
+    "A_name": "set",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Sequence+uniqued.swift - Line: 13, Column: 9",
+    "H_initialValue": "Set<Element>()"
+  },
+  {
+    "A_name": "attrString",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UILabel+setLineSpacing.swift - Line: 13, Column: 9",
+    "H_initialValue": "NSMutableAttributedString(string: text!)"
+  },
+  {
+    "A_name": "paragraphStyle",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UILabel+setLineSpacing.swift - Line: 14, Column: 9",
+    "H_initialValue": "NSMutableParagraphStyle()"
+  },
+  {
+    "A_name": "rect",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UIImage+imageWithColor.swift - Line: 13, Column: 9",
+    "H_initialValue": "CGRect(x: 0, y: 0, width: 1, height: 1)"
+  },
+  {
+    "A_name": "image",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UIImage+imageWithColor.swift - Line: 19, Column: 9",
+    "H_initialValue": "UIGraphicsGetImageFromCurrentImageContext()"
+  },
+  {
+    "A_name": "rect",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UIButton+setBackgroundColor.swift - Line: 13, Column: 9",
+    "H_initialValue": "CGRect(x: 0, y: 0, width: cornerRadius * 2 + 1, height: cornerRadius * 2 + 1)"
+  },
+  {
+    "A_name": "path",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UIButton+setBackgroundColor.swift - Line: 17, Column: 9",
+    "H_initialValue": "UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius)"
+  },
+  {
+    "A_name": "image",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UIButton+setBackgroundColor.swift - Line: 21, Column: 9",
+    "H_initialValue": "UIGraphicsGetImageFromCurrentImageContext()"
+  },
+  {
+    "A_name": "resizableImage",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "UIButton+setBackgroundColor.swift - Line: 24, Column: 9",
+    "H_initialValue": "image?.resizableImage(withCapInsets: UIEdgeInsets(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius), resizingMode: .stretch)"
+  },
+  {
+    "A_name": "disposeBag",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MainViewModel.swift - Line: 16, Column: 5",
+    "H_initialValue": "DisposeBag()",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "label",
+    "B_kind": "variable"
+  },
+  {
+    "A_name": "layout",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "ChooseViewController.swift - Line: 20, Column: 9",
+    "H_initialValue": "UICollectionViewFlowLayout()",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "ResultViewModel.swift - Line: 16, Column: 5",
+    "I_parameterType": [
+      "UIImage",
+      "UIImage",
+      "UIImage"
+    ],
+    "I_parameters": [
+      "firstImage",
+      "secondImage",
+      "thirdImage"
+    ],
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "LoadSelectedFeelingsUseCase.swift - Line: 13, Column: 5",
+    "I_parameterType": [
+      "FeelingRepository"
+    ],
+    "I_parameters": [
+      "feelingRepository"
+    ]
+  },
+  {
+    "A_name": "call",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "LoadSelectedFeelingsUseCase.swift - Line: 17, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": [],
+    "J_returnType": "-> [Feeling]"
+  },
+  {
+    "A_name": "call",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "LoadRemoteUrlPresetDataUseCase.swift - Line: 17, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": [],
+    "J_returnType": "-> [URL]",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "semaphore",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "RestaurantRemoteDataSource.swift - Line: 13, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "button",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MainSettingViewController.swift - Line: 181, Column: 9",
+    "H_initialValue": "UIButton()",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "imageView",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MainSettingViewController.swift - Line: 201, Column: 9",
+    "H_initialValue": "UIImageView()",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "mapView",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "RestaurantLocationDetailViewController.swift - Line: 23, Column: 9",
+    "H_initialValue": "MKMapView()",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "appearance",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "DetailViewController.swift - Line: 272, Column: 13",
+    "H_initialValue": "UINavigationBarAppearance()",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "LoadSelectedRestaurantUseCase.swift - Line: 13, Column: 5",
+    "I_parameterType": [
+      "RestaurantRepository"
+    ],
+    "I_parameters": [
+      "restaurantRepository"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "STAVSuitManager.swift - Line: 18, Column: 5",
+    "I_parameterType": [
+      "SceneDelegate"
+    ],
+    "I_parameters": [
+      "sceneDelegate"
+    ]
+  },
+  {
+    "A_name": "run",
+    "B_kind": "function",
+    "C_accessLevel": "public",
+    "D_attributes": [],
+    "F_location": "STAVSuitManager.swift - Line: 30, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "message",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "STAVSuitManager.swift - Line: 43, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"Qi2AnMjnohNNFeRDTbQgpDLyY/cF/wK3eqKb5Ks=\")"
+  },
+  {
+    "A_name": "run",
+    "B_kind": "function",
+    "C_accessLevel": "public",
+    "D_attributes": [],
+    "F_location": "STVPNBlockManager.swift - Line: 75, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": [],
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "message",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "STVPNBlockManager.swift - Line: 88, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"MsCjoeE4BJJbAwX4mxoceKA2TKa+tgmXE/Ehphk=\")"
+  },
+  {
+    "A_name": "placemark",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MKMapView+setPlaceMark.swift - Line: 19, Column: 17",
+    "H_initialValue": "MKPointAnnotation()",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "region",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MKMapView+setPlaceMark.swift - Line: 28, Column: 17",
+    "H_initialValue": "self.region",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "locationManager",
+    "B_kind": "variable",
+    "C_accessLevel": "private",
+    "D_attributes": [],
+    "F_location": "STVPNBlockManager.swift - Line: 17, Column: 5",
+    "H_initialValue": "CLLocationManager()"
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "STVPNBlockManager.swift - Line: 22, Column: 5",
+    "I_parameterType": [
+      "SceneDelegate"
+    ],
+    "I_parameters": [
+      "sceneDelegate"
+    ]
+  },
+  {
+    "A_name": "happy",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "FeelingCategory.swift - Line: 12, Column: 5",
+    "H_initialValue": "[\n        StringConstants.Feeling.peace,\n        StringConstants.Feeling.happy,\n        StringConstants.Feeling.bewildered,\n        StringConstants.Feeling.surprised,\n        StringConstants.Feeling.extremeSurprised,\n        StringConstants.Feeling.interested,\n        StringConstants.Feeling.approved,\n        StringConstants.Feeling.trust,\n        StringConstants.Feeling.respect\n    ]"
+  },
+  {
+    "A_name": "sad",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "FeelingCategory.swift - Line: 24, Column: 5",
+    "H_initialValue": "[\n        StringConstants.Feeling.grief,\n        StringConstants.Feeling.sad,\n        StringConstants.Feeling.woebegone\n    ]"
+  },
+  {
+    "A_name": "angry",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "FeelingCategory.swift - Line: 30, Column: 5",
+    "H_initialValue": "[\n        StringConstants.Feeling.hate,\n        StringConstants.Feeling.disgust,\n        StringConstants.Feeling.bored,\n        StringConstants.Feeling.nervous,\n        StringConstants.Feeling.furious,\n        StringConstants.Feeling.angry,\n        StringConstants.Feeling.annoyed,\n        StringConstants.Feeling.bothered,\n    ]"
+  },
+  {
+    "A_name": "happy",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 28, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"exXYp/myudYcZKJPytjmOuV3s4fG69PS+giyrj9BoZQF\")",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "sad",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 31, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"vryShigqwThHuYJ9Pmp+ohyV01/hJYT9cTKuVwGB9g==\")",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "angry",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 43, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"PVSBUeQQpuJI8m6ovjOOvjK6Fnbr/aAHcK3KeGWB5RFX\")",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "LoadRestaurantUseCase.swift - Line: 14, Column: 5",
+    "I_parameterType": [
+      "RestaurantRepository"
+    ],
+    "I_parameters": [
+      "restaurantRepository"
+    ]
+  },
+  {
+    "A_name": "call",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "LoadRestaurantUseCase.swift - Line: 18, Column: 5",
+    "I_parameterType": [
+      "URL?",
+      "Bool",
+      "@escaping() -> Void",
+      "@escaping() -> Void"
+    ],
+    "I_parameters": [
+      "remoteJsonUrl",
+      "needRefresh",
+      "downloadCompletion",
+      "refreshedCompletion"
+    ],
+    "J_returnType": "-> Restaurant"
+  },
+  {
+    "A_name": "maskLayer",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "ChooseViewController.swift - Line: 78, Column: 13",
+    "H_initialValue": "CAGradientLayer.init()",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "peace",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 27, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"8IZrwFMaFqh0IHoN4bO/JxbtCWUCdrf+Cg5ITb1+RrVE\")"
+  },
+  {
+    "A_name": "bewildered",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 29, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"aWK3kyaBxHUW7r5f2yftUt1T3ffIYbtY2pyCwCBrZMMpxAu+YiQ=\")"
+  },
+  {
+    "A_name": "grief",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 30, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"suDls/G+2QV23+a5tKXCtzfmFgrpD93PWuhH9OeySKVX\")"
+  },
+  {
+    "A_name": "woebegone",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 32, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"pd74p9iJFFfmmld82vauJaWKQTlonec1+qOy0kshDhyhD5aQAg==\")"
+  },
+  {
+    "A_name": "approved",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 33, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"vjx5UzkaKhV+Ze1woXQXhlKLzmpSP7TZlCtB7120XUkYdk/A\")"
+  },
+  {
+    "A_name": "trust",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 34, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"ASXPgH+iePDgjZAAvPfAKGB/3D28P4KKEizWO/OBQRqe\")"
+  },
+  {
+    "A_name": "respect",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 35, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"B4SWsrZ4GCWNniBTLQ/awk4G/5/9j5Od5Ri/4lvrs5hnOAk=\")"
+  },
+  {
+    "A_name": "hate",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 36, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"42ir0DabJCPBtukVqkyshVLNL5v0jPo560EbJXFH1bY=\")"
+  },
+  {
+    "A_name": "disgust",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 37, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"HEd3sfNydzxCz0SdeG66ZmEXIDgyeW9oFLZCYgsXCt3cvL0=\")"
+  },
+  {
+    "A_name": "bored",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 38, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"Eu50vA3oBIGNevgpj0xR9Bm7khoaG4spGWsJn8McCtS2\")"
+  },
+  {
+    "A_name": "nervous",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 39, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"yYmQO40iFAr2GcdSf4dY0t6RE8ewjPTlw3oj6uhnpDA/H5g=\")"
+  },
+  {
+    "A_name": "horror",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 40, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"P/2IT/8Rkq/BJl+rPBGLvpkYWvvQBt2eCiUw8QVeO0FuYw==\")"
+  },
+  {
+    "A_name": "extremeHorror",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 41, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"d3aLpGF+zkb4Km6iE1V9qkrhc5UEV8MUl+Kh9SI0ABvsltd9ZzERia4=\")"
+  },
+  {
+    "A_name": "furious",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 42, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"6mf6c+/PJghbXzoP8JUgNPXubQ9Ta+79DnNu2NoT6nC1sik=\")"
+  },
+  {
+    "A_name": "annoyed",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 44, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"p3Y7DLrbo644dcP340Ph58NvW4hNmvUZibiWTEv+ZR34M64=\")"
+  },
+  {
+    "A_name": "bothered",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 45, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"IADfdX4t7ToWDoDEgBokKuD5I/j9O3P/HhuI9fjbM4RiUUL2\")"
+  },
+  {
+    "A_name": "surprised",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 46, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"ZGoF9iv673elH65TJz0nyuhG/DuC8pYYjUu6A5vg0wviq3JvZQ==\")"
+  },
+  {
+    "A_name": "extremeSurprised",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 47, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"a2hRnRoVoK4kv/vl/VzvNZRdZHsl9/kgsFA7DMIUzFn/hpkMwWc+aaHFmZc=\")"
+  },
+  {
+    "A_name": "beware",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 48, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"bms5YOps9xWhKpilo6kpUJuDBQfReJjRYisSAFl3TYgCHw==\")"
+  },
+  {
+    "A_name": "lookingForward",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 49, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"GfivdIwClSVruKyfGG7MStsXt+JIJI3vklJxNf4eOqPMx8TWeTs1bZfP\")"
+  },
+  {
+    "A_name": "interested",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 50, Column: 9",
+    "H_initialValue": "SwingftEncryption.resolve(\"LRJctLzPRKt8o9m0Li2WFHGpFxpUonakxdD5ud+wO3yF+eXDV38=\")"
+  },
+  {
+    "A_name": "setting",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 81, Column: 5",
+    "H_initialValue": "SwingftEncryption.resolve(\"jTKdlVo/spi0mu0c5e9jtsfFm2Q1bkK4Z7GsyWVD+cqJ9eo=\")"
+  },
+  {
+    "A_name": "apply",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 82, Column: 5",
+    "H_initialValue": "SwingftEncryption.resolve(\"CxZ7allantU6lkFJDjlhT34TKJl9MnD7HFY9XZ43tLuw\")"
+  },
+  {
+    "A_name": "reset",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 83, Column: 5",
+    "H_initialValue": "SwingftEncryption.resolve(\"OcD2DwsFJpzfPFkGzxQ4JxTxVHlNihmp7jNj+3jPv3gA\")"
+  },
+  {
+    "A_name": "clear",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 84, Column: 5",
+    "H_initialValue": "SwingftEncryption.resolve(\"7nkHfJVRHJOM5TbvaU81jXEwdKkFxdkfq6oYE4CnEVL7\")"
+  },
+  {
+    "A_name": "activate",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 90, Column: 5",
+    "H_initialValue": "SwingftEncryption.resolve(\"nJuQ3bP4LwgHnBLd1cuxyjnB8U9KzqnqjQqZDhk2vkLjGgag\")"
+  },
+  {
+    "A_name": "placeholder",
+    "B_kind": "variable",
+    "C_accessLevel": "static",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "Constants.swift - Line: 155, Column: 5",
+    "H_initialValue": "{\n        var image = #imageLiteral(resourceName: \"photo\").withRenderingMode(.alwaysTemplate)\n        \n        return image\n    }()"
+  },
+  {
+    "A_name": "title",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "RestaurantCategory.swift - Line: 12, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "items",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "RestaurantCategory.swift - Line: 14, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "LoadFeelingUseCase.swift - Line: 13, Column: 5",
+    "I_parameterType": [
+      "FeelingRepository"
+    ],
+    "I_parameters": [
+      "feelingRepository"
+    ]
+  },
+  {
+    "A_name": "call",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "LoadFeelingUseCase.swift - Line: 17, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": [],
+    "J_returnType": "-> [Feeling]"
+  },
+  {
+    "A_name": "refreshControl",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MainViewController.swift - Line: 41, Column: 9",
+    "H_initialValue": "UIRefreshControl()",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "stackView",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MainSettingViewController.swift - Line: 140, Column: 9",
+    "H_initialValue": "UIStackView()",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "height",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MainViewController.swift - Line: 100, Column: 9",
+    "H_initialValue": "0",
+    "E_adoptedClassProtocols": []
+  },
+  {
+    "A_name": "cache",
+    "B_kind": "variable",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "SwingftEncryption.swift - Line: 6, Column: 5",
+    "H_initialValue": "NSCache<NSString, NSString>()"
+  },
+  {
+    "A_name": "key",
+    "B_kind": "variable",
+    "C_accessLevel": "private",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "SwingftEncryption.swift - Line: 7, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "configure",
+    "B_kind": "function",
+    "C_accessLevel": "public",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "SwingftEncryption.swift - Line: 9, Column: 5",
+    "I_parameterType": [
+      "Data"
+    ],
+    "I_parameters": [
+      "key"
+    ]
+  },
+  {
+    "A_name": "resolve",
+    "B_kind": "function",
+    "C_accessLevel": "public",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "SwingftEncryption.swift - Line: 13, Column: 5",
+    "I_parameterType": [
+      "String"
+    ],
+    "I_parameters": [
+      "_"
+    ],
+    "J_returnType": "-> String"
+  },
+  {
+    "A_name": "clearCache",
+    "B_kind": "function",
+    "C_accessLevel": "public",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "SwingftEncryption.swift - Line: 22, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "decrypt",
+    "B_kind": "function",
+    "C_accessLevel": "fileprivate",
+    "D_attributes": [
+      "static"
+    ],
+    "F_location": "SwingftEncryption.swift - Line: 26, Column: 5",
+    "I_parameterType": [
+      "String"
+    ],
+    "I_parameters": [
+      "base64"
+    ],
+    "J_returnType": "-> String"
+  },
+  {
+    "A_name": "nonce",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "SwingftEncryption.swift - Line: 33, Column: 9",
+    "H_initialValue": "data.prefix(12)"
+  },
+  {
+    "A_name": "ciphertext",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "SwingftEncryption.swift - Line: 34, Column: 9",
+    "H_initialValue": "data.dropFirst(12)"
+  },
+  {
+    "A_name": "tag",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "SwingftEncryption.swift - Line: 35, Column: 9",
+    "H_initialValue": "ciphertext.suffix(16)"
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "RestaurantsDataJsonParser.swift - Line: 13, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "DetailViewModel.swift - Line: 14, Column: 5",
+    "I_parameterType": [
+      "LoadSelectedRestaurantUseCase"
+    ],
+    "I_parameters": [
+      "loadSelectedRestaurantUseCase"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "MainViewModel.swift - Line: 23, Column: 5",
+    "I_parameterType": [
+      "LoadRestaurantUseCase",
+      "LoadSelectedFeelingsUseCase",
+      "LoadRemoteUrlPresetDataUseCase"
+    ],
+    "I_parameters": [
+      "loadRestaurantUseCase",
+      "loadSelectedFeelingsUseCase",
+      "loadRemoteUrlPresetDataUseCase"
+    ]
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "LoadRemoteUrlPresetDataUseCase.swift - Line: 13, Column: 5",
+    "I_parameterType": [
+      "RemoteUrlPresetRepository"
+    ],
+    "I_parameters": [
+      "remoteUrlPresetRepository"
+    ]
+  },
+  {
+    "A_name": "add",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "LoadRemoteUrlPresetDataUseCase.swift - Line: 21, Column: 5",
+    "I_parameterType": [
+      "URL"
+    ],
+    "I_parameters": [
+      "url"
+    ]
+  },
+  {
+    "A_name": "save",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "LoadRemoteUrlPresetDataUseCase.swift - Line: 25, Column: 5",
+    "I_parameterType": [
+      "[URL]"
+    ],
+    "I_parameters": [
+      "remoteUrlPresetData"
+    ]
+  },
+  {
+    "A_name": "key",
+    "B_kind": "variable",
+    "C_accessLevel": "private",
+    "D_attributes": [],
+    "F_location": "RemoteUrlPresetLocalDataSource.swift - Line: 12, Column: 5",
+    "H_initialValue": "SwingftEncryption.resolve(\"paRWL9Nb5DTe+rbdMJ6IFgXu3tlzMovojQiWGJl7ZlpCc7ocVHOpv6b555IdC3U=\")"
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "RemoteUrlPresetLocalDataSource.swift - Line: 25, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": []
+  },
+  {
+    "A_name": "init",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "ChooseViewModel.swift - Line: 16, Column: 5",
+    "I_parameterType": [
+      "LoadFeelingUseCase",
+      "LoadSelectedFeelingsUseCase",
+      "FeelingRepository"
+    ],
+    "I_parameters": [
+      "loadFeelingUseCase",
+      "loadSelectedFeelingsUseCase",
+      "feelingRepository"
+    ]
+  },
+  {
+    "A_name": "id",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "ChooseViewModel.swift - Line: 29, Column: 9",
+    "H_initialValue": "feelings[index].id"
+  },
+  {
+    "A_name": "RestaurantTableViewCell",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "UITableViewCell"
+    ],
+    "F_location": "RestaurantTableViewCell.swift - Line: 18, Column: 1"
+  },
+  {
+    "A_name": "AntiCaptureSettingView",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "UIView"
+    ],
+    "F_location": "AntiCaptureSettingView.swift - Line: 12, Column: 1"
+  },
+  {
+    "A_name": "SelectedFeelingsCollectionViewContentView",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "UIView"
+    ],
+    "F_location": "SelectedFeelingsStackViewContentView.swift - Line: 13, Column: 1"
+  },
+  {
+    "A_name": "RemoteUrlPresetButtonView",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "UIView"
+    ],
+    "F_location": "RemoteUrlPresetButtonView.swift - Line: 12, Column: 1"
+  },
+  {
+    "A_name": "LoadingView",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "UIView"
+    ],
+    "F_location": "LoadingView.swift - Line: 14, Column: 1"
+  },
+  {
+    "A_name": "BaseViewController",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "UIViewController"
+    ],
+    "F_location": "BaseViewController.swift - Line: 17, Column: 1"
+  },
+  {
+    "A_name": "restaurant_name",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 19, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "image_urls",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 21, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "cost_range",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 25, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "business_hours",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 27, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "last_order",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 28, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "holiday",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 30, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "rest_hours",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 31, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "feeling_tags",
+    "B_kind": "variable",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 32, Column: 5",
+    "H_initialValue": ""
+  },
+  {
+    "A_name": "getIsInBusiness",
+    "B_kind": "function",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "F_location": "Restaurant.swift - Line: 35, Column: 5",
+    "I_parameterType": [],
+    "I_parameters": [],
+    "J_returnType": "-> Bool"
+  },
+  {
+    "A_name": "ChooseCollectionViewCell",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "UICollectionViewCell"
+    ],
+    "F_location": "ChooseCollectionViewCell.swift - Line: 13, Column: 1"
+  },
+  {
+    "A_name": "RestaurantCollectionViewCell",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "UICollectionViewCell"
+    ],
+    "F_location": "RestaurantCollectionViewCell.swift - Line: 13, Column: 1"
+  },
+  {
+    "A_name": "DetailImageUpScaleCollectionViewCell",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "UICollectionViewCell"
+    ],
+    "F_location": "DetailImageUpScaleCollectionViewCell.swift - Line: 13, Column: 1"
+  },
+  {
+    "A_name": "DetailImageCollectionViewCell",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "UICollectionViewCell"
+    ],
+    "F_location": "DetailImageCollectionViewCell.swift - Line: 14, Column: 1"
+  },
+  {
+    "A_name": "MainNavigationController",
+    "B_kind": "class",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [
+      "UINavigationController"
+    ],
+    "F_location": "MainNavigationController.swift - Line: 11, Column: 1"
+  },
+  {
+    "A_name": "Notification.Name",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "BaseViewController.swift - Line: 122, Column: 1"
+  },
+  {
+    "A_name": "UIStackView",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "UIStackView+removeFullyAllArrangedSubViews.swift - Line: 11, Column: 1"
+  },
+  {
+    "A_name": "MKMapView",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "MKMapView+setPlaceMark.swift - Line: 11, Column: 1"
+  },
+  {
+    "A_name": "UIFont",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "UIFont+changeSystemFont.swift - Line: 12, Column: 1"
+  },
+  {
+    "A_name": "UIFont",
+    "B_kind": "extension",
+    "C_accessLevel": "private",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "UIFont+changeSystemFont.swift - Line: 40, Column: 1"
+  },
+  {
+    "A_name": "UIImage",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "UIImage+imageWithColor.swift - Line: 11, Column: 1"
+  },
+  {
+    "A_name": "UITextField",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "UITextField+addLeftPadding.swift - Line: 11, Column: 1"
+  },
+  {
+    "A_name": "UIButton",
+    "B_kind": "extension",
+    "C_accessLevel": "internal",
+    "D_attributes": [],
+    "E_adoptedClassProtocols": [],
+    "F_location": "UIButton+setBackgroundColor.swift - Line: 11, Column: 1"
+  }
+]

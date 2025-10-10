@@ -1,0 +1,348 @@
+[
+  {
+    "A_name" : "VerificationCodeView",
+    "B_kind" : "class",
+    "C_accessLevel" : "final",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIView"
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 12, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "codeView",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VerificationCodeView.swift - Line: 16, Column: 5",
+        "H_initialValue" : "{\n        let view = VerificationCodeInputView()\n        return view\n    }()"
+      },
+      {
+        "A_name" : "titleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VerificationCodeView.swift - Line: 21, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"인증번호 입력\"\n        label.font = .suit(.head_b_18)\n        label.textColor = .black\n        label.textAlignment = .center\n        return label\n    }()"
+      },
+      {
+        "A_name" : "infoContainer",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VerificationCodeView.swift - Line: 30, Column: 5",
+        "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .gray100\n        view.layer.masksToBounds = true\n        view.isUserInteractionEnabled = false\n        return view\n    }()"
+      },
+      {
+        "A_name" : "infoStack",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VerificationCodeView.swift - Line: 38, Column: 5",
+        "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .vertical\n        stack.spacing = 8\n        return stack\n    }()"
+      },
+      {
+        "A_name" : "questionTitleLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VerificationCodeView.swift - Line: 45, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"Q. 인증 번호란?\"\n        label.font = .suit(.head_b_16)\n        label.textColor = .label\n        return label\n    }()"
+      },
+      {
+        "A_name" : "guideLabel",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VerificationCodeView.swift - Line: 53, Column: 5",
+        "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"사전 예약을 신청한 분들을 대상으로 가입 인증 번호가 발급되었어요. 인증 번호를 보유하신 경우에만 가입이 가능해요.\\n\\n알림을 신청한 이메일을 확인해주세요.\"\n        label.font = .suit(.body_m_14)\n        label.textColor = .gray500\n        label.numberOfLines = 0\n        return label\n    }()"
+      },
+      {
+        "A_name" : "notReceivedButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VerificationCodeView.swift - Line: 62, Column: 5",
+        "H_initialValue" : "{\n        let button = UIButton(type: .system)\n        let title = \"인증 번호가 오지 않았나요?\"\n        let color: UIColor = .gray500\n        let attr = NSAttributedString(\n            string: title,\n            attributes: [\n                .font: UIFont.suit(.body_m_14),\n                .foregroundColor: color,\n                .underlineStyle: NSUnderlineStyle.single.rawValue,\n                .underlineColor: color\n            ]\n        )\n        button.setAttributedTitle(attr, for: .normal)\n        button.contentHorizontalAlignment = .leading\n        button.titleLabel?.numberOfLines = 1\n        return button\n    }()"
+      },
+      {
+        "A_name" : "submitButton",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "VerificationCodeView.swift - Line: 81, Column: 5",
+        "H_initialValue" : "{\n        CTAButton(style: .TextButton(\"인증하기\"), autoBackground: true)\n    }()"
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "VerificationCodeView.swift - Line: 86, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "VerificationCodeView.swift - Line: 98, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "codeView",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 16, Column: 5",
+    "H_initialValue" : "{\n        let view = VerificationCodeInputView()\n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 17, Column: 9",
+    "H_initialValue" : "VerificationCodeInputView()"
+  },
+  {
+    "A_name" : "titleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 21, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"인증번호 입력\"\n        label.font = .suit(.head_b_18)\n        label.textColor = .black\n        label.textAlignment = .center\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 22, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "infoContainer",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 30, Column: 5",
+    "H_initialValue" : "{\n        let view = UIView()\n        view.backgroundColor = .gray100\n        view.layer.masksToBounds = true\n        view.isUserInteractionEnabled = false\n        return view\n    }()"
+  },
+  {
+    "A_name" : "view",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 31, Column: 9",
+    "H_initialValue" : "UIView()"
+  },
+  {
+    "A_name" : "infoStack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 38, Column: 5",
+    "H_initialValue" : "{\n        let stack = UIStackView()\n        stack.axis = .vertical\n        stack.spacing = 8\n        return stack\n    }()"
+  },
+  {
+    "A_name" : "stack",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 39, Column: 9",
+    "H_initialValue" : "UIStackView()"
+  },
+  {
+    "A_name" : "questionTitleLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 45, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"Q. 인증 번호란?\"\n        label.font = .suit(.head_b_16)\n        label.textColor = .label\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 46, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "guideLabel",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 53, Column: 5",
+    "H_initialValue" : "{\n        let label = UILabel()\n        label.text = \"사전 예약을 신청한 분들을 대상으로 가입 인증 번호가 발급되었어요. 인증 번호를 보유하신 경우에만 가입이 가능해요.\\n\\n알림을 신청한 이메일을 확인해주세요.\"\n        label.font = .suit(.body_m_14)\n        label.textColor = .gray500\n        label.numberOfLines = 0\n        return label\n    }()"
+  },
+  {
+    "A_name" : "label",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 54, Column: 9",
+    "H_initialValue" : "UILabel()"
+  },
+  {
+    "A_name" : "notReceivedButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 62, Column: 5",
+    "H_initialValue" : "{\n        let button = UIButton(type: .system)\n        let title = \"인증 번호가 오지 않았나요?\"\n        let color: UIColor = .gray500\n        let attr = NSAttributedString(\n            string: title,\n            attributes: [\n                .font: UIFont.suit(.body_m_14),\n                .foregroundColor: color,\n                .underlineStyle: NSUnderlineStyle.single.rawValue,\n                .underlineColor: color\n            ]\n        )\n        button.setAttributedTitle(attr, for: .normal)\n        button.contentHorizontalAlignment = .leading\n        button.titleLabel?.numberOfLines = 1\n        return button\n    }()"
+  },
+  {
+    "A_name" : "button",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 63, Column: 9",
+    "H_initialValue" : "UIButton(type: .system)"
+  },
+  {
+    "A_name" : "title",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 64, Column: 9",
+    "H_initialValue" : "\"인증 번호가 오지 않았나요?\""
+  },
+  {
+    "A_name" : "color",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 65, Column: 9",
+    "H_initialValue" : ".gray500"
+  },
+  {
+    "A_name" : "attr",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 66, Column: 9",
+    "H_initialValue" : "NSAttributedString(\n            string: title,\n            attributes: [\n                .font: UIFont.suit(.body_m_14),\n                .foregroundColor: color,\n                .underlineStyle: NSUnderlineStyle.single.rawValue,\n                .underlineColor: color\n            ]\n        )"
+  },
+  {
+    "A_name" : "submitButton",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 81, Column: 5",
+    "H_initialValue" : "{\n        CTAButton(style: .TextButton(\"인증하기\"), autoBackground: true)\n    }()"
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 86, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "VerificationCodeView.swift - Line: 98, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

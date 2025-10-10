@@ -1,0 +1,456 @@
+[
+  {
+    "A_name" : "ObservableType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 14, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "system",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Observable+Extensions.swift - Line: 31, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "State",
+          "@escaping (State, Event) -> State",
+          "ImmediateSchedulerType",
+          "[Feedback<State, Event>]"
+        ],
+        "I_parameters" : [
+          "initialState",
+          "reduce",
+          "scheduler",
+          "scheduledFeedback"
+        ],
+        "J_returnType" : "-> Observable<State>"
+      },
+      {
+        "A_name" : "system",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Observable+Extensions.swift - Line: 62, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "State",
+          "@escaping (State, Event) -> State",
+          "ImmediateSchedulerType",
+          "Feedback<State, Event>"
+        ],
+        "I_parameters" : [
+          "initialState",
+          "reduce",
+          "scheduler",
+          "scheduledFeedback"
+        ],
+        "J_returnType" : "-> Observable<State>"
+      }
+    ]
+  },
+  {
+    "A_name" : "system",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 31, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "State",
+      "@escaping (State, Event) -> State",
+      "ImmediateSchedulerType",
+      "[Feedback<State, Event>]"
+    ],
+    "I_parameters" : [
+      "initialState",
+      "reduce",
+      "scheduler",
+      "scheduledFeedback"
+    ],
+    "J_returnType" : "-> Observable<State>"
+  },
+  {
+    "A_name" : "replaySubject",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 38, Column: 13",
+    "H_initialValue" : "ReplaySubject<State>.create(bufferSize: 1)"
+  },
+  {
+    "A_name" : "asyncScheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 40, Column: 13",
+    "H_initialValue" : "scheduler.async"
+  },
+  {
+    "A_name" : "events",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 42, Column: 13",
+    "H_initialValue" : "Observable.merge(scheduledFeedback.map { feedback in\n                let state = ObservableSchedulerContext(source: replaySubject.asObservable(), scheduler: asyncScheduler)\n                return feedback(state)\n            })\n                \/\/ This is protection from accidental ignoring of scheduler so\n                \/\/ reentracy errors can be avoided\n                .observe(on:CurrentThreadScheduler.instance)"
+  },
+  {
+    "A_name" : "state",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 43, Column: 17",
+    "H_initialValue" : "ObservableSchedulerContext(source: replaySubject.asObservable(), scheduler: asyncScheduler)"
+  },
+  {
+    "A_name" : "system",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 62, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "State",
+      "@escaping (State, Event) -> State",
+      "ImmediateSchedulerType",
+      "Feedback<State, Event>"
+    ],
+    "I_parameters" : [
+      "initialState",
+      "reduce",
+      "scheduler",
+      "scheduledFeedback"
+    ],
+    "J_returnType" : "-> Observable<State>"
+  },
+  {
+    "A_name" : "SharedSequenceConvertibleType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 72, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "system",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Observable+Extensions.swift - Line: 87, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "observableFeedbacks",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+Extensions.swift - Line: 92, Column: 9",
+            "H_initialValue" : "feedback.map { feedback in\n            return { sharedSequence in\n                return feedback(sharedSequence.source.asDriver(onErrorDriveWith: Driver<State>.empty()))\n                    .asObservable()\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "State",
+          "@escaping (State, Event) -> State",
+          "[Feedback<State, Event>]"
+        ],
+        "I_parameters" : [
+          "initialState",
+          "reduce",
+          "feedback"
+        ],
+        "J_returnType" : "-> Driver<State>"
+      },
+      {
+        "A_name" : "system",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Observable+Extensions.swift - Line: 108, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "State",
+          "@escaping (State, Event) -> State",
+          "Feedback<State, Event>"
+        ],
+        "I_parameters" : [
+          "initialState",
+          "reduce",
+          "feedback"
+        ],
+        "J_returnType" : "-> Driver<State>"
+      }
+    ]
+  },
+  {
+    "A_name" : "system",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 87, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "observableFeedbacks",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+Extensions.swift - Line: 92, Column: 9",
+        "H_initialValue" : "feedback.map { feedback in\n            return { sharedSequence in\n                return feedback(sharedSequence.source.asDriver(onErrorDriveWith: Driver<State>.empty()))\n                    .asObservable()\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "State",
+      "@escaping (State, Event) -> State",
+      "[Feedback<State, Event>]"
+    ],
+    "I_parameters" : [
+      "initialState",
+      "reduce",
+      "feedback"
+    ],
+    "J_returnType" : "-> Driver<State>"
+  },
+  {
+    "A_name" : "observableFeedbacks",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 92, Column: 9",
+    "H_initialValue" : "feedback.map { feedback in\n            return { sharedSequence in\n                return feedback(sharedSequence.source.asDriver(onErrorDriveWith: Driver<State>.empty()))\n                    .asObservable()\n            }\n        }"
+  },
+  {
+    "A_name" : "system",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 108, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "State",
+      "@escaping (State, Event) -> State",
+      "Feedback<State, Event>"
+    ],
+    "I_parameters" : [
+      "initialState",
+      "reduce",
+      "feedback"
+    ],
+    "J_returnType" : "-> Driver<State>"
+  },
+  {
+    "A_name" : "ImmediateSchedulerType",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 117, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "async",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+Extensions.swift - Line: 118, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "async",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 118, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "ObservableSchedulerContext",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "ObservableType"
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 129, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "source",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+Extensions.swift - Line: 133, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+Extensions.swift - Line: 136, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+Extensions.swift - Line: 142, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observable<Element>",
+          "ImmediateSchedulerType"
+        ],
+        "I_parameters" : [
+          "source",
+          "scheduler"
+        ]
+      },
+      {
+        "A_name" : "subscribe",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+Extensions.swift - Line: 147, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Observer"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Disposable"
+      }
+    ]
+  },
+  {
+    "A_name" : "source",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 133, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 136, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 142, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observable<Element>",
+      "ImmediateSchedulerType"
+    ],
+    "I_parameters" : [
+      "source",
+      "scheduler"
+    ]
+  },
+  {
+    "A_name" : "subscribe",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+Extensions.swift - Line: 147, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Observer"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Disposable"
+  }
+]

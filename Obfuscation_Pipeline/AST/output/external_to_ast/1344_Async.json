@@ -1,0 +1,527 @@
+[
+  {
+    "A_name" : "AsyncDefaults",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 6, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "timeout",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Async.swift - Line: 7, Column: 5",
+        "H_initialValue" : ".seconds(1)"
+      },
+      {
+        "A_name" : "pollInterval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "Async.swift - Line: 8, Column: 5",
+        "H_initialValue" : ".milliseconds(10)"
+      }
+    ]
+  },
+  {
+    "A_name" : "timeout",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Async.swift - Line: 7, Column: 5",
+    "H_initialValue" : ".seconds(1)"
+  },
+  {
+    "A_name" : "pollInterval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "Async.swift - Line: 8, Column: 5",
+    "H_initialValue" : ".milliseconds(10)"
+  },
+  {
+    "A_name" : "AsyncDefaults",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Timeout",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available",
+          "static"
+        ],
+        "F_location" : "Async.swift - Line: 12, Column: 5",
+        "H_initialValue" : "1"
+      },
+      {
+        "A_name" : "PollInterval",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "available",
+          "static"
+        ],
+        "F_location" : "Async.swift - Line: 14, Column: 5",
+        "H_initialValue" : "0.01"
+      }
+    ]
+  },
+  {
+    "A_name" : "Timeout",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available",
+      "static"
+    ],
+    "F_location" : "Async.swift - Line: 12, Column: 5",
+    "H_initialValue" : "1"
+  },
+  {
+    "A_name" : "PollInterval",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "available",
+      "static"
+    ],
+    "F_location" : "Async.swift - Line: 14, Column: 5",
+    "H_initialValue" : "0.01"
+  },
+  {
+    "A_name" : "async",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 18, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "ExpectationStyle",
+      "Predicate<T>",
+      "DispatchTimeInterval",
+      "DispatchTimeInterval",
+      "String"
+    ],
+    "I_parameters" : [
+      "style",
+      "predicate",
+      "timeout",
+      "poll",
+      "fnName"
+    ],
+    "J_returnType" : "-> Predicate<T>"
+  },
+  {
+    "A_name" : "uncachedExpression",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 20, Column: 9",
+    "H_initialValue" : "actualExpression.withoutCaching()"
+  },
+  {
+    "A_name" : "fnName",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 21, Column: 9",
+    "H_initialValue" : "\"expect(...).\\(fnName)(...)\""
+  },
+  {
+    "A_name" : "lastPredicateResult",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 22, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 23, Column: 9",
+    "H_initialValue" : "pollBlock(\n            pollInterval: poll,\n            timeoutInterval: timeout,\n            file: actualExpression.location.file,\n            line: actualExpression.location.line,\n            fnName: fnName) {\n                lastPredicateResult = try predicate.satisfies(uncachedExpression)\n                return lastPredicateResult!.toBoolean(expectation: style)\n        }"
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 35, Column: 13",
+    "H_initialValue" : "lastPredicateResult?.message ?? .fail(\"timed out before returning a value\")"
+  },
+  {
+    "A_name" : "message",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 42, Column: 13",
+    "H_initialValue" : "lastPredicateResult?.message.appended(message: \" (timed out, but main run loop was unresponsive).\") ??\n                .fail(\"main run loop was unresponsive\")"
+  },
+  {
+    "A_name" : "toEventuallyRequiresClosureError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 51, Column: 1",
+    "H_initialValue" : "FailureMessage(\n    stringValue: \"\"\"\n        expect(...).toEventually(...) requires an explicit closure (eg - expect { ... }.toEventually(...) )\n        Swift 1.2 @autoclosure behavior has changed in an incompatible way for Nimble to function\n        \"\"\"\n)"
+  },
+  {
+    "A_name" : "Expectation",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 58, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "toEventually",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Async.swift - Line: 65, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Predicate<T>",
+          "DispatchTimeInterval",
+          "DispatchTimeInterval",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "timeout",
+          "pollInterval",
+          "description"
+        ]
+      },
+      {
+        "A_name" : "toEventuallyNot",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Async.swift - Line: 85, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Predicate<T>",
+          "DispatchTimeInterval",
+          "DispatchTimeInterval",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "timeout",
+          "pollInterval",
+          "description"
+        ]
+      },
+      {
+        "A_name" : "toNotEventually",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Async.swift - Line: 113, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Predicate<T>",
+          "DispatchTimeInterval",
+          "DispatchTimeInterval",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "timeout",
+          "pollInterval",
+          "description"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "toEventually",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 65, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Predicate<T>",
+      "DispatchTimeInterval",
+      "DispatchTimeInterval",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "timeout",
+      "pollInterval",
+      "description"
+    ]
+  },
+  {
+    "A_name" : "toEventuallyNot",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 85, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Predicate<T>",
+      "DispatchTimeInterval",
+      "DispatchTimeInterval",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "timeout",
+      "pollInterval",
+      "description"
+    ]
+  },
+  {
+    "A_name" : "toNotEventually",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 113, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Predicate<T>",
+      "DispatchTimeInterval",
+      "DispatchTimeInterval",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "timeout",
+      "pollInterval",
+      "description"
+    ]
+  },
+  {
+    "A_name" : "Expectation",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+      "available"
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 118, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "toEventually",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Async.swift - Line: 126, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "U",
+          "DispatchTimeInterval",
+          "DispatchTimeInterval",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "timeout",
+          "pollInterval",
+          "description"
+        ]
+      },
+      {
+        "A_name" : "toEventuallyNot",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Async.swift - Line: 155, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "U",
+          "DispatchTimeInterval",
+          "DispatchTimeInterval",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "timeout",
+          "pollInterval",
+          "description"
+        ]
+      },
+      {
+        "A_name" : "toNotEventually",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Async.swift - Line: 184, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "U",
+          "DispatchTimeInterval",
+          "DispatchTimeInterval",
+          "String?"
+        ],
+        "I_parameters" : [
+          "_",
+          "timeout",
+          "pollInterval",
+          "description"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "toEventually",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 126, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "U",
+      "DispatchTimeInterval",
+      "DispatchTimeInterval",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "timeout",
+      "pollInterval",
+      "description"
+    ]
+  },
+  {
+    "A_name" : "toEventuallyNot",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 155, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "U",
+      "DispatchTimeInterval",
+      "DispatchTimeInterval",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "timeout",
+      "pollInterval",
+      "description"
+    ]
+  },
+  {
+    "A_name" : "toNotEventually",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Async.swift - Line: 184, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "U",
+      "DispatchTimeInterval",
+      "DispatchTimeInterval",
+      "String?"
+    ],
+    "I_parameters" : [
+      "_",
+      "timeout",
+      "pollInterval",
+      "description"
+    ]
+  }
+]

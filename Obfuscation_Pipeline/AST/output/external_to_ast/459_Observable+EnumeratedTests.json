@@ -1,0 +1,460 @@
+[
+  {
+    "A_name" : "ObservableEnumeratedTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 13, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "ObservableEnumeratedTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "test_Infinite",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+EnumeratedTests.swift - Line: 18, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+EnumeratedTests.swift - Line: 19, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+EnumeratedTests.swift - Line: 21, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, \"a\"),\n            .next(220, \"b\"),\n            .next(280, \"c\")\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+EnumeratedTests.swift - Line: 27, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.enumerated()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_Completed",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+EnumeratedTests.swift - Line: 42, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+EnumeratedTests.swift - Line: 43, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+EnumeratedTests.swift - Line: 45, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, \"a\"),\n            .next(220, \"b\"),\n            .next(280, \"c\"),\n            .completed(300)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+EnumeratedTests.swift - Line: 52, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.enumerated()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_Error",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+EnumeratedTests.swift - Line: 68, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+EnumeratedTests.swift - Line: 69, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+EnumeratedTests.swift - Line: 71, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, \"a\"),\n            .next(220, \"b\"),\n            .next(280, \"c\"),\n            .error(300, testError)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+EnumeratedTests.swift - Line: 78, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.enumerated()\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "test_Infinite",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 18, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+EnumeratedTests.swift - Line: 19, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+EnumeratedTests.swift - Line: 21, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, \"a\"),\n            .next(220, \"b\"),\n            .next(280, \"c\")\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+EnumeratedTests.swift - Line: 27, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.enumerated()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 19, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 21, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, \"a\"),\n            .next(220, \"b\"),\n            .next(280, \"c\")\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 27, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.enumerated()\n        }"
+  },
+  {
+    "A_name" : "test_Completed",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 42, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+EnumeratedTests.swift - Line: 43, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+EnumeratedTests.swift - Line: 45, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, \"a\"),\n            .next(220, \"b\"),\n            .next(280, \"c\"),\n            .completed(300)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+EnumeratedTests.swift - Line: 52, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.enumerated()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 43, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 45, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, \"a\"),\n            .next(220, \"b\"),\n            .next(280, \"c\"),\n            .completed(300)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 52, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.enumerated()\n        }"
+  },
+  {
+    "A_name" : "test_Error",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 68, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+EnumeratedTests.swift - Line: 69, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+EnumeratedTests.swift - Line: 71, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, \"a\"),\n            .next(220, \"b\"),\n            .next(280, \"c\"),\n            .error(300, testError)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+EnumeratedTests.swift - Line: 78, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.enumerated()\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 69, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 71, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(210, \"a\"),\n            .next(220, \"b\"),\n            .next(280, \"c\"),\n            .error(300, testError)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 78, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.enumerated()\n        }"
+  },
+  {
+    "A_name" : "testEnumeratedReleasesResourcesOnComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 95, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testEnumeratedReleasesResourcesOnError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 99, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "compareRecordedEvents",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+EnumeratedTests.swift - Line: 105, Column: 1",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Recorded<Event<(index: Int, element: String)>>",
+      "Recorded<Event<(index: Int, element: String)>>"
+    ],
+    "I_parameters" : [
+      "lhs",
+      "rhs"
+    ],
+    "J_returnType" : "-> Bool"
+  }
+]

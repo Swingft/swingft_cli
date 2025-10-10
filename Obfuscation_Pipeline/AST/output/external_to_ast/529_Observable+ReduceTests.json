@@ -1,0 +1,2459 @@
+[
+  {
+    "A_name" : "ObservableReduceTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 13, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "ObservableReduceTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "test_ReduceWithSeed_Empty",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 17, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 18, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 20, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .completed(250)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 26, Column: 9",
+            "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+          },
+          {
+            "A_name" : "correctMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 28, Column: 9",
+            "H_initialValue" : "Recorded.events(\n            .next(250, 42),\n            .completed(250)\n        )"
+          },
+          {
+            "A_name" : "correctSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 33, Column: 9",
+            "H_initialValue" : "[\n            Subscription(200, 250)\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ReduceWithSeed_Return",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 41, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 42, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 44, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 24),\n            .completed(250)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 50, Column: 9",
+            "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+          },
+          {
+            "A_name" : "correctMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 52, Column: 9",
+            "H_initialValue" : "Recorded.events(\n            .next(250, 42 + 24),\n            .completed(250)\n        )"
+          },
+          {
+            "A_name" : "correctSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 57, Column: 9",
+            "H_initialValue" : "[\n            Subscription(200, 250)\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ReduceWithSeed_Throw",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 65, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 66, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 68, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .error(210, testError),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 73, Column: 9",
+            "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+          },
+          {
+            "A_name" : "correctMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 75, Column: 9",
+            "H_initialValue" : "[\n            Recorded.error(210, testError, Int.self)\n        ]"
+          },
+          {
+            "A_name" : "correctSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 79, Column: 9",
+            "H_initialValue" : "[\n            Subscription(200, 210)\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ReduceWithSeed_Never",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 87, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 88, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 90, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 94, Column: 9",
+            "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+          },
+          {
+            "A_name" : "correctMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 96, Column: 9",
+            "H_initialValue" : "[\n        ]"
+          },
+          {
+            "A_name" : "correctSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 99, Column: 9",
+            "H_initialValue" : "[\n            Subscription(200, 1000)\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ReduceWithSeed_Range",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 107, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 108, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 110, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 120, Column: 9",
+            "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+          },
+          {
+            "A_name" : "correctMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 122, Column: 9",
+            "H_initialValue" : "Recorded.events(\n            .next(260, 42 + 0 + 1 + 2 + 3 + 4),\n            .completed(260)\n        )"
+          },
+          {
+            "A_name" : "correctSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 127, Column: 9",
+            "H_initialValue" : "[\n            Subscription(200, 260)\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ReduceWithSeed_AccumulatorThrows",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 135, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 136, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 138, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 148, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.reduce(42) { (a: Int, x: Int) throws -> Int in\n                if x < 3 {\n                    return a + x\n                }\n                else {\n                    throw testError\n                }\n            }\n        }"
+          },
+          {
+            "A_name" : "correctMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 159, Column: 9",
+            "H_initialValue" : "[\n            Recorded.error(240, testError, Int.self)\n        ]"
+          },
+          {
+            "A_name" : "correctSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 163, Column: 9",
+            "H_initialValue" : "[\n            Subscription(200, 240)\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ReduceWithSeedAndResult_Empty",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 171, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 172, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 174, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .completed(250)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 179, Column: 9",
+            "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) { $0 * 5 } }"
+          },
+          {
+            "A_name" : "correctMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 181, Column: 9",
+            "H_initialValue" : "Recorded.events(\n            .next(250, 42 * 5),\n            .completed(250)\n        )"
+          },
+          {
+            "A_name" : "correctSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 186, Column: 9",
+            "H_initialValue" : "[\n            Subscription(200, 250)\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ReduceWithSeedAndResult_Return",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 194, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 195, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 197, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 24),\n            .completed(250)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 203, Column: 9",
+            "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { $0 * 5 }) }"
+          },
+          {
+            "A_name" : "correctMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 205, Column: 9",
+            "H_initialValue" : "Recorded.events(\n            .next(250, (42 + 24) * 5),\n            .completed(250)\n        )"
+          },
+          {
+            "A_name" : "correctSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 210, Column: 9",
+            "H_initialValue" : "[\n            Subscription(200, 250)\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ReduceWithSeedAndResult_Throw",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 218, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 219, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 221, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .error(210, testError),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 226, Column: 9",
+            "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { $0 * 5 }) }"
+          },
+          {
+            "A_name" : "correctMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 228, Column: 9",
+            "H_initialValue" : "[\n            Recorded.error(210, testError, Int.self)\n        ]"
+          },
+          {
+            "A_name" : "correctSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 232, Column: 9",
+            "H_initialValue" : "[\n            Subscription(200, 210)\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ReduceWithSeedAndResult_Never",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 240, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 241, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 243, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 247, Column: 9",
+            "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { $0 * 5 }) }"
+          },
+          {
+            "A_name" : "correctMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 249, Column: 9",
+            "H_initialValue" : "[\n        ]"
+          },
+          {
+            "A_name" : "correctSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 252, Column: 9",
+            "H_initialValue" : "[\n            Subscription(200, 1000)\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ReduceWithSeedAndResult_Range",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 260, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 261, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 263, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 273, Column: 9",
+            "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { $0 * 5 }) }"
+          },
+          {
+            "A_name" : "correctMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 275, Column: 9",
+            "H_initialValue" : "Recorded.events(\n            .next(260, (42 + 0 + 1 + 2 + 3 + 4) * 5),\n            .completed(260)\n        )"
+          },
+          {
+            "A_name" : "correctSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 280, Column: 9",
+            "H_initialValue" : "[\n            Subscription(200, 260)\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ReduceWithSeedAndResult_AccumulatorThrows",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 288, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 289, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 291, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 301, Column: 9",
+            "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: { a, x in if x < 3 { return a + x } else { throw testError } }, mapResult: { $0 * 5 }) }"
+          },
+          {
+            "A_name" : "correctMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 303, Column: 9",
+            "H_initialValue" : "[\n            Recorded.error(240, testError, Int.self)\n        ]"
+          },
+          {
+            "A_name" : "correctSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 307, Column: 9",
+            "H_initialValue" : "[\n            Subscription(200, 240)\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "test_ReduceWithSeedAndResult_SelectorThrows",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 315, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 316, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 318, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 328, Column: 9",
+            "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { (_: Int) throws -> Int in throw testError }) }"
+          },
+          {
+            "A_name" : "correctMessages",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 330, Column: 9",
+            "H_initialValue" : "[\n            Recorded.error(260, testError, Int.self)\n        ]"
+          },
+          {
+            "A_name" : "correctSubscriptions",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+ReduceTests.swift - Line: 334, Column: 9",
+            "H_initialValue" : "[\n            Subscription(200, 260)\n        ]"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "test_ReduceWithSeed_Empty",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 17, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 18, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 20, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .completed(250)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 26, Column: 9",
+        "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+      },
+      {
+        "A_name" : "correctMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 28, Column: 9",
+        "H_initialValue" : "Recorded.events(\n            .next(250, 42),\n            .completed(250)\n        )"
+      },
+      {
+        "A_name" : "correctSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 33, Column: 9",
+        "H_initialValue" : "[\n            Subscription(200, 250)\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 18, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 20, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .completed(250)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 26, Column: 9",
+    "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+  },
+  {
+    "A_name" : "correctMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 28, Column: 9",
+    "H_initialValue" : "Recorded.events(\n            .next(250, 42),\n            .completed(250)\n        )"
+  },
+  {
+    "A_name" : "correctSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 33, Column: 9",
+    "H_initialValue" : "[\n            Subscription(200, 250)\n        ]"
+  },
+  {
+    "A_name" : "test_ReduceWithSeed_Return",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 41, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 42, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 44, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 24),\n            .completed(250)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 50, Column: 9",
+        "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+      },
+      {
+        "A_name" : "correctMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 52, Column: 9",
+        "H_initialValue" : "Recorded.events(\n            .next(250, 42 + 24),\n            .completed(250)\n        )"
+      },
+      {
+        "A_name" : "correctSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 57, Column: 9",
+        "H_initialValue" : "[\n            Subscription(200, 250)\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 42, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 44, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 24),\n            .completed(250)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 50, Column: 9",
+    "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+  },
+  {
+    "A_name" : "correctMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 52, Column: 9",
+    "H_initialValue" : "Recorded.events(\n            .next(250, 42 + 24),\n            .completed(250)\n        )"
+  },
+  {
+    "A_name" : "correctSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 57, Column: 9",
+    "H_initialValue" : "[\n            Subscription(200, 250)\n        ]"
+  },
+  {
+    "A_name" : "test_ReduceWithSeed_Throw",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 65, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 66, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 68, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .error(210, testError),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 73, Column: 9",
+        "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+      },
+      {
+        "A_name" : "correctMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 75, Column: 9",
+        "H_initialValue" : "[\n            Recorded.error(210, testError, Int.self)\n        ]"
+      },
+      {
+        "A_name" : "correctSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 79, Column: 9",
+        "H_initialValue" : "[\n            Subscription(200, 210)\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 66, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 68, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .error(210, testError),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 73, Column: 9",
+    "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+  },
+  {
+    "A_name" : "correctMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 75, Column: 9",
+    "H_initialValue" : "[\n            Recorded.error(210, testError, Int.self)\n        ]"
+  },
+  {
+    "A_name" : "correctSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 79, Column: 9",
+    "H_initialValue" : "[\n            Subscription(200, 210)\n        ]"
+  },
+  {
+    "A_name" : "test_ReduceWithSeed_Never",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 87, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 88, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 90, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 94, Column: 9",
+        "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+      },
+      {
+        "A_name" : "correctMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 96, Column: 9",
+        "H_initialValue" : "[\n        ]"
+      },
+      {
+        "A_name" : "correctSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 99, Column: 9",
+        "H_initialValue" : "[\n            Subscription(200, 1000)\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 88, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 90, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 94, Column: 9",
+    "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+  },
+  {
+    "A_name" : "correctMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 96, Column: 9",
+    "H_initialValue" : "[\n        ]"
+  },
+  {
+    "A_name" : "correctSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 99, Column: 9",
+    "H_initialValue" : "[\n            Subscription(200, 1000)\n        ]"
+  },
+  {
+    "A_name" : "test_ReduceWithSeed_Range",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 107, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 108, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 110, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 120, Column: 9",
+        "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+      },
+      {
+        "A_name" : "correctMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 122, Column: 9",
+        "H_initialValue" : "Recorded.events(\n            .next(260, 42 + 0 + 1 + 2 + 3 + 4),\n            .completed(260)\n        )"
+      },
+      {
+        "A_name" : "correctSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 127, Column: 9",
+        "H_initialValue" : "[\n            Subscription(200, 260)\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 108, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 110, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 120, Column: 9",
+    "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) }"
+  },
+  {
+    "A_name" : "correctMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 122, Column: 9",
+    "H_initialValue" : "Recorded.events(\n            .next(260, 42 + 0 + 1 + 2 + 3 + 4),\n            .completed(260)\n        )"
+  },
+  {
+    "A_name" : "correctSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 127, Column: 9",
+    "H_initialValue" : "[\n            Subscription(200, 260)\n        ]"
+  },
+  {
+    "A_name" : "test_ReduceWithSeed_AccumulatorThrows",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 135, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 136, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 138, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 148, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.reduce(42) { (a: Int, x: Int) throws -> Int in\n                if x < 3 {\n                    return a + x\n                }\n                else {\n                    throw testError\n                }\n            }\n        }"
+      },
+      {
+        "A_name" : "correctMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 159, Column: 9",
+        "H_initialValue" : "[\n            Recorded.error(240, testError, Int.self)\n        ]"
+      },
+      {
+        "A_name" : "correctSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 163, Column: 9",
+        "H_initialValue" : "[\n            Subscription(200, 240)\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 136, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 138, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 148, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.reduce(42) { (a: Int, x: Int) throws -> Int in\n                if x < 3 {\n                    return a + x\n                }\n                else {\n                    throw testError\n                }\n            }\n        }"
+  },
+  {
+    "A_name" : "correctMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 159, Column: 9",
+    "H_initialValue" : "[\n            Recorded.error(240, testError, Int.self)\n        ]"
+  },
+  {
+    "A_name" : "correctSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 163, Column: 9",
+    "H_initialValue" : "[\n            Subscription(200, 240)\n        ]"
+  },
+  {
+    "A_name" : "test_ReduceWithSeedAndResult_Empty",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 171, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 172, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 174, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .completed(250)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 179, Column: 9",
+        "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) { $0 * 5 } }"
+      },
+      {
+        "A_name" : "correctMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 181, Column: 9",
+        "H_initialValue" : "Recorded.events(\n            .next(250, 42 * 5),\n            .completed(250)\n        )"
+      },
+      {
+        "A_name" : "correctSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 186, Column: 9",
+        "H_initialValue" : "[\n            Subscription(200, 250)\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 172, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 174, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .completed(250)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 179, Column: 9",
+    "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +) { $0 * 5 } }"
+  },
+  {
+    "A_name" : "correctMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 181, Column: 9",
+    "H_initialValue" : "Recorded.events(\n            .next(250, 42 * 5),\n            .completed(250)\n        )"
+  },
+  {
+    "A_name" : "correctSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 186, Column: 9",
+    "H_initialValue" : "[\n            Subscription(200, 250)\n        ]"
+  },
+  {
+    "A_name" : "test_ReduceWithSeedAndResult_Return",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 194, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 195, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 197, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 24),\n            .completed(250)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 203, Column: 9",
+        "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { $0 * 5 }) }"
+      },
+      {
+        "A_name" : "correctMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 205, Column: 9",
+        "H_initialValue" : "Recorded.events(\n            .next(250, (42 + 24) * 5),\n            .completed(250)\n        )"
+      },
+      {
+        "A_name" : "correctSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 210, Column: 9",
+        "H_initialValue" : "[\n            Subscription(200, 250)\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 195, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 197, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 24),\n            .completed(250)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 203, Column: 9",
+    "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { $0 * 5 }) }"
+  },
+  {
+    "A_name" : "correctMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 205, Column: 9",
+    "H_initialValue" : "Recorded.events(\n            .next(250, (42 + 24) * 5),\n            .completed(250)\n        )"
+  },
+  {
+    "A_name" : "correctSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 210, Column: 9",
+    "H_initialValue" : "[\n            Subscription(200, 250)\n        ]"
+  },
+  {
+    "A_name" : "test_ReduceWithSeedAndResult_Throw",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 218, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 219, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 221, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .error(210, testError),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 226, Column: 9",
+        "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { $0 * 5 }) }"
+      },
+      {
+        "A_name" : "correctMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 228, Column: 9",
+        "H_initialValue" : "[\n            Recorded.error(210, testError, Int.self)\n        ]"
+      },
+      {
+        "A_name" : "correctSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 232, Column: 9",
+        "H_initialValue" : "[\n            Subscription(200, 210)\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 219, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 221, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .error(210, testError),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 226, Column: 9",
+    "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { $0 * 5 }) }"
+  },
+  {
+    "A_name" : "correctMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 228, Column: 9",
+    "H_initialValue" : "[\n            Recorded.error(210, testError, Int.self)\n        ]"
+  },
+  {
+    "A_name" : "correctSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 232, Column: 9",
+    "H_initialValue" : "[\n            Subscription(200, 210)\n        ]"
+  },
+  {
+    "A_name" : "test_ReduceWithSeedAndResult_Never",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 240, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 241, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 243, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 247, Column: 9",
+        "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { $0 * 5 }) }"
+      },
+      {
+        "A_name" : "correctMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 249, Column: 9",
+        "H_initialValue" : "[\n        ]"
+      },
+      {
+        "A_name" : "correctSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 252, Column: 9",
+        "H_initialValue" : "[\n            Subscription(200, 1000)\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 241, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 243, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 247, Column: 9",
+    "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { $0 * 5 }) }"
+  },
+  {
+    "A_name" : "correctMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 249, Column: 9",
+    "H_initialValue" : "[\n        ]"
+  },
+  {
+    "A_name" : "correctSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 252, Column: 9",
+    "H_initialValue" : "[\n            Subscription(200, 1000)\n        ]"
+  },
+  {
+    "A_name" : "test_ReduceWithSeedAndResult_Range",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 260, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 261, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 263, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 273, Column: 9",
+        "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { $0 * 5 }) }"
+      },
+      {
+        "A_name" : "correctMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 275, Column: 9",
+        "H_initialValue" : "Recorded.events(\n            .next(260, (42 + 0 + 1 + 2 + 3 + 4) * 5),\n            .completed(260)\n        )"
+      },
+      {
+        "A_name" : "correctSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 280, Column: 9",
+        "H_initialValue" : "[\n            Subscription(200, 260)\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 261, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 263, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 273, Column: 9",
+    "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { $0 * 5 }) }"
+  },
+  {
+    "A_name" : "correctMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 275, Column: 9",
+    "H_initialValue" : "Recorded.events(\n            .next(260, (42 + 0 + 1 + 2 + 3 + 4) * 5),\n            .completed(260)\n        )"
+  },
+  {
+    "A_name" : "correctSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 280, Column: 9",
+    "H_initialValue" : "[\n            Subscription(200, 260)\n        ]"
+  },
+  {
+    "A_name" : "test_ReduceWithSeedAndResult_AccumulatorThrows",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 288, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 289, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 291, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 301, Column: 9",
+        "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: { a, x in if x < 3 { return a + x } else { throw testError } }, mapResult: { $0 * 5 }) }"
+      },
+      {
+        "A_name" : "correctMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 303, Column: 9",
+        "H_initialValue" : "[\n            Recorded.error(240, testError, Int.self)\n        ]"
+      },
+      {
+        "A_name" : "correctSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 307, Column: 9",
+        "H_initialValue" : "[\n            Subscription(200, 240)\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 289, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 291, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 301, Column: 9",
+    "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: { a, x in if x < 3 { return a + x } else { throw testError } }, mapResult: { $0 * 5 }) }"
+  },
+  {
+    "A_name" : "correctMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 303, Column: 9",
+    "H_initialValue" : "[\n            Recorded.error(240, testError, Int.self)\n        ]"
+  },
+  {
+    "A_name" : "correctSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 307, Column: 9",
+    "H_initialValue" : "[\n            Subscription(200, 240)\n        ]"
+  },
+  {
+    "A_name" : "test_ReduceWithSeedAndResult_SelectorThrows",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 315, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 316, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 318, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 328, Column: 9",
+        "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { (_: Int) throws -> Int in throw testError }) }"
+      },
+      {
+        "A_name" : "correctMessages",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 330, Column: 9",
+        "H_initialValue" : "[\n            Recorded.error(260, testError, Int.self)\n        ]"
+      },
+      {
+        "A_name" : "correctSubscriptions",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+ReduceTests.swift - Line: 334, Column: 9",
+        "H_initialValue" : "[\n            Subscription(200, 260)\n        ]"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 316, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 318, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(150, 1),\n            .next(210, 0),\n            .next(220, 1),\n            .next(230, 2),\n            .next(240, 3),\n            .next(250, 4),\n            .completed(260)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 328, Column: 9",
+    "H_initialValue" : "scheduler.start { xs.reduce(42, accumulator: +, mapResult: { (_: Int) throws -> Int in throw testError }) }"
+  },
+  {
+    "A_name" : "correctMessages",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 330, Column: 9",
+    "H_initialValue" : "[\n            Recorded.error(260, testError, Int.self)\n        ]"
+  },
+  {
+    "A_name" : "correctSubscriptions",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 334, Column: 9",
+    "H_initialValue" : "[\n            Subscription(200, 260)\n        ]"
+  },
+  {
+    "A_name" : "testReduceReleasesResourcesOnComplete",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 343, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "testReduceReleasesResourcesOnError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+ReduceTests.swift - Line: 347, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "A_name" : "NotificationViewController",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "BaseUIViewController<NotificationViewModel>"
+    ],
+    "F_location" : "NotificationViewController.swift - Line: 11, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "feedNotificationVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "NotificationViewController.swift - Line: 15, Column: 5",
+        "H_initialValue" : "{\n        guard let viewModel = self.viewModel else {\n            fatalError(\"NotificationViewModel is not initialized\")\n        }\n        return NotificationListViewController(viewModel: viewModel, diContainer: self.diContainer, type: .feed(\"\"))\n    }()"
+      },
+      {
+        "A_name" : "noticeNotificationVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "NotificationViewController.swift - Line: 22, Column: 5",
+        "H_initialValue" : "{\n        guard let viewModel = self.viewModel else {\n            fatalError(\"NotificationViewModel is not initialized\")\n        }\n        return NotificationListViewController(viewModel: viewModel, diContainer: self.diContainer, type: .notice(\"\"))\n    }()"
+      },
+      {
+        "A_name" : "segmentedControl",
+        "B_kind" : "variable",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+          "lazy"
+        ],
+        "F_location" : "NotificationViewController.swift - Line: 29, Column: 5",
+        "H_initialValue" : "SegmentedControl(\n        viewControllers: [feedNotificationVC, noticeNotificationVC],\n        titles: [\"피드\", \"공지사항\"],\n        parentViewController: self\n    )"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "NotificationViewController.swift - Line: 37, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "NotificationViewModel",
+          "ViewControllerFactory"
+        ],
+        "I_parameters" : [
+          "viewModel",
+          "diContainer"
+        ]
+      },
+      {
+        "A_name" : "viewDidLoad",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "NotificationViewController.swift - Line: 43, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "viewWillAppear",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "NotificationViewController.swift - Line: 49, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Bool"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "setUI",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "NotificationViewController.swift - Line: 56, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "setLayout",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "NotificationViewController.swift - Line: 60, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "navigationType",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "NotificationViewController.swift - Line: 69, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ],
+        "J_returnType" : "-> NavigationType?"
+      },
+      {
+        "A_name" : "backButtonTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "override"
+        ],
+        "F_location" : "NotificationViewController.swift - Line: 73, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "menuButtonTapped",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "objc",
+          "override"
+        ],
+        "F_location" : "NotificationViewController.swift - Line: 77, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "settingVC",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "NotificationViewController.swift - Line: 78, Column: 9",
+            "H_initialValue" : "diContainer.makeNotificationSettingViewController()"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "feedNotificationVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "NotificationViewController.swift - Line: 15, Column: 5",
+    "H_initialValue" : "{\n        guard let viewModel = self.viewModel else {\n            fatalError(\"NotificationViewModel is not initialized\")\n        }\n        return NotificationListViewController(viewModel: viewModel, diContainer: self.diContainer, type: .feed(\"\"))\n    }()"
+  },
+  {
+    "A_name" : "noticeNotificationVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "NotificationViewController.swift - Line: 22, Column: 5",
+    "H_initialValue" : "{\n        guard let viewModel = self.viewModel else {\n            fatalError(\"NotificationViewModel is not initialized\")\n        }\n        return NotificationListViewController(viewModel: viewModel, diContainer: self.diContainer, type: .notice(\"\"))\n    }()"
+  },
+  {
+    "A_name" : "segmentedControl",
+    "B_kind" : "variable",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+      "lazy"
+    ],
+    "F_location" : "NotificationViewController.swift - Line: 29, Column: 5",
+    "H_initialValue" : "SegmentedControl(\n        viewControllers: [feedNotificationVC, noticeNotificationVC],\n        titles: [\"피드\", \"공지사항\"],\n        parentViewController: self\n    )"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "NotificationViewController.swift - Line: 37, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "NotificationViewModel",
+      "ViewControllerFactory"
+    ],
+    "I_parameters" : [
+      "viewModel",
+      "diContainer"
+    ]
+  },
+  {
+    "A_name" : "viewDidLoad",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "NotificationViewController.swift - Line: 43, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "viewWillAppear",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "NotificationViewController.swift - Line: 49, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Bool"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "setUI",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "NotificationViewController.swift - Line: 56, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "setLayout",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "NotificationViewController.swift - Line: 60, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "navigationType",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "NotificationViewController.swift - Line: 69, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ],
+    "J_returnType" : "-> NavigationType?"
+  },
+  {
+    "A_name" : "backButtonTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "override"
+    ],
+    "F_location" : "NotificationViewController.swift - Line: 73, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "menuButtonTapped",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "objc",
+      "override"
+    ],
+    "F_location" : "NotificationViewController.swift - Line: 77, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "settingVC",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "NotificationViewController.swift - Line: 78, Column: 9",
+        "H_initialValue" : "diContainer.makeNotificationSettingViewController()"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "settingVC",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "NotificationViewController.swift - Line: 78, Column: 9",
+    "H_initialValue" : "diContainer.makeNotificationSettingViewController()"
+  }
+]

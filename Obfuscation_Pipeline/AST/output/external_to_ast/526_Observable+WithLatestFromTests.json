@@ -1,0 +1,1411 @@
+[
+  {
+    "A_name" : "ObservableWithLatestFromTest",
+    "B_kind" : "class",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "RxTest"
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 13, Column: 1",
+    "G_members" : [
+
+    ]
+  },
+  {
+    "A_name" : "ObservableWithLatestFromTest",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 16, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "testWithLatestFrom_Simple1",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 18, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 19, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 21, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .next(410, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .next(550, 10),\n            .completed(590)\n        ])"
+          },
+          {
+            "A_name" : "ys",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 35, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .completed(400)\n        ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 42, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWithLatestFrom_TwoObservablesWithImmediateValues",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 66, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 67, Column: 9",
+            "H_initialValue" : "BehaviorSubject<Int>(value: 3)"
+          },
+          {
+            "A_name" : "ys",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 68, Column: 9",
+            "H_initialValue" : "BehaviorSubject<Int>(value: 5)"
+          },
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 70, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 73, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n                .take(1)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWithLatestFrom_Simple2",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 84, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 85, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 87, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .completed(390)\n        ])"
+          },
+          {
+            "A_name" : "ys",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 97, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .next(370, \"baz\"),\n            .completed(400)\n        ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 105, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWithLatestFrom_Simple3",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 125, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 126, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 128, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .completed(390)\n        ])"
+          },
+          {
+            "A_name" : "ys",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 138, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(245, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .next(370, \"baz\"),\n            .completed(400)\n        ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 146, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWithLatestFrom_Error1",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 167, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 168, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 170, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .next(410, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .next(550, 10),\n            .error(590, testError)\n        ])"
+          },
+          {
+            "A_name" : "ys",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 184, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .completed(400)\n        ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 191, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWithLatestFrom_Error2",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 215, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 216, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 218, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .completed(390)\n        ])"
+          },
+          {
+            "A_name" : "ys",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 228, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .error(370, testError)\n        ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 235, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWithLatestFrom_Error3",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 255, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 256, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 258, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .completed(390)\n        ])"
+          },
+          {
+            "A_name" : "ys",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 268, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .completed(400)\n        ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 275, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y throws -> String in\n                if x == 5 {\n                    throw testError\n                }\n                return \"\\(x)\\(y)\"\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "testWithLatestFrom_MakeSureDefaultOverloadTakesSecondSequenceValues",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 298, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "scheduler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 299, Column: 9",
+            "H_initialValue" : "TestScheduler(initialClock: 0)"
+          },
+          {
+            "A_name" : "xs",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 301, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .next(410, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .next(550, 10),\n            .completed(590)\n            ])"
+          },
+          {
+            "A_name" : "ys",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 315, Column: 9",
+            "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .completed(400)\n            ])"
+          },
+          {
+            "A_name" : "res",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "Observable+WithLatestFromTests.swift - Line: 322, Column: 9",
+            "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "testWithLatestFrom_Simple1",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 18, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 19, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 21, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .next(410, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .next(550, 10),\n            .completed(590)\n        ])"
+      },
+      {
+        "A_name" : "ys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 35, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .completed(400)\n        ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 42, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 19, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 21, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .next(410, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .next(550, 10),\n            .completed(590)\n        ])"
+  },
+  {
+    "A_name" : "ys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 35, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .completed(400)\n        ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 42, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+  },
+  {
+    "A_name" : "testWithLatestFrom_TwoObservablesWithImmediateValues",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 66, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 67, Column: 9",
+        "H_initialValue" : "BehaviorSubject<Int>(value: 3)"
+      },
+      {
+        "A_name" : "ys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 68, Column: 9",
+        "H_initialValue" : "BehaviorSubject<Int>(value: 5)"
+      },
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 70, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 73, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n                .take(1)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 67, Column: 9",
+    "H_initialValue" : "BehaviorSubject<Int>(value: 3)"
+  },
+  {
+    "A_name" : "ys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 68, Column: 9",
+    "H_initialValue" : "BehaviorSubject<Int>(value: 5)"
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 70, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 73, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n                .take(1)\n        }"
+  },
+  {
+    "A_name" : "testWithLatestFrom_Simple2",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 84, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 85, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 87, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .completed(390)\n        ])"
+      },
+      {
+        "A_name" : "ys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 97, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .next(370, \"baz\"),\n            .completed(400)\n        ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 105, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 85, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 87, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .completed(390)\n        ])"
+  },
+  {
+    "A_name" : "ys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 97, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .next(370, \"baz\"),\n            .completed(400)\n        ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 105, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+  },
+  {
+    "A_name" : "testWithLatestFrom_Simple3",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 125, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 126, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 128, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .completed(390)\n        ])"
+      },
+      {
+        "A_name" : "ys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 138, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(245, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .next(370, \"baz\"),\n            .completed(400)\n        ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 146, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 126, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 128, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .completed(390)\n        ])"
+  },
+  {
+    "A_name" : "ys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 138, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(245, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .next(370, \"baz\"),\n            .completed(400)\n        ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 146, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+  },
+  {
+    "A_name" : "testWithLatestFrom_Error1",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 167, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 168, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 170, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .next(410, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .next(550, 10),\n            .error(590, testError)\n        ])"
+      },
+      {
+        "A_name" : "ys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 184, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .completed(400)\n        ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 191, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 168, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 170, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .next(410, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .next(550, 10),\n            .error(590, testError)\n        ])"
+  },
+  {
+    "A_name" : "ys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 184, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .completed(400)\n        ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 191, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+  },
+  {
+    "A_name" : "testWithLatestFrom_Error2",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 215, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 216, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 218, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .completed(390)\n        ])"
+      },
+      {
+        "A_name" : "ys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 228, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .error(370, testError)\n        ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 235, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 216, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 218, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .completed(390)\n        ])"
+  },
+  {
+    "A_name" : "ys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 228, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .error(370, testError)\n        ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 235, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y in \"\\(x)\\(y)\" }\n        }"
+  },
+  {
+    "A_name" : "testWithLatestFrom_Error3",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 255, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 256, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 258, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .completed(390)\n        ])"
+      },
+      {
+        "A_name" : "ys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 268, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .completed(400)\n        ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 275, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y throws -> String in\n                if x == 5 {\n                    throw testError\n                }\n                return \"\\(x)\\(y)\"\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 256, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 258, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .completed(390)\n        ])"
+  },
+  {
+    "A_name" : "ys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 268, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .completed(400)\n        ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 275, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys) { x, y throws -> String in\n                if x == 5 {\n                    throw testError\n                }\n                return \"\\(x)\\(y)\"\n            }\n        }"
+  },
+  {
+    "A_name" : "testWithLatestFrom_MakeSureDefaultOverloadTakesSecondSequenceValues",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 298, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 299, Column: 9",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      },
+      {
+        "A_name" : "xs",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 301, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .next(410, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .next(550, 10),\n            .completed(590)\n            ])"
+      },
+      {
+        "A_name" : "ys",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 315, Column: 9",
+        "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .completed(400)\n            ])"
+      },
+      {
+        "A_name" : "res",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 322, Column: 9",
+        "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 299, Column: 9",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "xs",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 301, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(90, 1),\n            .next(180, 2),\n            .next(250, 3),\n            .next(260, 4),\n            .next(310, 5),\n            .next(340, 6),\n            .next(410, 7),\n            .next(420, 8),\n            .next(470, 9),\n            .next(550, 10),\n            .completed(590)\n            ])"
+  },
+  {
+    "A_name" : "ys",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 315, Column: 9",
+    "H_initialValue" : "scheduler.createHotObservable([\n            .next(255, \"bar\"),\n            .next(330, \"foo\"),\n            .next(350, \"qux\"),\n            .completed(400)\n            ])"
+  },
+  {
+    "A_name" : "res",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 322, Column: 9",
+    "H_initialValue" : "scheduler.start {\n            xs.withLatestFrom(ys)\n        }"
+  },
+  {
+    "A_name" : "testWithLatestFromReleasesResourcesOnComplete1",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 347, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 348, Column: 13",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 348, Column: 13",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "testWithLatestFromReleasesResourcesOnComplete2",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 353, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 354, Column: 13",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 354, Column: 13",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "testWithLatestFromReleasesResourcesOnError1",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 359, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 360, Column: 13",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 360, Column: 13",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  },
+  {
+    "A_name" : "testWithLatestFromReleasesResourcesOnError2",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 365, Column: 9",
+    "G_members" : [
+      {
+        "A_name" : "scheduler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "Observable+WithLatestFromTests.swift - Line: 366, Column: 13",
+        "H_initialValue" : "TestScheduler(initialClock: 0)"
+      }
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "scheduler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "Observable+WithLatestFromTests.swift - Line: 366, Column: 13",
+    "H_initialValue" : "TestScheduler(initialClock: 0)"
+  }
+]

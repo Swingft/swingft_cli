@@ -1,0 +1,2337 @@
+[
+  {
+    "A_name" : "DataStreamRequest",
+    "B_kind" : "class",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "final"
+    ],
+    "E_adoptedClassProtocols" : [
+      "Request",
+      "@unchecked Sendable"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 28, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "Stream",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 34, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "event",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 36, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "token",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 38, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "cancel",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 41, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "Event",
+        "B_kind" : "enum",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 48, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "stream",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 51, Column: 14",
+            "I_parameterType" : [
+              "Result<Success, Failure>"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "complete",
+            "B_kind" : "case",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 54, Column: 14",
+            "I_parameterType" : [
+              "Completion"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "Completion",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 58, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 60, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "response",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 62, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "metrics",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 64, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "error",
+            "B_kind" : "variable",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 66, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "CancellationToken",
+        "B_kind" : "struct",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+          "Sendable"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 70, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "request",
+            "B_kind" : "variable",
+            "C_accessLevel" : "weak",
+            "D_attributes" : [
+              "weak"
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 71, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "init",
+            "B_kind" : "function",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 73, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+              "DataStreamRequest"
+            ],
+            "I_parameters" : [
+              "_"
+            ]
+          },
+          {
+            "A_name" : "cancel",
+            "B_kind" : "function",
+            "C_accessLevel" : "public",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 78, Column: 9",
+            "G_members" : [
+
+            ],
+            "I_parameterType" : [
+
+            ],
+            "I_parameters" : [
+
+            ]
+          }
+        ]
+      },
+      {
+        "A_name" : "convertible",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 84, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "automaticallyCancelOnStreamError",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 86, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "StreamMutableState",
+        "B_kind" : "struct",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "E_adoptedClassProtocols" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 89, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "outputStream",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 91, Column: 9",
+            "H_initialValue" : ""
+          },
+          {
+            "A_name" : "streams",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 93, Column: 9",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "numberOfExecutingStreams",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 96, Column: 9",
+            "H_initialValue" : "0"
+          },
+          {
+            "A_name" : "enqueuedCompletionEvents",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 98, Column: 9",
+            "H_initialValue" : "[]"
+          },
+          {
+            "A_name" : "httpResponseHandler",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 100, Column: 9",
+            "H_initialValue" : ""
+          }
+        ]
+      },
+      {
+        "A_name" : "streamMutableState",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 105, Column: 5",
+        "H_initialValue" : "Protected(StreamMutableState())"
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 124, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "UUID",
+          "any URLRequestConvertible",
+          "Bool",
+          "DispatchQueue",
+          "DispatchQueue",
+          "(any EventMonitor)?",
+          "(any RequestInterceptor)?",
+          "any RequestDelegate"
+        ],
+        "I_parameters" : [
+          "id",
+          "convertible",
+          "automaticallyCancelOnStreamError",
+          "underlyingQueue",
+          "serializationQueue",
+          "eventMonitor",
+          "interceptor",
+          "delegate"
+        ]
+      },
+      {
+        "A_name" : "task",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 143, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "copiedRequest",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 144, Column: 9",
+            "H_initialValue" : "request"
+          }
+        ],
+        "I_parameterType" : [
+          "URLRequest",
+          "URLSession"
+        ],
+        "I_parameters" : [
+          "for",
+          "using"
+        ],
+        "J_returnType" : "-> URLSessionTask"
+      },
+      {
+        "A_name" : "finish",
+        "B_kind" : "function",
+        "C_accessLevel" : "override",
+        "D_attributes" : [
+          "override"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 148, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "AFError?"
+        ],
+        "I_parameters" : [
+          "error"
+        ]
+      },
+      {
+        "A_name" : "didReceive",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 156, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data"
+        ],
+        "I_parameters" : [
+          "data"
+        ]
+      },
+      {
+        "A_name" : "didReceiveResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 171, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "HTTPURLResponse",
+          "@escaping @Sendable (URLSession.ResponseDisposition) -> Void"
+        ],
+        "I_parameters" : [
+          "_",
+          "completionHandler"
+        ]
+      },
+      {
+        "A_name" : "validate",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "discardableResult"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 200, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "validator",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 202, Column: 9",
+            "H_initialValue" : "{ [unowned self] in\n            guard error == nil, let response else { return }\n\n            let result = validation(request, response)\n\n            if case let .failure(error) = result {\n                self.error = error.asAFError(or: .responseValidationFailed(reason: .customValidationFailed(error: error)))\n            }\n\n            eventMonitor?.request(self,\n                                  didValidateRequest: request,\n                                  response: response,\n                                  withResult: result)\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "@escaping Validation"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "onHTTPResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "_disfavoredOverload",
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 256, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping @Sendable (_ response: HTTPURLResponse,\n                                              _ completionHandler: @escaping @Sendable (ResponseDisposition) -> Void) -> Void"
+        ],
+        "I_parameters" : [
+          "on",
+          "perform"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "onHTTPResponse",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 278, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping @Sendable (HTTPURLResponse) -> Void"
+        ],
+        "I_parameters" : [
+          "on",
+          "perform"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "capturingError",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 290, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "() throws -> Void"
+        ],
+        "I_parameters" : [
+          "from"
+        ]
+      },
+      {
+        "A_name" : "appendStreamCompletion",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 299, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping Handler<Success, Failure>"
+        ],
+        "I_parameters" : [
+          "on",
+          "stream"
+        ]
+      },
+      {
+        "A_name" : "enqueueCompletion",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 320, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping Handler<Success, Failure>"
+        ],
+        "I_parameters" : [
+          "on",
+          "stream"
+        ]
+      },
+      {
+        "A_name" : "responseStream",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 344, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "parser",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 347, Column: 9",
+            "H_initialValue" : "{ @Sendable [unowned self] (data: Data) in\n            queue.async {\n                self.capturingError {\n                    try stream(.init(event: .stream(.success(data)), token: .init(self)))\n                }\n\n                self.updateAndCompleteIfPossible()\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping Handler<Data, Never>"
+        ],
+        "I_parameters" : [
+          "on",
+          "stream"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "responseStream",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 371, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "parser",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 376, Column: 9",
+            "H_initialValue" : "{ @Sendable [unowned self] (data: Data) in\n            serializationQueue.async {\n                \/\/ Start work on serialization queue.\n                let result = Result { try serializer.serialize(data) }\n                    .mapError { $0.asAFError(or: .responseSerializationFailed(reason: .customSerializationFailed(error: $0))) }\n                \/\/ End work on serialization queue.\n                self.underlyingQueue.async {\n                    self.eventMonitor?.request(self, didParseStream: result)\n\n                    if result.isFailure, self.automaticallyCancelOnStreamError {\n                        self.cancel()\n                    }\n\n                    queue.async {\n                        self.capturingError {\n                            try stream(.init(event: .stream(result), token: .init(self)))\n                        }\n\n                        self.updateAndCompleteIfPossible()\n                    }\n                }\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "Serializer",
+          "DispatchQueue",
+          "@escaping Handler<Serializer.SerializedObject, AFError>"
+        ],
+        "I_parameters" : [
+          "using",
+          "on",
+          "stream"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "responseStreamString",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 413, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "parser",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 417, Column: 9",
+            "H_initialValue" : "{ @Sendable [unowned self] (data: Data) in\n            serializationQueue.async {\n                \/\/ Start work on serialization queue.\n                let string = String(decoding: data, as: UTF8.self)\n                \/\/ End work on serialization queue.\n                self.underlyingQueue.async {\n                    self.eventMonitor?.request(self, didParseStream: .success(string))\n\n                    queue.async {\n                        self.capturingError {\n                            try stream(.init(event: .stream(.success(string)), token: .init(self)))\n                        }\n\n                        self.updateAndCompleteIfPossible()\n                    }\n                }\n            }\n        }"
+          }
+        ],
+        "I_parameterType" : [
+          "DispatchQueue",
+          "@escaping Handler<String, Never>"
+        ],
+        "I_parameters" : [
+          "on",
+          "stream"
+        ],
+        "J_returnType" : "-> Self"
+      },
+      {
+        "A_name" : "updateAndCompleteIfPossible",
+        "B_kind" : "function",
+        "C_accessLevel" : "private",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 442, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "responseStreamDecodable",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "preconcurrency",
+          "discardableResult"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 464, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T.Type",
+          "DispatchQueue",
+          "any DataDecoder",
+          "any DataPreprocessor",
+          "@escaping Handler<T, AFError>"
+        ],
+        "I_parameters" : [
+          "of",
+          "on",
+          "using",
+          "preprocessor",
+          "stream"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "Stream",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 34, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "event",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 36, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "token",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 38, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 41, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "event",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 36, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "token",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 38, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 41, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "Event",
+    "B_kind" : "enum",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 48, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "stream",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 51, Column: 14",
+        "I_parameterType" : [
+          "Result<Success, Failure>"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "complete",
+        "B_kind" : "case",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 54, Column: 14",
+        "I_parameterType" : [
+          "Completion"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "Completion",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 58, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 60, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "response",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 62, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "metrics",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 64, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 66, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 60, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "response",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 62, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "metrics",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 64, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 66, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "CancellationToken",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 70, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "request",
+        "B_kind" : "variable",
+        "C_accessLevel" : "weak",
+        "D_attributes" : [
+          "weak"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 71, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 73, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "DataStreamRequest"
+        ],
+        "I_parameters" : [
+          "_"
+        ]
+      },
+      {
+        "A_name" : "cancel",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 78, Column: 9",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      }
+    ]
+  },
+  {
+    "A_name" : "request",
+    "B_kind" : "variable",
+    "C_accessLevel" : "weak",
+    "D_attributes" : [
+      "weak"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 71, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 73, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DataStreamRequest"
+    ],
+    "I_parameters" : [
+      "_"
+    ]
+  },
+  {
+    "A_name" : "cancel",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 78, Column: 9",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "convertible",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 84, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "automaticallyCancelOnStreamError",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 86, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "StreamMutableState",
+    "B_kind" : "struct",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 89, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "outputStream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 91, Column: 9",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "streams",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 93, Column: 9",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "numberOfExecutingStreams",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 96, Column: 9",
+        "H_initialValue" : "0"
+      },
+      {
+        "A_name" : "enqueuedCompletionEvents",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 98, Column: 9",
+        "H_initialValue" : "[]"
+      },
+      {
+        "A_name" : "httpResponseHandler",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 100, Column: 9",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "outputStream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 91, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "streams",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 93, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "numberOfExecutingStreams",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 96, Column: 9",
+    "H_initialValue" : "0"
+  },
+  {
+    "A_name" : "enqueuedCompletionEvents",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 98, Column: 9",
+    "H_initialValue" : "[]"
+  },
+  {
+    "A_name" : "httpResponseHandler",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 100, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "streamMutableState",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 105, Column: 5",
+    "H_initialValue" : "Protected(StreamMutableState())"
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 124, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "UUID",
+      "any URLRequestConvertible",
+      "Bool",
+      "DispatchQueue",
+      "DispatchQueue",
+      "(any EventMonitor)?",
+      "(any RequestInterceptor)?",
+      "any RequestDelegate"
+    ],
+    "I_parameters" : [
+      "id",
+      "convertible",
+      "automaticallyCancelOnStreamError",
+      "underlyingQueue",
+      "serializationQueue",
+      "eventMonitor",
+      "interceptor",
+      "delegate"
+    ]
+  },
+  {
+    "A_name" : "task",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 143, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "copiedRequest",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 144, Column: 9",
+        "H_initialValue" : "request"
+      }
+    ],
+    "I_parameterType" : [
+      "URLRequest",
+      "URLSession"
+    ],
+    "I_parameters" : [
+      "for",
+      "using"
+    ],
+    "J_returnType" : "-> URLSessionTask"
+  },
+  {
+    "A_name" : "copiedRequest",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 144, Column: 9",
+    "H_initialValue" : "request"
+  },
+  {
+    "A_name" : "finish",
+    "B_kind" : "function",
+    "C_accessLevel" : "override",
+    "D_attributes" : [
+      "override"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 148, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "AFError?"
+    ],
+    "I_parameters" : [
+      "error"
+    ]
+  },
+  {
+    "A_name" : "didReceive",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 156, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data"
+    ],
+    "I_parameters" : [
+      "data"
+    ]
+  },
+  {
+    "A_name" : "bytes",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 161, Column: 21",
+    "H_initialValue" : "Array(data)"
+  },
+  {
+    "A_name" : "didReceiveResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 171, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "HTTPURLResponse",
+      "@escaping @Sendable (URLSession.ResponseDisposition) -> Void"
+    ],
+    "I_parameters" : [
+      "_",
+      "completionHandler"
+    ]
+  },
+  {
+    "A_name" : "validate",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "discardableResult"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 200, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "validator",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 202, Column: 9",
+        "H_initialValue" : "{ [unowned self] in\n            guard error == nil, let response else { return }\n\n            let result = validation(request, response)\n\n            if case let .failure(error) = result {\n                self.error = error.asAFError(or: .responseValidationFailed(reason: .customValidationFailed(error: error)))\n            }\n\n            eventMonitor?.request(self,\n                                  didValidateRequest: request,\n                                  response: response,\n                                  withResult: result)\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "@escaping Validation"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "validator",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 202, Column: 9",
+    "H_initialValue" : "{ [unowned self] in\n            guard error == nil, let response else { return }\n\n            let result = validation(request, response)\n\n            if case let .failure(error) = result {\n                self.error = error.asAFError(or: .responseValidationFailed(reason: .customValidationFailed(error: error)))\n            }\n\n            eventMonitor?.request(self,\n                                  didValidateRequest: request,\n                                  response: response,\n                                  withResult: result)\n        }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 205, Column: 13",
+    "H_initialValue" : "validation(request, response)"
+  },
+  {
+    "A_name" : "asInputStream",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 232, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "inputStream",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 235, Column: 9",
+        "H_initialValue" : ""
+      }
+    ],
+    "I_parameterType" : [
+      "Int"
+    ],
+    "I_parameters" : [
+      "bufferSize"
+    ],
+    "J_returnType" : "-> InputStream?"
+  },
+  {
+    "A_name" : "inputStream",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 235, Column: 9",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "onHTTPResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "_disfavoredOverload",
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 256, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping @Sendable (_ response: HTTPURLResponse,\n                                              _ completionHandler: @escaping @Sendable (ResponseDisposition) -> Void) -> Void"
+    ],
+    "I_parameters" : [
+      "on",
+      "perform"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "onHTTPResponse",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 278, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping @Sendable (HTTPURLResponse) -> Void"
+    ],
+    "I_parameters" : [
+      "on",
+      "perform"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "capturingError",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 290, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "() throws -> Void"
+    ],
+    "I_parameters" : [
+      "from"
+    ]
+  },
+  {
+    "A_name" : "appendStreamCompletion",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 299, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping Handler<Success, Failure>"
+    ],
+    "I_parameters" : [
+      "on",
+      "stream"
+    ]
+  },
+  {
+    "A_name" : "enqueueCompletion",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 320, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping Handler<Success, Failure>"
+    ],
+    "I_parameters" : [
+      "on",
+      "stream"
+    ]
+  },
+  {
+    "A_name" : "completion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 324, Column: 17",
+    "H_initialValue" : "Completion(request: self.request,\n                                            response: self.response,\n                                            metrics: self.metrics,\n                                            error: self.error)"
+  },
+  {
+    "A_name" : "responseStream",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 344, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "parser",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 347, Column: 9",
+        "H_initialValue" : "{ @Sendable [unowned self] (data: Data) in\n            queue.async {\n                self.capturingError {\n                    try stream(.init(event: .stream(.success(data)), token: .init(self)))\n                }\n\n                self.updateAndCompleteIfPossible()\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping Handler<Data, Never>"
+    ],
+    "I_parameters" : [
+      "on",
+      "stream"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "parser",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 347, Column: 9",
+    "H_initialValue" : "{ @Sendable [unowned self] (data: Data) in\n            queue.async {\n                self.capturingError {\n                    try stream(.init(event: .stream(.success(data)), token: .init(self)))\n                }\n\n                self.updateAndCompleteIfPossible()\n            }\n        }"
+  },
+  {
+    "A_name" : "responseStream",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 371, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "parser",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 376, Column: 9",
+        "H_initialValue" : "{ @Sendable [unowned self] (data: Data) in\n            serializationQueue.async {\n                \/\/ Start work on serialization queue.\n                let result = Result { try serializer.serialize(data) }\n                    .mapError { $0.asAFError(or: .responseSerializationFailed(reason: .customSerializationFailed(error: $0))) }\n                \/\/ End work on serialization queue.\n                self.underlyingQueue.async {\n                    self.eventMonitor?.request(self, didParseStream: result)\n\n                    if result.isFailure, self.automaticallyCancelOnStreamError {\n                        self.cancel()\n                    }\n\n                    queue.async {\n                        self.capturingError {\n                            try stream(.init(event: .stream(result), token: .init(self)))\n                        }\n\n                        self.updateAndCompleteIfPossible()\n                    }\n                }\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "Serializer",
+      "DispatchQueue",
+      "@escaping Handler<Serializer.SerializedObject, AFError>"
+    ],
+    "I_parameters" : [
+      "using",
+      "on",
+      "stream"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "parser",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 376, Column: 9",
+    "H_initialValue" : "{ @Sendable [unowned self] (data: Data) in\n            serializationQueue.async {\n                \/\/ Start work on serialization queue.\n                let result = Result { try serializer.serialize(data) }\n                    .mapError { $0.asAFError(or: .responseSerializationFailed(reason: .customSerializationFailed(error: $0))) }\n                \/\/ End work on serialization queue.\n                self.underlyingQueue.async {\n                    self.eventMonitor?.request(self, didParseStream: result)\n\n                    if result.isFailure, self.automaticallyCancelOnStreamError {\n                        self.cancel()\n                    }\n\n                    queue.async {\n                        self.capturingError {\n                            try stream(.init(event: .stream(result), token: .init(self)))\n                        }\n\n                        self.updateAndCompleteIfPossible()\n                    }\n                }\n            }\n        }"
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 379, Column: 17",
+    "H_initialValue" : "Result { try serializer.serialize(data) }\n                    .mapError { $0.asAFError(or: .responseSerializationFailed(reason: .customSerializationFailed(error: $0))) }"
+  },
+  {
+    "A_name" : "responseStreamString",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 413, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "parser",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 417, Column: 9",
+        "H_initialValue" : "{ @Sendable [unowned self] (data: Data) in\n            serializationQueue.async {\n                \/\/ Start work on serialization queue.\n                let string = String(decoding: data, as: UTF8.self)\n                \/\/ End work on serialization queue.\n                self.underlyingQueue.async {\n                    self.eventMonitor?.request(self, didParseStream: .success(string))\n\n                    queue.async {\n                        self.capturingError {\n                            try stream(.init(event: .stream(.success(string)), token: .init(self)))\n                        }\n\n                        self.updateAndCompleteIfPossible()\n                    }\n                }\n            }\n        }"
+      }
+    ],
+    "I_parameterType" : [
+      "DispatchQueue",
+      "@escaping Handler<String, Never>"
+    ],
+    "I_parameters" : [
+      "on",
+      "stream"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "parser",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 417, Column: 9",
+    "H_initialValue" : "{ @Sendable [unowned self] (data: Data) in\n            serializationQueue.async {\n                \/\/ Start work on serialization queue.\n                let string = String(decoding: data, as: UTF8.self)\n                \/\/ End work on serialization queue.\n                self.underlyingQueue.async {\n                    self.eventMonitor?.request(self, didParseStream: .success(string))\n\n                    queue.async {\n                        self.capturingError {\n                            try stream(.init(event: .stream(.success(string)), token: .init(self)))\n                        }\n\n                        self.updateAndCompleteIfPossible()\n                    }\n                }\n            }\n        }"
+  },
+  {
+    "A_name" : "string",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 420, Column: 17",
+    "H_initialValue" : "String(decoding: data, as: UTF8.self)"
+  },
+  {
+    "A_name" : "updateAndCompleteIfPossible",
+    "B_kind" : "function",
+    "C_accessLevel" : "private",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 442, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "completionEvents",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 448, Column: 13",
+    "H_initialValue" : "state.enqueuedCompletionEvents"
+  },
+  {
+    "A_name" : "responseStreamDecodable",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "preconcurrency",
+      "discardableResult"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 464, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T.Type",
+      "DispatchQueue",
+      "any DataDecoder",
+      "any DataPreprocessor",
+      "@escaping Handler<T, AFError>"
+    ],
+    "I_parameters" : [
+      "of",
+      "on",
+      "using",
+      "preprocessor",
+      "stream"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "DataStreamRequest.Stream",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 477, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "result",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 479, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "value",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 486, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "error",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 493, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "completion",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 500, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "result",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 479, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "value",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 486, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "error",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 493, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "completion",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 500, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "DataStreamSerializer",
+    "B_kind" : "protocol",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "Sendable"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 510, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 519, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> SerializedObject"
+      }
+    ]
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 519, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> SerializedObject"
+  },
+  {
+    "A_name" : "DecodableStreamSerializer",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "DataStreamSerializer"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 523, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "decoder",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 525, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "dataPreprocessor",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 527, Column: 5",
+        "H_initialValue" : ""
+      },
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 534, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "any DataDecoder",
+          "any DataPreprocessor"
+        ],
+        "I_parameters" : [
+          "decoder",
+          "dataPreprocessor"
+        ]
+      },
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 539, Column: 5",
+        "G_members" : [
+          {
+            "A_name" : "processedData",
+            "B_kind" : "variable",
+            "C_accessLevel" : "internal",
+            "D_attributes" : [
+
+            ],
+            "F_location" : "DataStreamRequest.swift - Line: 540, Column: 9",
+            "H_initialValue" : "try dataPreprocessor.preprocess(data)"
+          }
+        ],
+        "I_parameterType" : [
+          "Data"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> T"
+      }
+    ]
+  },
+  {
+    "A_name" : "decoder",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 525, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "dataPreprocessor",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 527, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 534, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "any DataDecoder",
+      "any DataPreprocessor"
+    ],
+    "I_parameters" : [
+      "decoder",
+      "dataPreprocessor"
+    ]
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 539, Column: 5",
+    "G_members" : [
+      {
+        "A_name" : "processedData",
+        "B_kind" : "variable",
+        "C_accessLevel" : "internal",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 540, Column: 9",
+        "H_initialValue" : "try dataPreprocessor.preprocess(data)"
+      }
+    ],
+    "I_parameterType" : [
+      "Data"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> T"
+  },
+  {
+    "A_name" : "processedData",
+    "B_kind" : "variable",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 540, Column: 9",
+    "H_initialValue" : "try dataPreprocessor.preprocess(data)"
+  },
+  {
+    "A_name" : "PassthroughStreamSerializer",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "DataStreamSerializer"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 550, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 552, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 554, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> Data"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 552, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 554, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> Data"
+  },
+  {
+    "A_name" : "StringStreamSerializer",
+    "B_kind" : "struct",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+      "DataStreamSerializer"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 558, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "init",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 560, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+
+        ],
+        "I_parameters" : [
+
+        ]
+      },
+      {
+        "A_name" : "serialize",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 562, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "Data"
+        ],
+        "I_parameters" : [
+          "_"
+        ],
+        "J_returnType" : "-> String"
+      }
+    ]
+  },
+  {
+    "A_name" : "init",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 560, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+
+    ],
+    "I_parameters" : [
+
+    ]
+  },
+  {
+    "A_name" : "serialize",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 562, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "Data"
+    ],
+    "I_parameters" : [
+      "_"
+    ],
+    "J_returnType" : "-> String"
+  },
+  {
+    "A_name" : "DataStreamSerializer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 567, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "decodable",
+        "B_kind" : "function",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 575, Column: 5",
+        "G_members" : [
+
+        ],
+        "I_parameterType" : [
+          "T.Type",
+          "any DataDecoder",
+          "any DataPreprocessor"
+        ],
+        "I_parameters" : [
+          "of",
+          "decoder",
+          "dataPreprocessor"
+        ],
+        "J_returnType" : "-> Self"
+      }
+    ]
+  },
+  {
+    "A_name" : "decodable",
+    "B_kind" : "function",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 575, Column: 5",
+    "G_members" : [
+
+    ],
+    "I_parameterType" : [
+      "T.Type",
+      "any DataDecoder",
+      "any DataPreprocessor"
+    ],
+    "I_parameters" : [
+      "of",
+      "decoder",
+      "dataPreprocessor"
+    ],
+    "J_returnType" : "-> Self"
+  },
+  {
+    "A_name" : "DataStreamSerializer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 582, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "passthrough",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 584, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "passthrough",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 584, Column: 5",
+    "H_initialValue" : ""
+  },
+  {
+    "A_name" : "DataStreamSerializer",
+    "B_kind" : "extension",
+    "C_accessLevel" : "internal",
+    "D_attributes" : [
+
+    ],
+    "E_adoptedClassProtocols" : [
+
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 587, Column: 1",
+    "G_members" : [
+      {
+        "A_name" : "string",
+        "B_kind" : "variable",
+        "C_accessLevel" : "public",
+        "D_attributes" : [
+          "static"
+        ],
+        "F_location" : "DataStreamRequest.swift - Line: 589, Column: 5",
+        "H_initialValue" : ""
+      }
+    ]
+  },
+  {
+    "A_name" : "string",
+    "B_kind" : "variable",
+    "C_accessLevel" : "public",
+    "D_attributes" : [
+      "static"
+    ],
+    "F_location" : "DataStreamRequest.swift - Line: 589, Column: 5",
+    "H_initialValue" : ""
+  }
+]
