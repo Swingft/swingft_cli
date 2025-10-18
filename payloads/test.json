@@ -1,0 +1,4 @@
+{
+    "instruction": "You must output exactly ONE JSON object. No markdown, no code fences, no labels.\nSchema: {\"reasoning\":\"string\",\"identifiers\":[\"string\", ...]}\nTask: In the following Swift code, analyze only the single identifier specified in the AST snippet that follows.\nReturn a JSON object with a brief \"reasoning\" and an \"identifiers\" array that should contain only that identifier if it is related to sensitive logic; otherwise, return an empty array.\nDo not infer or add any other identifiers. Do not echo the input.",
+    "input": "**Swift Source Code:**\n```swift\nstruct UserProfileView: View {\n    var body: some View {\n        Text(\"Welcome!\")\n    }\n}\n```\n\n**AST Symbol Information (JSON):**\n```\n[\n  {\"symbolName\": \"UserProfileView\", \"symbolKind\": \"struct\"}\n]\n```"
+  }

@@ -39,9 +39,11 @@ def stage1_ast_analysis(original_project_dir, obf_project_dir):
     """STAGE 1: AST 분석 및 파일 목록 생성"""
     original_dir = os.getcwd()
     
-    print("=" * 50)
-    print("STAGE 1: AST 분석 및 파일 목록 생성 (AST Analysis)")
-    print("=" * 50)
+    # decorative separators only in verbose mode
+    if os.environ.get("SWINGFT_VERBOSE_STAGE"):
+        print("=" * 50)
+        print("STAGE 1: AST 분석 및 파일 목록 생성 (AST Analysis)")
+        print("=" * 50)
     
     start = time.time()
     
@@ -79,17 +81,19 @@ def stage1_ast_analysis(original_project_dir, obf_project_dir):
     # Rule & LLM 결과 병합
     merge_llm_and_rule()
     
-    print("STAGE 1 완료! (AST 분석)")
-    print("=" * 50)
-    print()
+    if os.environ.get("SWINGFT_VERBOSE_STAGE"):
+        print("STAGE 1 완료! (AST 분석)")
+        print("=" * 50)
+        print()
 
 def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, skip_cfg=False):
     """STAGE 2: 매핑 및 난독화"""
     original_dir = os.getcwd()
     
-    print("=" * 50)
-    print("STAGE 2: 매핑 및 난독화 (Mapping & Obfuscation)")
-    print("=" * 50)
+    if os.environ.get("SWINGFT_VERBOSE_STAGE"):
+        print("=" * 50)
+        print("STAGE 2: 매핑 및 난독화 (Mapping & Obfuscation)")
+        print("=" * 50)
     
     start = time.time()
 
@@ -256,37 +260,48 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
     print("total: ", debug_end - start)
     print((debug_end - start) / 60)
     
-    print("STAGE 2 완료!")
-    print("=" * 50)
-    print()
+    if os.environ.get("SWINGFT_VERBOSE_STAGE"):
+        print("STAGE 2 완료!")
+        print("=" * 50)
+        print()
 
 def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
     """STAGE 3: 정리 및 삭제"""
     
-    print("=" * 50)
-    print("STAGE 3: 정리 및 삭제 (Cleanup)")
-    print("=" * 50)
+    # quiet logger (default: quiet on unless SWINGFT_QUIET=0/false)
+    def _p(*args, **kwargs):
+        try:
+            q = str(os.environ.get("SWINGFT_QUIET", "1")).strip().lower() in {"1", "true", "yes", "y"}
+        except Exception:
+            q = True
+        if not q:
+            print(*args, **kwargs)
+
+    if os.environ.get("SWINGFT_VERBOSE_STAGE"):
+        _p("=" * 50)
+        _p("STAGE 3: 정리 및 삭제 (Cleanup)")
+        _p("=" * 50)
     
     # 기준 루트(Obfuscation_Pipeline 디렉토리)
     script_dir = os.path.dirname(os.path.abspath(__file__))
 
     # AST/output 폴더 정리 (루트 기준)
     ast_output_dir = os.path.join(script_dir, "AST", "output")
-    print(f"AST/output 폴더 경로: {ast_output_dir}")
-    print(f"AST/output 폴더 존재 여부: {os.path.exists(ast_output_dir)}")
+    _p(f"AST/output 폴더 경로: {ast_output_dir}")
+    _p(f"AST/output 폴더 존재 여부: {os.path.exists(ast_output_dir)}")
     
     if os.path.exists(ast_output_dir):
         try:
-            print(f"AST/output 폴더 정리 시작: {ast_output_dir}")
+            _p(f"AST/output 폴더 정리 시작: {ast_output_dir}")
             shutil.rmtree(ast_output_dir)
-            print("AST/output 폴더 정리 완료")
+            _p("AST/output 폴더 정리 완료")
         except Exception as e:
-            print(f"AST/output 폴더 정리 실패: {e}")
+            _p(f"AST/output 폴더 정리 실패: {e}")
     else:
-        print("AST/output 폴더가 존재하지 않습니다")
+        _p("AST/output 폴더가 존재하지 않습니다")
     
     # 파일 삭제
-    print("임시 파일들을 삭제합니다...")
+    _p("임시 파일들을 삭제합니다...")
     remove_files(obf_project_dir, obf_project_dir_cfg)
 
     # String_Encryption 디렉토리의 JSON 파일들 정리 (루트 기준)
@@ -299,9 +314,9 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
         try:
             if os.path.exists(p):
                 os.remove(p)
-                print(f"삭제 완료: {p}")
+                _p(f"삭제 완료: {p}")
         except Exception as e:
-            print(f"삭제 실패: {p} ({e})")
+            _p(f"삭제 실패: {p} ({e})")
 
     # 루트(Obfuscation_Pipeline) 레벨 매핑 산출물 정리
     root_side_artifacts = [
@@ -322,9 +337,9 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
     if os.path.exists(mapping_output_dir):
         try:
             shutil.rmtree(mapping_output_dir)
-            print(f"삭제 완료: {mapping_output_dir}")
+            _p(f"삭제 완료: {mapping_output_dir}")
         except Exception as e:
-            print(f"삭제 실패: {mapping_output_dir} ({e})")
+            _p(f"삭제 실패: {mapping_output_dir} ({e})")
 
     # 혹시 현재 작업 디렉토리(cwd)에 동일 이름의 파일이 있는 경우도 정리 (실행 위치가 달랐던 경우 대응)
     cwd = os.getcwd()
@@ -337,14 +352,14 @@ def stage3_cleanup(obf_project_dir, obf_project_dir_cfg):
         try:
             if os.path.exists(p):
                 os.remove(p)
-                print(f"삭제 완료(cwd): {p}")
+                _p(f"삭제 완료(cwd): {p}")
         except Exception as e:
-            print(f"삭제 실패(cwd): {p} ({e})")
+            _p(f"삭제 실패(cwd): {p} ({e})")
     
-    print("STAGE 3 완료!")
-    print("=" * 50)
-    print("전체 난독화 파이프라인 완료!")
-    print("=" * 50)
+    _p("STAGE 3 완료!")
+    _p("=" * 50)
+    _p("전체 난독화 파이프라인 완료!")
+    _p("=" * 50)
 
 def obf_pipeline(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, skip_cfg=False):
     """전체 난독화 파이프라인 실행"""
@@ -385,22 +400,28 @@ def main():
     if should_copy:
         # output 디렉토리 준비 (없으면 생성)
         if not os.path.exists(obf_project_dir):
-            print(f"새로운 output 디렉토리를 생성합니다: {obf_project_dir}")
+            if not os.environ.get("SWINGFT_VERBOSE_COPY"):
+                pass
+            else:
+                print(f"새로운 output 디렉토리를 생성합니다: {obf_project_dir}")
             os.makedirs(obf_project_dir, exist_ok=True)
         else:
-            print(f"기존 output 디렉토리가 존재합니다: {obf_project_dir}")
+            if os.environ.get("SWINGFT_VERBOSE_COPY"):
+                print(f"기존 output 디렉토리가 존재합니다: {obf_project_dir}")
 
         # 프로젝트 복사 (항상 새로 복사, 기존 파일 위에 덮어쓰기)
-        print(f"프로젝트를 복사합니다: {original_project_dir} -> {obf_project_dir}")
+        if os.environ.get("SWINGFT_VERBOSE_COPY"):
+            print(f"프로젝트를 복사합니다: {original_project_dir} -> {obf_project_dir}")
         shutil.copytree(original_project_dir, obf_project_dir, dirs_exist_ok=True, ignore=ignore_git_and_build)
     else:
-        print("[INFO] Stage 2/3 실행: 원본→출력 복사 건너뜀 (이전 결과 유지)")
+        if os.environ.get("SWINGFT_VERBOSE_COPY"):
+            print("[INFO] Stage 2/3 실행: 원본→출력 복사 건너뜀 (이전 결과 유지)")
 
     if args.stage == 'preprocessing':
-        print("STAGE 1만 실행합니다... (AST 분석)")
+        #print("STAGE 1만 실행합니다... (AST 분석)")
         stage1_ast_analysis(original_project_dir, obf_project_dir)
     elif args.stage == 'final':
-        print("STAGE 2만 실행합니다... (매핑&난독화)")
+        #print("STAGE 2만 실행합니다... (매핑&난독화)")
         stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, skip_cfg)
         # Stage 2 이후에도 정리(Stage 3) 실행되도록 추가
         obf_project_dir_cfg = os.path.join(os.path.dirname(obf_project_dir), "cfg")
