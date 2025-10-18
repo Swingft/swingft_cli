@@ -39,12 +39,22 @@ def find_key_ci(obj, key_name: str) -> Optional[bool]:
     return None
 
 def run_streamed(cmd: List[str], cwd: Optional[Path], tag: str) -> int:
-    proc = subprocess.Popen(cmd, cwd=str(cwd) if cwd else None,
-                            stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                            text=True, bufsize=1)
+    # Ensure Swift tool receives env to redirect stderr→stdout inside process (if supported)
+    env = os.environ.copy()
+    env.setdefault("SWINGFT_ENC_STDERR_TO_STDOUT", "1")
+    proc = subprocess.Popen(
+        cmd,
+        cwd=str(cwd) if cwd else None,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        bufsize=1,
+        env=env,
+    )
     assert proc.stdout is not None
     for line in proc.stdout:
-        print(f"{line.rstrip()}")
+        # Print Swift (and helper) output lines exactly as received
+        print(line, end='', flush=True)
     return proc.wait()
 
 def run_parallel(cmdA: List[str], tagA: str,
@@ -86,9 +96,9 @@ def main():
     
     current_build_path = os.path.abspath(".build")
     if previous_build_path != current_build_path or previous_build_path == "":
-        subprocess.run(["swift", "package", "clean"])
+        subprocess.run(["swift", "package", "clean"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         shutil.rmtree(".build", ignore_errors=True)
-        subprocess.run(["swift", "build"])
+        subprocess.run(["swift", "build"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         with open(build_marker_file, "w") as f:
             f.write(current_build_path)
 
@@ -102,13 +112,13 @@ def main():
     cfg_dir = Path(os.getcwd())
 
     if not cfg.exists():
-        print(f"[Swingft_String_Encryption] ERROR: config not found: {cfg}")
+        #print(f"[Swingft_String_Encryption] ERROR: config not found: {cfg}")
         sys.exit(2)
 
     try:
         cfg_json = read_json(cfg)
     except Exception as e:
-        print(f"[Swingft_String_Encryption] ERROR: cannot parse config: {cfg} ({e})")
+        #print(f"[Swingft_String_Encryption] ERROR: cannot parse config: {cfg} ({e})")
         sys.exit(2)
 
     flag = find_key_ci(cfg_json, "Encryption_strings")
@@ -116,9 +126,12 @@ def main():
         print("[Swingft_String_Encryption] Encryption_strings is false (or missing) → nothing to do.")
         return
 
-    print(f"[Swingft_String_Encryption] Encryption_strings is true")
-
-    cmd_a = ["swift", "run", "Swingft_Encryption", str(root), str(cfg)]
+    # Prefer running the built binary directly to avoid SwiftPM build logs
+    bin_path = Path(current_build_path) / "debug" / "Swingft_Encryption"
+    if bin_path.exists():
+        cmd_a = [str(bin_path), str(root), str(cfg)]
+    else:
+        cmd_a = ["swift", "run", "Swingft_Encryption", str(root), str(cfg)]
 
 
     script_dir = Path(__file__).parent.resolve()
@@ -172,13 +185,13 @@ def main():
         str(cfg),
         str(targets_json),
     ]
-    print("[Swingft_String_Encryption] Running :", " ".join(cmd_c))
+    #print("[Swingft_String_Encryption] Running :", " ".join(cmd_c))
     rcC = run_streamed(cmd_c, cwd=cfg_dir, tag="C")
     if rcC != 0:
         print(f"[Swingft_String_Encryption] ERROR: step failed with code {rcC}")
         sys.exit(5)
 
-    print("[Swingft_String_Encryption] Done.")
+    #print("[Swingft_String_Encryption] Done.")
 
 if __name__ == "__main__":
     main()

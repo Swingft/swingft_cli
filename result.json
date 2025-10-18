@@ -1,0 +1,500 @@
+{
+  "project_root": "/Users/lanian/Desktop/UIKit+SPM_2",
+  "files_searched": 67,
+  "identifiers": {
+    "loadSelectedRestaurantUseCase": {
+      "found": true,
+      "file": "/Users/lanian/Desktop/UIKit+SPM_2/StealPlateSwift/DependencyInjector.swift",
+      "line_number": 17,
+      "context_start_line": 1,
+      "context_end_line": 47,
+      "snippet": "//\n//  DependencyInjector.swift\n//  StealPlateSwift\n//\n//  Created by 스틸리언 on 2022/08/12.\n//\n\nimport Foundation\n\nclass DependencyInjector {\n    // MARK: - ViewModel\n    static func chooseViewModel() -> ChooseViewModel {\n        return ChooseViewModel(loadFeelingUseCase: loadFeelingUseCase(), loadSelectedFeelingsUseCase: loadSelectedFeelingsUseCase(), feelingRepository: feelingRepository())\n    }\n    \n    static func detailViewModel() -> DetailViewModel {\n        return DetailViewModel(loadSelectedRestaurantUseCase: loadSelectedRestaurantUseCase())\n    }\n\n    static func mainViewModel() -> MainViewModel {\n        return MainViewModel(\n            loadRestaurantUseCase: loadRestaurantUseCase(),\n            loadSelectedFeelingsUseCase: loadSelectedFeelingsUseCase(),\n            loadRemoteUrlPresetDataUseCase: loadRemoteUrlPresetDataUseCase())\n    }\n    \n    // MARK: - UseCase\n    static func loadFeelingUseCase() -> LoadFeelingUseCase {\n        return LoadFeelingUseCase(feelingRepository: feelingRepository())\n    }\n    \n    static func loadSelectedRestaurantUseCase() -> LoadSelectedRestaurantUseCase {\n        return LoadSelectedRestaurantUseCase(restaurantRepository: restaurantRepository())\n    }\n    \n    static func loadSelectedFeelingsUseCase() -> LoadSelectedFeelingsUseCase {\n        return LoadSelectedFeelingsUseCase(feelingRepository: feelingRepository())\n    }\n\n    static func loadRestaurantUseCase() -> LoadRestaurantUseCase {\n        return LoadRestaurantUseCase(restaurantRepository: restaurantRepository())\n    }\n    \n    static func loadRemoteUrlPresetDataUseCase() -> LoadRemoteUrlPresetDataUseCase {\n        return LoadRemoteUrlPresetDataUseCase(remoteUrlPresetRepository: remoteUrlPresetRepository())\n    }\n    \n",
+      "ast": [
+        {
+          "symbolKind": "class",
+          "symbolName": "DependencyInjector"
+        },
+        {
+          "symbolKind": "method",
+          "symbolName": "chooseViewModel(() -> ChooseViewModel)",
+          "calls_out": [
+            "ChooseViewModel",
+            "feelingRepository",
+            "loadFeelingUseCase",
+            "loadSelectedFeelingsUseCase"
+          ],
+          "references": [
+            "ChooseViewModel",
+            "feelingRepository",
+            "loadFeelingUseCase",
+            "loadSelectedFeelingsUseCase"
+          ],
+          "typeSignature": "() -> ChooseViewModel"
+        },
+        {
+          "symbolName": "detailViewModel(() -> DetailViewModel)",
+          "calls_out": [
+            "DetailViewModel",
+            "loadSelectedRestaurantUseCase"
+          ],
+          "references": [
+            "DetailViewModel",
+            "loadSelectedRestaurantUseCase"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> DetailViewModel"
+        },
+        {
+          "symbolName": "mainViewModel(() -> MainViewModel)",
+          "calls_out": [
+            "MainViewModel",
+            "loadRemoteUrlPresetDataUseCase",
+            "loadRestaurantUseCase",
+            "loadSelectedFeelingsUseCase"
+          ],
+          "references": [
+            "MainViewModel",
+            "loadRemoteUrlPresetDataUseCase",
+            "loadRestaurantUseCase",
+            "loadSelectedFeelingsUseCase"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> MainViewModel"
+        },
+        {
+          "symbolName": "loadFeelingUseCase(() -> LoadFeelingUseCase)",
+          "calls_out": [
+            "LoadFeelingUseCase",
+            "feelingRepository"
+          ],
+          "references": [
+            "LoadFeelingUseCase",
+            "feelingRepository"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> LoadFeelingUseCase"
+        },
+        {
+          "symbolName": "loadSelectedRestaurantUseCase(() -> LoadSelectedRestaurantUseCase)",
+          "calls_out": [
+            "LoadSelectedRestaurantUseCase",
+            "restaurantRepository"
+          ],
+          "references": [
+            "LoadSelectedRestaurantUseCase",
+            "restaurantRepository"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> LoadSelectedRestaurantUseCase"
+        },
+        {
+          "symbolName": "loadSelectedFeelingsUseCase(() -> LoadSelectedFeelingsUseCase)",
+          "calls_out": [
+            "LoadSelectedFeelingsUseCase",
+            "feelingRepository"
+          ],
+          "references": [
+            "LoadSelectedFeelingsUseCase",
+            "feelingRepository"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> LoadSelectedFeelingsUseCase"
+        },
+        {
+          "symbolName": "loadRestaurantUseCase(() -> LoadRestaurantUseCase)",
+          "calls_out": [
+            "LoadRestaurantUseCase",
+            "restaurantRepository"
+          ],
+          "references": [
+            "LoadRestaurantUseCase",
+            "restaurantRepository"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> LoadRestaurantUseCase"
+        },
+        {
+          "symbolName": "loadRemoteUrlPresetDataUseCase(() -> LoadRemoteUrlPresetDataUseCase)",
+          "calls_out": [
+            "LoadRemoteUrlPresetDataUseCase",
+            "remoteUrlPresetRepository"
+          ],
+          "references": [
+            "LoadRemoteUrlPresetDataUseCase",
+            "remoteUrlPresetRepository"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> LoadRemoteUrlPresetDataUseCase"
+        },
+        {
+          "symbolName": "_feelingRepository",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "feelingRepository(() -> FeelingRepository)",
+          "references": [
+            "_feelingRepository"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> FeelingRepository"
+        },
+        {
+          "symbolName": "_restaurantRepository",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "restaurantRepository(() -> RestaurantRepository)",
+          "references": [
+            "_restaurantRepository"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> RestaurantRepository"
+        },
+        {
+          "symbolName": "_remoteUrlPresetRepository",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "remoteUrlPresetRepository(() -> RemoteUrlPresetRepository)",
+          "references": [
+            "_remoteUrlPresetRepository"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> RemoteUrlPresetRepository"
+        },
+        {
+          "symbolName": "_feelingLocalDataSource",
+          "symbolKind": "variable",
+          "typeSignature": "FeelingLocalDataSource?"
+        },
+        {
+          "symbolName": "feelingLocalDataSource(() -> FeelingLocalDataSource)",
+          "calls_out": [
+            "FeelingLocalDataSource"
+          ],
+          "references": [
+            "FeelingLocalDataSource",
+            "_feelingLocalDataSource"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> FeelingLocalDataSource"
+        },
+        {
+          "symbolName": "_feelingRemoteDataSource",
+          "symbolKind": "variable",
+          "typeSignature": "FeelingRemoteDataSource?"
+        },
+        {
+          "symbolName": "feelingRemoteDataSource(() -> FeelingRemoteDataSource)",
+          "calls_out": [
+            "FeelingRemoteDataSource"
+          ],
+          "references": [
+            "FeelingRemoteDataSource",
+            "_feelingRemoteDataSource"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> FeelingRemoteDataSource"
+        },
+        {
+          "symbolName": "_restaurantLocalDataSource",
+          "symbolKind": "variable",
+          "typeSignature": "RestaurantLocalDataSource?"
+        },
+        {
+          "symbolName": "restaurantLocalDataSource(() -> RestaurantLocalDataSource)",
+          "calls_out": [
+            "RestaurantLocalDataSource"
+          ],
+          "references": [
+            "RestaurantLocalDataSource",
+            "_restaurantLocalDataSource"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> RestaurantLocalDataSource"
+        },
+        {
+          "symbolName": "_restaurantRemoteDataSource",
+          "symbolKind": "variable",
+          "typeSignature": "RestaurantRemoteDataSource?"
+        },
+        {
+          "symbolName": "restaurantRemoteDataSource(() -> RestaurantRemoteDataSource)",
+          "calls_out": [
+            "RestaurantRemoteDataSource"
+          ],
+          "references": [
+            "RestaurantRemoteDataSource",
+            "_restaurantRemoteDataSource"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> RestaurantRemoteDataSource"
+        },
+        {
+          "symbolName": "_remoteUrlPresetLocalDataSource",
+          "symbolKind": "variable",
+          "typeSignature": "RemoteUrlPresetLocalDataSource?"
+        },
+        {
+          "symbolName": "remoteUrlPresetLocalDataSource(() -> RemoteUrlPresetLocalDataSource)",
+          "calls_out": [
+            "RemoteUrlPresetLocalDataSource"
+          ],
+          "references": [
+            "RemoteUrlPresetLocalDataSource",
+            "_remoteUrlPresetLocalDataSource"
+          ],
+          "symbolKind": "method",
+          "typeSignature": "() -> RemoteUrlPresetLocalDataSource"
+        }
+      ]
+    },
+    "detailViewModel": {
+      "found": true,
+      "file": "/Users/lanian/Desktop/UIKit+SPM_2/StealPlateSwift/DependencyInjector.swift",
+      "line_number": 16,
+      "context_start_line": 1,
+      "context_end_line": 46,
+      "snippet": "//\n//  DependencyInjector.swift\n//  StealPlateSwift\n//\n//  Created by 스틸리언 on 2022/08/12.\n//\n\nimport Foundation\n\nclass DependencyInjector {\n    // MARK: - ViewModel\n    static func chooseViewModel() -> ChooseViewModel {\n        return ChooseViewModel(loadFeelingUseCase: loadFeelingUseCase(), loadSelectedFeelingsUseCase: loadSelectedFeelingsUseCase(), feelingRepository: feelingRepository())\n    }\n    \n    static func detailViewModel() -> DetailViewModel {\n        return DetailViewModel(loadSelectedRestaurantUseCase: loadSelectedRestaurantUseCase())\n    }\n\n    static func mainViewModel() -> MainViewModel {\n        return MainViewModel(\n            loadRestaurantUseCase: loadRestaurantUseCase(),\n            loadSelectedFeelingsUseCase: loadSelectedFeelingsUseCase(),\n            loadRemoteUrlPresetDataUseCase: loadRemoteUrlPresetDataUseCase())\n    }\n    \n    // MARK: - UseCase\n    static func loadFeelingUseCase() -> LoadFeelingUseCase {\n        return LoadFeelingUseCase(feelingRepository: feelingRepository())\n    }\n    \n    static func loadSelectedRestaurantUseCase() -> LoadSelectedRestaurantUseCase {\n        return LoadSelectedRestaurantUseCase(restaurantRepository: restaurantRepository())\n    }\n    \n    static func loadSelectedFeelingsUseCase() -> LoadSelectedFeelingsUseCase {\n        return LoadSelectedFeelingsUseCase(feelingRepository: feelingRepository())\n    }\n\n    static func loadRestaurantUseCase() -> LoadRestaurantUseCase {\n        return LoadRestaurantUseCase(restaurantRepository: restaurantRepository())\n    }\n    \n    static func loadRemoteUrlPresetDataUseCase() -> LoadRemoteUrlPresetDataUseCase {\n        return LoadRemoteUrlPresetDataUseCase(remoteUrlPresetRepository: remoteUrlPresetRepository())\n    }\n",
+      "ast": [
+        {
+          "symbolKind": "class",
+          "symbolName": "DependencyInjector"
+        },
+        {
+          "calls_out": [
+            "ChooseViewModel",
+            "feelingRepository",
+            "loadFeelingUseCase",
+            "loadSelectedFeelingsUseCase"
+          ],
+          "symbolKind": "method",
+          "references": [
+            "ChooseViewModel",
+            "feelingRepository",
+            "loadFeelingUseCase",
+            "loadSelectedFeelingsUseCase"
+          ],
+          "symbolName": "chooseViewModel(() -> ChooseViewModel)",
+          "typeSignature": "() -> ChooseViewModel"
+        },
+        {
+          "calls_out": [
+            "DetailViewModel",
+            "loadSelectedRestaurantUseCase"
+          ],
+          "symbolName": "detailViewModel(() -> DetailViewModel)",
+          "symbolKind": "method",
+          "typeSignature": "() -> DetailViewModel",
+          "references": [
+            "DetailViewModel",
+            "loadSelectedRestaurantUseCase"
+          ]
+        },
+        {
+          "calls_out": [
+            "MainViewModel",
+            "loadRemoteUrlPresetDataUseCase",
+            "loadRestaurantUseCase",
+            "loadSelectedFeelingsUseCase"
+          ],
+          "symbolName": "mainViewModel(() -> MainViewModel)",
+          "symbolKind": "method",
+          "typeSignature": "() -> MainViewModel",
+          "references": [
+            "MainViewModel",
+            "loadRemoteUrlPresetDataUseCase",
+            "loadRestaurantUseCase",
+            "loadSelectedFeelingsUseCase"
+          ]
+        },
+        {
+          "calls_out": [
+            "LoadFeelingUseCase",
+            "feelingRepository"
+          ],
+          "symbolName": "loadFeelingUseCase(() -> LoadFeelingUseCase)",
+          "symbolKind": "method",
+          "typeSignature": "() -> LoadFeelingUseCase",
+          "references": [
+            "LoadFeelingUseCase",
+            "feelingRepository"
+          ]
+        },
+        {
+          "calls_out": [
+            "LoadSelectedRestaurantUseCase",
+            "restaurantRepository"
+          ],
+          "symbolName": "loadSelectedRestaurantUseCase(() -> LoadSelectedRestaurantUseCase)",
+          "symbolKind": "method",
+          "typeSignature": "() -> LoadSelectedRestaurantUseCase",
+          "references": [
+            "LoadSelectedRestaurantUseCase",
+            "restaurantRepository"
+          ]
+        },
+        {
+          "calls_out": [
+            "LoadSelectedFeelingsUseCase",
+            "feelingRepository"
+          ],
+          "symbolName": "loadSelectedFeelingsUseCase(() -> LoadSelectedFeelingsUseCase)",
+          "symbolKind": "method",
+          "typeSignature": "() -> LoadSelectedFeelingsUseCase",
+          "references": [
+            "LoadSelectedFeelingsUseCase",
+            "feelingRepository"
+          ]
+        },
+        {
+          "calls_out": [
+            "LoadRestaurantUseCase",
+            "restaurantRepository"
+          ],
+          "symbolName": "loadRestaurantUseCase(() -> LoadRestaurantUseCase)",
+          "symbolKind": "method",
+          "typeSignature": "() -> LoadRestaurantUseCase",
+          "references": [
+            "LoadRestaurantUseCase",
+            "restaurantRepository"
+          ]
+        },
+        {
+          "calls_out": [
+            "LoadRemoteUrlPresetDataUseCase",
+            "remoteUrlPresetRepository"
+          ],
+          "symbolName": "loadRemoteUrlPresetDataUseCase(() -> LoadRemoteUrlPresetDataUseCase)",
+          "symbolKind": "method",
+          "typeSignature": "() -> LoadRemoteUrlPresetDataUseCase",
+          "references": [
+            "LoadRemoteUrlPresetDataUseCase",
+            "remoteUrlPresetRepository"
+          ]
+        },
+        {
+          "symbolName": "_feelingRepository",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "feelingRepository(() -> FeelingRepository)",
+          "symbolKind": "method",
+          "typeSignature": "() -> FeelingRepository",
+          "references": [
+            "_feelingRepository"
+          ]
+        },
+        {
+          "symbolName": "_restaurantRepository",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "restaurantRepository(() -> RestaurantRepository)",
+          "symbolKind": "method",
+          "typeSignature": "() -> RestaurantRepository",
+          "references": [
+            "_restaurantRepository"
+          ]
+        },
+        {
+          "symbolName": "_remoteUrlPresetRepository",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "remoteUrlPresetRepository(() -> RemoteUrlPresetRepository)",
+          "symbolKind": "method",
+          "typeSignature": "() -> RemoteUrlPresetRepository",
+          "references": [
+            "_remoteUrlPresetRepository"
+          ]
+        },
+        {
+          "symbolName": "_feelingLocalDataSource",
+          "symbolKind": "variable",
+          "typeSignature": "FeelingLocalDataSource?"
+        },
+        {
+          "calls_out": [
+            "FeelingLocalDataSource"
+          ],
+          "symbolName": "feelingLocalDataSource(() -> FeelingLocalDataSource)",
+          "symbolKind": "method",
+          "typeSignature": "() -> FeelingLocalDataSource",
+          "references": [
+            "FeelingLocalDataSource",
+            "_feelingLocalDataSource"
+          ]
+        },
+        {
+          "symbolName": "_feelingRemoteDataSource",
+          "symbolKind": "variable",
+          "typeSignature": "FeelingRemoteDataSource?"
+        },
+        {
+          "calls_out": [
+            "FeelingRemoteDataSource"
+          ],
+          "symbolName": "feelingRemoteDataSource(() -> FeelingRemoteDataSource)",
+          "symbolKind": "method",
+          "typeSignature": "() -> FeelingRemoteDataSource",
+          "references": [
+            "FeelingRemoteDataSource",
+            "_feelingRemoteDataSource"
+          ]
+        },
+        {
+          "symbolName": "_restaurantLocalDataSource",
+          "symbolKind": "variable",
+          "typeSignature": "RestaurantLocalDataSource?"
+        },
+        {
+          "calls_out": [
+            "RestaurantLocalDataSource"
+          ],
+          "symbolName": "restaurantLocalDataSource(() -> RestaurantLocalDataSource)",
+          "symbolKind": "method",
+          "typeSignature": "() -> RestaurantLocalDataSource",
+          "references": [
+            "RestaurantLocalDataSource",
+            "_restaurantLocalDataSource"
+          ]
+        },
+        {
+          "symbolName": "_restaurantRemoteDataSource",
+          "symbolKind": "variable",
+          "typeSignature": "RestaurantRemoteDataSource?"
+        },
+        {
+          "calls_out": [
+            "RestaurantRemoteDataSource"
+          ],
+          "symbolName": "restaurantRemoteDataSource(() -> RestaurantRemoteDataSource)",
+          "symbolKind": "method",
+          "typeSignature": "() -> RestaurantRemoteDataSource",
+          "references": [
+            "RestaurantRemoteDataSource",
+            "_restaurantRemoteDataSource"
+          ]
+        },
+        {
+          "symbolName": "_remoteUrlPresetLocalDataSource",
+          "symbolKind": "variable",
+          "typeSignature": "RemoteUrlPresetLocalDataSource?"
+        },
+        {
+          "calls_out": [
+            "RemoteUrlPresetLocalDataSource"
+          ],
+          "symbolName": "remoteUrlPresetLocalDataSource(() -> RemoteUrlPresetLocalDataSource)",
+          "symbolKind": "method",
+          "typeSignature": "() -> RemoteUrlPresetLocalDataSource",
+          "references": [
+            "RemoteUrlPresetLocalDataSource",
+            "_remoteUrlPresetLocalDataSource"
+          ]
+        }
+      ]
+    }
+  }
+}

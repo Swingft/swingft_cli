@@ -17,9 +17,12 @@ except ImportError:
     venv_dir = os.path.join(os.getcwd(), "venv")
     python_executable = os.path.join(venv_dir, "bin", "python")
     if not os.path.exists(venv_dir):
-        subprocess.check_call([sys.executable, "-m", "venv", venv_dir])
-    subprocess.check_call([python_executable, "-m", "pip", "install", "--upgrade", "pip"])
-    subprocess.check_call([python_executable, "-m", "pip", "install", "cryptography"])
+        subprocess.check_call([sys.executable, "-m", "venv", venv_dir],
+                              stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.check_call([python_executable, "-m", "pip", "install", "--upgrade", "pip", "-q"],
+                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.check_call([python_executable, "-m", "pip", "install", "cryptography", "-q"],
+                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     os.execv(python_executable, [python_executable] + sys.argv)
     # subprocess.check_call([sys.executable, "-m", "pip", "install", "cryptography"])
     from cryptography.hazmat.primitives.ciphers.aead import ChaCha20Poly1305
