@@ -19,7 +19,7 @@ from fnmatch import fnmatchcase
 APP_TAG = "[dyn_obf]"
 DEFAULT_SKIP_DIRS = {".git", ".build", "DerivedData", "Pods", "Carthage", ".swiftpm", "__MACOSX", "node_modules", "vendor"}
 
-OBF_BEGIN, OBF_END = "// OBF-BEGIN", "// OBF-END"
+OBF_BEGIN, OBF_END = "", ""
 
 
 # ---------- small utilities ----------
@@ -725,7 +725,7 @@ def build_perfile_runtime(file_id: str, routes: List[str], max_params: int = 10)
     ]
     
     # (static wrapper functions removed)
-    lines.extend(["}", OBF_END])
+    lines.extend(["}"])
     
     return "\n".join(lines)
 
@@ -798,8 +798,8 @@ def copy_StringSecurity_folder(source_root: str) -> None:
         os.chdir(script_dir)
 
 def inject_or_replace_block(original_text: str, block_text: str) -> str:
-    start = original_text.find(OBF_BEGIN)
-    end = original_text.find(OBF_END, start + len(OBF_BEGIN)) if start != -1 else -1
+    start = original_text.find(OBF_BEGIN) if OBF_BEGIN else -1
+    end = original_text.find(OBF_END, start + len(OBF_BEGIN)) if (OBF_BEGIN and start != -1) else -1
     if start != -1 and end != -1:
         return original_text[:start] + block_text + original_text[end + len(OBF_END):]
     

@@ -10,6 +10,7 @@ from merge_list import merge_llm_and_rule
 from Opaquepredicate.run_opaque import run_opaque
 from DeadCode.deadcode import deadcode
 from remove_debug_symbol import remove_debug_symbol
+from swift_comment_remover import strip_comments_in_place
 
 def run_command(cmd, show_logs=False):
     result = subprocess.run(cmd, capture_output=True, text=True)
@@ -76,7 +77,7 @@ def stage1_ast_analysis(original_project_dir, obf_project_dir):
     run_ast(obf_project_dir)
     
     ast_end = time.time()
-    print("ast: ", ast_end - start)
+    # print("ast: Done")
     
     # Rule & LLM 결과 병합
     merge_llm_and_rule()
@@ -96,6 +97,7 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
         print("=" * 50)
     
     start = time.time()
+    step_status = {}
 
     # 구성 파일 로드 (암호화와 동일한 기본 경로 정책)
     working_cfg = os.environ.get("SWINGFT_WORKING_CONFIG")
@@ -127,12 +129,20 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
         return default
 
     flag_ident = get_bool("Obfuscation_identifiers", True)
+    # 0) (앞쪽) 주석 제거: 디버깅 심볼 제거 플래그가 켜진 경우 주석도 먼저 제거
+    flag_dbg = get_bool("Delete_debug_symbols", True)
+    if flag_dbg:
+        try:
+            strip_comments_in_place(obf_project_dir)
+        except Exception:
+            pass
 
     if flag_ident:
         # 식별자 매핑
         mapping()
         mapping_end = time.time()
-        print("mapping: ", mapping_end - start)
+        # print("mapping: Done")
+        step_status["mapping"] = "Done"
 
         # 식별자 난독화
         swift_list_dir = os.path.join(OBFUSCATION_ROOT, "swift_file_list.txt")
@@ -161,9 +171,13 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
         make_dump_file_id(original_project_dir, obf_project_dir)
 
         id_end = time.time()
-        print("id-obf: ", id_end - mapping_end)
+        # print("id-obf: Done")
+        step_status["id-obf"] = "Done"
     else:
-        print("[INFO] Obfuscation_identifiers=false → 매핑/식별자 난독화 단계 건너뜀")
+        # print("mapping: Skip")
+        # print("id-obf: Skip")
+        step_status["mapping"] = "Skip"
+        step_status["id-obf"] = "Skip"
         id_end = start
 
     # 제어흐름 평탄화
@@ -188,9 +202,11 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
         os.chdir(original_dir)
 
         cff_end = time.time()
-        print("cff: ", cff_end - id_end)
+        # print("cff: Done")
+        step_status["cff"] = "Done"
     else:
-        print("[INFO] Obfuscation_controlFlow=false → CFF 단계 건너뜀")
+        # print("cff: Skip")
+        step_status["cff"] = "Skip"
         cff_end = id_end
 
     # 불투명한 술어 + 데드코드 (Obfuscation_controlFlow와 동일 플래그로 제어)
@@ -198,35 +214,47 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
         # 불투명한 술어
         run_opaque(obf_project_dir)
         opaq_end = time.time()
-        print("opaq: ", opaq_end - cff_end)
+        # print("opaq: Done")
+        step_status["opaq"] = "Done"
 
         # 데드코드
         deadcode()
         deadcode_end = time.time()
-        print("deadcode: ", deadcode_end - opaq_end)
+        # print("deadcode: Done")
+        step_status["deadcode"] = "Done"
     else:
-        print("[INFO] Obfuscation_controlFlow=false → Opaque/DeadCode 단계 건너뜀")
+        # print("opaq: Skip")
+        # print("deadcode: Skip")
+        step_status["opaq"] = "Skip"
+        step_status["deadcode"] = "Skip"
         deadcode_end = cff_end
 
     # 문자열 암호화
-    enc_path = os.path.join(OBFUSCATION_ROOT, "String_Encryption")
-    os.chdir(enc_path)
-    working_cfg = os.environ.get("SWINGFT_WORKING_CONFIG")
-    if working_cfg:
-        cfg_arg = working_cfg
+    # 문자열 암호화: 구성으로 제어
+    flag_enc = get_bool("Encryption_strings", True)
+    if flag_enc:
+        enc_path = os.path.join(OBFUSCATION_ROOT, "String_Encryption")
+        os.chdir(enc_path)
+        working_cfg = os.environ.get("SWINGFT_WORKING_CONFIG")
+        if working_cfg:
+            cfg_arg = working_cfg
+        else:
+            cfg_arg = os.path.join(OBFUSCATION_ROOT, "Swingft_config.json")
+        cmd = ["python3", "run_Swingft_Encryption.py", obf_project_dir, cfg_arg]
+        run_command(cmd, show_logs=True)
+        os.chdir(original_dir)
+        enc_end = time.time()
+        # print("encryption: Done")
+        step_status["encryption"] = "Done"
     else:
-        cfg_arg = os.path.join(OBFUSCATION_ROOT, "Swingft_config.json")
-    cmd = ["python3", "run_Swingft_Encryption.py", obf_project_dir, cfg_arg]
-    run_command(cmd, show_logs=True)
-    os.chdir(original_dir)
-
-    enc_end = time.time()
-    print("encryption: ", enc_end - deadcode_end)
+        enc_end = deadcode_end
+        # print("encryption: Skip")
+        step_status["encryption"] = "Skip"
 
     # 동적 함수 호출 (인플레이스 실행)
     if not skip_cfg:
         if not flag_cff:
-            print("[INFO] Obfuscation_controlFlow=false → CFG 단계 건너뜀")
+            #print("[INFO] Obfuscation_controlFlow=false → CFG 단계 건너뜀")
             cfg_end = enc_end
         else:
             cfg_path = os.path.join(OBFUSCATION_ROOT, "CFG")
@@ -241,24 +269,44 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
             os.chdir(original_dir)
 
             cfg_end = time.time()
-            print("cfg: ", cfg_end - enc_end)
+            # print("cfg: Done")
+            step_status["cfg"] = "Done"
     else:
-        print("CFG (동적 함수) 단계가 건너뜀")
+        # print("cfg: Skip")
+        step_status["cfg"] = "Skip"
         cfg_end = enc_end
 
-    # 디버깅용 코드 제거
-    flag_dbg = get_bool("Delete_debug_symbols", True)
+    # 디버깅용 코드 제거 (원래 자리에서 실행)
     if flag_dbg:
         start_dbg = time.time()
         remove_debug_symbol(obf_project_dir)
         debug_end = time.time()
-        print("debug: ", debug_end - start_dbg)
+        # print("debug: Done")
+        step_status["debug"] = "Done"
     else:
-        print("[INFO] Delete_debug_symbols=false → 디버깅 코드 제거 단계 건너뜀")
         debug_end = cfg_end
 
-    print("total: ", debug_end - start)
-    print((debug_end - start) / 60)
+    # total은 유지하되 시간은 분 단위만 로그로 남김(원하면 지울 수 있음)
+    # print("total: Done")
+
+    # Summary block (grouped labels)
+    def _group_status(keys):
+        vals = [step_status.get(k) for k in keys]
+        return "Done" if any(v == "Done" for v in vals) else "Skip"
+
+    summary_map = {
+        "Identifiers obfuscation": _group_status(["mapping", "id-obf"]),
+        "Control flow obfuscation": _group_status(["cff", "opaq", "deadcode", "cfg"]),
+        "String encryption": step_status.get("encryption", "Skip"),
+        "Delete debug symbols": step_status.get("debug", "Skip"),
+    }
+
+    done_labels = [name for name, st in summary_map.items() if st == "Done"]
+    skip_labels = [name for name, st in summary_map.items() if st == "Skip"]
+    if done_labels:
+        print("completed:", ", ".join(done_labels))
+    if skip_labels:
+        print("skipped:", ", ".join(skip_labels))
     
     if os.environ.get("SWINGFT_VERBOSE_STAGE"):
         print("STAGE 2 완료!")

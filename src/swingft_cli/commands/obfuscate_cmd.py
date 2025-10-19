@@ -359,7 +359,8 @@ def handle_obfuscate(args):
         }
         step_keys = [k for k, _ in steps]
         total_steps = len(steps)
-        seen = set()
+        # count bootstrap as immediately completed so bar can reach 100%
+        seen = {"_bootstrap"}
         tail2 = deque(maxlen=10)
 
         proc = subprocess.Popen([
@@ -377,6 +378,22 @@ def handle_obfuscate(args):
             if line.strip():
                 tail2.append(line)
             low = line.lower()
+            # handle final summary lines to update progress when steps were skipped (no per-step logs)
+            if low.startswith("completed:") or low.startswith("skipped:"):
+                try:
+                    summary = low.split(":", 1)[1]
+                    items = [s.strip() for s in summary.split(",") if s.strip()]
+                    for item in items:
+                        if "identifiers obfuscation" in item:
+                            seen.update(["mapping", "id-obf"])  # treat skipped as completed for bar
+                        if "control flow obfuscation" in item:
+                            seen.update(["cff", "opaq", "deadcode"])  # cfg is extra label
+                        if "string encryption" in item:
+                            seen.add("encryption")
+                        if "delete debug symbols" in item:
+                            last_current = "Debug symbol removal"
+                except Exception:
+                    pass
             # mark completion on duration lines like "mapping:" etc.
             for key, label in steps:
                 # encryption: detect both start and end
@@ -410,10 +427,16 @@ def handle_obfuscate(args):
         if rc != 0:
             _ui_set_status(["Obfuscation failed", f"exit code: {rc}"])
             sys.exit(1)
-        _ui_set_status(["Obfuscation completed"])
+        # 화면 리로드 없이 아래 한 줄만 추가
+        # 완료 라인 출력은 종료 시 한 번만 담당 (아래 공통 블록에서 처리)
 
     except Exception as e:
         _ui_set_status([f"Obfuscation failed: {e}"])
         sys.exit(1)
 
-    _ui_set_status(["Obfuscation completed"])
+    # 종료 시 전체 리로드 방지: 상태영역 갱신 대신 한 줄만 추가
+    try:
+        sys.stdout.write("\nObfuscation completed\n")
+        sys.stdout.flush()
+    except Exception:
+        _ui_set_status(["Obfuscation completed"])  # 폴백
