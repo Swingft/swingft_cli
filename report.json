@@ -11,39 +11,32 @@
       "snippet": "        label.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.restaurantTableViewTitleLabelSize))\n        label.textColor = .white\n        \n        return label\n    }()\n\n    lazy var collectionViewLayout: UICollectionViewFlowLayout = {\n        let layout = UICollectionViewFlowLayout()\n        layout.itemSize = CGSize(width: NumberConstants.restaurantCollectionViewCellSize, height: NumberConstants.restaurantCollectionViewCellSize)\n        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)\n        layout.scrollDirection = .horizontal\n        \n        return layout\n    }()\n    \n    lazy var collectionView: UICollectionView = {\n        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: collectionViewLayout)\n        \n        collectionView.register(RestaurantCollectionViewCell.self, forCellWithReuseIdentifier: RestaurantCollectionViewCell.reuseIdentifier)\n        \n        collectionView.translatesAutoresizingMaskIntoConstraints = false\n        collectionView.backgroundColor = .clear\n        \n        return collectionView\n    }()\n    \n    required init?(coder: NSCoder) {\n        super.init(coder: coder)\n        \n        setupViews()\n        setupBind()\n        \n    }\n    \n    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {\n        super.init(style: style, reuseIdentifier: reuseIdentifier)\n        \n        setupViews()\n        setupBind()\n        \n    }\n    \n    private func setupViews() {\n        self.backgroundColor = .clear\n        contentView.addSubview(titleLabel)\n        contentView.addSubview(collectionView)\n        \n        titleLabel.snp.makeConstraints { make in\n            make.top.equalToSuperview()\n            make.leading.equalToSuperview()\n            make.trailing.equalToSuperview()\n        }\n        \n        collectionView.snp.makeConstraints { make in\n            make.top.equalTo(titleLabel.snp.bottom).offset(NumberConstants.layoutMarginMidium)\n            make.bottom.equalToSuperview().offset(-NumberConstants.layoutMarginExtra)\n            make.leading.equalToSuperview()\n            make.trailing.equalToSuperview()\n            make.height.equalTo(NumberConstants.restaurantCollectionViewCellSize)\n        }\n\n",
       "ast": [
         {
-          "conforms": [
-            "UITableViewCell"
-          ],
           "symbolName": "RestaurantTableViewCell",
           "symbolKind": "class"
         },
         {
+          "symbolName": "setupViews()",
+          "symbolKind": "method"
+        },
+        {
+          "symbolName": "setupBind()",
+          "symbolKind": "method"
+        },
+        {
           "symbolName": "reuseIdentifier",
-          "symbolKind": "variable",
-          "typeSignature": "String"
+          "symbolKind": "variable"
         },
         {
           "symbolName": "disposeBag",
-          "symbolKind": "variable",
-          "typeSignature": "DisposeBag"
+          "symbolKind": "variable"
         },
         {
           "symbolName": "onSelectRestaurant",
-          "symbolKind": "variable",
-          "typeSignature": "((_ item: RestaurantItem) -> Void)?"
+          "symbolKind": "variable"
         },
         {
-          "calls_out": [
-            "onNext"
-          ],
-          "references": [
-            "onNext",
-            "restaurantItems",
-            "restaurantItemsData"
-          ],
           "symbolName": "restaurantItemsData",
-          "symbolKind": "variable",
-          "typeSignature": "[RestaurantItem]"
+          "symbolKind": "variable"
         },
         {
           "symbolName": "restaurantItems",
@@ -51,8 +44,7 @@
         },
         {
           "symbolName": "titleLabel",
-          "symbolKind": "variable",
-          "typeSignature": "UILabel"
+          "symbolKind": "variable"
         },
         {
           "symbolName": "label",
@@ -60,8 +52,7 @@
         },
         {
           "symbolName": "collectionViewLayout",
-          "symbolKind": "variable",
-          "typeSignature": "UICollectionViewFlowLayout"
+          "symbolKind": "variable"
         },
         {
           "symbolName": "layout",
@@ -69,96 +60,7 @@
         },
         {
           "symbolName": "collectionView",
-          "symbolKind": "variable",
-          "typeSignature": "UICollectionView"
-        },
-        {
-          "symbolName": "collectionView",
           "symbolKind": "variable"
-        },
-        {
-          "calls_out": [
-            "addSubview",
-            "equalTo",
-            "equalToSuperview",
-            "makeConstraints",
-            "offset"
-          ],
-          "references": [
-            "NumberConstants",
-            "addSubview",
-            "backgroundColor",
-            "bottom",
-            "clear",
-            "collectionView",
-            "contentView",
-            "equalTo",
-            "equalToSuperview",
-            "height",
-            "layoutMarginExtra",
-            "layoutMarginMidium",
-            "leading",
-            "make",
-            "makeConstraints",
-            "offset",
-            "restaurantCollectionViewCellSize",
-            "self",
-            "snp",
-            "titleLabel",
-            "top",
-            "trailing"
-          ],
-          "symbolName": "setupViews(())",
-          "symbolKind": "method",
-          "typeSignature": "()"
-        },
-        {
-          "calls_out": [
-            "URL",
-            "addingPercentEncoding",
-            "bind",
-            "disposed",
-            "itemAndIndexSelected",
-            "items",
-            "register",
-            "setImage",
-            "subscribe"
-          ],
-          "references": [
-            "ImageConstants",
-            "RestaurantCollectionViewCell",
-            "RestaurantItem",
-            "URL",
-            "addingPercentEncoding",
-            "bind",
-            "cell",
-            "collectionView",
-            "disposeBag",
-            "disposed",
-            "first",
-            "image_urls",
-            "item",
-            "itemAndIndexSelected",
-            "items",
-            "kf",
-            "onSelectRestaurant",
-            "placeholder",
-            "register",
-            "restaurantItems",
-            "restaurantMainImageView",
-            "restaurantNameLabel",
-            "restaurant_name",
-            "reuseIdentifier",
-            "rx",
-            "self",
-            "setImage",
-            "subscribe",
-            "text",
-            "urlQueryAllowed"
-          ],
-          "symbolName": "setupBind(())",
-          "symbolKind": "method",
-          "typeSignature": "()"
         }
       ]
     },
@@ -172,38 +74,31 @@
       "ast": [
         {
           "symbolName": "RestaurantTableViewCell",
-          "symbolKind": "class",
-          "conforms": [
-            "UITableViewCell"
-          ]
+          "symbolKind": "class"
+        },
+        {
+          "symbolName": "setupViews()",
+          "symbolKind": "method"
+        },
+        {
+          "symbolName": "setupBind()",
+          "symbolKind": "method"
         },
         {
           "symbolName": "reuseIdentifier",
-          "symbolKind": "variable",
-          "typeSignature": "String"
+          "symbolKind": "variable"
         },
         {
           "symbolName": "disposeBag",
-          "symbolKind": "variable",
-          "typeSignature": "DisposeBag"
+          "symbolKind": "variable"
         },
         {
           "symbolName": "onSelectRestaurant",
-          "symbolKind": "variable",
-          "typeSignature": "((_ item: RestaurantItem) -> Void)?"
+          "symbolKind": "variable"
         },
         {
           "symbolName": "restaurantItemsData",
-          "symbolKind": "variable",
-          "typeSignature": "[RestaurantItem]",
-          "calls_out": [
-            "onNext"
-          ],
-          "references": [
-            "onNext",
-            "restaurantItems",
-            "restaurantItemsData"
-          ]
+          "symbolKind": "variable"
         },
         {
           "symbolName": "restaurantItems",
@@ -211,8 +106,7 @@
         },
         {
           "symbolName": "titleLabel",
-          "symbolKind": "variable",
-          "typeSignature": "UILabel"
+          "symbolKind": "variable"
         },
         {
           "symbolName": "label",
@@ -220,8 +114,7 @@
         },
         {
           "symbolName": "collectionViewLayout",
-          "symbolKind": "variable",
-          "typeSignature": "UICollectionViewFlowLayout"
+          "symbolKind": "variable"
         },
         {
           "symbolName": "layout",
@@ -229,96 +122,7 @@
         },
         {
           "symbolName": "collectionView",
-          "symbolKind": "variable",
-          "typeSignature": "UICollectionView"
-        },
-        {
-          "symbolName": "collectionView",
           "symbolKind": "variable"
-        },
-        {
-          "symbolName": "setupViews(())",
-          "symbolKind": "method",
-          "typeSignature": "()",
-          "calls_out": [
-            "addSubview",
-            "equalTo",
-            "equalToSuperview",
-            "makeConstraints",
-            "offset"
-          ],
-          "references": [
-            "NumberConstants",
-            "addSubview",
-            "backgroundColor",
-            "bottom",
-            "clear",
-            "collectionView",
-            "contentView",
-            "equalTo",
-            "equalToSuperview",
-            "height",
-            "layoutMarginExtra",
-            "layoutMarginMidium",
-            "leading",
-            "make",
-            "makeConstraints",
-            "offset",
-            "restaurantCollectionViewCellSize",
-            "self",
-            "snp",
-            "titleLabel",
-            "top",
-            "trailing"
-          ]
-        },
-        {
-          "symbolName": "setupBind(())",
-          "symbolKind": "method",
-          "typeSignature": "()",
-          "calls_out": [
-            "URL",
-            "addingPercentEncoding",
-            "bind",
-            "disposed",
-            "itemAndIndexSelected",
-            "items",
-            "register",
-            "setImage",
-            "subscribe"
-          ],
-          "references": [
-            "ImageConstants",
-            "RestaurantCollectionViewCell",
-            "RestaurantItem",
-            "URL",
-            "addingPercentEncoding",
-            "bind",
-            "cell",
-            "collectionView",
-            "disposeBag",
-            "disposed",
-            "first",
-            "image_urls",
-            "item",
-            "itemAndIndexSelected",
-            "items",
-            "kf",
-            "onSelectRestaurant",
-            "placeholder",
-            "register",
-            "restaurantItems",
-            "restaurantMainImageView",
-            "restaurantNameLabel",
-            "restaurant_name",
-            "reuseIdentifier",
-            "rx",
-            "self",
-            "setImage",
-            "subscribe",
-            "text",
-            "urlQueryAllowed"
-          ]
         }
       ]
     }
