@@ -45,7 +45,7 @@ N_CTX           = int(os.getenv("N_CTX", "4096"))
 N_THREADS       = int(os.getenv("N_THREADS", "8"))
 
 # Default generation params (can be overridden per request)
-DEFAULT_MAX_TOKENS = int(os.getenv("MAX_TOKENS", "4096"))
+DEFAULT_MAX_TOKENS = int(os.getenv("MAX_TOKENS", "1024"))
 DEFAULT_TEMP       = float(os.getenv("TEMP", "0.0"))
 DEFAULT_TOP_P      = float(os.getenv("TOP_P", "1.0"))
 DEFAULT_TOP_K      = int(os.getenv("TOP_K", "40"))

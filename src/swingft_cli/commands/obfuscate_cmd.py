@@ -304,6 +304,15 @@ def handle_obfuscate(args):
 
     # Config 검증 및 LLM 분석
     if working_config_path:
+        # Stage 1 직후, 설정 검증 전에 analyzer 실행 + AST만 반영 (config 미수정)
+        try:
+            analyzer_root = os.environ.get("SWINGFT_ANALYZER_ROOT", os.path.join(os.getcwd(), "externals", "obfuscation-analyzer")).strip()
+            proj_in = input_path
+            ast_path = os.environ.get("SWINGFT_AST_NODE_PATH", "")
+            from swingft_cli.core.config.loader import _apply_analyzer_exclusions_to_ast_and_config as _apply_anl
+            _apply_anl(analyzer_root, proj_in, ast_path, working_config_path, {})
+        except Exception:
+            pass
         #_ui_set_status([f"설정 검증 시작: {working_config_path}"])
         try:
             auto_yes = getattr(args, 'yes', False)

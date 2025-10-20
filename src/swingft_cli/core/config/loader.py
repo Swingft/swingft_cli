@@ -1,10 +1,144 @@
 from __future__ import annotations
 
+# --- Apply config.exclude.obfuscation directly to AST (no config writes) ---
+from typing import Any as _Any, Dict as _Dict  # ensure types available for helper
+
+def _apply_config_exclusions_to_ast(ast_file_path: str, config: _Dict[str, _Any]) -> int:
+    """Set isException=1 in AST for names listed in config.exclude.obfuscation.
+    - Expands wildcards against existing AST names.
+    - Does not modify the config file.
+    - Returns updated node count (duplicate names count multiple).
+    """
+    try:
+        with open(ast_file_path, 'r', encoding='utf-8') as f:
+            ast_list = json.load(f)
+    except Exception:
+        return 0
+
+    CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
+
+    # collect names present in AST
+    names_in_ast = set()
+    def _collect(o):
+        if isinstance(o, dict):
+            cur = _ast_unwrap(o)
+            if isinstance(cur, dict):
+                nm = str(cur.get("A_name", "")).strip()
+                if nm:
+                    names_in_ast.add(nm)
+                for k in CONTAINER_KEYS:
+                    ch = cur.get(k)
+                    if isinstance(ch, list):
+                        for c in ch: _collect(c)
+                    elif isinstance(ch, dict):
+                        _collect(ch)
+                if o is not cur:
+                    for k in CONTAINER_KEYS:
+                        if k == 'node':
+                            continue
+                        ch = o.get(k)
+                        if isinstance(ch, list):
+                            for c in ch: _collect(c)
+                        elif isinstance(ch, dict):
+                            _collect(ch)
+                for v in cur.values():
+                    _collect(v)
+                if o is not cur:
+                    for k,v in o.items():
+                        if k not in CONTAINER_KEYS:
+                            _collect(v)
+            else:
+                for v in o.values():
+                    _collect(v)
+        elif isinstance(o, list):
+            for it in o: _collect(it)
+    _collect(ast_list)
+
+    # build targets from config (expand wildcards)
+    import fnmatch
+    targets = set()
+    for s in (config.get("exclude", {}).get("obfuscation", []) or []):
+        if not isinstance(s, str):
+            continue
+        s = s.strip()
+        if not s:
+            continue
+        if any(ch in s for ch in "*?[]"):
+            for nm in names_in_ast:
+                if fnmatch.fnmatchcase(nm, s):
+                    targets.add(nm)
+        else:
+            if s in names_in_ast:
+                targets.add(s)
+
+    if not targets:
+        return 0
+
+    # apply to AST
+    try:
+         _update_ast_node_exceptions(
+             ast_file_path,
+             sorted(list(targets)),
+             is_exception=1,
+             allowed_kinds=None,
+             lock_children=False,
+             quiet=not _preflight_verbose(),
+             only_when_explicit_zero=True,
+         )
+    except Exception:
+        return 0
+
+    # recount updated nodes
+    try:
+        with open(ast_file_path, 'r', encoding='utf-8') as f:
+            ast2 = json.load(f)
+        cnt = 0
+        def _count(o):
+            nonlocal cnt
+            if isinstance(o, dict):
+                cur = _ast_unwrap(o)
+                if isinstance(cur, dict):
+                    nm = str(cur.get("A_name", "")).strip()
+                    if nm in targets and int(cur.get("isException", 0)) == 1:
+                        cnt += 1
+                    for k in CONTAINER_KEYS:
+                        ch = cur.get(k)
+                        if isinstance(ch, list):
+                            for c in ch: _count(c)
+                        elif isinstance(ch, dict):
+                            _count(ch)
+                    if o is not cur:
+                        for k in CONTAINER_KEYS:
+                            if k == 'node':
+                                continue
+                            ch = o.get(k)
+                            if isinstance(ch, list):
+                                for c in ch: _count(c)
+                            elif isinstance(ch, dict):
+                                _count(ch)
+                    for v in cur.values():
+                        _count(v)
+                    if o is not cur:
+                        for k,v in o.items():
+                            if k not in CONTAINER_KEYS:
+                                _count(v)
+                else:
+                    for v in o.values():
+                        _count(v)
+            elif isinstance(o, list):
+                for it in o: _count(it)
+        _count(ast2)
+        return cnt
+    except Exception:
+        return 0
+ 
+
 import io
 import json
 import os
 import sys
 import shutil
+import requests
 from datetime import datetime
 from typing import Any, Dict
 
@@ -29,6 +163,286 @@ def _preflight_print(msg: str) -> None:
     """Print preflight messages only when no UI prompt provider is active."""
     if not _has_ui_prompt():
         print(msg)
+
+def _preflight_verbose() -> bool:
+    """Return True if verbose preflight logs should be emitted."""
+    try:
+        v = os.environ.get("SWINGFT_PREFLIGHT_VERBOSE", "")
+        return str(v).strip().lower() in {"1", "true", "yes", "y", "on"}
+    except Exception:
+        return False
+
+# --- External analyzer integration -----------------------------------------
+def _ast_unwrap(node):
+    try:
+        if isinstance(node, dict) and isinstance(node.get("node"), dict):
+            return node["node"]
+    except Exception:
+        pass
+    return node
+
+def compare_exclusion_list_vs_ast(analyzer_root: str, ast_file_path: str | None) -> dict:
+    """Compare exclusion_list.txt against AST isException flags and print summary.
+
+    Prints per-category counts and up to 20 sample names for zero/missing.
+    Returns a dict: {one:int, zero:int, missing:int}.
+    """
+    result = {"one": 0, "zero": 0, "missing": 0, "ones": [], "zeros": [], "missings": [], "ast_path": None}
+    try:
+        if not analyzer_root or not os.path.isdir(analyzer_root):
+            return result
+        excl_path = os.path.join(analyzer_root, "analysis_output", "exclusion_list.txt")
+        if not os.path.isfile(excl_path):
+            return result
+        names = []
+        with open(excl_path, "r", encoding="utf-8", errors="ignore") as f:
+            for raw in f:
+                s = str(raw).strip()
+                if s and not s.startswith("#"):
+                    names.append(s)
+        if not names:
+            return result
+
+        # autodetect AST if not given
+        ast_path_eff = ast_file_path
+        if not ast_path_eff or not os.path.isfile(ast_path_eff):
+            candidates = [
+                os.path.join(os.getcwd(), "Obfuscation_Pipeline", "AST", "output", "ast_node.json"),
+                os.path.join(os.getcwd(), "AST", "output", "ast_node.json"),
+            ]
+            ast_path_eff = next((p for p in candidates if os.path.isfile(p)), None)
+        result["ast_path"] = ast_path_eff
+        try:
+            print(f"[preflight] AST path: {ast_path_eff or 'NOT FOUND'}")
+        except Exception:
+            pass
+        if not ast_path_eff:
+            return result
+
+        with open(ast_path_eff, 'r', encoding='utf-8') as _af:
+            ast_list = json.load(_af)
+        status_map: dict[str, list[int]] = {}
+        dotted_map: dict[str, list[int]] = {}
+
+        CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
+
+        def _walk_any(obj, parents: list[str]):
+            # DFS over dict/list with wrapper unwrapping; visit both unwrapped dict (cur)
+            # and sibling containers on the wrapper (obj), since many ASTs keep
+            # `children` alongside `node`.
+            if isinstance(obj, dict):
+                cur = _ast_unwrap(obj)
+                if isinstance(cur, dict):
+                    nm = str(cur.get('A_name', '')).strip()
+                    if nm:
+                        status_map.setdefault(nm, []).append(int(cur.get('isException', 0)))
+                        if parents:
+                            dotted = '.'.join(parents + [nm])
+                            dotted_map.setdefault(dotted, []).append(int(cur.get('isException', 0)))
+                    next_parents = parents + ([nm] if nm else [])
+
+                    # 1) Traverse known containers on the unwrapped dict
+                    for key in CONTAINER_KEYS:
+                        ch = cur.get(key)
+                        if isinstance(ch, list):
+                            for c in ch:
+                                _walk_any(c, next_parents)
+                        elif isinstance(ch, dict):
+                            _walk_any(ch, next_parents)
+
+                    # 2) Traverse sibling containers on the wrapper `obj` (excluding the `node` we already handled)
+                    if obj is not cur:
+                        for key in CONTAINER_KEYS:
+                            if key == 'node':
+                                continue
+                            ch = obj.get(key)
+                            if isinstance(ch, list):
+                                for c in ch:
+                                    _walk_any(c, next_parents)
+                            elif isinstance(ch, dict):
+                                _walk_any(ch, next_parents)
+
+                    # 3) Conservative descent into other values
+                    for v in cur.values():
+                        _walk_any(v, next_parents)
+                    if obj is not cur:
+                        for k, v in obj.items():
+                            if k not in CONTAINER_KEYS:
+                                _walk_any(v, next_parents)
+                else:
+                    # non-dict after unwrap: still descend values of the wrapper
+                    for v in obj.values():
+                        _walk_any(v, parents)
+            elif isinstance(obj, list):
+                for elem in obj:
+                    _walk_any(elem, parents)
+
+        _walk_any(ast_list, [])
+
+        zeros, missing = [], []
+        one = zero = not_found = 0
+        print("[preflight][compare] exclusion_list.txt vs AST isException")
+        # lowercase fallback maps
+        status_map_lc = {k.lower(): v for k, v in status_map.items()}
+        dotted_map_lc = {k.lower(): v for k, v in dotted_map.items()}
+
+        def _norm_name(s: str) -> str:
+            s2 = (s or "").strip().strip('"\'')
+            return s2
+
+        for nm_raw in names:
+            nm = _norm_name(nm_raw)
+            vals = (
+                status_map.get(nm)
+                or dotted_map.get(nm)
+                or status_map_lc.get(nm.lower())
+                or dotted_map_lc.get(nm.lower())
+            )
+            if not vals:
+                not_found += 1
+                if len(missing) < 20:
+                    missing.append(nm)
+                if len(result["missings"]) < 1000:
+                    result["missings"].append(nm)
+                continue
+
+            # vals 존재: 1 포함 여부에 따라 one/zero로 분기
+            if any(int(v or 0) == 1 for v in vals):
+                one += 1
+                if len(result["ones"]) < 1000:
+                    result["ones"].append(nm)
+            else:
+                zero += 1
+                if len(zeros) < 20:
+                    zeros.append(nm)
+                if len(result["zeros"]) < 1000:
+                    result["zeros"].append(nm)
+        print(f"[preflight][compare] summary: one={one}, zero={zero}, missing={not_found}")
+        if zeros:
+            print(f"  zeros(sample): {', '.join(zeros)}")
+            # print occurrence counts for zero-sample names
+            try:
+                for _nm in zeros:
+                    _cnt = len(status_map.get(_nm, []))
+                    print(f"    count[{_nm}]={_cnt}")
+            except Exception:
+                pass
+        if missing:
+            print(f"  missing(sample): {', '.join(missing)}")
+        result.update({"one": one, "zero": zero, "missing": not_found})
+        # store complete missing (limited)
+        for nm in missing:
+            if len(result["missings"]) < 1000:
+                result["missings"].append(nm)
+        # Optional: explicit target count via env
+        try:
+            _target = os.environ.get("SWINGFT_COUNT_NAME", "").strip()
+            if _target:
+                _cnt = len(status_map.get(_target, [])
+                           or status_map_lc.get(_target.lower(), []))
+                print(f"[preflight][count] target='{_target}' occurrences={_cnt}")
+        except Exception:
+            pass
+    except Exception as e:
+        try:
+            print(f"[preflight] compare error: {e}")
+        except Exception:
+            pass
+    return result
+
+def _apply_analyzer_exclusions_to_ast_and_config(
+    analyzer_root: str,
+    project_root: str | None,
+    ast_file_path: str | None,
+    config_path: str,
+    config: Dict[str, Any],
+) -> None:
+    """Run external analyzer and reflect results into AST only (no config writes)."""
+    try:
+        if not project_root or not os.path.isdir(project_root):
+            return
+        if not analyzer_root or not os.path.isdir(analyzer_root):
+            return
+
+        # Run analyzer with live logs (stdout/stderr not captured)
+        try:
+            import subprocess
+            run_cmd = os.environ.get("SWINGFT_ANALYZER_CMD", "").strip()
+            if run_cmd:
+                cmd = run_cmd.format(project=project_root, root=analyzer_root)
+                print(f"[preflight] analyzer run: {cmd}")
+                subprocess.run(cmd, shell=True, cwd=analyzer_root)
+            else:
+                analyze_py = os.path.join(analyzer_root, "analyze.py")
+                if os.path.isfile(analyze_py):
+                    cmd_list = ["python3", "analyze.py", project_root]
+                    print(f"[preflight] analyzer run (default): {' '.join(cmd_list)}")
+                    subprocess.run(cmd_list, cwd=analyzer_root)
+        except Exception as e:
+            print(f"[preflight] analyzer run warning: {e}")
+
+        # Read exclusion list
+        out_file = os.path.join(analyzer_root, "analysis_output", "exclusion_list.txt")
+        if not os.path.isfile(out_file):
+            return
+        names: list[str] = []
+        try:
+            with open(out_file, "r", encoding="utf-8", errors="ignore") as f:
+                for raw in f:
+                    s = str(raw).strip()
+                    if not s or s.startswith("#"):
+                        continue
+                    names.append(s)
+        except Exception:
+            return
+        if not names:
+            return
+
+        # Detect AST path if not provided, then update isException=1 for listed names
+        ast_path_eff = ast_file_path
+        if not ast_path_eff or not os.path.isfile(ast_path_eff):
+            candidates = [
+                os.path.join(os.getcwd(), "Obfuscation_Pipeline", "AST", "output", "ast_node.json"),
+                os.path.join(os.getcwd(), "AST", "output", "ast_node.json"),
+            ]
+            ast_path_eff = next((p for p in candidates if os.path.isfile(p)), None)
+            print(f"[preflight] AST path autodetect: {ast_path_eff or 'NOT FOUND'}")
+        if ast_path_eff and os.path.isfile(ast_path_eff):
+            # Always print comparison summary (one/zero/missing) before applying
+            zeros_est = None
+            try:
+                _comp = compare_exclusion_list_vs_ast(analyzer_root, ast_path_eff)
+                if isinstance(_comp, dict):
+                    zeros_est = int(_comp.get("zero", 0))
+            except Exception:
+                zeros_est = None
+            # 기본값: 적용(ON). 명시적으로 0/false/no/off일 때만 비적용.
+            _flag_raw = str(os.environ.get("SWINGFT_APPLY_ANALYZER_TO_AST", "")).strip().lower()
+            apply_flag = _flag_raw not in {"0", "false", "no", "n", "off"}
+            if apply_flag:
+                try:
+                    if zeros_est is not None:
+                        print(f"[preflight] analyzer → AST 적용: ≈{zeros_est} identifiers (explicit 0→1, apply=ON)")
+                    else:
+                        print(f"[preflight] analyzer → AST 적용: identifiers (explicit 0→1, apply=ON)")
+                    _update_ast_node_exceptions(
+                        ast_path_eff,
+                        names,
+                        is_exception=1,
+                        allowed_kinds=None,
+                        lock_children=False,
+                        quiet=False,
+                        only_when_explicit_zero=True,
+                    )
+                except Exception as e:
+                    print(f"[preflight] analyzer → AST 반영 경고: {e}")
+            else:
+                if zeros_est is not None:
+                    print(f"[preflight] analyzer DRY-RUN: would set isException=1 for ≈{zeros_est} identifiers (explicit 0→1). Set SWINGFT_APPLY_ANALYZER_TO_AST=1 to apply")
+                else:
+                    print(f"[preflight] analyzer DRY-RUN: would set isException=1 for identifiers (explicit 0→1). Set SWINGFT_APPLY_ANALYZER_TO_AST=1 to apply")
+    except Exception:
+        pass
 
 def _is_readable_file(path: str) -> bool:
     try:
@@ -129,6 +543,127 @@ def _generate_sample_config(sample_path: str) -> None:
     
     with open(sample_path, "w", encoding="utf-8") as f:
         json.dump(sample_config, f, ensure_ascii=False, indent=2)
+
+
+# --- Helper function: Save exclude review JSON ---
+def _save_exclude_review_json(approved_identifiers, project_root: str | None, ast_file_path: str | None) -> str | None:
+    """Save a minimal review JSON capturing only user-approved exclude targets."""
+    try:
+        if not approved_identifiers:
+            return None
+        out_dir = os.path.join(os.getcwd(), ".swingft", "preflight")
+        os.makedirs(out_dir, exist_ok=True)
+        ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+        out_path = os.path.join(out_dir, f"exclude_review_{ts}.json")
+        payload = {
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "kind": "exclude_review",
+            "project_input": project_root or "",
+            "ast_node_path": ast_file_path or "",
+            "approved_identifiers": sorted(list({str(x).strip() for x in approved_identifiers if str(x).strip()})),
+            "source": "loader._check_exclude_sensitive_identifiers",
+            "decision_basis": "user_confirmation_only"
+        }
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+        print(f"[preflight] 사용자 승인 대상 JSON 저장: {out_path}")
+        return out_path
+    except Exception as e:
+        print(f"[preflight] exclude_review JSON 저장 실패: {e}")
+        return None
+
+# --- Helper function: Save exclude PENDING JSON (before y/n) ---
+def _save_exclude_pending_json(project_root: str | None, ast_file_path: str | None, candidates) -> str | None:
+    """Persist the FULL set of identifiers that require user confirmation (pre y/n)."""
+    try:
+        names = sorted(list({str(x).strip() for x in (candidates or []) if isinstance(x, str) and x.strip()}))
+        if not names:
+            return None
+        out_dir = os.path.join(os.getcwd(), ".swingft", "preflight")
+        os.makedirs(out_dir, exist_ok=True)
+        ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+        out_path = os.path.join(out_dir, f"exclude_pending_{ts}.json")
+        payload = {
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "kind": "exclude_pending",
+            "project_input": project_root or "",
+            "ast_node_path": ast_file_path or "",
+            "candidates": names,
+            "source": "loader._check_exclude_sensitive_identifiers"
+        }
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+        if _preflight_verbose():
+            print(f"[preflight] 사용자 확인 대상(PENDING) JSON 저장: {out_path}")
+        return out_path
+    except Exception as e:
+        if _preflight_verbose():
+            print(f"[preflight] exclude_pending JSON 저장 실패: {e}")
+        return None
+
+# --- Helper: POST payload as-is to /complete and get raw output ---
+def _post_complete(payload: dict) -> tuple[bool, str]:
+    """Send payload dict verbatim to LLM /complete endpoint. Return (ok, raw_output_or_error)."""
+    import requests  # local import to avoid global dependency when LLM is disabled
+    url = os.environ.get("LLM_COMPLETE_URL", "http://127.0.0.1:8000/complete").strip()
+    try:
+        resp = requests.post(url, json=payload, timeout=120)
+        ctype = resp.headers.get("content-type", "")
+        if resp.status_code != 200:
+            # include body snippet for debugging
+            body = resp.text if isinstance(resp.text, str) else ""
+            return False, f"HTTP {resp.status_code} at /complete: {body[:800]}"
+        if ctype.startswith("application/json"):
+            data = resp.json()
+            raw = str(data.get("output") or data.get("full_output") or "")
+            return True, raw
+        # fallback: treat as plain text
+        return True, str(resp.text)
+    except Exception as e:
+        return False, f"REQUEST ERROR: {e}"
+
+# --- Helper function: Generate per-identifier payloads for exclude targets ---
+def _generate_payloads_for_excludes(project_root: str | None, identifiers: list[str]) -> None:
+    """
+    Generate per-identifier payload JSON files ONLY for user-approved exclude targets.
+    Prefer calling preflight generator; if unavailable, write minimal payloads.
+    """
+    try:
+        if not identifiers:
+            return
+        out_dir = os.path.join(os.getcwd(), ".swingft", "preflight", "payloads")
+        os.makedirs(out_dir, exist_ok=True)
+        # Try to use the preflight module if present
+        try:
+            from swingft_cli.core.preflight.find_identifiers_and_ast_dual import write_per_identifier_payload_files  # type: ignore
+            write_per_identifier_payload_files(project_root or "", identifiers=identifiers, out_dir=out_dir)
+            if _preflight_verbose():
+                print(f"[preflight] exclude 대상 {len(identifiers)}개에 대한 payload 생성 완료: {out_dir}")
+            return
+        except Exception as e:
+            if _preflight_verbose():
+                print(f"[preflight] preflight payload 생성기 사용 불가, 최소 JSON 생성으로 대체: {e}")
+        # Fallback: minimal JSON per identifier
+        ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+        for ident in identifiers:
+            name = str(ident).strip()
+            if not name:
+                continue
+            payload = {
+                "timestamp": datetime.utcnow().isoformat() + "Z",
+                "kind": "exclude_payload",
+                "project_input": project_root or "",
+                "identifier": name
+            }
+            fn = f"{name}.payload.json"
+            path = os.path.join(out_dir, fn)
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(payload, f, ensure_ascii=False, indent=2)
+        if _preflight_verbose():
+            print(f"[preflight] 최소 payload 생성 완료: {len(identifiers)}개 → {out_dir}")
+    except Exception as e:
+        if _preflight_verbose():
+            print(f"[preflight] exclude payload 생성 실패: {e}")
 
 
 def load_config_or_exit(path: str) -> Dict[str, Any]:
@@ -243,7 +778,7 @@ def load_config_or_exit(path: str) -> Dict[str, Any]:
 # propagate a parent's isException value into its children. It is benign
 # if ignored, but tools that support it should respect the flag.
 # Matching semantics: a spec without parent path matches ANY node whose A_name equals the leaf; no cascading to children with different names.
-def _update_ast_node_exceptions(ast_file_path, identifiers_to_update, is_exception=0, allowed_kinds=None, lock_children=True, quiet: bool = False):
+def _update_ast_node_exceptions(ast_file_path, identifiers_to_update, is_exception=0, allowed_kinds=None, lock_children=True, quiet: bool = False, only_when_explicit_zero: bool = False):
     """Update isException flag for specified identifiers in ast_node.json.
 
     Supports nested members and optional kind filtering.
@@ -297,78 +832,176 @@ def _update_ast_node_exceptions(ast_file_path, identifiers_to_update, is_excepti
         else:
             allowed_kinds = None
 
-        updated = 0
+        # Counters
+        updated_nodes = 0           # nodes whose value actually changed (prev != target)
+        already_same_nodes = 0      # nodes already had the target value
+        matched_ident_names = set() # identifiers that matched at least one node
+        changed_ident_names = set() # identifiers for which at least one node changed
+        already_one_ident_names = set()
+        already_zero_ident_names = set()
+        updated_paths = set()
 
         # --- recursive traversal ---
+        CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
+
         def _walk(node, parent_stack):
-            nonlocal updated
+            nonlocal updated_nodes, already_same_nodes
             if not isinstance(node, dict):
                 return
-            name = str(node.get("A_name", "")).strip()
-            kind = str(node.get("B_kind", "")).strip().lower()
-            members = node.get("G_members") or []
-            if not isinstance(members, list):
-                members = []
+
+            cur = _ast_unwrap(node)
+            if not isinstance(cur, dict):
+                return
+
+            name = str(cur.get("A_name", "")).strip()
+            kind = str(cur.get("B_kind", "")).strip().lower()
 
             matched_here = False
-            # Try to match each target spec against current node
+            parent_names = [str(p).strip() for p in parent_stack]
+
             for kind_hint, parent_path, leaf in parsed_targets:
-                # parent path must match (if provided)
-                parent_names = [str(p).strip() for p in parent_stack]
                 if parent_path:
                     if len(parent_path) > len(parent_names):
-                        # cannot match if target path deeper than our stack
                         continue
-                    # Compare only the last len(parent_path) entries
                     if parent_names[-len(parent_path):] != parent_path:
                         continue
-
-                # leaf name must match current node's A_name
                 if leaf and leaf != name:
                     continue
-
-                # kind filter (allowed_kinds global)
                 if allowed_kinds and kind not in allowed_kinds:
                     continue
-
-                # kind hint in the spec (optional)
                 if kind_hint and kind_hint != kind:
                     continue
 
-                # Match → update isException
-                node["isException"] = is_exception
-                updated += 1
-                #if not quiet:
-                    #print(f"  - 업데이트: {'/'.join(parent_names + [name])} ({kind}) (isException: {is_exception})")
+                # track matched identifier
+                if name:
+                    matched_ident_names.add(name)
 
-                # Prevent inheritance/cascading into children; we still recurse
-                # to allow other nodes with the SAME name elsewhere to be updated.
+                # normalize previous value
+                has_key = ("isException" in cur)
+                try:
+                    prev_val = int(cur.get("isException", 0)) if has_key else 0
+                except Exception:
+                    prev_val = 0
+
+                # if only_when_explicit_zero is True, allow 0->1 change only when key exists and equals 0
+                if only_when_explicit_zero and is_exception == 1 and not (has_key and prev_val == 0):
+                    # skip change; treat as already_same for reporting
+                    already_same_nodes += 1
+                    try:
+                        if name:
+                            if prev_val == 1:
+                                already_one_ident_names.add(name)
+                            else:
+                                already_zero_ident_names.add(name)
+                    except Exception:
+                        pass
+                elif prev_val != is_exception:
+                    # apply change
+                    cur["isException"] = is_exception
+                    updated_nodes += 1
+                    try:
+                        dotted = "/".join(parent_names + [name]) if (parent_names or name) else name
+                        if name:
+                            changed_ident_names.add(name)
+                        if dotted:
+                            updated_paths.add(f"{dotted} ({kind})")
+                    except Exception:
+                        pass
+                    try:
+                        if _preflight_verbose():
+                            print(f"[preflight] AST update: {'/'.join(parent_names + [name])} ({kind}) isException: {prev_val} -> {is_exception}")
+                    except Exception:
+                        pass
+                else:
+                    # no-op, already same value
+                    already_same_nodes += 1
+                    try:
+                        if is_exception == 1 and name:
+                            already_one_ident_names.add(name)
+                        elif is_exception == 0 and name:
+                            already_zero_ident_names.add(name)
+                    except Exception:
+                        pass
+
                 matched_here = True
                 if lock_children:
-                    node["_no_inherit"] = True
-                # Do NOT modify children here unless they independently match by name.
+                    cur["_no_inherit"] = True
 
-            # IMPORTANT: Skip children when this node matched by name to avoid cascading changes
-            # under a matched node (we still traverse other branches in the tree).
-            # Recurse ONLY if we didn't match this node, so children won't be touched
-            # unless they independently match elsewhere in the tree traversal.
+            # Only traverse children if we did not match here and lock_children is set
             if not (lock_children and matched_here):
-                for child in members:
-                    _walk(child, parent_stack + [name])
+                next_stack = parent_stack + ([name] if name else [])
+                # containers on cur
+                for key in CONTAINER_KEYS:
+                    ch = cur.get(key)
+                    if isinstance(ch, list):
+                        for c in ch:
+                            _walk(c, next_stack)
+                    elif isinstance(ch, dict):
+                        _walk(ch, next_stack)
+                # sibling containers on wrapper node (exclude 'node')
+                if node is not cur:
+                    for key in CONTAINER_KEYS:
+                        if key == 'node':
+                            continue
+                        ch = node.get(key)
+                        if isinstance(ch, list):
+                            for c in ch:
+                                _walk(c, next_stack)
+                        elif isinstance(ch, dict):
+                            _walk(ch, next_stack)
 
         # Traverse all top-level nodes
         for top in ast_list:
             _walk(top, [])
 
-        # Write back if any changes
-        if updated > 0:
+        # Determine requested leaf names to compute missing identifiers
+        requested_leafs = {leaf for (_k, _parents, leaf) in parsed_targets if leaf}
+        missing_ident_names = requested_leafs - matched_ident_names
+
+        # Write back only when any node value actually changed
+        if updated_nodes > 0:
             with open(ast_file_path, 'w', encoding='utf-8') as f:
                 json.dump(ast_list, f, ensure_ascii=False, indent=2)
-            if not quiet:
-                print(f"[preflight] ast_node.json 업데이트: {updated}개 항목의 isException을 {is_exception}으로 변경")
-        else:
-            if not quiet:
-                print("[preflight] ast_node.json 업데이트: 변경 없음 (대상 미일치)")
+
+        if not quiet:
+            # Summary logs
+            print(f"[preflight][apply] changed_nodes={updated_nodes}, already_same_nodes={already_same_nodes}, matched_identifiers={len(matched_ident_names)}, missing_identifiers={len(missing_ident_names)} (target={is_exception})")
+            # Legacy-style summary (one/zero/missing) for convenience
+            try:
+                if is_exception == 1:
+                    one_cnt = len(already_one_ident_names)
+                    zero_cnt = len(changed_ident_names)
+                else:
+                    # target is 0 → names that changed were previously 1
+                    one_cnt = len(changed_ident_names)
+                    zero_cnt = len(already_zero_ident_names)
+                miss_cnt = len(missing_ident_names)
+                print(f"[preflight][apply] summary: one={one_cnt}, zero={zero_cnt}, missing={miss_cnt}")
+            except Exception:
+                pass
+            try:
+                if changed_ident_names:
+                    names = sorted(list(changed_ident_names))
+                    sample = ", ".join(names[:20]) + (" ..." if len(names) > 20 else "")
+                    print(f"  changed(names) {len(names)}: {sample}")
+                if is_exception == 1 and already_one_ident_names:
+                    a1 = sorted(list(already_one_ident_names))
+                    sample = ", ".join(a1[:20]) + (" ..." if len(a1) > 20 else "")
+                    print(f"  already_one(names) {len(a1)}: {sample}")
+                if is_exception == 0 and already_zero_ident_names:
+                    a0 = sorted(list(already_zero_ident_names))
+                    sample = ", ".join(a0[:20]) + (" ..." if len(a0) > 20 else "")
+                    print(f"  already_zero(names) {len(a0)}: {sample}")
+                if missing_ident_names:
+                    m = sorted(list(missing_ident_names))
+                    sample = ", ".join(m[:20]) + (" ..." if len(m) > 20 else "")
+                    print(f"  missing(names) {len(m)}: {sample}")
+                if updated_paths and _preflight_verbose():
+                    paths = sorted(list(updated_paths))
+                    sample_p = ", ".join(paths[:10]) + (" ..." if len(paths) > 10 else "")
+                    print(f"  changed paths(sample): {sample_p}")
+            except Exception:
+                pass
 
     except Exception as e:
         if not quiet:
@@ -439,6 +1072,19 @@ def _check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> None
         return
     
     #print(f"[preflight] Using AST node file: {ast_file}")
+
+    # Optionally apply config.exclude.obfuscation to AST before checks
+    try:
+        apply_cfg = str(os.environ.get("SWINGFT_APPLY_CONFIG_TO_AST", "")).strip().lower() in {"1","true","yes","y","on"}
+        if apply_cfg and ast_file and ast_file.exists():
+            applied = _apply_config_exclusions_to_ast(str(ast_file), config)
+            if applied:
+                print(f"[preflight] apply-config → AST: {applied} nodes updated (from exclude.obfuscation)")
+        else:
+            if _preflight_verbose():
+                print("[preflight] apply-config DRY-RUN: not applying to AST (set SWINGFT_APPLY_CONFIG_TO_AST=1 to apply)")
+    except Exception:
+        pass
     
     try:
         # Load AST node list
@@ -451,21 +1097,49 @@ def _check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> None
     # Extract identifiers from AST nodes (isException: 1인 것들만) — RECURSIVE
     def _collect_ex_names_rec(ast_root):
         collected = set()
-        def _walk(node):
-            if not isinstance(node, dict):
-                return
-            name = str(node.get("A_name", "")).strip()
-            if name and node.get("isException", 0) == 1:
-                collected.add(name)
-            members = node.get("G_members") or []
-            if isinstance(members, list):
-                for ch in members:
-                    _walk(ch)
-        if isinstance(ast_root, list):
-            for top in ast_root:
-                _walk(top)
-        elif isinstance(ast_root, dict):
-            _walk(ast_root)
+        CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
+
+        def _walk(obj):
+            if isinstance(obj, dict):
+                cur = _ast_unwrap(obj)
+                if isinstance(cur, dict):
+                    nm = str(cur.get("A_name", "")).strip()
+                    if nm and int(cur.get("isException", 0)) == 1:
+                        collected.add(nm)
+                    # containers on cur
+                    for key in CONTAINER_KEYS:
+                        ch = cur.get(key)
+                        if isinstance(ch, list):
+                            for c in ch:
+                                _walk(c)
+                        elif isinstance(ch, dict):
+                            _walk(ch)
+                    # sibling containers on wrapper obj
+                    if obj is not cur:
+                        for key in CONTAINER_KEYS:
+                            if key == 'node':
+                                continue
+                            ch = obj.get(key)
+                            if isinstance(ch, list):
+                                for c in ch:
+                                    _walk(c)
+                            elif isinstance(ch, dict):
+                                _walk(ch)
+                    # conservative descent
+                    for v in cur.values():
+                        _walk(v)
+                    if obj is not cur:
+                        for k, v in obj.items():
+                            if k not in CONTAINER_KEYS:
+                                _walk(v)
+                else:
+                    for v in obj.values():
+                        _walk(v)
+            elif isinstance(obj, list):
+                for it in obj:
+                    _walk(it)
+
+        _walk(ast_root)
         return collected
 
     ex_names = _collect_ex_names_rec(ast_list)
@@ -794,12 +1468,50 @@ def _check_exclude_sensitive_identifiers(config_path: str, config, ex_names):
         try:
             with open(ast_file, 'r', encoding='utf-8') as f:
                 ast_list = json.load(f)
-            if isinstance(ast_list, list):
-                for item in ast_list:
-                    if isinstance(item, dict):
-                        name = str(item.get("A_name", "")).strip()
-                        if name:
-                            existing_names.add(name)
+
+            CONTAINER_KEYS = ("G_members", "children", "members", "extension", "node")
+
+            def _collect_names(obj):
+                if isinstance(obj, dict):
+                    cur = _ast_unwrap(obj)
+                    if isinstance(cur, dict):
+                        nm = str(cur.get("A_name", "")).strip()
+                        if nm:
+                            existing_names.add(nm)
+                        # containers on cur
+                        for key in CONTAINER_KEYS:
+                            ch = cur.get(key)
+                            if isinstance(ch, list):
+                                for c in ch:
+                                    _collect_names(c)
+                            elif isinstance(ch, dict):
+                                _collect_names(ch)
+                        # sibling containers on wrapper obj
+                        if obj is not cur:
+                            for key in CONTAINER_KEYS:
+                                if key == 'node':
+                                    continue
+                                ch = obj.get(key)
+                                if isinstance(ch, list):
+                                    for c in ch:
+                                        _collect_names(c)
+                                elif isinstance(ch, dict):
+                                    _collect_names(ch)
+                        # conservative descent
+                        for v in cur.values():
+                            _collect_names(v)
+                        if obj is not cur:
+                            for k, v in obj.items():
+                                if k not in CONTAINER_KEYS:
+                                    _collect_names(v)
+                    else:
+                        for v in obj.values():
+                            _collect_names(v)
+                elif isinstance(obj, list):
+                    for it in obj:
+                        _collect_names(it)
+
+            _collect_names(ast_list)
         except Exception:
             pass
     
@@ -807,6 +1519,30 @@ def _check_exclude_sensitive_identifiers(config_path: str, config, ex_names):
     if duplicates:
         print(f"  - 중복 식별자 발견: {sorted(list(duplicates))}")
         print("  - 이들은 이미 AST에 존재하지만 isException!=1 상태입니다.")
+    # Persist the full confirmation set BEFORE asking y/n
+    try:
+        _save_exclude_pending_json(project_root, str(ast_file) if ast_file else None, sorted(list(exclude_candidates)))
+    except Exception as _e:
+        print(f"[preflight] exclude_pending JSON 저장 경고: {_e}")
+    # --- Generate per-identifier payloads for ALL pending candidates BEFORE y/n ---
+    try:
+        from swingft_cli.core.preflight.find_identifiers_and_ast_dual import write_per_identifier_payload_files  # type: ignore
+        _pending_payloads_dir = os.path.join(os.getcwd(), ".swingft", "preflight", "payloads", "pending")
+        os.makedirs(_pending_payloads_dir, exist_ok=True)
+        write_per_identifier_payload_files(
+            project_root or "",
+            identifiers=sorted(list(exclude_candidates)),
+            out_dir=_pending_payloads_dir,
+        )
+        if _preflight_verbose():
+            print(f"[preflight] PENDING payloads 생성 완료: {len(exclude_candidates)}개 → {_pending_payloads_dir}")
+    except Exception as _e:
+        print(f"[preflight] PENDING payloads 생성 경고: {_e}")
+
+    # --- LLM raw suggestions using /complete with pending payload (pre y/n) ---
+    server_results = []
+    # LLM 호출 단계 비활성화: 서버 호출을 완전히 건너뜀 (임시)
+    server_results = []
     
     # 1) 원격 서버에 판단 요청 시도(가능하면 심볼 정보/코드 전달)
     #    현재 컨텍스트에서는 프로젝트 전체 심볼 요약만 제공될 수 있어 identifiers만 전달
@@ -900,48 +1636,45 @@ def _check_exclude_sensitive_identifiers(config_path: str, config, ex_names):
             print(f"Warning: AST analysis failed for {swift_file_path}: {e}")
             return None
 
-    # --- 서버 판단: 식별자별로 소스 스니펫을 포함해 개별 호출 ---
-    # 서버 비활성화 경로: 사용자 상호작용만으로 결정 (y/n)
-    server_results = []
-    proj_root = config.get("project", {}).get("input")
-    if isinstance(proj_root, str) and os.path.isdir(proj_root):
-        for ident in sorted(list(exclude_candidates)):
-            # 간단 프롬프트: 식별자를 난독화에서 제외할지 여부만 묻는다 (UI 모드에선 안내 포함 멀티라인)
-            try:
-                if _has_ui_prompt():
-                    prompt = (
-                        f"[preflight]\n"
-                        f"Exclude candidate detected.\n"
-                        f"  - identifier: {ident}\n\n"
-                        f"Exclude this identifier from obfuscation? [y/N]: "
-                    )
-                    ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
-                else:
-                    ans = input(f"식별자 '{ident}'를 난독화에서 제외할까요? [y/N]: ").strip().lower()
-            except (EOFError, KeyboardInterrupt):
-                print("\n사용자에 의해 취소되었습니다.")
-                sys.exit(1)
-            exclude_flag = ans in ("y", "yes")
-            server_results.append({"name": ident, "exclude": exclude_flag, "reason": "user_decision"})
-    else:
-        # 프로젝트 경로 불명 시에도 사용자 상호작용만으로 결정
-        for ident in sorted(list(exclude_candidates)):
-            try:
-                if _has_ui_prompt():
-                    prompt = (
-                        f"[preflight]\n"
-                        f"Exclude candidate detected.\n"
-                        f"  - identifier: {ident}\n\n"
-                        f"Exclude this identifier from obfuscation? [y/N]: "
-                    )
-                    ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
-                else:
-                    ans = input(f"식별자 '{ident}'를 난독화에서 제외할까요? [y/N]: ").strip().lower()
-            except (EOFError, KeyboardInterrupt):
-                print("\n사용자에 의해 취소되었습니다.")
-                sys.exit(1)
-            exclude_flag = ans in ("y", "yes")
-            server_results.append({"name": ident, "exclude": exclude_flag, "reason": "user_decision"})
+    # --- 서버 판단: LLM 제안이 없을 때만 사용자 y/n로 최초 결정 ---
+    if not server_results:
+        proj_root = config.get("project", {}).get("input")
+        if isinstance(proj_root, str) and os.path.isdir(proj_root):
+            for ident in sorted(list(exclude_candidates)):
+                try:
+                    if _has_ui_prompt():
+                        prompt = (
+                            f"[preflight]\n"
+                            f"Exclude candidate detected.\n"
+                            f"  - identifier: {ident}\n\n"
+                            f"Exclude this identifier from obfuscation? [y/N]: "
+                        )
+                        ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
+                    else:
+                        ans = input(f"식별자 '{ident}'를 난독화에서 제외할까요? [y/N]: ").strip().lower()
+                except (EOFError, KeyboardInterrupt):
+                    print("\n사용자에 의해 취소되었습니다.")
+                    sys.exit(1)
+                exclude_flag = ans in ("y", "yes")
+                server_results.append({"name": ident, "exclude": exclude_flag, "reason": "user_decision"})
+        else:
+            for ident in sorted(list(exclude_candidates)):
+                try:
+                    if _has_ui_prompt():
+                        prompt = (
+                            f"[preflight]\n"
+                            f"Exclude candidate detected.\n"
+                            f"  - identifier: {ident}\n\n"
+                            f"Exclude this identifier from obfuscation? [y/N]: "
+                        )
+                        ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
+                    else:
+                        ans = input(f"식별자 '{ident}'를 난독화에서 제외할까요? [y/N]: ").strip().lower()
+                except (EOFError, KeyboardInterrupt):
+                    print("\n사용자에 의해 취소되었습니다.")
+                    sys.exit(1)
+                exclude_flag = ans in ("y", "yes")
+                server_results.append({"name": ident, "exclude": exclude_flag, "reason": "user_decision"})
 
     # Normalize: de-duplicate server results by name
     if isinstance(server_results, list):
@@ -966,47 +1699,46 @@ def _check_exclude_sensitive_identifiers(config_path: str, config, ex_names):
                 except Exception:
                     continue
             print(f"\n[preflight] 사용자 승인 완료: 제외로 반영 {len(decided_to_exclude)}개")
+            # --- Save exclude review JSON after user approval ---
+            try:
+                _save_exclude_review_json(sorted(list(decided_to_exclude)), project_root, str(ast_file) if ast_file else None)
+            except Exception as _e:
+                print(f"[preflight] exclude_review JSON 저장 경고: {_e}")
+            try:
+                _generate_payloads_for_excludes(project_root, sorted(list(decided_to_exclude)))
+            except Exception as _e:
+                print(f"[preflight] exclude payload 생성 경고: {_e}")
         else:
-            if not _has_ui_prompt():
-                print("\n[preflight] 서버 판단 결과 검토 단계")
-                print("  - 각 항목의 이유를 확인하고 제외 반영 여부를 선택하세요.")
-            for item in server_results:
-                try:
-                    name = str((item.get("name") or item.get("identifier") or "")).strip()
-                    ex = bool(item.get("exclude"))
-                    reason = str(item.get("reason", "")).strip()
-                    if not name:
-                        continue
-                    if not _has_ui_prompt():
-                        mark = "Y" if ex else "N"
-                        print(f"\n----------------------------------------")
-                        print(f"식별자 : {name}")
-                        print(f"모델 판단 : {'EXCLUDE' if ex else 'KEEP'}")
-                        if reason:
-                            print(f"이유 : {reason}")
-                    # 사용자 승인 요청
-                    try:
-                        if _has_ui_prompt():
-                            prompt = (
-                                f"[preflight]\n"
-                                f"Identifier: {name}\n"
-                                f"Model decision: {'EXCLUDE' if ex else 'KEEP'}\n"
-                                f"Reason: {reason if reason else '-'}\n\n"
-                                f"Apply this as exclude? [y/N]: "
-                            )
-                            ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
-                        else:
-                            prompt = f"{name}: {'EXCLUDE' if ex else 'KEEP'} — 이 식별자를 제외 대상으로 반영할까요? [y/N]: "
-                            ans = input(prompt).strip().lower()
-                    except (EOFError, KeyboardInterrupt):
-                        print("\n사용자에 의해 취소되었습니다.")
-                        sys.exit(1)
-                    approve = ans in ("y", "yes") if ans else ex  # 기본은 모델 판단값
-                    if approve:
-                        decided_to_exclude.add(name)
-                except Exception:
-                    continue
+            # 배치 승인 모드: 한 번의 y/N로 전체 후보를 제외로 반영
+            try:
+                names = [str((it.get("name") or it.get("identifier") or "")).strip() for it in server_results]
+                names = [n for n in names if n]
+                preview = ", ".join(names[:10]) + (" ..." if len(names) > 10 else "")
+                if _has_ui_prompt():
+                    prompt = (
+                        f"[preflight]\n"
+                        f"총 {len(names)}개 식별자 후보가 있습니다.\n"
+                        f"예시: {preview}\n\n"
+                        f"모든 항목을 난독화 제외로 반영할까요? [y/N]: "
+                    )
+                    ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
+                else:
+                    ans = input(f"총 {len(names)}개 후보(ex: {preview})를 모두 제외로 반영할까요? [y/N]: ").strip().lower()
+            except (EOFError, KeyboardInterrupt):
+                print("\n사용자에 의해 취소되었습니다.")
+                sys.exit(1)
+            if ans in ("y", "yes"):
+                decided_to_exclude.update(names)
             print(f"\n[preflight] 사용자 승인 완료: 제외로 반영 {len(decided_to_exclude)}개")
+            # --- Save exclude review JSON after user approval ---
+            try:
+                _save_exclude_review_json(sorted(list(decided_to_exclude)), project_root, str(ast_file) if ast_file else None)
+            except Exception as _e:
+                print(f"[preflight] exclude_review JSON 저장 경고: {_e}")
+            try:
+                _generate_payloads_for_excludes(project_root, sorted(list(decided_to_exclude)))
+            except Exception as _e:
+                print(f"[preflight] exclude payload 생성 경고: {_e}")
 
     if not ast_file:
         print("  - 경고: ast_node.json 경로를 찾지 못해 AST 반영을 건너뜁니다.")
@@ -1019,97 +1751,7 @@ def _check_exclude_sensitive_identifiers(config_path: str, config, ex_names):
     except Exception as e:
         print(f"  - 처리 실패: ast_node.json 반영 중 오류 ({e})")
 
-    # Ensure config consistency
-    try:
-        from swingft_cli.core.config.writer import write_config
-    except Exception:
-        write_config = None  # type: ignore
 
-    exclude_obj = config.get("exclude")
-    if not isinstance(exclude_obj, dict):
-        exclude_obj = {}
-        config["exclude"] = exclude_obj
-    obf_list = exclude_obj.get("obfuscation")
-    if not isinstance(obf_list, list):
-        obf_list = []
-    changed = False
-    for name in sorted(list(decided_to_exclude)):
-        if name not in obf_list:
-            obf_list.append(name)
-            changed = True
-    exclude_obj["obfuscation"] = obf_list
-
-    if changed:
-        try:
-            if write_config is not None:
-                write_config(config_path, config)
-            else:
-                with io.open(config_path, "w", encoding="utf-8") as wf:
-                    json.dump(config, wf, ensure_ascii=False, indent=2)
-            print("  - 처리: config.json 저장 완료 (exclude.obfuscation)")
-        except Exception as e:
-            print(f"  - 처리 실패: config.json 저장 오류 ({e})")
-    else:
-        print("  - 처리: config.json 변경 사항 없음 (이미 포함됨)")
-
-    print("[preflight] Exclude 동기화 완료 ✅")
-
-
-def _call_llm_server(identifiers):
-    """Call LLM server for sensitivity analysis - 식별자별 개별 호출"""
-    import requests
-    import json
-    
-    results = []
-    
-    for i, identifier in enumerate(identifiers):
-        print(f"[preflight] LLM 분석 중 ({i+1}/{len(identifiers)}): {identifier}")
-        
-        try:
-            response = requests.post(
-                "http://localhost:8000/analyze",
-                json={"identifiers": [identifier]},  # 개별 호출
-                timeout=30  # 타임아웃 단축
-            )
-            
-            if response.status_code == 200:
-                result = response.json()
-                results.append({
-                    "identifier": identifier,
-                    "raw_output": result
-                })
-                print(f"[preflight] ✅ {identifier} 분석 완료")
-            else:
-                print(f"[preflight] ❌ {identifier} 분석 실패: {response.status_code}")
-                results.append({
-                    "identifier": identifier,
-                    "raw_output": None,
-                    "error": f"HTTP {response.status_code}"
-                })
-                
-        except requests.exceptions.ConnectionError:
-            print(f"[preflight] ❌ {identifier} 서버 연결 실패")
-            results.append({
-                "identifier": identifier,
-                "raw_output": None,
-                "error": "Connection failed"
-            })
-        except requests.exceptions.Timeout:
-            print(f"[preflight] ❌ {identifier} 응답 시간 초과")
-            results.append({
-                "identifier": identifier,
-                "raw_output": None,
-                "error": "Timeout"
-            })
-        except Exception as e:
-            print(f"[preflight] ❌ {identifier} 호출 오류: {e}")
-            results.append({
-                "identifier": identifier,
-                "raw_output": None,
-                "error": str(e)
-            })
-    
-    return results
 
 
 def _add_to_exception_list(identifiers):
