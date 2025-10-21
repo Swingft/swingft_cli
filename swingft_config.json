@@ -1,0 +1,50 @@
+{
+  "_comment_path": "Specify the absolute path to your project. The output path is optional.",
+  "project": {
+    "input": "/Users/Project/Root/Path",
+    "output": "/Users/Project/Root/Path_obf",
+    "build_target": "MySwiftProject"
+  },
+  "options": {
+    "Obfuscation_identifiers": true,
+    "Obfuscation_controlFlow": true,
+    "Delete_debug_symbols": true,
+    "Encryption_strings": true
+  },
+  "_comment_exclude": "The following section is optional and can be customized as needed.",
+  "exclude": {
+    "obfuscation": [
+      "sampleClass",
+      "sampleFunction",
+      "sampleVariable",
+      "sampleProperty",
+      "sampleProtocol",
+      "sampleStructure",
+      "**Wildcard"
+    ],
+    "encryption": [
+      "someString",
+      "**Wildcard"
+    ]
+  },
+  "_comment_include": "You can explicitly include items to always obfuscate/encrypt, regardless of global settings.",
+  "include": {
+    "obfuscation": [
+      "sampleClass",
+      "sampleFunction",
+      "sampleVariable",
+      "sampleProperty",
+      "sampleProtocol",
+      "sampleStructure",
+      "**Wildcard"
+    ],
+    "encryption": [
+      "someString",
+      "**Wildcard"
+    ]
+  },
+  "_comment_conflict_policy": "ask | force | skip — include/exclude vs rules conflict resolution: ask=prompt user, force=override, skip=ignore",
+  "preflight": {
+    "conflict_policy": "ask"
+  }
+}
