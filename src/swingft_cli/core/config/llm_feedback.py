@@ -163,3 +163,90 @@ def call_exclude_server_parsed(identifiers, symbol_info=None, swift_code=None):
         return None
 
 
+
+# --- Snippet and AST analyzer helpers (moved from loader) ---
+def find_first_swift_file_with_identifier(project_dir: str, ident: str):
+    try:
+        import os
+        for root, dirs, files in os.walk(project_dir):
+            dirs[:] = [d for d in dirs if not d.startswith('.') and d not in {'build', 'DerivedData'}]
+            for fn in files:
+                if not fn.lower().endswith('.swift'):
+                    continue
+                fp = os.path.join(root, fn)
+                try:
+                    with open(fp, 'r', encoding='utf-8', errors='ignore') as f:
+                        text = f.read()
+                    if ident in text:
+                        return fp, text
+                except Exception:
+                    continue
+    except Exception:
+        return None
+    return None
+
+
+def make_snippet(text: str, ident: str, ctx_lines: int = 30) -> str:
+    try:
+        lines = text.splitlines()
+        hit = None
+        for i, ln in enumerate(lines):
+            if ident in ln:
+                hit = i
+                break
+        if hit is None:
+            return text[:8000]
+        lo = max(0, hit - ctx_lines)
+        hi = min(len(lines), hit + ctx_lines + 1)
+        snippet = "\n".join(lines[lo:hi])
+        if len(snippet) > 8000:
+            snippet = snippet[:8000] + "\n... [truncated]"
+        return snippet
+    except Exception:
+        return text[:8000]
+
+
+def run_swift_ast_analyzer(swift_file_path: str):
+    """Execute local Swift AST analyzer binary and parse JSON from stdout."""
+    try:
+        import subprocess, os
+        from pathlib import Path
+        analyzer_path = Path(os.getcwd()) / 'ast_analyzers' / 'sensitive' / 'SwiftASTAnalyzer'
+        if not analyzer_path.exists():
+            print(f"Warning: AST analyzer not found at {analyzer_path}")
+            return None
+        command_str = f'"{str(analyzer_path)}" "{swift_file_path}"'
+        proc = subprocess.run(
+            command_str,
+            shell=True,
+            capture_output=True,
+            text=True,
+            encoding='utf-8',
+            timeout=60,
+        )
+        if proc.returncode != 0:
+            err = (proc.stderr or '').strip()
+            print(f"Warning: AST analyzer failed for {swift_file_path}. Error: {err}")
+            return None
+        out = (proc.stdout or '').strip()
+        if not out:
+            return None
+        lb = out.find('[')
+        lb2 = out.find('{')
+        if lb == -1 and lb2 == -1:
+            return None
+        json_start = lb if (lb != -1 and (lb < lb2 or lb2 == -1)) else lb2
+        json_part = out[json_start:]
+        import json as _json
+        try:
+            data = _json.loads(json_part)
+            return data
+        except Exception:
+            return None
+    except subprocess.TimeoutExpired:
+        print(f"Warning: AST analysis timed out for {swift_file_path}")
+        return None
+    except Exception as e:
+        print(f"Warning: AST analysis failed for {swift_file_path}: {e}")
+        return None
+
