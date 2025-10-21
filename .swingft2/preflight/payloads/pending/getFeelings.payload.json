@@ -1,0 +1,4 @@
+{
+  "instruction": "In the following Swift code, find all identifiers related to sensitive logic. Provide the names and reasoning as a JSON object.",
+  "input": "**Swift Source Code:**\n```swift\n//\n//  LoadFeelingUseCase.swift\n//  StealPlateSwift\n//\n//  Created by 스틸리언 on 2022/09/05.\n//\n\nimport Foundation\n\nclass LoadFeelingUseCase {\n    let feelingRepository: FeelingRepository\n    \n    init(feelingRepository: FeelingRepository) {\n        self.feelingRepository = feelingRepository\n    }\n    \n    func call() -> [Feeling] {\n        return feelingRepository.getFeelings()\n    }\n}\n```\n\n**AST Symbol Information (JSON):**\n```\n[\n  {\n    \"symbolName\": \"LoadFeelingUseCase\",\n    \"symbolKind\": \"class\"\n  },\n  {\n    \"symbolName\": \"call()\",\n    \"symbolKind\": \"method\"\n  },\n  {\n    \"symbolName\": \"feelingRepository\",\n    \"symbolKind\": \"variable\"\n  }\n]\n```"
+}

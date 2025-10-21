@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import json
 from pathlib import Path
+from datetime import datetime
 from typing import Any, Dict, Set
 
 from .ast_utils import update_ast_node_exceptions as _update_ast_node_exceptions
@@ -29,6 +30,24 @@ def _preflight_verbose() -> bool:
         return str(v).strip().lower() in {"1", "true", "yes", "y", "on"}
     except Exception:
         return False
+
+
+def _append_terminal_log(config: Dict[str, Any], lines: list[str]) -> None:
+    try:
+        out_dir = str((config.get("project") or {}).get("output") or "").strip()
+        if out_dir:
+            base = os.path.join(out_dir, "Obfuscation_Report", "preflight")
+        else:
+            base = os.path.join(os.getcwd(), "Obfuscation_Report", "preflight")
+        os.makedirs(base, exist_ok=True)
+        path = os.path.join(base, "terminal_preflight.log")
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(datetime.utcnow().isoformat() + "Z\n")
+            for ln in lines:
+                f.write(str(ln) + "\n")
+            f.write("\n")
+    except Exception:
+        pass
 
 
 def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[str]:
@@ -178,6 +197,21 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     allowed_kinds={"function"}, lock_children=True,
                     quiet=_has_ui_prompt()
                 )
+                # Write force action feedback
+                try:
+                    out_dir = str((config.get("project") or {}).get("output") or "").strip()
+                    fb = [
+                        "[preflight] Include conflict forced",
+                        f"Conflicts: {len(conflicts)}",
+                        f"Sample: {', '.join(sample_all[:20])}",
+                        f"Policy: {policy}",
+                        f"Target output: {out_dir}",
+                        f"AST: {str(ast_file)}",
+                    ]
+                    _write_feedback_to_output(config, "include_conflict_forced", "\n".join(fb))
+                    _append_terminal_log(config, fb)
+                except Exception:
+                    pass
             elif policy == "skip":
                 print("[preflight] include-conflict policy=skip → 자동 미반영")
                 try:
@@ -186,8 +220,11 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                         f"Conflicts: {len(conflicts)}",
                         f"Sample: {', '.join(sample_all[:20])}",
                         f"Policy: {policy}",
+                        f"Target output: {str((config.get('project') or {}).get('output') or '').strip()}",
+                        f"AST: {str(ast_file)}",
                     ]
                     _write_feedback_to_output(config, "include_conflict_skipped", "\n".join(fb))
+                    _append_terminal_log(config, fb)
                 except Exception:
                     pass
             else:
