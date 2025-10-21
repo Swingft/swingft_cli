@@ -10,7 +10,7 @@ def write_feedback_to_output(config: Dict[str, Any], filename: str, content: str
         out_dir = str(config.get("project", {}).get("output") or "").strip()
         if not out_dir:
             return None
-        base = os.path.join(out_dir, ".swingft", "preflight")
+        base = os.path.join(out_dir, "Obfuscation_Report", "preflight")
         os.makedirs(base, exist_ok=True)
         ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
         path = os.path.join(base, f"{filename}_{ts}.txt")

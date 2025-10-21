@@ -5,6 +5,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Iterable
+from datetime import datetime
 
 from .exclusions import ast_unwrap as _ast_unwrap
 from .exclusions import write_feedback_to_output as _write_feedback_to_output
@@ -18,6 +19,23 @@ def _preflight_verbose() -> bool:
     except Exception:
         return False
 
+
+def _append_terminal_log(config: Dict[str, Any], lines: list[str]) -> None:
+    try:
+        out_dir = str((config.get("project") or {}).get("output") or "").strip()
+        if out_dir:
+            base = os.path.join(out_dir, "Obfuscation_Report", "preflight")
+        else:
+            base = os.path.join(os.getcwd(), "Obfuscation_Report", "preflight")
+        os.makedirs(base, exist_ok=True)
+        path = os.path.join(base, "terminal_preflight.log")
+        with open(path, "a", encoding="utf-8") as f:
+            f.write(datetime.utcnow().isoformat() + "Z\n")
+            for ln in lines:
+                f.write(str(ln) + "\n")
+            f.write("\n")
+    except Exception:
+        pass
 
 def _has_ui_prompt() -> bool:
     try:
@@ -258,14 +276,31 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                 f"Candidates: {len(exclude_candidates)}",
                 f"Sample: {', '.join(sorted(list(exclude_candidates))[:20])}",
                 f"Policy: {ex_policy}",
+                f"Target output: {str((config.get('project') or {}).get('output') or '').strip()}",
+                f"AST: {str(ast_file)}",
             ]
             _write_feedback_to_output(config, "exclude_candidates_skipped", "\n".join(fb))
+            _append_terminal_log(config, fb)
         except Exception:
             pass
         return
     elif ex_policy == "force":
         decided_to_exclude = set(exclude_candidates)
         print(f"[preflight] exclude-candidate policy=force → {len(decided_to_exclude)}개 자동 반영")
+        # Write force action feedback
+        try:
+            fb = [
+                "[preflight] Exclude candidates forced",
+                f"Candidates: {len(exclude_candidates)}",
+                f"Sample: {', '.join(sorted(list(exclude_candidates))[:20])}",
+                f"Policy: {ex_policy}",
+                f"Target output: {str((config.get('project') or {}).get('output') or '').strip()}",
+                f"AST: {str(ast_file)}",
+            ]
+            _write_feedback_to_output(config, "exclude_candidates_forced", "\n".join(fb))
+            _append_terminal_log(config, fb)
+        except Exception:
+            pass
     else:
         for ident in sorted(list(exclude_candidates)):
             try:
