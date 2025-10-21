@@ -1,15 +1,20 @@
 #!/usr/bin/env python3
 import os
-import json
-import requests
 import sys
+import json
+from typing import Any, Dict
 
-SERVER_URL = "http://localhost:8000/complete"
+try:
+    from llama_cpp import Llama
+except Exception as e:
+    print("llama-cpp-python 미설치: pip install llama-cpp-python", file=sys.stderr)
+    raise
+
 
 def extract_first_json(text: str):
     """full_output에서 첫 번째 JSON 객체만 추출"""
     depth, start = 0, -1
-    for i, ch in enumerate(text):
+    for i, ch in enumerate(text or ""):
         if ch == '{':
             if start < 0:
                 start = i
@@ -23,6 +28,65 @@ def extract_first_json(text: str):
                     break
     return None
 
+
+def build_prompt(payload: Dict[str, Any]) -> str:
+    try:
+        return json.dumps(payload, ensure_ascii=False)
+    except Exception:
+        return str(payload)
+
+
+def load_llm() -> Llama:
+    base_model = os.getenv("BASE_MODEL_PATH", "./models/base_model.gguf")
+    lora_path = os.getenv("LORA_PATH", os.path.join("./models", "lora_sensitive.gguf"))
+    n_ctx = int(os.getenv("N_CTX", "8192"))
+    n_threads = int(os.getenv("N_THREADS", str(os.cpu_count() or 8)))
+    n_gpu_layers = int(os.getenv("N_GPU_LAYERS", "12"))  # 0=CPU only
+
+    kwargs = dict(
+        model_path=base_model,
+        n_ctx=n_ctx,
+        n_threads=n_threads,
+        logits_all=False,
+        verbose=False,
+    )
+    # 선택적 인자들만 추가
+    if lora_path and str(lora_path).strip():
+        kwargs["lora_path"] = lora_path
+    if n_gpu_layers:
+        kwargs["n_gpu_layers"] = n_gpu_layers
+
+    return Llama(**kwargs)
+
+
+def run_inference(llm: Llama, prompt: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+    max_tokens = int(payload.get("max_tokens", os.getenv("MAX_TOKENS", "512")))
+    temperature = float(payload.get("temperature", os.getenv("TEMPERATURE", "0.0")))
+    top_p = float(payload.get("top_p", os.getenv("TOP_P", "1.0")))
+    stop = payload.get("stop")
+
+    resp = llm(
+        prompt,
+        max_tokens=max_tokens,
+        temperature=temperature,
+        top_p=top_p,
+        stop=stop,
+    )
+    full_text = (resp.get("choices", [{}])[0] or {}).get("text", "")
+    first_line = full_text.splitlines()[0] if isinstance(full_text, str) and full_text.splitlines() else full_text
+    return {
+        "input": prompt,
+        "output": first_line,
+        "full_output": full_text,
+        "params": {
+            "max_tokens": max_tokens,
+            "temperature": temperature,
+            "top_p": top_p,
+            "stop": stop,
+        },
+    }
+
+
 def main():
     if len(sys.argv) != 2:
         print("사용법: python analyze_payload.py <payload.json 파일 경로>")
@@ -34,27 +98,26 @@ def main():
         sys.exit(1)
 
     with open(file_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+        payload = json.load(f)
 
-    print(f"[*] 서버 요청 중... ({file_path})")
-    resp = requests.post(SERVER_URL, json=data, timeout=180)
-    if resp.status_code != 200:
-        print(f"[!] 요청 실패: {resp.status_code}")
-        print(resp.text)
-        sys.exit(1)
+    prompt = build_prompt(payload)
+    llm = load_llm()
 
-    result = resp.json()
+    print(f"[*] 로컬 llama.cpp 호출 중... ({file_path})")
+    result = run_inference(llm, prompt, payload)
+
     full_output = result.get("full_output", "")
     parsed = extract_first_json(full_output)
 
     print("\n===== RAW full_output =====")
-    print(full_output.strip())
+    print((full_output or "").strip())
 
     print("\n===== Parsed JSON =====")
     if parsed:
         print(json.dumps(parsed, indent=2, ensure_ascii=False))
     else:
         print("⚠️ JSON 파싱 실패")
+
 
 if __name__ == "__main__":
     main()

@@ -1204,28 +1204,42 @@ def _check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> None
     _preflight_print(f"[preflight] Config include identifiers: {sorted(list(config_names))}")
     _preflight_print(f"[preflight] Conflicts found: {len(conflicts)} items")
     if conflicts:
+        # 정책 읽기(통합): preflight.conflict_policy 우선, 없으면 include_conflict_policy, 기본 ask
+        _pf = config.get("preflight", {}) if isinstance(config.get("preflight"), dict) else {}
+        policy = str(
+            _pf.get("conflict_policy")
+            or _pf.get("include_conflict_policy")
+            or "ask"
+        ).strip().lower()
         _preflight_print(f"\n[preflight] ⚠️  The provided include entries conflict with exclude rules; including them may cause conflicts:")
         sample_all = sorted(list(conflicts))
         sample = sample_all[:10]
         _preflight_print(f"  - Collision identifiers: {len(conflicts)} items (example: {', '.join(sample)})")
         try:
-            if _has_ui_prompt():
-                sample_one = sample_all[0] if sample_all else ""
-                prompt_msg = f"[preflight]\nThe provided include entries conflict with exclude rules.\n  - Collision identifiers: {len(conflicts)} items (e.g., {sample_one})\n\nDo you really want to include these identifiers in obfuscation? [y/N]: "
-                ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt_msg)).strip().lower()
-            else:
-                prompt_msg = "Do you really want to include these identifiers in obfuscation? [y/N]: "
-                ans = input(prompt_msg).strip().lower()
-            if ans in ("y", "yes"):
-                # ast_node.json에서 충돌 식별자들의 isException을 0으로 변경
-                # noisy prints suppressed under UI
+            if policy == "force":
                 _update_ast_node_exceptions(
                     ast_file, conflicts, is_exception=0,
                     allowed_kinds={"function"}, lock_children=True,
                     quiet=_has_ui_prompt()
                 )
+            elif policy == "skip":
+                print("[preflight] include-conflict policy=skip → 자동 미반영")
             else:
-                print("[preflight] 사용자가 충돌 항목 제거를 취소했습니다.")
+                if _has_ui_prompt():
+                    sample_one = sample_all[0] if sample_all else ""
+                    prompt_msg = f"[preflight]\nThe provided include entries conflict with exclude rules.\n  - Collision identifiers: {len(conflicts)} items (e.g., {sample_one})\n\nDo you really want to include these identifiers in obfuscation? [y/N]: "
+                    ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt_msg)).strip().lower()
+                else:
+                    prompt_msg = "Do you really want to include these identifiers in obfuscation? [y/N]: "
+                    ans = input(prompt_msg).strip().lower()
+                if ans in ("y", "yes"):
+                    _update_ast_node_exceptions(
+                        ast_file, conflicts, is_exception=0,
+                        allowed_kinds={"function"}, lock_children=True,
+                        quiet=_has_ui_prompt()
+                    )
+                else:
+                    print("[preflight] 사용자가 충돌 항목 제거를 취소했습니다.")
         except (EOFError, KeyboardInterrupt):
             print("\n사용자에 의해 취소되었습니다.")
             sys.exit(1)
@@ -1277,6 +1291,14 @@ def _check_exclude_sensitive_identifiers(config_path: str, config, ex_names):
         return
 
     print(f"\n[preflight] Exclude 대상 중 AST(excluded)에 없는 식별자 {len(exclude_candidates)}개 발견")
+
+    # 정책 읽기(통합): preflight.conflict_policy 우선, 없으면 exclude_candidate_policy, 기본 ask
+    _pf = config.get("preflight", {}) if isinstance(config.get("preflight"), dict) else {}
+    ex_policy = str(
+        _pf.get("conflict_policy")
+        or _pf.get("exclude_candidate_policy")
+        or "ask"
+    ).strip().lower()
 
     def _build_structured_input(swift_code: str, symbol_info) -> str:
         """
@@ -1525,19 +1547,20 @@ def _check_exclude_sensitive_identifiers(config_path: str, config, ex_names):
     except Exception as _e:
         print(f"[preflight] exclude_pending JSON 저장 경고: {_e}")
     # --- Generate per-identifier payloads for ALL pending candidates BEFORE y/n ---
-    try:
-        from swingft_cli.core.preflight.find_identifiers_and_ast_dual import write_per_identifier_payload_files  # type: ignore
-        _pending_payloads_dir = os.path.join(os.getcwd(), ".swingft", "preflight", "payloads", "pending")
-        os.makedirs(_pending_payloads_dir, exist_ok=True)
-        write_per_identifier_payload_files(
-            project_root or "",
-            identifiers=sorted(list(exclude_candidates)),
-            out_dir=_pending_payloads_dir,
-        )
-        if _preflight_verbose():
-            print(f"[preflight] PENDING payloads 생성 완료: {len(exclude_candidates)}개 → {_pending_payloads_dir}")
-    except Exception as _e:
-        print(f"[preflight] PENDING payloads 생성 경고: {_e}")
+    if ex_policy != "skip":
+        try:
+            from swingft_cli.core.preflight.find_identifiers_and_ast_dual import write_per_identifier_payload_files  # type: ignore
+            _pending_payloads_dir = os.path.join(os.getcwd(), ".swingft", "preflight", "payloads", "pending")
+            os.makedirs(_pending_payloads_dir, exist_ok=True)
+            write_per_identifier_payload_files(
+                project_root or "",
+                identifiers=sorted(list(exclude_candidates)),
+                out_dir=_pending_payloads_dir,
+            )
+            if _preflight_verbose():
+                print(f"[preflight] PENDING payloads 생성 완료: {len(exclude_candidates)}개 → {_pending_payloads_dir}")
+        except Exception as _e:
+            print(f"[preflight] PENDING payloads 생성 경고: {_e}")
 
     # --- LLM raw suggestions using /complete with pending payload (pre y/n) ---
     server_results = []
@@ -1636,45 +1659,54 @@ def _check_exclude_sensitive_identifiers(config_path: str, config, ex_names):
             print(f"Warning: AST analysis failed for {swift_file_path}: {e}")
             return None
 
-    # --- 서버 판단: LLM 제안이 없을 때만 사용자 y/n로 최초 결정 ---
-    if not server_results:
-        proj_root = config.get("project", {}).get("input")
-        if isinstance(proj_root, str) and os.path.isdir(proj_root):
-            for ident in sorted(list(exclude_candidates)):
-                try:
-                    if _has_ui_prompt():
-                        prompt = (
-                            f"[preflight]\n"
-                            f"Exclude candidate detected.\n"
-                            f"  - identifier: {ident}\n\n"
-                            f"Exclude this identifier from obfuscation? [y/N]: "
-                        )
-                        ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
-                    else:
-                        ans = input(f"식별자 '{ident}'를 난독화에서 제외할까요? [y/N]: ").strip().lower()
-                except (EOFError, KeyboardInterrupt):
-                    print("\n사용자에 의해 취소되었습니다.")
-                    sys.exit(1)
-                exclude_flag = ans in ("y", "yes")
-                server_results.append({"name": ident, "exclude": exclude_flag, "reason": "user_decision"})
-        else:
-            for ident in sorted(list(exclude_candidates)):
-                try:
-                    if _has_ui_prompt():
-                        prompt = (
-                            f"[preflight]\n"
-                            f"Exclude candidate detected.\n"
-                            f"  - identifier: {ident}\n\n"
-                            f"Exclude this identifier from obfuscation? [y/N]: "
-                        )
-                        ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
-                    else:
-                        ans = input(f"식별자 '{ident}'를 난독화에서 제외할까요? [y/N]: ").strip().lower()
-                except (EOFError, KeyboardInterrupt):
-                    print("\n사용자에 의해 취소되었습니다.")
-                    sys.exit(1)
-                exclude_flag = ans in ("y", "yes")
-                server_results.append({"name": ident, "exclude": exclude_flag, "reason": "user_decision"})
+    # --- 정책 적용: force/skip/ask ---
+    decided_to_exclude = set()
+    if ex_policy == "skip":
+        print("[preflight] exclude-candidate policy=skip → 자동 미반영")
+        return
+    elif ex_policy == "force":
+        decided_to_exclude = set(exclude_candidates)
+        print(f"[preflight] exclude-candidate policy=force → {len(decided_to_exclude)}개 자동 반영")
+    else:
+        # --- 서버 판단: LLM 제안이 없을 때만 사용자 y/n로 최초 결정 ---
+        if not server_results:
+            proj_root = config.get("project", {}).get("input")
+            if isinstance(proj_root, str) and os.path.isdir(proj_root):
+                for ident in sorted(list(exclude_candidates)):
+                    try:
+                        if _has_ui_prompt():
+                            prompt = (
+                                f"[preflight]\n"
+                                f"Exclude candidate detected.\n"
+                                f"  - identifier: {ident}\n\n"
+                                f"Exclude this identifier from obfuscation? [y/N]: "
+                            )
+                            ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
+                        else:
+                            ans = input(f"식별자 '{ident}'를 난독화에서 제외할까요? [y/N]: ").strip().lower()
+                    except (EOFError, KeyboardInterrupt):
+                        print("\n사용자에 의해 취소되었습니다.")
+                        sys.exit(1)
+                    exclude_flag = ans in ("y", "yes")
+                    server_results.append({"name": ident, "exclude": exclude_flag, "reason": "user_decision"})
+            else:
+                for ident in sorted(list(exclude_candidates)):
+                    try:
+                        if _has_ui_prompt():
+                            prompt = (
+                                f"[preflight]\n"
+                                f"Exclude candidate detected.\n"
+                                f"  - identifier: {ident}\n\n"
+                                f"Exclude this identifier from obfuscation? [y/N]: "
+                            )
+                            ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
+                        else:
+                            ans = input(f"식별자 '{ident}'를 난독화에서 제외할까요? [y/N]: ").strip().lower()
+                    except (EOFError, KeyboardInterrupt):
+                        print("\n사용자에 의해 취소되었습니다.")
+                        sys.exit(1)
+                    exclude_flag = ans in ("y", "yes")
+                    server_results.append({"name": ident, "exclude": exclude_flag, "reason": "user_decision"})
 
     # Normalize: de-duplicate server results by name
     if isinstance(server_results, list):
@@ -1688,8 +1720,9 @@ def _check_exclude_sensitive_identifiers(config_path: str, config, ex_names):
             uniq.add(nm)
             out.append(it)
         server_results = out
-    decided_to_exclude = set()
-    if isinstance(server_results, list) and server_results:
+    if ex_policy == "force":
+        pass  # already set decided_to_exclude
+    elif isinstance(server_results, list) and server_results:
         # If all decisions were made by the user already, apply directly without second review
         if all(isinstance(it, dict) and str(it.get("reason", "")) == "user_decision" for it in server_results):
             for it in server_results:

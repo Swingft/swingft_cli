@@ -12,8 +12,8 @@ def handle_generate_json(json_path: str) -> None:
     example = {
         "_comment_path": "Specify the absolute path to your project. The output path is optional.",
         "project": {
-            "input": "/Users/lanian/Desktop/MySwiftProject",
-            "output": "/Users/lanian/Desktop/MySwiftProject_obf",
+            "input": "/Users/Project/Root/Path",
+            "output": "/Users/Project/Root/Path_obf",
             "build_target": "MySwiftProject"
         },
         "options": {
@@ -53,6 +53,11 @@ def handle_generate_json(json_path: str) -> None:
                 "someString",
                 "**Wildcard"
             ]
+        }
+        ,
+        "_comment_conflict_policy": "ask | force | skip — include/exclude vs rules conflict resolution: ask=prompt user, force=override, skip=ignore",
+        "preflight": {
+            "conflict_policy": "ask" 
         }
     }
     try:

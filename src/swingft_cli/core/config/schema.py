@@ -6,7 +6,7 @@ import sys
 from typing import Any, Dict, Iterable, List
 
 MAX_CONFIG_BYTES = 5 * 1024 * 1024
-ALLOWED_TOP_KEYS = {"project", "options", "exclude", "include"}
+ALLOWED_TOP_KEYS = {"project", "options", "exclude", "include", "preflight"}
 ALLOWED_SUB_KEYS = {"obfuscation", "encryption"}
 
 EXCLUDED_DIRS = {
