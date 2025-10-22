@@ -134,6 +134,8 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
     if not ex_names:
         return set()
 
+    # capture buffer for include session logs
+    _capture: list[str] = []
     wildcard_patterns = []
     for section in ("include", "exclude"):
         for category in ("obfuscation",):
@@ -143,10 +145,10 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     if isinstance(item, str) and item.strip() == "*":
                         wildcard_patterns.append(f"{section}.{category}")
     if wildcard_patterns:
-        print(f"\n[preflight] ⚠️  '*' 단독 패턴 사용 감지:")
+        _capture.append("[preflight] ⚠️  '*' 단독 패턴 사용 감지:")
         for pattern in wildcard_patterns:
-            print(f"  - {pattern}: 모든 식별자에 적용됩니다")
-        print("  - 이는 의도된 설정인지 확인이 필요합니다.")
+            _capture.append(f"  - {pattern}: 모든 식별자에 적용됩니다")
+        _capture.append("  - 이는 의도된 설정인지 확인이 필요합니다.")
         try:
             prompt_msg = "계속 진행하시겠습니까? [y/N]: "
             if _has_ui_prompt():
@@ -177,8 +179,9 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                                 config_names.add(ex_name)
 
     conflicts = config_names & ex_names
-    _preflight_print(f"[preflight] Config include identifiers: {sorted(list(config_names))}")
-    _preflight_print(f"[preflight] Conflicts found: {len(conflicts)} items")
+    _capture.append(f"[preflight] Config include identifiers: {sorted(list(config_names))}")
+    _capture.append(f"[preflight] Conflicts found: {len(conflicts)} items")
+    _preflight_print("")  # suppress terminal spam; rely on session logs or ask mode prints
     if conflicts:
         _pf = config.get("preflight", {}) if isinstance(config.get("preflight"), dict) else {}
         policy = str(
@@ -210,10 +213,15 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     ]
                     _write_feedback_to_output(config, "include_conflict_forced", "\n".join(fb))
                     _append_terminal_log(config, fb)
+                    # session copy
+                    try:
+                        _write_feedback_to_output(config, "include_session", "\n".join(_capture + ["", *fb]))
+                    except Exception:
+                        pass
                 except Exception:
                     pass
             elif policy == "skip":
-                print("[preflight] include-conflict policy=skip → 자동 미반영")
+                # 터미널 출력 없이 파일에만 기록
                 try:
                     fb = [
                         "[preflight] Include conflict skipped by policy",
@@ -225,6 +233,10 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                     ]
                     _write_feedback_to_output(config, "include_conflict_skipped", "\n".join(fb))
                     _append_terminal_log(config, fb)
+                    try:
+                        _write_feedback_to_output(config, "include_session", "\n".join(_capture + ["", *fb]))
+                    except Exception:
+                        pass
                 except Exception:
                     pass
             else:
@@ -245,6 +257,9 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                         "Do you really want to include these identifiers in obfuscation? [y/N]: "
                     )
                     ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt_msg)).strip().lower()
+                    _capture.append("[preflight] The provided include entries conflict with exclude rules. It may cause conflicts.")
+                    _capture.append(f"Collision identifiers: {len(conflicts)} items")
+                    _capture.extend(["  - " + s for s in sample_all])
                 else:
                     full_list = ""
                     try:
@@ -267,6 +282,11 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
                         allowed_kinds={"function"}, lock_children=True,
                         quiet=_has_ui_prompt()
                     )
+                try:
+                    # save session for ask mode
+                    _write_feedback_to_output(config, "include_session", "\n".join(_capture))
+                except Exception:
+                    pass
                 else:
                     print("[preflight] 사용자가 충돌 항목 제거를 취소했습니다.")
         except (EOFError, KeyboardInterrupt):

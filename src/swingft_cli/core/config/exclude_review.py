@@ -239,13 +239,22 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
         except Exception:
             pass
 
+    # capture buffer for external session log
+    _capture: list[str] = []
+
     duplicates = exclude_candidates & existing_names
     if duplicates:
         _list = sorted(list(duplicates))
-        print("[preflight] Exclude candidates overlap with existing AST identifiers. It may cause conflicts.")
-        print(f"Candidates: {len(_list)} items")
+        _capture.append("[preflight] Exclude candidates overlap with existing AST identifiers. It may cause conflicts.")
+        _capture.append(f"Candidates: {len(_list)} items")
         for nm in _list:
-            print(f"  - {nm}")
+            _capture.append(f"  - {nm}")
+        # 터미널 출력은 ask 모드에서만 노출
+        if (ex_policy == "ask"):
+            print("[preflight] Exclude candidates overlap with existing AST identifiers. It may cause conflicts.")
+            print(f"Candidates: {len(_list)} items")
+            for nm in _list:
+                print(f"  - {nm}")
 
     # Persist pending set
     try:
@@ -272,7 +281,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
     # Decision gathering (LLM off; use y/N)
     decided_to_exclude = set()
     if ex_policy == "skip":
-        print("[preflight] exclude-candidate policy=skip → 자동 미반영")
+        # 터미널 출력 없이 파일에만 기록
         try:
             fb = [
                 "[preflight] Exclude candidates skipped by policy",
@@ -284,13 +293,18 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             ]
             _write_feedback_to_output(config, "exclude_candidates_skipped", "\n".join(fb))
             _append_terminal_log(config, fb)
+            # 세션 로그로도 남김
+            try:
+                _write_feedback_to_output(config, "exclude_session", "\n".join(_capture + ["", *fb]))
+            except Exception:
+                pass
         except Exception:
             pass
         return
     elif ex_policy == "force":
         decided_to_exclude = set(exclude_candidates)
-        print(f"[preflight] exclude-candidate policy=force → {len(decided_to_exclude)}개 자동 반영")
-        # Write force action feedback
+        # 터미널 출력 없이 파일에만 기록
+        # Write force action feedback (with terminal snapshot placeholder)
         try:
             fb = [
                 "[preflight] Exclude candidates forced",
@@ -302,6 +316,10 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             ]
             _write_feedback_to_output(config, "exclude_candidates_forced", "\n".join(fb))
             _append_terminal_log(config, fb)
+            try:
+                _write_feedback_to_output(config, "exclude_session", "\n".join(_capture + ["", *fb]))
+            except Exception:
+                pass
         except Exception:
             pass
     else:
@@ -315,6 +333,8 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                         f"  - identifier: {ident}\n\n"
                         f"Exclude this identifier from obfuscation? [y/N]: "
                     )
+                    _capture.append("[preflight]")
+                    _capture.append(f"Exclude candidate detected.\n  - identifier: {ident}")
                     ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
                 else:
                     ans = input(f"식별자 '{ident}'를 난독화에서 제외할까요? [y/N]: ").strip().lower()
@@ -325,7 +345,8 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                 decided_to_exclude.add(ident)
 
     if decided_to_exclude:
-        print(f"\n[preflight] 사용자 승인 완료: 제외로 반영 {len(decided_to_exclude)}개")
+        #print(f"\n[preflight] 사용자 승인 완료: 제외로 반영 {len(decided_to_exclude)}개")
+        #_capture.append(f"[preflight] 사용자 승인 완료: 제외로 반영 {len(decided_to_exclude)}개")
         try:
             save_exclude_review_json(sorted(list(decided_to_exclude)), project_root, str(ast_file) if ast_file else None)
         except Exception as _e:
@@ -334,6 +355,13 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             generate_payloads_for_excludes(project_root, sorted(list(decided_to_exclude)))
         except Exception as _e:
             print(f"[preflight] exclude payload 생성 경고: {_e}")
+
+    # ask 모드 세션 로그 저장
+    try:
+        if ex_policy == "ask":
+            _write_feedback_to_output(config, "exclude_session", "\n".join(_capture))
+    except Exception:
+        pass
 
     if not ast_file:
         # 조용히 스킵 (Stage 1 스킵 시 정상)
