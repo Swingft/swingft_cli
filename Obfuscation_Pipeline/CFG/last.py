@@ -696,7 +696,7 @@ def build_perfile_runtime(file_id: str, routes: List[str], max_params: int = 10)
     # CFGWrappingUtils를 활용한 간단한 actor 생성
     lines = [
         OBF_BEGIN,
-        f"actor {enum_name} {{",
+        f"enum {enum_name} {{",
         "  static private var routes: [String: ([Any]) throws -> Any] = [:]",
         "  static private var didInstall = false",
         "  static private func install() {"] + [f"    {r}" for r in routes] + [
