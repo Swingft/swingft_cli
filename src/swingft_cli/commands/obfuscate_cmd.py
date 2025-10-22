@@ -43,6 +43,9 @@ if os.environ.get("SWINGFT_TUI_ULTRA", "") == "0":
 # Deterministic UI mode: default to single-line redraw to avoid TTY variance
 _UI_MODE = os.environ.get("SWINGFT_TUI_MODE", "single").strip().lower()
 _UI_SINGLE = (_UI_MODE == "single")
+# Panel mode: one status line + tail area (default 10 lines)
+_UI_PANEL = (_UI_MODE == "panel")
+_PANEL_TAIL_LINES = int(os.environ.get("SWINGFT_TUI_PANEL_LINES", "10"))
 
 _ULTRA_LAST_WIDTH = 0
 
@@ -67,6 +70,19 @@ def _ui_init():
         sys.stdout.write("\n")
         sys.stdout.flush()
         return
+    if _UI_PANEL:
+        # Reserve one status line and N tail lines. Save cursor at status start.
+        # Sequence: move to a new line (status), save cursor, write a blank status line,
+        # then emit N blank tail lines so there's a fixed area for logs.
+        sys.stdout.write("\n")
+        # Save cursor at the start of the status line
+        sys.stdout.write("\x1b[s")
+        # write an initial blank status line and then N blank tail lines
+        sys.stdout.write("\x1b[2K\n")
+        for _ in range(_PANEL_TAIL_LINES):
+            sys.stdout.write("\x1b[2K\n")
+        sys.stdout.flush()
+        return
     if _UI_PORTABLE:
         # Fallback portable: no cursor save/restore; leave two blank lines
         sys.stdout.write("\n\n")
@@ -81,6 +97,26 @@ def _ui_init():
 def _ui_set_status(lines):
     if not isinstance(lines, (list, tuple)):
         lines = [str(lines)]
+    # PANEL mode: write status line then up to _PANEL_TAIL_LINES of tail logs.
+    if _UI_PANEL:
+        segments = [ln for ln in lines if str(ln).strip()]
+        # first element is primary status, remaining lines feed the tail
+        primary = segments[0] if segments else ""
+        tail_lines = segments[1:1 + _PANEL_TAIL_LINES]
+        # restore to saved cursor (status start)
+        sys.stdout.write("\x1b[u")
+        # write/clear status line
+        width = _term_width()
+        out = str(primary)[:width - 1]
+        sys.stdout.write("\x1b[2K" + out + "\n")
+        # write N tail lines (clear then write)
+        for i in range(_PANEL_TAIL_LINES):
+            ln = tail_lines[i] if i < len(tail_lines) else ""
+            sys.stdout.write("\x1b[2K" + str(ln) + "\n")
+        sys.stdout.flush()
+        globals()['_ULTRA_LAST_WIDTH'] = len(out)
+        return
+    # existing SINGLE/ULTRA/PORTABLE/advanced logic follows
     if _UI_SINGLE:
         # Show a compact single line regardless of TTY/IDE.
         segments = [ln for ln in lines if str(ln).strip()]
@@ -121,6 +157,10 @@ def _ui_redraw_full(lines):
         # Just rewrite the status line.
         _ui_set_status(lines)
         return
+    if _UI_PANEL:
+        # Panel mode: only rewrite status + tail area
+        _ui_set_status(lines)
+        return
     sys.stdout.write("\r")
     # clear full screen and draw banner + lines
     if _UI_ULTRA:
@@ -144,35 +184,88 @@ def _ui_redraw_full(lines):
 
 
 def _ui_prompt_line(prompt: str) -> str:
+    # PANEL mode: open the prompt on the last tail line, then clear and restore.
+    if _UI_PANEL:
+        try:
+            # Restore to status start, re-save, then move down to last tail line.
+            sys.stdout.write("\x1b[u\x1b[s")
+            move = max(1, _PANEL_TAIL_LINES)  # 1 => first tail; N => last tail
+            sys.stdout.write(f"\x1b[{move}B\r\x1b[2K")
+            sys.stdout.flush()
+            ans = input(str(prompt))
+        except Exception:
+            ans = ""
+        # After answering, clear the whole tail area so interactive logs disappear
+        try:
+            # Go back to status start and rewrite status + N empty tail lines
+            sys.stdout.write("\r\x1b[u")
+            # clear status line
+            sys.stdout.write("\x1b[2K\n")
+            # clear tail lines
+            for _ in range(_PANEL_TAIL_LINES):
+                sys.stdout.write("\x1b[2K\n")
+            # move back up to status start
+            sys.stdout.write("\x1b[u")
+            sys.stdout.flush()
+        except Exception:
+            pass
+        # Clear the prompt line and restore to status start.
+        try:
+            sys.stdout.write("\r\x1b[2K\x1b[u")
+            sys.stdout.flush()
+        except Exception:
+            pass
+        return ans
+    # SINGLE mode: inline prompt on the status line, then clear and keep redraw space intact.
+    if _UI_SINGLE:
+        try:
+            ans = input("\r" + str(prompt))
+        except Exception:
+            ans = ""
+        # Clear the line after input so the status redraw can reuse it.
+        try:
+            sys.stdout.write("\r\x1b[2K")
+            sys.stdout.flush()
+        except Exception:
+            pass
+        return ans
+    # Portable mode: degrade gracefully and then redraw the minimal UI.
     if _UI_PORTABLE:
-        # portable: 일반 입력 후 전체 리드로우로 흔적 제거
         try:
             ans = input(str(prompt))
         except Exception:
             ans = ""
         _ui_redraw_full([""])
         return ans
+    # Ultra/Advanced modes: place prompt one line below status, then clear and restore.
     if _UI_ULTRA:
         try:
+            # Place prompt at current line using CR, do not add extra newline.
             ans = input("\r" + str(prompt))
         except Exception:
             ans = ""
-        # clear prompt line by padding
-        width = _term_width()
-        sys.stdout.write("\r" + (" " * width) + "\r")
-        sys.stdout.flush()
+        # clear prompt line
+        try:
+            width = _term_width()
+            sys.stdout.write("\r" + (" " * width) + "\r")
+            sys.stdout.flush()
+        except Exception:
+            pass
         return ans
-    # 상태 영역에 프롬프트 문구를 올리고, 같은 줄에서 입력을 받는다
-    sys.stdout.write("\x1b[u\x1b[J")  # 상태 영역 복귀 및 지우기
-    sys.stdout.write(str(prompt))
-    sys.stdout.flush()
+    # Advanced (saved-cursor) mode
     try:
-        ans = input("")
+        # Go to status start, move down one line, clear, prompt.
+        sys.stdout.write("\x1b[u\x1b[B\r\x1b[2K")
+        sys.stdout.flush()
+        ans = input(str(prompt))
     except Exception:
         ans = ""
-    # 입력 직후 프롬프트 라인을 공백으로 덮어써 지운다
-    sys.stdout.write("\x1b[u\x1b[J")
-    sys.stdout.flush()
+    try:
+        # Clear the prompt line and restore to status start.
+        sys.stdout.write("\r\x1b[2K\x1b[u")
+        sys.stdout.flush()
+    except Exception:
+        pass
     return ans
 
 
@@ -309,6 +402,12 @@ def handle_obfuscate(args):
             elif isinstance(item, str) and item:
                 if item.strip():
                     tail1.append(item)
+                # Optional: echo raw logs for visibility when requested
+                try:
+                    if os.environ.get("SWINGFT_TUI_ECHO", "") == "1":
+                        print(item)
+                except Exception:
+                    pass
                 low = item.lower()
                 if low.startswith("ast:") or " ast:" in low:
                     done_ast = True
@@ -417,6 +516,12 @@ def handle_obfuscate(args):
             line = (raw or "").rstrip("\n")
             if line.strip():
                 tail2.append(line)
+                # Optional: echo raw logs for visibility when requested
+                try:
+                    if os.environ.get("SWINGFT_TUI_ECHO", "") == "1":
+                        print(line)
+                except Exception:
+                    pass
             low = line.lower()
             # handle final summary lines to update progress when steps were skipped (no per-step logs)
             if low.startswith("completed:") or low.startswith("skipped:"):
