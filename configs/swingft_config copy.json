@@ -13,20 +13,45 @@
   },
   "_comment_exclude": "The following section is optional and can be customized as needed.",
   "exclude": {
-    "obfuscation": [],
+    "obfuscation": [
+      "loadSelectedRestaurantUseCase",
+      "detailViewModel",
+      "setupBind",
+      "onSelectRestaurant",
+      "loadFeelingUseCase",
+      "disposeRestaurantRemoteLoadingViews",
+      "loadRemoteUrlPresetDataUseCase",
+      "setupAntiCaptureView",
+      "deleteSelectedFeeling",
+      "changeSystemFont",
+      "restaurantRepository",
+      "createMenuLabelText",
+      "setBackgroundColor",
+      "loadRestaurantUseCase",
+      "setupViews",
+      "savePresetData",
+      "getRestaurantsData",
+      "chooseViewModel",
+      "getFeelings",
+      "setupVM",
+      "setupVPNBlock",
+      "hideDeleteButton"
+    ],
     "encryption": [
       "chooseViewModel"
     ]
   },
   "_comment_include": "You can explicitly include items to always obfuscate/encrypt, regardless of global settings.",
   "include": {
-    "obfuscation": [],
+    "obfuscation": [
+      "rotate"
+    ],
     "encryption": [
       "chooseViewModel"
     ]
   },
   "_comment_conflict_policy": "ask | force | skip for include conflict policy",
   "preflight": {
-    "conflict_policy": "skip"
+    "conflict_policy": "ask" 
   }
 }

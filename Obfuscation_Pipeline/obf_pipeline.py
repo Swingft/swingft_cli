@@ -97,6 +97,25 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
         print("=" * 50)
     
     start = time.time()
+    # minimal TUI markers (default on; set SWINGFT_TUI_MARKERS=0 to disable)
+    def _to_bool(v, default=True):
+        try:
+            if isinstance(v, bool):
+                return v
+            if isinstance(v, str):
+                return v.strip().lower() in {"1","true","yes","y","on"}
+            if isinstance(v, (int, float)):
+                return bool(v)
+        except Exception:
+            pass
+        return default
+    _markers = _to_bool(os.environ.get("SWINGFT_TUI_MARKERS", "1"), True)
+    def _marker(msg: str):
+        try:
+            if _markers:
+                print(msg)
+        except Exception:
+            pass
     step_status = {}
 
     # 구성 파일 로드 (암호화와 동일한 기본 경로 정책)
@@ -138,13 +157,15 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
             pass
 
     if flag_ident:
+        _marker("mapping: start")
         # 식별자 매핑
         mapping()
         mapping_end = time.time()
-        # print("mapping: Done")
+        _marker("mapping: done")
         step_status["mapping"] = "Done"
 
         # 식별자 난독화
+        _marker("id-obf: start")
         swift_list_dir = os.path.join(OBFUSCATION_ROOT, "swift_file_list.txt")
         mapping_result_dir = os.path.join(OBFUSCATION_ROOT, "mapping_result_s.json")
 
@@ -171,11 +192,11 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
         make_dump_file_id(original_project_dir, obf_project_dir)
 
         id_end = time.time()
-        # print("id-obf: Done")
+        _marker("id-obf: done")
         step_status["id-obf"] = "Done"
     else:
-        # print("mapping: Skip")
-        # print("id-obf: Skip")
+        _marker("mapping: skip")
+        _marker("id-obf: skip")
         step_status["mapping"] = "Skip"
         step_status["id-obf"] = "Skip"
         id_end = start
@@ -183,6 +204,7 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
     # 제어흐름 평탄화
     flag_cff = get_bool("Obfuscation_controlFlow", True)
     if flag_cff:
+        _marker("cff: start")
         cff_path = os.path.join(OBFUSCATION_ROOT, "CFF")
         os.chdir(cff_path)
         build_marker_file = ".build/build_path.txt"
@@ -202,29 +224,31 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
         os.chdir(original_dir)
 
         cff_end = time.time()
-        # print("cff: Done")
+        _marker("cff: done")
         step_status["cff"] = "Done"
     else:
-        # print("cff: Skip")
+        _marker("cff: skip")
         step_status["cff"] = "Skip"
         cff_end = id_end
 
     # 불투명한 술어 + 데드코드 (Obfuscation_controlFlow와 동일 플래그로 제어)
     if flag_cff:
         # 불투명한 술어
+        _marker("opaq: start")
         run_opaque(obf_project_dir)
         opaq_end = time.time()
-        # print("opaq: Done")
+        _marker("opaq: done")
         step_status["opaq"] = "Done"
 
         # 데드코드
+        _marker("deadcode: start")
         deadcode()
         deadcode_end = time.time()
-        # print("deadcode: Done")
+        _marker("deadcode: done")
         step_status["deadcode"] = "Done"
     else:
-        # print("opaq: Skip")
-        # print("deadcode: Skip")
+        _marker("opaq: skip")
+        _marker("deadcode: skip")
         step_status["opaq"] = "Skip"
         step_status["deadcode"] = "Skip"
         deadcode_end = cff_end
@@ -233,6 +257,7 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
     # 문자열 암호화: 구성으로 제어
     flag_enc = get_bool("Encryption_strings", True)
     if flag_enc:
+        _marker("encryption: start")
         enc_path = os.path.join(OBFUSCATION_ROOT, "String_Encryption")
         os.chdir(enc_path)
         working_cfg = os.environ.get("SWINGFT_WORKING_CONFIG")
@@ -244,11 +269,11 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
         run_command(cmd, show_logs=True)
         os.chdir(original_dir)
         enc_end = time.time()
-        # print("encryption: Done")
+        _marker("encryption: done")
         step_status["encryption"] = "Done"
     else:
         enc_end = deadcode_end
-        # print("encryption: Skip")
+        _marker("encryption: skip")
         step_status["encryption"] = "Skip"
 
     # 동적 함수 호출 (인플레이스 실행)
@@ -257,6 +282,7 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
             #print("[INFO] Obfuscation_controlFlow=false → CFG 단계 건너뜀")
             cfg_end = enc_end
         else:
+            _marker("cfg: start")
             cfg_path = os.path.join(OBFUSCATION_ROOT, "CFG")
             os.chdir(cfg_path)
             # src와 dst 모두 obf_project_dir로 동일 설정하여 인플레이스 적용
@@ -269,19 +295,20 @@ def stage2_obfuscation(original_project_dir, obf_project_dir, OBFUSCATION_ROOT, 
             os.chdir(original_dir)
 
             cfg_end = time.time()
-            # print("cfg: Done")
+            _marker("cfg: done")
             step_status["cfg"] = "Done"
     else:
-        # print("cfg: Skip")
+        _marker("cfg: skip")
         step_status["cfg"] = "Skip"
         cfg_end = enc_end
 
     # 디버깅용 코드 제거 (원래 자리에서 실행)
     if flag_dbg:
+        _marker("debug: start")
         start_dbg = time.time()
         remove_debug_symbol(obf_project_dir)
         debug_end = time.time()
-        # print("debug: Done")
+        _marker("debug: done")
         step_status["debug"] = "Done"
     else:
         debug_end = cfg_end
