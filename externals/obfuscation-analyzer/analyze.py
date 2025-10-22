@@ -187,7 +187,7 @@ class ObfuscationAnalyzer:
             print(result.stderr)
             sys.exit(1)
 
-        print(f"  → Symbol graph saved to: {symbol_graph_path.name}")
+        #print(f"  → Symbol graph saved to: {symbol_graph_path.name}")
         return symbol_graph_path
 
     def _run_rule_analysis(self, symbol_graph_path: Path) -> list:

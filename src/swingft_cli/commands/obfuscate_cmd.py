@@ -12,15 +12,13 @@ from swingft_cli.validator import check_permissions
 from swingft_cli.config import load_config_or_exit, summarize_risks_and_confirm, extract_rule_patterns
 from swingft_cli.core.config import set_prompt_provider
 
+from swingft_cli.core.tui import TUI, progress_bar
+
 # Ensure interactive redraw is visible even under partial buffering
 try:
     sys.stdout.reconfigure(line_buffering=True)
 except Exception:
     pass
-
-# Allow forcing TTY-like behavior even when stdout is not a real TTY (e.g., IDE terminals)
-_UI_FORCE_TTY = (os.environ.get("SWINGFT_TUI_FORCE_TTY", "") == "1")
-
 
 _BANNER = r"""
 __     ____            _              __ _
@@ -31,252 +29,13 @@ __     ____            _              __ _
  |_____|                       |___/
 """
 
-_UI_PORTABLE = (os.environ.get("SWINGFT_TUI_PORTABLE", "") == "1") or (not sys.stdout.isatty())
-_UI_ULTRA = (os.environ.get("SWINGFT_TUI_ULTRA", "") == "1")
-# Force TTY-like behavior if requested
-if _UI_FORCE_TTY:
-    _UI_PORTABLE = False
-# Allow explicit disable of ULTRA via SWINGFT_TUI_ULTRA=0
-if os.environ.get("SWINGFT_TUI_ULTRA", "") == "0":
-    _UI_ULTRA = False
-
-# Deterministic UI mode: default to single-line redraw to avoid TTY variance
-_UI_MODE = os.environ.get("SWINGFT_TUI_MODE", "single").strip().lower()
-_UI_SINGLE = (_UI_MODE == "single")
-# Panel mode: one status line + tail area (default 10 lines)
-_UI_PANEL = (_UI_MODE == "panel")
-_PANEL_TAIL_LINES = int(os.environ.get("SWINGFT_TUI_PANEL_LINES", "10"))
-
-_ULTRA_LAST_WIDTH = 0
-
-def _term_width(default: int = 80) -> int:
-    try:
-        import shutil as _shutil
-        size = _shutil.get_terminal_size((default, 24))
-        return max(20, int(size.columns))
-    except Exception:
-        return default
-
-
-def print_banner():
-    print(_BANNER)
-
-
-# --- Minimal UI helpers to keep banner visually fixed and update status ---
-def _ui_init():
-    if _UI_SINGLE:
-        # Print exactly one newline to create a dedicated status line.
-        # All future updates will redraw this single line with CR+clear.
-        sys.stdout.write("\n")
-        sys.stdout.flush()
-        return
-    if _UI_PANEL:
-        # Reserve one status line and N tail lines. Save cursor at status start.
-        # Sequence: move to a new line (status), save cursor, write a blank status line,
-        # then emit N blank tail lines so there's a fixed area for logs.
-        sys.stdout.write("\n")
-        # Save cursor at the start of the status line
-        sys.stdout.write("\x1b[s")
-        # write an initial blank status line and then N blank tail lines
-        sys.stdout.write("\x1b[2K\n")
-        for _ in range(_PANEL_TAIL_LINES):
-            sys.stdout.write("\x1b[2K\n")
-        sys.stdout.flush()
-        return
-    if _UI_PORTABLE:
-        # Fallback portable: no cursor save/restore; leave two blank lines
-        sys.stdout.write("\n\n")
-        sys.stdout.flush()
-        return
-    # Advanced mode: reserve a small status area under the banner and save cursor
-    sys.stdout.write("\n\n")
-    sys.stdout.write("\x1b[s")
-    sys.stdout.flush()
-
-
-def _ui_set_status(lines):
-    if not isinstance(lines, (list, tuple)):
-        lines = [str(lines)]
-    # PANEL mode: write status line then up to _PANEL_TAIL_LINES of tail logs.
-    if _UI_PANEL:
-        segments = [ln for ln in lines if str(ln).strip()]
-        # first element is primary status, remaining lines feed the tail
-        primary = segments[0] if segments else ""
-        tail_lines = segments[1:1 + _PANEL_TAIL_LINES]
-        # restore to saved cursor (status start)
-        sys.stdout.write("\x1b[u")
-        # write/clear status line
-        width = _term_width()
-        out = str(primary)[:width - 1]
-        sys.stdout.write("\x1b[2K" + out + "\n")
-        # write N tail lines (clear then write)
-        for i in range(_PANEL_TAIL_LINES):
-            ln = tail_lines[i] if i < len(tail_lines) else ""
-            sys.stdout.write("\x1b[2K" + str(ln) + "\n")
-        sys.stdout.flush()
-        globals()['_ULTRA_LAST_WIDTH'] = len(out)
-        return
-    # existing SINGLE/ULTRA/PORTABLE/advanced logic follows
-    if _UI_SINGLE:
-        # Show a compact single line regardless of TTY/IDE.
-        segments = [ln for ln in lines if str(ln).strip()]
-        if len(segments) > 2:
-            segments = segments[:2]
-        msg = " | ".join([str(s) for s in segments]).strip()
-        width = _term_width()
-        out = (msg[:width - 1])
-        sys.stdout.write("\r\x1b[2K" + out)
-        sys.stdout.flush()
-        globals()["_ULTRA_LAST_WIDTH"] = len(out)
-        return
-    if _UI_ULTRA or _UI_PORTABLE:
-        # compress to max 2 segments (first non-empty lines)
-        segments = [ln for ln in lines if str(ln).strip()]
-        if len(segments) > 2:
-            segments = segments[:2]
-        # compress to single line and overwrite using CR + ANSI clear
-        msg = " | ".join([str(s) for s in segments]).strip()
-        width = _term_width()
-        out = (msg[:width - 1])
-        sys.stdout.write("\r\x1b[2K" + out)
-        sys.stdout.flush()
-        globals()["_ULTRA_LAST_WIDTH"] = len(out)
-        return
-    # restore cursor to status area, clear to end of screen, print new lines
-    sys.stdout.write("\x1b[u\x1b[J")
-    for ln in lines:
-        sys.stdout.write(str(ln) + "\n")
-    sys.stdout.flush()
-
-
-def _ui_redraw_full(lines):
-    if not isinstance(lines, (list, tuple)):
-        lines = [str(lines)]
-    if _UI_SINGLE:
-        # In single-line mode do not redraw the whole screen.
-        # Just rewrite the status line.
-        _ui_set_status(lines)
-        return
-    if _UI_PANEL:
-        # Panel mode: only rewrite status + tail area
-        _ui_set_status(lines)
-        return
-    sys.stdout.write("\r")
-    # clear full screen and draw banner + lines
-    if _UI_ULTRA:
-        # print banner once, then put status on the next line using CR overwrites
-        sys.stdout.write("\r\n")
-        print_banner()
-        if lines:
-            sys.stdout.write("\n")
-            sys.stdout.flush()
-            _ui_set_status([lines[0]])
-        return
-    sys.stdout.write("\x1b[H\x1b[2J")
-    sys.stdout.write(_BANNER)
-    sys.stdout.write("\n")
-    for ln in lines:
-        sys.stdout.write(str(ln) + "\n")
-    # reset saved cursor after banner for subsequent _ui_set_status
-    if not _UI_PORTABLE:
-        sys.stdout.write("\n\n\x1b[s")
-    sys.stdout.flush()
-
-
-def _ui_prompt_line(prompt: str) -> str:
-    # PANEL mode: open the prompt on the last tail line, then clear and restore.
-    if _UI_PANEL:
-        try:
-            # Restore to status start, re-save, then move down to last tail line.
-            sys.stdout.write("\x1b[u\x1b[s")
-            move = max(1, _PANEL_TAIL_LINES)  # 1 => first tail; N => last tail
-            sys.stdout.write(f"\x1b[{move}B\r\x1b[2K")
-            sys.stdout.flush()
-            ans = input(str(prompt))
-        except Exception:
-            ans = ""
-        # After answering, clear the whole tail area so interactive logs disappear
-        try:
-            # Go back to status start and rewrite status + N empty tail lines
-            sys.stdout.write("\r\x1b[u")
-            # clear status line
-            sys.stdout.write("\x1b[2K\n")
-            # clear tail lines
-            for _ in range(_PANEL_TAIL_LINES):
-                sys.stdout.write("\x1b[2K\n")
-            # move back up to status start
-            sys.stdout.write("\x1b[u")
-            sys.stdout.flush()
-        except Exception:
-            pass
-        # Clear the prompt line and restore to status start.
-        try:
-            sys.stdout.write("\r\x1b[2K\x1b[u")
-            sys.stdout.flush()
-        except Exception:
-            pass
-        return ans
-    # SINGLE mode: inline prompt on the status line, then clear and keep redraw space intact.
-    if _UI_SINGLE:
-        try:
-            ans = input("\r" + str(prompt))
-        except Exception:
-            ans = ""
-        # Clear the line after input so the status redraw can reuse it.
-        try:
-            sys.stdout.write("\r\x1b[2K")
-            sys.stdout.flush()
-        except Exception:
-            pass
-        return ans
-    # Portable mode: degrade gracefully and then redraw the minimal UI.
-    if _UI_PORTABLE:
-        try:
-            ans = input(str(prompt))
-        except Exception:
-            ans = ""
-        _ui_redraw_full([""])
-        return ans
-    # Ultra/Advanced modes: place prompt one line below status, then clear and restore.
-    if _UI_ULTRA:
-        try:
-            # Place prompt at current line using CR, do not add extra newline.
-            ans = input("\r" + str(prompt))
-        except Exception:
-            ans = ""
-        # clear prompt line
-        try:
-            width = _term_width()
-            sys.stdout.write("\r" + (" " * width) + "\r")
-            sys.stdout.flush()
-        except Exception:
-            pass
-        return ans
-    # Advanced (saved-cursor) mode
-    try:
-        # Go to status start, move down one line, clear, prompt.
-        sys.stdout.write("\x1b[u\x1b[B\r\x1b[2K")
-        sys.stdout.flush()
-        ans = input(str(prompt))
-    except Exception:
-        ans = ""
-    try:
-        # Clear the prompt line and restore to status start.
-        sys.stdout.write("\r\x1b[2K\x1b[u")
-        sys.stdout.flush()
-    except Exception:
-        pass
-    return ans
+# shared TUI instance
+tui = TUI(banner=_BANNER)
 
 
 def _progress_bar(completed: int, total: int, width: int = 30) -> str:
-    completed = max(0, min(completed, total))
-    if total <= 0:
-        total = 1
-    filled = int(width * completed / total)
-    bar = "#" * filled + "-" * (width - filled)
-    pct = int(100 * completed / total)
-    return f"[{bar}] {completed}/{total} ({pct}%)"
+    # kept only for local call-sites compatibility if any leftover imports expect function
+    return progress_bar(completed, total, width)
 
 
 def handle_obfuscate(args):
@@ -285,41 +44,74 @@ def handle_obfuscate(args):
     # 원본 보호: 입력과 출력 경로 검증
     input_path = os.path.abspath(args.input)
     output_path = os.path.abspath(args.output)
-    
+
     if input_path == output_path:
-        print(f"[ERROR] 입력과 출력 경로가 동일합니다!")
-        print(f"[ERROR] 입력: {input_path}")
-        print(f"[ERROR] 출력: {output_path}")
-        print(f"[ERROR] 원본 파일이 손상될 수 있습니다. 다른 출력 경로를 사용하세요.")
+        print(f"[ERROR] Input and output paths are the same!")
+        print(f"[ERROR] Input: {input_path}")
+        print(f"[ERROR] Output: {output_path}")
+        print(f"[ERROR] The original file may be damaged. Use a different output path.")
         sys.exit(1)
-    
+
     if output_path.startswith(input_path + os.sep) or output_path.startswith(input_path + "/"):
-        print(f"[ERROR] 출력 경로가 입력의 하위 디렉토리입니다!")
-        print(f"[ERROR] 입력: {input_path}")
-        print(f"[ERROR] 출력: {output_path}")
-        print(f"[ERROR] 원본 파일이 손상될 수 있습니다. 다른 출력 경로를 사용하세요.")
+        print(f"[ERROR] Output path is a subdirectory of the input!")
+        print(f"[ERROR] Input: {input_path}")
+        print(f"[ERROR] Output: {output_path}")
+        print(f"[ERROR] The original file may be damaged. Use a different output path.")
         sys.exit(1)
-    
-    print_banner()
-    # If user did not specify a mode, default to SINGLE redraw deterministically
-    # (Already defaulted via env; nothing else to do. Keep this comment to document behavior.)
-    _ui_init()
-    _ui_set_status([
+
+    tui.print_banner()
+    tui.init()
+    tui.set_status([
         "원본 보호 확인 완료",
         f"입력:  {input_path}",
         f"출력:  {output_path}",
         "Start Swingft …",
     ])
 
+    # preflight echo stream holder
+    _preflight_echo = {"obj": None}
+
     # install prompt provider to render interactive y/n inside status area
+    _preflight_phase = {"phase": "init"}  # init | include | exclude
+
     def _prompt_provider(msg: str) -> str:
-        return _ui_prompt_line(msg)
+        try:
+            text = str(msg)
+            # detect include confirmation prompt
+            if "Do you really want to include" in text:
+                _preflight_phase["phase"] = "include"
+            # detect transition to exclude prompts
+            elif text.startswith("Exclude this identifier") or "Exclude this identifier" in text:
+                if _preflight_phase.get("phase") != "exclude":
+                    # transition: include -> exclude (or init -> exclude)
+                    try:
+                        # clear panel and retitle header for exclude phase
+                        tui.show_exact_screen([
+                            f"Preflight: {progress_bar(0,1)}  - | Current: Checking Exclude List",
+                            "",
+                        ])
+                    except Exception:
+                        try:
+                            tui.set_status([f"Preflight: {progress_bar(0,1)}  - | Current: Checking Exclude List"])  # fallback
+                        except Exception:
+                            pass
+                    # if echo is active, reset its tail and header
+                    try:
+                        if _preflight_echo["obj"] is not None:
+                            _preflight_echo["obj"]._tail.clear()
+                            _preflight_echo["obj"]._header = f"Preflight: {progress_bar(0,1)}  - | Current: Checking Exclude List"
+                    except Exception:
+                        pass
+                _preflight_phase["phase"] = "exclude"
+        except Exception:
+            pass
+        return tui.prompt_line(msg)
+
     set_prompt_provider(_prompt_provider)
 
     # 파이프라인 경로 확인
     pipeline_path = os.path.join(os.getcwd(), "Obfuscation_Pipeline", "obf_pipeline.py")
     if not os.path.exists(pipeline_path):
-        #_ui_set_status([f"Pipeline not found: {pipeline_path}"])
         sys.exit(1)
 
     # Config 파일 처리
@@ -330,7 +122,6 @@ def handle_obfuscate(args):
         else:
             config_path = 'swingft_config.json'
         if not os.path.exists(config_path):
-            #_ui_set_status([f"Config not found: {config_path}"])
             sys.exit(1)
 
     # Working config 생성
@@ -347,13 +138,11 @@ def handle_obfuscate(args):
         try:
             shutil.copy2(abs_src, working_path)
         except Exception as copy_error:
-            #_ui_set_status([f"[config] 설정 복사본 생성 실패: {copy_error}"])
             sys.exit(1)
-        #_ui_set_status([
         working_config_path = working_path
 
     # 1단계: 전처리 (exception_list.json 생성)
-    _ui_set_status(["Preprocessing…", _progress_bar(0, 1), "AST analysis"])
+    tui.set_status(["Preprocessing…", _progress_bar(0, 1), "AST analysis"])
     try:
         # Stage 1에도 작업용 설정을 환경변수로 전달
         env1 = os.environ.copy()
@@ -413,28 +202,34 @@ def handle_obfuscate(args):
                     done_ast = True
 
             sp_idx = (sp_idx + 1) % len(spinner)
-            bar = _progress_bar(1 if done_ast else 0, 1)
-            _ui_set_status([ f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis",   "",   *list(tail1) ])
+            bar = progress_bar(1 if done_ast else 0, 1)
+            tui.set_status([ f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis",   "",   *list(tail1) ])
 
             if eof and line_queue.empty():
                 break
             time.sleep(0.05)
         rc1 = proc1.wait()
         if rc1 != 0:
-            #_ui_set_status(["Preprocessing failed", f"exit code: {rc1}"])
             sys.exit(1)
-        #_ui_set_status(["Preprocessing completed: exception_list.json created"])
-            
+
+        # preprocessing finished: clear previous tail logs so next phase starts clean
+        try:
+            tail1.clear()
+        except Exception:
+            pass
+        # refresh status to preflight screen for next phase
+        try:
+            tui.set_status([f"Preflight: {progress_bar(0,1)}  - | Current: Checking Include List"]) 
+        except Exception:
+            pass
+
     except subprocess.TimeoutExpired:
-        #_ui_set_status(["Preprocessing timed out"])
         sys.exit(1)
     except Exception as e:
-        #_ui_set_status([f"Preprocessing failed: {e}"])
         sys.exit(1)
 
     # Config 검증 및 LLM 분석
     if working_config_path:
-        # Stage 1 직후, 설정 검증 전에 analyzer 실행 + AST만 반영 (config 미수정)
         try:
             analyzer_root = os.environ.get("SWINGFT_ANALYZER_ROOT", os.path.join(os.getcwd(), "externals", "obfuscation-analyzer")).strip()
             proj_in = input_path
@@ -443,11 +238,9 @@ def handle_obfuscate(args):
             _apply_anl(analyzer_root, proj_in, ast_path, working_config_path, {})
         except Exception:
             pass
-        #_ui_set_status([f"설정 검증 시작: {working_config_path}"])
         try:
             auto_yes = getattr(args, 'yes', False)
             if auto_yes:
-                # 비대화형: 캡처하여 상태만 갱신
                 buf_out1, buf_err1 = io.StringIO(), io.StringIO()
                 with redirect_stdout(buf_out1), redirect_stderr(buf_err1):
                     config = load_config_or_exit(working_config_path)
@@ -459,31 +252,40 @@ def handle_obfuscate(args):
                     sys.stdout.write(buf_out1.getvalue() + buf_err1.getvalue() + buf_out2.getvalue() + buf_err2.getvalue())
                     sys.stdout.flush()
                     raise RuntimeError("사용자 취소")
-                _ui_set_status(["설정 검증 완료"])  # 상태 영역만 정리
+                tui.set_status(["설정 검증 완료"])
             else:
-                # 대화형: 프롬프트/로그를 그대로 표시 (캡처하지 않음)
                 config = load_config_or_exit(working_config_path)
                 patterns = extract_rule_patterns(config)
-                ok = summarize_risks_and_confirm(patterns, auto_yes=auto_yes)
-                if ok is False:
-                    raise RuntimeError("사용자 취소")
-                _ui_set_status(["설정 검증 완료"])  # 상태 영역만 정리
+                # route preflight prints into TUI panel tail
+                try:
+                    _preflight_echo["obj"] = tui.make_stream_echo(
+                        header=f"Preflight: {progress_bar(0,1)}  - | Current: Checking Include List",
+                        tail_len=10,
+                    )
+                except Exception:
+                    _preflight_echo["obj"] = None
+                if _preflight_echo["obj"] is not None:
+                    with redirect_stdout(_preflight_echo["obj"]), redirect_stderr(_preflight_echo["obj"]):
+                        ok = summarize_risks_and_confirm(patterns, auto_yes=auto_yes)
+                else:
+                    ok = summarize_risks_and_confirm(patterns, auto_yes=auto_yes)
+            if ok is False:
+                raise RuntimeError("사용자 취소")
+            tui.set_status(["설정 검증 완료"])
         except Exception as e:
-            _ui_set_status([f"설정 검증 실패: {e}"])
+            tui.set_status([f"설정 검증 실패: {e}"])
             sys.exit(1)
 
     # 2단계: 최종 난독화 (라이브 진행 바)
-    _ui_set_status(["Obfuscation in progress…"])
+    tui.set_status(["Obfuscation in progress…"])
     try:
         env = os.environ.copy()
         if working_config_path:
             env["SWINGFT_WORKING_CONFIG"] = os.path.abspath(working_config_path)
-        # ensure unbuffered output from child python
         env.setdefault("PYTHONUNBUFFERED", "1")
 
-        # known sub-steps for coarse progress
         steps = [
-            ("_bootstrap", "Bootstrap"),  # dummy step to align with end-of-step logs
+            ("_bootstrap", "Bootstrap"),
             ("mapping", "Identifier mapping"),
             ("id-obf", "Identifier obfuscation"),
             ("cff", "Control flow flattening"),
@@ -491,14 +293,12 @@ def handle_obfuscate(args):
             ("deadcode", "Dead code"),
             ("encryption", "String encryption"),
         ]
-        # non-progress labels we still want to show
         labels_extra = {
             "cfg": "Dynamic function",
             "debug": "Debug symbol removal",
         }
         step_keys = [k for k, _ in steps]
         total_steps = len(steps)
-        # count bootstrap as immediately completed so bar can reach 100%
         seen = {"_bootstrap"}
         tail2 = deque(maxlen=10)
 
@@ -516,32 +316,28 @@ def handle_obfuscate(args):
             line = (raw or "").rstrip("\n")
             if line.strip():
                 tail2.append(line)
-                # Optional: echo raw logs for visibility when requested
                 try:
                     if os.environ.get("SWINGFT_TUI_ECHO", "") == "1":
                         print(line)
                 except Exception:
                     pass
             low = line.lower()
-            # handle final summary lines to update progress when steps were skipped (no per-step logs)
             if low.startswith("completed:") or low.startswith("skipped:"):
                 try:
                     summary = low.split(":", 1)[1]
                     items = [s.strip() for s in summary.split(",") if s.strip()]
                     for item in items:
                         if "identifiers obfuscation" in item:
-                            seen.update(["mapping", "id-obf"])  # treat skipped as completed for bar
+                            seen.update(["mapping", "id-obf"])
                         if "control flow obfuscation" in item:
-                            seen.update(["cff", "opaq", "deadcode"])  # cfg is extra label
+                            seen.update(["cff", "opaq", "deadcode"])
                         if "string encryption" in item:
                             seen.add("encryption")
                         if "delete debug symbols" in item:
                             last_current = "Debug symbol removal"
                 except Exception:
                     pass
-            # mark completion on duration lines like "mapping:" etc.
             for key, label in steps:
-                # encryption: detect both start and end
                 if key == "encryption":
                     if "[swingft_string_encryption] encryption_strings is true" in low:
                         last_current = label
@@ -551,18 +347,16 @@ def handle_obfuscate(args):
                 else:
                     if low.startswith(f"{key}:") or f" {key}:" in low:
                         seen.add(key)
-                        # show NEXT step as current upon completion of this step
                         idx = step_keys.index(key)
                         if idx + 1 < total_steps:
                             last_current = steps[idx + 1][1]
                         else:
                             last_current = label
-            # show extra labels (do not affect progress)
             for k, lbl in labels_extra.items():
                 if low.startswith(f"{k}:") or f" {k}:" in low:
                     last_current = lbl
-            bar = _progress_bar(len(seen), total_steps)
-            _ui_set_status([
+            bar = progress_bar(len(seen), total_steps)
+            tui.set_status([
                 f"2단계 진행: {bar}",
                 f"현재: {last_current}",
                 "",
@@ -570,13 +364,11 @@ def handle_obfuscate(args):
             ])
         rc = proc.wait()
         if rc != 0:
-            _ui_set_status(["Obfuscation failed", f"exit code: {rc}"])
+            tui.set_status(["Obfuscation failed", f"exit code: {rc}"])
             sys.exit(1)
-        # 화면 리로드 없이 아래 한 줄만 추가
-        # 완료 라인 출력은 종료 시 한 번만 담당 (아래 공통 블록에서 처리)
 
     except Exception as e:
-        _ui_set_status([f"Obfuscation failed: {e}"])
+        tui.set_status([f"Obfuscation failed: {e}"])
         sys.exit(1)
 
     # 종료 시 전체 리로드 방지: 상태영역 갱신 대신 한 줄만 추가
@@ -584,4 +376,4 @@ def handle_obfuscate(args):
         sys.stdout.write("\nObfuscation completed\n")
         sys.stdout.flush()
     except Exception:
-        _ui_set_status(["Obfuscation completed"])  # 폴백
+        tui.set_status(["Obfuscation completed"])

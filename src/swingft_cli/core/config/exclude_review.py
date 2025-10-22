@@ -168,10 +168,10 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
                         exclude_candidates.add(proj_id)
 
     if not exclude_candidates:
-        print("[preflight] Exclude(obfuscation) 후보 중 AST(excluded) 기준으로 새로 반영할 식별자 없음 ✅")
+        #print("[preflight] Exclude(obfuscation) 후보 중 AST(excluded) 기준으로 새로 반영할 식별자 없음 ✅")
         return
 
-    print(f"\n[preflight] Exclude 대상 중 AST(excluded)에 없는 식별자 {len(exclude_candidates)}개 발견")
+    #print(f"\n[preflight] Exclude(obfuscation) candidates found: {len(exclude_candidates)}")
 
     # Policy
     _pf = config.get("preflight", {}) if isinstance(config.get("preflight"), dict) else {}
@@ -241,8 +241,11 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
 
     duplicates = exclude_candidates & existing_names
     if duplicates:
-        print(f"  - 중복 식별자 발견: {sorted(list(duplicates))}")
-        print("  - 이들은 이미 AST에 존재하지만 isException!=1 상태입니다.")
+        _list = sorted(list(duplicates))
+        print("[preflight] Exclude candidates overlap with existing AST identifiers. It may cause conflicts.")
+        print(f"Candidates: {len(_list)} items")
+        for nm in _list:
+            print(f"  - {nm}")
 
     # Persist pending set
     try:
@@ -338,7 +341,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
 
     try:
         _update_ast_node_exceptions(str(ast_file), sorted(list(decided_to_exclude)), is_exception=1, allowed_kinds=None, lock_children=False)
-        print("  - 처리: ast_node.json 반영 완료 (isException=1)")
+        #print("  - 처리: ast_node.json 반영 완료 (isException=1)")
     except Exception as e:
         print(f"  - 처리 실패: ast_node.json 반영 중 오류 ({e})")
 
