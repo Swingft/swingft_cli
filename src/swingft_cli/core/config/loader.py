@@ -485,14 +485,38 @@ from .ast_utils import update_ast_node_exceptions as _update_ast_node_exceptions
 def _check_exception_conflicts(*args, **kwargs):
     # legacy shim (kept for import/back-compat); logic moved to preflight.conflicts
     from .conflicts import check_exception_conflicts as _impl
+
+    # extract config for gating
+    _config_path = None
+    _config = None
+    if isinstance(args, tuple) and len(args) >= 2:
+        _config_path = args[0]
+        _config = args[1]
+    else:
+        _config_path = kwargs.get("config_path")
+        _config = kwargs.get("config")
+
+    # If identifier obfuscation is disabled, skip preflight (include/exclude) entirely
+    try:
+        def _to_bool(v, default=True):
+            if isinstance(v, bool):
+                return v
+            if isinstance(v, str):
+                return v.strip().lower() in {"1", "true", "yes", "y", "on"}
+            if isinstance(v, (int, float)):
+                return bool(v)
+            return default
+        identifiers_on = True
+        if isinstance(_config, dict):
+            src = _config.get("options") if isinstance(_config.get("options"), dict) else _config
+            identifiers_on = _to_bool((src or {}).get("Obfuscation_identifiers", True), True)
+        if not identifiers_on:
+            return set()
+    except Exception:
+        pass
+
     res = _impl(*args, **kwargs)
     try:
-        if isinstance(args, tuple) and len(args) >= 2:
-            _config_path = args[0]
-            _config = args[1]
-        else:
-            _config_path = kwargs.get("config_path")
-            _config = kwargs.get("config")
         if _config_path is not None and _config is not None:
             _check_exclude_sensitive_identifiers(_config_path, _config, res or set())
     except Exception:
