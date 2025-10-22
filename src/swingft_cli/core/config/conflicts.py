@@ -230,11 +230,36 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
             else:
                 if _has_ui_prompt():
                     import swingft_cli.core.config as _cfg
-                    sample_one = sample_all[0] if sample_all else ""
-                    prompt_msg = f"[preflight]\nThe provided include entries conflict with exclude rules.\n  - Collision identifiers: {len(conflicts)} items (e.g., {sample_one})\n\nDo you really want to include these identifiers in obfuscation? [y/N]: "
+                    full_list = ""
+                    try:
+                        if sample_all:
+                            full_list = "\n  - " + "\n  - ".join(sample_all)
+                    except Exception:
+                        full_list = ""
+                    prompt_msg = (
+                        "[preflight] "
+                        "The provided include entries conflict with exclude rules. It may cause conflicts.\n"
+                        f"Collision identifiers: {len(conflicts)} items"
+                        f"{'' if sample_all else ''}"
+                        f"{full_list}\n\n"
+                        "Do you really want to include these identifiers in obfuscation? [y/N]: "
+                    )
                     ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt_msg)).strip().lower()
                 else:
-                    prompt_msg = "Do you really want to include these identifiers in obfuscation? [y/N]: "
+                    full_list = ""
+                    try:
+                        if sample_all:
+                            full_list = "\n  - " + "\n  - ".join(sample_all)
+                    except Exception:
+                        full_list = ""
+                    prompt_msg = (
+                        "[preflight]\n"
+                        "The provided include entries conflict with exclude rules.\n"
+                        f"  - Collision identifiers: {len(conflicts)} items"
+                        f"{':' if sample_all else ''}"
+                        f"{full_list}\n\n"
+                        "Do you really want to include these identifiers in obfuscation? [y/N]: "
+                    )
                     ans = input(prompt_msg).strip().lower()
                 if ans in ("y", "yes"):
                     _update_ast_node_exceptions(
