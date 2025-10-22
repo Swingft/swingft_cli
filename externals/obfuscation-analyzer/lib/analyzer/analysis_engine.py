@@ -19,21 +19,21 @@ class AnalysisEngine:
         """
         Iterates through all loaded rules and applies them to the symbol graph.
         """
-        print("🚀 Starting exclusion analysis...")
+        #print("🚀 Starting exclusion analysis...")
 
         # Iterate over each rule loaded from the YAML file
         for i, rule in enumerate(self.rules):
             rule_id = rule.get('id', 'Unknown Rule')
-            print(f"  - Running rule [{i + 1}/{len(self.rules)}] \"{rule_id}\"...")
+            #print(f"  - Running rule [{i + 1}/{len(self.rules)}] \"{rule_id}\"...")
 
             pattern = rule.get('pattern')
             if not pattern:
-                print(f"    ⚠️  Skipping rule with no pattern: {rule_id}")
+                #print(f"    ⚠️  Skipping rule with no pattern: {rule_id}")
                 continue
 
             # Use the pattern matcher to find all matching symbol IDs
             matched_ids = self.matcher.match(pattern)
-            print(f"    Found {len(matched_ids)} matching symbols.")
+            #print(f"    Found {len(matched_ids)} matching symbols.")
 
             # For each matched symbol, store it with the reason for exclusion
             for symbol_id in matched_ids:
@@ -47,7 +47,7 @@ class AnalysisEngine:
                     self.excluded_symbols[symbol_id] = []
                 self.excluded_symbols[symbol_id].append(reason)
 
-        print(f"✅ Analysis complete. Found {len(self.excluded_symbols)} unique symbols to exclude.")
+        #print(f"✅ Analysis complete. Found {len(self.excluded_symbols)} unique symbols to exclude.")
 
     def get_results(self) -> list:
         """

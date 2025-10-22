@@ -203,13 +203,13 @@ def _apply_analyzer_exclusions_to_ast_and_config(
             run_cmd = os.environ.get("SWINGFT_ANALYZER_CMD", "").strip()
             if run_cmd:
                 cmd = run_cmd.format(project=project_root, root=analyzer_root)
-                print(f"[preflight] analyzer run: {cmd}")
+                #print(f"[preflight] analyzer run: {cmd}")
                 subprocess.run(cmd, shell=True, cwd=analyzer_root)
             else:
                 analyze_py = os.path.join(analyzer_root, "analyze.py")
                 if os.path.isfile(analyze_py):
                     cmd_list = ["python3", "analyze.py", project_root]
-                    print(f"[preflight] analyzer run (default): {' '.join(cmd_list)}")
+                    #print(f"[preflight] analyzer run (default): {' '.join(cmd_list)}")
                     subprocess.run(cmd_list, cwd=analyzer_root)
         except Exception as e:
             print(f"[preflight] analyzer run warning: {e}")
@@ -239,7 +239,7 @@ def _apply_analyzer_exclusions_to_ast_and_config(
                 os.path.join(os.getcwd(), "AST", "output", "ast_node.json"),
             ]
             ast_path_eff = next((p for p in candidates if os.path.isfile(p)), None)
-            print(f"[preflight] AST path autodetect: {ast_path_eff or 'NOT FOUND'}")
+
         if ast_path_eff and os.path.isfile(ast_path_eff):
             # Always print comparison summary (one/zero/missing) before applying
             zeros_est = None
@@ -255,9 +255,11 @@ def _apply_analyzer_exclusions_to_ast_and_config(
             if apply_flag:
                 try:
                     if zeros_est is not None:
-                        print(f"[preflight] analyzer → AST 적용: ≈{zeros_est} identifiers (explicit 0→1, apply=ON)")
+                        #print(f"[preflight] analyzer → AST 적용: ≈{zeros_est} identifiers (explicit 0→1, apply=ON)")
+                        pass
                     else:
-                        print(f"[preflight] analyzer → AST 적용: identifiers (explicit 0→1, apply=ON)")
+                        #print(f"[preflight] analyzer → AST 적용: identifiers (explicit 0→1, apply=ON)")
+                        pass
                     _update_ast_node_exceptions(
                         ast_path_eff,
                         names,

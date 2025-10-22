@@ -18,13 +18,13 @@ struct SymbolExtractor: ParsableCommand {
     var externalExclusionList: String?
 
     func run() throws {
-        print("🔍 Starting extraction from: \(projectPath)...")
+        //print("🔍 Starting extraction from: \(projectPath)...")
         let projectURL = URL(fileURLWithPath: projectPath)
 
         let extractor = GraphExtractor()
         try extractor.extract(from: projectURL, externalExclusionsFile: externalExclusionList)
 
-        print("✅ Found \(extractor.symbols.count) symbols and \(extractor.edges.count) relationships.")
+        //print("✅ Found \(extractor.symbols.count) symbols and \(extractor.edges.count) relationships.")
 
         // [수정] ISO8-601 오타를 ISO8601로 바로잡았습니다.
         let graph = SymbolGraph(
@@ -43,7 +43,7 @@ struct SymbolExtractor: ParsableCommand {
         let outputURL = URL(fileURLWithPath: output)
         try jsonData.write(to: outputURL)
 
-        print("🎉 Successfully exported symbol graph to: \(outputURL.path)")
+        //print("🎉 Successfully exported symbol graph to: \(outputURL.path)")
     }
 }
 

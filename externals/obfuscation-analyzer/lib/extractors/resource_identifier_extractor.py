@@ -619,24 +619,25 @@ class ResourceScanner:
         return False
 
     def scan_all(self):
-        print(f"🔍 프로젝트: {self.project_path}")
-        print(f"📂 리소스 파일 검색 중...\n")
+        #print(f"🔍 프로젝트: {self.project_path}")
+        #print(f"📂 리소스 파일 검색 중...\n")
 
         self._scan_directory(self.project_path)
 
-        print("\n" + "=" * 60)
-        print("📊 추출 결과 요약")
-        print("=" * 60)
+        #print("\n" + "=" * 60)
+        #print("📊 추출 결과 요약")
+        #print("=" * 60)
 
         for file_type, categories in self.results.items():
             total = sum(len(ids) for ids in categories.values())
             if total > 0:
-                print(f"\n[{file_type}]")
+                #print(f"\n[{file_type}]")
                 for category, identifiers in sorted(categories.items()):
                     if identifiers:
-                        print(f"  {category:30s}: {len(identifiers):>6}개")
+                        #print(f"  {category:30s}: {len(identifiers):>6}개")
+                        pass
 
-        print("\n" + "=" * 60)
+        #print("\n" + "=" * 60)
 
     def _scan_directory(self, directory: Path):
         try:
@@ -645,14 +646,14 @@ class ResourceScanner:
                     if not self.should_skip_directory(item):
                         # CoreData 모델
                         if item.suffix == '.xcdatamodeld':
-                            print(f"✓ CoreData: {item.name}")
+                            #print(f"✓ CoreData: {item.name}")
                             parsed = CoreDataParser.parse(item)
                             self._merge_results('CoreData', parsed)
                             self.stats['coredata'] += 1
 
                         # Assets Catalog
                         elif item.suffix == '.xcassets':
-                            print(f"✓ Assets: {item.name}")
+                            #print(f"✓ Assets: {item.name}")
                             parsed = AssetsParser.parse(item)
                             self._merge_results('Assets', parsed)
                             self.stats['assets'] += 1
@@ -662,33 +663,33 @@ class ResourceScanner:
 
                 elif item.is_file():
                     if item.suffix == '.xib':
-                        print(f"✓ XIB: {item.name}")
+                        #print(f"✓ XIB: {item.name}")
                         parsed = XIBStoryboardParser.parse(item)
                         self._merge_results('XIB/Storyboard', parsed)
                         self.stats['xib'] += 1
 
                     elif item.suffix == '.storyboard':
-                        print(f"✓ Storyboard: {item.name}")
+                        #print(f"✓ Storyboard: {item.name}")
                         parsed = XIBStoryboardParser.parse(item)
                         self._merge_results('XIB/Storyboard', parsed)
                         self.stats['storyboard'] += 1
 
                     elif item.suffix == '.plist':
                         if 'xcschememanagement' not in item.name.lower():
-                            print(f"✓ Plist: {item.name}")
+                            #print(f"✓ Plist: {item.name}")
                             parsed = PlistParser.parse(item)
                             self._merge_results('Plist', parsed)
                             self.stats['plist'] += 1
 
                     elif item.suffix == '.strings':
-                        print(f"✓ Strings: {item.name}")
+                        #print(f"✓ Strings: {item.name}")
                         keys = StringsFileParser.parse(item)
                         if keys:
                             self.results['Strings']['localization_keys'].update(keys)
                         self.stats['strings'] += 1
 
                     elif item.suffix == '.entitlements':
-                        print(f"✓ Entitlements: {item.name}")
+                        #print(f"✓ Entitlements: {item.name}")
                         parsed = EntitlementsParser.parse(item)
                         self._merge_results('Entitlements', parsed)
                         self.stats['entitlements'] += 1

@@ -16,19 +16,19 @@ class RuleLoader:
                 data = yaml.safe_load(f)
 
             if not isinstance(data, dict) or 'rules' not in data:
-                print(f"❌ Error: YAML 파일은 'rules' 키를 포함해야 합니다: {yaml_path}", file=sys.stderr)
+                #print(f"❌ Error: YAML 파일은 'rules' 키를 포함해야 합니다: {yaml_path}", file=sys.stderr)
                 return []
 
             rules_list = data.get('rules', [])
             if not isinstance(rules_list, list):
-                print(f"❌ Error: 'rules' 키의 값은 리스트여야 합니다: {yaml_path}", file=sys.stderr)
+                #print(f"❌ Error: 'rules' 키의 값은 리스트여야 합니다: {yaml_path}", file=sys.stderr)
                 return []
 
             return rules_list
 
         except FileNotFoundError:
-            print(f"❌ Error: 규칙 파일을 찾을 수 없습니다: {yaml_path}", file=sys.stderr)
+            #print(f"❌ Error: 규칙 파일을 찾을 수 없습니다: {yaml_path}", file=sys.stderr)
             sys.exit(1)
         except yaml.YAMLError as e:
-            print(f"❌ Error: YAML 파싱에 실패했습니다: {yaml_path}\n{e}", file=sys.stderr)
+            #print(f"❌ Error: YAML 파싱에 실패했습니다: {yaml_path}\n{e}", file=sys.stderr)
             sys.exit(1)

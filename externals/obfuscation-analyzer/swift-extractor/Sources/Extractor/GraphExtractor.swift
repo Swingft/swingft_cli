@@ -59,14 +59,14 @@ class GraphExtractor {
             loadExternalExclusions(from: path)
         }
 
-        print("  - Analyzing Plist and Storyboard files...")
+        //print("  - Analyzing Plist and Storyboard files...")
         let plistAnalyzer = PlistAnalyzer()
         let storyboardAnalyzer = StoryboardAnalyzer()
         let fileBasedExclusions = plistAnalyzer.analyze(projectURL: projectURL)
             .union(storyboardAnalyzer.analyze(projectURL: projectURL))
         self.externalExclusions.formUnion(fileBasedExclusions)
 
-        print("  - Analyzing Swift source files...")
+        //print("  - Analyzing Swift source files...")
         let fileManager = FileManager.default
         let enumerator = fileManager.enumerator(
             at: projectURL,
@@ -93,20 +93,20 @@ class GraphExtractor {
     }
 
     private func loadExternalExclusions(from path: String) {
-        print("  - Loading external exclusion list from: \(path)")
+        //print("  - Loading external exclusion list from: \(path)")
         do {
             let fileURL = URL(fileURLWithPath: path)
             let content = try String(contentsOf: fileURL, encoding: .utf8)
             let names = content.split(whereSeparator: \.isNewline).map(String.init)
             self.externalExclusions = Set(names)
-            print("  - Loaded \(externalExclusions.count) external identifiers.")
+            //print("  - Loaded \(externalExclusions.count) external identifiers.")
         } catch {
-            print("  - ⚠️ Warning: Could not load external exclusion list. \(error.localizedDescription)")
+            //print("  - ⚠️ Warning: Could not load external exclusion list. \(error.localizedDescription)")
         }
     }
 
     private func resolveRelationships() {
-        print("  - Resolving symbol references...")
+        //print("  - Resolving symbol references...")
         ensureSystemSymbolsExist()
         resolveNamedEdges()
         buildInheritanceAndConformanceChains()

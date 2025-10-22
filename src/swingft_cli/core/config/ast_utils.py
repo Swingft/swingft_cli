@@ -46,10 +46,9 @@ def compare_exclusion_list_vs_ast(analyzer_root: str, ast_file_path: str | None)
             ]
             ast_path_eff = next((p for p in candidates if os.path.isfile(p)), None)
         result["ast_path"] = ast_path_eff
-        try:
-            print(f"[preflight] AST path: {ast_path_eff or 'NOT FOUND'}")
-        except Exception:
-            pass
+
+        #print(f"[preflight] AST path: {ast_path_eff or 'NOT FOUND'}")
+
         if not ast_path_eff:
             return result
 
@@ -113,7 +112,7 @@ def compare_exclusion_list_vs_ast(analyzer_root: str, ast_file_path: str | None)
 
         zeros, missing = [], []
         one = zero = not_found = 0
-        print("[preflight][compare] exclusion_list.txt vs AST isException")
+        #print("[preflight][compare] exclusion_list.txt vs AST isException")
         # lowercase fallback maps
         status_map_lc = {k.lower(): v for k, v in status_map.items()}
         dotted_map_lc = {k.lower(): v for k, v in dotted_map.items()}
@@ -148,19 +147,19 @@ def compare_exclusion_list_vs_ast(analyzer_root: str, ast_file_path: str | None)
                     zeros.append(nm)
                 if len(result["zeros"]) < 1000:
                     result["zeros"].append(nm)
-        print(f"[preflight][compare] summary: one={one}, zero={zero}, missing={not_found}")
-        if zeros:
-            print(f"  zeros(sample): {', '.join(zeros)}")
-            # print occurrence counts for zero-sample names
-            try:
-                for _nm in zeros:
-                    _cnt = len(status_map.get(_nm, []))
-                    print(f"    count[{_nm}]={_cnt}")
-            except Exception:
-                pass
-        if missing:
-            print(f"  missing(sample): {', '.join(missing)}")
-        result.update({"one": one, "zero": zero, "missing": not_found})
+        #print(f"[preflight][compare] summary: one={one}, zero={zero}, missing={not_found}")
+        # if zeros:
+        #     print(f"  zeros(sample): {', '.join(zeros)}")
+        #     # print occurrence counts for zero-sample names
+        #     try:
+        #         for _nm in zeros:
+        #             _cnt = len(status_map.get(_nm, []))
+        #             print(f"    count[{_nm}]={_cnt}")
+        #     except Exception:
+        #         pass
+        # if missing:
+        #     print(f"  missing(sample): {', '.join(missing)}")
+        # result.update({"one": one, "zero": zero, "missing": not_found})
         # store complete missing (limited)
         for nm in missing:
             if len(result["missings"]) < 1000:
@@ -188,7 +187,7 @@ def update_ast_node_exceptions(
     is_exception: int = 0,
     allowed_kinds: set[str] | None = None,
     lock_children: bool = True,
-    quiet: bool = False,
+    quiet: bool = True,
     only_when_explicit_zero: bool = False,
 ) -> None:
     """Update isException flag for specified identifiers in ast_node.json.
@@ -345,42 +344,40 @@ def update_ast_node_exceptions(
         if updated_nodes > 0:
             with open(ast_file_path, 'w', encoding='utf-8') as f:
                 json.dump(ast_list, f, ensure_ascii=False, indent=2)
-        if not quiet:
-            print(f"[preflight][apply] changed_nodes={updated_nodes}, already_same_nodes={already_same_nodes}, matched_identifiers={len(matched_ident_names)}, missing_identifiers={len(missing_ident_names)} (target={is_exception})")
-            # Legacy-style summary (one/zero/missing) and samples
-            try:
-                if is_exception == 1:
-                    one_cnt = len(already_one_ident_names)
-                    zero_cnt = len(changed_ident_names)
-                else:
-                    one_cnt = len(changed_ident_names)
-                    zero_cnt = len(already_zero_ident_names)
-                miss_cnt = len(missing_ident_names)
-                print(f"[preflight][apply] summary: one={one_cnt}, zero={zero_cnt}, missing={miss_cnt}")
-                if changed_ident_names:
-                    names = sorted(list(changed_ident_names))
-                    sample = ", ".join(names[:20]) + (" ..." if len(names) > 20 else "")
-                    print(f"  changed(names) {len(names)}: {sample}")
-                if is_exception == 1 and already_one_ident_names:
-                    a1 = sorted(list(already_one_ident_names))
-                    sample = ", ".join(a1[:20]) + (" ..." if len(a1) > 20 else "")
-                    print(f"  already_one(names) {len(a1)}: {sample}")
-                if is_exception == 0 and already_zero_ident_names:
-                    a0 = sorted(list(already_zero_ident_names))
-                    sample = ", ".join(a0[:20]) + (" ..." if len(a0) > 20 else "")
-                    print(f"  already_zero(names) {len(a0)}: {sample}")
-                if missing_ident_names:
-                    m = sorted(list(missing_ident_names))
-                    sample = ", ".join(m[:20]) + (" ..." if len(m) > 20 else "")
-                    print(f"  missing(names) {len(m)}: {sample}")
-                if updated_paths and _preflight_verbose():
-                    paths = sorted(list(updated_paths))
-                    sample_p = ", ".join(paths[:10]) + (" ..." if len(paths) > 10 else "")
-                    print(f"  changed paths(sample): {sample_p}")
-            except Exception:
-                pass
+        # if not quiet:
+        #     #print(f"[preflight][apply] changed_nodes={updated_nodes}, already_same_nodes={already_same_nodes}, matched_identifiers={len(matched_ident_names)}, missing_identifiers={len(missing_ident_names)} (target={is_exception})")
+        #     # Legacy-style summary (one/zero/missing) and samples
+        #     try:
+        #         if is_exception == 1:
+        #             one_cnt = len(already_one_ident_names)
+        #             zero_cnt = len(changed_ident_names)
+        #         else:
+        #             one_cnt = len(changed_ident_names)
+        #             zero_cnt = len(already_zero_ident_names)
+        #         miss_cnt = len(missing_ident_names)
+        #         #print(f"[preflight][apply] summary: one={one_cnt}, zero={zero_cnt}, missing={miss_cnt}")
+        #         if changed_ident_names:
+        #             names = sorted(list(changed_ident_names))
+        #             sample = ", ".join(names[:20]) + (" ..." if len(names) > 20 else "")
+        #             print(f"  changed(names) {len(names)}: {sample}")
+        #         if is_exception == 1 and already_one_ident_names:
+        #             a1 = sorted(list(already_one_ident_names))
+        #             sample = ", ".join(a1[:20]) + (" ..." if len(a1) > 20 else "")
+        #             print(f"  already_one(names) {len(a1)}: {sample}")
+        #         if is_exception == 0 and already_zero_ident_names:
+        #             a0 = sorted(list(already_zero_ident_names))
+        #             sample = ", ".join(a0[:20]) + (" ..." if len(a0) > 20 else "")
+        #             print(f"  already_zero(names) {len(a0)}: {sample}")
+        #         if missing_ident_names:
+        #             m = sorted(list(missing_ident_names))
+        #             sample = ", ".join(m[:20]) + (" ..." if len(m) > 20 else "")
+        #             print(f"  missing(names) {len(m)}: {sample}")
+        #         if updated_paths and _preflight_verbose():
+        #             paths = sorted(list(updated_paths))
+        #             sample_p = ", ".join(paths[:10]) + (" ..." if len(paths) > 10 else "")
+        #             print(f"  changed paths(sample): {sample_p}")
+            # except Exception:
+            #     pass
     except Exception as e:
-        if not quiet:
-            print(f"[preflight] ERROR: ast_node.json 업데이트 실패: {e}")
-
+        pass
 
