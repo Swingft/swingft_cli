@@ -336,7 +336,7 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
             print(f"[preflight] exclude payload 생성 경고: {_e}")
 
     if not ast_file:
-        print("  - 경고: ast_node.json 경로를 찾지 못해 AST 반영을 건너뜁니다.")
+        # 조용히 스킵 (Stage 1 스킵 시 정상)
         return
 
     try:

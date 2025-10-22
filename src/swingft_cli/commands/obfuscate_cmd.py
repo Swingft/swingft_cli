@@ -9,6 +9,7 @@ import queue
 import re
 from contextlib import redirect_stdout, redirect_stderr
 from collections import deque
+import json
 from swingft_cli.validator import check_permissions
 from swingft_cli.config import load_config_or_exit, summarize_risks_and_confirm, extract_rule_patterns
 from swingft_cli.core.config import set_prompt_provider
@@ -62,12 +63,18 @@ def handle_obfuscate(args):
     
     tui.print_banner()
     tui.init()
-    tui.set_status([
-        "원본 보호 확인 완료",
-        f"입력:  {input_path}",
-        f"출력:  {output_path}",
-        "Start Swingft …",
-    ])
+    # 초기 상태 문자열은 기본 비표시. 필요 시 SWINGFT_TUI_SHOW_INIT=1 로 켭니다.
+    try:
+        _show_init = str(os.environ.get("SWINGFT_TUI_SHOW_INIT", "0")).strip().lower() in {"1", "true", "yes", "y", "on"}
+    except Exception:
+        _show_init = False
+    if _show_init:
+        tui.set_status([
+            "원본 보호 확인 완료",
+            f"입력:  {input_path}",
+            f"출력:  {output_path}",
+            "Start Swingft …",
+        ])
 
     # preflight echo stream holder
     class StreamProxy:
@@ -233,6 +240,21 @@ def handle_obfuscate(args):
     preflight_progress_mode = str(os.environ.get("SWINGFT_PREFLIGHT_PROGRESS_MODE", "milestones")).strip().lower()
     preflight_progress_files = (str(os.environ.get("SWINGFT_PREFLIGHT_PROGRESS_FILES", "1")).strip().lower() not in {"0", "false", "no"})
 
+    # 식별자 난독화 옵션에 따라 Preprocessing UI 표시 여부 결정
+    show_pre_ui = True
+    try:
+        if working_config_path and os.path.isfile(working_config_path):
+            with open(working_config_path, "r", encoding="utf-8") as _f:
+                _cfg = json.load(_f)
+            _src = _cfg.get("options") if isinstance(_cfg.get("options"), dict) else _cfg
+            val = (_src or {}).get("Obfuscation_identifiers", True)
+            if isinstance(val, str):
+                show_pre_ui = val.strip().lower() in {"1","true","yes","y","on"}
+            else:
+                show_pre_ui = bool(val)
+    except Exception:
+        show_pre_ui = True
+
     # milestones 정의: ast_node.json 생성까지의 주요 산출물 체크(순서 보장)
     milestones = [
         ("external_file_list.txt", lambda base: os.path.isfile(os.path.join(base, "external_file_list.txt"))),
@@ -269,7 +291,8 @@ def handle_obfuscate(args):
     ast_output_dir = os.path.join(os.getcwd(), "Obfuscation_Pipeline", "AST", "output")
     last_scan_ts = 0.0
     current_files_count = 0
-    tui.set_status(["Preprocessing…", _progress_bar(0, max(1, expected_total_files)), "AST analysis"])
+    if show_pre_ui:
+        tui.set_status(["Preprocessing…", _progress_bar(0, max(1, expected_total_files)), "AST analysis"])
     try:
         # Stage 1에도 작업용 설정을 환경변수로 전달
         env1 = os.environ.copy()
@@ -358,7 +381,8 @@ def handle_obfuscate(args):
                 bar = progress_bar(min(current_files_count, expected_total_files), expected_total_files)
             else:
                 bar = progress_bar(1 if done_ast else 0, 1)
-            tui.set_status([ f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis",   "",   *list(tail1) ])
+            if show_pre_ui:
+                tui.set_status([ f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis",   "",   *list(tail1) ])
 
             if eof and line_queue.empty():
                 break
@@ -379,10 +403,11 @@ def handle_obfuscate(args):
                 sp_idx = (sp_idx + 1) % len(spinner)
             except Exception:
                 sp_idx = 0
-            try:
-                tui.set_status([ f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis",   "",   *list(tail1) ])
-            except Exception:
-                pass
+            if show_pre_ui:
+                try:
+                    tui.set_status([ f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis",   "",   *list(tail1) ])
+                except Exception:
+                    pass
         except Exception:
             pass
         

@@ -62,7 +62,7 @@ def check_exception_conflicts(config_path: str, config: Dict[str, Any]) -> Set[s
         ast_file = next((Path(p) for p in ast_candidates if Path(p).exists()), None)
 
     if not ast_file:
-        print("[preflight] ast_node.json not found - skipping conflict check")
+        # 조용히 스킵 (Stage 1 스킵 시 정상)
         return set()
 
     try:
