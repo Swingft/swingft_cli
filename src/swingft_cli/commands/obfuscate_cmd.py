@@ -12,6 +12,15 @@ from swingft_cli.validator import check_permissions
 from swingft_cli.config import load_config_or_exit, summarize_risks_and_confirm, extract_rule_patterns
 from swingft_cli.core.config import set_prompt_provider
 
+# Ensure interactive redraw is visible even under partial buffering
+try:
+    sys.stdout.reconfigure(line_buffering=True)
+except Exception:
+    pass
+
+# Allow forcing TTY-like behavior even when stdout is not a real TTY (e.g., IDE terminals)
+_UI_FORCE_TTY = (os.environ.get("SWINGFT_TUI_FORCE_TTY", "") == "1")
+
 
 _BANNER = r"""
 __     ____            _              __ _
@@ -24,6 +33,16 @@ __     ____            _              __ _
 
 _UI_PORTABLE = (os.environ.get("SWINGFT_TUI_PORTABLE", "") == "1") or (not sys.stdout.isatty())
 _UI_ULTRA = (os.environ.get("SWINGFT_TUI_ULTRA", "") == "1")
+# Force TTY-like behavior if requested
+if _UI_FORCE_TTY:
+    _UI_PORTABLE = False
+# Allow explicit disable of ULTRA via SWINGFT_TUI_ULTRA=0
+if os.environ.get("SWINGFT_TUI_ULTRA", "") == "0":
+    _UI_ULTRA = False
+
+# Deterministic UI mode: default to single-line redraw to avoid TTY variance
+_UI_MODE = os.environ.get("SWINGFT_TUI_MODE", "single").strip().lower()
+_UI_SINGLE = (_UI_MODE == "single")
 
 _ULTRA_LAST_WIDTH = 0
 
@@ -42,12 +61,18 @@ def print_banner():
 
 # --- Minimal UI helpers to keep banner visually fixed and update status ---
 def _ui_init():
+    if _UI_SINGLE:
+        # Print exactly one newline to create a dedicated status line.
+        # All future updates will redraw this single line with CR+clear.
+        sys.stdout.write("\n")
+        sys.stdout.flush()
+        return
     if _UI_PORTABLE:
-        # no cursor save/restore; nothing to init
+        # Fallback portable: no cursor save/restore; leave two blank lines
         sys.stdout.write("\n\n")
         sys.stdout.flush()
         return
-    # reserve a small status area under the banner and save cursor
+    # Advanced mode: reserve a small status area under the banner and save cursor
     sys.stdout.write("\n\n")
     sys.stdout.write("\x1b[s")
     sys.stdout.flush()
@@ -56,23 +81,30 @@ def _ui_init():
 def _ui_set_status(lines):
     if not isinstance(lines, (list, tuple)):
         lines = [str(lines)]
-    if _UI_ULTRA:
+    if _UI_SINGLE:
+        # Show a compact single line regardless of TTY/IDE.
+        segments = [ln for ln in lines if str(ln).strip()]
+        if len(segments) > 2:
+            segments = segments[:2]
+        msg = " | ".join([str(s) for s in segments]).strip()
+        width = _term_width()
+        out = (msg[:width - 1])
+        sys.stdout.write("\r\x1b[2K" + out)
+        sys.stdout.flush()
+        globals()["_ULTRA_LAST_WIDTH"] = len(out)
+        return
+    if _UI_ULTRA or _UI_PORTABLE:
         # compress to max 2 segments (first non-empty lines)
         segments = [ln for ln in lines if str(ln).strip()]
         if len(segments) > 2:
             segments = segments[:2]
-        # compress to single line and overwrite using CR + padding
+        # compress to single line and overwrite using CR + ANSI clear
         msg = " | ".join([str(s) for s in segments]).strip()
         width = _term_width()
         out = (msg[:width - 1])
-        pad = max(0, max(len(out), _ULTRA_LAST_WIDTH) - len(out))
-        sys.stdout.write("\r" + out + (" " * pad))
+        sys.stdout.write("\r\x1b[2K" + out)
         sys.stdout.flush()
-        globals()["_ULTRA_LAST_WIDTH"] = max(len(out), _ULTRA_LAST_WIDTH)
-        return
-    if _UI_PORTABLE:
-        # full redraw each time for portability
-        _ui_redraw_full(lines)
+        globals()["_ULTRA_LAST_WIDTH"] = len(out)
         return
     # restore cursor to status area, clear to end of screen, print new lines
     sys.stdout.write("\x1b[u\x1b[J")
@@ -84,6 +116,12 @@ def _ui_set_status(lines):
 def _ui_redraw_full(lines):
     if not isinstance(lines, (list, tuple)):
         lines = [str(lines)]
+    if _UI_SINGLE:
+        # In single-line mode do not redraw the whole screen.
+        # Just rewrite the status line.
+        _ui_set_status(lines)
+        return
+    sys.stdout.write("\r")
     # clear full screen and draw banner + lines
     if _UI_ULTRA:
         # print banner once, then put status on the next line using CR overwrites
@@ -170,12 +208,14 @@ def handle_obfuscate(args):
         sys.exit(1)
     
     print_banner()
+    # If user did not specify a mode, default to SINGLE redraw deterministically
+    # (Already defaulted via env; nothing else to do. Keep this comment to document behavior.)
     _ui_init()
     _ui_set_status([
-        #"원본 보호 확인 완료",
-        #f"입력:  {input_path}",
-        #f"출력:  {output_path}",
-        #"Start Swingft …",
+        "원본 보호 확인 완료",
+        f"입력:  {input_path}",
+        f"출력:  {output_path}",
+        "Start Swingft …",
     ])
 
     # install prompt provider to render interactive y/n inside status area
@@ -186,7 +226,7 @@ def handle_obfuscate(args):
     # 파이프라인 경로 확인
     pipeline_path = os.path.join(os.getcwd(), "Obfuscation_Pipeline", "obf_pipeline.py")
     if not os.path.exists(pipeline_path):
-        _ui_set_status([f"Pipeline not found: {pipeline_path}"])
+        #_ui_set_status([f"Pipeline not found: {pipeline_path}"])
         sys.exit(1)
 
     # Config 파일 처리
@@ -197,7 +237,7 @@ def handle_obfuscate(args):
         else:
             config_path = 'swingft_config.json'
         if not os.path.exists(config_path):
-            _ui_set_status([f"Config not found: {config_path}"])
+            #_ui_set_status([f"Config not found: {config_path}"])
             sys.exit(1)
 
     # Working config 생성
@@ -214,13 +254,9 @@ def handle_obfuscate(args):
         try:
             shutil.copy2(abs_src, working_path)
         except Exception as copy_error:
-            _ui_set_status([f"[config] 설정 복사본 생성 실패: {copy_error}"])
+            #_ui_set_status([f"[config] 설정 복사본 생성 실패: {copy_error}"])
             sys.exit(1)
-        _ui_set_status([
-            "설정 준비 완료",
-            f"원본:   {abs_src}",
-            f"작업용: {working_path}",
-        ])
+        #_ui_set_status([
         working_config_path = working_path
 
     # 1단계: 전처리 (exception_list.json 생성)
@@ -279,27 +315,22 @@ def handle_obfuscate(args):
 
             sp_idx = (sp_idx + 1) % len(spinner)
             bar = _progress_bar(1 if done_ast else 0, 1)
-            _ui_set_status([
-                f"Preprocessing: {bar}  {spinner[sp_idx]}",
-                "Current: AST analysis",
-                "",
-                *list(tail1)
-            ])
+            _ui_set_status([ f"Preprocessing: {bar}  {spinner[sp_idx]}", "Current: AST analysis",   "",   *list(tail1) ])
 
             if eof and line_queue.empty():
                 break
             time.sleep(0.05)
         rc1 = proc1.wait()
         if rc1 != 0:
-            _ui_set_status(["Preprocessing failed", f"exit code: {rc1}"])
+            #_ui_set_status(["Preprocessing failed", f"exit code: {rc1}"])
             sys.exit(1)
-        _ui_set_status(["Preprocessing completed: exception_list.json created"])
+        #_ui_set_status(["Preprocessing completed: exception_list.json created"])
             
     except subprocess.TimeoutExpired:
-        _ui_set_status(["Preprocessing timed out"])
+        #_ui_set_status(["Preprocessing timed out"])
         sys.exit(1)
     except Exception as e:
-        _ui_set_status([f"Preprocessing failed: {e}"])
+        #_ui_set_status([f"Preprocessing failed: {e}"])
         sys.exit(1)
 
     # Config 검증 및 LLM 분석

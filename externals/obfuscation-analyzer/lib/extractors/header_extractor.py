@@ -442,18 +442,18 @@ class HeaderScanner:
         # 1. 프로젝트 이름 결정
         if self.real_project_name:
             project_name = self.real_project_name
-            print(f"   → 지정된 프로젝트 이름 '{project_name}' 사용")
+            #print(f"   → 지정된 프로젝트 이름 '{project_name}' 사용")
         else:
             project_name = self.project_path.name
             if project_name.endswith('.xcodeproj'):
                 project_name = project_name[:-10]
             elif project_name.endswith('.xcworkspace'):
                 project_name = project_name[:-12]
-            print(f"   → 추출된 프로젝트 이름 '{project_name}' 사용")
+            #print(f"   → 추출된 프로젝트 이름 '{project_name}' 사용")
 
         # 2. 모든 가능한 변형 생성
         name_variants = self._normalize_project_name(project_name)
-        print(f"   → 검색 변형: {', '.join(name_variants)}")
+        #print(f"   → 검색 변형: {', '.join(name_variants)}")
 
         # 3. 각 변형으로 DerivedData 검색
         matching_dirs = []
@@ -462,7 +462,7 @@ class HeaderScanner:
             found = list(derived_data_base.glob(pattern))
             if found:
                 matching_dirs.extend(found)
-                print(f"   ✓ '{pattern}' 패턴으로 {len(found)}개 폴더 발견")
+                #print(f"   ✓ '{pattern}' 패턴으로 {len(found)}개 폴더 발견")
 
         # 4. 찾지 못했을 때 폴백: 부분 매칭
         if not matching_dirs:
@@ -497,7 +497,7 @@ class HeaderScanner:
             return spm_headers
 
         # 6. SPM 헤더 수집
-        print(f"\n📦 SPM 패키지 헤더 스캔 중...")
+        #print(f"\n📦 SPM 패키지 헤더 스캔 중...")
         matching_dirs = list(set(matching_dirs))  # 중복 제거
 
         for derived_dir in matching_dirs:
@@ -507,22 +507,23 @@ class HeaderScanner:
                 print(f"   ⚠️  SPM checkouts 폴더가 없습니다: {derived_dir.name}")
                 continue
 
-            print(f"   → 스캔: {derived_dir.name}/SourcePackages/checkouts")
+            #print(f"   → 스캔: {derived_dir.name}/SourcePackages/checkouts")
 
             # checkouts 폴더 내의 모든 .h 파일 재귀적으로 찾기
             for header_file in checkouts_path.rglob("*.h"):
                 spm_headers.append(header_file)
 
-        if spm_headers:
-            print(f"   ✅ {len(spm_headers)}개의 SPM 헤더 발견")
+        if not spm_headers:
+            #print(f"   ✅ {len(spm_headers)}개의 SPM 헤더 발견")
+            pass
         else:
-            print(f"   ⚠️  SPM 헤더를 찾지 못했습니다.")
-
+            #print(f"   ⚠️  SPM 헤더를 찾지 못했습니다.")
+            pass
         return spm_headers
 
     def scan_all(self) -> Dict[str, Dict[str, Set[str]]]:
-        print(f"🔍 프로젝트: {self.project_path}")
-        print(f"📂 헤더 파일 검색 중...\n")
+        #print(f"🔍 프로젝트: {self.project_path}")
+        #print(f"📂 헤더 파일 검색 중...\n")
 
         # 1. 프로젝트 내부 헤더
         header_files = self.find_header_files()
@@ -542,13 +543,13 @@ class HeaderScanner:
             print("❌ 헤더 파일을 찾을 수 없습니다.")
             return {}
 
-        print(f"\n✓ 총 {len(all_headers)}개의 헤더 파일 발견")
-        print(f"  - 프로젝트 내부: {len(header_files)}개")
-        if self.scan_spm:
-            print(f"  - SPM 패키지: {len(spm_headers)}개")
+        #print(f"\n✓ 총 {len(all_headers)}개의 헤더 파일 발견")
+        #print(f"  - 프로젝트 내부: {len(header_files)}개")
+        #if self.scan_spm:
+            #print(f"  - SPM 패키지: {len(spm_headers)}개")
 
-        print("\n🔍 식별자 추출 중...")
-        print("-" * 60)
+        #print("\n🔍 식별자 추출 중...")
+        #print("-" * 60)
 
         for header_file in all_headers:
             try:
@@ -563,7 +564,7 @@ class HeaderScanner:
             if total_count > 0:
                 self.header_results[relative_path] = identifiers_by_type
                 self.stats['success'] += 1
-                print(f"✓ {relative_path}: {total_count}개")
+                #print(f"✓ {relative_path}: {total_count}개")
             else:
                 self.stats['failed'] += 1
 
@@ -678,10 +679,10 @@ def main():
         default_exclude = ['.build', 'build', '.git', 'node_modules']
         exclude_dirs = default_exclude + args.exclude
 
-    print("🚀 Objective-C 헤더 식별자 추출기")
-    print("   (난독화 제외 대상 - 공개 API + SPM 패키지)")
-    print("=" * 60)
-    print()
+    #print("🚀 Objective-C 헤더 식별자 추출기")
+    #print("   (난독화 제외 대상 - 공개 API + SPM 패키지)")
+    #print("=" * 60)
+    #print()
 
     scanner = HeaderScanner(
         args.project_path,
@@ -690,7 +691,7 @@ def main():
         real_project_name=args.real_project_name
     )
     scanner.scan_all()
-    scanner.print_summary()
+    #scanner.print_summary()
 
     if args.output:
         scanner.save_to_json(args.output, include_per_header=not args.no_per_header)
@@ -698,10 +699,10 @@ def main():
     if args.txt:
         scanner.save_to_txt(args.txt)
 
-    print("\n✅ 완료!")
-    print("💡 이 식별자들은 공개 API이므로 난독화에서 제외해야 합니다.")
-    if not args.no_spm:
-        print("💡 SPM 패키지의 헤더도 스캔되었습니다.")
+    #print("\n✅ 완료!")
+    #print("💡 이 식별자들은 공개 API이므로 난독화에서 제외해야 합니다.")
+    if args.no_spm:
+        print("SPM 패키지의 헤더는 스캔되지 않았습니다.")
     return 0
 
 

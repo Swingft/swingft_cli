@@ -12,7 +12,7 @@ class ReportGenerator:
         try:
             with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(results, f, indent=2, ensure_ascii=False)
-            print(f"📄 Exclusion list saved to: {output_path}")
+            #print(f"📄 Exclusion list saved to: {output_path}")
         except IOError as e:
             print(f"❌ Error: Failed to write report to {output_path}. {e}")
 
@@ -31,7 +31,7 @@ class ReportGenerator:
             with open(output_path, 'w', encoding='utf-8') as f:
                 for name in sorted_names:
                     f.write(name + '\n')
-            print(f"📄 Exclusion name list saved to: {output_path} ({len(sorted_names)} unique names)")
+            #print(f"📄 Exclusion name list saved to: {output_path} ({len(sorted_names)} unique names)")
         except IOError as e:
             print(f"❌ Error: Failed to write TXT report to {output_path}. {e}")
 
