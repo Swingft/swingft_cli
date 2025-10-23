@@ -26,11 +26,55 @@ def extract_first_json(text: str):
                     return json.loads(text[start:i+1])
                 except json.JSONDecodeError:
                     break
+
+    # Fallback: try to find a ```json fenced block
+    try:
+        import re
+        m = re.search(r"```json\s*(\{[\s\S]*?\})\s*```", text or "", re.MULTILINE)
+        if m:
+            return json.loads(m.group(1))
+    except Exception:
+        pass
+
     return None
 
 
+
+def build_prompt_from_cli_payload(p: Dict[str, Any]) -> str:
+    code = p.get("swift_code", "")
+    ident = p.get("target_identifier", "")
+    ast_list = p.get("ast_symbols") or []
+    ast = ast_list[0] if isinstance(ast_list, list) and ast_list else {}
+    try:
+        ast_json = json.dumps(ast, ensure_ascii=False, indent=2)
+    except Exception:
+        ast_json = "{}"
+    instr = (
+        "Analyze whether the target identifier in the Swift code is security-sensitive. "
+        "Provide your judgment and reasoning."
+    )
+    guard = (
+        "Respond with a single JSON object only. No code fences. "
+        "Keys: is_sensitive, reasoning."
+    )
+    return (
+        f"{instr}\n\n"
+        f"**Swift Source Code:**\n```swift\n{code}\n```\n\n"
+        f"**AST Symbol Information (Target: `{ident}`):**\n```json\n{ast_json}\n```\n\n"
+        f"**Target Identifier:** `{ident}`\n\n{guard}"
+    )
+
 def build_prompt(payload: Dict[str, Any]) -> str:
     try:
+        # New CLI schema detection
+        if (
+            isinstance(payload, dict)
+            and "swift_code" in payload
+            and "ast_symbols" in payload
+            and "target_identifier" in payload
+        ):
+            return build_prompt_from_cli_payload(payload)
+        # Fallback: raw JSON dump
         return json.dumps(payload, ensure_ascii=False)
     except Exception:
         return str(payload)
@@ -38,7 +82,7 @@ def build_prompt(payload: Dict[str, Any]) -> str:
 
 def load_llm() -> Llama:
     base_model = os.getenv("BASE_MODEL_PATH", "./models/base_model.gguf")
-    lora_path = os.getenv("LORA_PATH", os.path.join("./models", "lora_sensitive.gguf"))
+    lora_path = os.getenv("LORA_PATH", os.path.join("./models", "lora_sensitive_single.gguf"))
     n_ctx = int(os.getenv("N_CTX", "8192"))
     n_threads = int(os.getenv("N_THREADS", str(os.cpu_count() or 8)))
     n_gpu_layers = int(os.getenv("N_GPU_LAYERS", "12"))  # 0=CPU only
@@ -64,6 +108,9 @@ def run_inference(llm: Llama, prompt: str, payload: Dict[str, Any]) -> Dict[str,
     temperature = float(payload.get("temperature", os.getenv("TEMPERATURE", "0.0")))
     top_p = float(payload.get("top_p", os.getenv("TOP_P", "1.0")))
     stop = payload.get("stop")
+    # Do not force stop tokens; some models begin with code fences and would yield empty output.
+    if not stop:
+        stop = None
 
     resp = llm(
         prompt,

@@ -40,6 +40,9 @@ class ObfuscationAnalyzer:
         # SymbolExtractor 경로 (빌드 후 생성됨)
         self.symbol_extractor_path = self.swift_extractor_dir / ".build" / "release" / "SymbolExtractor"
 
+        # 로그 파일 경로 (리드로우 환경에서 보기 위해 파일로만 남김)
+        self.build_log_path = self.output_dir / "swift_extractor_build.log"
+
         # 프로젝트 이름 자동 추출
         self.project_name = self._find_project_name()
 
@@ -101,27 +104,50 @@ class ObfuscationAnalyzer:
         # swift build 명령 실행
         build_cmd = ["swift", "build", "-c", "release"]
 
+        # 로그 파일로만 출력 (터미널 리드로우로 인한 손실 방지)
         try:
-            result = subprocess.run(
-                build_cmd,
-                cwd=self.swift_extractor_dir,
-                capture_output=True,
-                text=True,
-                check=True
-            )
+            with open(self.build_log_path, "w", encoding="utf-8") as logf:
+                logf.write("== Swift build start ==\n")
+                logf.write(f"cwd: {self.swift_extractor_dir}\n")
+                logf.write(f"cmd: {' '.join(build_cmd)}\n\n")
+                logf.flush()
+
+                subprocess.run(
+                    build_cmd,
+                    cwd=self.swift_extractor_dir,
+                    stdout=logf,
+                    stderr=subprocess.STDOUT,
+                    text=True,
+                    check=True
+                )
+
+                logf.write("\n== Build command finished ==\n")
+                logf.flush()
 
             if not self.symbol_extractor_path.exists():
-                print("❌ Build succeeded but SymbolExtractor binary not found")
+                # 터미널에는 짧은 안내만
+                print("❌ Build finished but SymbolExtractor binary not found.")
+                print(f"   See log: {self.build_log_path}")
                 sys.exit(1)
-                
 
-        except subprocess.CalledProcessError as e:
-            print("❌ Failed to build SymbolExtractor:")
-            print(e.stderr)
+        except subprocess.CalledProcessError:
+            try:
+                with open(self.build_log_path, "a", encoding="utf-8") as logf:
+                    logf.write("\n== Build failed with non-zero exit ==\n")
+            except Exception:
+                pass
+            print("❌ Failed to build SymbolExtractor.")
+            print(f"   See log: {self.build_log_path}")
             sys.exit(1)
         except FileNotFoundError:
+            try:
+                with open(self.build_log_path, "a", encoding="utf-8") as logf:
+                    logf.write("\n== Swift toolchain not found ==\n")
+            except Exception:
+                pass
             print("❌ Error: Swift compiler not found.")
             print("   Please install Swift from https://swift.org/download/")
+            print(f"   See log: {self.build_log_path}")
             sys.exit(1)
 
     def _extract_external_identifiers(self, project_name: str = None) -> set:

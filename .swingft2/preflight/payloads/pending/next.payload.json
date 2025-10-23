@@ -1,4 +1,0 @@
-{
-  "instruction": "In the following Swift code, find all identifiers related to sensitive logic. Provide the names and reasoning as a JSON object.",
-  "input": "**Swift Source Code:**\n```swift\n//\n//  RandomNumberGenerator+RandomNumberGeneratorWithSeed.swift\n//  StealPlateSwift\n//\n//  Created by 심재빈 on 2023/02/23.\n//\n\nimport Foundation\n\nstruct RandomNumberGeneratorWithSeed: RandomNumberGenerator {\n    init(seed: Int) { srand48(seed) }\n    func next() -> UInt64 { return UInt64(drand48() * Double(UInt64.max)) }\n}\n```\n\n**AST Symbol Information (JSON):**\n```\n[\n  {\n    \"symbolName\": \"RandomNumberGeneratorWithSeed\",\n    \"symbolKind\": \"struct\"\n  },\n  {\n    \"symbolName\": \"next()\",\n    \"symbolKind\": \"method\"\n  }\n]\n```"
-}

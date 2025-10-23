@@ -10,6 +10,14 @@ from datetime import datetime
 from .exclusions import ast_unwrap as _ast_unwrap
 from .exclusions import write_feedback_to_output as _write_feedback_to_output
 from .ast_utils import update_ast_node_exceptions as _update_ast_node_exceptions
+from .llm_feedback import (
+    find_first_swift_file_with_identifier as _find_swift_file_for_ident,
+    make_snippet as _make_snippet,
+    run_swift_ast_analyzer as _run_ast_analyzer,
+    call_exclude_server_parsed as _call_llm_exclude,
+    run_local_llm_exclude as _run_local_llm_exclude,
+    resolve_ast_symbols as _resolve_ast_symbols,
+)
 
 
 def _preflight_verbose() -> bool:
@@ -323,18 +331,51 @@ def process_exclude_sensitive_identifiers(config_path: str, config: Dict[str, An
         except Exception:
             pass
     else:
+        # ask 모드에서 LLM 판정과 사용자 확인을 함께 수행 (환경변수로 온/오프)
+        use_llm = str(os.environ.get("SWINGFT_PREFLIGHT_EXCLUDE_USE_LLM", "1")).strip().lower() in {"1","true","yes","y","on"}
+        prefer_local = str(os.environ.get("SWINGFT_EXCLUDE_LLM_LOCAL", "1")).strip().lower() in {"1","true","yes","y","on"}
         for ident in sorted(list(exclude_candidates)):
             try:
                 if _has_ui_prompt():
                     import swingft_cli.core.config as _cfg
+                    llm_note = ""
+                    if use_llm and isinstance(project_root, str) and project_root.strip():
+                        # 스니펫 및 AST 심볼 정보 수집
+                        found = _find_swift_file_for_ident(project_root, ident)
+                        swift_path, swift_text = (found or (None, None)) if isinstance(found, tuple) else (None, None)
+                        snippet = _make_snippet(swift_text or "", ident) if swift_text else ""
+                        ast_info = _resolve_ast_symbols(project_root, swift_path, ident)
+                        # LLM 호출
+                        try:
+                            if prefer_local:
+                                llm_res = _run_local_llm_exclude(ident, snippet, ast_info)
+                            else:
+                                llm_res = _call_llm_exclude([ident], symbol_info=ast_info, swift_code=snippet)
+                        except Exception as _llm_e:
+                            llm_res = None
+                        # 판정 요약
+                        if isinstance(llm_res, list) and llm_res:
+                            first = llm_res[0]
+                            is_ex = bool(first.get("exclude", True))
+                            reason = str(first.get("reason", "")).strip()
+                            # LLM이 비민감(keep)으로 판단 시 사용자 프롬프트 생략
+                            if not is_ex:
+                                _capture.append(f"[preflight] LLM auto-skip (keep): {ident}")
+                                if reason:
+                                    _capture.append(f"  - reason: {reason[:200]}")
+                                # 이 항목은 제외하지 않음 → 다음 식별자로 진행
+                                continue
+                            llm_note = f"\n  - LLM suggests: {'exclude' if is_ex else 'keep'}\n    reason: {reason[:200]}"
                     prompt = (
                         f"[preflight]\n"
                         f"Exclude candidate detected.\n"
-                        f"  - identifier: {ident}\n\n"
+                        f"  - identifier: {ident}{llm_note}\n\n"
                         f"Exclude this identifier from obfuscation? [y/N]: "
                     )
                     _capture.append("[preflight]")
                     _capture.append(f"Exclude candidate detected.\n  - identifier: {ident}")
+                    if llm_note:
+                        _capture.append(llm_note.strip())
                     ans = str(getattr(_cfg, "PROMPT_PROVIDER")(prompt)).strip().lower()
                 else:
                     ans = input(f"식별자 '{ident}'를 난독화에서 제외할까요? [y/N]: ").strip().lower()

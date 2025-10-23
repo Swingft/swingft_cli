@@ -1,4 +1,0 @@
-{
-  "instruction": "In the following Swift code, find all identifiers related to sensitive logic. Provide the names and reasoning as a JSON object.",
-  "input": "**Swift Source Code:**\n```swift\n//\n//  MainNavigationController.swift\n//  StealPlateSwift\n//\n//  Created by 심재빈 on 2022/12/27.\n//\n\nimport Foundation\nimport UIKit\n\nclass MainNavigationController: UINavigationController {\n    override var preferredStatusBarStyle : UIStatusBarStyle {\n\n        if let topVC = viewControllers.last {\n            return topVC.preferredStatusBarStyle\n        }\n\n        return .default\n    }\n}\n```\n\n**AST Symbol Information (JSON):**\n```\n[\n  {\n    \"symbolName\": \"MainNavigationController\",\n    \"symbolKind\": \"class\"\n  },\n  {\n    \"symbolName\": \"preferredStatusBarStyle\",\n    \"symbolKind\": \"variable\"\n  },\n  {\n    \"symbolName\": \"topVC\",\n    \"symbolKind\": \"variable\"\n  }\n]\n```"
-}

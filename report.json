@@ -62,22 +62,32 @@
           "symbolName": "collectionView",
           "symbolKind": "variable"
         }
-      ]
+      ],
+      "decl_file": "/Users/lanian/Desktop/UIKit+SPM_2/StealPlateSwift/View/RestaurantTableViewCell.swift",
+      "decl_line": 102
     },
-    "onSelectRestaurant": {
+    "createMenuLabelText": {
       "found": true,
-      "file": "/Users/lanian/Desktop/UIKit+SPM_2/StealPlateSwift/View/RestaurantTableViewCell.swift",
-      "line_number": 26,
-      "context_start_line": 1,
-      "context_end_line": 56,
-      "snippet": "//\n//  RestaurantTableViewCell.swift\n//  StealPlateSwift\n//\n//  Created by 심재빈 on 2022/09/20.\n//\n\nimport Foundation\nimport UIKit\nimport SnapKit\nimport RxSwift\nimport RxCocoa\nimport RxDataSources\nimport Kingfisher\n\n// TODO: ADD: Horizontal Collection View\nclass RestaurantTableViewCell: UITableViewCell {\n    static var reuseIdentifier: String {\n        get {\n            return \"RestaurantTableViewCell\"\n        }\n    }\n    \n    var disposeBag: DisposeBag = DisposeBag()\n    \n    var onSelectRestaurant: ((_ item: RestaurantItem) -> Void)?\n    \n    var restaurantItemsData: [RestaurantItem] = [] {\n        didSet {\n            restaurantItems.onNext(restaurantItemsData)\n        }\n    }\n    var restaurantItems = BehaviorSubject<[RestaurantItem]>(value: [])\n    \n    lazy var titleLabel: UILabel = {\n        let label = UILabel()\n    \n        label.numberOfLines = 0\n        label.font = .boldSystemFont(ofSize: CGFloat(NumberConstants.restaurantTableViewTitleLabelSize))\n        label.textColor = .white\n        \n        return label\n    }()\n\n    lazy var collectionViewLayout: UICollectionViewFlowLayout = {\n        let layout = UICollectionViewFlowLayout()\n        layout.itemSize = CGSize(width: NumberConstants.restaurantCollectionViewCellSize, height: NumberConstants.restaurantCollectionViewCellSize)\n        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)\n        layout.scrollDirection = .horizontal\n        \n        return layout\n    }()\n    \n    lazy var collectionView: UICollectionView = {\n        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: collectionViewLayout)\n        \n",
+      "file": "/Users/lanian/Desktop/UIKit+SPM_2/StealPlateSwift/ViewController/DetailViewController.swift",
+      "line_number": 519,
+      "context_start_line": 489,
+      "context_end_line": 549,
+      "snippet": "            \n        }.disposed(by: self.disposeBag)\n        \n        restaurantImageCollectionView.rx.itemAndIndexSelected(String.self)\n            .subscribe(onNext: { (item, index) in\n                \n                DispatchQueue.main.async {\n                    self.showRestaurantImageUpScaleView(indexPath: index)\n                }\n                \n            }).disposed(by: self.disposeBag)\n   \n        viewModel.restaurantSequence\n            .filter{ $0 != nil }\n            .subscribe {\n                \n                guard let data = $0.element else {\n                    return\n                }\n                \n                self.restaurantNameLabel.text = data?.restaurant_name ?? StringConstants.safeContent\n                self.starLabel.text = data?.star ?? StringConstants.safeContent\n                self.viewModel.restaurantImageUrlsSequence.accept(data?.image_urls ?? [])\n                self.restaurantLocationView.setPlaceMark(address: data?.address ?? \"\", placemarkTitle: data?.restaurant_name ?? StringConstants.safeContent)\n                self.topLeftBoxLabel.text = self.createBoxLabelText(title: \"분류\", content: data?.kind)\n                self.callNumberLabel.text = data?.call ?? StringConstants.safeContent\n                self.topRightBoxLabel.text = self.createBoxLabelText(title: \"가격대\", content: data?.cost_range)\n                self.bottomLeftBoxLabel.text = self.createBoxLabelText(title: \"영업 시간\", content: data?.business_hours)\n                //  TODO: ADD inBusinessTagLabel Text\n//                self.inBusinessTagLabel.text\n                self.menuLabel.text = self.createMenuLabelText(content: data?.menu)\n                self.bottomRightBoxLabel.text = self.createBoxLabelText(title: \"휴일\", content: data?.holiday)\n                self.etcLabel.text = self.createEtcLabelText(data: data)\n                \n                self.restaurantImageCollectionView.reloadData()\n                self.restaurantImageCollectionView.reloadSections(IndexSet(integer: 0))\n                \n                self.restaurantImageUpScaleCollectionView.reloadData()\n                self.restaurantImageUpScaleCollectionView.reloadSections(IndexSet(integer: 0))\n                \n            }\n            .disposed(by: self.disposeBag)\n    \n    }\n    \n    // MARK: - Private func\n    private func createBoxLabelText(title: String, content: String?) -> String {\n        let safeContent = content ?? StringConstants.safeContent\n        \n        return title + \"\\n\" + safeContent\n    }\n    \n    private func createMenuLabelText(content: String?) -> String {\n        let safeContent = content ?? StringConstants.safeContent\n        \n        return safeContent.replacingOccurrences(of: \", \", with: \"\\n\")\n    }\n    \n    private func createEtcLabelText(data: RestaurantItem?) -> String {\n        guard data != nil else {\n            return StringConstants.safeContent\n",
       "ast": [
         {
-          "symbolName": "RestaurantTableViewCell",
+          "symbolName": "DetailViewController",
           "symbolKind": "class"
         },
         {
-          "symbolName": "setupViews()",
+          "symbolName": "viewDidLoad()",
+          "symbolKind": "method"
+        },
+        {
+          "symbolName": "setupVC()",
+          "symbolKind": "method"
+        },
+        {
+          "symbolName": "setupVM()",
           "symbolKind": "method"
         },
         {
@@ -85,35 +95,51 @@
           "symbolKind": "method"
         },
         {
-          "symbolName": "reuseIdentifier",
+          "symbolName": "private",
+          "symbolKind": "method"
+        },
+        {
+          "symbolName": "createBoxLabelText(title: String, content: String?)",
+          "symbolKind": "method"
+        },
+        {
+          "symbolName": "createMenuLabelText(content: String?)",
+          "symbolKind": "method"
+        },
+        {
+          "symbolName": "createEtcLabelText(data: RestaurantItem?)",
+          "symbolKind": "method"
+        },
+        {
+          "symbolName": "showRestaurantImageUpScaleView(indexPath: IndexPath)",
+          "symbolKind": "method"
+        },
+        {
+          "symbolName": "disappearRestaurantImageUpScaleView(sender: UITapGestureRecognizer)",
+          "symbolKind": "method"
+        },
+        {
+          "symbolName": "showRestaurantLocationDetailViewController(sender: UITapGestureRecognizer)",
+          "symbolKind": "method"
+        },
+        {
+          "symbolName": "viewModel",
           "symbolKind": "variable"
         },
         {
-          "symbolName": "disposeBag",
+          "symbolName": "tapGestureRecognizerShowRestaurantLocationDetailView",
           "symbolKind": "variable"
         },
         {
-          "symbolName": "onSelectRestaurant",
+          "symbolName": "mainScrollView",
           "symbolKind": "variable"
         },
         {
-          "symbolName": "restaurantItemsData",
+          "symbolName": "scrollView",
           "symbolKind": "variable"
         },
         {
-          "symbolName": "restaurantItems",
-          "symbolKind": "variable"
-        },
-        {
-          "symbolName": "titleLabel",
-          "symbolKind": "variable"
-        },
-        {
-          "symbolName": "label",
-          "symbolKind": "variable"
-        },
-        {
-          "symbolName": "collectionViewLayout",
+          "symbolName": "restaurantImageCollectionViewLayout",
           "symbolKind": "variable"
         },
         {
@@ -121,10 +147,180 @@
           "symbolKind": "variable"
         },
         {
+          "symbolName": "cellWidth",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "restaurantImageCollectionView",
+          "symbolKind": "variable"
+        },
+        {
           "symbolName": "collectionView",
           "symbolKind": "variable"
+        },
+        {
+          "symbolName": "restaurantImageUpScaleView",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "view",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "restaurantImageUpScaleViewDismissButton",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "button",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "restaurantImageUpScaleCollectionViewLayout",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "restaurantImageUpScaleCollectionView",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "restaurantNameLabel",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "label",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "inBusinessTagView",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "inBusinessTagLabel",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "starImageView",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "image",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "imageView",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "starLabel",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "callNumberImageView",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "callNumberLabel",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "topLeftBoxView",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "topLeftBoxLabel",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "topRightBoxView",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "topRightBoxLabel",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "bottomLeftBoxView",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "bottomLeftBoxLabel",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "bottomRightBoxView",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "bottomRightBoxLabel",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "menuDividerView",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "menuLabel",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "restaurantLocationView",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "mapView",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "mapTitle",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "coordinate",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "mark",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "etcLabel",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "barAppearance",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "appearance",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "preferredStatusBarStyle",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "data",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "safeContent",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "restaurantLocationDetailVC",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "restaurantLocationDetailVCBarButtonItem",
+          "symbolKind": "variable"
+        },
+        {
+          "symbolName": "buttonItem",
+          "symbolKind": "variable"
         }
-      ]
+      ],
+      "decl_file": "/Users/lanian/Desktop/UIKit+SPM_2/StealPlateSwift/ViewController/DetailViewController.swift",
+      "decl_line": 541
     }
   }
 }
