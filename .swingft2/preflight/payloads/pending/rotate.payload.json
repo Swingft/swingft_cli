@@ -1,4 +1,0 @@
-{
-  "instruction": "In the following Swift code, find all identifiers related to sensitive logic. Provide the names and reasoning as a JSON object.",
-  "input": "**Swift Source Code:**\n```swift\n//\n//  UIView+rotate.swift\n//  StealPlateSwift\n//\n//  Created by 심재빈 on 2022/12/08.\n//\n\nimport Foundation\nimport UIKit\n\nextension UIView {\n    func rotate(_ degree: CGFloat = 0) {\n        let oldFrame = frame\n        transform = CGAffineTransformMakeRotation(.pi * degree / 180.0)\n        frame = oldFrame\n    }\n}\n```\n\n**AST Symbol Information (JSON):**\n```\n[\n  {\n    \"symbolName\": \"rotate(_ degree: CGFloat = 0)\",\n    \"symbolKind\": \"method\"\n  },\n  {\n    \"symbolName\": \"oldFrame\",\n    \"symbolKind\": \"variable\"\n  }\n]\n```"
-}

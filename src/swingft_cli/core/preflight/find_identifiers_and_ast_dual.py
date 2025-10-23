@@ -1,3 +1,11 @@
+from __future__ import annotations
+
+_ALLOWED_AST_FIELDS = {"symbolName", "symbolKind", "typeSignature", "references", "calls_out", "conforms"}
+
+def _sanitize_ast_entry(entry: dict) -> dict:
+    if not isinstance(entry, dict):
+        return {}
+    return {k: v for k, v in entry.items() if k in _ALLOWED_AST_FIELDS}
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
@@ -7,9 +15,10 @@ find_identifiers_and_ast_dual.py
 - 원래 리포트(JSON) 생성 기능 유지
 - ✅ 모든 식별자/스니펫/AST를 한 파일(payload.json)로 합쳐서 생성
 - ✅ AST Symbol Information을 식별자별로 '정의/참조/호출' 라인 및 코드 일부까지 포함해 LLM 판단에 직결되도록 구성
+- ✅ 선언부 기준(decl_file/decl_line) 메타를 보고에 추가하고, payload 작성 시 선언 파일을 우선 사용
 """
 
-from __future__ import annotations
+
 
 import os
 import sys
@@ -18,6 +27,40 @@ import json
 import argparse
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
+
+import difflib
+def _basename(s: str) -> str:
+    # strip parameter lists like "save(x:)" -> "save"
+    return s.split("(")[0].strip() if isinstance(s, str) else ""
+
+def _best_ast_name_match(ident: str, ast_list: List[dict]) -> Optional[str]:
+    cand_names = []
+    for it in ast_list:
+        nm = it.get("symbolName")
+        if isinstance(nm, str):
+            cand_names.append(nm)
+    # exact match first
+    if ident in cand_names:
+        return ident
+    # base-name exact match
+    ident_base = _basename(ident)
+    for nm in cand_names:
+        if _basename(nm) == ident_base and ident_base:
+            return nm
+    # fuzzy match (handles small typos like 'Present' vs 'Preset')
+    close = difflib.get_close_matches(ident, cand_names, n=1, cutoff=0.85)
+    if close:
+        return close[0]
+    # try again on base names
+    cand_bases = list({ _basename(nm) for nm in cand_names })
+    close2 = difflib.get_close_matches(ident_base, cand_bases, n=1, cutoff=0.85)
+    if close2:
+        # return the first full name with this base
+        base = close2[0]
+        for nm in cand_names:
+            if _basename(nm) == base:
+                return nm
+    return None
 
 # Support both package execution (-m) and direct script execution
 try:
@@ -165,82 +208,153 @@ def _kind_lookup_from_ast_list(ast_list: Any) -> Dict[str, str]:
     return mp
 
 # -------------------------
+# Declaration metadata augmenter
+# -------------------------
+def _augment_report_with_declarations(report: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Post-process the report to record declaration file/line for each identifier.
+    Adds:
+      - decl_file: path to file that contains the declaration/header of the identifier
+      - decl_line: 1-based line number of the declaration/header
+    Fallbacks:
+      - If exact header not found, try best-name match.
+      - If still not found, keep original file and omit decl_line.
+    """
+    id_map = (report or {}).get("identifiers", {}) or {}
+    for ident, info in list(id_map.items()):
+        try:
+            if not isinstance(info, dict) or not info.get("found"):
+                continue
+            file_path = info.get("file", "")
+            if not file_path or not os.path.exists(file_path):
+                continue
+            lines = _load_lines(file_path)
+            # Try exact declaration line
+            decl_idx = None
+            for i, ln in enumerate(lines):
+                if _is_definition_line(ident, ln):
+                    decl_idx = i + 1  # 1-based
+                    break
+            # If not found, try best-name match using AST names if available
+            if decl_idx is None:
+                ast_any = info.get("ast_full")
+                if ast_any is None:
+                    ast_any = info.get("ast")
+                cand_list = []
+                if isinstance(ast_any, list):
+                    cand_list = [x for x in ast_any if isinstance(x, dict)]
+                elif isinstance(ast_any, dict):
+                    cand_list = [ast_any]
+                best = _best_ast_name_match(ident, cand_list) if cand_list else None
+                if best:
+                    for i, ln in enumerate(lines):
+                        if _is_definition_line(_basename(best), ln) or _is_definition_line(best, ln):
+                            decl_idx = i + 1
+                            break
+            # If still not found and it might be a method, try body header search
+            if decl_idx is None:
+                rng = _method_body_range(ident, lines)
+                if rng:
+                    decl_idx = rng[0]
+            # Write back
+            if decl_idx is not None:
+                info["decl_file"] = file_path
+                info["decl_line"] = decl_idx
+            else:
+                # keep at least decl_file for consistency
+                info["decl_file"] = file_path
+        except Exception:
+            # best-effort; do not break pipeline
+            continue
+    return report
+
+# -------------------------
 # Payload writer
 # -------------------------
 
 def write_combined_payload_file(report: dict, out_path: Path, target_ids: List[str]):
-    """
-    전달된 식별자 목록(target_ids)에 대해서만 payload.json을 생성한다.
-    - Swift Source Code 블록: 대상 식별자들이 속한 **각 파일의 전체 본문**을 파일 경계 주석과 함께 연결
-    - AST Symbol Information (JSON): 각 파일 기준 **전체 AST**(가능 시 `ast_full`, 없으면 `ast`)를 모두 포함
-    """
     all_id_map = report.get("identifiers", {}) or {}
-
-    # 전체 파일 기준으로 코드와 AST를 구성
-    unique_files: List[str] = []
+    records = []
     for ident in target_ids:
         info = all_id_map.get(ident, {})
         if not info.get("found"):
             continue
-        fpath = info.get("file", "")
-        if fpath and fpath not in unique_files:
-            unique_files.append(fpath)
-
-    # 코드: 각 파일의 전체 내용을 순서대로 연결. 파일 경계 주석 없이.
-    code_sections: List[str] = []
-    for fpath in unique_files:
+        file_path = info.get("decl_file") or info.get("file", "")
         try:
-            with open(fpath, "r", encoding="utf-8", errors="ignore") as f:
-                full_text = f.read()
+            with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                code_block = f.read().rstrip()
         except Exception:
-            full_text = ""
-        code_sections.append(full_text.rstrip())
-    combined_code = ("\n\n").join(code_sections).strip()
+            code_block = ""
 
-    # AST: 가능하면 각 식별자 엔트리에서 전체 AST를 수집.
-    # 우선순위: info['ast_full'] → info['ast'] → []
-    ast_aggregate: List[Any] = []
-    seen_ast_serialized = set()
-    for ident in target_ids:
-        info = all_id_map.get(ident, {})
-        if not info.get("found"):
-            continue
-        ast_full = info.get("ast_full")
-        ast_any = ast_full if ast_full is not None else info.get("ast")
+        # resolve kind
+        kind = info.get("kind")
+        if kind is None:
+            ast_list = info.get("ast")
+            if isinstance(ast_list, list):
+                for item in ast_list:
+                    if isinstance(item, dict) and item.get("symbolName") == ident:
+                        kind = item.get("symbolKind", None)
+                        break
+        if kind is None:
+            # fallback textual inference
+            kind = "unknown"
+            try:
+                with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                    txt = f.read()
+            except Exception:
+                txt = ""
+            if re.search(rf'\bfunc\s+{re.escape(ident)}\b', txt):
+                kind = "method"
+            elif re.search(rf'\b(?:let|var)\s+{re.escape(ident)}\b', txt):
+                kind = "variable"
+            elif re.search(rf'\bstruct\s+{re.escape(ident)}\b', txt):
+                kind = "struct"
+            elif re.search(rf'\bclass\s+{re.escape(ident)}\b', txt):
+                kind = "class"
+            elif re.search(rf'\benum\s+{re.escape(ident)}\b', txt):
+                kind = "enum"
+            elif re.search(rf'\bextension\s+{re.escape(ident)}\b', txt):
+                kind = "extension"
+
+        # pick single AST entry for the target identifier
+        ast_any = info.get("ast_full")
         if ast_any is None:
-            continue
-        # ast_any 가 dict 또는 list 모두 가능하므로 직렬화로 중복 제거
-        try:
-            serialized = json.dumps(ast_any, ensure_ascii=False, sort_keys=True)
-        except Exception:
-            # 직렬화 실패 시 문자열로 강제
-            serialized = str(ast_any)
-        if serialized in seen_ast_serialized:
-            continue
-        seen_ast_serialized.add(serialized)
-        ast_aggregate.append(ast_any)
+            ast_any = info.get("ast")
+        ast_entry = {}
+        if isinstance(ast_any, list):
+            for item in ast_any:
+                if isinstance(item, dict) and item.get("symbolName") == ident:
+                    ast_entry = _sanitize_ast_entry(item)
+                    break
+        elif isinstance(ast_any, dict) and ast_any.get("symbolName") == ident:
+            ast_entry = _sanitize_ast_entry(ast_any)
+        if not ast_entry:
+            ast_entry = _sanitize_ast_entry({"symbolName": ident, "symbolKind": kind or "unknown"})
 
-    # 단일 JSON으로 보기 좋게 구성: 파일별 전체 코드 + AST 전체 묶음
-    pretty_ast = json.dumps(ast_aggregate, ensure_ascii=False, indent=2)
-    payload = {
-        "instruction": INSTRUCTION,
-        "input": (
-            f"**Swift Source Code:**\n```swift\n{combined_code}\n```\n\n"
-            f"**AST Symbol Information (JSON):**\n```\n{pretty_ast}\n```"
-        )
-    }
+        pretty_ast_entry = json.dumps(ast_entry, ensure_ascii=False, indent=2)
+
+        record = {
+            "instruction": INSTRUCTION,
+            "input": (
+                f"**Swift Source Code:**\n```swift\n{code_block}\n```\n\n"
+                f"**AST Symbol Information (Target: `{ident}`):**\n```json\n{pretty_ast_entry}\n```\n\n"
+                f"**Target Identifier:** `{ident}`"
+            ),
+            "output": "{\n  \"is_sensitive\": true|false,\n  \"reasoning\": \"<explanation>\"\n}"
+        }
+        records.append(record)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
+        json.dump({"records": records}, f, ensure_ascii=False, indent=2)
     print(f"  ↳ wrote combined payload: {out_path}")
 
 def _write_per_identifier_payload_files_from_report(report: dict, out_dir: Path, target_ids: List[str], ctx_lines: int):
     """
     각 식별자마다 payload JSON을 별도로 생성한다.
     - 코드: 해당 식별자가 속한 **소스코드 전체 파일**
-    - AST: 해당 파일의 **전체 AST** (`ast_full` → `ast` → 빈 배열)
-    파일명: <identifier>.payload.json
+    - AST: **대상 식별자 1개**의 AST 심볼만 포함
+    파일명: <identifier>.json
     """
     all_id_map = report.get("identifiers", {}) or {}
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -265,104 +379,74 @@ def _write_per_identifier_payload_files_from_report(report: dict, out_dir: Path,
             return "extension"
         return "unknown"
 
-    def find_decl_line_index(ident: str, lines: List[str]) -> Optional[int]:
-        # method
-        pat_method = re.compile(rf'\bfunc\s+{re.escape(ident)}\b')
-        # variable
-        pat_var = re.compile(rf'\b(?:let|var)\s+{re.escape(ident)}\b')
-        # types
-        pat_struct = re.compile(rf'\bstruct\s+{re.escape(ident)}\b')
-        pat_class = re.compile(rf'\bclass\s+{re.escape(ident)}\b')
-        pat_enum = re.compile(rf'\benum\s+{re.escape(ident)}\b')
-        pat_ext = re.compile(rf'\bextension\s+{re.escape(ident)}\b')
-        for i, ln in enumerate(lines):
-            if pat_method.search(ln) or pat_var.search(ln) or pat_struct.search(ln) or pat_class.search(ln) or pat_enum.search(ln) or pat_ext.search(ln):
-                return i
-        # fallback: first occurrence line
-        pat_any = re.compile(rf'\b{re.escape(ident)}\b')
-        for i, ln in enumerate(lines):
-            if pat_any.search(ln):
-                return i
-        return None
-
-    def _block_range(keyword: str, name: str, lines: List[str]) -> Optional[Tuple[int,int]]:
-        """
-        Generic block detector for struct/class/enum/extension definitions.
-        """
-        header_pat = re.compile(rf'\b{keyword}\s+{re.escape(name)}\b')
-        start_idx = None
-        for i, ln in enumerate(lines):
-            if header_pat.search(ln):
-                start_idx = i
-                break
-        if start_idx is None:
-            return None
-        text = "".join(lines[start_idx:])
-        open_idx = text.find("{")
-        if open_idx < 0:
-            return None
-        depth = 0
-        for j, ch in enumerate(text[open_idx:], start=open_idx):
-            if ch == "{":
-                depth += 1
-            elif ch == "}":
-                depth -= 1
-                if depth == 0:
-                    sub = text[: j + 1]
-                    end_line = start_idx + sub.count("\n")
-                    return (start_idx + 1, end_line)
-        return None
-
     for ident in target_ids:
         info = all_id_map.get(ident, {})
         if not info.get("found"):
             continue
 
-        file_path = info.get("file", "")
-        ln = info.get("line_number", "")
-        lines = _load_lines(file_path)
-
-        # resolve kind
-        kind = info.get("kind")
-        if kind is None:
-            ast_list = info.get("ast")
-            if isinstance(ast_list, list):
-                for item in ast_list:
-                    if isinstance(item, dict) and item.get("symbolName") == ident:
-                        kind = item.get("symbolKind", None)
-                        break
-        if kind is None:
-            kind = infer_kind_from_text(file_path, ident)
-
+        file_path = info.get("decl_file") or info.get("file", "")
         # 전체 파일 내용
         try:
             with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
-                full_text = f.read()
+                code_block = f.read().rstrip()
         except Exception:
-            full_text = ""
-        code_block = full_text.rstrip()
+            code_block = ""
 
-        # 전체 AST: 우선 ast_full → ast → 빈 배열
+        # resolve kind
+        kind = info.get("kind")
         ast_full = info.get("ast_full")
         ast_any = ast_full if ast_full is not None else info.get("ast")
-        if ast_any is None:
-            ast_any = []
-        pretty_ast = json.dumps(ast_any, ensure_ascii=False, indent=2)
+
+        # Try to resolve kind if not present
+        if kind is None:
+            # Try to find kind from AST
+            if isinstance(ast_any, list):
+                for x in ast_any:
+                    if isinstance(x, dict) and x.get("symbolName") == ident:
+                        kind = x.get("symbolKind")
+                        break
+            elif isinstance(ast_any, dict):
+                if ast_any.get("symbolName") == ident:
+                    kind = ast_any.get("symbolKind")
+        if kind is None:
+            kind = infer_kind_from_text(file_path, ident)
+
+        # Build a single ast_entry for the target only
+        ast_entry = None
+        if isinstance(ast_any, list):
+            # try exact match
+            for x in ast_any:
+                if isinstance(x, dict) and x.get("symbolName") == ident:
+                    ast_entry = _sanitize_ast_entry(x)
+                    break
+            # try best match if still None
+            if ast_entry is None:
+                best = _best_ast_name_match(ident, [x for x in ast_any if isinstance(x, dict)])
+                if best and best != ident:
+                    print(f"[notice] target_identifier '{ident}' not found in AST. Using closest match '{best}' for kind inference.", file=sys.stderr)
+                    for x in ast_any:
+                        if isinstance(x, dict) and x.get("symbolName") == best:
+                            ast_entry = _sanitize_ast_entry(x)
+                            break
+        elif isinstance(ast_any, dict):
+            if ast_any.get("symbolName") == ident:
+                ast_entry = _sanitize_ast_entry(ast_any)
+        # If ast_entry is still None, synthesize minimal entry
+        if ast_entry is None:
+            ast_entry = _sanitize_ast_entry({"symbolName": ident, "symbolKind": kind or "unknown"})
 
         payload = {
-            "instruction": INSTRUCTION,
-            "input": (
-                f"**Swift Source Code:**\n```swift\n{code_block}\n```\n\n"
-                f"**AST Symbol Information (JSON):**\n```\n{pretty_ast}\n```"
-            )
+            "swift_code": code_block,
+            "ast_symbols": [ast_entry],
+            "target_identifier": ident
         }
 
-        out_file = out_dir / f"{ident}.payload.json"
+        out_file = out_dir / f"{ident}.json"
         with open(out_file, "w", encoding="utf-8") as f:
             json.dump(payload, f, ensure_ascii=False, indent=2)
         #print(f"  ↳ wrote per-identifier payload: {out_file}")
 
-def write_per_identifier_payload_files(project_root: str, identifiers, out_dir: str, ctx_lines: int = 30):
+def write_per_identifier_payload_files(project_root: str, identifiers, out_dir: str, ctx_lines: int = 300):
     """
     Wrapper for loader usage.
     Builds a report from project_root + identifiers, then writes per-identifier payloads to out_dir.
@@ -409,6 +493,7 @@ def main():
     ids = list(dict.fromkeys(ids))
 
     report = build_report_for_identifiers(args.project_root, ids, ctx_lines=args.ctx_lines)
+    report = _augment_report_with_declarations(report)
 
     # 전체 리포트 파일
     with open(args.output, "w", encoding="utf-8") as f:

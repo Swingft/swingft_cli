@@ -1,4 +1,0 @@
-{
-  "instruction": "In the following Swift code, find all identifiers related to sensitive logic. Provide the names and reasoning as a JSON object.",
-  "input": "**Swift Source Code:**\n```swift\n//\n//  MapKitMarker.swift\n//  StealPlateSwift\n//\n//  Created by 심재빈 on 2022/12/22.\n//\n\nimport Foundation\nimport MapKit\n\nclass MKMapMarker: NSObject, MKAnnotation {\n    let title: String?\n    let coordinate: CLLocationCoordinate2D\n    \n    init(title: String?, coordinate: CLLocationCoordinate2D) {\n        self.title = title\n        self.coordinate = coordinate\n    }\n}\n```\n\n**AST Symbol Information (JSON):**\n```\n[\n  {\n    \"symbolName\": \"MKMapMarker\",\n    \"symbolKind\": \"class\"\n  },\n  {\n    \"symbolName\": \"title\",\n    \"symbolKind\": \"variable\"\n  },\n  {\n    \"symbolName\": \"coordinate\",\n    \"symbolKind\": \"variable\"\n  }\n]\n```"
-}
