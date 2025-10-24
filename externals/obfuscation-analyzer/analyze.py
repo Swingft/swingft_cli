@@ -160,11 +160,9 @@ class ObfuscationAnalyzer:
         #print("  → Scanning Objective-C headers...")
         header_scanner = HeaderScanner(
             self.project_path,
-            scan_spm=True,
-            real_project_name=project_name
+            target_name=project_name,
         )
-        header_scanner.scan_all()
-        header_ids = header_scanner.get_all_identifiers()
+        header_ids = header_scanner.scan_all()
         all_identifiers.update(header_ids)
         #print(f"     Found {len(header_ids)} identifiers from headers")
 
