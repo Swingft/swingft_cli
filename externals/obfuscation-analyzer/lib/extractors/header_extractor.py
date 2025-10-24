@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
 """
-Swift 소스코드 난독화를 위한 헤더 식별자 추출기
+Swift 소스코드 난독화를 위한 헤더 식별자 추출기 (병렬 처리 버전)
 
 DerivedData와 프로젝트 내의 모든 헤더 파일에서 난독화 제외 대상 식별자를 추출합니다.
-LLM Rule 프로젝트 호환 버전
+멀티프로세싱을 사용하여 빠른 속도로 처리합니다.
 """
 
 import re
 import argparse
 import glob
 from pathlib import Path
-from typing import Set, Dict, List
+from typing import Set, Dict, List, Tuple
 from collections import defaultdict
 from enum import Enum, auto
+from multiprocessing import Pool, cpu_count
+import time
 
 
 class ParseState(Enum):
@@ -333,37 +335,55 @@ class ObjCHeaderParser:
         return filtered
 
 
-class HeaderScanner:
-    """헤더 파일 스캐너 - LLM Rule 프로젝트 호환"""
+# 병렬 처리를 위한 전역 함수
+def process_header_file(args: Tuple[Path, Path]) -> Tuple[str, Set[str], bool]:
+    """
+    단일 헤더 파일 처리 (멀티프로세싱용)
 
-    def __init__(self, project_path: Path, exclude_dirs: List[str] = None,
-                 scan_spm: bool = True, real_project_name: str = None):
+    Returns:
+        (relative_path, identifiers, success)
+    """
+    header_file, project_path = args
+
+    try:
+        identifiers = ObjCHeaderParser.parse(header_file)
+
+        # 상대 경로 생성
+        try:
+            relative_path = str(header_file.relative_to(project_path))
+        except ValueError:
+            relative_path = f"[DerivedData] {header_file.name}"
+
+        return (relative_path, identifiers, True)
+
+    except Exception as e:
+        return (header_file.name, set(), False)
+
+
+class HeaderScanner:
+    """헤더 파일 스캐너 (병렬 처리 지원)"""
+
+    def __init__(self, project_path: Path, target_name: str = None, num_workers: int = None):
         """
         Args:
             project_path: 프로젝트 루트 경로
-            exclude_dirs: 제외할 디렉토리 리스트 (기본값: ['.git', '.build', 'build', ...])
-            scan_spm: DerivedData 스캔 활성화 여부 (기본값: True)
-            real_project_name: 실제 프로젝트/타겟 이름 (DerivedData 검색용)
+            target_name: 실제 프로젝트/타겟 이름 (DerivedData 검색용)
+            num_workers: 병렬 처리 워커 수 (None이면 CPU 코어 수 사용)
         """
         self.project_path = project_path.resolve()
-
-        # exclude_dirs 설정
-        if exclude_dirs:
-            self.exclude_dirs = set(exclude_dirs)
-        else:
-            self.exclude_dirs = {'.git', '.build', 'build', 'Pods', 'Carthage',
-                                 'DerivedData', 'node_modules', '.svn', '.hg'}
-
-        self.scan_spm = scan_spm
-        self.target_name = real_project_name
+        self.target_name = target_name
+        self.num_workers = num_workers or cpu_count()
         self.all_identifiers: Set[str] = set()
         self.stats = {
             'project_headers': 0,
             'derived_data_headers': 0,
             'total_headers': 0,
             'success': 0,
-            'failed': 0
+            'failed': 0,
+            'processing_time': 0.0
         }
+        self.exclude_dirs = {'.git', '.build', 'build', 'Pods', 'Carthage',
+                             'DerivedData', 'node_modules', '.svn', '.hg'}
 
     def find_project_headers(self) -> List[Path]:
         """프로젝트 디렉토리 내의 모든 .h 파일 찾기"""
@@ -382,11 +402,7 @@ class HeaderScanner:
         return headers
 
     def find_derived_data_headers(self) -> List[Path]:
-        """DerivedData에서 헤더 파일 찾기"""
-        if not self.scan_spm:
-            print("   ⚠️  DerivedData 스캔이 비활성화되었습니다 (scan_spm=False).")
-            return []
-
+        """DerivedData에서 헤더 파일 찾기 (가장 최신 것만)"""
         if not self.target_name:
             print("   ⚠️  타겟 이름이 지정되지 않아 DerivedData 스캔을 건너뜁니다.")
             return []
@@ -410,7 +426,16 @@ class HeaderScanner:
             print(f"   💡 ~/Library/Developer/Xcode/DerivedData/{self.target_name}-* 형식을 찾습니다.")
             return []
 
-        print(f"   → {len(matching_dirs)}개의 매칭 디렉토리 발견")
+        # 여러 개 발견 시 가장 최신 것만 사용
+        if len(matching_dirs) > 1:
+            print(f"   → {len(matching_dirs)}개의 매칭 디렉토리 발견 (가장 최신 것만 사용)")
+            # 수정 시간 기준으로 정렬하여 가장 최신 것 선택
+            matching_dirs.sort(key=lambda x: x.stat().st_mtime, reverse=True)
+            selected_dir = matching_dirs[0]
+            print(f"   ✅ 선택됨: {selected_dir.name}")
+            matching_dirs = [selected_dir]
+        else:
+            print(f"   → 1개의 매칭 디렉토리 발견")
 
         headers = []
         for derived_dir in matching_dirs:
@@ -424,8 +449,8 @@ class HeaderScanner:
         return headers
 
     def scan_all(self) -> Set[str]:
-        """모든 헤더 파일 스캔"""
-        print("🚀 Swift 난독화용 헤더 식별자 추출기")
+        """모든 헤더 파일 스캔 (병렬 처리)"""
+        print("🚀 Swift 난독화용 헤더 식별자 추출기 (병렬 처리)")
         print("=" * 60)
         print()
 
@@ -448,37 +473,33 @@ class HeaderScanner:
         print(f"\n✓ 총 {len(all_headers)}개의 헤더 파일 발견")
         print(f"  - 프로젝트 내부: {len(project_headers)}개")
         print(f"  - DerivedData: {len(derived_headers)}개")
-
-        print("\n🔍 식별자 추출 중...")
+        print(f"\n⚡ {self.num_workers}개의 워커로 병렬 처리 시작...")
         print("-" * 60)
 
-        for header_file in all_headers:
-            try:
-                identifiers = ObjCHeaderParser.parse(header_file)
+        # 시작 시간 기록
+        start_time = time.time()
 
-                if identifiers:
-                    self.all_identifiers.update(identifiers)
-                    self.stats['success'] += 1
+        # 병렬 처리
+        args_list = [(header, self.project_path) for header in all_headers]
 
-                    # 상대 경로 표시
-                    try:
-                        relative_path = str(header_file.relative_to(self.project_path))
-                    except ValueError:
-                        # DerivedData 헤더는 상대 경로 불가능
-                        relative_path = f"[DerivedData] {header_file.name}"
+        with Pool(processes=self.num_workers) as pool:
+            results = pool.map(process_header_file, args_list)
 
-                    print(f"✓ {relative_path}: {len(identifiers)}개")
-                else:
-                    self.stats['failed'] += 1
-
-            except Exception as e:
+        # 결과 수집
+        for relative_path, identifiers, success in results:
+            if success and identifiers:
+                self.all_identifiers.update(identifiers)
+                self.stats['success'] += 1
+                print(f"✓ {relative_path}: {len(identifiers)}개")
+            else:
                 self.stats['failed'] += 1
-                print(f"✗ {header_file.name}: 오류 - {str(e)}")
+                if not success:
+                    print(f"✗ {relative_path}: 오류")
 
-        return self.all_identifiers
+        # 처리 시간 기록
+        end_time = time.time()
+        self.stats['processing_time'] = end_time - start_time
 
-    def get_all_identifiers(self) -> Set[str]:
-        """추출된 모든 식별자 반환 (LLM Rule 프로젝트 호환 메서드)"""
         return self.all_identifiers
 
     def print_summary(self):
@@ -491,6 +512,8 @@ class HeaderScanner:
         print(f"총 헤더 파일:        {self.stats['total_headers']:>6}개")
         print(f"성공:               {self.stats['success']:>6}개")
         print(f"실패:               {self.stats['failed']:>6}개")
+        print(f"처리 시간:          {self.stats['processing_time']:>6.2f}초")
+        print(f"워커 수:            {self.num_workers:>6}개")
         print(f"\n고유 식별자 총합:    {len(self.all_identifiers):>6}개")
         print("=" * 60)
 
@@ -508,13 +531,13 @@ class HeaderScanner:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Swift 난독화를 위한 헤더 식별자 추출기 (LLM Rule 프로젝트 호환)",
+        description="Swift 난독화를 위한 헤더 식별자 추출기 (병렬 처리)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 사용 예시:
   python header_extractor.py -i /path/to/project -o identifiers.txt -t MyApp
   python header_extractor.py -i ~/Projects/MyProject -o ./output/exclude.txt -t MyProject
-  python header_extractor.py -i ~/Projects/MyProject -o ./output/exclude.txt --no-spm
+  python header_extractor.py -i ~/Projects/MyProject -o ./id.txt -t MyProject --workers 8
         """
     )
 
@@ -524,10 +547,8 @@ def main():
                         help='출력 .txt 파일 경로 (식별자가 한 줄에 하나씩 저장됨)')
     parser.add_argument('-t', '--target', type=str,
                         help='타겟 프로젝트 이름 (DerivedData 검색용, 예: MyApp)')
-    parser.add_argument('--exclude', nargs='+',
-                        help='추가로 제외할 디렉토리')
-    parser.add_argument('--no-spm', action='store_true',
-                        help='DerivedData 스캔 비활성화')
+    parser.add_argument('-w', '--workers', type=int, default=None,
+                        help=f'병렬 처리 워커 수 (기본값: CPU 코어 수 = {cpu_count()})')
 
     args = parser.parse_args()
 
@@ -540,20 +561,8 @@ def main():
         print(f"❌ 디렉토리가 아닙니다: {args.input}")
         return 1
 
-    # exclude_dirs 설정
-    exclude_dirs = None
-    if args.exclude:
-        default_exclude = ['.git', '.build', 'build', 'Pods', 'Carthage',
-                           'DerivedData', 'node_modules', '.svn', '.hg']
-        exclude_dirs = default_exclude + args.exclude
-
     # 스캐너 실행
-    scanner = HeaderScanner(
-        args.input,
-        exclude_dirs=exclude_dirs,
-        scan_spm=not args.no_spm,
-        real_project_name=args.target
-    )
+    scanner = HeaderScanner(args.input, args.target, args.workers)
     identifiers = scanner.scan_all()
     scanner.print_summary()
 
